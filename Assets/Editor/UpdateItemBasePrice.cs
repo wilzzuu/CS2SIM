@@ -1,28 +1,31 @@
 using UnityEditor;
 using UnityEngine;
 
-public class UpdateBasePriceForAllItems : MonoBehaviour
+namespace Editor
 {
-    [MenuItem("Tools/Update Item Base Prices")]
-    public static void UpdateItemBasePrices()
+    public class UpdateBasePriceForAllItems : MonoBehaviour
     {
-        string[] guids = AssetDatabase.FindAssets("t:ItemData"); // Find all ItemData assets
-
-        int updatedCount = 0;
-        foreach (string guid in guids)
+        [MenuItem("Tools/Update Item Base Prices")]
+        public static void UpdateItemBasePrices()
         {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            ItemData itemData = AssetDatabase.LoadAssetAtPath<ItemData>(path);
+            string[] guids = AssetDatabase.FindAssets("t:ItemData"); // Find all ItemData assets
 
-            if (itemData != null && itemData.BasePrice == 0 && itemData.Price > 0)
+            int updatedCount = 0;
+            foreach (string guid in guids)
             {
-                itemData.BasePrice = itemData.Price;
-                EditorUtility.SetDirty(itemData); // Mark asset as dirty for saving
-                updatedCount++;
-            }
-        }
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                ItemData itemData = AssetDatabase.LoadAssetAtPath<ItemData>(path);
 
-        AssetDatabase.SaveAssets();
-        Debug.Log($"Updated base prices for {updatedCount} items.");
+                if (itemData != null && itemData.basePrice == 0 && itemData.price > 0)
+                {
+                    itemData.basePrice = itemData.price;
+                    EditorUtility.SetDirty(itemData); // Mark asset as dirty for saving
+                    updatedCount++;
+                }
+            }
+
+            AssetDatabase.SaveAssets();
+            Debug.Log($"Updated base prices for {updatedCount} items.");
+        }
     }
 }
