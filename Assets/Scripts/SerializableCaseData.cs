@@ -3,21 +3,21 @@ using System.Collections.Generic;
 [System.Serializable]
 public class SerializableCaseData
 {
-    public string ID;
-    public string Name;
-    public float Price;
-    public List<SerializableItemData> Items;
+    public string ID { get; }
+    public string Name { get; }
+    public float Price { get; }
+    public List<SerializableItemData> items;
 
     public SerializableCaseData(CaseData @case)
     {
-        ID = @case.ID;
-        Name = @case.Name;
-        Price = @case.Price;
-        Items = new List<SerializableItemData>();
+        ID = @case.id;
+        Name = @case.name;
+        Price = @case.price;
+        items = new List<SerializableItemData>();
 
-        foreach (var item in @case.Items)
+        foreach (var item in @case.items)
         {
-            Items.Add(new SerializableItemData(item));
+            items.Add(new SerializableItemData(item));
         }
     }
 }

@@ -55,9 +55,9 @@ public class CollectionManager : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     public void AddItemToCollection(ItemData item)
     {
-        if (_collectedItemIDs.Contains(item.ID)) return;
+        if (_collectedItemIDs.Contains(item.id)) return;
 
-        _collectedItemIDs.Add(item.ID);
+        _collectedItemIDs.Add(item.id);
         SaveCollection();
         UpdateCollectionUI();
     }
@@ -119,7 +119,7 @@ public class CollectionManager : MonoBehaviour
             GameObject itemObj = Instantiate(collectionItemPrefab, collectionGrid);
             CollectionItem collectionItem = itemObj.GetComponent<CollectionItem>();
 
-            bool isCollected = _collectedItemIDs.Contains(item.ID);
+            bool isCollected = _collectedItemIDs.Contains(item.id);
             collectionItem.Setup(item, isCollected);
         }
     }

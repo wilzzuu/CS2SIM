@@ -34,9 +34,8 @@ public class UIManager : MonoBehaviour
     
     void UpdateBalanceDisplay()
     {
-        float balancePreformat = PlayerManager.Instance.GetPlayerBalance();
-        string formattedBalance = balancePreformat.ToString("F2");
-        balance.text = formattedBalance;
+        float bal = PlayerManager.Instance.GetPlayerBalance();
+        balance.text = $"{bal:F2}€";
     }
 
     public void LockButton(Button button)

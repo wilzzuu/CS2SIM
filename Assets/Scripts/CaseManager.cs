@@ -9,7 +9,7 @@ public class CaseManager : MonoBehaviour
     {
         foreach (CaseData caseData in allCases)
         {
-            if (caseData.ID == caseID)
+            if (caseData.id == caseID)
             {
                 return caseData;
             }
@@ -22,9 +22,9 @@ public class CaseManager : MonoBehaviour
     {
         foreach (CaseData caseData in allCases)
         {
-            foreach (ItemData item in caseData.Items)
+            foreach (ItemData item in caseData.items)
             {
-                if (item.ID == itemID)
+                if (item.id == itemID)
                 {
                     return item;
                 }

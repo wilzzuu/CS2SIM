@@ -48,10 +48,12 @@ public class InventoryScreen : MonoBehaviour
 
             Image itemImage = slot.transform.Find("ItemImage")?.GetComponent<Image>();
             Image rarityImage = slot.transform.Find("RarityImage")?.GetComponent<Image>();
+            Image conditionImage = slot.transform.Find("ConditionImage")?.GetComponent<Image>();
+            Image statTrakImage = slot.transform.Find("StatTrakImage")?.GetComponent<Image>();
 
             if (itemImage != null)
             {
-                string imagePath = "ItemImages/" + item.ID;
+                string imagePath = "ItemImages/" + item.id;
                 Sprite itemSprite = Resources.Load<Sprite>(imagePath);
                 if (itemSprite != null)
                 {
@@ -65,7 +67,7 @@ public class InventoryScreen : MonoBehaviour
 
             if (rarityImage != null)
             {
-                string rarityPath = "RarityImages/" + item.Rarity;
+                string rarityPath = "RarityImages/" + item.rarity;
                 Sprite raritySprite = Resources.Load<Sprite>(rarityPath);
                 if (raritySprite != null)
                 {
@@ -76,6 +78,42 @@ public class InventoryScreen : MonoBehaviour
                     Debug.LogWarning($"Failed to load rarity image for path: {rarityPath}");
                 }
             }
+
+            if (conditionImage != null)
+            {
+                string conditionPath = "ConditionImages/" + item.condition;
+                Sprite conditionSprite = Resources.Load<Sprite>(conditionPath);
+                if (conditionSprite != null)
+                {
+                    conditionImage.sprite = conditionSprite;
+                }
+                else
+                {
+                    Debug.LogWarning($"Failed to load condition image for path: {conditionPath}");
+                }
+            }
+            if (statTrakImage != null)
+            {
+                if (item.isStatTrak)
+                {
+                    statTrakImage.gameObject.SetActive(true);
+                    string statTrakPath = "ConditionImages/StatTrak";
+                    Sprite statTrakSprite = Resources.Load<Sprite>(statTrakPath);
+                    if (statTrakSprite != null)
+                    {
+                        statTrakImage.sprite = statTrakSprite;
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Failed to load stat trak image for path: " + statTrakPath);
+                    }
+                }
+                else
+                {
+                    statTrakImage.gameObject.SetActive(false);
+                }
+            }
+            
         }
     }
 

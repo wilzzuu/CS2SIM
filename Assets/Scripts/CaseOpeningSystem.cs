@@ -67,7 +67,7 @@ public class CaseOpening : MonoBehaviour
         if (_selectedCaseData) openCaseButton.interactable = true;
         else openCaseButton.interactable = false;
 
-        if (_selectedCaseData.Price <= PlayerManager.Instance.GetPlayerBalance()) openCaseButton.interactable = true;
+        if (_selectedCaseData.price <= PlayerManager.Instance.GetPlayerBalance()) openCaseButton.interactable = true;
         else openCaseButton.interactable = false;
         
         DisplayCaseItems(_selectedCaseData);
@@ -116,9 +116,9 @@ public class CaseOpening : MonoBehaviour
 
         caseGridParent.localPosition = _initialReelPosition;
 
-        if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.Price)
+        if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price)
         {
-            PlayerManager.Instance.DeductCurrency(_selectedCaseData.Price);
+            PlayerManager.Instance.DeductCurrency(_selectedCaseData.price);
             ItemData openedItem = GetRandomItemByPercentage();
             StartCoroutine(AnimateScrollingReel(openedItem));
         }
@@ -131,25 +131,25 @@ public class CaseOpening : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private ItemData GetRandomItemByPercentage()
     {
-        if (_selectedCaseData.Items == null || _selectedCaseData.Items.Count == 0)
+        if (_selectedCaseData.items == null || _selectedCaseData.items.Count == 0)
         {
             Debug.LogError("No items in the selected case. Ensure the selected case has items.");
             return null; 
         }
 
         float totalWeight = 0f;
-        foreach (var item in _selectedCaseData.Items)
+        foreach (var item in _selectedCaseData.items)
         {
-            totalWeight += item.Weight;  
+            totalWeight += item.weight;  
         }
 
         
         float randomValue = Random.Range(0, totalWeight);
         float cumulativeWeight = 0f;
 
-        foreach (var item in _selectedCaseData.Items)
+        foreach (var item in _selectedCaseData.items)
         {
-            cumulativeWeight += item.Weight;
+            cumulativeWeight += item.weight;
             if (randomValue <= cumulativeWeight)
             {
                 return item;
@@ -157,7 +157,7 @@ public class CaseOpening : MonoBehaviour
         }
 
         Debug.LogWarning("No item was selected; returning default item.");
-        return _selectedCaseData.Items[_selectedCaseData.Items.Count - 1];
+        return _selectedCaseData.items[_selectedCaseData.items.Count - 1];
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -213,7 +213,7 @@ public class CaseOpening : MonoBehaviour
     {
         InventoryManager.Instance.AddItemToInventory(openedItem);
         CollectionManager.Instance.AddItemToCollection(openedItem);
-        if (PlayerManager.Instance.GetPlayerBalance() < _selectedCaseData.Price)
+        if (PlayerManager.Instance.GetPlayerBalance() < _selectedCaseData.price)
         {
             DisplayCaseSelector(_availableCases);
             ToggleCaseSelector();
@@ -230,8 +230,8 @@ public class CaseOpening : MonoBehaviour
         Image itemImage = reelItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
 
-        string imagePath = "ItemImages/" + itemData.ID;
-        string rarityPath = "RarityImages/" + itemData.Rarity;
+        string imagePath = "ItemImages/" + itemData.id;
+        string rarityPath = "RarityImages/" + itemData.rarity;
 
         itemImage.sprite = Resources.Load<Sprite>(imagePath);
         rarityImage.sprite = Resources.Load<Sprite>(rarityPath);
@@ -251,14 +251,14 @@ public class CaseOpening : MonoBehaviour
             return;
         }
 
-        selectedCase.Items = selectedCase.Items.OrderBy(item => RarityOrder[item.Rarity]).ToList();
+        selectedCase.items = selectedCase.items.OrderBy(item => RarityOrder[item.rarity]).ToList();
 
         foreach (Transform child in caseItemGrid)
         {
             Destroy(child.gameObject);
         }
 
-        foreach (var itemData in selectedCase.Items)
+        foreach (var itemData in selectedCase.items)
         {
             if (itemData == null)
             {
@@ -271,10 +271,10 @@ public class CaseOpening : MonoBehaviour
             TextMeshProUGUI nameText = item.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = item.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
-            itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.ID}");
-            rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.Rarity}");
-            nameText.text = itemData.Name;
-            priceText.text = $"{itemData.Price:F2}";
+            itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id}");
+            rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
+            nameText.text = itemData.name;
+            priceText.text = $"{itemData.price:F2}";
         }
     }
 
@@ -297,7 +297,7 @@ public class CaseOpening : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        List<CaseData> orderedAvailableCases = availableCases.OrderBy(i => i.Price).ToList();
+        List<CaseData> orderedAvailableCases = availableCases.OrderBy(i => i.price).ToList();
 
         foreach (var caseData in orderedAvailableCases)
         {
@@ -306,9 +306,9 @@ public class CaseOpening : MonoBehaviour
             TextMeshProUGUI nameText = caseButton.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = caseButton.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
             
-            caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.ID}");
-            nameText.text = caseData.Name;
-            priceText.text = $"{caseData.Price:F2}";
+            caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
+            nameText.text = caseData.name;
+            priceText.text = $"{caseData.price:F2}";
 
             Button button = caseButton.GetComponent<Button>();
             button.onClick.AddListener(() => SelectCase(caseData));

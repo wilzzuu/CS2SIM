@@ -49,11 +49,20 @@ public class UpgraderManager : MonoBehaviour
 
     private static readonly Dictionary<string, int> RarityOrder = new Dictionary<string, int>
     {
-        {"Common", 1},
-        {"Uncommon", 2},
-        {"Rare", 3},
-        {"Epic", 4},
-        {"Legendary", 5}
+        {"MIL_SPEC", 1},
+        {"RESTRICTED", 2},
+        {"CLASSIFIED", 3},
+        {"COVERT", 4},
+        {"SPECIAL", 5}
+    };
+
+    private static readonly Dictionary<string, int> ConditionOrder = new Dictionary<string, int>
+    {
+        {"Battle-Scarred",1},
+        {"Well-Worn",2},
+        {"Field-Tested",3},
+        {"Minimal Wear",4},
+        {"Factory New",5}
     };
 
     private float[] _multipliers = { 1.5f, 2f, 5f, 10f, 20f };
@@ -124,7 +133,7 @@ public class UpgraderManager : MonoBehaviour
         
         if (!_isInventoryTabActive && _selectedInventoryItem != null)
         {
-            displayedItems = _allItems.FindAll(upgradeItem => upgradeItem.Price > _selectedInventoryItem.Price);
+            displayedItems = _allItems.FindAll(upgradeItem => upgradeItem.price > _selectedInventoryItem.price);
         }
 
         foreach (Transform child in currentCatalogGrid)
@@ -240,15 +249,15 @@ public class UpgraderManager : MonoBehaviour
     {
         if (_selectedInventoryItem == null) return;
 
-        float targetPrice = _selectedInventoryItem.Price * multiplier;
+        float targetPrice = _selectedInventoryItem.price * multiplier;
         float minPrice = targetPrice * 0.8f;
         float maxPrice = targetPrice * 1.2f;
 
-        List<ItemData> validItems = _allItems.FindAll(upgradeItem => upgradeItem.Price >= minPrice && upgradeItem.Price <= maxPrice);
+        List<ItemData> validItems = _allItems.FindAll(upgradeItem => upgradeItem.price >= minPrice && upgradeItem.price <= maxPrice);
 
         if (validItems.Count == 0)
         {
-            validItems = _allItems.FindAll(upgradeItem => upgradeItem.Price > _selectedInventoryItem.Price);
+            validItems = _allItems.FindAll(upgradeItem => upgradeItem.price > _selectedInventoryItem.price);
         }
 
         if (validItems.Count > 0)
@@ -265,20 +274,20 @@ public class UpgraderManager : MonoBehaviour
         TextMeshProUGUI nameText = itemObj.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = itemObj.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.ID}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.Rarity}");
-        nameText.text = item.Name;
-        priceText.text = $"{item.Price:0.00}";
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
+        nameText.text = item.name;
+        priceText.text = $"{item.price:0.00}";
     }
 
     void UpdateUpgradeProbability()
     {
         if (_selectedInventoryItem != null && _selectedUpgradeItem != null)
         {
-            _successProbability = _selectedInventoryItem.Price / _selectedUpgradeItem.Price;
+            _successProbability = _selectedInventoryItem.price / _selectedUpgradeItem.price;
             probabilityText.fontSize = 32;
             probabilityText.text = $"{_successProbability * 100:0.00}%";
-            multiplierText.text = $"{_selectedUpgradeItem.Price / _selectedInventoryItem.Price:0.0}x";
+            multiplierText.text = $"{_selectedUpgradeItem.price / _selectedInventoryItem.price:0.0}x";
         }
         else
         {
@@ -360,14 +369,14 @@ public class UpgraderManager : MonoBehaviour
             if (!_isInventoryTabActive)
             {
                 _allItems = _allItems.Where(item =>
-                    item.Name.ToLower().Contains(query) ||
-                    item.ID.ToString().Contains(query)).ToList();
+                    item.name.ToLower().Contains(query) ||
+                    item.id.ToString().Contains(query)).ToList();
             }
             else
             {
                 _inventoryItems = _inventoryItems.Where(item =>
-                    item.Name.ToLower().Contains(query) ||
-                    item.ID.ToString().Contains(query)).ToList();
+                    item.name.ToLower().Contains(query) ||
+                    item.id.ToString().Contains(query)).ToList();
             }
         }
 
@@ -395,11 +404,11 @@ public class UpgraderManager : MonoBehaviour
         {
             if (!_isInventoryTabActive)
             {
-                _allItems = _allItems.Where(item => item.Price <= itemPriceQuery).ToList();
+                _allItems = _allItems.Where(item => item.price <= itemPriceQuery).ToList();
             }
             else
             {
-                _inventoryItems = _inventoryItems.Where(item => item.Price <= itemPriceQuery).ToList();
+                _inventoryItems = _inventoryItems.Where(item => item.price <= itemPriceQuery).ToList();
             }
         }
         UpdateCurrentTab();
@@ -409,47 +418,60 @@ public class UpgraderManager : MonoBehaviour
     {
         return criteria switch
         {
-            "Item" => ascending
-                ? _allItems.OrderBy(i => i.Item).ToList()
-                : _allItems.OrderByDescending(i => i.Item).ToList(),
+            "Type" => ascending
+                ? _allItems.OrderBy(i => i.type).ToList()
+                : _allItems.OrderByDescending(i => i.type).ToList(),
             "Rarity" => ascending
-                ? _allItems.OrderBy(i => RarityOrder.ContainsKey(i.Rarity) ? RarityOrder[i.Rarity] : int.MaxValue).ToList()
-                : _allItems.OrderByDescending(i => RarityOrder.ContainsKey(i.Rarity) ? RarityOrder[i.Rarity] : int.MinValue).ToList(),
-            "Color" => ascending
-                ? _allItems.OrderBy(i => i.Color).ToList()
-                : _allItems.OrderByDescending(i => i.Color).ToList(),
-            "Style" => ascending
-                ? _allItems.OrderBy(i => i.Style).ToList()
-                : _allItems.OrderByDescending(i => i.Style).ToList(),
+                ? _allItems
+                    .OrderBy(i => RarityOrder.ContainsKey(i.rarity) ? RarityOrder[i.rarity] : int.MaxValue)
+                    .ToList()
+                : _allItems
+                    .OrderByDescending(i => RarityOrder.ContainsKey(i.rarity) ? RarityOrder[i.rarity] : int.MinValue)
+                    .ToList(),
+            "Gun" => ascending
+                ? _allItems.OrderBy(i => i.gun).ToList()
+                : _allItems.OrderByDescending(i => i.gun).ToList(),
+            "Condition" => ascending
+                ? _allItems
+                    .OrderBy(i => ConditionOrder.ContainsKey(i.condition) ? RarityOrder[i.condition] : int.MaxValue)
+                    .ToList()
+                : _allItems
+                    .OrderByDescending(i => ConditionOrder.ContainsKey(i.condition) ? RarityOrder[i.condition] : int.MinValue)
+                    .ToList(),
             "Price" => ascending
-                ? _allItems.OrderBy(i => i.Price).ToList()
-                : _allItems.OrderByDescending(i => i.Price).ToList(),
+                ? _allItems.OrderBy(i => i.price).ToList()
+                : _allItems.OrderByDescending(i => i.price).ToList(),
             _ => _allItems
         };
     }
-
+    
     private List<ItemData> SortInventoryItemsByCriteria(string criteria, bool ascending)
     {
         return criteria switch
         {
-            "Item" => ascending
-                ? _inventoryItems.OrderBy(i => i.Item).ToList()
-                : _inventoryItems.OrderByDescending(i => i.Item).ToList(),
+            "Type" => ascending
+                ? _inventoryItems.OrderBy(i => i.type).ToList()
+                : _inventoryItems.OrderByDescending(i => i.type).ToList(),
             "Rarity" => ascending
-                ? _inventoryItems.OrderBy(i => RarityOrder.ContainsKey(i.Rarity) ? RarityOrder[i.Rarity] : int.MaxValue)
+                ? _inventoryItems
+                    .OrderBy(i => RarityOrder.ContainsKey(i.rarity) ? RarityOrder[i.rarity] : int.MaxValue)
                     .ToList()
                 : _inventoryItems
-                    .OrderByDescending(i => RarityOrder.ContainsKey(i.Rarity) ? RarityOrder[i.Rarity] : int.MinValue)
+                    .OrderByDescending(i => RarityOrder.ContainsKey(i.rarity) ? RarityOrder[i.rarity] : int.MinValue)
                     .ToList(),
-            "Color" => ascending
-                ? _inventoryItems.OrderBy(i => i.Color).ToList()
-                : _inventoryItems.OrderByDescending(i => i.Color).ToList(),
-            "Style" => ascending
-                ? _inventoryItems.OrderBy(i => i.Style).ToList()
-                : _inventoryItems.OrderByDescending(i => i.Style).ToList(),
+            "Gun" => ascending
+                ? _inventoryItems.OrderBy(i => i.gun).ToList()
+                : _inventoryItems.OrderByDescending(i => i.gun).ToList(),
+            "Condition" => ascending
+                ? _inventoryItems
+                    .OrderBy(i => ConditionOrder.ContainsKey(i.condition) ? RarityOrder[i.condition] : int.MaxValue)
+                    .ToList()
+                : _inventoryItems
+                    .OrderByDescending(i => ConditionOrder.ContainsKey(i.condition) ? RarityOrder[i.condition] : int.MinValue)
+                    .ToList(),
             "Price" => ascending
-                ? _inventoryItems.OrderBy(i => i.Price).ToList()
-                : _inventoryItems.OrderByDescending(i => i.Price).ToList(),
+                ? _inventoryItems.OrderBy(i => i.price).ToList()
+                : _inventoryItems.OrderByDescending(i => i.price).ToList(),
             _ => _inventoryItems
         };
     }

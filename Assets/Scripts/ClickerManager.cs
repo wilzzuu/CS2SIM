@@ -9,8 +9,8 @@ public class ClickerManager : MonoBehaviour
     public TextMeshProUGUI currencyText;
     public TextMeshProUGUI multiplierText;
 
-    private float _currency = 0f;
-    private float _sessionCurrency = 0f;
+    private float _currency;
+    private float _sessionCurrency;
     private const float BaseGain = 0.01f;
     private float _currentMultiplier = 1f;
     private const float MaxMultiplier = 10f;

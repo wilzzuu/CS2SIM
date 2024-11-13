@@ -13,10 +13,10 @@ public class RouletteInventoryItem : MonoBehaviour
 
     public void Setup(ItemData item, bool isItemSelected)
     {
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.ID}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.Rarity}");
-        nameText.text = item.Name;
-        priceText.text = $"{item.Price:0.00}";
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
+        nameText.text = item.name;
+        priceText.text = $"{item.price:0.00}";
 
         if (!isItemSelected)
         {

@@ -83,7 +83,7 @@ public class RouletteManager : MonoBehaviour
         }
 
         _selectedPlayerItems.Add(item);
-        _totalPlayerValue += item.Price;
+        _totalPlayerValue += item.price;
         selectedPlayerItemsTotalValue.text = $"Total Value: {_totalPlayerValue:F2}";
 
         UpdateSelectedItemsGrid();
@@ -93,7 +93,7 @@ public class RouletteManager : MonoBehaviour
     {
         if (_selectedPlayerItems.Remove(item))
         {
-            _totalPlayerValue -= item.Price;
+            _totalPlayerValue -= item.price;
             selectedPlayerItemsTotalValue.text = $"Total Value: {_totalPlayerValue:F2}";
         }
 
@@ -160,13 +160,13 @@ public class RouletteManager : MonoBehaviour
             return null;
         }
 
-        float totalWeight = _reelItems.Sum(i => i.Item.Weight);
+        float totalWeight = _reelItems.Sum(i => i.Item.weight);
         float randomValue = UnityEngine.Random.Range(0, totalWeight);
         float cumulativeWeight = 0f;
 
         foreach (var item in _reelItems)
         {
-            cumulativeWeight += item.Item.Weight;
+            cumulativeWeight += item.Item.weight;
             if (randomValue <= cumulativeWeight)
             {
                 return item;
@@ -261,8 +261,8 @@ public class RouletteManager : MonoBehaviour
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
         TextMeshProUGUI ownerText = reelItem.transform.Find("OwnerText").GetComponent<TextMeshProUGUI>();
 
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.ID}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.Rarity}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
 
         ownerText.text = isPlayerOwned ? "Player" : "Bot";
         ownerText.color = isPlayerOwned ? Color.green : Color.red;
@@ -275,7 +275,7 @@ public class RouletteManager : MonoBehaviour
 
     void UpdateUI()
     {
-        float totalPlayerItemValue = _selectedPlayerItems.Sum(item => item.Price);
+        float totalPlayerItemValue = _selectedPlayerItems.Sum(item => item.price);
         float totalUniqueBotValue = _accumulatedBotValue;
 
         _totalGameValue = totalPlayerItemValue + totalUniqueBotValue;
@@ -316,7 +316,7 @@ public class RouletteManager : MonoBehaviour
             var botRouletteItem = new RouletteItem { Item = botItem, OwnerIsPlayer = false };
             _reelItems.Add(botRouletteItem);
             _itemOwnership[botItem] = false;
-            _accumulatedBotValue += botItem.Price;
+            _accumulatedBotValue += botItem.price;
         }
 
         int targetReelSize = Mathf.Max(numberOfReelItems, 40);
@@ -352,7 +352,7 @@ public class RouletteManager : MonoBehaviour
         float priceVariance = Mathf.Min(targetValue * 0.3f, maxVariance);
 
         List<ItemData> eligibleItems = _allItems
-            .Where(item => item.Price >= targetValue - priceVariance && item.Price <= targetValue + priceVariance)
+            .Where(item => item.price >= targetValue - priceVariance && item.price <= targetValue + priceVariance)
             .Where(item => !usedBotItems.Contains(item))
             .ToList();
 
@@ -360,7 +360,7 @@ public class RouletteManager : MonoBehaviour
         {
             eligibleItems = _allItems
                 .Where(item => !usedBotItems.Contains(item))
-                .OrderBy(item => Mathf.Abs(item.Price - targetValue))
+                .OrderBy(item => Mathf.Abs(item.price - targetValue))
                 .Take(15)
                 .ToList();
         }

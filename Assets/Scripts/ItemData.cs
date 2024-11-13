@@ -3,25 +3,26 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Item Data", order = 51)]
 public class ItemData : ScriptableObject
 {
-    public string ID;
-    public string Name;
-    public string Rarity;
-    public float BasePrice;
-    public float Price;
-    public int DemandScore;
-    public int Weight;
-    public string Color;
-    public string Item;
-    public string Style;
+    public string id;
+    public string gun;
+    public new string name;
+    public float basePrice;
+    public float price;
+    public string condition;
+    public bool isStatTrak;
+    public string type;
+    public string rarity;
+    public int weight;
+    public int demandScore;
 
-    public float LastActivityTime;
+    public float lastActivityTime;
     public const float DemandDecayInterval = 120f;
     public const float DecayRate = 0.1f;
 
     private void OnEnable()
     {
-        DemandScore = 0;
-        Price = BasePrice;
-        LastActivityTime = Time.time;
+        demandScore = 0;
+        price = basePrice;
+        lastActivityTime = Time.time;
     }
 }

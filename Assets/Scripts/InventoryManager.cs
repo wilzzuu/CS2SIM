@@ -55,7 +55,7 @@ public class InventoryManager : MonoBehaviour
         List<ItemData> items = new List<ItemData>();
         foreach (SerializableItemData sItem in serializableItems)
         {
-            string itemPath = $"Items/{sItem.ID}";
+            string itemPath = $"ItemAssets/{sItem.ID}";
             ItemData item = Resources.Load<ItemData>(itemPath);
             if (item != null)
             {
@@ -84,7 +84,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"{item.Name} not found in inventory.");
+            Debug.LogWarning($"{item.name} not found in inventory.");
         }
     }
 
@@ -105,7 +105,7 @@ public class InventoryManager : MonoBehaviour
         float totalValue = 0;
         foreach (ItemData item in _inventoryItems)
         {
-            totalValue += item.Price;
+            totalValue += item.price;
         }
         return totalValue * 0.85f;
     }
