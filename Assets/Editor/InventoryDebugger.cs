@@ -1,63 +1,68 @@
-using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
 
-public class InventoryDebugger : EditorWindow
+namespace Editor
 {
-    private List<ItemData> itemAssets; // List to store all item assets
-    private ItemData selectedItem;     // The selected item to add to inventory
-
-    [MenuItem("Tools/Inventory Debugger")]
-    public static void ShowWindow()
+    public class InventoryDebugger : EditorWindow
     {
-        GetWindow<InventoryDebugger>("Inventory Debugger");
-    }
+        private List<ItemData> _itemAssets; // List to store all item assets
+        private ItemData _selectedItem;     // The selected item to add to inventory
 
-    private void OnEnable()
-    {
-        LoadAllItemAssets();
-    }
-
-    void OnGUI()
-    {
-        GUILayout.Label("Add Items to Inventory", EditorStyles.boldLabel);
-
-        if (itemAssets == null || itemAssets.Count == 0)
+        [MenuItem("Tools/Inventory Debugger")]
+        public static void ShowWindow()
         {
-            GUILayout.Label("No items found in ItemAssets folder.");
-            if (GUILayout.Button("Reload Items"))
+            GetWindow<InventoryDebugger>("Inventory Debugger");
+        }
+
+        private void OnEnable()
+        {
+            LoadAllItemAssets();
+        }
+
+        void OnGUI()
+        {
+            GUILayout.Label("Add Items to Inventory", EditorStyles.boldLabel);
+
+            if (_itemAssets == null || _itemAssets.Count == 0)
             {
-                LoadAllItemAssets();
+                GUILayout.Label("No items found in ItemAssets folder.");
+                if (GUILayout.Button("Reload Items"))
+                {
+                    LoadAllItemAssets();
+                }
+                return;
             }
-            return;
+
+            _selectedItem = (ItemData)EditorGUILayout.ObjectField("Select Item", _selectedItem, typeof(ItemData), false);
+
+            if (_selectedItem && GUILayout.Button("Add Selected Item to Inventory"))
+            {
+                AddItemToInventory(_selectedItem);
+            }
         }
 
-        selectedItem = (ItemData)EditorGUILayout.ObjectField("Select Item", selectedItem, typeof(ItemData), false);
-
-        if (selectedItem != null && GUILayout.Button("Add Selected Item to Inventory"))
+        // Load all ItemData assets from the specified folder
+        // ReSharper disable Unity.PerformanceAnalysis
+        private void LoadAllItemAssets()
         {
-            AddItemToInventory(selectedItem);
+            _itemAssets = new List<ItemData>(Resources.LoadAll<ItemData>("Items"));
+            Debug.Log($"Loaded {_itemAssets.Count} item assets from ItemAssets folder.");
         }
-    }
 
-    // Load all ItemData assets from the specified folder
-    private void LoadAllItemAssets()
-    {
-        itemAssets = new List<ItemData>(Resources.LoadAll<ItemData>("Items"));
-        Debug.Log($"Loaded {itemAssets.Count} item assets from ItemAssets folder.");
-    }
-
-    // Adds the selected item to the inventory
-    private void AddItemToInventory(ItemData item)
-    {
-        if (InventoryManager.Instance != null)
+        // Adds the selected item to the inventory
+        // ReSharper disable Unity.PerformanceAnalysis
+        private void AddItemToInventory(ItemData item)
         {
-            InventoryManager.Instance.AddItemToInventory(item);
-            Debug.Log($"Added {item.Name} to inventory.");
-        }
-        else
-        {
-            Debug.LogWarning("InventoryManager instance not found in the scene.");
+            if (InventoryManager.Instance)
+            {
+                InventoryManager.Instance.AddItemToInventory(item);
+                Debug.Log($"Added {item.name} to inventory.");
+            }
+            else
+            {
+                Debug.LogWarning("InventoryManager instance not found in the scene.");
+            }
         }
     }
 }
