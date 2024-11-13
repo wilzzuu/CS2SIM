@@ -1,134 +1,140 @@
-using UnityEngine;
-using UnityEditor;
-using System.IO;
 using System.Collections.Generic;
-public class JsonToScriptableObject : MonoBehaviour
+using System.IO;
+using UnityEditor;
+using UnityEngine;
+
+namespace Editor
 {
-    [MenuItem("Tools/Import JSON Data")]
-    public static void ImportJsonData()
+    public class JsonToScriptableObject : MonoBehaviour
     {
-        // Define the path to your JSON file in StreamingAssets
-        string path = Application.dataPath + "/StreamingAssets/rpg_crate_data.json";
-
-        if (File.Exists(path))
+        [MenuItem("Tools/Import JSON Data")]
+        public static void ImportJsonData()
         {
-            string jsonContent = File.ReadAllText(path);
-            Debug.Log("JSON Content: " + jsonContent);
+            // Define the path to your JSON file in StreamingAssets
+            string path = Application.dataPath + "/StreamingAssets/cases.json";
 
-            try
+            if (File.Exists(path))
             {
-                // Parse JSON into CrateJsonDataWrapper
-                CrateJsonDataWrapper crateDataWrapper = JsonUtility.FromJson<CrateJsonDataWrapper>(jsonContent);
+                string jsonContent = File.ReadAllText(path);
+                Debug.Log("JSON Content: " + jsonContent);
 
-                // Validate parsed data
-                if (crateDataWrapper == null || crateDataWrapper.Crates == null)
+                try
                 {
-                    Debug.LogError("Failed to parse JSON: Crate data is null or empty.");
-                    return;
+                    // Parse JSON into CaseJsonDataWrapper
+                    CaseJsonDataWrapper caseDataWrapper = JsonUtility.FromJson<CaseJsonDataWrapper>(jsonContent);
+
+                    // Validate parsed data
+                    if (caseDataWrapper == null || caseDataWrapper.cases == null)
+                    {
+                        Debug.LogError("Failed to parse JSON: Case data is null or empty.");
+                        return;
+                    }
+
+                    foreach (var caseData in caseDataWrapper.cases)
+                    {
+                        Debug.Log($"Processing case: {caseData.ID} | Name: {caseData.NAME} | Price: {caseData.PRICE}");
+                        CreateCaseDataAsset(caseData);
+                    }
+
+                    Debug.Log("Data imported successfully!");
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.LogError("Error parsing JSON: " + ex.Message);
+                }
+            }
+            else
+            {
+                Debug.LogError("JSON file not found at path: " + path);
+            }
+        }
+
+        private static void CreateCaseDataAsset(CaseJsonData jsonData)
+        {
+            // Create CaseData ScriptableObject
+            CaseData caseAsset = ScriptableObject.CreateInstance<CaseData>();
+            caseAsset.id = jsonData.ID;
+            caseAsset.name = jsonData.NAME;
+            caseAsset.price = jsonData.PRICE;
+            caseAsset.items = new List<ItemData>();
+
+            // Create ItemData assets and add them to the case
+            foreach (var itemJson in jsonData.ITEMS)
+            {
+                if (itemJson == null)
+                {
+                    Debug.LogWarning("Item data is missing or null.");
+                    continue;
                 }
 
-                foreach (var crateData in crateDataWrapper.Crates)
-                {
-                    Debug.Log($"Processing crate: {crateData.ID} | Name: {crateData.Name} | Price: {crateData.Price}");
-                    CreateCrateDataAsset(crateData);
-                }
+                // Log each item for debugging
+                Debug.Log($"Creating item: {itemJson.CONDITION} {itemJson.GUN} {itemJson.NAME} | Rarity: {itemJson.RARITY} | Price: {itemJson.PRICE} | ID: {itemJson.ID}");
 
-                Debug.Log("Data imported successfully!");
+                // Create ItemData ScriptableObject
+                ItemData itemAsset = ScriptableObject.CreateInstance<ItemData>();
+                itemAsset.id = itemJson.ID;
+                itemAsset.gun = itemJson.GUN;
+                itemAsset.name = itemJson.NAME;
+                itemAsset.price = itemJson.PRICE;
+                itemAsset.condition = itemJson.CONDITION;
+                itemAsset.isStatTrak = !string.IsNullOrEmpty(itemJson.ST);
+                itemAsset.type = itemJson.TYPE;
+                itemAsset.rarity = itemJson.RARITY;
+                itemAsset.weight = itemJson.WEIGHT;
+
+                // Save each ItemData asset and add it to the CaseData
+                SaveAsset(itemAsset, $"Assets/Resources/ItemAssets/{itemAsset.id}.asset");
+                caseAsset.items.Add(itemAsset);
             }
-            catch (System.Exception ex)
+
+            // Save CaseData asset
+            SaveAsset(caseAsset, $"Assets/Resources/CaseAssets/{jsonData.ID}.asset");
+        }
+
+        private static void SaveAsset(ScriptableObject asset, string path)
+        {
+            // Ensure the directory exists
+            string directory = Path.GetDirectoryName(path);
+            if (!Directory.Exists(directory))
             {
-                Debug.LogError("Error parsing JSON: " + ex.Message);
-            }
-        }
-        else
-        {
-            Debug.LogError("JSON file not found at path: " + path);
-        }
-    }
-
-    private static void CreateCrateDataAsset(CrateJsonData jsonData)
-    {
-        // Create CrateData ScriptableObject
-        CaseData caseAsset = ScriptableObject.CreateInstance<CaseData>();
-        caseAsset.ID = jsonData.ID;
-        caseAsset.Name = jsonData.Name;
-        caseAsset.Price = jsonData.Price;
-        caseAsset.Items = new List<ItemData>();
-
-        // Create ItemData assets and add them to the crate
-        foreach (var itemJson in jsonData.Items)
-        {
-            if (itemJson == null)
-            {
-                Debug.LogWarning("Item data is missing or null.");
-                continue;
+                if (directory != null) Directory.CreateDirectory(directory);
             }
 
-            // Log each item for debugging
-            Debug.Log($"Creating item: {itemJson.Name} | Rarity: {itemJson.Rarity} | Price: {itemJson.Price}");
-
-            // Create ItemData ScriptableObject
-            ItemData itemAsset = ScriptableObject.CreateInstance<ItemData>();
-            itemAsset.ID = itemJson.ID;
-            itemAsset.Name = itemJson.Name;
-            itemAsset.Price = itemJson.Price;
-            itemAsset.Rarity = itemJson.Rarity;
-            itemAsset.Weight = itemJson.Weight;
-            itemAsset.Color = itemJson.Color;
-            itemAsset.Item = itemJson.Item;
-            itemAsset.Style = itemJson.Style;
-
-            // Save each ItemData asset and add it to the CrateData
-            SaveAsset(itemAsset, $"Assets/ScriptableObjects/Items/{itemAsset.ID}.asset");
-            caseAsset.Items.Add(itemAsset);
+            // Create and save the asset
+            AssetDatabase.CreateAsset(asset, path);
+            AssetDatabase.SaveAssets();
         }
-
-        // Save CrateData asset
-        SaveAsset(caseAsset, $"Assets/ScriptableObjects/Crates/{jsonData.ID}.asset");
     }
 
-    private static void SaveAsset(ScriptableObject asset, string path)
+    // Wrapper class for the cases list
+    [System.Serializable]
+    public class CaseJsonDataWrapper
     {
-        // Ensure the directory exists
-        string directory = Path.GetDirectoryName(path);
-        if (!Directory.Exists(directory))
-        {
-            Directory.CreateDirectory(directory);
-        }
-
-        // Create and save the asset
-        AssetDatabase.CreateAsset(asset, path);
-        AssetDatabase.SaveAssets();
+        public List<CaseJsonData> cases;
     }
-}
 
-// Wrapper class for the crates list
-[System.Serializable]
-public class CrateJsonDataWrapper
-{
-    public List<CrateJsonData> Crates;
-}
+    // Structure of Case JSON data
+    [System.Serializable]
+    public class CaseJsonData
+    {
+        public string ID;
+        public string NAME;
+        public float PRICE;
+        public List<ItemJsonData> ITEMS;
+    }
 
-// Structure of Crate JSON data
-[System.Serializable]
-public class CrateJsonData
-{
-    public string ID;
-    public string Name;
-    public float Price;
-    public List<ItemJsonData> Items;
-}
-
-// Structure of Item JSON data
-[System.Serializable]
-public class ItemJsonData
-{
-    public string ID;
-    public string Name;
-    public string Rarity;
-    public float Price;
-    public int Weight;
-    public string Color;
-    public string Item;
-    public string Style;
+    // Structure of Item JSON data
+    [System.Serializable]
+    public class ItemJsonData
+    {
+        public string ID;
+        public string GUN;
+        public string NAME;
+        public float PRICE;
+        public string CONDITION;
+        public string ST;
+        public string TYPE;
+        public string RARITY;
+        public int WEIGHT;
+    }
 }
