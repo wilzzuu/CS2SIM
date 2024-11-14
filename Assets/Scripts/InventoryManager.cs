@@ -55,7 +55,7 @@ public class InventoryManager : MonoBehaviour
         List<ItemData> items = new List<ItemData>();
         foreach (SerializableItemData sItem in serializableItems)
         {
-            string itemPath = $"ItemAssets/{sItem.ID}";
+            string itemPath = $"ItemAssets/{sItem.id}";
             ItemData item = Resources.Load<ItemData>(itemPath);
             if (item != null)
             {
@@ -63,7 +63,7 @@ public class InventoryManager : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"Failed to load ItemData at {itemPath}. Asset with ID {sItem.ID} may be missing or incorrectly named.");
+                Debug.LogWarning($"Failed to load ItemData at {itemPath}. Asset with ID {sItem.id} may be missing or incorrectly named.");
             }
         }
         return items;
