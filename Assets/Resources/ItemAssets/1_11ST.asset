@@ -17,10 +17,10 @@ MonoBehaviour:
   name: Vanilla
   basePrice: 647.21
   price: 647.21
-  condition: 
+  condition: Vanilla
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
   weight: 0.00026
   demandScore: 0
-  lastActivityTime: 6.30474
+  lastActivityTime: 0
