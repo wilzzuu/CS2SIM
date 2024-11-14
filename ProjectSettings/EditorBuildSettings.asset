@@ -18,11 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Market.unity
     guid: 05bed4f6c5f3ca44eace9cb1abc5944b
   - enabled: 1
+    path: Assets/Scenes/GameSelector.unity
+    guid: 57d2ddb9fd0f5b149bb8802f6390e77b
+  - enabled: 1
     path: Assets/Scenes/Trading.unity
     guid: d22cc845089ec1d4e9e91e10c27c70a9
   - enabled: 1
     path: Assets/Scenes/CaseOpening.unity
     guid: 9cd7f8892f25d1c4683aacb5c502e83d
+  - enabled: 1
+    path: Assets/Scenes/CaseBattle.unity
+    guid: 2d1216e6be5a6be46bd2fde1e3fa9adf
   - enabled: 1
     path: Assets/Scenes/Contracts.unity
     guid: 1d3dbd9602787d749a37eb21d9dfcab1
@@ -53,6 +59,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 5ae08b0396506bf419a57b2c3dadbf3e
+  - enabled: 1
+    path: Assets/Scenes/Achievements.unity
+    guid: e4d5620db9d3ee944ab39a7c2d7e0be9
+  - enabled: 1
+    path: Assets/Scenes/Rewards.unity
+    guid: 2c2dadcdc512b9e48a0f5c18ad520edb
+  - enabled: 1
+    path: Assets/Scenes/Notifications.unity
+    guid: c9aefad84a4ae6645ac193fc05c8ceb7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
