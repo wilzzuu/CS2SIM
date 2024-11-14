@@ -2794,6 +2794,7 @@ MonoBehaviour:
   selectedPlayerItemsTotalValue: {fileID: 2076696815}
   chanceOfWinningText: {fileID: 2117503941}
   totalValueText: {fileID: 587810006}
+  totalPlayerValueText: {fileID: 1098826205}
   outcomeText: {fileID: 1053887759}
   startGameButton: {fileID: 879591496}
   confirmSelectionButton: {fileID: 1592686803}
