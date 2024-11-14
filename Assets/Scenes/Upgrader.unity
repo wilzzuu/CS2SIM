@@ -4460,7 +4460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item
+  m_text: Type
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45c5c4401f7b8f541a661ebe98046dc4, type: 2}
   m_sharedMaterial: {fileID: 605884113709718838, guid: 45c5c4401f7b8f541a661ebe98046dc4, type: 2}
@@ -6355,16 +6355,16 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: Item
+    - m_Text: Type
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: Rarity
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Color
+    - m_Text: Gun
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Style
+    - m_Text: Condition
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: Price
