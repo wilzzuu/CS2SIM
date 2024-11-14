@@ -15,7 +15,7 @@ public class RouletteManager : MonoBehaviour
     public Transform reelContainer;
     public Transform inventoryCatalogGrid;
     public Transform selectedItemsGrid;
-    public TextMeshProUGUI selectedPlayerItemsTotalValue, chanceOfWinningText, totalValueText, outcomeText;
+    public TextMeshProUGUI selectedPlayerItemsTotalValue, chanceOfWinningText, totalValueText, totalPlayerValueText, outcomeText;
     public Button startGameButton, confirmSelectionButton, replayButton, backButton;
 
     private List<ItemData> _allItems = new List<ItemData>();
@@ -84,7 +84,7 @@ public class RouletteManager : MonoBehaviour
 
         _selectedPlayerItems.Add(item);
         _totalPlayerValue += item.price;
-        selectedPlayerItemsTotalValue.text = $"Total Value: {_totalPlayerValue:F2}";
+        selectedPlayerItemsTotalValue.text = $"Total Value: {_totalPlayerValue:F2}€";
 
         UpdateSelectedItemsGrid();
     }
@@ -94,7 +94,7 @@ public class RouletteManager : MonoBehaviour
         if (_selectedPlayerItems.Remove(item))
         {
             _totalPlayerValue -= item.price;
-            selectedPlayerItemsTotalValue.text = $"Total Value: {_totalPlayerValue:F2}";
+            selectedPlayerItemsTotalValue.text = $"Total Value: {_totalPlayerValue:F2}€";
         }
 
         UpdateSelectedItemsGrid();
@@ -286,7 +286,8 @@ public class RouletteManager : MonoBehaviour
         _winChance = reelItemCount > 0 ? (float)playerItemCount / reelItemCount * 100f : 0f;
 
         chanceOfWinningText.text = $"Win Chance: {_winChance:F2}%";
-        totalValueText.text = $"Total Game Value: {_totalGameValue:F2}";
+        totalPlayerValueText.text = $"Total Player Value: {totalPlayerItemValue:F2}€";
+        totalValueText.text = $"Total Game Value: {_totalGameValue:F2}€";
         outcomeText.text = "";
     }
 
