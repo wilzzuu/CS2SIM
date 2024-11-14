@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_15BSST
   gun: Bayonet
   name: Crimson Web
-  basePrice: 32000.95
-  price: 32000.95
+  basePrice: 270.3
+  price: 270.3
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

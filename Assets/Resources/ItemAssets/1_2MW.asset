@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_2MW
   gun: SG 553
   name: Ultraviolet
-  basePrice: 18.38
-  price: 18.38
+  basePrice: 31.6
+  price: 31.6
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
   rarity: MIL_SPEC
-  weight: 7992000
+  weight: 0.7992
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

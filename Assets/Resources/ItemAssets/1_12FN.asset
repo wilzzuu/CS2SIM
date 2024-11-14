@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_12FN
   gun: Bayonet
   name: Slaughter
-  basePrice: 818.82
-  price: 818.82
+  basePrice: 750.1
+  price: 750.1
   condition: Factory New
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

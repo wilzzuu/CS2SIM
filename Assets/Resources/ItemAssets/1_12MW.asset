@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_12MW
   gun: Bayonet
   name: Slaughter
-  basePrice: 630.4
-  price: 630.4
+  basePrice: 615
+  price: 615
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

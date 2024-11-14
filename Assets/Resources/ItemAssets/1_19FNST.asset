@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_19FNST
   gun: Bayonet
   name: Night
-  basePrice: 1386
-  price: 1386
+  basePrice: 1786
+  price: 1786
   condition: Factory New
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

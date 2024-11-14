@@ -21,6 +21,6 @@ MonoBehaviour:
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

@@ -18,9 +18,9 @@ MonoBehaviour:
   basePrice: 0
   price: 0
   condition: 
-  isStatTrak: 0
+  isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.30304
+  lastActivityTime: 6.30474

@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_4MWST
   gun: Glock-18
   name: Dragon Tattoo
-  basePrice: 289.71
-  price: 289.71
+  basePrice: 388.13
+  price: 388.13
   condition: Factory New
   isStatTrak: 1
   type: Pistol
   rarity: RESTRICTED
-  weight: 159800
+  weight: 0.01598
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

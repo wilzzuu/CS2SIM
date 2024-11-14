@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_11ST
   gun: Bayonet
   name: Vanilla
-  basePrice: 808.7
-  price: 808.7
+  basePrice: 647.21
+  price: 647.21
   condition: 
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

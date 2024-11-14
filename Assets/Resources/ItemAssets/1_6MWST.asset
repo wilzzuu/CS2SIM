@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_6MWST
   gun: M4A1-S
   name: Dark Water
-  basePrice: 136.9
-  price: 136.9
+  basePrice: 171.48
+  price: 171.48
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
   rarity: RESTRICTED
-  weight: 159800
+  weight: 0.01598
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

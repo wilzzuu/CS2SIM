@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_21WWST
   gun: Bayonet
   name: Safari Mesh
-  basePrice: 168.43
-  price: 168.43
+  basePrice: 170.5
+  price: 170.5
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

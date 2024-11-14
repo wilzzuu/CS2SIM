@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_3MW
   gun: MP7
   name: Skulls
-  basePrice: 18.67
-  price: 18.67
+  basePrice: 31.5
+  price: 31.5
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
   rarity: MIL_SPEC
-  weight: 7992000
+  weight: 0.7992
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

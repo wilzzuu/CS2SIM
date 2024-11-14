@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_16BS
   gun: Bayonet
   name: Blue Steel
-  basePrice: 242.81
-  price: 242.81
+  basePrice: 366.26
+  price: 366.26
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

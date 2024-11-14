@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_14MW
   gun: Bayonet
   name: Stained
-  basePrice: 436.09
-  price: 436.09
+  basePrice: 384.49
+  price: 384.49
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

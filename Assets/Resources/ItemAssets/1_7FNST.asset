@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_7FNST
   gun: AK-47
   name: Case Hardened
-  basePrice: 917.34
-  price: 917.34
+  basePrice: 1196.89
+  price: 1196.89
   condition: Factory New
   isStatTrak: 1
   type: Rifle
   rarity: CLASSIFIED
-  weight: 32000
+  weight: 0.0032
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

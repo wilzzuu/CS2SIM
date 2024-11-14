@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_19MWST
   gun: Bayonet
   name: Night
-  basePrice: 296.4
-  price: 296.4
+  basePrice: 299.14
+  price: 299.14
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

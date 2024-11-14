@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_14WWST
   gun: Bayonet
   name: Stained
-  basePrice: 402.05
-  price: 402.05
+  basePrice: 393.83
+  price: 393.83
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

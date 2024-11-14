@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_31FT
   gun: Flip Knife
   name: Safari Mesh
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 128.56
+  price: 128.56
+  condition: Field-Tested
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.30304
+  lastActivityTime: 6.30474

@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_9MWST
   gun: AWP
   name: Lightning Strike
-  basePrice: 2759.14
-  price: 2759.14
+  basePrice: 762.26
+  price: 762.26
   condition: Minimal Wear
   isStatTrak: 1
   type: Sniper Rifle
   rarity: COVERT
-  weight: 640
+  weight: 0.0064
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

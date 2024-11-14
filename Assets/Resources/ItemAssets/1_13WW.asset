@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_13WW
   gun: Bayonet
   name: Case Hardened
-  basePrice: 434.14
-  price: 434.14
+  basePrice: 498.96
+  price: 498.96
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

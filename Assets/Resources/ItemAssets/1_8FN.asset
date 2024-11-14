@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_8FN
   gun: Desert Eagle
   name: Hypnotic
-  basePrice: 110.08
-  price: 110.08
+  basePrice: 115.27
+  price: 115.27
   condition: Factory New
   isStatTrak: 0
   type: Pistol
   rarity: CLASSIFIED
-  weight: 320000
+  weight: 0.032
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

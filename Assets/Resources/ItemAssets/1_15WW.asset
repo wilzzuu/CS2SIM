@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_15WW
   gun: Bayonet
   name: Crimson Web
-  basePrice: 380.85
-  price: 380.85
+  basePrice: 242.3
+  price: 242.3
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

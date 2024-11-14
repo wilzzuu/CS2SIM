@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_20FTST
   gun: Bayonet
   name: Forest DDPAT
-  basePrice: 267.25
-  price: 267.25
+  basePrice: 172.58
+  price: 172.58
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

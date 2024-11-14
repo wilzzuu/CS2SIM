@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_2FNST
   gun: SG 553
   name: Ultraviolet
-  basePrice: 141.5
-  price: 141.5
+  basePrice: 120.5
+  price: 120.5
   condition: Factory New
   isStatTrak: 1
   type: Rifle
   rarity: MIL_SPEC
-  weight: 799200
+  weight: 0.07992
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_14FNST
   gun: Bayonet
   name: Stained
-  basePrice: 522.32
-  price: 522.32
+  basePrice: 367.34
+  price: 367.34
   condition: Factory New
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

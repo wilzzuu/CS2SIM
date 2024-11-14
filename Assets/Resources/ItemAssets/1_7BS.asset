@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_7BS
   gun: AK-47
   name: Case Hardened
-  basePrice: 193.2
-  price: 193.2
+  basePrice: 228.49
+  price: 228.49
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
   rarity: CLASSIFIED
-  weight: 320000
+  weight: 0.032
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_10MWST
   gun: Bayonet
   name: Fade
-  basePrice: 987.77
-  price: 987.77
+  basePrice: 693.09
+  price: 693.09
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_17WW
   gun: Bayonet
   name: Boreal Forest
-  basePrice: 186.91
-  price: 186.91
+  basePrice: 165.23
+  price: 165.23
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 260
+  weight: 0.0026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

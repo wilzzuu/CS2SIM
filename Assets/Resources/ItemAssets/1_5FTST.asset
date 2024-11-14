@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_5FTST
   gun: USP-S
   name: Dark Water
-  basePrice: 111.09
-  price: 111.09
+  basePrice: 143.19
+  price: 143.19
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
   rarity: RESTRICTED
-  weight: 159800
+  weight: 0.01598
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

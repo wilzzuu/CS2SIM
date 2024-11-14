@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_22FTST
   gun: Bayonet
   name: Scorched
-  basePrice: 280.16
-  price: 280.16
+  basePrice: 272.6
+  price: 272.6
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_12FTST
   gun: Bayonet
   name: Slaughter
-  basePrice: 679.88
-  price: 679.88
+  basePrice: 517.6
+  price: 517.6
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

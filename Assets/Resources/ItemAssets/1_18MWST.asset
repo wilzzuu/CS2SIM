@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_18MWST
   gun: Bayonet
   name: Urban Masked
-  basePrice: 239.37
-  price: 239.37
+  basePrice: 220.39
+  price: 220.39
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 26
+  weight: 0.00026
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474

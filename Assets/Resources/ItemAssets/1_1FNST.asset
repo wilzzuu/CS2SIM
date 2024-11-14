@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_1FNST
   gun: AUG
   name: Wings
-  basePrice: 18.98
-  price: 18.98
+  basePrice: 32.33
+  price: 32.33
   condition: Factory New
   isStatTrak: 1
   type: Rifle
   rarity: MIL_SPEC
-  weight: 799200
+  weight: 0.07992
   demandScore: 0
-  lastActivityTime: 59.788246
+  lastActivityTime: 6.30474
