@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1_CASE
   name: CS:GO Weapon Case
-  price: 80.73
+  price: 113.09
   items:
   - {fileID: 11400000, guid: 7b882f86ecbb3724abb8fab84860d36a, type: 2}
   - {fileID: 11400000, guid: c232498ba2f0feb45b2556790fb50a75, type: 2}
