@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_36MW
   gun: Gut Knife
   name: Fade
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 233.82
+  price: 233.82
+  condition: Minimal Wear
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
   weight: 0.0026
   demandScore: 0
-  lastActivityTime: 6.30474
+  lastActivityTime: 9.414737

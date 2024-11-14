@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_38FN
   gun: Gut Knife
   name: Safari Mesh
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 378.76
+  price: 378.76
+  condition: Factory New
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
   weight: 0.0026
   demandScore: 0
-  lastActivityTime: 6.30474
+  lastActivityTime: 9.414737

@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_34BSST
   gun: Flip Knife
   name: Forest DDPAT
-  basePrice: 0
-  price: 0
+  basePrice: 185.06
+  price: 185.06
   condition: 
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
   weight: 0.00026
   demandScore: 0
-  lastActivityTime: 6.30474
+  lastActivityTime: 9.414737

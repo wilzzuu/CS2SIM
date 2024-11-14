@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_33WW
   gun: Flip Knife
   name: Scorched
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 135.3
+  price: 135.3
+  condition: Well-Worn
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
   weight: 0.0026
   demandScore: 0
-  lastActivityTime: 6.30474
+  lastActivityTime: 9.414737
