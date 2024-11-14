@@ -135,13 +135,13 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            player = new Player(2000f);
+            player = new Player(200f);
         }
     }
 
     public void ResetProgress()
     {
-        player = new Player(2000f);
+        player = new Player(200f);
         SavePlayerData();
         InventoryManager.Instance.ClearInventory();
         CollectionManager.Instance.ClearCollection();
