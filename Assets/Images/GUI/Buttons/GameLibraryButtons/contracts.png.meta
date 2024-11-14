@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7b6422c894865ca44818d0f7741999b8
+guid: 3c999c19dbdd58543bd8c1b83ffd9d6a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8472242139623304075
-    second: clicker_button_0
+      213: 6308268279977439953
+    second: contracts_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clicker_button_0
+      name: contracts_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 50
-        height: 50
+        x: 10
+        y: 11
+        width: 124
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57458a079ac8c6a80800000000000000
-      internalID: -8472242139623304075
+      spriteID: 1d27be7f3987b8750800000000000000
+      internalID: 6308268279977439953
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      contracts_0: 6308268279977439953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

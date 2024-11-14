@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 9588074f18eb49d498cba0873808bab1
+guid: 6233206f07a1e3d40a516fd536b5635a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1528287226215747673
-    second: crash_button_0
+      213: -1920028722217464984
+    second: clicker_0
+  - first:
+      213: -2660669391890743047
+    second: clicker_1
+  - first:
+      213: 4556156384359387501
+    second: clicker_2
+  - first:
+      213: -6820843618060490698
+    second: clicker_3
+  - first:
+      213: 6009895774251865795
+    second: clicker_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crash_button_0
+      name: clicker_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 50
-        height: 50
+        x: 82
+        y: 183
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9505b519221953510800000000000000
-      internalID: 1528287226215747673
+      spriteID: 86b4ea5cc00ba55e0800000000000000
+      internalID: -1920028722217464984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clicker_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 190
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0099fe847631bd0800000000000000
+      internalID: -2660669391890743047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clicker_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 179
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d619ede8718ba3f30800000000000000
+      internalID: 4556156384359387501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clicker_3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 162
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638a3052ede7751a0800000000000000
+      internalID: -6820843618060490698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clicker_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 51
+        width: 108
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c657696d50776350800000000000000
+      internalID: 6009895774251865795
       vertices: []
       indices: 
       edges: []
@@ -125,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      clicker_0: -1920028722217464984
+      clicker_1: -2660669391890743047
+      clicker_2: 4556156384359387501
+      clicker_3: -6820843618060490698
+      clicker_4: 6009895774251865795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
