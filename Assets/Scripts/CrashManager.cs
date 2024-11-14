@@ -98,7 +98,7 @@ public class CrashManager : MonoBehaviour
         {
             float winnings = _betAmount * _currentMultiplier;
             PlayerManager.Instance.AddCurrency(winnings);
-            outcomeText.text = $"You cashed out {winnings:F2}";
+            outcomeText.text = $"You cashed out {winnings:F2}€";
             _hasCashedOut = true;
             EndGame();
             uiManager.UnlockUI();

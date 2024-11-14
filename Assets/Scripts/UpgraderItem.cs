@@ -19,7 +19,7 @@ public class UpgraderItem : MonoBehaviour
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{_itemData.id}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{_itemData.rarity}");
         nameText.text = _itemData.name;
-        priceText.text = $"{_itemData.price:0.00}";
+        priceText.text = $"{_itemData.price:0.00}€";
 
         if (isInventoryItem)
         {

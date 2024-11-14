@@ -59,7 +59,7 @@ public class ClickerManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        currencyText.text = $"Currency Gained: \n{_sessionCurrency:F2}";
+        currencyText.text = $"Currency Gained: \n{_sessionCurrency:F2}€";
         multiplierText.text = $"Multiplier: \nx{_currentMultiplier:F2}";
     }
 }
