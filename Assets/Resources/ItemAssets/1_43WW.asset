@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_43WW
   gun: Gut Knife
   name: Blue Steel
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 169.98
+  price: 169.98
+  condition: Well-Worn
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

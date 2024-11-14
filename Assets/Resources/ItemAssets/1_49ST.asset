@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_49ST
   gun: Karambit
   name: Vanilla
-  basePrice: 0
-  price: 0
+  basePrice: 1440.61
+  price: 1440.61
   condition: Vanilla
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 0.00026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

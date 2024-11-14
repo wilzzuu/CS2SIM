@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_53FTST
   gun: Karambit
   name: Blue Steel
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 818.68
+  price: 818.68
+  condition: Field-Tested
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 0.00026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

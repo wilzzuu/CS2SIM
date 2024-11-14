@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_58MW
   gun: Karambit
   name: Boreal Forest
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 567.23
+  price: 567.23
+  condition: Minimal Wear
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

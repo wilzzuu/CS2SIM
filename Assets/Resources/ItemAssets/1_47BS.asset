@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_47BS
   gun: Gut Knife
   name: Scorched
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 95.75
+  price: 95.75
+  condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

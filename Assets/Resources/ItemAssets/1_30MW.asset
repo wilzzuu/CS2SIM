@@ -17,10 +17,10 @@ MonoBehaviour:
   name: Blue Steel
   basePrice: 216.09
   price: 216.09
-  condition: Well-Worn
+  condition: Minimal Wear
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

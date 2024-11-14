@@ -21,6 +21,6 @@ MonoBehaviour:
   isStatTrak: 1
   type: SMG
   rarity: MIL_SPEC
-  weight: 0.07992
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

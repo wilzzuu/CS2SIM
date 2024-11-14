@@ -17,10 +17,10 @@ MonoBehaviour:
   name: Dragon Tattoo
   basePrice: 388.13
   price: 388.13
-  condition: Factory New
+  condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
   rarity: RESTRICTED
-  weight: 0.01598
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

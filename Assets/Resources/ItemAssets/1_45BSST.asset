@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_45BSST
   gun: Gut Knife
   name: Forest DDPAT
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 130.64
+  price: 130.64
+  condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 0.00026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

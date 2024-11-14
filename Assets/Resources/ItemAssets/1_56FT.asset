@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_56FT
   gun: Karambit
   name: Night
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 639.32
+  price: 639.32
+  condition: Field-Tested
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

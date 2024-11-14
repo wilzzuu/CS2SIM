@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_39MWST
   gun: Gut Knife
   name: Slaughter
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 269.22
+  price: 269.22
+  condition: Minimal Wear
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 0.00026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

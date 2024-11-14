@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_44
   gun: Gut Knife
   name: Vanilla
-  basePrice: 0
-  price: 0
+  basePrice: 170.66
+  price: 170.66
   condition: Vanilla
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

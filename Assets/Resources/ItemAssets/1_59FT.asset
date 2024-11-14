@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_59FT
   gun: Karambit
   name: Forest DDPAT
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 513.45
+  price: 513.45
+  condition: Field-Tested
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

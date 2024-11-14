@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_54MW
   gun: Karambit
   name: Stained
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 720
+  price: 720
+  condition: Minimal Wear
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

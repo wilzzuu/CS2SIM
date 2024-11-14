@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_53WW
   gun: Karambit
   name: Blue Steel
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 811.74
+  price: 811.74
+  condition: Well-Worn
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

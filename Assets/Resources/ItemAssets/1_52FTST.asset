@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_52FTST
   gun: Karambit
   name: Crimson Web
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 777.05
+  price: 777.05
+  condition: Field-Tested
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 0.00026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

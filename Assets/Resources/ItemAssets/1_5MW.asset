@@ -21,6 +21,6 @@ MonoBehaviour:
   isStatTrak: 0
   type: Pistol
   rarity: RESTRICTED
-  weight: 0.1598
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

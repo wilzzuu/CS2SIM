@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_71FT
   gun: M9 Bayonet
   name: Safari Mesh
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 406.69
+  price: 406.69
+  condition: Field-Tested
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

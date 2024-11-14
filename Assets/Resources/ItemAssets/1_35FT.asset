@@ -17,10 +17,10 @@ MonoBehaviour:
   name: Boreal Forest
   basePrice: 130.44
   price: 130.44
-  condition: 
+  condition: Field-Tested
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

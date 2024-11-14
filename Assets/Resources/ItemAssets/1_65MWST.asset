@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_65MWST
   gun: M9 Bayonet
   name: Crimson Web
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 1165
+  price: 1165
+  condition: Minimal Wear
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

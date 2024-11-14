@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 1_40FT
   gun: Gut Knife
   name: Case Hardened
-  basePrice: 0
-  price: 0
-  condition: 
+  basePrice: 129.82
+  price: 129.82
+  condition: Field-Tested
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045

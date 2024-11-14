@@ -17,10 +17,10 @@ MonoBehaviour:
   name: Urban Masked
   basePrice: 172.77
   price: 172.77
-  condition: 
+  condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
-  weight: 0.0026
+  weight: 0
   demandScore: 0
-  lastActivityTime: 9.414737
+  lastActivityTime: 29.113045
