@@ -49,6 +49,20 @@ public class CaseOpening : MonoBehaviour
         {"SPECIAL", 5}
     };
     
+    private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
+    {
+        {"MIL_SPEC", 0.7992f},
+        {"MIL_SPEC StatTrak", 0.07992f},
+        {"RESTRICTED", 0.1598f},
+        {"RESTRICTED StatTrak", 0.01598f},
+        {"CLASSIFIED", 0.032f},
+        {"CLASSIFIED StatTrak", 0.0032f},
+        {"COVERT", 0.0064f},
+        {"COVERT StatTrak", 0.00064f},
+        {"SPECIAL", 0.0026f},
+        {"SPECIAL StatTrak", 0.00026f}
+    };
+    
     private static readonly Dictionary<string, int> ConditionOrder = new Dictionary<string, int>
     {
         {"Battle-Scarred",1},
@@ -58,11 +72,13 @@ public class CaseOpening : MonoBehaviour
         {"Factory New",5}
     };
 
+    private Dictionary<string, List<ItemData>> _rarityGroups;
+
     void Start()
     {   
         openCaseButton.interactable = false;
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>("CaseAssets"));
-
+        
         DisplayCaseSelector(_availableCases);
         selectCaseButton.onClick.AddListener(ToggleCaseSelector);
 
@@ -71,11 +87,21 @@ public class CaseOpening : MonoBehaviour
 
         SetInitialReelPosition();
     }
+    
+    private void GroupItemsByRarity()
+    {
+        _rarityGroups = _selectedCaseData.items
+            .Where(item => item != null)
+            .GroupBy(item => item.rarity)
+            .ToDictionary(g => g.Key, g => g.ToList());
+    }
 
     // ReSharper disable Unity.PerformanceAnalysis
     private void SelectCase(CaseData chosenCase)
     {
         _selectedCaseData = chosenCase;
+        
+        GroupItemsByRarity();
 
         if (_selectedCaseData) openCaseButton.interactable = true;
         else openCaseButton.interactable = false;
@@ -150,30 +176,31 @@ public class CaseOpening : MonoBehaviour
             return null; 
         }
 
-        float totalWeight = _selectedCaseData.items.Sum(item => item.weight);
+        float totalRarityWeight = RarityWeights.Values.Sum();
+        float rarityRandomValue = Random.Range(0, totalRarityWeight);
         
-        List<(ItemData item, float cumulativeProbability)> cumulativeWeights = new List<(ItemData item, float cumulativeProbability)>();
-        float cumulativeProbability = 0f;
-        
-        foreach (var item in _selectedCaseData.items.OrderBy(item => item.weight))
-        {
-            float normalizedWeight = item.weight / totalWeight;
-            cumulativeProbability += normalizedWeight;
-            cumulativeWeights.Add((item, cumulativeProbability));
-        }
+        float cumulativeRarityWeight = 0f;
+        string selectedRarity = null;
 
-        float biasedRandomValue = Mathf.Pow(Random.Range(0f, 1f), 1f);
-
-        foreach (var entry in cumulativeWeights)
+        foreach (var rarityWeight in RarityWeights)
         {
-            if (biasedRandomValue <= entry.cumulativeProbability)
+            cumulativeRarityWeight += rarityWeight.Value;
+            if (rarityRandomValue <= cumulativeRarityWeight)
             {
-                return entry.item;
+                selectedRarity = rarityWeight.Key;
+                break;
             }
         }
 
+        // Step 2: Select a random item from the chosen rarity
+        if (selectedRarity != null && _rarityGroups.ContainsKey(selectedRarity))
+        {
+            var itemsInRarity = _rarityGroups[selectedRarity];
+            return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
+        }
+
         Debug.LogWarning("No item was selected; returning default item.");
-        return cumulativeWeights[cumulativeWeights.Count - 1].item;
+        return _selectedCaseData.items[0];
     }
     
     private ItemData GetRandomNonSpecialItem()
@@ -188,22 +215,33 @@ public class CaseOpening : MonoBehaviour
             Debug.LogError("No valid non-special items in the selected case.");
             return null;
         }
-
-        float totalWeight = nonSpecialItems.Sum(item => item.weight);
-
-        float randomValue = Random.Range(0, totalWeight);
-        float cumulativeWeight = 0f;
-
-        foreach (var item in nonSpecialItems)
+        
+        
+        
+        float totalRarityWeight = RarityWeights.Values.Sum();
+        float rarityRandomValue = Random.Range(0, totalRarityWeight);
+        
+        float cumulativeRarityWeight = 0f;
+        string selectedRarity = null;
+        
+        foreach (var rarity in RarityWeights)
         {
-            cumulativeWeight += item.weight;
-            if (randomValue <= cumulativeWeight)
+            cumulativeRarityWeight += rarity.Value;
+            if (rarityRandomValue <= cumulativeRarityWeight && rarity.Key != "SPECIAL")
             {
-                return item;
+                selectedRarity = rarity.Key;
+                break;
             }
         }
 
-        return nonSpecialItems[nonSpecialItems.Count - 1];
+        if (selectedRarity != null && _rarityGroups.ContainsKey(selectedRarity))
+        {
+            var itemsInRarity = _rarityGroups[selectedRarity];
+            return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
+        }
+        
+        Debug.LogWarning("No item was selected; returning default item.");
+        return _selectedCaseData.items[0];
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
