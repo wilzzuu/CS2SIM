@@ -498,7 +498,7 @@
                         "ST": "",
                         "TYPE": "Sniper Rifle",
                         "RARITY": "COVERT",
-                        "WEIGHT": 0.064
+                        "WEIGHT": 0.00064
                     },
                     {
                         "ID": "1_9FNST",
@@ -509,7 +509,7 @@
                         "ST": "StatTrak",
                         "TYPE": "Sniper Rifle",
                         "RARITY": "COVERT",
-                        "WEIGHT": 0.0064
+                        "WEIGHT": 0.00064
                     },
                     {
                         "ID": "1_9MW",
@@ -520,7 +520,7 @@
                         "ST": "",
                         "TYPE": "Sniper Rifle",
                         "RARITY": "COVERT",
-                        "WEIGHT": 0.064
+                        "WEIGHT": 0.00064
                     },
                     {
                         "ID": "1_9MWST",
@@ -531,7 +531,7 @@
                         "ST": "StatTrak",
                         "TYPE": "Sniper Rifle",
                         "RARITY": "COVERT",
-                        "WEIGHT": 0.0064
+                        "WEIGHT": 0.00064
                     },
                     {
                         "ID": "1_10FN",
