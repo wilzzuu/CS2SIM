@@ -75,6 +75,7 @@ namespace Editor
                 itemAsset.id = itemJson.ID;
                 itemAsset.gun = itemJson.GUN;
                 itemAsset.name = itemJson.NAME;
+                itemAsset.basePrice = itemJson.PRICE;
                 itemAsset.price = itemJson.PRICE;
                 itemAsset.condition = itemJson.CONDITION;
                 itemAsset.isStatTrak = !string.IsNullOrEmpty(itemJson.ST);
@@ -135,6 +136,6 @@ namespace Editor
         public string ST;
         public string TYPE;
         public string RARITY;
-        public int WEIGHT;
+        public float WEIGHT;
     }
 }
