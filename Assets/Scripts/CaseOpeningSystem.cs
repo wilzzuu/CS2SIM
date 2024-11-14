@@ -146,10 +146,14 @@ public class CaseOpening : MonoBehaviour
             Debug.LogError("No items in the selected case. Ensure the selected case has items.");
             return null; 
         }
+        
+        _selectedCaseData.items = _selectedCaseData.items.OrderBy(_ => Random.value).ToList();
 
         float totalWeight = _selectedCaseData.items.Sum(item => item.weight);
+        Debug.Log($"totalWeight: {totalWeight}");
         
         float randomValue = Random.Range(0, totalWeight);
+        Debug.Log($"randomValue: {randomValue}");
         float cumulativeWeight = 0f;
 
         foreach (var item in _selectedCaseData.items)
