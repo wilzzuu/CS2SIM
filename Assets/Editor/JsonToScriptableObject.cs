@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
@@ -67,18 +68,22 @@ namespace Editor
                     continue;
                 }
 
-                // Log each item for debugging
-                Debug.Log($"Creating item: {itemJson.CONDITION} {itemJson.GUN} {itemJson.NAME} | Rarity: {itemJson.RARITY} | Price: {itemJson.PRICE} | ID: {itemJson.ID}");
-
                 // Create ItemData ScriptableObject
                 ItemData itemAsset = ScriptableObject.CreateInstance<ItemData>();
+
+                bool statTrak = itemJson.ID.EndsWith("ST");
+                string condition = SplitIDString(itemJson.ID);
+                
+                // Log each item for debugging
+                Debug.Log($"Creating item: {condition} {itemJson.GUN} {itemJson.NAME} | Rarity: {itemJson.RARITY} | Price: {itemJson.PRICE} | ID: {itemJson.ID}");
+                
                 itemAsset.id = itemJson.ID;
                 itemAsset.gun = itemJson.GUN;
                 itemAsset.name = itemJson.NAME;
                 itemAsset.basePrice = itemJson.PRICE;
                 itemAsset.price = itemJson.PRICE;
-                itemAsset.condition = itemJson.CONDITION;
-                itemAsset.isStatTrak = !string.IsNullOrEmpty(itemJson.ST);
+                itemAsset.condition = condition;
+                itemAsset.isStatTrak = statTrak;
                 itemAsset.type = itemJson.TYPE;
                 itemAsset.rarity = itemJson.RARITY;
                 itemAsset.weight = itemJson.WEIGHT;
@@ -104,6 +109,38 @@ namespace Editor
             // Create and save the asset
             AssetDatabase.CreateAsset(asset, path);
             AssetDatabase.SaveAssets();
+        }
+
+        private static string SplitIDString(string id)
+        {
+            string idSplit = id.Split('_')[1];
+            if (idSplit.EndsWith("ST")) idSplit = idSplit.Split("ST")[0];
+            
+            string pattern = @"\d+(.*)";
+            Match match = Regex.Match(idSplit, pattern);
+
+            if (match.Success)
+            {
+                string shortCondition = match.Groups[1].Value;
+                string condition = ConvertConditionToLongForm(shortCondition);
+                
+                return condition;
+            }
+            return "Unknown";
+        }
+        
+        private static string ConvertConditionToLongForm(string condition)
+        {
+            switch (condition)
+            {
+                case "FN": return "Factory New";
+                case "MW": return "Minimal Wear";
+                case "FT": return "Field-Tested";
+                case "WW": return "Well-Worn";
+                case "BS": return "Battle-Scarred";
+                case "" : return "Vanilla";
+                default: return "Unknown";
+            }
         }
     }
 
@@ -132,8 +169,6 @@ namespace Editor
         public string GUN;
         public string NAME;
         public float PRICE;
-        public string CONDITION;
-        public string ST;
         public string TYPE;
         public string RARITY;
         public float WEIGHT;
