@@ -74,7 +74,6 @@ public class SimulationLogger : MonoBehaviour
             _logBuilder.AppendLine($"Condition: {entry.Key}");
             _logBuilder.AppendLine($"Appeared: {entry.Value} times ({percentage:F5}%)\n");
         }
-
         
         SaveLogToFile();
     }
@@ -86,7 +85,6 @@ public class SimulationLogger : MonoBehaviour
         
         string fileName = $"{DateTime.Now} SIM - {numberOfSimulations}x.txt";
         string filePath = Path.Combine(simulationPath, fileName);
-        
         
         File.WriteAllText(filePath, _logBuilder.ToString());
         Debug.Log($"Simulation results saved to: {filePath}");
