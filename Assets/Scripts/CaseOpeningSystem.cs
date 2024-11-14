@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEditor;
+using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 public class CaseOpening : MonoBehaviour
@@ -30,6 +32,7 @@ public class CaseOpening : MonoBehaviour
     public Transform caseSelectorPanel;
     public Button selectCaseButton;
     public Button openCaseButton;
+
     private bool _isSelectorOpen;
     private bool _isFirstSelection = true;
     private List<CaseData> _availableCases;
@@ -139,34 +142,38 @@ public class CaseOpening : MonoBehaviour
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
-    private ItemData GetRandomItemByPercentage()
+    public ItemData GetRandomItemByPercentage()
     {
         if (_selectedCaseData.items == null || _selectedCaseData.items.Count == 0)
         {
             Debug.LogError("No items in the selected case. Ensure the selected case has items.");
             return null; 
         }
-        
-        _selectedCaseData.items = _selectedCaseData.items.OrderBy(_ => Random.value).ToList();
 
         float totalWeight = _selectedCaseData.items.Sum(item => item.weight);
-        Debug.Log($"totalWeight: {totalWeight}");
         
-        float randomValue = Random.Range(0, totalWeight);
-        Debug.Log($"randomValue: {randomValue}");
-        float cumulativeWeight = 0f;
-
-        foreach (var item in _selectedCaseData.items)
+        List<(ItemData item, float cumulativeProbability)> cumulativeWeights = new List<(ItemData item, float cumulativeProbability)>();
+        float cumulativeProbability = 0f;
+        
+        foreach (var item in _selectedCaseData.items.OrderBy(item => item.weight))
         {
-            cumulativeWeight += item.weight;
-            if (randomValue <= cumulativeWeight)
+            float normalizedWeight = item.weight / totalWeight;
+            cumulativeProbability += normalizedWeight;
+            cumulativeWeights.Add((item, cumulativeProbability));
+        }
+
+        float biasedRandomValue = Mathf.Pow(Random.Range(0f, 1f), 1f);
+
+        foreach (var entry in cumulativeWeights)
+        {
+            if (biasedRandomValue <= entry.cumulativeProbability)
             {
-                return item;
+                return entry.item;
             }
         }
 
         Debug.LogWarning("No item was selected; returning default item.");
-        return _selectedCaseData.items[_selectedCaseData.items.Count - 1];
+        return cumulativeWeights[cumulativeWeights.Count - 1].item;
     }
     
     private ItemData GetRandomNonSpecialItem()
