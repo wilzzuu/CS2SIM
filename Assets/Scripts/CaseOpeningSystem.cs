@@ -5,8 +5,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using UnityEditor;
-using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 public class CaseOpening : MonoBehaviour
@@ -16,10 +14,8 @@ public class CaseOpening : MonoBehaviour
     public Transform caseItemGrid;
     public GameObject openedItemPrefab;
     public Transform caseGridParent;
-    public float initialScrollSpeed = 4000f;
-    public float finalScrollSpeed = 100f;
     public int numberOfReelItems = 40;
-    public float easingDuasion = 7f;
+    public float easingDuration = 7f;
     
     private bool _isScrolling;
     private Vector3 _initialReelPosition;
@@ -280,10 +276,9 @@ public class CaseOpening : MonoBehaviour
         float targetPosition = _initialReelPosition.x - (itemWidth * _openedItemIndex) + 800 - _randomOffset;
 
         float elapsed = 0f;
-
-        while (elapsed < easingDuasion)
+        while (elapsed < easingDuration)
         {
-            float t = elapsed / easingDuasion;
+            float t = elapsed / easingDuration;
             float easeFactor = EaseOutQuint(t);
 
             float currentPosition = Mathf.Lerp(_initialReelPosition.x, targetPosition, easeFactor);
