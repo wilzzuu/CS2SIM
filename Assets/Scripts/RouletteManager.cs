@@ -42,15 +42,10 @@ public class RouletteManager : MonoBehaviour
     private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
     {
         {"MIL_SPEC", 0.7992f},
-        {"MIL_SPEC StatTrak", 0.07992f},
         {"RESTRICTED", 0.1598f},
-        {"RESTRICTED StatTrak", 0.01598f},
         {"CLASSIFIED", 0.032f},
-        {"CLASSIFIED StatTrak", 0.0032f},
         {"COVERT", 0.0064f},
-        {"COVERT StatTrak", 0.00064f},
         {"SPECIAL", 0.0026f},
-        {"SPECIAL StatTrak", 0.00026f}
     };
 
     void Awake()
@@ -177,31 +172,32 @@ public class RouletteManager : MonoBehaviour
 
         float totalWeight = _reelItems
             .Where(i => RarityWeights.ContainsKey(i.Item.rarity))
-            .Sum(i => i.OwnerIsPlayer ? RarityWeights[i.Item.rarity] : RarityWeights[i.Item.rarity] / 10);
+            .Sum(i => RarityWeights[i.Item.rarity]);
 
         if (totalWeight <= 0)
         {
             Debug.LogWarning("Total weight is zero or invalid. Cannot get a random item.");
             return null;
         }
-
+        
         float randomValue = Random.Range(0, totalWeight);
         float cumulativeWeight = 0f;
 
         foreach (var item in _reelItems)
         {
-            float itemWeight = item.OwnerIsPlayer
-                ? RarityWeights[item.Item.rarity]
-                : RarityWeights[item.Item.rarity] / 10;
-
-            cumulativeWeight += itemWeight;
-            if (randomValue <= cumulativeWeight)
+            if (RarityWeights.TryGetValue(item.Item.rarity, out float itemWeight))
             {
-                Debug.Log($"Winning item: {item.Item.name}, Owner: {(item.OwnerIsPlayer ? "Player" : "Bot")}");
-                return item;
+                cumulativeWeight += itemWeight;
+                if (randomValue <= cumulativeWeight)
+                {
+                    return item;
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"Rarity '{item.Item.rarity}' not found in RarityWeights.'");
             }
         }
-
         return _reelItems[_reelItems.Count - 1];
     }
 
@@ -313,9 +309,8 @@ public class RouletteManager : MonoBehaviour
         int playerItemCount = _selectedPlayerItems.Count;
         int reelItemCount = _reelItems.Count;
 
-        _winChance = reelItemCount > 0
-            ? (float)_reelItems.Count(item => item.OwnerIsPlayer) / reelItemCount * 100f
-            : 0f;
+        _winChance = reelItemCount > 0 ? (float)playerItemCount / reelItemCount * 100f : 0f;
+
         chanceOfWinningText.text = $"Win Chance: {_winChance:F2}%";
         totalPlayerValueText.text = $"Total Player Value: {totalPlayerItemValue:F2}€";
         totalValueText.text = $"Total Game Value: {_totalGameValue:F2}€";
@@ -336,17 +331,26 @@ public class RouletteManager : MonoBehaviour
         }
 
         int playerItemCount = _selectedPlayerItems.Count;
-        int botItemsCount = Mathf.Clamp(numberOfReelItems - playerItemCount, playerItemCount, numberOfReelItems);
+        int botItemsCount = Mathf.Clamp(playerItemCount * 5, 1, numberOfReelItems - playerItemCount);
 
+        float scalingFactor = (float)botItemsCount / playerItemCount;
+        float botItemTargetValue = _totalPlayerValue * scalingFactor;
         HashSet<ItemData> usedBotItems = new HashSet<ItemData>();
 
         for (int i = 0; i < botItemsCount; i++)
         {
-            var botItem = GenerateRandomBotItem(_totalPlayerValue / botItemsCount, usedBotItems);
+            var botItem = GenerateRandomBotItem(botItemTargetValue / botItemsCount, usedBotItems);
             var botRouletteItem = new RouletteItem { Item = botItem, OwnerIsPlayer = false };
             _reelItems.Add(botRouletteItem);
             _itemOwnership[botItem] = false;
             _accumulatedBotValue += botItem.price;
+        }
+
+        int targetReelSize = Mathf.Max(numberOfReelItems, 40);
+        for (int i = 0; _reelItems.Count < targetReelSize; i++)
+        {
+            var botItemToAdd = _reelItems[(i % botItemsCount) + playerItemCount];
+            _reelItems.Add(new RouletteItem { Item = botItemToAdd.Item, OwnerIsPlayer = false });
         }
 
         ShuffleReelItems();
@@ -357,14 +361,11 @@ public class RouletteManager : MonoBehaviour
     {
         for (int i = 0; i < _reelItems.Count; i++)
         {
-            int randomIndex = Random.Range(i, _reelItems.Count);
-            (_reelItems[i], _reelItems[randomIndex]) = (_reelItems[randomIndex], _reelItems[i]);
+            int randomIndex = UnityEngine.Random.Range(i, _reelItems.Count);
+            RouletteItem temp = _reelItems[i];
+            _reelItems[i] = _reelItems[randomIndex];
+            _reelItems[randomIndex] = temp;
         }
-
-        // Log reel composition
-        int playerItemCount = _reelItems.Count(item => item.OwnerIsPlayer);
-        int botItemCount = _reelItems.Count - playerItemCount;
-        Debug.Log($"Reel shuffled. Player items: {playerItemCount}, Bot items: {botItemCount}");
     }
 
     private ItemData GenerateRandomBotItem(float targetValue, HashSet<ItemData> usedBotItems)
