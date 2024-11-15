@@ -48,15 +48,10 @@ public class CaseOpening : MonoBehaviour
     private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
     {
         {"MIL_SPEC", 0.7992f},
-        {"MIL_SPEC StatTrak", 0.07992f},
         {"RESTRICTED", 0.1598f},
-        {"RESTRICTED StatTrak", 0.01598f},
         {"CLASSIFIED", 0.032f},
-        {"CLASSIFIED StatTrak", 0.0032f},
         {"COVERT", 0.0064f},
-        {"COVERT StatTrak", 0.00064f},
-        {"SPECIAL", 0.0026f},
-        {"SPECIAL StatTrak", 0.00026f}
+        {"SPECIAL", 0.0026f}
     };
     
     private static readonly Dictionary<string, int> ConditionOrder = new Dictionary<string, int>
@@ -169,32 +164,47 @@ public class CaseOpening : MonoBehaviour
         if (_selectedCaseData.items == null || _selectedCaseData.items.Count == 0)
         {
             Debug.LogError("No items in the selected case. Ensure the selected case has items.");
-            return null; 
+            return null;
         }
 
-        float totalRarityWeight = RarityWeights.Values.Sum();
-        float rarityRandomValue = Random.Range(0, totalRarityWeight);
-        
-        float cumulativeRarityWeight = 0f;
-        string selectedRarity = null;
+        // Step 1: Calculate total weight dynamically
+        float totalWeight = 0f;
+        Dictionary<ItemData, float> itemWeights = new Dictionary<ItemData, float>();
 
-        foreach (var rarityWeight in RarityWeights)
+        foreach (var item in _selectedCaseData.items)
         {
-            cumulativeRarityWeight += rarityWeight.Value;
-            if (rarityRandomValue <= cumulativeRarityWeight)
+            if (!RarityWeights.TryGetValue(item.rarity, out float baseWeight))
             {
-                selectedRarity = rarityWeight.Key;
-                break;
+                Debug.LogWarning($"Unknown rarity '{item.rarity}' for item '{item.name}'");
+                continue;
+            }
+
+            // Adjust weight for StatTrak items
+            float itemWeight = item.isStatTrak ? baseWeight / 10 : baseWeight;
+            itemWeights[item] = itemWeight;
+            totalWeight += itemWeight;
+        }
+
+        if (totalWeight <= 0)
+        {
+            Debug.LogError("Total weight is zero or negative. Ensure items have valid rarities and weights.");
+            return null;
+        }
+
+        // Step 2: Choose a random item based on the calculated weights
+        float randomValue = Random.Range(0f, totalWeight);
+        float cumulativeWeight = 0f;
+
+        foreach (var itemWeightPair in itemWeights)
+        {
+            cumulativeWeight += itemWeightPair.Value;
+            if (randomValue <= cumulativeWeight)
+            {
+                return itemWeightPair.Key; // Return the selected item
             }
         }
 
-        // Step 2: Select a random item from the chosen rarity
-        if (selectedRarity != null && _rarityGroups.ContainsKey(selectedRarity))
-        {
-            var itemsInRarity = _rarityGroups[selectedRarity];
-            return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
-        }
-
+        // Fallback in case no item was selected
         Debug.LogWarning("No item was selected; returning default item.");
         return _selectedCaseData.items[0];
     }
