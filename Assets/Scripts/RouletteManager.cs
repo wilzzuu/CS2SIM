@@ -177,32 +177,30 @@ public class RouletteManager : MonoBehaviour
 
         float totalWeight = _reelItems
             .Where(i => RarityWeights.ContainsKey(i.Item.rarity))
-            .Sum(i => RarityWeights[i.Item.rarity]);
+            .Sum(i => i.OwnerIsPlayer ? RarityWeights[i.Item.rarity] : RarityWeights[i.Item.rarity] / 10);
 
         if (totalWeight <= 0)
         {
             Debug.LogWarning("Total weight is zero or invalid. Cannot get a random item.");
             return null;
         }
-        
+
         float randomValue = Random.Range(0, totalWeight);
         float cumulativeWeight = 0f;
 
         foreach (var item in _reelItems)
         {
-            if (RarityWeights.TryGetValue(item.Item.rarity, out float itemWeight))
+            float itemWeight = item.OwnerIsPlayer
+                ? RarityWeights[item.Item.rarity]
+                : RarityWeights[item.Item.rarity] / 10;
+
+            cumulativeWeight += itemWeight;
+            if (randomValue <= cumulativeWeight)
             {
-                cumulativeWeight += itemWeight;
-                if (randomValue <= cumulativeWeight)
-                {
-                    return item;
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"Rarity '{item.Item.rarity}' not found in RarityWeights.'");
+                return item;
             }
         }
+
         return _reelItems[_reelItems.Count - 1];
     }
 
@@ -219,7 +217,7 @@ public class RouletteManager : MonoBehaviour
         float totalReelWidth = itemWidth * _reelItems.Count;
         _reelTransform.sizeDelta = new Vector2(totalReelWidth, _reelTransform.sizeDelta.y);
 
-        _winningItemIndex = UnityEngine.Random.Range(_reelItems.Count / 2, _reelItems.Count - 4);
+        _winningItemIndex = Random.Range(_reelItems.Count / 2, _reelItems.Count - 4);
         _reelItems[_winningItemIndex] = winningItem;
 
         for (int i = 0; i < _reelItems.Count; i++)
@@ -229,7 +227,7 @@ public class RouletteManager : MonoBehaviour
             SetUpReelItem(reelItem, itemData.Item, itemData.OwnerIsPlayer);
         }
 
-        _randomOffset = UnityEngine.Random.Range(0f, 256f);
+        _randomOffset = Random.Range(0f, 256f);
         float targetPosition = _initialReelPosition.x - (itemWidth * _winningItemIndex) + 800 - _randomOffset;
         float elapsed = 0f;
 
@@ -327,34 +325,38 @@ public class RouletteManager : MonoBehaviour
         _reelItems.Clear();
         _itemOwnership.Clear();
         _accumulatedBotValue = 0f;
+        
+        Debug.Log($"Generating reel with {numberOfReelItems} items. Player selected: {_selectedPlayerItems.Count}");
 
+        // Add player items to the reel
         foreach (var playerItem in _selectedPlayerItems)
         {
+            Debug.Log($"Adding player item: {playerItem.name} (Value: {playerItem.price})");
             var playerRouletteItem = new RouletteItem { Item = playerItem, OwnerIsPlayer = true };
             _reelItems.Add(playerRouletteItem);
             _itemOwnership[playerItem] = true;
         }
 
         int playerItemCount = _selectedPlayerItems.Count;
-        int botItemsCount = Mathf.Clamp(playerItemCount * 5, 1, numberOfReelItems - playerItemCount);
+        int botItemsCount = Mathf.Clamp(numberOfReelItems - playerItemCount, 1, numberOfReelItems);
 
-        float scalingFactor = (float)botItemsCount / playerItemCount;
-        float botItemTargetValue = _totalPlayerValue * scalingFactor;
         HashSet<ItemData> usedBotItems = new HashSet<ItemData>();
 
+        // Generate bot items to balance the reel
         for (int i = 0; i < botItemsCount; i++)
         {
-            var botItem = GenerateRandomBotItem(botItemTargetValue / botItemsCount, usedBotItems);
+            var botItem = GenerateRandomBotItem(_totalPlayerValue / botItemsCount, usedBotItems);
+            Debug.Log($"Adding bot item: {botItem.name} (Value: {botItem.price})");
             var botRouletteItem = new RouletteItem { Item = botItem, OwnerIsPlayer = false };
             _reelItems.Add(botRouletteItem);
             _itemOwnership[botItem] = false;
             _accumulatedBotValue += botItem.price;
         }
 
-        int targetReelSize = Mathf.Max(numberOfReelItems, 40);
-        for (int i = 0; _reelItems.Count < targetReelSize; i++)
+        // Ensure the reel has exactly `numberOfReelItems` items
+        while (_reelItems.Count < numberOfReelItems)
         {
-            var botItemToAdd = _reelItems[(i % botItemsCount) + playerItemCount];
+            var botItemToAdd = _reelItems[Random.Range(playerItemCount, _reelItems.Count)];
             _reelItems.Add(new RouletteItem { Item = botItemToAdd.Item, OwnerIsPlayer = false });
         }
 
@@ -366,10 +368,8 @@ public class RouletteManager : MonoBehaviour
     {
         for (int i = 0; i < _reelItems.Count; i++)
         {
-            int randomIndex = UnityEngine.Random.Range(i, _reelItems.Count);
-            RouletteItem temp = _reelItems[i];
-            _reelItems[i] = _reelItems[randomIndex];
-            _reelItems[randomIndex] = temp;
+            int randomIndex = Random.Range(i, _reelItems.Count);
+            (_reelItems[i], _reelItems[randomIndex]) = (_reelItems[randomIndex], _reelItems[i]);
         }
     }
 
