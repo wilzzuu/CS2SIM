@@ -86,9 +86,9 @@ public class RouletteManager : MonoBehaviour
 
     public void AddItemToSelection(ItemData item)
     {
-        if (_selectedPlayerItems.Contains(item) || _selectedPlayerItems.Count >= 12)
+        if (_selectedPlayerItems.Count >= 12)
         {
-            Debug.LogWarning("Cannot select more than 10 items or duplicate items.");
+            Debug.LogWarning("Cannot select more than 12 items.");
             return;
         }
 
