@@ -175,6 +175,16 @@ public class CaseBattleManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price)
+        {
+            PlayerManager.Instance.DeductCurrency(_selectedCaseData.price);
+        }
+        else
+        {
+            Debug.LogWarning("Not enough balance to start battle.");
+            return;
+        }
+
         _playerItems.Clear();
         _botItems.Clear();
         _playerTotalValue = 0f;
@@ -240,9 +250,6 @@ public class CaseBattleManager : MonoBehaviour
         for (int i = 0; i < numberOfRounds; i++)
         {
             Debug.Log($"Starting round {i + 1}/{numberOfRounds}");
-
-            // Deduct the cost of the case
-            PlayerManager.Instance.DeductCurrency(_selectedCaseData.price);
 
             // Randomly select items for player and bot
             int playerOpenedItemIndex = Random.Range(24, numberOfReelItems - 4);
