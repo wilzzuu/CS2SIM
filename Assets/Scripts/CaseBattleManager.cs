@@ -20,6 +20,7 @@ public class CaseBattleManager : MonoBehaviour
     public Button startBattleButton;
     public GameObject caseButtonPrefab;
     public Transform caseSelectorPanel;
+    public Button closeSelectorPanelButton;
     public Button selectCaseButton;
     public TMP_Dropdown gameModeDropdown;
     public float easingDuration = 7f;
@@ -64,6 +65,7 @@ public class CaseBattleManager : MonoBehaviour
         
         DisplayCaseSelector(_availableCases);
         selectCaseButton.onClick.AddListener(ToggleCaseSelector);
+        closeSelectorPanelButton.onClick.AddListener(CloseCaseSelector);
         
         startBattleButton.onClick.AddListener(StartBattle);
         gameModeDropdown.onValueChanged.AddListener(delegate { SetGameMode(); });
@@ -137,12 +139,20 @@ public class CaseBattleManager : MonoBehaviour
     {
         _isSelectorOpen = !_isSelectorOpen;
         caseSelectorPanel.gameObject.SetActive(_isSelectorOpen);
+        closeSelectorPanelButton.gameObject.SetActive(_isSelectorOpen);
 
         if (_isFirstSelection && !_isSelectorOpen)
         {
             _isSelectorOpen = true;
             caseSelectorPanel.gameObject.SetActive(true);
         }
+    }
+
+    public void CloseCaseSelector()
+    {
+        _isSelectorOpen = false;
+        caseSelectorPanel.gameObject.SetActive(false);
+        closeSelectorPanelButton.gameObject.SetActive(false);
     }
     
     void StartBattle()
