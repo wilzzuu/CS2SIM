@@ -105,6 +105,7 @@ public class CaseBattleManager : MonoBehaviour
             _isFirstSelection = false;
             _isSelectorOpen = false;
             caseSelectorPanel.gameObject.SetActive(false);
+            closeSelectorPanelButton.gameObject.SetActive(false);
         }
         else
         {
@@ -147,6 +148,7 @@ public class CaseBattleManager : MonoBehaviour
         {
             _isSelectorOpen = true;
             caseSelectorPanel.gameObject.SetActive(true);
+            closeSelectorPanelButton.gameObject.SetActive(true);
         }
     }
 
