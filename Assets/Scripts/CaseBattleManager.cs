@@ -15,18 +15,20 @@ public class CaseBattleManager : MonoBehaviour
     public Transform botResultArea;
     public TextMeshProUGUI playerTotalValueText;
     public TextMeshProUGUI botTotalValueText;
-    public TextMeshProUGUI winnerText;
+    public TextMeshProUGUI playerWinsText;
+    public TextMeshProUGUI botWinsText;
     public Button startBattleButton;
     public GameObject caseButtonPrefab;
     public Transform caseSelectorPanel;
     public Button selectCaseButton;
     public TMP_Dropdown gameModeDropdown;
-    public float spinDuration = 7f;
+    public float easingDuration = 7f;
     public int numberOfReelItems = 40;
     
     private bool _isScrolling;
     private GridLayoutGroup _gridLayout;
-    private RectTransform _reelTransform;
+    private RectTransform _playerReelTransform;
+    private RectTransform _botReelTransform;
     private Vector3 _initialReelPosition;
     private int _openedItemIndex;
     
@@ -67,13 +69,13 @@ public class CaseBattleManager : MonoBehaviour
         gameModeDropdown.onValueChanged.AddListener(delegate { SetGameMode(); });
 
         _gridLayout = playerReelParent.GetComponent<GridLayoutGroup>();
-        _reelTransform = playerReelParent.GetComponent<RectTransform>();
+        _playerReelTransform = playerReelParent.GetComponent<RectTransform>();
         
         _gridLayout = botReelParent.GetComponent<GridLayoutGroup>();
-        _reelTransform = botReelParent.GetComponent<RectTransform>();
+        _botReelTransform = botReelParent.GetComponent<RectTransform>();
         
-        SetInitialReelPosition(playerReelParent, numberOfReelItems, 256f);
-        SetInitialReelPosition(botReelParent, numberOfReelItems, 256f);
+        SetInitialReelPosition(playerReelParent);
+        SetInitialReelPosition(botReelParent);
     }
 
     void SetGameMode()
@@ -150,61 +152,64 @@ public class CaseBattleManager : MonoBehaviour
             Debug.LogError("No case selected. Please select a case.");
             return;
         }
+        
+        // Clear previous results
+        foreach (Transform child in playerResultArea)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in botResultArea)
+        {
+            Destroy(child.gameObject);
+        }
 
         _playerItems.Clear();
         _botItems.Clear();
         _playerTotalValue = 0f;
         _botTotalValue = 0f;
+        playerWinsText.text = null;
+        botWinsText.text = null;
 
         foreach (Transform child in playerReelParent) Destroy(child.gameObject);
         foreach (Transform child in botReelParent) Destroy(child.gameObject);
         foreach (Transform child in playerResultArea) Destroy(child.gameObject);
         foreach (Transform child in botResultArea) Destroy(child.gameObject);
 
-        StartCoroutine(PlayRounds(5, 256f));
+        StartCoroutine(PlayRounds(5));
     }
-    
-    private void SetInitialReelPosition(Transform reelParent, int numberOfItems, float itemSize)
+    private void SetInitialReelPosition(Transform reelParent)
     {
-        RectTransform reelRect = reelParent.GetComponent<RectTransform>();
-        float totalReelHeight = numberOfItems * itemSize;
-        reelRect.sizeDelta = new Vector2(reelRect.sizeDelta.x, totalReelHeight);
-
-        // Position reel at the start
-        reelRect.localPosition = new Vector3(reelRect.localPosition.x, 0, reelRect.localPosition.z);
-        Debug.Log($"Reel initialized: Height={totalReelHeight}, Position={reelRect.localPosition}");
+        float itemWidth = _gridLayout.cellSize.x + _gridLayout.spacing.x;
+        float totalReelWidth = itemWidth * numberOfReelItems;
+        
+        _initialReelPosition = new Vector3(totalReelWidth / 2 - 800, reelParent.localPosition.y, reelParent.localPosition.z);
+        reelParent.localPosition = _initialReelPosition;
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
-    private IEnumerator AnimateScrollingReel(Transform reelParent, int openedItemIndex, float itemSize, float duration)
+    private IEnumerator AnimateScrollingReel(Transform reelParent, RectTransform reelTransform, int openedItemIndex)
     {
-        RectTransform reelRect = reelParent.GetComponent<RectTransform>();
-        float totalReelHeight = itemSize * numberOfReelItems;
-        float reelViewportHeight = reelRect.parent.GetComponent<RectTransform>().rect.height;
+        float itemWidth = _gridLayout.cellSize.x + _gridLayout.spacing.x;
+        float totalReelWidth = itemWidth * numberOfReelItems;
+        reelTransform.sizeDelta = new Vector2(totalReelWidth, reelTransform.sizeDelta.y);
 
-        // Calculate target position for the selected item
-        float targetPositionY = -(openedItemIndex * itemSize) + (reelViewportHeight / 2) - (itemSize / 2);
-        targetPositionY = Mathf.Clamp(targetPositionY, -totalReelHeight + reelViewportHeight, 0);
-
-        Debug.Log($"Animating reel: Start={reelRect.localPosition.y}, Target={targetPositionY}");
-
-        // Animate reel movement
-        Vector3 startPosition = reelRect.localPosition;
-        Vector3 targetPosition = new Vector3(startPosition.x, targetPositionY, startPosition.z);
+        float randomOffset = Random.Range(0f, 256f);
+        float targetPosition = _initialReelPosition.x - (itemWidth * openedItemIndex) + 800 - randomOffset;
+        
         float elapsed = 0f;
-
-        while (elapsed < duration)
+        while (elapsed < easingDuration)
         {
-            float t = elapsed / duration;
+            float t = elapsed / easingDuration;
             float easeFactor = EaseOutQuint(t);
-            reelRect.localPosition = Vector3.Lerp(startPosition, targetPosition, easeFactor);
+            
+            float currentPosition = Mathf.Lerp(_initialReelPosition.x, targetPosition, easeFactor);
+            reelParent.localPosition = new Vector3(currentPosition, reelParent.localPosition.y, 0);
+            
             elapsed += Time.deltaTime;
             yield return null;
         }
 
-        // Snap to final position
-        reelRect.localPosition = targetPosition;
-        Debug.Log($"Reel animation complete. Final Position: {reelRect.localPosition}");
+        reelParent.localPosition = new Vector3(targetPosition, reelParent.localPosition.y, 0);
     }
     
     private float EaseOutQuint(float t)
@@ -213,7 +218,7 @@ public class CaseBattleManager : MonoBehaviour
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
-    private IEnumerator PlayRounds(int numberOfRounds, float itemSize)
+    private IEnumerator PlayRounds(int numberOfRounds)
     {
         for (int i = 0; i < numberOfRounds; i++)
         {
@@ -225,27 +230,25 @@ public class CaseBattleManager : MonoBehaviour
             // Randomly select items for player and bot
             int playerOpenedItemIndex = Random.Range(24, numberOfReelItems - 4);
             int botOpenedItemIndex = Random.Range(24, numberOfReelItems - 4);
+
             ItemData playerSelectedItem = GetRandomItemByChance();
             ItemData botSelectedItem = GetRandomItemByChance();
 
             // Initialize reels
-            SetInitialReelPosition(playerReelParent, numberOfReelItems, itemSize);
-            SetInitialReelPosition(botReelParent, numberOfReelItems, itemSize);
+            SetInitialReelPosition(playerReelParent);
+            SetInitialReelPosition(botReelParent);
 
             // Populate reels
+            float itemSize = _gridLayout.cellSize.y + _gridLayout.spacing.y;
             PopulateReel(playerReelParent, _playerItems, playerSelectedItem, playerOpenedItemIndex, itemSize);
             PopulateReel(botReelParent, _botItems, botSelectedItem, botOpenedItemIndex, itemSize);
 
             // Animate reels
-            yield return StartCoroutine(AnimateScrollingReel(playerReelParent, playerOpenedItemIndex, itemSize, spinDuration));
-            yield return StartCoroutine(AnimateScrollingReel(botReelParent, botOpenedItemIndex, itemSize, spinDuration));
+            yield return StartCoroutine(AnimateScrollingReel(playerReelParent, _playerReelTransform, playerOpenedItemIndex));
+            yield return StartCoroutine(AnimateScrollingReel(botReelParent, _botReelTransform, botOpenedItemIndex));
 
             // Display results
             DisplayRoundResult(playerSelectedItem, botSelectedItem);
-
-            // Update total values
-            _playerTotalValue += playerSelectedItem.price;
-            _botTotalValue += botSelectedItem.price;
         }
 
         // Determine the overall winner
@@ -260,40 +263,36 @@ public class CaseBattleManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        // Populate with items
+        Debug.Log("Populating reel...");
         for (int i = 0; i < numberOfReelItems; i++)
         {
             GameObject reelItem = Instantiate(reelItemPrefab, reelParent);
             ItemData itemData = (i == openedItemIndex) ? selectedItem : GetRandomItemByChance();
             SetUpReelItem(reelItem, itemData);
 
-            // Set vertical position
-            RectTransform itemRect = reelItem.GetComponent<RectTransform>();
-            itemRect.anchoredPosition = new Vector2(0, -i * itemSize);
+            // Log reel item details
+            Debug.Log($"Reel Item {i}: {itemData.name} (ID: {itemData.id}, Price: {itemData.price}, Rarity: {itemData.rarity})");
         }
 
-        Debug.Log($"Reel populated with {numberOfReelItems} items. Selected index: {openedItemIndex}");
+        Debug.Log($"Selected item (OpenedItemIndex {openedItemIndex}): {selectedItem.name} (ID: {selectedItem.id})");
     }
     
     private void DisplayRoundResult(ItemData playerItem, ItemData botItem)
     {
-        // Clear previous results
-        foreach (Transform child in playerResultArea)
-        {
-            Destroy(child.gameObject);
-        }
-        foreach (Transform child in botResultArea)
-        {
-            Destroy(child.gameObject);
-        }
+        Debug.Log($"Player Backend-Picked Item: {playerItem.name} (ID: {playerItem.id})");
+        Debug.Log($"Bot Backend-Picked Item: {botItem.name} (ID: {botItem.id})");
 
         // Display Player's Result
         GameObject playerResultItem = Instantiate(resultPrefab, playerResultArea);
         SetUpResultItem(playerResultItem, playerItem);
+        _playerTotalValue += playerItem.price;
+        playerTotalValueText.text = $"Total Value: {_playerTotalValue}€";
 
         // Display Bot's Result
         GameObject botResultItem = Instantiate(resultPrefab, botResultArea);
         SetUpResultItem(botResultItem, botItem);
+        _botTotalValue += botItem.price;
+        botTotalValueText.text = $"Total Value: {_botTotalValue}€";
     }
     
     private void SetUpResultItem(GameObject resultItem, ItemData itemData)
@@ -327,13 +326,25 @@ public class CaseBattleManager : MonoBehaviour
 
         if (gameModeDropdown.options[gameModeDropdown.value].text == "Higher Wins")
         {
-            string result = _playerTotalValue > _botTotalValue ? "Player Wins!" : "Bot Wins!";
+            string result = _playerTotalValue > _botTotalValue ? "Player Wins!" : "Bot Wins!"; 
+            TextMeshProUGUI winningText = _playerTotalValue > _botTotalValue ? playerWinsText : botWinsText;
+            winningText.text = result;
+            PlayerManager.Instance.AddCurrency(_playerTotalValue);
             Debug.Log(result);
         }
         else if (gameModeDropdown.options[gameModeDropdown.value].text == "Lower Wins")
         {
             string result = _playerTotalValue < _botTotalValue ? "Player Wins!" : "Bot Wins!";
+            TextMeshProUGUI winningText = _playerTotalValue < _botTotalValue ? playerWinsText : botWinsText;
+            winningText.text = result;
             Debug.Log(result);
+        }
+        else
+        {
+            playerWinsText.text = "Tie!";
+            botWinsText.text = "Tie!";
+            PlayerManager.Instance.AddCurrency(_selectedCaseData.price);
+            Debug.Log("Tie!");
         }
     }
 
