@@ -2281,6 +2281,7 @@ MonoBehaviour:
   gameModeDropdown: {fileID: 1908936112}
   easingDuration: 7
   numberOfReelItems: 40
+  uiManager: {fileID: 1762961115}
 --- !u!1 &1409329737
 GameObject:
   m_ObjectHideFlags: 0
@@ -3688,6 +3689,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2877013742411614560, guid: 849e52061adafc34fa0fea6ac4e3df23, type: 3}
   m_PrefabInstance: {fileID: 1762961112}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1762961115 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 874462095654244843, guid: 849e52061adafc34fa0fea6ac4e3df23, type: 3}
+  m_PrefabInstance: {fileID: 1762961112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210f0bc330b47834eb9d6679459e453d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1765454091
 GameObject:
   m_ObjectHideFlags: 0
