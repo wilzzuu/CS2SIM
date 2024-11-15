@@ -103,6 +103,11 @@ public class SceneSwitch : MonoBehaviour
         SceneManager.LoadScene(20);
     }
 
+    public void LoadInvestingScene()
+    {
+        SceneManager.LoadScene(21);
+    }
+
     public void ExitApplication()
     {
         Application.Quit();
