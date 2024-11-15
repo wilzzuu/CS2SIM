@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using TMPro;
-using Unity.Mathematics;
+using UnityEngine.Rendering.UI;
+using Random = UnityEngine.Random;
 
 public class RouletteManager : MonoBehaviour
 {
@@ -37,6 +38,20 @@ public class RouletteManager : MonoBehaviour
     private float _totalGameValue;
     private float _winChance;
     public UIManager uiManager;
+    
+    private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
+    {
+        {"MIL_SPEC", 0.7992f},
+        {"MIL_SPEC StatTrak", 0.07992f},
+        {"RESTRICTED", 0.1598f},
+        {"RESTRICTED StatTrak", 0.01598f},
+        {"CLASSIFIED", 0.032f},
+        {"CLASSIFIED StatTrak", 0.0032f},
+        {"COVERT", 0.0064f},
+        {"COVERT StatTrak", 0.00064f},
+        {"SPECIAL", 0.0026f},
+        {"SPECIAL StatTrak", 0.00026f}
+    };
 
     void Awake()
     {
@@ -160,16 +175,32 @@ public class RouletteManager : MonoBehaviour
             return null;
         }
 
-        float totalWeight = _reelItems.Sum(i => i.Item.weight);
-        float randomValue = UnityEngine.Random.Range(0, totalWeight);
+        float totalWeight = _reelItems
+            .Where(i => RarityWeights.ContainsKey(i.Item.rarity))
+            .Sum(i => RarityWeights[i.Item.rarity]);
+
+        if (totalWeight <= 0)
+        {
+            Debug.LogWarning("Total weight is zero or invalid. Cannot get a random item.");
+            return null;
+        }
+        
+        float randomValue = Random.Range(0, totalWeight);
         float cumulativeWeight = 0f;
 
         foreach (var item in _reelItems)
         {
-            cumulativeWeight += item.Item.weight;
-            if (randomValue <= cumulativeWeight)
+            if (RarityWeights.TryGetValue(item.Item.rarity, out float itemWeight))
             {
-                return item;
+                cumulativeWeight += itemWeight;
+                if (randomValue <= cumulativeWeight)
+                {
+                    return item;
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"Rarity '{item.Item.rarity}' not found in RarityWeights.'");
             }
         }
         return _reelItems[_reelItems.Count - 1];
