@@ -43,6 +43,8 @@ public class CaseBattleManager : MonoBehaviour
     private float _playerTotalValue;
     private float _botTotalValue;
     private bool _isGreaterMode; // true if "greater total value wins"
+    
+    public UIManager uiManager;
 
     private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
     {
@@ -179,6 +181,11 @@ public class CaseBattleManager : MonoBehaviour
         _botTotalValue = 0f;
         playerWinsText.text = null;
         botWinsText.text = null;
+        startBattleButton.interactable = false;
+        selectCaseButton.interactable = false;
+        closeSelectorPanelButton.interactable = false;
+        gameModeDropdown.interactable = false;
+        uiManager.LockUI();
 
         foreach (Transform child in playerReelParent) Destroy(child.gameObject);
         foreach (Transform child in botReelParent) Destroy(child.gameObject);
@@ -339,7 +346,10 @@ public class CaseBattleManager : MonoBehaviour
             string result = _playerTotalValue > _botTotalValue ? "Player Wins!" : "Bot Wins!"; 
             TextMeshProUGUI winningText = _playerTotalValue > _botTotalValue ? playerWinsText : botWinsText;
             winningText.text = result;
-            PlayerManager.Instance.AddCurrency(_playerTotalValue);
+            if (_playerTotalValue > _botTotalValue)
+            {
+                PlayerManager.Instance.AddCurrency(_playerTotalValue);
+            }
             Debug.Log(result);
         }
         else if (gameModeDropdown.options[gameModeDropdown.value].text == "Lower Wins")
@@ -347,6 +357,10 @@ public class CaseBattleManager : MonoBehaviour
             string result = _playerTotalValue < _botTotalValue ? "Player Wins!" : "Bot Wins!";
             TextMeshProUGUI winningText = _playerTotalValue < _botTotalValue ? playerWinsText : botWinsText;
             winningText.text = result;
+            if (_playerTotalValue < _botTotalValue)
+            {
+                PlayerManager.Instance.AddCurrency(_botTotalValue);
+            }
             Debug.Log(result);
         }
         else
@@ -356,6 +370,12 @@ public class CaseBattleManager : MonoBehaviour
             PlayerManager.Instance.AddCurrency(_selectedCaseData.price);
             Debug.Log("Tie!");
         }
+        
+        startBattleButton.interactable = true;
+        selectCaseButton.interactable = true;
+        closeSelectorPanelButton.interactable = true;
+        gameModeDropdown.interactable = true;
+        uiManager.UnlockUI();
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -367,22 +387,37 @@ public class CaseBattleManager : MonoBehaviour
             return null;
         }
 
-        float totalWeight = _selectedCaseData.items
-            .Where(item => RarityWeights.ContainsKey(item.rarity))
-            .Sum(item => RarityWeights[item.rarity]);
-
-        float randomValue = Random.Range(0, totalWeight);
-        float cumulativeWeight = 0f;
-
+        float totalWeight = 0f;
+        Dictionary<ItemData, float> itemWeights = new Dictionary<ItemData, float>();
+        
         foreach (var item in _selectedCaseData.items)
         {
-            if (RarityWeights.TryGetValue(item.rarity, out float weight))
+            if (!RarityWeights.TryGetValue(item.rarity, out float baseWeight))
             {
-                cumulativeWeight += weight;
-                if (randomValue <= cumulativeWeight)
-                {
-                    return item;
-                }
+                Debug.LogWarning($"Unknown rarity '{item.rarity}' for item '{item.id}'");
+                continue;
+            }
+            
+            float itemWeight = item.isStatTrak ? baseWeight / 10 : baseWeight;
+            itemWeights[item] = itemWeight;
+            totalWeight += itemWeight;
+        }
+
+        if (totalWeight <= 0)
+        {
+            Debug.LogError("Total weight is zero or negative. Ensure items have valid rarities and weights.");
+            return null;
+        }
+        
+        float randomValue = Random.Range(0f, totalWeight);
+        float cumulativeWeight = 0f;
+
+        foreach (var itemWeightPair in itemWeights)
+        {
+            cumulativeWeight += itemWeightPair.Value;
+            if (randomValue <= cumulativeWeight)
+            {
+                return itemWeightPair.Key;
             }
         }
 
