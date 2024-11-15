@@ -271,10 +271,10 @@ public class CaseBattleManager : MonoBehaviour
 
             // Animate reels
             yield return StartCoroutine(AnimateScrollingReel(playerReelParent, _playerReelTransform, playerOpenedItemIndex));
+            DisplayPlayerRoundResult(playerSelectedItem);
+            
             yield return StartCoroutine(AnimateScrollingReel(botReelParent, _botReelTransform, botOpenedItemIndex));
-
-            // Display results
-            DisplayRoundResult(playerSelectedItem, botSelectedItem);
+            DisplayBotRoundResult(botSelectedItem);
         }
 
         // Determine the overall winner
@@ -303,16 +303,20 @@ public class CaseBattleManager : MonoBehaviour
         Debug.Log($"Selected item (OpenedItemIndex {openedItemIndex}): {selectedItem.name} (ID: {selectedItem.id})");
     }
     
-    private void DisplayRoundResult(ItemData playerItem, ItemData botItem)
+    private void DisplayPlayerRoundResult(ItemData playerItem)
     {
         Debug.Log($"Player Backend-Picked Item: {playerItem.name} (ID: {playerItem.id})");
-        Debug.Log($"Bot Backend-Picked Item: {botItem.name} (ID: {botItem.id})");
 
         // Display Player's Result
         GameObject playerResultItem = Instantiate(resultPrefab, playerResultArea);
         SetUpResultItem(playerResultItem, playerItem);
         _playerTotalValue += playerItem.price;
         playerTotalValueText.text = $"Total Value: {_playerTotalValue}€";
+    }
+    
+    private void DisplayBotRoundResult(ItemData botItem)
+    {
+        Debug.Log($"Bot Backend-Picked Item: {botItem.name} (ID: {botItem.id})");
 
         // Display Bot's Result
         GameObject botResultItem = Instantiate(resultPrefab, botResultArea);
