@@ -311,7 +311,7 @@ public class CaseBattleManager : MonoBehaviour
         GameObject playerResultItem = Instantiate(resultPrefab, playerResultArea);
         SetUpResultItem(playerResultItem, playerItem);
         _playerTotalValue += playerItem.price;
-        playerTotalValueText.text = $"Total Value: {_playerTotalValue}€";
+        playerTotalValueText.text = $"Total Value: {_playerTotalValue:F2}€";
     }
     
     private void DisplayBotRoundResult(ItemData botItem)
@@ -322,7 +322,7 @@ public class CaseBattleManager : MonoBehaviour
         GameObject botResultItem = Instantiate(resultPrefab, botResultArea);
         SetUpResultItem(botResultItem, botItem);
         _botTotalValue += botItem.price;
-        botTotalValueText.text = $"Total Value: {_botTotalValue}€";
+        botTotalValueText.text = $"Total Value: {_botTotalValue:F2}€";
     }
     
     private void SetUpResultItem(GameObject resultItem, ItemData itemData)
