@@ -197,6 +197,7 @@ public class RouletteManager : MonoBehaviour
             cumulativeWeight += itemWeight;
             if (randomValue <= cumulativeWeight)
             {
+                Debug.Log($"Winning item: {item.Item.name}, Owner: {(item.OwnerIsPlayer ? "Player" : "Bot")}");
                 return item;
             }
         }
@@ -312,8 +313,9 @@ public class RouletteManager : MonoBehaviour
         int playerItemCount = _selectedPlayerItems.Count;
         int reelItemCount = _reelItems.Count;
 
-        _winChance = reelItemCount > 0 ? (float)playerItemCount / reelItemCount * 100f : 0f;
-
+        _winChance = reelItemCount > 0
+            ? (float)_reelItems.Count(item => item.OwnerIsPlayer) / reelItemCount * 100f
+            : 0f;
         chanceOfWinningText.text = $"Win Chance: {_winChance:F2}%";
         totalPlayerValueText.text = $"Total Player Value: {totalPlayerItemValue:F2}€";
         totalValueText.text = $"Total Game Value: {_totalGameValue:F2}€";
@@ -325,39 +327,26 @@ public class RouletteManager : MonoBehaviour
         _reelItems.Clear();
         _itemOwnership.Clear();
         _accumulatedBotValue = 0f;
-        
-        Debug.Log($"Generating reel with {numberOfReelItems} items. Player selected: {_selectedPlayerItems.Count}");
 
-        // Add player items to the reel
         foreach (var playerItem in _selectedPlayerItems)
         {
-            Debug.Log($"Adding player item: {playerItem.name} (Value: {playerItem.price})");
             var playerRouletteItem = new RouletteItem { Item = playerItem, OwnerIsPlayer = true };
             _reelItems.Add(playerRouletteItem);
             _itemOwnership[playerItem] = true;
         }
 
         int playerItemCount = _selectedPlayerItems.Count;
-        int botItemsCount = Mathf.Clamp(numberOfReelItems - playerItemCount, 1, numberOfReelItems);
+        int botItemsCount = Mathf.Clamp(numberOfReelItems - playerItemCount, playerItemCount, numberOfReelItems);
 
         HashSet<ItemData> usedBotItems = new HashSet<ItemData>();
 
-        // Generate bot items to balance the reel
         for (int i = 0; i < botItemsCount; i++)
         {
             var botItem = GenerateRandomBotItem(_totalPlayerValue / botItemsCount, usedBotItems);
-            Debug.Log($"Adding bot item: {botItem.name} (Value: {botItem.price})");
             var botRouletteItem = new RouletteItem { Item = botItem, OwnerIsPlayer = false };
             _reelItems.Add(botRouletteItem);
             _itemOwnership[botItem] = false;
             _accumulatedBotValue += botItem.price;
-        }
-
-        // Ensure the reel has exactly `numberOfReelItems` items
-        while (_reelItems.Count < numberOfReelItems)
-        {
-            var botItemToAdd = _reelItems[Random.Range(playerItemCount, _reelItems.Count)];
-            _reelItems.Add(new RouletteItem { Item = botItemToAdd.Item, OwnerIsPlayer = false });
         }
 
         ShuffleReelItems();
@@ -371,6 +360,11 @@ public class RouletteManager : MonoBehaviour
             int randomIndex = Random.Range(i, _reelItems.Count);
             (_reelItems[i], _reelItems[randomIndex]) = (_reelItems[randomIndex], _reelItems[i]);
         }
+
+        // Log reel composition
+        int playerItemCount = _reelItems.Count(item => item.OwnerIsPlayer);
+        int botItemCount = _reelItems.Count - playerItemCount;
+        Debug.Log($"Reel shuffled. Player items: {playerItemCount}, Bot items: {botItemCount}");
     }
 
     private ItemData GenerateRandomBotItem(float targetValue, HashSet<ItemData> usedBotItems)
