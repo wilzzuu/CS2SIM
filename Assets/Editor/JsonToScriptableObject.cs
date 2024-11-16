@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -6,13 +7,35 @@ using UnityEngine;
 
 namespace Editor
 {
-    public class JsonToScriptableObject : MonoBehaviour
+    public class JsonToScriptableObject : EditorWindow
     {
+        private string _caseID;
+
         [MenuItem("Tools/Import JSON Data")]
-        public static void ImportJsonData()
+        public static void ShowWindow()
+        {
+            GetWindow<JsonToScriptableObject>("Import JSON Data");
+        }
+        
+        // ReSharper disable Unity.PerformanceAnalysis
+        void OnGUI()
+        {
+            GUILayout.Label("JSON Data", EditorStyles.boldLabel);
+            
+            _caseID = EditorGUILayout.TextField("Case ID", _caseID);
+            string path = Application.dataPath + $"/StreamingAssets/{_caseID}.json";
+
+            if (File.Exists(path) && GUILayout.Button("Import JSON Data"))
+            {
+                ImportJsonData(_caseID);
+            }
+        }
+        
+        // ReSharper disable Unity.PerformanceAnalysis
+        public void ImportJsonData(string caseID)
         {
             // Define the path to your JSON file in StreamingAssets
-            string path = Application.dataPath + "/StreamingAssets/cases.json";
+            string path = Application.dataPath + $"/StreamingAssets/{caseID}.json";
 
             if (File.Exists(path))
             {
@@ -25,7 +48,7 @@ namespace Editor
                     CaseJsonDataWrapper caseDataWrapper = JsonUtility.FromJson<CaseJsonDataWrapper>(jsonContent);
 
                     // Validate parsed data
-                    if (caseDataWrapper == null || caseDataWrapper.cases == null)
+                    if (caseDataWrapper?.cases == null)
                     {
                         Debug.LogError("Failed to parse JSON: Case data is null or empty.");
                         return;
@@ -39,7 +62,7 @@ namespace Editor
 
                     Debug.Log("Data imported successfully!");
                 }
-                catch (System.Exception ex)
+                catch (Exception ex)
                 {
                     Debug.LogError("Error parsing JSON: " + ex.Message);
                 }
@@ -145,14 +168,14 @@ namespace Editor
     }
 
     // Wrapper class for the cases list
-    [System.Serializable]
+    [Serializable]
     public class CaseJsonDataWrapper
     {
         public List<CaseJsonData> cases;
     }
 
     // Structure of Case JSON data
-    [System.Serializable]
+    [Serializable]
     public class CaseJsonData
     {
         public string ID;
@@ -162,7 +185,7 @@ namespace Editor
     }
 
     // Structure of Item JSON data
-    [System.Serializable]
+    [Serializable]
     public class ItemJsonData
     {
         public string ID;
