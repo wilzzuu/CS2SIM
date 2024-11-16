@@ -66,9 +66,9 @@ public class HighLowManager : MonoBehaviour
 
         itemImage.sprite = Resources.Load<Sprite>($"HiddenItem");
         rarityImage.gameObject.SetActive(false);
-        gunText.gameObject.SetActive(false);
-        nameText.gameObject.SetActive(false);
-        priceText.gameObject.SetActive(false);
+        gunText.text = "?";
+        nameText.text = "?";
+        priceText.text = "?€";
     }
 
     private void PopulateNextRevealedItem(ItemData item)
@@ -84,11 +84,6 @@ public class HighLowManager : MonoBehaviour
         TextMeshProUGUI gunText = revealItem.transform.Find("GunText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI nameText = revealItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = revealItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
-    
-        rarityImage.gameObject.SetActive(true);
-        gunText.gameObject.SetActive(true);
-        nameText.gameObject.SetActive(true);
-        priceText.gameObject.SetActive(true);
         
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
