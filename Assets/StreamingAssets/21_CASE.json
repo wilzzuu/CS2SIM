@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "21_CASE",
+            "PRICE": 2.17,
+            "NAME" : "Gamma 2 Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

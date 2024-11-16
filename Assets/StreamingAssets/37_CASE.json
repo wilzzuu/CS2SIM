@@ -1,0 +1,731 @@
+{
+    "cases": [
+        {
+            "ID" : "37_CASE",
+            "PRICE": 1.13,
+            "NAME" : "Dreams & Nightmares Case",
+            "ITEMS": [
+                {
+                    "ID": "37_1FN",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.29,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1FNST",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 1.38,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1MW",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.11,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1MWST",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.32,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1FT",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.07,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1FTST",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.14,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1WW",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.06,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1WWST",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.12,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1BS",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.05,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_1BSST",
+                    "GUN": "Five-Seven",
+                    "NAME": "Scrawl",
+                    "PRICE": 0.10,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2FN",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.25,
+                    "CONDITION": "Factory New",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2FNST",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 1.02,
+                    "CONDITION": "Factory New",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2MW",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.11,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2MWST",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.32,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2FT",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.07,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2FTST",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.13,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2WW",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.06,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2WWST",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.12,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2BS",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.05,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_2BSST",
+                    "GUN": "MP5-SD",
+                    "NAME": "Necro Jr.",
+                    "PRICE": 0.10,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3FN",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.25,
+                    "CONDITION": "Factory New",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3FNST",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.98,
+                    "CONDITION": "Factory New",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3MW",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.11,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3MWST",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.31,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3FT",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.07,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3FTST",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.13,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3WW",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.06,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3WWST",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.12,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3BS",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.05,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_3BSST",
+                    "GUN": "MAC-10",
+                    "NAME": "Ensnared",
+                    "PRICE": 0.11,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "SMG",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4FN",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.22,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4FNST",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.88,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4MW",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.11,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4MWST",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.31,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4FT",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.07,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4FTST",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.16,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4WW",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.06,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4WWST",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.13,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4BS",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.05,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_4BSST",
+                    "GUN": "Sawed-Off",
+                    "NAME": "Spirit Board",
+                    "PRICE": 0.11,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5FN",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.22,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5FNST",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.79,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5MW",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.11,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5MWST",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.33,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5FT",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.07,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5FTST",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.13,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5WW",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.06,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5WWST",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.12,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5BS",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.05,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_5BSST",
+                    "GUN": "P2000",
+                    "NAME": "Lifted Spirits",
+                    "PRICE": 0.10,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6FN",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.19,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6FNST",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.69,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6MW",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.11,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6MWST",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.33,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6FT",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.07,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6FTST",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.14,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6WW",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.06,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6WWST",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.12,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6BS",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.05,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_6BSST",
+                    "GUN": "MAG-7",
+                    "NAME": "Foresight",
+                    "PRICE": 0.10,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Shotgun",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7FN",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.21,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7FNST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.71,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7MW",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.11,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7MWST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.32,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7FT",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.06,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7FTST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.13,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7WW",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.06,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7WWST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.13,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7BS",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.06,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_7BSST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Poultrygeist",
+                    "PRICE": 0.13,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "37_8FN",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 1.65,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8FNST",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 7.35,
+                    "CONDITION": "Factory New",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8MW",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 0.73,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8MWST",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 3.67,
+                    "CONDITION": "Minimal Wear",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8FT",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 0.46,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8FTST",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 2.43,
+                    "CONDITION": "Field-Tested",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8WW",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 0.34,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8WWST",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 1.97,
+                    "CONDITION": "Well-Worn",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8BS",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 0.22,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_8BSST",
+                    "GUN": "M4A1-S",
+                    "NAME": "Night Terror",
+                    "PRICE": 1.27,
+                    "CONDITION": "Battle-Scarred",
+                    "TYPE": "Rifle",
+                    "RARITY": "RESTRICTED"
+                }
+            ]
+        }
+    ]
+}

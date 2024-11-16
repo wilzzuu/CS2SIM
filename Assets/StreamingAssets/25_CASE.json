@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "25_CASE",
+            "PRICE": 19.73,
+            "NAME" : "Operation Hydra Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

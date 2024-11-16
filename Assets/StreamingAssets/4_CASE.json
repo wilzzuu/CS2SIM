@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "4_CASE",
+            "PRICE": 44.51,
+            "NAME" : "Operation Bravo Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

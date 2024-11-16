@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "35_CASE",
+            "PRICE": 0.33,
+            "NAME" : "Snakebite Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

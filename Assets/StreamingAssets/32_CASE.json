@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "32_CASE",
+            "PRICE": 4.16,
+            "NAME" : "Shattered Web Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

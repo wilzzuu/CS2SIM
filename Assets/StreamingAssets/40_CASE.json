@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "40_CASE",
+            "PRICE": 2,
+            "NAME" : "Kilowatt Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

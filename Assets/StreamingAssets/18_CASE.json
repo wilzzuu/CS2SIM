@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "18_CASE",
+            "PRICE": 1.80,
+            "NAME" : "Revolver Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

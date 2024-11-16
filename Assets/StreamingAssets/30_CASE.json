@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "30_CASE",
+            "PRICE": 0.89,
+            "NAME" : "Prisma 2 Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

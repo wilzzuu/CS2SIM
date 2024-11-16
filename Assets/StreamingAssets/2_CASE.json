@@ -1,0 +1,843 @@
+{
+    "cases": [
+        {
+            "ID": "2_CASE",
+            "PRICE": 13.82,
+            "NAME": "CS:GO Weapon Case 2",
+            "ITEMS": [
+                {
+                    "ID": "2_1FN",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 16.54,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1FNST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 54.61,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1MW",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 5.20,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1MWST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 8.78,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1FT",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 4.86,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1FTST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 6.93,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1WW",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 4.71,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1WWST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 5.16,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1BS",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 5.12,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_1BSST",
+                    "GUN": "SCAR-20",
+                    "NAME": "Crimson Web",
+                    "PRICE": 5.89,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_2FN",
+                    "GUN": "M4A1-S",
+                    "NAME": "Blood Tiger",
+                    "PRICE": 7.38,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_2FNST",
+                    "GUN": "M4A1-S",
+                    "NAME": "Blood Tiger",
+                    "PRICE": 18.01,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_2MW",
+                    "GUN": "M4A1-S",
+                    "NAME": "Blood Tiger",
+                    "PRICE": 6.03,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_2MWST",
+                    "GUN": "M4A1-S",
+                    "NAME": "Blood Tiger",
+                    "PRICE": 14.04,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_2FT",
+                    "GUN": "M4A1-S",
+                    "NAME": "Blood Tiger",
+                    "PRICE": 5.87,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_2FTST",
+                    "GUN": "M4A1-S",
+                    "NAME": "Blood Tiger",
+                    "PRICE": 14.3,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_3FN",
+                    "GUN": "Tec-9",
+                    "NAME": "Blue Titanium",
+                    "PRICE": 6.93,
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_3FNST",
+                    "GUN": "Tec-9",
+                    "NAME": "Blue Titanium",
+                    "PRICE": 10.5,
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_4FN",
+                    "GUN": "P250",
+                    "NAME": "Hive",
+                    "PRICE": 5.93,
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_4FNST",
+                    "GUN": "P250",
+                    "NAME": "Hive",
+                    "PRICE": 9.96,
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_4MW",
+                    "GUN": "P250",
+                    "NAME": "Hive",
+                    "PRICE": 5.12,
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_4MWST",
+                    "GUN": "P250",
+                    "NAME": "Hive",
+                    "PRICE": 9.39,
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_4FT",
+                    "GUN": "P250",
+                    "NAME": "Hive",
+                    "PRICE": 5.12,
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_4FTST",
+                    "GUN": "P250",
+                    "NAME": "Hive",
+                    "PRICE": 7.14,
+                    "TYPE": "Pistol",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_5FN",
+                    "GUN": "FAMAS",
+                    "NAME": "Hexane",
+                    "PRICE": 5.98,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_5FNST",
+                    "GUN": "FAMAS",
+                    "NAME": "Hexane",
+                    "PRICE": 10.22,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_5MW",
+                    "GUN": "FAMAS",
+                    "NAME": "Hexane",
+                    "PRICE": 5.05,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_5MWST",
+                    "GUN": "FAMAS",
+                    "NAME": "Hexane",
+                    "PRICE": 8.3,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_5FT",
+                    "GUN": "FAMAS",
+                    "NAME": "Hexane",
+                    "PRICE": 4.59,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_5FTST",
+                    "GUN": "FAMAS",
+                    "NAME": "Hexane",
+                    "PRICE": 5.69,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_5WW",
+                    "GUN": "FAMAS",
+                    "NAME": "Hexane",
+                    "PRICE": 4.99,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_5WWST",
+                    "GUN": "FAMAS",
+                    "NAME": "Hexane",
+                    "PRICE": 7.31,
+                    "TYPE": "Rifle",
+                    "RARITY": "MIL_SPEC"
+                },
+                {
+                    "ID": "2_6FN",
+                    "GUN": "MP9",
+                    "NAME": "Hypnotic",
+                    "PRICE": 11.58,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_6FNST",
+                    "GUN": "MP9",
+                    "NAME": "Hypnotic",
+                    "PRICE": 51.4,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_6MW",
+                    "GUN": "MP9",
+                    "NAME": "Hypnotic",
+                    "PRICE": 14.93,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_6MWST",
+                    "GUN": "MP9",
+                    "NAME": "Hypnotic",
+                    "PRICE": 80.18,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7FN",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 20.67,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7FNST",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 94.84,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7MW",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 14.15,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7MWST",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 49.15,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7FT",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 11.25,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7FTST",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 23.37,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7WW",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 10.48,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7WWST",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 24.62,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7BS",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 10.59,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_7BSST",
+                    "GUN": "Five-SeveN",
+                    "NAME": "Case Hardened",
+                    "PRICE": 19.94,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_8FN",
+                    "GUN": "Nova",
+                    "NAME": "Graphite",
+                    "PRICE": 9.8,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_8FNST",
+                    "GUN": "Nova",
+                    "NAME": "Graphite",
+                    "PRICE": 33.65,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_8MW",
+                    "GUN": "Nova",
+                    "NAME": "Graphite",
+                    "PRICE": 8.98,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_8MWST",
+                    "GUN": "Nova",
+                    "NAME": "Graphite",
+                    "PRICE": 28.79,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_9FN",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Hemoglobin",
+                    "PRICE": 11.46,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_9FNST",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Hemoglobin",
+                    "PRICE": 33.24,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_9MW",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Hemoglobin",
+                    "PRICE": 9.3,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_9MWST",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Hemoglobin",
+                    "PRICE": 24.32,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_9FT",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Hemoglobin",
+                    "PRICE": 9.34,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_9FTST",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Hemoglobin",
+                    "PRICE": 19.72,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "2_10FN",
+                    "GUN": "P90",
+                    "NAME": "Cold Blooded",
+                    "PRICE": 62.67,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_10FNST",
+                    "GUN": "P90",
+                    "NAME": "Cold Blooded",
+                    "PRICE": 97.03,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_10MW",
+                    "GUN": "P90",
+                    "NAME": "Cold Blooded",
+                    "PRICE": 51.08,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_10MWST",
+                    "GUN": "P90",
+                    "NAME": "Cold Blooded",
+                    "PRICE": 86.1,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_11FN",
+                    "GUN": "UPS-S",
+                    "NAME": "Serum",
+                    "PRICE": 63.14,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_11FNST",
+                    "GUN": "UPS-S",
+                    "NAME": "Serum",
+                    "PRICE": 76.46,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_11MW",
+                    "GUN": "UPS-S",
+                    "NAME": "Serum",
+                    "PRICE": 45.1,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_11MWST",
+                    "GUN": "UPS-S",
+                    "NAME": "Serum",
+                    "PRICE": 51.85,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_11FT",
+                    "GUN": "UPS-S",
+                    "NAME": "Serum",
+                    "PRICE": 46.09,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_11FTST",
+                    "GUN": "UPS-S",
+                    "NAME": "Serum",
+                    "PRICE": 45.91,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "2_12FN",
+                    "GUN": "SSGz 08",
+                    "NAME": "Blood in the Water",
+                    "PRICE": 87.71,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "2_12FNST",
+                    "GUN": "SSG 08",
+                    "NAME": "Blood in the Water",
+                    "PRICE": 450.94,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "2_12MW",
+                    "GUN": "SSG 08",
+                    "NAME": "Blood in the Water",
+                    "PRICE": 56.08,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "2_12MWST",
+                    "GUN": "SSG 08",
+                    "NAME": "Blood in the Water",
+                    "PRICE": 189.97,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "2_12FT",
+                    "GUN": "SSG 08",
+                    "NAME": "Blood in the Water",
+                    "PRICE": 54.23,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "2_12FTST",
+                    "GUN": "SSG 08",
+                    "NAME": "Blood in the Water",
+                    "PRICE": 142.77,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "2_13FN",
+                    "GUN": "Bayonet",
+                    "NAME": "Fade",
+                    "PRICE": 998.06,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_13FNST",
+                    "GUN": "Bayonet",
+                    "NAME": "Fade",
+                    "PRICE": 1059.41,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_13MW",
+                    "GUN": "Bayonet",
+                    "NAME": "Fade",
+                    "PRICE": 691.26,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_13MWST",
+                    "GUN": "Bayonet",
+                    "NAME": "Fade",
+                    "PRICE": 693.55,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_14FN",
+                    "GUN": "Bayonet",
+                    "NAME": "Slaughter",
+                    "PRICE": 748.56,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_14FNST",
+                    "GUN": "Bayonet",
+                    "NAME": "Slaughter",
+                    "PRICE": 1099.8,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_14MW",
+                    "GUN": "Bayonet",
+                    "NAME": "Slaughter",
+                    "PRICE": 625.74,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_14MWST",
+                    "GUN": "Bayonet",
+                    "NAME": "Slaughter",
+                    "PRICE": 812.14,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_14FT",
+                    "GUN": "Bayonet",
+                    "NAME": "Slaughter",
+                    "PRICE": 588.9,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_14FTST",
+                    "GUN": "Bayonet",
+                    "NAME": "Slaughter",
+                    "PRICE": 561.81,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_15",
+                    "GUN": "Bayonet",
+                    "NAME": "Vanilla",
+                    "PRICE": 582.25,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_15ST",
+                    "GUN": "Bayonet",
+                    "NAME": "Vanilla",
+                    "PRICE": 645.87,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16FN",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 970.97,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16FNST",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 1032.89,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16MW",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 427.43,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16MWST",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 491.54,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16FT",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 294.86,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16FTST",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 291.36,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16WW",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 301.92,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16WWST",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 291.02,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16BS",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 326.79,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_16BSST",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "PRICE": 194.19,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17FN",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 594.27,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17FNST",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 742.9,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17MW",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 569.91,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17MWST",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 700.04,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17FT",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 520.3,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17FST",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 423.12,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17WW",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 490.02,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17WWST",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 427.43,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17BS",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 380.79,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_17BSST",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "PRICE": 546.16,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                }
+            ]
+        }
+    ]
+}

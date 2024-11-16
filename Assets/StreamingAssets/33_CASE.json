@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "33_CASE",
+            "PRICE": 0.61,
+            "NAME" : "Fracture Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}

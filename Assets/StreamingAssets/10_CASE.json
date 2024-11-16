@@ -1,0 +1,16 @@
+{
+    "cases": [
+        {
+            "ID" : "10_CASE",
+            "PRICE": 9.13,
+            "NAME" : "Huntsman Weapon Case",
+            "ITEMS": [
+                {
+
+                }
+
+
+            ]
+        }
+    ]
+}
