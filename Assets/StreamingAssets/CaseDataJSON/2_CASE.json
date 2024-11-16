@@ -836,6 +836,86 @@
                     "PRICE": 546.16,
                     "TYPE": "Knife",
                     "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18FN",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18FNST",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18MW",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18MWST",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18FT",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18FTST",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18WW",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18WWST",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18BS",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "2_18BSST",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "PRICE": 0,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
                 }
             ]
         }
