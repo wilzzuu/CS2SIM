@@ -2,7 +2,7 @@
     "cases": [
         {
             "ID" : "37_CASE",
-            "PRICE": 1.13,
+            "PRICE": 1.48,
             "NAME" : "Dreams & Nightmares Case",
             "ITEMS": [
                 {
@@ -10,7 +10,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.29,
-                    "CONDITION": "Factory New",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -19,7 +18,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 1.38,
-                    "CONDITION": "Factory New",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -28,7 +26,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.11,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -37,7 +34,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.32,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -46,7 +42,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.07,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -55,7 +50,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.14,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -64,7 +58,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.06,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -73,7 +66,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.12,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -82,7 +74,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.05,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -91,7 +82,6 @@
                     "GUN": "Five-Seven",
                     "NAME": "Scrawl",
                     "PRICE": 0.10,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -100,7 +90,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.25,
-                    "CONDITION": "Factory New",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -109,7 +98,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 1.02,
-                    "CONDITION": "Factory New",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -118,7 +106,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.11,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -127,7 +114,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.32,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -136,7 +122,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.07,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -145,7 +130,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.13,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -154,7 +138,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.06,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -163,7 +146,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.12,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -172,7 +154,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.05,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -181,7 +162,6 @@
                     "GUN": "MP5-SD",
                     "NAME": "Necro Jr.",
                     "PRICE": 0.10,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -190,7 +170,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.25,
-                    "CONDITION": "Factory New",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -199,7 +178,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.98,
-                    "CONDITION": "Factory New",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -208,7 +186,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.11,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -217,7 +194,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.31,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -226,7 +202,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.07,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -235,7 +210,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.13,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -244,7 +218,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.06,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -253,7 +226,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.12,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -262,7 +234,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.05,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -271,7 +242,6 @@
                     "GUN": "MAC-10",
                     "NAME": "Ensnared",
                     "PRICE": 0.11,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "SMG",
                     "RARITY": "MIL_SPEC"
                 },
@@ -280,7 +250,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.22,
-                    "CONDITION": "Factory New",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -289,7 +258,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.88,
-                    "CONDITION": "Factory New",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -298,7 +266,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.11,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -307,7 +274,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.31,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -316,7 +282,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.07,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -325,7 +290,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.16,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -334,7 +298,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.06,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -343,7 +306,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.13,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -352,7 +314,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.05,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -361,7 +322,6 @@
                     "GUN": "Sawed-Off",
                     "NAME": "Spirit Board",
                     "PRICE": 0.11,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -370,7 +330,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.22,
-                    "CONDITION": "Factory New",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -379,7 +338,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.79,
-                    "CONDITION": "Factory New",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -388,7 +346,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.11,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -397,7 +354,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.33,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -406,7 +362,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.07,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -415,7 +370,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.13,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -424,7 +378,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.06,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -433,7 +386,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.12,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -442,7 +394,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.05,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -451,7 +402,6 @@
                     "GUN": "P2000",
                     "NAME": "Lifted Spirits",
                     "PRICE": 0.10,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Pistol",
                     "RARITY": "MIL_SPEC"
                 },
@@ -460,7 +410,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.19,
-                    "CONDITION": "Factory New",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -469,7 +418,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.69,
-                    "CONDITION": "Factory New",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -478,7 +426,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.11,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -487,7 +434,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.33,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -496,7 +442,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.07,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -505,7 +450,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.14,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -514,7 +458,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.06,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -523,7 +466,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.12,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -532,7 +474,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.05,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -541,7 +482,6 @@
                     "GUN": "MAG-7",
                     "NAME": "Foresight",
                     "PRICE": 0.10,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Shotgun",
                     "RARITY": "MIL_SPEC"
                 },
@@ -550,7 +490,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.21,
-                    "CONDITION": "Factory New",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -559,7 +498,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.71,
-                    "CONDITION": "Factory New",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -568,7 +506,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.11,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -577,7 +514,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.32,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -586,7 +522,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.06,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -595,7 +530,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.13,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -604,7 +538,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.06,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -613,7 +546,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.13,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -622,7 +554,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.06,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -631,7 +562,6 @@
                     "GUN": "SCAR-20",
                     "NAME": "Poultrygeist",
                     "PRICE": 0.13,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Sniper Rifle",
                     "RARITY": "MIL_SPEC"
                 },
@@ -640,7 +570,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 1.65,
-                    "CONDITION": "Factory New",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -649,7 +578,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 7.35,
-                    "CONDITION": "Factory New",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -658,7 +586,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 0.73,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -667,7 +594,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 3.67,
-                    "CONDITION": "Minimal Wear",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -676,7 +602,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 0.46,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -685,7 +610,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 2.43,
-                    "CONDITION": "Field-Tested",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -694,7 +618,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 0.34,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -703,7 +626,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 1.97,
-                    "CONDITION": "Well-Worn",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -712,7 +634,6 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 0.22,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
                 },
@@ -721,9 +642,2888 @@
                     "GUN": "M4A1-S",
                     "NAME": "Night Terror",
                     "PRICE": 1.27,
-                    "CONDITION": "Battle-Scarred",
                     "TYPE": "Rifle",
                     "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9FN",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 1.96,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9FNST",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 6.4,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9MW",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 0.92,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9MWST",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 2.7,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9FT",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 0.45,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9FTST",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 1.44,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9WW",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 0.66,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9WWST",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 2.15,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9BS",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 0.37,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_9BSST",
+                    "GUN": "USP-S",
+                    "NAME": "Ticket to Hell",
+                    "PRICE": 1.15,
+                    "TYPE": "Pistol",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10FN",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 1.65,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10FNST",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 3.57,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10MW",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 0.79,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10MWST",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 1.65,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10FT",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 0.38,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10FTST",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 0.57,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10WW",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 0.38,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10WWST",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 0.69,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10BS",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 0.36,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_10BSST",
+                    "GUN": "PP-Bizon",
+                    "NAME": "Space Cat",
+                    "PRICE": 0.55,
+                    "TYPE": "SMG",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11FN",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 1.78,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11FNST",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 3.57,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11MW",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 0.78,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11MWST",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 1.15,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11FT",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 0.39,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11FTST",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 0.55,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11WW",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 0.37,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11WWST",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 0.6,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11BS",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 0.36,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_11BSST",
+                    "GUN": "G3SG1",
+                    "NAME": "Dream Glade",
+                    "PRICE": 0.5,
+                    "TYPE": "Sniper Rifle",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12FN",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 1.6,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12FNST",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 3.24,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12MW",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 0.78,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12MWST",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 1.17,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12FT",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 0.39,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12FTST",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 0.57,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12WW",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 0.37,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12WWST",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 0.55,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12BS",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 0.36,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_12BSST",
+                    "GUN": "XM1014",
+                    "NAME": "Zombie Offensive",
+                    "PRICE": 0.57,
+                    "TYPE": "Shotgun",
+                    "RARITY": "RESTRICTED"
+                },
+                {
+                    "ID": "37_13FN",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 8.95,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13FNST",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 17.99,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13MW",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 3.87,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13MWST",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 6.49,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13FT",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 1.84,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13FTST",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 2.76,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13WW",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 1.52,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13WWST",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 2.07,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13BS",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 1.44,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_13BSST",
+                    "GUN": "Dual Berettas",
+                    "NAME": "Melondrama",
+                    "PRICE": 1.97,
+                    "TYPE": "Pistol",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14FN",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 8.91,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14FNST",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 17.91,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14MW",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 3.76,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14MWST",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 6.00,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14FT",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 1.7,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14FTST",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 2.8,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14WW",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 1.49,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14WWST",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 2.2,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14BS",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 1.44,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_14BSST",
+                    "GUN": "FAMAS",
+                    "NAME": "Rapid Eye Movement",
+                    "PRICE": 1.75,
+                    "TYPE": "Rifle",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15FN",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 9.72,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15FNST",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 17.03,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15MW",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 3.7,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15MWST",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 6.15,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15FT",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 1.74,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15FTST",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 2.61,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15WW",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 1.34,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15WWST",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 1.89,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15BS",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 1.48,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_15BSST",
+                    "GUN": "MP7",
+                    "NAME": "Abyssal Apparition",
+                    "PRICE": 1.89,
+                    "TYPE": "SMG",
+                    "RARITY": "CLASSIFIED"
+                },
+                {
+                    "ID": "37_16FN",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 81.03,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16FNST",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 136.32,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16MW",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 21.24,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16MWST",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 52.26,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16FT",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 10.73,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16FTST",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 24.97,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16WW",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 8.23,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16WWST",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 20.72,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16BS",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 5.48,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_16BSST",
+                    "GUN": "AK-47",
+                    "NAME": "Nightwish",
+                    "PRICE": 13.95,
+                    "TYPE": "Rifle",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17FN",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 20.3,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17FNST",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 61.64,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17MW",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 8.03,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17MWST",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 21.69,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17FT",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 3.6,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17FTST",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 9.1,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17WW",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 3.65,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17WWST",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 10.85,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17BS",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 2.53,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_17BSST",
+                    "GUN": "MP9",
+                    "NAME": "Starlight Protector",
+                    "PRICE": 6.35,
+                    "TYPE": "SMG",
+                    "RARITY": "COVERT"
+                },
+                {
+                    "ID": "37_18FN",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 500.17,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_18FNST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 564.51,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_18MW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 545.27,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_18MWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 612.57,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19FN",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 523.89,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19FNST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 1148.72,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19MW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 284.68,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19MWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 332.17,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19FT",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 249.71,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19FTST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 264.03,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19WW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 209.76,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19WWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 239.56,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19BS",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 189.93,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_19BSST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Lore",
+                    "PRICE": 249.96,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20FN",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 369.33,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20FNST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 398.56,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20MW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 249.26,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20MWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 327.18,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20FT",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 212.67,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20FTST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 250.84,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20WW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 218.42,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20WWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 260.12,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20BS",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 209.72,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_20BSST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 243.55,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21FN",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 199.77,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21FNST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 294.46,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21MW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 179.8,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21MWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 205.28,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21FT",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 175.58,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21FTST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 171.22,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21WW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 171.59,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21WWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 207.21,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21BS",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 163.96,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_21BSST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 554.64,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22FN",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 223.74,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22FNST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 348.04,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22MW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 165.29,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22MWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 230.92,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22FT",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 157.86,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22FTST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 175.42,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22WW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 149.73,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22WWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 197.61,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22BS",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 149.85,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_22BSST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 152.65,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23FN",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 165.9,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23FNST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 237.75,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23MW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 165.07,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23MWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 250.22,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23FT",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 154.34,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23FTST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 225.82,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23WW",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 149.85,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23WWST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 221.14,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23BS",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 134.84,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_23BSST",
+                    "GUN": "Bowie Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 202.4,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24FN",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 2012.5,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24FNST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 1968.15,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24MW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 1591.77,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24MWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 1412.28,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24FT",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 1283.15,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24FTST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 1172.57,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24WW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 1172.57,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24WWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 1094.95,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24BS",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 979.91,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_24BSST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 968.83,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25FN",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 1011.01,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25FNST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 1025.65,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25MW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 947.86,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25MWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 963.28,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25FT",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 893.98,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25FTST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 866.26,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25WW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 758.04,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25WWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 776.17,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25BS",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 767.85,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_25BSST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 900.91,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26FN",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 3749.12,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26FNST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 3321.81,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26MW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 1790.67,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26MWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 1661.15,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26FT",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 1100,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26FTST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 1096.13,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26WW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 937.85,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26WWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 893.98,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26BS",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 811.85,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_26BSST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Lore",
+                    "PRICE": 797.86,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27FN",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 1212.7,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27FNST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 1219.7,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27MW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 1017.89,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27MWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 956.21,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27FT",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 966.69,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27FTST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 907.43,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27WW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 896.2,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27WWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 875.27,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27BS",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 845,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_27BSST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 869.03,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28FN",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 957.82,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28FNST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 942.49,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28MW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 885.66,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28MWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 885.39,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28FT",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 845.47,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28FTST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 809.43,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28WW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 757.6,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28WWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 757.6,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28BS",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 739.02,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_28BSST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 802.23,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_29FN",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 16309.9,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_29FNST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 14615.4,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_29MW",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 13461.5,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_29MWST",
+                    "GUN": "Butterfly Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 16538.5,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_30FN",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 469.58,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_30FNST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 545.51,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_30MW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 500.86,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_30MWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 612.99,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31FN",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 231.39,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31FNST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 252.11,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31MW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 189.59,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31MWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 194.11,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31FT",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 155.09,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31FTST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 156.48,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31WW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 155.23,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31WWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 159.99,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31BS",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 128.27,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_31BSST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Lore",
+                    "PRICE": 149.27,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32FN",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 399.55,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32FNST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 436.24,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32MW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 274.7,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32MWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 336.93,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32FT",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 221.97,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32FTST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 236.92,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32WW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 221.32,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32WWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 244.26,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32BS",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 199.43,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_32BSST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 219.58,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33FN",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 212.42,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33FNST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 267.69,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33MW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 207.69,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33MWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 327.65,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33FT",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 175.12,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33FTST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 199.44,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33WW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 171.9,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33WWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 199.15,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33BS",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 163.59,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_33BSST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 184.25,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34FN",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 194.74,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34FNST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 493.86,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34MW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 172.31,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34MWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 178.07,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34FT",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 157.42,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34FTST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 170,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34WW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 152.03,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34WWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 170.7,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34BS",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 146.04,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_34BSST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 160.12,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35FN",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 184.31,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35FNST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 202.93,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35MW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 181.92,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35MWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 194.4,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35FT",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 156.95,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35FTST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 170.26,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35WW",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 169.04,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35WWST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 163.7,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35BS",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 151.71,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_35BSST",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 161.52,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_36FN",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 535.41,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_36FNST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 577.59,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_36MW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 559.39,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_36MWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 599.89,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37FN",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 427.37,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37FNST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 579.68,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37MW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 293.99,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37MWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 347.08,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37FT",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 246.93,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37FTST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 268.69,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37WW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 283.95,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37WWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 339.4,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37BS",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 239.54,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_37BSST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Autotronic",
+                    "PRICE": 292.24,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38FN",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 329.69,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38FNST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 526.19,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38MW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 289.48,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38MWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 296.01,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38FT",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 237.94,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38FTST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 260.11,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38WW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 228.63,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38WWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 251.54,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38BS",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 189.44,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_38BSST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Lore",
+                    "PRICE": 229.74,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39FN",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 246.56,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39FNST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 384.73,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39MW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 189.79,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39MWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 221.61,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39FT",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 172.68,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39FTST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 200.99,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39WW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 196.43,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39WWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 180.18,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39BS",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 171.62,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_39BSST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Black Laminate",
+                    "PRICE": 187.77,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40FN",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 203.77,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40FNST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 279.7,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40MW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 190.45,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40MWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 218.12,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40FT",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 169.04,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40FTST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 191.32,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40WW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 170.7,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40WWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 196.04,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40BS",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 151.09,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_40BSST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Freehand",
+                    "PRICE": 183.33,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41FN",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 174.82,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41FNST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 229.02,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41MW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 174.42,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41MWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 196.31,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41FT",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 158.13,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41FTST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 207.92,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41WW",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 217.39,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41WWST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 165.57,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41BS",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 160.18,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_41BSST",
+                    "GUN": "Huntsman Knife",
+                    "NAME": "Bright Water",
+                    "PRICE": 159.46,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42FN",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 136.32,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42FNST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 160.97,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42MW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 134.84,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42MWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 140.11,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42FT",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 133.94,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42FTST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 160.81,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42WW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 137.85,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42WWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 168.58,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42BS",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 135.85,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_42BSST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Bright Water",
+                    "PRICE": 165.2,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_43FN",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 248.46,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_43FNST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 269.71,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_43MW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 308.21,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_43MWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Gamma Doppler",
+                    "PRICE": 321.98,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44FN",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 286,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44FNST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 588.14,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44MW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 172.31,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44MWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 208.93,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44FT",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 159.31,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44FTST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 219.76,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44WW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 163.16,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44WWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 163.71,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44BS",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 144.19,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_44BSST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Lore",
+                    "PRICE": 157.8,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45FN",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 151.32,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45FNST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 168.69,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45MW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 148.05,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45MWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 175.7,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45FT",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 137.32,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45FTST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 161.48,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45WW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 137.71,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45WWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 282.06,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45BS",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 144.73,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_45BSST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Freehand",
+                    "PRICE": 155.08,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46FN",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 149.85,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46FNST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 206.8,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46MW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 140.98,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46MWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 229.74,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46FT",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 131.22,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46FTST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 208.24,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46WW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 132.84,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46WWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 141.78,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46BS",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 129.92,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_46BSST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Black Laminate",
+                    "PRICE": 135.14,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47FN",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 181.12,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47FNST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 216.02,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47MW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 145.62,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47MWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 174.49,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47FT",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 142.84,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47FTST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 146.64,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47WW",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 142.46,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47WWST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 154.44,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47BS",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 139.76,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
+                },
+                {
+                    "ID": "37_47BSST",
+                    "GUN": "Shadow Daggers",
+                    "NAME": "Autotronic",
+                    "PRICE": 175.44,
+                    "TYPE": "Knife",
+                    "RARITY": "SPECIAL"
                 }
             ]
         }
