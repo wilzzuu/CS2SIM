@@ -49,15 +49,10 @@ public class CaseBattleManager : MonoBehaviour
     private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
     {
         {"MIL_SPEC", 0.7992f},
-        {"MIL_SPEC StatTrak", 0.07992f},
         {"RESTRICTED", 0.1598f},
-        {"RESTRICTED StatTrak", 0.01598f},
         {"CLASSIFIED", 0.032f},
-        {"CLASSIFIED StatTrak", 0.0032f},
         {"COVERT", 0.0064f},
-        {"COVERT StatTrak", 0.00064f},
         {"SPECIAL", 0.0026f},
-        {"SPECIAL StatTrak", 0.00026f}
     };
 
     void Start()
