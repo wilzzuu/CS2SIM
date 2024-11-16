@@ -12,25 +12,28 @@ public class HighLowManager : MonoBehaviour
     public TMP_InputField betAmountInput;
     public Button guessHighButton;
     public Button guessLowButton;
+    public Button nextItemButton;
     public Button startRoundButton;
     public Button cashOutButton;
     public TextMeshProUGUI resultText;
 
-    private float _previousItemPrice;
-    private float _nextItemPrice;
     private float _betAmount;
     private int _roundNumber;
     
     private List<ItemData> _allItems = new List<ItemData>();
+    private ItemData _currentItem;
+    private ItemData _previousItem;
 
     void Start()
     {
         guessHighButton.onClick.AddListener(GuessHigh);
         guessLowButton.onClick.AddListener(GuessLow);
+        nextItemButton.onClick.AddListener(NextItem);
         cashOutButton.onClick.AddListener(CashOut);
         startRoundButton.onClick.AddListener(StartRound);
         guessHighButton.interactable = false;
         guessLowButton.interactable = false;
+        nextItemButton.interactable = false;
         cashOutButton.interactable = false;
         startRoundButton.interactable = true;
         betAmountInput.interactable = true;
@@ -40,11 +43,10 @@ public class HighLowManager : MonoBehaviour
 
     private void SetupFirstItem()
     {
-        resultText.text = "";
-        _previousItemPrice = 0f;
-        _nextItemPrice = 0f;
-        var randomItem = GetRandomItem();
-        PopulatePreviousItem(randomItem);
+        resultText.text = "Round: 1";
+        _currentItem = GetRandomItem();
+        _previousItem = GetRandomItem();
+        PopulatePreviousItem(_previousItem);
         PopulateNextHiddenItem();
     }
     
@@ -93,8 +95,6 @@ public class HighLowManager : MonoBehaviour
         gunText.text = item.gun;
         nameText.text = item.name;
         priceText.text = $"{item.price:F2}€";
-        
-        _nextItemPrice = item.price;
     }
 
     private void PopulatePreviousItem(ItemData item)
@@ -116,8 +116,6 @@ public class HighLowManager : MonoBehaviour
         gunText.text = item.gun;
         nameText.text = item.name;
         priceText.text = $"{item.price:F2}€";
-        
-        _previousItemPrice = item.price;
     }
     
     private ItemData GetRandomItem()
@@ -155,43 +153,64 @@ public class HighLowManager : MonoBehaviour
         }
     }
 
+    private void NextItem()
+    {
+        resultText.text = $"Round {_roundNumber+1}";
+        _previousItem = _currentItem;
+        _currentItem = GetRandomItem();
+        guessHighButton.interactable = true;
+        guessLowButton.interactable = true;
+        nextItemButton.interactable = false;
+        PopulateNextHiddenItem();
+        PopulatePreviousItem(_previousItem);
+    }
+
     private void GuessHigh()
     {
-        var randomItem = GetRandomItem();
-        PopulateNextRevealedItem(randomItem);
+        guessHighButton.interactable = false;
+        guessLowButton.interactable = false;
+        nextItemButton.interactable = true;
+        PopulateNextRevealedItem(_currentItem);
         
-        if (_nextItemPrice > _previousItemPrice)
+        if (_currentItem.price > _previousItem.price)
         {
             if (!cashOutButton.interactable) cashOutButton.interactable = true;
             _roundNumber++;
-            resultText.text = $"You guessed right, round {_roundNumber}!";
-            PopulateNextHiddenItem();
-            PopulatePreviousItem(randomItem);
+            resultText.text = $"You guessed right on round {_roundNumber}!";
         }
-        else
+        else if (_currentItem.price < _previousItem.price)
         {
             resultText.text = "You guessed wrong and lost.";
             GameOver();
+        }
+        else
+        {
+            resultText.text = "Item prices are the same. Skipping round.";
         }
     }
 
     private void GuessLow()
     {
-        var randomItem = GetRandomItem();
-        PopulateNextRevealedItem(randomItem);
+        guessHighButton.interactable = false;
+        guessLowButton.interactable = false;
+        nextItemButton.interactable = true;
+        PopulateNextRevealedItem(_currentItem);
         
-        if (_nextItemPrice < _previousItemPrice)
+        if (_currentItem.price < _previousItem.price)
         {
             if (!cashOutButton.interactable) cashOutButton.interactable = true;
             _roundNumber++;
             resultText.text = $"You guessed right on round {_roundNumber}!";
-            PopulateNextHiddenItem();
-            PopulatePreviousItem(randomItem);
+            
         }
-        else
+        else if (_currentItem.price > _previousItem.price)
         {
             resultText.text = "You guessed wrong and lost.";
             GameOver();
+        }
+        else
+        {
+            resultText.text = "Item prices are the same. Skipping round.";
         }
     }
 
@@ -200,6 +219,7 @@ public class HighLowManager : MonoBehaviour
         _roundNumber = 0;
         guessHighButton.interactable = false;
         guessLowButton.interactable = false;
+        nextItemButton.interactable = false;
         cashOutButton.interactable = false;
         startRoundButton.interactable = true;
         betAmountInput.interactable = true;
