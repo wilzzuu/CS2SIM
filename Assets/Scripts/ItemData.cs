@@ -12,6 +12,7 @@ public class ItemData : ScriptableObject
     public bool isStatTrak;
     public string type;
     public string rarity;
+    public float weight;
     public int demandScore;
 
     public float lastActivityTime;
