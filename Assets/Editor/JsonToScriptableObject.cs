@@ -23,7 +23,7 @@ namespace Editor
             GUILayout.Label("JSON Data", EditorStyles.boldLabel);
             
             _caseID = EditorGUILayout.TextField("Case ID", _caseID);
-            string path = Application.dataPath + $"/StreamingAssets/{_caseID}.json";
+            string path = Application.dataPath + $"/StreamingAssets/CaseDataJSON/{_caseID}.json";
 
             if (File.Exists(path) && GUILayout.Button("Import JSON Data"))
             {
@@ -35,7 +35,7 @@ namespace Editor
         public void ImportJsonData(string caseID)
         {
             // Define the path to your JSON file in StreamingAssets
-            string path = Application.dataPath + $"/StreamingAssets/{caseID}.json";
+            string path = Application.dataPath + $"/StreamingAssets/CaseDataJSON/{caseID}.json";
 
             if (File.Exists(path))
             {
