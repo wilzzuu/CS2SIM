@@ -175,7 +175,7 @@ public class HighLowManager : MonoBehaviour
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
             float cashOutAmount = _betAmount * _roundNumber;
-            cashOutText.text = $"Cash Out {cashOutAmount:F2} at {_roundNumber}x";
+            cashOutText.text = $"Cash Out {cashOutAmount:F2}€ at {_roundNumber}x";
         }
         else if (_currentItem.price < _previousItem.price)
         {
@@ -202,7 +202,7 @@ public class HighLowManager : MonoBehaviour
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
             float cashOutAmount = _betAmount * _roundNumber;
-            cashOutText.text = $"Cash Out {cashOutAmount:F2} at {_roundNumber}x";
+            cashOutText.text = $"Cash Out {cashOutAmount:F2}€ at {_roundNumber}x";
         }
         else if (_currentItem.price > _previousItem.price)
         {
