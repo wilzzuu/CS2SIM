@@ -46,7 +46,7 @@ namespace Editor
         // ReSharper disable Unity.PerformanceAnalysis
         private void LoadAllItemAssets()
         {
-            _itemAssets = new List<ItemData>(Resources.LoadAll<ItemData>("Items"));
+            _itemAssets = new List<ItemData>(Resources.LoadAll<ItemData>("ItemAssets"));
             Debug.Log($"Loaded {_itemAssets.Count} item assets from ItemAssets folder.");
         }
 
