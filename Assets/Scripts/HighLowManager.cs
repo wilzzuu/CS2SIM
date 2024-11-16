@@ -66,8 +66,8 @@ public class HighLowManager : MonoBehaviour
         
         itemImage.gameObject.SetActive(false);
         rarityImage.sprite = Resources.Load<Sprite>($"HiddenItemL");
-        gunText.text = "?";
-        nameText.text = "?";
+        gunText.text = "????????";
+        nameText.text = "??????";
         priceText.text = "?€";
     }
 
