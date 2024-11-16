@@ -38,15 +38,6 @@ public class RouletteManager : MonoBehaviour
     private float _totalGameValue;
     private float _winChance;
     public UIManager uiManager;
-    
-    private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
-    {
-        {"MIL_SPEC", 0.7992f},
-        {"RESTRICTED", 0.1598f},
-        {"CLASSIFIED", 0.032f},
-        {"COVERT", 0.0064f},
-        {"SPECIAL", 0.0026f},
-    };
 
     void Awake()
     {
@@ -136,6 +127,7 @@ public class RouletteManager : MonoBehaviour
         SetInitialReelPosition();
         UpdateUI();
         itemSelectorView.SetActive(false);
+        replayButton.interactable = false;
         gameView.SetActive(true);
     }
 
@@ -158,47 +150,19 @@ public class RouletteManager : MonoBehaviour
         }
 
         reelContainer.localPosition = _initialReelPosition;
-        RouletteItem winningItem = GetRandomItemByChance();
+        RouletteItem winningItem = GetRandomReelItem();
         StartCoroutine(AnimateScrollingReel(winningItem));
     }
 
-    private RouletteItem GetRandomItemByChance()
+    private RouletteItem GetRandomReelItem()
     {
         if (_reelItems == null || _reelItems.Count == 0)
         {
             Debug.LogWarning("Reel items are empty. Cannot get a random item.");
             return null;
         }
-
-        float totalWeight = _reelItems
-            .Where(i => RarityWeights.ContainsKey(i.Item.rarity))
-            .Sum(i => RarityWeights[i.Item.rarity]);
-
-        if (totalWeight <= 0)
-        {
-            Debug.LogWarning("Total weight is zero or invalid. Cannot get a random item.");
-            return null;
-        }
         
-        float randomValue = Random.Range(0, totalWeight);
-        float cumulativeWeight = 0f;
-
-        foreach (var item in _reelItems)
-        {
-            if (RarityWeights.TryGetValue(item.Item.rarity, out float itemWeight))
-            {
-                cumulativeWeight += itemWeight;
-                if (randomValue <= cumulativeWeight)
-                {
-                    return item;
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"Rarity '{item.Item.rarity}' not found in RarityWeights.'");
-            }
-        }
-        return _reelItems[_reelItems.Count - 1];
+        return _reelItems[Random.Range(0, _reelItems.Count -1)];
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -251,7 +215,6 @@ public class RouletteManager : MonoBehaviour
 
     private void EvaluateOutcome(RouletteItem winningItem)
     {
-        
         if (winningItem.OwnerIsPlayer)
         {
             HashSet<ItemData> uniqueBotItemsToAdd = new HashSet<ItemData>();
@@ -279,6 +242,7 @@ public class RouletteManager : MonoBehaviour
             }
             outcomeText.text = "You lost!";
         }
+        replayButton.interactable = true;
     }
 
     private void SetUpReelItem(GameObject reelItem, ItemData itemData, bool isPlayerOwned)
@@ -361,7 +325,7 @@ public class RouletteManager : MonoBehaviour
     {
         for (int i = 0; i < _reelItems.Count; i++)
         {
-            int randomIndex = UnityEngine.Random.Range(i, _reelItems.Count);
+            int randomIndex = Random.Range(i, _reelItems.Count);
             RouletteItem temp = _reelItems[i];
             _reelItems[i] = _reelItems[randomIndex];
             _reelItems[randomIndex] = temp;
@@ -392,7 +356,7 @@ public class RouletteManager : MonoBehaviour
                 .ToList();
         }
 
-        ItemData selectedItem = eligibleItems[UnityEngine.Random.Range(0, eligibleItems.Count)];
+        ItemData selectedItem = eligibleItems[Random.Range(0, eligibleItems.Count)];
         usedBotItems.Add(selectedItem);
         return selectedItem;
     }
