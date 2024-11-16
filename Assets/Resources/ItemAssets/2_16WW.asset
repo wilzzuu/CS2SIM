@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2_16WW
   gun: Bayonet
-  name: Night
-  basePrice: 301.92
-  price: 301.92
+  name: Case Hardened
+  basePrice: 498.96
+  price: 498.96
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
   weight: 0
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 12.897432

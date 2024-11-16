@@ -15,12 +15,12 @@ MonoBehaviour:
   id: 2_13FN
   gun: Bayonet
   name: Fade
-  basePrice: 998.06
-  price: 998.06
+  basePrice: 995.98
+  price: 995.98
   condition: Factory New
   isStatTrak: 0
   type: Knife
   rarity: SPECIAL
   weight: 0
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 12.897432

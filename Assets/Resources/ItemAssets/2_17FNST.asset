@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2_17FNST
   gun: Bayonet
-  name: Case Hardened
-  basePrice: 742.9
-  price: 742.9
+  name: Stained
+  basePrice: 367.34
+  price: 367.34
   condition: Factory New
   isStatTrak: 1
   type: Knife
   rarity: SPECIAL
   weight: 0
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 12.897432
