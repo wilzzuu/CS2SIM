@@ -191,6 +191,9 @@ public class CaseBattleManager : MonoBehaviour
         _botItems.Clear();
         _playerTotalValue = 0f;
         _botTotalValue = 0f;
+        playerTotalValueText.text = "Total Value: 0€";
+        botTotalValueText.text = "Total Value: 0€";
+        
         playerWinsText.text = null;
         botWinsText.text = null;
         startBattleButton.interactable = false;
