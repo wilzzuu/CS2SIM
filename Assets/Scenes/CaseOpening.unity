@@ -1093,19 +1093,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1060654787}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1337726981}
-        m_TargetAssemblyTypeName: CaseOpening, Assembly-CSharp
-        m_MethodName: ToggleCaseSelector
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1060654787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,10 +1295,8 @@ MonoBehaviour:
   caseItemGrid: {fileID: 1041681834}
   openedItemPrefab: {fileID: 7958385774852719066, guid: be3e020419a419b45a06967aae1ea41d, type: 3}
   caseGridParent: {fileID: 1231975789}
-  initialScrollSpeed: 4000
-  finalScrollSpeed: 100
   numberOfReelItems: 40
-  easingDuasion: 7
+  easingDuration: 7
   caseButtonPrefab: {fileID: 123025997980287184, guid: f87ff3d3840b35f4fb18b7312be526b2, type: 3}
   caseSelectorPanel: {fileID: 465343517}
   selectCaseButton: {fileID: 1060654786}

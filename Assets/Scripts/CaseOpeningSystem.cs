@@ -418,6 +418,7 @@ public class CaseOpening : MonoBehaviour
     {
         _isSelectorOpen = !_isSelectorOpen;
         caseSelectorPanel.gameObject.SetActive(_isSelectorOpen);
+        openCaseButton.interactable = !_isSelectorOpen;
 
         if (_isFirstSelection && !_isSelectorOpen)
         {
