@@ -22,7 +22,8 @@ public class HighLowManager : MonoBehaviour
 
     private float _betAmount;
     private int _roundNumber;
-    
+    private const float RoundMultiplier = 1.25f;
+
     private List<ItemData> _allItems = new List<ItemData>();
     private ItemData _currentItem;
     private ItemData _previousItem;
@@ -177,8 +178,8 @@ public class HighLowManager : MonoBehaviour
             _roundNumber++;
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
-            float cashOutAmount = _betAmount * _roundNumber;
-            cashOutText.text = $"Cash Out {cashOutAmount:F2}€ at {_roundNumber}x";
+            float cashOutAmount = _betAmount * _roundNumber * RoundMultiplier;
+            cashOutText.text = $"Cash Out {cashOutAmount:F2}€ at {_roundNumber * RoundMultiplier}x";
         }
         else if (_currentItem.price < _previousItem.price)
         {
@@ -204,8 +205,8 @@ public class HighLowManager : MonoBehaviour
             _roundNumber++;
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
-            float cashOutAmount = _betAmount * _roundNumber;
-            cashOutText.text = $"Cash Out {cashOutAmount:F2}€ at {_roundNumber}x";
+            float cashOutAmount = _betAmount * _roundNumber * RoundMultiplier;
+            cashOutText.text = $"Cash Out {cashOutAmount:F2}€ at {_roundNumber * RoundMultiplier}x";
         }
         else if (_currentItem.price > _previousItem.price)
         {
@@ -229,6 +230,8 @@ public class HighLowManager : MonoBehaviour
         startRoundButton.interactable = true;
         betAmountInput.interactable = true;
         uIManager.UnlockUI();
+        _previousItem = null;
+        _currentItem = null;
     }
     
     private void CashOut()
