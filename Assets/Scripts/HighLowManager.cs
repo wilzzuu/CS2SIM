@@ -17,6 +17,8 @@ public class HighLowManager : MonoBehaviour
     public Button cashOutButton;
     public TextMeshProUGUI cashOutText;
     public TextMeshProUGUI resultText;
+    
+    public UIManager uIManager;
 
     private float _betAmount;
     private int _roundNumber;
@@ -140,6 +142,7 @@ public class HighLowManager : MonoBehaviour
             guessLowButton.interactable = true;
             startRoundButton.interactable = false;
             betAmountInput.interactable = false;
+            uIManager.LockUI();
             
             SetupFirstItem();
         }
@@ -225,6 +228,7 @@ public class HighLowManager : MonoBehaviour
         cashOutButton.interactable = false;
         startRoundButton.interactable = true;
         betAmountInput.interactable = true;
+        uIManager.UnlockUI();
     }
     
     private void CashOut()

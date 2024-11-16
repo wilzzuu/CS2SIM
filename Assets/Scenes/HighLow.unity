@@ -1696,6 +1696,7 @@ MonoBehaviour:
   cashOutButton: {fileID: 1712276315}
   cashOutText: {fileID: 1290659063}
   resultText: {fileID: 723440109}
+  uIManager: {fileID: 2125327699}
 --- !u!1 &1290659061
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,6 +3314,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2125327699 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 874462095654244843, guid: 849e52061adafc34fa0fea6ac4e3df23, type: 3}
+  m_PrefabInstance: {fileID: 871928148}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210f0bc330b47834eb9d6679459e453d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
