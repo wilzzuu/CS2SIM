@@ -65,6 +65,7 @@ public class InvestingManager : MonoBehaviour
         {
             GameObject buttonObj = Instantiate(stockCatalogButtonPrefab, stockCatalogGrid);
             buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = stock.stockName;
+            buttonObj.GetComponentInChildren<Image>().sprite = stock.stockIcon;
             buttonObj.GetComponent<Button>().onClick.AddListener(() => ShowStockDetails(stock));
         }
     }
