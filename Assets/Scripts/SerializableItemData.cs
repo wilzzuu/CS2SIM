@@ -12,7 +12,6 @@ public class SerializableItemData
     public bool isStatTrak;
     public string type;
     public string rarity;
-    public float weight;
     public int demandScore;
 
     public SerializableItemData(ItemData item)
@@ -26,7 +25,6 @@ public class SerializableItemData
         isStatTrak = item.isStatTrak;
         type = item.type;
         rarity = item.rarity;
-        weight = item.weight;
         demandScore = item.demandScore;
     }
 }
