@@ -15,6 +15,7 @@ public class HighLowManager : MonoBehaviour
     public Button nextItemButton;
     public Button startRoundButton;
     public Button cashOutButton;
+    public TextMeshProUGUI cashOutText;
     public TextMeshProUGUI resultText;
 
     private float _betAmount;
@@ -172,6 +173,9 @@ public class HighLowManager : MonoBehaviour
             if (!cashOutButton.interactable) cashOutButton.interactable = true;
             _roundNumber++;
             resultText.text = $"You guessed right on round {_roundNumber}!";
+            
+            float cashOutAmount = _betAmount * _roundNumber;
+            cashOutText.text = $"Cash Out {cashOutAmount:F2} at {_roundNumber}x";
         }
         else if (_currentItem.price < _previousItem.price)
         {
@@ -197,6 +201,8 @@ public class HighLowManager : MonoBehaviour
             _roundNumber++;
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
+            float cashOutAmount = _betAmount * _roundNumber;
+            cashOutText.text = $"Cash Out {cashOutAmount:F2} at {_roundNumber}x";
         }
         else if (_currentItem.price > _previousItem.price)
         {
@@ -212,6 +218,7 @@ public class HighLowManager : MonoBehaviour
     private void GameOver()
     {
         _roundNumber = 0;
+        cashOutText.text = "";
         guessHighButton.interactable = false;
         guessLowButton.interactable = false;
         nextItemButton.interactable = false;
