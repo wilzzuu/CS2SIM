@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player:
-    balance: 2000
+    balance: 200
 --- !u!1 &509470213
 GameObject:
   m_ObjectHideFlags: 0
