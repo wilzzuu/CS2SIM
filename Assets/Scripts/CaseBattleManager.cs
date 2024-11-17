@@ -21,6 +21,8 @@ public class CaseBattleManager : MonoBehaviour
     public GameObject caseButtonPrefab;
     public Transform caseSelectorPanel;
     public Button closeSelectorPanelButton;
+    public Button normalCasesButton;
+    public Button customCasesButton;
     public Button selectCaseButton;
     public TMP_Dropdown gameModeDropdown;
     public float easingDuration = 7f;
@@ -59,10 +61,12 @@ public class CaseBattleManager : MonoBehaviour
     {
         startBattleButton.interactable = false;
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>("CaseAssets"));
-        
         DisplayCaseSelector(_availableCases);
+        
         selectCaseButton.onClick.AddListener(ToggleCaseSelector);
         closeSelectorPanelButton.onClick.AddListener(CloseCaseSelector);
+        normalCasesButton.onClick.AddListener(ChangeToNormalCase);
+        customCasesButton.onClick.AddListener(ChangeToCustomCase);
         
         startBattleButton.onClick.AddListener(StartBattle);
         gameModeDropdown.onValueChanged.AddListener(delegate { SetGameMode(); });
@@ -77,6 +81,18 @@ public class CaseBattleManager : MonoBehaviour
         SetInitialReelPosition(botReelParent);
     }
 
+    public void ChangeToNormalCase()
+    {
+        _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CaseAssets"));
+        DisplayCaseSelector(_availableCases);
+    }
+
+    public void ChangeToCustomCase()
+    {
+        _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CustomCaseAssets"));
+        DisplayCaseSelector(_availableCases);
+    }
+
     void SetGameMode()
     {
         _isGreaterMode = gameModeDropdown.value == 0; // "Greater Total Value Wins" = 0, "Lesser Total Value Wins" = 1
@@ -86,6 +102,8 @@ public class CaseBattleManager : MonoBehaviour
     private void SelectCase(CaseData chosenCase)
     {
         _selectedCaseData = chosenCase;
+        
+        Debug.Log($"Selected case: {_selectedCaseData.id}");
         
 
         if (_selectedCaseData) startBattleButton.interactable = true;
@@ -126,7 +144,7 @@ public class CaseBattleManager : MonoBehaviour
             
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
-            priceText.text = $"{caseData.price:F2}";
+            priceText.text = $"{caseData.price:F2}€";
 
             Button button = caseButton.GetComponent<Button>();
             button.onClick.AddListener(() => SelectCase(caseData));
@@ -194,6 +212,8 @@ public class CaseBattleManager : MonoBehaviour
         startBattleButton.interactable = false;
         selectCaseButton.interactable = false;
         closeSelectorPanelButton.interactable = false;
+        normalCasesButton.interactable = false;
+        customCasesButton.interactable = false;
         gameModeDropdown.interactable = false;
         uiManager.LockUI();
 
@@ -385,6 +405,8 @@ public class CaseBattleManager : MonoBehaviour
         startBattleButton.interactable = true;
         selectCaseButton.interactable = true;
         closeSelectorPanelButton.interactable = true;
+        normalCasesButton.interactable = true;
+        customCasesButton.interactable = true;
         gameModeDropdown.interactable = true;
         uiManager.UnlockUI();
     }
