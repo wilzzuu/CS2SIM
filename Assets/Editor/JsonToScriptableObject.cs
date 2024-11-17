@@ -57,7 +57,7 @@ namespace Editor
                     foreach (var caseData in caseDataWrapper.cases)
                     {
                         Debug.Log($"Processing case: {caseData.ID} | Name: {caseData.NAME} | Price: {caseData.PRICE}");
-                        CreateCaseDataAsset(caseData);
+                        CreateCaseDataAsset(caseData, caseID);
                     }
 
                     Debug.Log("Data imported successfully!");
@@ -73,10 +73,10 @@ namespace Editor
             }
         }
 
-        private static void CreateCaseDataAsset(CaseJsonData jsonData)
+        private static void CreateCaseDataAsset(CaseJsonData jsonData, string caseID)
         {
             // Create CaseData ScriptableObject
-            CaseData caseAsset = ScriptableObject.CreateInstance<CaseData>();
+            CaseData caseAsset = CreateInstance<CaseData>();
             caseAsset.id = jsonData.ID;
             caseAsset.name = jsonData.NAME;
             caseAsset.price = jsonData.PRICE;
@@ -92,7 +92,7 @@ namespace Editor
                 }
 
                 // Create ItemData ScriptableObject
-                ItemData itemAsset = ScriptableObject.CreateInstance<ItemData>();
+                ItemData itemAsset = CreateInstance<ItemData>();
 
                 bool statTrak = itemJson.ID.EndsWith("ST");
                 string condition = SplitIDString(itemJson.ID);
@@ -117,7 +117,16 @@ namespace Editor
             }
 
             // Save CaseData asset
-            SaveAsset(caseAsset, $"Assets/Resources/CaseAssets/{jsonData.ID}.asset");
+            var splitCaseID = caseID.Split('_')[0];
+            if (int.TryParse(splitCaseID, out _))
+            {
+                SaveAsset(caseAsset, $"Assets/Resources/CaseAssets/{jsonData.ID}.asset");
+            }
+            else
+            {
+                SaveAsset(caseAsset, $"Assets/Resources/CustomCaseAssets/{jsonData.ID}.asset");
+            }
+            
         }
 
         private static void SaveAsset(ScriptableObject asset, string path)
