@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: A_CASE
   name: Fade Case
-  price: 2578.83
+  price: 515.77
   items:
   - {fileID: 11400000, guid: da5d93f789f6bb64ebcf40d45cde7d6a, type: 2}
   - {fileID: 11400000, guid: 57793b1ab87a27f449d227991684d45c, type: 2}

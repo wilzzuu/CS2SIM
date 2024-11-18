@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: B_CASE
   name: Emerald Case
-  price: 3135.62
+  price: 627.12
   items:
   - {fileID: 11400000, guid: 5a3fc9ce22b6b2e489c35b170fcd20a0, type: 2}
   - {fileID: 11400000, guid: 1163a341ed4382b43af4ee49f6102def, type: 2}
