@@ -36,33 +36,6 @@ public class CaseOpening : MonoBehaviour
 
     public UIManager uiManager;
 
-    private static readonly Dictionary<string, int> RarityOrder = new Dictionary<string, int>
-    {
-        {"MIL_SPEC", 1},
-        {"RESTRICTED", 2},
-        {"CLASSIFIED", 3},
-        {"COVERT", 4},
-        {"SPECIAL", 5}
-    };
-    
-    private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
-    {
-        {"MIL_SPEC", 0.7992f},
-        {"RESTRICTED", 0.1598f},
-        {"CLASSIFIED", 0.032f},
-        {"COVERT", 0.0064f},
-        {"SPECIAL", 0.0026f}
-    };
-    
-    private static readonly Dictionary<string, int> ConditionOrder = new Dictionary<string, int>
-    {
-        {"Battle-Scarred",1},
-        {"Well-Worn",2},
-        {"Field-Tested",3},
-        {"Minimal Wear",4},
-        {"Factory New",5}
-    };
-
     private Dictionary<string, List<ItemData>> _rarityGroups;
 
     void Start()
@@ -167,41 +140,26 @@ public class CaseOpening : MonoBehaviour
             return null;
         }
 
-        // Step 1: Calculate total weight dynamically
-        float totalWeight = 0f;
-        Dictionary<ItemData, float> itemWeights = new Dictionary<ItemData, float>();
+        float totalRarityWeight = RarityWeights.WeightList.Values.Sum();
+        float rarityRandomValue = Random.Range(0, totalRarityWeight);
+        
+        float cumulativeRarityWeight = 0f;
+        string selectedRarity = null;
 
-        foreach (var item in _selectedCaseData.items)
+        foreach (var rarity in RarityWeights.WeightList)
         {
-            if (!RarityWeights.TryGetValue(item.rarity, out float baseWeight))
+            cumulativeRarityWeight += rarity.Value;
+            if (rarityRandomValue <= cumulativeRarityWeight)
             {
-                Debug.LogWarning($"Unknown rarity '{item.rarity}' for item '{item.name}'");
-                continue;
+                selectedRarity = rarity.Key;
+                break;
             }
-
-            // Adjust weight for StatTrak items
-            float itemWeight = item.isStatTrak ? baseWeight / 10 : baseWeight;
-            itemWeights[item] = itemWeight;
-            totalWeight += itemWeight;
         }
-
-        if (totalWeight <= 0)
+        
+        if (selectedRarity != null && _rarityGroups.ContainsKey(selectedRarity))
         {
-            Debug.LogError("Total weight is zero or negative. Ensure items have valid rarities and weights.");
-            return null;
-        }
-
-        // Step 2: Choose a random item based on the calculated weights
-        float randomValue = Random.Range(0f, totalWeight);
-        float cumulativeWeight = 0f;
-
-        foreach (var itemWeightPair in itemWeights)
-        {
-            cumulativeWeight += itemWeightPair.Value;
-            if (randomValue <= cumulativeWeight)
-            {
-                return itemWeightPair.Key; // Return the selected item
-            }
+            var itemsInRarity = _rarityGroups[selectedRarity];
+            return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
         }
 
         // Fallback in case no item was selected
@@ -222,15 +180,13 @@ public class CaseOpening : MonoBehaviour
             return null;
         }
         
-        
-        
-        float totalRarityWeight = RarityWeights.Values.Sum();
+        float totalRarityWeight = RarityWeights.WeightList.Values.Sum();
         float rarityRandomValue = Random.Range(0, totalRarityWeight);
         
         float cumulativeRarityWeight = 0f;
         string selectedRarity = null;
         
-        foreach (var rarity in RarityWeights)
+        foreach (var rarity in RarityWeights.WeightList)
         {
             cumulativeRarityWeight += rarity.Value;
             if (rarityRandomValue <= cumulativeRarityWeight && rarity.Key != "SPECIAL")
@@ -372,7 +328,7 @@ public class CaseOpening : MonoBehaviour
             
             var bestConditionItem = itemsInGroup
                 .Where(item => item.rarity != "SPECIAL")
-                .OrderByDescending(item => ConditionOrder.TryGetValue(item.condition, out int order) ? order : 0)
+                .OrderByDescending(item => ConditionOrder.ConditionOrderList.TryGetValue(item.condition, out int order) ? order : 0)
                 .FirstOrDefault();
 
             if (bestConditionItem != null)
