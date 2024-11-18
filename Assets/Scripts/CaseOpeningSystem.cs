@@ -139,8 +139,17 @@ public class CaseOpening : MonoBehaviour
             Debug.LogError("No items in the selected case. Ensure the selected case has items.");
             return null;
         }
+        
+        if (_rarityGroups.Count == 0)
+        {
+            Debug.LogError("No valid rarity groups found in the selected case.");
+            return null;
+        }
 
-        float totalRarityWeight = RarityWeights.WeightList.Values.Sum();
+        float totalRarityWeight = RarityWeights.WeightList
+            .Where(rarity => _rarityGroups.ContainsKey(rarity.Key))
+            .Sum(rarity => rarity.Value);
+
         float rarityRandomValue = Random.Range(0, totalRarityWeight);
         
         float cumulativeRarityWeight = 0f;
@@ -148,6 +157,7 @@ public class CaseOpening : MonoBehaviour
 
         foreach (var rarity in RarityWeights.WeightList)
         {
+            if (!_rarityGroups.ContainsKey(rarity.Key)) continue;
             cumulativeRarityWeight += rarity.Value;
             if (rarityRandomValue <= cumulativeRarityWeight)
             {
@@ -165,8 +175,8 @@ public class CaseOpening : MonoBehaviour
             Debug.LogWarning($"Rarity group '{selectedRarity}' is empty or missing.");
         }
 
-        Debug.LogWarning("No opened item was selected; returning default item.");
-        return _selectedCaseData.items[0];
+        Debug.LogWarning("No opened item was selected; returning null.");
+        return null;
     }
     
     private ItemData GetRandomNonSpecialItem()
