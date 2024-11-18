@@ -131,9 +131,7 @@ public class CaseBattleManager : MonoBehaviour
             TextMeshProUGUI nameText = caseButton.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = caseButton.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
             
-            string caseIdBeginning = caseData.id.Split("_")[0];
-            bool isNormalCase = int.TryParse(caseIdBeginning, out _);
-            float casePrice = isNormalCase ? caseData.price : caseData.price * 5;
+            float casePrice = GetCasePrice(caseData);
             
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
@@ -182,9 +180,7 @@ public class CaseBattleManager : MonoBehaviour
             Destroy(child.gameObject);
         }
         
-        string caseIdBeginning = _selectedCaseData.id.Split("_")[0];
-        bool isNormalCase = int.TryParse(caseIdBeginning, out _);
-        float casePrice = isNormalCase ? _selectedCaseData.price : _selectedCaseData.price * 5;
+        float casePrice = GetCasePrice(_selectedCaseData);
         
         if (PlayerManager.Instance.GetPlayerBalance() >= casePrice)
         {
@@ -345,6 +341,7 @@ public class CaseBattleManager : MonoBehaviour
     
     private void DetermineWinner()
     {
+        float casePrice = GetCasePrice(_selectedCaseData);
         if (gameModeDropdown.options[gameModeDropdown.value].text == "Higher Wins")
         {
             string result = _playerTotalValue > _botTotalValue ? "Player Wins!" : "Bot Wins!"; 
@@ -358,7 +355,7 @@ public class CaseBattleManager : MonoBehaviour
             {
                 playerWinsText.text = "Tie!";
                 botWinsText.text = "Tie!";
-                PlayerManager.Instance.AddCurrency(_selectedCaseData.price);
+                PlayerManager.Instance.AddCurrency(casePrice);
             }
         }
         else if (gameModeDropdown.options[gameModeDropdown.value].text == "Lower Wins")
@@ -374,7 +371,7 @@ public class CaseBattleManager : MonoBehaviour
             {
                 playerWinsText.text = "Tie!";
                 botWinsText.text = "Tie!";
-                PlayerManager.Instance.AddCurrency(_selectedCaseData.price);
+                PlayerManager.Instance.AddCurrency(casePrice);
             }
         }
     
@@ -437,5 +434,10 @@ public class CaseBattleManager : MonoBehaviour
 
         Debug.LogWarning("No item was selected; returning null.");
         return null;
+    }
+
+    private float GetCasePrice(CaseData caseData)
+    {
+        return caseData.price * 5;
     }
 }
