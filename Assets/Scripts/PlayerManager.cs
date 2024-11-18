@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -128,32 +127,15 @@ public class PlayerManager : MonoBehaviour
 
         if (File.Exists(path))
         {
-            try
+            BinaryFormatter bf = new BinaryFormatter();
+            using (FileStream file = File.Open(path, FileMode.Open))
             {
-                BinaryFormatter bf = new BinaryFormatter();
-                using (FileStream file = File.Open(path, FileMode.Open))
-                {
-                    player = (Player)bf.Deserialize(file);
-                }
-
-                // Validation: Check if the balance is within a reasonable range
-                if (player.balance < 0 || player.balance > 1_000_000)
-                {
-                    throw new Exception("Corrupted data detected.");
-                }
-
-                Debug.Log($"Player data loaded successfully. Balance: {player.balance}");
-            }
-            catch (Exception ex)
-            {
-                Debug.LogWarning($"Failed to load save file. Reason: {ex.Message}");
-                ResetProgress(); // Reset to default values
+                player = (Player)bf.Deserialize(file);
             }
         }
         else
         {
-            Debug.LogWarning("Save file not found. Creating new player data.");
-            ResetProgress();
+            player = new Player(200f);
         }
     }
 
