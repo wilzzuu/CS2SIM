@@ -26,6 +26,8 @@ public class CaseOpening : MonoBehaviour
 
     public GameObject caseButtonPrefab;
     public Transform caseSelectorPanel;
+    public Button normalCasesButton;
+    public Button customCasesButton;
     public Button selectCaseButton;
     public Button openCaseButton;
 
@@ -42,14 +44,28 @@ public class CaseOpening : MonoBehaviour
     {   
         openCaseButton.interactable = false;
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>("CaseAssets"));
-        
         DisplayCaseSelector(_availableCases);
+        
         selectCaseButton.onClick.AddListener(ToggleCaseSelector);
+        normalCasesButton.onClick.AddListener(ChangeToNormalCase);
+        customCasesButton.onClick.AddListener(ChangeToCustomCase);
 
         _gridLayout = caseGridParent.GetComponent<GridLayoutGroup>();
         _reelTransform = caseGridParent.GetComponent<RectTransform>();
 
         SetInitialReelPosition();
+    }
+    
+    public void ChangeToNormalCase()
+    {
+        _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CaseAssets"));
+        DisplayCaseSelector(_availableCases);
+    }
+
+    public void ChangeToCustomCase()
+    {
+        _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CustomCaseAssets"));
+        DisplayCaseSelector(_availableCases);
     }
     
     private void GroupItemsByRarity()
@@ -237,6 +253,8 @@ public class CaseOpening : MonoBehaviour
         _isScrolling = true;
         openCaseButton.interactable = false;
         selectCaseButton.interactable = false;
+        normalCasesButton.interactable = false;
+        customCasesButton.interactable = false;
         uiManager.LockUI();
 
         List<GameObject> reelItems = new List<GameObject>();
@@ -256,7 +274,14 @@ public class CaseOpening : MonoBehaviour
             }
             else
             {
-                itemData = GetRandomNonSpecialItem();
+                if (_rarityGroups.Count == 1 && _rarityGroups.ContainsKey("SPECIAL"))
+                {
+                    itemData = GetRandomItemByPercentage();
+                }
+                else
+                {
+                    itemData = GetRandomNonSpecialItem();
+                }
             }
             GameObject reelItem = Instantiate(openedItemPrefab, caseGridParent);
             SetUpReelItem(reelItem, itemData);
@@ -282,9 +307,6 @@ public class CaseOpening : MonoBehaviour
         caseGridParent.localPosition = new Vector3(targetPosition, caseGridParent.localPosition.y, 0);
 
         StopReel(openedItem);
-        _isScrolling = false;
-        selectCaseButton.interactable = true;
-        uiManager.UnlockUI();
     }
 
     private void StopReel(ItemData openedItem)
@@ -301,6 +323,11 @@ public class CaseOpening : MonoBehaviour
         {
             openCaseButton.interactable = true;
         }
+        _isScrolling = false;
+        selectCaseButton.interactable = true;
+        normalCasesButton.interactable = true;
+        customCasesButton.interactable = true;
+        uiManager.UnlockUI();
     }
 
     private void SetUpReelItem(GameObject reelItem, ItemData itemData)
