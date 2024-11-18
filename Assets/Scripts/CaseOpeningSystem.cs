@@ -58,6 +58,11 @@ public class CaseOpening : MonoBehaviour
             .Where(item => item != null)
             .GroupBy(item => item.rarity)
             .ToDictionary(g => g.Key, g => g.ToList());
+        
+        foreach (var group in _rarityGroups)
+        {
+            Debug.Log($"Rarity: {group.Key}, Items: {group.Value.Count}");
+        }
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -156,14 +161,17 @@ public class CaseOpening : MonoBehaviour
             }
         }
         
-        if (selectedRarity != null && _rarityGroups.ContainsKey(selectedRarity))
+        if (selectedRarity != null)
         {
-            var itemsInRarity = _rarityGroups[selectedRarity];
-            return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
+            if (_rarityGroups.TryGetValue(selectedRarity, out var itemsInRarity) && itemsInRarity.Count > 0)
+            {
+                return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
+            }
+            Debug.LogWarning($"Rarity group '{selectedRarity}' is empty or missing.");
         }
 
         // Fallback in case no item was selected
-        Debug.LogWarning("No item was selected; returning default item.");
+        Debug.LogWarning("No opened item was selected; returning default item.");
         return _selectedCaseData.items[0];
     }
     
@@ -180,14 +188,25 @@ public class CaseOpening : MonoBehaviour
             return null;
         }
         
-        float totalRarityWeight = RarityWeights.WeightList.Values.Sum();
-        float rarityRandomValue = Random.Range(0, totalRarityWeight);
+        float totalRarityWeight = RarityWeights.WeightList
+            .Where(rarity => rarity.Key != "SPECIAL")
+            .Sum(rarity => rarity.Value);
+
+        if (totalRarityWeight <= 0)
+        {
+            Debug.LogError("Total weight for non-special rarities is invalid.");
+            return null;
+        }
         
+        float rarityRandomValue = Random.Range(0, totalRarityWeight);
+
         float cumulativeRarityWeight = 0f;
         string selectedRarity = null;
         
         foreach (var rarity in RarityWeights.WeightList)
         {
+            if (rarity.Key == "SPECIAL") continue;
+            
             cumulativeRarityWeight += rarity.Value;
             if (rarityRandomValue <= cumulativeRarityWeight && rarity.Key != "SPECIAL")
             {
@@ -196,13 +215,16 @@ public class CaseOpening : MonoBehaviour
             }
         }
 
-        if (selectedRarity != null && _rarityGroups.ContainsKey(selectedRarity))
+        if (selectedRarity != null)
         {
-            var itemsInRarity = _rarityGroups[selectedRarity];
-            return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
+            if (_rarityGroups.TryGetValue(selectedRarity, out var itemsInRarity) && itemsInRarity.Count > 0)
+            {
+                return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
+            }
+            Debug.LogWarning($"Rarity group '{selectedRarity}' is empty or missing.");
         }
         
-        Debug.LogWarning("No item was selected; returning default item.");
+        Debug.LogWarning("No random item was selected; returning default item.");
         return _selectedCaseData.items[0];
     }
 
