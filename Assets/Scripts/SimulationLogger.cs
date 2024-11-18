@@ -59,6 +59,8 @@ public class SimulationLogger : MonoBehaviour
         rarityCounts = rarityCounts.OrderBy(item =>
                 RarityOrder.RarityOrderList.ContainsKey(item.Key) ? RarityOrder.RarityOrderList[item.Key] : int.MaxValue)
             .ToDictionary(data => data.Key, data => data.Value);
+        List<float> averagePercentageDifList = new List<float>();
+        
         foreach (var entry in rarityCounts)
         {
             float percentage = (float)entry.Value / numberOfSimulations * 100;
@@ -67,6 +69,7 @@ public class SimulationLogger : MonoBehaviour
             {
                 float expectedPercentage = weight * 100;
                 float percentageDif = percentage - expectedPercentage;
+                averagePercentageDifList.Add(percentageDif);
                 
                 _logBuilder.AppendLine($"Condition: {entry.Key}"); 
                 _logBuilder.AppendLine($"Appeared: {entry.Value} times ({percentage:F5}%) with a difference of {percentageDif:F3}%\n");
@@ -78,7 +81,9 @@ public class SimulationLogger : MonoBehaviour
             }
             
         }
-        
+
+        float averagePercentageDif = averagePercentageDifList.Average();
+        _logBuilder.AppendLine($"Average percentage difference: {averagePercentageDif:F5}%");
         SaveLogToFile();
     }
 
