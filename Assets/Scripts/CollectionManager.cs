@@ -26,17 +26,8 @@ public class CollectionManager : MonoBehaviour
             #endif
         }
     }
-    private string SaveFileName
-    {
-        get
-        {
-            #if UNITY_EDITOR
-                return "PlayTest_CollectionData.dat";
-            #else
-                return "CollectionData.dat";
-            #endif
-        }
-    }
+    
+    private const string SaveFileName = "CollectionData.save";
 
     void Awake()
     {
@@ -63,27 +54,25 @@ public class CollectionManager : MonoBehaviour
     }
 
     private void SaveCollection()
-    {   
-        BinaryFormatter bf = new BinaryFormatter();
+    {
         string path = Path.Combine(SaveFilePath, SaveFileName);
-        using (FileStream file = File.Create(path))
-        {
-            bf.Serialize(file, _collectedItemIDs);
-        }
+        string jsonData = JsonUtility.ToJson(_collectedItemIDs.ToList());
+        string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
+
+        File.WriteAllText(path, encryptedData);
     }
 
     private void LoadCollection()
     {
         string path = Path.Combine(SaveFilePath, SaveFileName);
+
         if (File.Exists(path))
         {
-            using (FileStream file = File.Open(path, FileMode.Open))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                _collectedItemIDs = (HashSet<string>)bf.Deserialize(file);
-            }
+            string encryptedData = File.ReadAllText(path);
+            string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
+
+            _collectedItemIDs = new HashSet<string>(JsonUtility.FromJson<List<string>>(jsonData));
         }
-        UpdateCollectionUI();
     }
 
     private List<ItemData> LoadAllGameItems()

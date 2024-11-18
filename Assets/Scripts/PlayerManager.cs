@@ -31,18 +31,8 @@ public class PlayerManager : MonoBehaviour
             #endif
         }
     }
-
-    private string SaveFileName
-    {
-        get
-        {
-            #if UNITY_EDITOR
-                return "PlayTest_PlayerData.dat";
-            #else
-                return "PlayerData.dat";
-            #endif
-        }
-    }
+    
+    private const string SaveFileName = "PlayerData.save";
 
     public delegate void BalanceChangedHandler();
     public event BalanceChangedHandler OnBalanceChanged;
@@ -113,12 +103,11 @@ public class PlayerManager : MonoBehaviour
 
     public void SavePlayerData()
     {
-        BinaryFormatter bf = new BinaryFormatter();
         string path = Path.Combine(SaveFilePath, SaveFileName);
-        using (FileStream file = File.Create(path))
-        {
-            bf.Serialize(file, player);
-        }
+        string jsonData = JsonUtility.ToJson(player);
+        string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
+
+        File.WriteAllText(path, encryptedData);
     }
 
     public void LoadPlayerData()
@@ -127,11 +116,10 @@ public class PlayerManager : MonoBehaviour
 
         if (File.Exists(path))
         {
-            BinaryFormatter bf = new BinaryFormatter();
-            using (FileStream file = File.Open(path, FileMode.Open))
-            {
-                player = (Player)bf.Deserialize(file);
-            }
+            string encryptedData = File.ReadAllText(path);
+            string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
+
+            player = JsonUtility.FromJson<Player>(jsonData);
         }
         else
         {

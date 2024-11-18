@@ -19,17 +19,8 @@ public class InventoryManager : MonoBehaviour
             #endif
         }
     }
-    private string SaveFileName
-    {
-        get
-        {
-            #if UNITY_EDITOR
-                return "PlayTest_GameData.dat";
-            #else
-                return "GameData.dat";
-            #endif
-        }
-    }
+
+    private const string SaveFileName = "GameData.save";
 
     public delegate void InventoryValueChangedHandler();
     public event InventoryValueChangedHandler OnInventoryValueChanged;
@@ -41,7 +32,7 @@ public class InventoryManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            List<SerializableItemData> loadedItems = DataSerializationManager.Instance.LoadGameData();
+            List<SerializableItemData> loadedItems = LoadInventory();
             _inventoryItems = ConvertSerializableItemsToItemData(loadedItems);
         }
         else
@@ -125,12 +116,25 @@ public class InventoryManager : MonoBehaviour
 
     private void SaveInventory()
     {
-        List<SerializableItemData> serializableItems = new List<SerializableItemData>();
-        foreach (var item in _inventoryItems)
+        string path = Path.Combine(SaveFilePath, SaveFileName);
+        string jsonData = JsonUtility.ToJson(_inventoryItems);
+        string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
+
+        File.WriteAllText(path, encryptedData);
+    }
+    
+    private List<SerializableItemData> LoadInventory()
+    {
+        string path = Path.Combine(SaveFilePath, SaveFileName);
+
+        if (File.Exists(path))
         {
-            serializableItems.Add(new SerializableItemData(item));
+            string encryptedData = File.ReadAllText(path);
+            string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
+
+            return JsonUtility.FromJson<List<SerializableItemData>>(jsonData);
         }
-        DataSerializationManager.Instance.SaveGameData(serializableItems);
+        return new List<SerializableItemData>(); // Default empty inventory
     }
 
     public List<ItemData> GetInventoryItems()
