@@ -123,7 +123,7 @@ public class CaseBattleManager : MonoBehaviour
         }
 
         List<CaseData> orderedAvailableCases = availableCases.OrderBy(i => i.price).ToList();
-
+        
         foreach (var caseData in orderedAvailableCases)
         {
             GameObject caseButton = Instantiate(caseButtonPrefab, caseSelectorPanel);
@@ -131,9 +131,13 @@ public class CaseBattleManager : MonoBehaviour
             TextMeshProUGUI nameText = caseButton.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = caseButton.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
             
+            string caseIdBeginning = caseData.id.Split("_")[0];
+            bool isNormalCase = int.TryParse(caseIdBeginning, out _);
+            float casePrice = isNormalCase ? caseData.price : caseData.price * 5;
+            
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
-            priceText.text = $"{caseData.price:F2}€";
+            priceText.text = $"{casePrice:F2}€";
 
             Button button = caseButton.GetComponent<Button>();
             button.onClick.AddListener(() => SelectCase(caseData));
@@ -177,11 +181,14 @@ public class CaseBattleManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-
-        float caseBattlePrice = _selectedCaseData.price * 5;
-        if (PlayerManager.Instance.GetPlayerBalance() >= caseBattlePrice)
+        
+        string caseIdBeginning = _selectedCaseData.id.Split("_")[0];
+        bool isNormalCase = int.TryParse(caseIdBeginning, out _);
+        float casePrice = isNormalCase ? _selectedCaseData.price : _selectedCaseData.price * 5;
+        
+        if (PlayerManager.Instance.GetPlayerBalance() >= casePrice)
         {
-            PlayerManager.Instance.DeductCurrency(caseBattlePrice);
+            PlayerManager.Instance.DeductCurrency(casePrice);
         }
         else
         {
