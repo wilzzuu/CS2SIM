@@ -48,15 +48,6 @@ public class CaseBattleManager : MonoBehaviour
     
     public UIManager uiManager;
 
-    private static readonly Dictionary<string, float> RarityWeights = new Dictionary<string, float>
-    {
-        {"MIL_SPEC", 0.7992f},
-        {"RESTRICTED", 0.1598f},
-        {"CLASSIFIED", 0.032f},
-        {"COVERT", 0.0064f},
-        {"SPECIAL", 0.0026f},
-    };
-
     void Start()
     {
         startBattleButton.interactable = false;
@@ -425,7 +416,7 @@ public class CaseBattleManager : MonoBehaviour
         
         foreach (var item in _selectedCaseData.items)
         {
-            if (!RarityWeights.TryGetValue(item.rarity, out float baseWeight))
+            if (!RarityWeights.WeightList.TryGetValue(item.rarity, out float baseWeight))
             {
                 Debug.LogWarning($"Unknown rarity '{item.rarity}' for item '{item.id}'");
                 continue;
