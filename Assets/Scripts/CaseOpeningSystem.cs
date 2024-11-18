@@ -58,11 +58,6 @@ public class CaseOpening : MonoBehaviour
             .Where(item => item != null)
             .GroupBy(item => item.rarity)
             .ToDictionary(g => g.Key, g => g.ToList());
-        
-        foreach (var group in _rarityGroups)
-        {
-            Debug.Log($"Rarity: {group.Key}, Items: {group.Value.Count}");
-        }
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -170,14 +165,12 @@ public class CaseOpening : MonoBehaviour
             Debug.LogWarning($"Rarity group '{selectedRarity}' is empty or missing.");
         }
 
-        // Fallback in case no item was selected
         Debug.LogWarning("No opened item was selected; returning default item.");
         return _selectedCaseData.items[0];
     }
     
     private ItemData GetRandomNonSpecialItem()
     {
-        // Filter out "SPECIAL" items from selection
         List<ItemData> nonSpecialItems = _selectedCaseData.items
             .Where(item => item != null && item.rarity != "SPECIAL")
             .ToList();
