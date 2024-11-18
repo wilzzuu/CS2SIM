@@ -346,6 +346,12 @@ public class CaseBattleManager : MonoBehaviour
             {
                 PlayerManager.Instance.AddCurrency(_playerTotalValue);
             }
+            else if (Mathf.Approximately(_playerTotalValue, _botTotalValue))
+            {
+                playerWinsText.text = "Tie!";
+                botWinsText.text = "Tie!";
+                PlayerManager.Instance.AddCurrency(_selectedCaseData.price);
+            }
         }
         else if (gameModeDropdown.options[gameModeDropdown.value].text == "Lower Wins")
         {
@@ -356,14 +362,14 @@ public class CaseBattleManager : MonoBehaviour
             {
                 PlayerManager.Instance.AddCurrency(_botTotalValue);
             }
+            else if (Mathf.Approximately(_playerTotalValue, _botTotalValue))
+            {
+                playerWinsText.text = "Tie!";
+                botWinsText.text = "Tie!";
+                PlayerManager.Instance.AddCurrency(_selectedCaseData.price);
+            }
         }
-        else
-        {
-            playerWinsText.text = "Tie!";
-            botWinsText.text = "Tie!";
-            PlayerManager.Instance.AddCurrency(_selectedCaseData.price);
-        }
-        
+    
         startBattleButton.interactable = true;
         selectCaseButton.interactable = true;
         closeSelectorPanelButton.interactable = true;
@@ -381,13 +387,21 @@ public class CaseBattleManager : MonoBehaviour
             Debug.LogError("No items in the selected case.");
             return null;
         }
-        
+            
         _rarityGroups = _selectedCaseData.items
             .Where(item => item != null)
             .GroupBy(item => item.rarity)
             .ToDictionary(g => g.Key, g => g.ToList());
-
-        float totalRarityWeight = RarityWeights.WeightList.Values.Sum();
+        
+        if (_rarityGroups.Count == 0)
+        {
+            Debug.LogError("No valid rarity groups found in the selected case.");
+            return null;
+        }
+        
+        float totalRarityWeight = RarityWeights.WeightList
+            .Where(rarity => _rarityGroups.ContainsKey(rarity.Key))
+            .Sum(rarity => rarity.Value);
         float rarityRandomValue = Random.Range(0, totalRarityWeight);
         
         float cumulativeRarityWeight = 0f;
@@ -395,6 +409,7 @@ public class CaseBattleManager : MonoBehaviour
         
         foreach (var rarity in RarityWeights.WeightList)
         {
+            if (!_rarityGroups.ContainsKey(rarity.Key)) continue;
             cumulativeRarityWeight += rarity.Value;
             if (rarityRandomValue <= cumulativeRarityWeight)
             {
@@ -412,7 +427,7 @@ public class CaseBattleManager : MonoBehaviour
             Debug.LogWarning($"Rarity group '{selectedRarity}' is empty or missing.");
         }
 
-        Debug.LogWarning("No item was selected; returning default item.");
-        return _selectedCaseData.items[0];
+        Debug.LogWarning("No item was selected; returning null.");
+        return null;
     }
 }
