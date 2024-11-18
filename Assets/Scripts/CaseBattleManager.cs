@@ -44,7 +44,8 @@ public class CaseBattleManager : MonoBehaviour
     private List<ItemData> _botItems = new List<ItemData>();
     private float _playerTotalValue;
     private float _botTotalValue;
-    private bool _isGreaterMode; // true if "greater total value wins"
+    private bool _isGreaterMode;
+    private Dictionary<string, List<ItemData>> _rarityGroups;
     
     public UIManager uiManager;
 
@@ -93,9 +94,6 @@ public class CaseBattleManager : MonoBehaviour
     private void SelectCase(CaseData chosenCase)
     {
         _selectedCaseData = chosenCase;
-        
-        Debug.Log($"Selected case: {_selectedCaseData.id}");
-        
 
         if (_selectedCaseData) startBattleButton.interactable = true;
         else startBattleButton.interactable = false;
@@ -171,7 +169,6 @@ public class CaseBattleManager : MonoBehaviour
             return;
         }
         
-        // Clear previous results
         foreach (Transform child in playerResultArea)
         {
             Destroy(child.gameObject);
@@ -260,25 +257,19 @@ public class CaseBattleManager : MonoBehaviour
     {
         for (int i = 0; i < numberOfRounds; i++)
         {
-            Debug.Log($"Starting round {i + 1}/{numberOfRounds}");
-
-            // Randomly select items for player and bot
             int playerOpenedItemIndex = Random.Range(24, numberOfReelItems - 4);
             int botOpenedItemIndex = Random.Range(24, numberOfReelItems - 4);
 
             ItemData playerSelectedItem = GetRandomItemByChance();
             ItemData botSelectedItem = GetRandomItemByChance();
 
-            // Initialize reels
             SetInitialReelPosition(playerReelParent);
             SetInitialReelPosition(botReelParent);
 
-            // Populate reels
             float itemSize = _gridLayout.cellSize.y + _gridLayout.spacing.y;
             PopulateReel(playerReelParent, _playerItems, playerSelectedItem, playerOpenedItemIndex, itemSize);
             PopulateReel(botReelParent, _botItems, botSelectedItem, botOpenedItemIndex, itemSize);
 
-            // Animate reels
             yield return StartCoroutine(AnimateScrollingReel(playerReelParent, _playerReelTransform, playerOpenedItemIndex));
             DisplayPlayerRoundResult(playerSelectedItem);
             
@@ -286,37 +277,26 @@ public class CaseBattleManager : MonoBehaviour
             DisplayBotRoundResult(botSelectedItem);
         }
 
-        // Determine the overall winner
         DetermineWinner();
     }
     
     private void PopulateReel(Transform reelParent, List<ItemData> reelItems, ItemData selectedItem, int openedItemIndex, float itemSize)
     {
-        // Clear previous items
         foreach (Transform child in reelParent)
         {
             Destroy(child.gameObject);
         }
 
-        Debug.Log("Populating reel...");
         for (int i = 0; i < numberOfReelItems; i++)
         {
             GameObject reelItem = Instantiate(reelItemPrefab, reelParent);
             ItemData itemData = (i == openedItemIndex) ? selectedItem : GetRandomItemByChance();
-            SetUpReelItem(reelItem, itemData);
-
-            // Log reel item details
-            Debug.Log($"Reel Item {i}: {itemData.name} (ID: {itemData.id}, Price: {itemData.price}, Rarity: {itemData.rarity})");
+            SetUpReelItem(reelItem, itemData); 
         }
-
-        Debug.Log($"Selected item (OpenedItemIndex {openedItemIndex}): {selectedItem.name} (ID: {selectedItem.id})");
     }
     
     private void DisplayPlayerRoundResult(ItemData playerItem)
     {
-        Debug.Log($"Player Backend-Picked Item: {playerItem.name} (ID: {playerItem.id})");
-
-        // Display Player's Result
         GameObject playerResultItem = Instantiate(resultPrefab, playerResultArea);
         SetUpResultItem(playerResultItem, playerItem);
         _playerTotalValue += playerItem.price;
@@ -325,9 +305,6 @@ public class CaseBattleManager : MonoBehaviour
     
     private void DisplayBotRoundResult(ItemData botItem)
     {
-        Debug.Log($"Bot Backend-Picked Item: {botItem.name} (ID: {botItem.id})");
-
-        // Display Bot's Result
         GameObject botResultItem = Instantiate(resultPrefab, botResultArea);
         SetUpResultItem(botResultItem, botItem);
         _botTotalValue += botItem.price;
@@ -360,9 +337,6 @@ public class CaseBattleManager : MonoBehaviour
     
     private void DetermineWinner()
     {
-        Debug.Log($"Player Total Value: {_playerTotalValue:F2}");
-        Debug.Log($"Bot Total Value: {_botTotalValue:F2}");
-
         if (gameModeDropdown.options[gameModeDropdown.value].text == "Higher Wins")
         {
             string result = _playerTotalValue > _botTotalValue ? "Player Wins!" : "Bot Wins!"; 
@@ -372,7 +346,6 @@ public class CaseBattleManager : MonoBehaviour
             {
                 PlayerManager.Instance.AddCurrency(_playerTotalValue);
             }
-            Debug.Log(result);
         }
         else if (gameModeDropdown.options[gameModeDropdown.value].text == "Lower Wins")
         {
@@ -383,14 +356,12 @@ public class CaseBattleManager : MonoBehaviour
             {
                 PlayerManager.Instance.AddCurrency(_botTotalValue);
             }
-            Debug.Log(result);
         }
         else
         {
             playerWinsText.text = "Tie!";
             botWinsText.text = "Tie!";
             PlayerManager.Instance.AddCurrency(_selectedCaseData.price);
-            Debug.Log("Tie!");
         }
         
         startBattleButton.interactable = true;
@@ -410,42 +381,38 @@ public class CaseBattleManager : MonoBehaviour
             Debug.LogError("No items in the selected case.");
             return null;
         }
-
-        float totalWeight = 0f;
-        Dictionary<ItemData, float> itemWeights = new Dictionary<ItemData, float>();
         
-        foreach (var item in _selectedCaseData.items)
-        {
-            if (!RarityWeights.WeightList.TryGetValue(item.rarity, out float baseWeight))
-            {
-                Debug.LogWarning($"Unknown rarity '{item.rarity}' for item '{item.id}'");
-                continue;
-            }
-            
-            float itemWeight = item.isStatTrak ? baseWeight / 10 : baseWeight;
-            itemWeights[item] = itemWeight;
-            totalWeight += itemWeight;
-        }
+        _rarityGroups = _selectedCaseData.items
+            .Where(item => item != null)
+            .GroupBy(item => item.rarity)
+            .ToDictionary(g => g.Key, g => g.ToList());
 
-        if (totalWeight <= 0)
+        float totalRarityWeight = RarityWeights.WeightList.Values.Sum();
+        float rarityRandomValue = Random.Range(0, totalRarityWeight);
+        
+        float cumulativeRarityWeight = 0f;
+        string selectedRarity = null;
+        
+        foreach (var rarity in RarityWeights.WeightList)
         {
-            Debug.LogError("Total weight is zero or negative. Ensure items have valid rarities and weights.");
-            return null;
+            cumulativeRarityWeight += rarity.Value;
+            if (rarityRandomValue <= cumulativeRarityWeight)
+            {
+                selectedRarity = rarity.Key;
+                break;
+            }
         }
         
-        float randomValue = Random.Range(0f, totalWeight);
-        float cumulativeWeight = 0f;
-
-        foreach (var itemWeightPair in itemWeights)
+        if (selectedRarity != null)
         {
-            cumulativeWeight += itemWeightPair.Value;
-            if (randomValue <= cumulativeWeight)
+            if (_rarityGroups.TryGetValue(selectedRarity, out var itemsInRarity) && itemsInRarity.Count > 0)
             {
-                return itemWeightPair.Key;
+                return itemsInRarity[Random.Range(0, itemsInRarity.Count)];
             }
+            Debug.LogWarning($"Rarity group '{selectedRarity}' is empty or missing.");
         }
 
         Debug.LogWarning("No item was selected; returning default item.");
-        return _selectedCaseData.items.FirstOrDefault();
+        return _selectedCaseData.items[0];
     }
 }
