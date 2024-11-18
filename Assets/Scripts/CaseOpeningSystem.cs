@@ -453,7 +453,7 @@ public class CaseOpening : MonoBehaviour
             
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
-            priceText.text = $"{caseData.price:F2}";
+            priceText.text = $"{caseData.price:F2}€";
 
             Button button = caseButton.GetComponent<Button>();
             button.onClick.AddListener(() => SelectCase(caseData));
