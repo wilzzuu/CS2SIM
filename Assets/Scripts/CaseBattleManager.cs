@@ -178,9 +178,10 @@ public class CaseBattleManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price)
+        float caseBattlePrice = _selectedCaseData.price * 5;
+        if (PlayerManager.Instance.GetPlayerBalance() >= caseBattlePrice)
         {
-            PlayerManager.Instance.DeductCurrency(_selectedCaseData.price);
+            PlayerManager.Instance.DeductCurrency(caseBattlePrice);
         }
         else
         {
