@@ -2,6 +2,12 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+[System.Serializable]
+public class InventoryData
+{
+    public List<SerializableItemData> items;
+}
+
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
@@ -20,7 +26,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private const string SaveFileName = "GameData.save";
+    private const string SaveFileName = "InventoryData.save";
 
     public delegate void InventoryValueChangedHandler();
     public event InventoryValueChangedHandler OnInventoryValueChanged;
@@ -31,9 +37,8 @@ public class InventoryManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
-            List<SerializableItemData> loadedItems = LoadInventory();
-            _inventoryItems = ConvertSerializableItemsToItemData(loadedItems);
+            
+            _inventoryItems = LoadInventory();
         }
         else
         {
@@ -67,15 +72,10 @@ public class InventoryManager : MonoBehaviour
 
     public void RemoveItemFromInventory(ItemData item)
     {
-        if (HasItem(item))
+        if (_inventoryItems.Remove(item))
         {
-            _inventoryItems.Remove(item);
             SaveInventory();
             OnInventoryValueChanged?.Invoke();
-        }
-        else
-        {
-            Debug.LogWarning($"{item.name} not found in inventory.");
         }
     }
 
@@ -116,14 +116,19 @@ public class InventoryManager : MonoBehaviour
 
     private void SaveInventory()
     {
+        InventoryData data = new InventoryData
+        {
+            items = _inventoryItems.ConvertAll(item => new SerializableItemData(item))
+        };
+
         string path = Path.Combine(SaveFilePath, SaveFileName);
-        string jsonData = JsonUtility.ToJson(_inventoryItems);
+        string jsonData = JsonUtility.ToJson(data);
         string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
 
         File.WriteAllText(path, encryptedData);
     }
     
-    private List<SerializableItemData> LoadInventory()
+    private List<ItemData> LoadInventory()
     {
         string path = Path.Combine(SaveFilePath, SaveFileName);
 
@@ -132,9 +137,11 @@ public class InventoryManager : MonoBehaviour
             string encryptedData = File.ReadAllText(path);
             string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
 
-            return JsonUtility.FromJson<List<SerializableItemData>>(jsonData);
+            InventoryData data = JsonUtility.FromJson<InventoryData>(jsonData);
+            return ConvertSerializableItemsToItemData(data.items);
         }
-        return new List<SerializableItemData>(); // Default empty inventory
+
+        return new List<ItemData>(); // Default empty inventory
     }
 
     public List<ItemData> GetInventoryItems()

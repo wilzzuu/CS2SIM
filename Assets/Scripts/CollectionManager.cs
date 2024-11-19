@@ -4,6 +4,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using System.Linq;
 
+[System.Serializable]
+public class CollectionData
+{
+    public List<string> collectedItemIDs;
+}
+
 public class CollectionManager : MonoBehaviour
 {
     public static CollectionManager Instance { get; private set; }
@@ -43,20 +49,24 @@ public class CollectionManager : MonoBehaviour
         UpdateCollectionUI();
     }
 
-    // ReSharper disable Unity.PerformanceAnalysis
     public void AddItemToCollection(ItemData item)
     {
-        if (_collectedItemIDs.Contains(item.id)) return;
-
-        _collectedItemIDs.Add(item.id);
-        SaveCollection();
-        UpdateCollectionUI();
+        if (_collectedItemIDs.Add(item.id))
+        {
+            SaveCollection();
+            UpdateCollectionUI();
+        }
     }
 
     private void SaveCollection()
     {
+        CollectionData data = new CollectionData
+        {
+            collectedItemIDs = new List<string>(_collectedItemIDs)
+        };
+
         string path = Path.Combine(SaveFilePath, SaveFileName);
-        string jsonData = JsonUtility.ToJson(_collectedItemIDs.ToList());
+        string jsonData = JsonUtility.ToJson(data);
         string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
 
         File.WriteAllText(path, encryptedData);
@@ -71,7 +81,8 @@ public class CollectionManager : MonoBehaviour
             string encryptedData = File.ReadAllText(path);
             string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
 
-            _collectedItemIDs = new HashSet<string>(JsonUtility.FromJson<List<string>>(jsonData));
+            CollectionData data = JsonUtility.FromJson<CollectionData>(jsonData);
+            _collectedItemIDs = new HashSet<string>(data.collectedItemIDs);
         }
     }
 
@@ -90,7 +101,7 @@ public class CollectionManager : MonoBehaviour
         {
             File.Delete(path);
         }
-        
+
         SaveCollection();
     }
 
