@@ -236,9 +236,9 @@ public class HighLowManager : MonoBehaviour
     
     private void CashOut()
     {
-        float winnings = _betAmount * _roundNumber;
+        float winnings = _betAmount * _roundNumber * RoundMultiplier;
         PlayerManager.Instance.AddCurrency(winnings);
-        resultText.text = $"You cashed out {winnings:F2}€";
+        resultText.text = $"You cashed out {winnings:F2}€ at {_roundNumber * RoundMultiplier}x";
         GameOver();
     }
 }
