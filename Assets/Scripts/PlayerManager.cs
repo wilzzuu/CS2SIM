@@ -65,8 +65,8 @@ public class PlayerManager : MonoBehaviour
     public void AddCurrency(float amount)
     {
         player.balance += amount;
-        OnBalanceChanged?.Invoke();
         SavePlayerData();
+        OnBalanceChanged?.Invoke();
     }
 
     public void DeductCurrency(float amount)
@@ -74,8 +74,8 @@ public class PlayerManager : MonoBehaviour
         if (player.balance >= amount)
         {
             player.balance -= amount;
-            OnBalanceChanged?.Invoke();
             SavePlayerData();
+            OnBalanceChanged?.Invoke();
         }
     }
 
