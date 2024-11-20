@@ -113,7 +113,7 @@ public class MarketManager : MonoBehaviour
 
     void LoadLastUpdateTimestamp()
     {
-        string lastUpdateString = PlayerPrefs.GetString(LastUpdateKey, DateTime.UtcNow.ToString(CultureInfo.CurrentCulture));
+        string lastUpdateString = PlayerPrefs.GetString(LastUpdateKey, DateTime.UtcNow.ToString());
         _lastUpdateTimestamp = DateTime.Parse(lastUpdateString);
     }
 
@@ -137,7 +137,7 @@ public class MarketManager : MonoBehaviour
             }
 
             _lastUpdateTimestamp = currentTime;
-            PlayerPrefs.SetString(LastUpdateKey, _lastUpdateTimestamp.ToString(CultureInfo.CurrentCulture));
+            PlayerPrefs.SetString(LastUpdateKey, _lastUpdateTimestamp.ToString());
             PlayerPrefs.Save();
         }
     }
