@@ -119,8 +119,16 @@ public class HighLowManager : MonoBehaviour
     
     private ItemData GetRandomItem()
     {
+        var filteredItems = _allItems.Where(item => !Mathf.Approximately(item.price, _previousItem?.price ?? -1f)).ToList();
+
+        if (filteredItems.Count == 0)
+        {
+            Debug.LogWarning("No items available with a different price than the previous item.");
+            return _allItems[Random.Range(0, _allItems.Count)];
+        }
+        
         int randomIndex = Random.Range(0, _allItems.Count);
-        return _allItems[randomIndex];
+        return filteredItems[randomIndex];
     }
 
     private void StartRound()
