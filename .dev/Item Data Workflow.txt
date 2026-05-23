@@ -1,0 +1,31 @@
+stash.clash.gg
+
+- valitse case
+- filtteröi rarity alhaalta ylöspäin
+- ota nimet, kunnot, hinnat, stattrakit, rarityt -> laita tiedostoon
+- lataa kuva jokaiselle kunnolle skinsearch.com -> nimeä kuva ID.png
+    (joissain itemeissä ei oo esim factory new kuvaa ni voi ottaa minimal wear kuvan sen tilalle,
+    tai kuvan mikä näyttää siltä että se on lähimpänä sitä kuntoa)
+
+FORMAT: 
+    "ID": "[CASEN NUMERO]_[ITEMIN NUMERO CASEN SISÄLLÄ][LYHENNETTY CONDITION][ST LOPPUUN JOS ON STATTRAK]"      esim: 1_1FN || 37_7FNST
+    "GUN": "AUG"
+    "NAME": "Wings"
+    "PRICE": x.xx
+    "CONDITION": "Factory New"
+    "ST": "" || "StatTrak"
+    "TYPE": "[ASEEN TYYPPI]"    esim: Rifle || Knife
+    "RARITY": "MIL_SPEC"
+    "WEIGHT: 0.xxxxx
+
+Weight list:
+    MIL_SPEC -> 0.7992
+    MIL_SPEC StatTrak -> 0.07992
+    RESTRICTED -> 0.1598
+    RESTRICTED StatTrak -> 0.01598
+    CLASSIFIED -> 0.032
+    CLASSIFIED StatTrak-> 0.0032
+    COVERT -> 0.0064
+    COVERT StatTrak -> 0.00064
+    SPECIAL -> 0.0026
+    SPECIAL StatTrak -> 0.00026

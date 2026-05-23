@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /setcurrency/*
+Disallow: /search-pattern/*
+Disallow: /marketplace/trade?*market_hash_name=*
+Disallow: /marketplace/trade?*search=*
+
+Sitemap: https://stash.clash.gg/sitemap.xml

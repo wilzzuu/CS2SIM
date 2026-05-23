@@ -1,0 +1,15 @@
+- Add levels
+- Add reward system for level ups
+- Add notification screen with alert system, placed in UI bar
+- Dev console
+- Inventory page button image remake
+- Limited item loading in all item catalogs
+- Add investing game
+- Inventory items appear after selling when idling for some time on inventory scene
+- Float System, float min and max value divided in half is the middle ground for a default price, closer to min value price increases and the other way around
+- Fix item image matching with item ID
+
+- Slot machine
+- pick-a-case
+- auction?
+- scratch cards

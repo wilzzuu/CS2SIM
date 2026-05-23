@@ -1,0 +1,88 @@
+parent : https://stash.clash.gg/containers/skin-cases
+<div class="container main-content">
+  <div class="row"> (third)
+    <div class="col-lg-4 col-md-6 col-widen text-center"> (get all of these within "row")
+      <div class="well result-box nomargin">
+        <a href=[track this]> (child URL)
+	  <h4>[track this]</h4> (string : Case Name)
+	  <img> (get this image)
+	  <div class="price margin-top-sm">
+	    <p class="nomargin">[track this]</p> (string : Case Price)
+
+
+child : (child URL)
+<div class="container main-content">
+  <div class="case-page-main-row row">
+    <div class="col-lg-12 col-widen">
+      <div class="row"> (first)
+        <div class="col-lg-4 col-md-6 col-widen text-center"> (get all of these within row, special instructions **) 
+	  <div class="well result-box nomargin">
+            <h2>
+	      <a>[track this]</a> (string : Weapon Name)
+	      <a>[track this]</a> (string : Skin Name)
+	    <a class="nounderline">
+	      <div>
+		<p>[track this]</p> (string : get only text from element, this will become Quality | Type by splitting string from first " ")
+	    <div>
+	    <a href=[track this]> (grandchild URL)
+	      <img> (get this image)
+
+
+**
+First element needs the following unique structure because it has more children:
+<div class="container main-content">
+  <div class="case-page-main-row row">
+    <div class="col-lg-12 col-widen">
+      <div class="row"> (first)
+        <div class="col-lg-4 col-md-6 col-widen text-center"> (special instruction, only get the first element within row)
+	  <div class="well result-box nomargin">
+	    <h3>
+	      <a href=[track this]>[track this]</a> (special child URL) | (string : Special Type, from splitting the last word in string)
+
+
+grandchild : (grandchild URL)
+<div class="container main-content">
+  <div class="row text-center">
+    <div class="col-md-12 col-widen margin-bot-med">
+      <div class="price-details-table-wrapper">
+	<div class="table-responsive">
+	  <div>
+	    <table>
+	      <tbody> (get all possible tr elements within)
+		<tr>
+		  <td>[track this]</td> (string : Condition)
+		  <td>
+		    <a>[track this]</a> (string : Price)
+		</tr>
+
+
+special child : (special child URL)
+<div class="container main-content">
+  <div class="case-page-main-row row">
+    <div class="col-lg-12 col-widen">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-widen text-center"> (skip the first element, get all others)
+          <div class="well result-box nomargin">
+	    <h3>
+	      <a>[track this]</a> (string : Weapon Name)
+	      <a>[track this]</a> (string : Skin Name)
+	    <div>
+	      <p>[track this]</p> (string : Type)
+	    <a href[track this]> (special grandchild URL)
+	      <img> (get this image)
+
+
+special grandchild : (special grandchild URL)
+<div class="container main-content">
+  <div class="row text-center">
+    <div class="col-md-12 col-widen">
+      <div class="price-details-table-wrapper">
+	<div class="table-responsive">
+	  <div>
+	    <table>
+	      <tbody> (get all possible tr elements within)
+		<tr>
+		  <td>[track this]</td> (string : Condition)
+		  <td>
+		    <a>[track this]</a> (string : Price)
+		</tr>

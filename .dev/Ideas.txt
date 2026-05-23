@@ -1,0 +1,133 @@
+Feature: Marketplace
+- Catalog of all items
+- Sorting options based on Rarity, Color, Style, Item, Price, Crate
+- Searching options based on Item Name, Item Id, Crate Id, Crate Name (crate searching shows only the items in the searched crate)
+- Buying and Selling options for each item, buying price increased by 15% of the item price, selling price decreased by 15% of the item price
+- If not too difficult to setup, I would like to have some randomized price fluctuation (per-item?), that is based around the item base price. Fluctuation would be affected by the amount of certain items bought or sold, or random events like price dropping or price increase.
+
+Considerations:
+- Prefab for a marketplaceItem
+- Selling removes from Inventory
+- Buying adds to Inventory
+- Sorting in descending or ascending order
+- Searching could search from all of the options simultaneously, with the term determining which items actually show up
+
+
+Feature: Item Upgrader Minigame
+- Scroll View of inventory items with buttons to choose the item for the Minigame
+- Spot to display chosen inventory item
+- Scroll View of all the items with buttons to choose the item for the Minigame
+- Spot to display chosen upgrade item
+- Tabs to select inventory or upgrade item views
+- Text to display the possibility of the upgrading
+- Possibility of successful upgrading calculated based on the inventory item price, and upgrade item price
+- In case of upgrading not being successful, the player loses the item they are trying to upgrade
+- In case of upgrading being successful, the player's item is deleted from inventory, and the upgrade item is placed in the inventory
+
+
+Considerations:
+- Scroll View functionality could be copied from Market scene, since there could be searching and sorting options for better selecting experience
+
+Feature: Trading
+- Player chooses if they want to trade for one more expensive item, or a few less expensive items
+- In case of the player trading for one more expensive item, the player can choose 1-5 items, the expensive item is picked based on the total of player's items, with a reasonable offset
+- In case of the player trading for a few less expensive items, the player can choose 1 expensive item from inventory, and 2-5 items are picked randomly based on the value divided evenly for the random items, with a reasonable offset
+- Trade accept button
+- Delete items from inventory, and add traded items to inventory
+
+
+Feature: Contracts
+- Get 1-10 random items
+- Player needs to get those items from either buying them by any means they deem fit
+- Player gives the items to fill the contract, and gets rewarded by money with a precentage bonus based on the value of the contract items
+
+Considerations:
+- Bonus needs to be balanced so that any of the game mechanics are viable but not overpowered for contract filling
+
+
+Feature: Collection
+- Add every item the player has received in their inventory from minigames that give out items, save to a file that is saved in binary
+- Show uncollected items in black-and-white
+- Show collected items in full color
+- Show names for items
+
+
+Feature: Roulette
+- Player can choose 1-10 items from their inventory, get total value
+- Generate "bots" that have 1-10 artificial items picked randomly with a reasonable value offset based on total player items' value
+- Create a reel of all of the items that the bots and player has in a randomized order, keep track of who the item's belong by indexing the reel
+- Animate the reel the same way as crate opening animation, this will decide who will win the roulette
+- Chance of winning is calculated by the total value of every item in the current game divided by the total value of every player item in the current game
+- If the animation lands on an item that is indexed for the player, the player wins the total value of every item in the current game
+- If the animation lands on an item that is not indexed for the player, the player loses the items they chosen
+- Button for starting the game
+
+Considerations:
+- Scroll view for viewing items in the current game
+- The reel size should be 60, so the player item amount gets subtracted, and the remainder spread across randomly to as many bots as it takes to fill the 60 items cap, better if the remainder is not divided evenly
+- Text indicator for chance of winning
+- Text indicator of total value of game items
+- Text indicator wether player wins or loses
+- Player should be able to change selected items before starting the game
+- Maybe have an item selector as the first thing that is displayed, then after player confirms the selected items with a button, generate bots and display the game view, where the player can see the game elements, like items that are in the current game.
+- Player can go back to item selector with a button
+- After the game ends, the end state is displayed, and the player can press a button to start a new game
+
+Feature: Plinko
+- Input field for bet
+- Player can press play
+- Unity gravity physics will take control of where the 2D ball will go in the 2D Plinko
+- Hitboxes for the ball decides what the bet is multiplied
+- The order of the multipliers could look like this  | 50x | 20x | 5x | 2x | 1.25x | 1.25x |1x | 0x | 1x | 1.25x | 1.25x | 2x | 5x | 20x | 50x |
+
+
+Feature: Coinflip
+- Input field for bet
+- Player can choose to play best of 1-3
+- Player chooses the side every flip
+- If the player guesses the flip in best of 1 OR both flips in best of 2 OR 2/3 flips in best of 3, pay 2x bet
+- If the player doesn't guess the flips accordingly, reset game state
+
+
+Feature: Tower Climb
+- Never ending tower with higher rewards by setup
+- Higher change of falling by step
+- Falling resets rewards
+- Player can cash out any time
+
+Considerations:
+- Limit generated next steps to 5 for optimizing
+
+
+Feature: High-Low
+- Select a random item
+- Player sets a bet
+- Player presses a button to reveal item
+- Player guesses if the price of the item is higher or lower in value
+- If they guess right, pay the player
+- Player can move on or press the reveal button again to continue
+
+
+Feature: Achievements
+- Create achievements that are unlocked by playing (examples: open 10 crates, spend 10000 currency, gain 10000 currency)
+- Reward player with currency or items based on the difficulty of the achievement
+
+
+Feature: Level Up Rewards
+- Create rewards in increments of 5 levels
+- Rewards could be currency or items in increasing value
+
+
+All features:
+- Inventory
+- Collection
+- Market
+- Trading
+- Crate opening
+- Contracts
+- Coinflip
+- Roulette
+- Upgrader
+- Crash
+- Plinko
+- Clicker
