@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_2MWST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_2MWST
-  gun: SG 553
-  name: Ultraviolet
-  basePrice: 31.5
-  price: 31.5
+  gun: AUG
+  name: Fleet Flock
+  basePrice: 14.65
+  price: 14.65
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
-  rarity: MIL_SPEC
-  weight: 0
+  rarity: Classified
+  weight: 0.032
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 204.89162

@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_1FN
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_1FN
-  gun: SCAR-20
-  name: Crimson Web
-  basePrice: 16.54
-  price: 16.54
+  gun: AK-47
+  name: Cartel
+  basePrice: 105.23
+  price: 105.23
   condition: Factory New
   isStatTrak: 0
-  type: Sniper Rifle
-  rarity: MIL_SPEC
-  weight: 0
+  type: Rifle
+  rarity: Classified
+  weight: 0.032
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

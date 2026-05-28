@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_14MW
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_14MW
-  gun: Bayonet
-  name: Stained
-  basePrice: 384.49
-  price: 384.49
+  gun: Dual Berettas
+  name: Ventilators
+  basePrice: 0.52
+  price: 0.52
   condition: Minimal Wear
   isStatTrak: 0
-  type: Knife
-  rarity: SPECIAL
-  weight: 0
+  type: Pistol
+  rarity: Mil-Spec
+  weight: 0.7992
   demandScore: 0
-  lastActivityTime: 10.356655
+  lastActivityTime: 204.89162

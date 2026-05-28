@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_7FT
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_7FT
-  gun: AK-47
-  name: Case Hardened
-  basePrice: 288.58
-  price: 288.58
+  gun: XM1014
+  name: Black Tie
+  basePrice: 1.24
+  price: 1.24
   condition: Field-Tested
   isStatTrak: 0
-  type: Rifle
-  rarity: CLASSIFIED
-  weight: 0
+  type: Shotgun
+  rarity: Restricted
+  weight: 0.1598
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 204.89162

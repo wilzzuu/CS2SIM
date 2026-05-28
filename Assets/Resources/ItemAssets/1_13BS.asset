@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_13BS
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_13BS
-  gun: Bayonet
-  name: Case Hardened
-  basePrice: 401.4
-  price: 401.4
+  gun: M249
+  name: Spectre
+  basePrice: 0.51
+  price: 0.51
   condition: Battle-Scarred
   isStatTrak: 0
-  type: Knife
-  rarity: SPECIAL
-  weight: 0
+  type: Machinegun
+  rarity: Mil-Spec
+  weight: 0.7992
   demandScore: 0
-  lastActivityTime: 10.356655
+  lastActivityTime: 204.89162

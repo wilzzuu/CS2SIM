@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_14FNST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_14FNST
-  gun: Bayonet
-  name: Slaughter
-  basePrice: 1099.8
-  price: 1099.8
+  gun: Karambit
+  name: Marble Fade
+  basePrice: 1195.27
+  price: 1195.27
   condition: Factory New
   isStatTrak: 1
   type: Knife
-  rarity: SPECIAL
-  weight: 0
+  rarity: Covert
+  weight: 0.0064
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 204.89162

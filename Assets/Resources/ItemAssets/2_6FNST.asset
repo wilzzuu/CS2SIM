@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_6FNST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_6FNST
-  gun: MP9
-  name: Hypnotic
-  basePrice: 51.4
-  price: 51.4
+  gun: Sawed-Off
+  name: Serenity
+  basePrice: 8.96
+  price: 8.96
   condition: Factory New
   isStatTrak: 1
-  type: SMG
-  rarity: RESTRICTED
-  weight: 0
+  type: Shotgun
+  rarity: Restricted
+  weight: 0.1598
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

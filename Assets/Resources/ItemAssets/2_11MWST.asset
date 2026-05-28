@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_11MWST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_11MWST
-  gun: UPS-S
-  name: Serum
-  basePrice: 51.85
-  price: 51.85
+  gun: XM1014
+  name: Quicksilver
+  basePrice: 0.7
+  price: 0.7
   condition: Minimal Wear
   isStatTrak: 1
-  type: Pistol
-  rarity: CLASSIFIED
-  weight: 0
+  type: Shotgun
+  rarity: Mil-Spec
+  weight: 0.7992
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

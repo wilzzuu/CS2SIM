@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_12FTST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_12FTST
-  gun: SSG 08
-  name: Blood in the Water
-  basePrice: 142.77
-  price: 142.77
+  gun: Karambit
+  name: Ultraviolet
+  basePrice: 559.97
+  price: 559.97
   condition: Field-Tested
   isStatTrak: 1
-  type: Sniper Rifle
-  rarity: COVERT
-  weight: 0
+  type: Knife
+  rarity: Covert
+  weight: 0.0064
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

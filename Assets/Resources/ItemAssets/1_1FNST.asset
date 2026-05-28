@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_1FNST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_1FNST
-  gun: AUG
-  name: Wings
-  basePrice: 32.33
-  price: 32.33
+  gun: PP-Bizon
+  name: Judgement of Anubis
+  basePrice: 121.96
+  price: 121.96
   condition: Factory New
   isStatTrak: 1
-  type: Rifle
-  rarity: MIL_SPEC
-  weight: 0
+  type: SMG
+  rarity: Covert
+  weight: 0.0064
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 204.89162

@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_19WWST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_19WWST
-  gun: Bayonet
-  name: Blue Steel
-  basePrice: 577.38
-  price: 577.38
+  gun: M9 Bayonet
+  name: Damascus Steel
+  basePrice: 508.78
+  price: 508.78
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
-  rarity: SPECIAL
-  weight: 0
+  rarity: Covert
+  weight: 0.0064
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

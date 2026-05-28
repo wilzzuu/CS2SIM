@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_3MWST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_3MWST
-  gun: MP7
-  name: Skulls
-  basePrice: 30.1
-  price: 30.1
+  gun: UMP-45
+  name: Primal Saber
+  basePrice: 13.49
+  price: 13.49
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
-  rarity: MIL_SPEC
-  weight: 0
+  rarity: Classified
+  weight: 0.032
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 204.89162

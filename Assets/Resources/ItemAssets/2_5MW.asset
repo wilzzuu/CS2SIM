@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_5MW
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_5MW
-  gun: FAMAS
-  name: Hexane
-  basePrice: 5.05
-  price: 5.05
+  gun: Dual Berettas
+  name: Urban Shock
+  basePrice: 2.84
+  price: 2.84
   condition: Minimal Wear
   isStatTrak: 0
-  type: Rifle
-  rarity: MIL_SPEC
-  weight: 0
+  type: Pistol
+  rarity: Restricted
+  weight: 0.1598
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_4FTST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_4FTST
-  gun: P250
-  name: Hive
-  basePrice: 7.14
-  price: 7.14
+  gun: MAC-10
+  name: Malachite
+  basePrice: 4.16
+  price: 4.16
   condition: Field-Tested
   isStatTrak: 1
-  type: Pistol
-  rarity: MIL_SPEC
-  weight: 0
+  type: SMG
+  rarity: Restricted
+  weight: 0.1598
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

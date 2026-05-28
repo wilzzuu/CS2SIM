@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_2MW
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_2MW
-  gun: M4A1-S
-  name: Blood Tiger
-  basePrice: 6.03
-  price: 6.03
+  gun: P250
+  name: Muertos
+  basePrice: 13.56
+  price: 13.56
   condition: Minimal Wear
   isStatTrak: 0
-  type: Rifle
-  rarity: MIL_SPEC
-  weight: 0
+  type: Pistol
+  rarity: Classified
+  weight: 0.032
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

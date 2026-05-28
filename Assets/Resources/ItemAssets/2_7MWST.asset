@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_7MWST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_7MWST
-  gun: Five-SeveN
-  name: Case Hardened
-  basePrice: 49.15
-  price: 49.15
+  gun: MP9
+  name: Deadly Poison
+  basePrice: 1.54
+  price: 1.54
   condition: Minimal Wear
   isStatTrak: 1
-  type: Pistol
-  rarity: RESTRICTED
-  weight: 0
+  type: SMG
+  rarity: Mil-Spec
+  weight: 0.7992
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

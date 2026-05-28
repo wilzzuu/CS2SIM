@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_20FT
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_20FT
   gun: Bayonet
-  name: Boreal Forest
-  basePrice: 167.72
-  price: 167.72
+  name: Ultraviolet
+  basePrice: 144.01
+  price: 144.01
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
-  rarity: SPECIAL
-  weight: 0
+  rarity: Covert
+  weight: 0.0064
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

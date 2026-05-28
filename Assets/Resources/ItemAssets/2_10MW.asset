@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 2_10MW
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2_10MW
-  gun: P90
-  name: Cold Blooded
-  basePrice: 51.08
-  price: 51.08
+  gun: SCAR-20
+  name: Grotto
+  basePrice: 0.78
+  price: 0.78
   condition: Minimal Wear
   isStatTrak: 0
-  type: SMG
-  rarity: CLASSIFIED
-  weight: 0
+  type: Sniper Rifle
+  rarity: Mil-Spec
+  weight: 0.7992
   demandScore: 0
-  lastActivityTime: 12.897432
+  lastActivityTime: 204.89162

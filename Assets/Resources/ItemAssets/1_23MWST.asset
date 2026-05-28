@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_23MWST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_23MWST
-  gun: Flip Knife
-  name: Fade
-  basePrice: 989.03
-  price: 989.03
+  gun: Bayonet
+  name: Ultraviolet
+  basePrice: 281.46
+  price: 281.46
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
-  rarity: SPECIAL
-  weight: 0
+  rarity: Covert
+  weight: 0.0064
   demandScore: 0
-  lastActivityTime: 10.356655
+  lastActivityTime: 204.89162

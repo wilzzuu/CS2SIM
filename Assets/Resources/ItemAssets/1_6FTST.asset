@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_6FTST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_6FTST
-  gun: M4A1-S
-  name: Dark Water
-  basePrice: 151.38
-  price: 151.38
+  gun: CZ75-Auto
+  name: Red Astor
+  basePrice: 1.43
+  price: 1.43
   condition: Field-Tested
   isStatTrak: 1
-  type: Rifle
-  rarity: RESTRICTED
-  weight: 0
+  type: Pistol
+  rarity: Restricted
+  weight: 0.1598
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 204.89162

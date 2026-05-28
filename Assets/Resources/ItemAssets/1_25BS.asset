@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_25BS
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_25BS
   gun: Flip Knife
-  name: Case Hardened
-  basePrice: 208.12
-  price: 208.12
+  name: Ultraviolet
+  basePrice: 119.36
+  price: 119.36
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
-  rarity: SPECIAL
-  weight: 0
+  rarity: Covert
+  weight: 0.0064
   demandScore: 0
-  lastActivityTime: 10.356655
+  lastActivityTime: 204.89162

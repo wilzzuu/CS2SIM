@@ -11,16 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
   m_Name: 1_5MWST
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 1_5MWST
-  gun: USP-S
-  name: Dark Water
-  basePrice: 167.25
-  price: 167.25
+  gun: Galil AR
+  name: Firefight
+  basePrice: 4.65
+  price: 4.65
   condition: Minimal Wear
   isStatTrak: 1
-  type: Pistol
-  rarity: RESTRICTED
-  weight: 0
+  type: Rifle
+  rarity: Restricted
+  weight: 0.1598
   demandScore: 0
-  lastActivityTime: 0.3563697
+  lastActivityTime: 204.89162
