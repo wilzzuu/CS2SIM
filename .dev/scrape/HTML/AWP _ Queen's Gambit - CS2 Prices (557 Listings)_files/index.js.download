@@ -1,0 +1,1477 @@
+import{f as e,u as a,i as t,a as i}from"./lit-element-NLguG_JY.js";import{x as n,T as s,E as o}from"./lit-html-6ue7hGu7.js";import{getAssetPath as r}from"./utils.js";import{a as l,b as c,t as m,p,v as g,r as d,M as u,m as h}from"./directive-helpers-DKicBfT6.js";import{m as b,g as f,s as w}from"./runtime-wSN5xYPx.js";import{l as x}from"./localized-decorator-Cwo16BAV.js";
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */const v=e=>(a,t)=>{void 0!==t?t.addInitializer((()=>{customElements.define(e,a)})):customElements.define(e,a)},k={attribute:!0,type:String,converter:a,reflect:!1,hasChanged:e},C=(e=k,a,t)=>{const{kind:i,metadata:n}=t;let s=globalThis.litPropertyMetadata.get(n);if(void 0===s&&globalThis.litPropertyMetadata.set(n,s=new Map),"setter"===i&&((e=Object.create(e)).wrapped=!0),s.set(t.name,e),"accessor"===i){const{name:i}=t;return{set(t){const n=a.get.call(this);a.set.call(this,t),this.requestUpdate(i,n,e)},init(a){return void 0!==a&&this.C(i,void 0,e,a),a}}}if("setter"===i){const{name:i}=t;return function(t){const n=this[i];a.call(this,t),this.requestUpdate(i,n,e)}}throw Error("Unsupported decorator location: "+i)};
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */function y(e){return(a,t)=>"object"==typeof t?C(e,a,t):((e,a,t)=>{const i=a.hasOwnProperty(t);return a.constructor.createProperty(t,e),i?Object.getOwnPropertyDescriptor(a,t):void 0})(e,a,t)}
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */function S(e){return y({...e,state:!0,attribute:!1})}var $=function(e,a,t,i){for(var n,s=arguments.length,o=s<3?a:null===i?i=Object.getOwnPropertyDescriptor(a,t):i,r=e.length-1;r>=0;r--)(n=e[r])&&(o=(s<3?n(o):s>3?n(a,t,o):n(a,t))||o);return s>3&&o&&Object.defineProperty(a,t,o),o};let U=class extends i{render(){const e=r("brand/csgo/gem-animated.webm"),a=r("brand/csgo/gem-animated.mov");return n`
+      <video autoplay muted loop playsinline>
+        <source src=${a} type="video/mp4; codecs='hvc1'" />
+        <source src=${e} type="video/webm" />
+      </video>
+    `}};U.styles=t`
+    :host {
+      display: inline-block;
+      width: var(--clash-gem-width, 68px);
+      height: var(--clash-gem-height, 68px);
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      object-fit: contain;
+    }
+  `,U=$([v("clash-gem")],U);var G=function(e,a,t,i){for(var n,s=arguments.length,o=s<3?a:null===i?i=Object.getOwnPropertyDescriptor(a,t):i,r=e.length-1;r>=0;r--)(n=e[r])&&(o=(s<3?n(o):s>3?n(a,t,o):n(a,t))||o);return s>3&&o&&Object.defineProperty(a,t,o),o};let P=class extends i{constructor(){super(...arguments),this.homeUrl="/"}render(){return n`
+      <a href=${this.homeUrl}>
+        <clash-gem class="clash-gem"></clash-gem>
+        <img
+          src=${r("brand/csgo/logo-text.svg")}
+          alt="Clash"
+          class="logo-text"
+        />
+      </a>
+    `}};P.styles=t`
+    :host {
+      display: inline-block;
+      --clash-logo-height: 95px;
+      --clash-logo-gap: 22px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: var(--clash-logo-gap);
+      height: var(--clash-logo-height);
+      text-decoration: none;
+    }
+
+    .clash-gem {
+      height: calc(var(--clash-logo-height) * 0.72);
+      width: calc(var(--clash-logo-height) * 0.72);
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      height: calc(var(--clash-logo-height) * 0.42);
+      width: auto;
+    }
+  `,G([y({attribute:"home-url"})],P.prototype,"homeUrl",void 0),P=G([v("clash-logo")],P);
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+const O=(e,a,t)=>{const i=new Map;for(let n=a;n<=t;n++)i.set(e[n],n);return i},R=l(class extends c{constructor(e){if(super(e),e.type!==m.CHILD)throw Error("repeat() can only be used in text expressions")}dt(e,a,t){let i;void 0===t?t=a:void 0!==a&&(i=a);const n=[],s=[];let o=0;for(const a of e)n[o]=i?i(a,o):o,s[o]=t(a,o),o++;return{values:s,keys:n}}render(e,a,t){return this.dt(e,a,t).values}update(e,[a,t,i]){const n=p(e),{values:o,keys:r}=this.dt(a,t,i);if(!Array.isArray(n))return this.ut=r,o;const l=this.ut??=[],c=[];let m,b,f=0,w=n.length-1,x=0,v=o.length-1;for(;f<=w&&x<=v;)if(null===n[f])f++;else if(null===n[w])w--;else if(l[f]===r[x])c[x]=g(n[f],o[x]),f++,x++;else if(l[w]===r[v])c[v]=g(n[w],o[v]),w--,v--;else if(l[f]===r[v])c[v]=g(n[f],o[v]),d(e,c[v+1],n[f]),f++,v--;else if(l[w]===r[x])c[x]=g(n[w],o[x]),d(e,n[f],n[w]),w--,x++;else if(void 0===m&&(m=O(r,x,v),b=O(l,f,w)),m.has(l[f]))if(m.has(l[w])){const a=b.get(r[x]),t=void 0!==a?n[a]:null;if(null===t){const a=d(e,n[f]);g(a,o[x]),c[x]=a}else c[x]=g(t,o[x]),d(e,n[f],t),n[a]=null;x++}else u(n[w]),w--;else u(n[f]),f++;for(;x<=v;){const a=d(e,c[v+1]);g(a,o[x]),c[x++]=a}for(;f<=w;){const e=n[f++];null!==e&&u(e)}return this.ut=r,h(e,c),s}}),_=l(class extends c{constructor(e){if(super(e),e.type!==m.ATTRIBUTE||"class"!==e.name||e.strings?.length>2)throw Error("`classMap()` can only be used in the `class` attribute and must be the only part in the attribute.")}render(e){return" "+Object.keys(e).filter((a=>e[a])).join(" ")+" "}update(e,[a]){if(void 0===this.st){this.st=new Set,void 0!==e.strings&&(this.nt=new Set(e.strings.join(" ").split(/\s/).filter((e=>""!==e))));for(const e in a)a[e]&&!this.nt?.has(e)&&this.st.add(e);return this.render(a)}const t=e.element.classList;for(const e of this.st)e in a||(t.remove(e),this.st.delete(e));for(const e in a){const i=!!a[e];i===this.st.has(e)||this.nt?.has(e)||(i?(t.add(e),this.st.add(e)):(t.remove(e),this.st.delete(e)))}return s}}),T=t`
+  :host {
+    --gray-900: #151719;
+    --gray-900-rgb: 21, 23, 25;
+    --gray-700: #1a1d20;
+    --gray-700-rgb: 26, 29, 32;
+    --gray-500: #1f2225;
+    --gray-500-rgb: 31, 34, 37;
+    --gray-300: #2c3034;
+    --gray-300-rgb: 44, 48, 52;
+    --gray-250: #5b5c5e;
+    --gray-250-rgb: 91, 92, 94;
+    --gray-200: #8f9092;
+    --gray-200-rgb: 143, 144, 146;
+    --gray-100: #c7c8c8;
+    --gray-100-rgb: 199, 200, 200;
+
+    --primary-gradient-dark: #ff8d24;
+    --primary-gradient-dark-rgb: 255, 141, 36;
+    --primary-gradient-light: #ffc700;
+    --primary-gradient-light-rgb: 255, 199, 0;
+    --primary-900: #eb9a15;
+    --primary-900-rgb: 235, 154, 21;
+    --primary-700: #ffa510;
+    --primary-700-rgb: 255, 165, 16;
+    --primary-500: #ffc701;
+    --primary-500-rgb: 255, 199, 1;
+    --primary-300: #ffd819;
+    --primary-300-rgb: 255, 216, 25;
+    --primary-100: #ffe45e;
+    --primary-100-rgb: 255, 228, 94;
+  }
+`;
+/**
+ * @license
+ * Copyright 2018 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */var M;!function(e){e.CSGO="csgo",e.RUST="rust"}(M||(M={}));const B={[M.CSGO]:{brand:M.CSGO,name:"Clash",mainDomain:"https://clash.gg",blogDomain:"https://blog.clash.gg",inventoryDomain:"https://inventory.clash.gg",esportsDomain:"https://esports.clash.gg",domainHuman:"Clash.gg",domainImg:"https://img.clash.gg",contactEmail:"support@clash.gg"},[M.RUST]:{brand:M.RUST,name:"RustClash",mainDomain:"https://rustclash.com",blogDomain:"https://blog.rustclash.com",inventoryDomain:"https://inventory.rustclash.com",esportsDomain:"https://esports.rustclash.com",domainHuman:"RustClash.com",domainImg:"https://img.rustclash.com",contactEmail:"admin@rustclash.com"}},A=B[M.CSGO];var E,K,I;M.RUST,function(e){e.AUTHENTICATION="authentication",e.CONFIRMATION="confirmation",e.VAULT="vault",e.AFFILIATE="affiliate",e.STEAM_TRADE_OFFER="steam-trade-offer",e.ENROLL_TRADER="enroll-trader",e.ACCEPT_REFERRER_CHANGE="accept-referrer-change",e.BATTLE_CONFIRMATION="battle-confirmation",e.TWO_FACTOR_VERIFICATION="two-factor-verification",e.SKIP_MISSION="skip-mission",e.CREATOR="creator",e.PASS="pass",e.GAME_HISTORY="game_history",e.TRANSACTION_HISTORY="transaction_history",e.RAIN="rain",e.PROFILE_POPUP="profile-popup",e.LEVEL_LOAN="level-loan",e.PREDICTIONS_CONFIRMATION="predictions-confirmation",e.CASE_PREVIEW="case-preview",e.BATTLE_CREATOR_CARDS="battle-creator-cards"}(E||(E={})),function(e){e.INFO="information",e.GAME="games",e.HIDDEN_GAME="hidden_games",e.ADDITIONAL="additional",e.SOCIAL="social",e.NAVBAR="navbar",e.LOGIN_ONLY="login_only",e.CHAT_SOCIALS="chat_socials",e.SUBDOMAIN="subdomain"}(K||(K={})),function(e){e.CASE="case",e.BATTLE="battle",e.UPGRADER="upgrade",e.PLINKO="plinko",e.MINES="mines",e.ROULETTE="roulette",e.JACKPOT="jackpot",e.CRASH="crash",e.BOMB_RUSH="bomb-rush",e.PREDICTIONS="predictions",e.TILES="tiles"}(I||(I={}));const D=e=>({[K.INFO]:b("Information"),[K.GAME]:b("CS2 Casino"),[K.HIDDEN_GAME]:b("Hidden Games"),[K.ADDITIONAL]:b("Additional"),[K.SOCIAL]:b("Social"),[K.NAVBAR]:b("Navbar"),[K.LOGIN_ONLY]:b("Login Only"),[K.CHAT_SOCIALS]:b("Chat Socials"),[K.SUBDOMAIN]:b("Subdomain")}[e]);var j;!function(e){e[e.BLOG=0]="BLOG",e[e.PLINKO=1]="PLINKO",e[e.CRASH=2]="CRASH",e[e.MINES=3]="MINES",e[e.JACKPOT=4]="JACKPOT",e[e.BOMB_RUSH=5]="BOMB_RUSH",e[e.CASHIER_P2P=6]="CASHIER_P2P",e[e.REWARDS_FAUCET=7]="REWARDS_FAUCET",e[e.MISSIONS=8]="MISSIONS",e[e.PASS=9]="PASS",e[e.RACE=10]="RACE",e[e.RAFFLE=11]="RAFFLE",e[e.WIKI=12]="WIKI",e[e.SUMMER_EVENT=13]="SUMMER_EVENT",e[e.LIVEDROPS=14]="LIVEDROPS",e[e.BACKPACK=15]="BACKPACK",e[e.PREDICTIONS=16]="PREDICTIONS",e[e.ESPORTS=17]="ESPORTS",e[e.LEVEL_LOANS=18]="LEVEL_LOANS",e[e.CASHIER_FAKE_P2P=19]="CASHIER_FAKE_P2P",e[e.SERVER_BROWSER=20]="SERVER_BROWSER",e[e.TILES=21]="TILES"}(j||(j={}));const N={[j.BLOG]:{[M.CSGO]:!0,[M.RUST]:!0},[j.PLINKO]:{[M.CSGO]:!0,[M.RUST]:!0},[j.CRASH]:{[M.CSGO]:!0,[M.RUST]:!0},[j.TILES]:{[M.CSGO]:!0,[M.RUST]:!0},[j.MINES]:{[M.CSGO]:!0,[M.RUST]:!0},[j.JACKPOT]:{[M.CSGO]:!1,[M.RUST]:!1},[j.BOMB_RUSH]:{[M.CSGO]:!0,[M.RUST]:!1},[j.CASHIER_P2P]:{[M.CSGO]:!0,[M.RUST]:!1},[j.REWARDS_FAUCET]:{[M.CSGO]:!1,[M.RUST]:!0},[j.MISSIONS]:{[M.CSGO]:!0,[M.RUST]:!0},[j.PASS]:{[M.CSGO]:!1,[M.RUST]:!1},[j.RACE]:{[M.CSGO]:!0,[M.RUST]:!0},[j.RAFFLE]:{[M.CSGO]:!1,[M.RUST]:!1},[j.WIKI]:{[M.CSGO]:!0,[M.RUST]:!0},[j.SUMMER_EVENT]:{[M.CSGO]:!1,[M.RUST]:!1},[j.LIVEDROPS]:{[M.CSGO]:!0,[M.RUST]:!0},[j.BACKPACK]:{[M.CSGO]:!0,[M.RUST]:!0},[j.PREDICTIONS]:{[M.CSGO]:!1,[M.RUST]:!1},[j.ESPORTS]:{[M.CSGO]:!0,[M.RUST]:!1},[j.LEVEL_LOANS]:{[M.CSGO]:!0,[M.RUST]:!0},[j.CASHIER_FAKE_P2P]:{[M.CSGO]:!0,[M.RUST]:!1},[j.SERVER_BROWSER]:{[M.CSGO]:!0,[M.RUST]:!1}},z=["en","fr","de","es","zh","sv","hr","ja","bg","hi","ru","pt","he","ko","ro","tr","sr","sq"],L=["en","ru"],H=Symbol("brandedValue"),W=e=>({...e,[H]:!0}),F=({english:e,localizer:a,supportedLocales:t})=>{const i=f();return"en"!==i&&t.includes(i)?a(i):e},Z=e=>!0===e?.[H],V=(e,a)=>Z(e)?e[a]??e.default:e,J={},Y=(e,a,t)=>{if(J[e]&&!t)return J[e];const i=(({isStaging:e})=>({[I.BATTLE]:{id:I.BATTLE,name:b("Battles",{desc:"Refers to a Case Battle on a gambling website, where players open cases together, and for example the player pulling the most wins."}),link:W({default:"/battles",[M.CSGO]:"/csgo-case-battles"}),groups:[K.GAME],description:b("PvP Case Opening"),icon:"game/battles.svg",seo:W({[M.CSGO]:{name:b("CSGO Case Battles"),trackEvent:"footer_game_click",trackParamGameName:"CSGO Case Battles"},[M.RUST]:{name:b("Rust Case Battles"),trackEvent:"footer_game_click",trackParamGameName:"Rust Case Battles"}})},"battle-creator":{id:"battle-creator",name:b("Battle Creator",{desc:"Refers to a tool that allows players to create their own Case Battles."}),link:W({[M.CSGO]:"/csgo-case-battles/create",default:"/battles/create"}),groups:[]},[I.ROULETTE]:{id:I.ROULETTE,name:b("Roulette"),link:"/roulette",groups:[K.GAME],description:b("Spin to win!"),icon:"game/roulette.svg",seo:W({[M.CSGO]:{name:b("CSGO Roulette"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Roulette")},[M.RUST]:{name:b("Rust Roulette"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Roulette")}})},[I.UPGRADER]:{id:I.UPGRADER,name:b("Upgrader",{desc:"Upgrader is a gambling mode where you risk an item to win a higher-value one based on set odds"}),link:"/upgrader",groups:[K.GAME],description:b("Upgrade your skins"),icon:"game/upgrader.svg",seo:W({[M.CSGO]:{name:b("CSGO Upgrader"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Upgrader")},[M.RUST]:{name:b("Rust Upgrader"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Upgrader")}})},[I.MINES]:{id:I.MINES,name:b("Mines",{desc:"Mines is a gambling mode where you click tiles on a grid, avoiding hidden mines to multiply your winnings with each safe pick."}),featureId:j.MINES,link:"/mines",groups:[K.GAME],description:b("Uncover the mines"),icon:"game/mines.svg",seo:W({[M.CSGO]:{name:b("CSGO Mines"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Mines")},[M.RUST]:{name:b("Rust Mines"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Mines")}})},[I.PLINKO]:{id:I.PLINKO,name:b("Plinko"),featureId:j.PLINKO,link:"/plinko",groups:[K.GAME],description:b("Win up to 10,000x"),icon:"game/plinko.svg",seo:W({[M.CSGO]:{name:b("CSGO Plinko"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Plinko")},[M.RUST]:{name:b("Rust Plinko"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Plinko")}})},[I.CASE]:{id:I.CASE,name:b("Cases",{desc:"Cases refers to openable loot boxes, which contain items of varying rarity and value.",id:"Cases"}),link:W({default:"/cases",[M.CSGO]:"/casescs2"}),groups:[K.GAME],description:b("Open Skins"),icon:"game/cases.svg",seo:W({[M.CSGO]:{name:b("CSGO Case Opening"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Case Opening")},[M.RUST]:{name:b("Rust Case Opening"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Case Opening")}})},[I.CRASH]:{id:I.CRASH,name:b("Crash",{desc:"Crash is a gambling mode where a multiplier increases over time, and you must cash out before it crashes to keep your winnings."}),featureId:j.CRASH,link:"/crash",groups:[K.GAME],description:b("Watch the chicken burn!"),icon:"game/crash.svg",seo:W({[M.CSGO]:{name:b("CSGO Crash"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Crash")},[M.RUST]:{name:b("Rust Crash"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Crash")}})},[I.TILES]:{id:I.TILES,name:b("Tiles",{desc:"Tiles is a gambling mode where you choose numbers and try to match as many winning numbers as possible."}),featureId:j.TILES,link:"/tiles",groups:[K.GAME],description:b("Choose lucky numbers!"),icon:"game/tiles.svg",seo:W({[M.CSGO]:{name:b("CSGO Tiles"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Tiles")},[M.RUST]:{name:b("Rust Tiles"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Tiles")}})},[I.JACKPOT]:{id:I.JACKPOT,name:b("Jackpot"),featureId:j.JACKPOT,link:"/jackpot",groups:[K.GAME],description:b("Win a huge pot"),icon:"game/jackpot.svg",seo:W({[M.CSGO]:{name:b("CSGO Jackpot"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Jackpot")},[M.RUST]:{name:b("Rust Jackpot"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Jackpot")}})},[I.BOMB_RUSH]:{id:I.BOMB_RUSH,name:b("Bomb Rush",{desc:"Bomb rush risk-based game where each successful advance increases your multiplier, and you must decide when to cash out before hitting a loss point"}),featureId:j.BOMB_RUSH,link:"/bomb-rush",groups:[K.GAME,K.HIDDEN_GAME],description:b("Stay alive"),icon:"game/bomb-run.svg",seo:W({[M.CSGO]:{name:b("CSGO Bomb Rush"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Bomb Rush")},[M.RUST]:{name:b("Rust Bomb Rush"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Bomb Rush")}})},[I.PREDICTIONS]:{id:I.PREDICTIONS,name:b("Predictions",{desc:"Predictions is a gambling mode where you predict the outcome of CS2 events, such as map picks, team compositions, and more."}),featureId:j.PREDICTIONS,link:"/predictions",groups:[K.GAME],description:b("Predict CS2 Events"),icon:"game/predictions.svg",seo:W({[M.CSGO]:{name:b("CSGO Predictions"),trackEvent:"footer_game_click",trackParamGameName:b("CSGO Predictions")},[M.RUST]:{name:b("Rust Predictions"),trackEvent:"footer_game_click",trackParamGameName:b("Rust Predictions")}})},"case-creator":{id:"case-creator",name:b("Case Creator",{desc:"Case Creator is a tool that allows players to create their own cases."}),link:W({[M.CSGO]:"/casescs2/create",[M.RUST]:"/cases/create"}),groups:[K.ADDITIONAL]},profile:{id:"profile",name:b("Profile"),link:"/profile",groups:[K.NAVBAR,K.LOGIN_ONLY]},race:{id:"race",name:W({[M.CSGO]:b("10K Daily Race",{desc:"A feature, where at the end of each day, players with most wager are rewarded"}),[M.RUST]:b("2.5K Daily Race",{desc:"A feature, where at the end of each day, players with most wager are rewarded"})}),link:"/race",groups:[K.ADDITIONAL],featureId:j.RACE},affiliate:{id:"affiliate",name:b("Affiliates",{desc:"Refers to a program where players can earn rewards by referring friends to the site."}),groups:[K.ADDITIONAL,K.NAVBAR,K.LOGIN_ONLY],link:"/affiliate"},rewards:{id:"rewards",name:b("Rewards"),link:"/rewards",groups:[K.ADDITIONAL]},"skins-market":{id:"skins-market",name:b("CS Skins Market"),link:W({[M.CSGO]:"https://stash.clash.gg/marketplace/",default:"https://stash.clash.gg/marketplace/"}),groups:[K.ADDITIONAL],noLocalize:!0,external:!0},"self-exclude":{id:"self-exclude",name:b("Game Responsibly"),link:"/self-exclude",groups:[K.ADDITIONAL,K.NAVBAR]},fairness:{id:"fairness",name:b("Fairness",{desc:"Site which allows users to mathematically verify the fairness of the site."}),link:"/fairness",groups:[K.INFO,K.NAVBAR]},kyc:{id:"kyc",name:b("Free to Play",{desc:"Refers to a feature where players can play games for free, without risking any money."}),link:"/kyc",groups:[K.ADDITIONAL,K.NAVBAR]},blog:{id:"blog",name:b("Blog"),featureId:j.BLOG,link:W({[M.CSGO]:F({english:"https://blog.clash.gg",localizer:e=>`https://blog.clash.gg/${e}`,supportedLocales:["en"]}),[M.RUST]:"https://blog.rustclash.com"}),groups:[K.SUBDOMAIN,K.ADDITIONAL]},wiki:{id:"wiki",name:W({[M.CSGO]:b("CS2 Skins"),[M.RUST]:b("Rust Wiki")}),link:W({[M.CSGO]:F({english:e?"https://stash-staging.clash.gg":"https://stash.clash.gg",localizer:a=>e?`https://${a}-stash-staging.clash.gg`:`https://${a}-stash.clash.gg`,supportedLocales:L}),[M.RUST]:"https://wiki.rustclash.com"}),groups:[K.SUBDOMAIN,K.ADDITIONAL,K.NAVBAR],featureId:j.WIKI},"server-browser":{id:"server-browser",name:b("CS2 Servers",{desc:"Refers to a list of game servers for the CS2 Game, with various gamemodes and maps."}),link:"https://cs2browser.clash.gg",groups:[K.SUBDOMAIN,K.ADDITIONAL,K.NAVBAR],featureId:j.SERVER_BROWSER},inventory:{id:"inventory",name:W({[M.CSGO]:b("CSGO Inventory Value Calculator",{desc:"Refers to a tool that allows players to calculate the value of their inventory."}),[M.RUST]:b("Rust Inventory Calculator",{desc:"Refers to a tool that allows players to calculate the value of their inventory."})}),featureId:j.BACKPACK,link:W({[M.CSGO]:"https://inventory.clash.gg",[M.RUST]:"https://inventory.rustclash.com"}),groups:[K.SUBDOMAIN,K.ADDITIONAL]},esports:{id:"esports",name:W({[M.CSGO]:b("CS2 Nades",{desc:'"Nades" means Grenades here'}),default:b("eSports")}),featureId:j.ESPORTS,link:"https://esports.clash.gg/nades",groups:[K.SUBDOMAIN,K.ADDITIONAL]},questions:{id:"questions",name:b("Questions",{desc:"In other words, FAQ"}),link:"/questions",groups:[K.INFO]},tos:{id:"tos",name:b("Terms of Service"),link:"/tos",groups:[K.INFO]},privacy:{id:"privacy",name:b("Privacy Policy"),link:"/privacy",groups:[K.INFO]},"legal-opinion":{id:"legal-opinion",name:b("Legal Opinion"),link:"/documents/legal-opinion.pdf",noLocalize:!0,groups:[K.INFO],external:!0},aml:{id:"aml",name:b("AML Policy"),link:"/aml",groups:[K.INFO]},"about-us":{id:"about-us",name:b("About Us"),link:"/about-us",groups:[K.INFO]},"contact-us":{id:"contact-us",name:b("Contact Us"),link:"/contact-us",groups:[K.INFO]},disclaimer:{id:"disclaimer",name:b("Disclaimer",{desc:"Refers to a disclaimer that players must agree to before playing on the site."}),link:"/disclaimer",groups:[K.INFO]},"code-of-ethics":{id:"code-of-ethics",name:b("Code of Ethics"),link:"/code-of-ethics",groups:[K.INFO]},"editorial-policy":{id:"editorial-policy",name:b("Editorial Policy"),link:"/editorial-policy",groups:[K.INFO]},creator:{id:"creator",name:b("Creator Panel",{desc:"A section where content creators have additional tools for content creation."}),modal:E.CREATOR,groups:[]},pass:{id:"pass",name:W({[M.CSGO]:b("Clash Pass",{desc:"Refers to a pass that unlocks benefits for players"}),[M.RUST]:b("RustClash Pass",{desc:"Refers to a pass that unlocks benefits for players"})}),modal:E.PASS,groups:[]},deposit:{id:"deposit",name:b("Deposit",{desc:"A page where players can deposit money into their account."}),link:"/deposit",groups:[]},withdraw:{id:"withdraw",name:b("Withdraw",{desc:"A page where players can withdraw money from their account."}),link:"/withdraw",groups:[]},game_history:{id:"game_history",name:b("Game History"),modal:E.GAME_HISTORY,groups:[K.LOGIN_ONLY,K.NAVBAR]},transaction_history:{id:"transaction_history",name:b("Transaction History"),modal:E.TRANSACTION_HISTORY,groups:[K.LOGIN_ONLY]},raffle:{id:"raffle",name:b("Raffle"),link:"/raffle",groups:[K.ADDITIONAL],featureId:j.RAFFLE},"summer-event":{id:"summer-event",name:b("Summer Event"),link:"/summer-event",groups:[K.ADDITIONAL],featureId:j.SUMMER_EVENT},vault:{id:"vault",name:b("Vault",{desc:"A feature where players can store and optionally lock away their money in the vault."}),modal:E.VAULT,groups:[K.ADDITIONAL,K.NAVBAR,K.LOGIN_ONLY]}}))({isStaging:a}),n={},s=(e=>"en"!==e&&z.includes(e)?a=>a.startsWith("/")?`/${e}${a}`:a:e=>e)(f());for(const[a,t]of Object.entries(i)){const i=Object.entries(t).map((([a,t])=>Z(t)?[a,V(t,e)]:[a,t])),o=Object.fromEntries(i);o.link&&!o.noLocalize&&(o.link=s(o.link)),o.modal&&!o.noLocalize&&(o.link=s(`/?modal=${o.modal}`)),n[a]=o}return J[e]=Object.assign(n,{[M.CSGO]:{twitter:{id:"twitter",name:b("Twitter"),link:"https://twitter.com/clashdotgg",icon:"twitter.svg",groups:[K.SOCIAL,K.CHAT_SOCIALS],external:!0},discord:{id:"discord",name:b("Discord"),link:"https://discord.gg/clashgg",icon:"discord.svg",groups:[K.SOCIAL,K.CHAT_SOCIALS],external:!0},kick:{id:"kick",name:b("Kick"),link:"https://kick.com/clashgg",icon:"kick.svg",groups:[K.SOCIAL],external:!0},rustclash:{id:"rustclash",name:b("Rust Gambling"),link:(()=>{const e=f();return"en"!==e&&z.includes(e)?`https://rustclash.com/${e}`:"https://rustclash.com/"})(),groups:[K.ADDITIONAL],icon:"gamepad.svg",external:!0}},[M.RUST]:{twitter:{id:"twitter",name:b("Twitter"),link:"https://twitter.com/rustclash",icon:"twitter.svg",groups:[K.SOCIAL,K.CHAT_SOCIALS],external:!0},discord:{id:"discord",name:b("Discord"),link:"https://discord.gg/rustclash",icon:"discord.svg",groups:[K.SOCIAL,K.CHAT_SOCIALS],external:!0},clashgg:{id:"clashgg",name:b("Clash.gg"),link:(()=>{const e=f();return"en"!==e&&z.includes(e)?`https://clash.gg/${e}`:"https://clash.gg/"})(),groups:[K.ADDITIONAL],icon:"gamepad.svg",external:!0}}}[e]),n},q=(e,a,t,i)=>{const n=Y(e,t);return Object.values(n).filter((t=>{const n=Array.isArray(a)?a:[a],s=t.groups?.some((e=>n.includes(e))),o=i?.includes(t.id),r=void 0===t.featureId||((e,a)=>N[a][e])(e,t.featureId);return s&&!o&&r}))},Q=({isStaging:e,blacklistedIds:a=[]})=>{const t=((e,a)=>"en"!==e&&L.includes(e)?t=>`https://${e}-stash${a?"-staging":""}.clash.gg/${t}`:e=>`https://stash${a?"-staging":""}.clash.gg/${e}`)(f(),e),i=[{name:b("CS2 Casino"),groups:[{name:null,items:q(M.CSGO,K.GAME,e).map((({seo:e,link:a,name:t})=>({name:e?.name??t,url:`${A.mainDomain}${a}`})))}]},{id:"marketplace",name:b("Marketplace",{desc:"Navigation menu for buying, selling, and trading CS2 skins."}),groups:[{name:null,items:[{name:b("Buy Skins"),url:t("marketplace")},{name:b("Sell Skins"),url:t("marketplace/sell")},{name:b("Trade Skins"),url:t("marketplace/trade")}]}]},{id:"tools",name:b("Tools",{desc:"Refers to useful tools related to the CS2 Game, like Sticker Composer, Blue Gem, Lineups, Callouts, etc."}),groups:[{name:null,items:[...q(M.CSGO,K.SUBDOMAIN,e).filter((({id:e})=>"blog"!==e)).map((({link:e,name:a,seo:t})=>({name:t?.name??a,url:e}))),{id:"blog",name:b("Blog"),url:`${A.blogDomain}`,items:[{name:b("Skin Guides"),url:`${A.blogDomain}/skin-guides`},{name:b("Case Guides"),url:`${A.blogDomain}/case-guides`},{name:b("Tips"),url:`${A.blogDomain}/tips`},{name:b("Callouts",{desc:"Callouts are words or phrases used to refer to specific areas of the map in communication with your team."}),url:`${A.blogDomain}/callouts`},{name:b("Lineups",{desc:"Refers to specific positions and angles in Counter-Strike 2 (CS2) where a player can stand and aim in a certain way to throw a grenade (e.g. smoke, flashbang, HE grenade, molotov) so that it lands precisely at a desired location on the map"}),url:`${A.blogDomain}/lineups`},{name:b("News"),url:`${A.blogDomain}/news`}]},{name:b("CS2 Blue Gem",{desc:"Refers to the CS2 Blue Gem tool, which is a browser for every single case hardened pattern in the game."}),items:[{name:b("Pattern Data",{desc:"Refers to patterns that can be visible on CS2 skins."}),url:t("bluegem")},{name:b("Sale History"),url:t("search-pattern")},{name:b("AI Price Check"),url:t("price-check")},{name:b("Volume",{desc:"Refers to sales volume"}),url:t("volume")}]},{name:b("Sticker Composer",{desc:"Refers to the tool used to create compositions/arrangements of stickers on a skin (for example to spell out a word or phrase)."}),url:t("sticker-composer")}]}]},{name:b("Pistols"),groups:[{name:null,items:[{name:b("Zeus x27"),imageUrl:"brand/csgo/item-img/weapons/50px/zeus_x27.webp",url:t("weapon/Zeus-x27")}]},{name:null,items:[{name:b("CZ75-Auto"),imageUrl:"brand/csgo/item-img/weapons/50px/cz75-auto.webp",url:t("weapon/CZ75-Auto")},{name:b("Desert Eagle"),imageUrl:"brand/csgo/item-img/weapons/50px/desert_eagle.webp",url:t("weapon/Desert-Eagle")},{name:b("Dual Berettas"),imageUrl:"brand/csgo/item-img/weapons/50px/dual_berettas.webp",url:t("weapon/Dual-Berettas")},{name:b("Five-SeveN"),imageUrl:"brand/csgo/item-img/weapons/50px/five-seven.webp",url:t("weapon/Five-SeveN")},{name:b("Glock-18"),imageUrl:"brand/csgo/item-img/weapons/50px/glock-18.webp",url:t("weapon/Glock-18")},{name:b("P2000"),imageUrl:"brand/csgo/item-img/weapons/50px/p2000.webp",url:t("weapon/P2000")},{name:b("P250"),imageUrl:"brand/csgo/item-img/weapons/50px/p250.webp",url:t("weapon/P250")},{name:b("R8 Revolver"),imageUrl:"brand/csgo/item-img/weapons/50px/r8_revolver.webp",url:t("weapon/R8-Revolver")},{name:b("Tec-9"),imageUrl:"brand/csgo/item-img/weapons/50px/tec-9.webp",url:t("weapon/Tec-9")},{name:b("USP-S"),imageUrl:"brand/csgo/item-img/weapons/50px/usp-s.webp",url:t("weapon/USP-S")}]}]},{name:b("Mid-Tier"),groups:[{name:b("SMGs"),items:[{name:b("MAC-10"),imageUrl:"brand/csgo/item-img/weapons/50px/mac-10.webp",url:t("weapon/MAC-10")},{name:b("MP5-SD"),imageUrl:"brand/csgo/item-img/weapons/50px/mp5-sd.webp",url:t("weapon/MP5-SD")},{name:b("MP7"),imageUrl:"brand/csgo/item-img/weapons/50px/mp7.webp",url:t("weapon/MP7")},{name:b("MP9"),imageUrl:"brand/csgo/item-img/weapons/50px/mp9.webp",url:t("weapon/MP9")},{name:b("PP-Bizon"),imageUrl:"brand/csgo/item-img/weapons/50px/pp-bizon.webp",url:t("weapon/PP-Bizon")},{name:b("P90"),imageUrl:"brand/csgo/item-img/weapons/50px/p90.webp",url:t("weapon/P90")},{name:b("UMP-45"),imageUrl:"brand/csgo/item-img/weapons/50px/ump-45.webp",url:t("weapon/UMP-45")}]},{name:b("Shotguns"),items:[{name:b("MAG-7"),imageUrl:"brand/csgo/item-img/weapons/50px/mag-7.webp",url:t("weapon/MAG-7")},{name:b("Nova"),imageUrl:"brand/csgo/item-img/weapons/50px/nova.webp",url:t("weapon/Nova")},{name:b("Sawed-Off"),imageUrl:"brand/csgo/item-img/weapons/50px/sawed-off.webp",url:t("weapon/Sawed-Off")},{name:b("XM1014"),imageUrl:"brand/csgo/item-img/weapons/50px/xm1014.webp",url:t("weapon/XM1014")}]},{name:b("Machineguns"),items:[{name:b("M249"),imageUrl:"brand/csgo/item-img/weapons/50px/m249.webp",url:t("weapon/M249")},{name:b("Negev"),imageUrl:"brand/csgo/item-img/weapons/50px/negev.webp",url:t("weapon/Negev")}]}]},{name:b("Rifles"),groups:[{name:null,items:[{name:b("AK-47"),imageUrl:"brand/csgo/item-img/weapons/50px/ak-47.webp",url:t("weapon/AK-47")},{name:b("AUG"),imageUrl:"brand/csgo/item-img/weapons/50px/aug.webp",url:t("weapon/AUG")},{name:b("AWP"),imageUrl:"brand/csgo/item-img/weapons/50px/awp.webp",url:t("weapon/AWP")},{name:b("FAMAS"),imageUrl:"brand/csgo/item-img/weapons/50px/famas.webp",url:t("weapon/FAMAS")},{name:b("G3SG1"),imageUrl:"brand/csgo/item-img/weapons/50px/g3sg1.webp",url:t("weapon/G3SG1")},{name:b("Galil AR"),imageUrl:"brand/csgo/item-img/weapons/50px/galil_ar.webp",url:t("weapon/Galil-AR")},{name:b("M4A1-S"),imageUrl:"brand/csgo/item-img/weapons/50px/m4a1-s.webp",url:t("weapon/M4A1-S")},{name:b("M4A4"),imageUrl:"brand/csgo/item-img/weapons/50px/m4a4.webp",url:t("weapon/M4A4")},{name:b("SCAR-20"),imageUrl:"brand/csgo/item-img/weapons/50px/scar-20.webp",url:t("weapon/SCAR-20")},{name:b("SG 553"),imageUrl:"brand/csgo/item-img/weapons/50px/sg_553.webp",url:t("weapon/SG-553")},{name:b("SSG 08"),imageUrl:"brand/csgo/item-img/weapons/50px/ssg_08.webp",url:t("weapon/SSG-08")}]}]},{name:b("Knives"),groups:[{name:null,items:[{name:b("All Knives"),imageUrl:null,url:t("skin-rarity/Knife")}]},{name:null,items:[{name:b("Bayonet"),imageUrl:"brand/csgo/item-img/weapons/50px/bayonet.webp",url:t("weapon/Bayonet")},{name:b("Bowie Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/bowie_knife.webp",url:t("weapon/Bowie-Knife")},{name:b("Butterfly Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/butterfly_knife.webp",url:t("weapon/Butterfly-Knife")},{name:b("Classic Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/classic_knife.webp",url:t("weapon/Classic-Knife")},{name:b("Falchion Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/falchion_knife.webp",url:t("weapon/Falchion-Knife")},{name:b("Flip Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/flip_knife.webp",url:t("weapon/Flip-Knife")},{name:b("Gut Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/gut_knife.webp",url:t("weapon/Gut-Knife")},{name:b("Huntsman Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/huntsman_knife.webp",url:t("weapon/Huntsman-Knife")},{name:b("Karambit"),imageUrl:"brand/csgo/item-img/weapons/50px/karambit.webp",url:t("weapon/Karambit")},{name:b("Kukri Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/kukri_knife.webp",url:t("weapon/Kukri-Knife")},{name:b("M9 Bayonet"),imageUrl:"brand/csgo/item-img/weapons/50px/m9_bayonet.webp",url:t("weapon/M9-Bayonet")},{name:b("Navaja Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/navaja_knife.webp",url:t("weapon/Navaja-Knife")},{name:b("Nomad Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/nomad_knife.webp",url:t("weapon/Nomad-Knife")},{name:b("Paracord Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/paracord_knife.webp",url:t("weapon/Paracord-Knife")},{name:b("Shadow Daggers"),imageUrl:"brand/csgo/item-img/weapons/50px/shadow_daggers.webp",url:t("weapon/Shadow-Daggers")},{name:b("Skeleton Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/skeleton_knife.webp",url:t("weapon/Skeleton-Knife")},{name:b("Stiletto Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/stiletto_knife.webp",url:t("weapon/Stiletto-Knife")},{name:b("Survival Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/survival_knife.webp",url:t("weapon/Survival-Knife")},{name:b("Talon Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/talon_knife.webp",url:t("weapon/Talon-Knife")},{name:b("Ursus Knife"),imageUrl:"brand/csgo/item-img/weapons/50px/ursus_knife.webp",url:t("weapon/Ursus-Knife")}]}]},{name:b("Gloves"),groups:[{name:null,items:[{name:b("All Types"),imageUrl:null,url:t("gloves")}]},{name:null,items:[{name:b("Bloodhound Gloves"),imageUrl:"brand/csgo/item-img/weapons/50px/bloodhound.webp",url:t("gloves/Bloodhound-Gloves")},{name:b("Broken Fang Gloves"),imageUrl:"brand/csgo/item-img/weapons/50px/brokenfang.webp",url:t("gloves/Broken-Fang-Gloves")},{name:b("Driver Gloves"),imageUrl:"brand/csgo/item-img/weapons/50px/driver.webp",url:t("gloves/Driver-Gloves")},{name:b("Hand Wraps"),imageUrl:"brand/csgo/item-img/weapons/50px/handwraps.webp",url:t("gloves/Hand-Wraps")},{name:b("Hydra Gloves"),imageUrl:"brand/csgo/item-img/weapons/50px/hydra.webp",url:t("gloves/Hydra-Gloves")},{name:b("Moto Gloves"),imageUrl:"brand/csgo/item-img/weapons/50px/moto.webp",url:t("gloves/Moto-Gloves")},{name:b("Specialist Gloves"),imageUrl:"brand/csgo/item-img/weapons/50px/specialist.webp",url:t("gloves/Specialist-Gloves")},{name:b("Sport Gloves"),imageUrl:"brand/csgo/item-img/weapons/50px/sport.webp",url:t("gloves/Sport-Gloves")}]}]},{name:b("Cases",{id:"CS2-Cases",desc:"Refers to a list of game cases from the CS2 Game."}),groups:[{name:b("Active Cases"),items:[{name:b("Fever Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c422.webp",url:t("case/422/Fever-Case")},{name:b("Gallery Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c412.webp",url:t("case/412/Gallery-Case")},{name:b("Kilowatt Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c393.webp",url:t("case/393/Kilowatt-Case")},{name:b("Dreams & Nightmares Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c339.webp",url:t("case/339/Dreams-&-Nightmares-Case")},{name:b("Fracture Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c307.webp",url:t("case/307/Fracture-Case")},{name:b("Recoil Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c355.webp",url:t("case/355/Recoil-Case")},{name:b("Revolution Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c376.webp",url:t("case/376/Revolution-Case")}]},{name:null,items:[{name:b("Chroma Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c38.webp",url:t("case/38/Chroma-Case")},{name:b("Chroma 2 Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c48.webp",url:t("case/48/Chroma-2-Case")},{name:b("Chroma 3 Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c141.webp",url:t("case/141/Chroma-3-Case")},{name:b("Clutch Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c238.webp",url:t("case/238/Clutch-Case")},{name:b("CS:GO Weapon Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c1.webp",url:t("case/1/CS:GO-Weapon-Case")},{name:b("CS:GO Weapon Case 2"),imageUrl:"brand/csgo/item-img/items/containers/50px/c4.webp",url:t("case/4/CS:GO-Weapon-Case-2")},{name:b("CS:GO Weapon Case 3"),imageUrl:"brand/csgo/item-img/items/containers/50px/c10.webp",url:t("case/10/CS:GO-Weapon-Case-3")},{name:b("CS20 Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c293.webp",url:t("case/293/CS20-Case")},{name:b("Danger Zone Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c259.webp",url:t("case/259/Danger-Zone-Case")},{name:b("eSports 2013 Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c2.webp",url:t("case/2/eSports-2013-Case")},{name:b("eSports 2013 Winter Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c5.webp",url:t("case/5/eSports-2013-Winter-Case")},{name:b("eSports 2014 Summer Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c19.webp",url:t("case/19/eSports-2014-Summer-Case")},{name:b("Falchion Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c50.webp",url:t("case/50/Falchion-Case")},{name:b("Gamma Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c144.webp",url:t("case/144/Gamma-Case")},{name:b("Gamma 2 Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c172.webp",url:t("case/172/Gamma-2-Case")},{name:b("Glove Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c179.webp",url:t("case/179/Glove-Case")},{name:b("Horizon Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c244.webp",url:t("case/244/Horizon-Case")},{name:b("Huntsman Weapon Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c17.webp",url:t("case/17/Huntsman-Weapon-Case")},{name:b("Operation Bravo Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c3.webp",url:t("case/3/Operation-Bravo-Case")},{name:b("Operation Breakout Weapon Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c18.webp",url:t("case/18/Operation-Breakout-Weapon-Case")},{name:b("Operation Broken Fang Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c308.webp",url:t("case/308/Operation-Broken-Fang-Case")},{name:b("Operation Hydra Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c208.webp",url:t("case/208/Operation-Hydra-Case")},{name:b("Operation Phoenix Weapon Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c11.webp",url:t("case/11/Operation-Phoenix-Weapon-Case")},{name:b("Operation Riptide Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c321.webp",url:t("case/321/Operation-Riptide-Case")},{name:b("Operation Vanguard Weapon Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c29.webp",url:t("case/29/Operation-Vanguard-Weapon-Case")},{name:b("Operation Wildfire Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c112.webp",url:t("case/112/Operation-Wildfire-Case")},{name:b("Prisma Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c274.webp",url:t("case/274/Prisma-Case")},{name:b("Prisma 2 Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c303.webp",url:t("case/303/Prisma-2-Case")},{name:b("Revolver Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c111.webp",url:t("case/111/Revolver-Case")},{name:b("Shadow Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c80.webp",url:t("case/80/Shadow-Case")},{name:b("Shattered Web Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c277.webp",url:t("case/277/Shattered-Web-Case")},{name:b("Snakebite Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c315.webp",url:t("case/315/Snakebite-Case")},{name:b("Spectrum Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c207.webp",url:t("case/207/Spectrum-Case")},{name:b("Spectrum 2 Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c220.webp",url:t("case/220/Spectrum-2-Case")},{name:b("Winter Offensive Weapon Case"),imageUrl:"brand/csgo/item-img/items/containers/50px/c7.webp",url:t("case/7/Winter-Offensive-Weapon-Case")}]},{name:null,items:[{name:b("All Skin Cases"),imageUrl:"brand/csgo/item-img/items/containers/50px/c1.webp",url:t("containers/skin-cases")},{name:b("Souvenir Packages"),imageUrl:"brand/csgo/item-img/items/containers/50px/c76.webp",url:t("containers/souvenir-packages")},{name:b("Gift Packages"),imageUrl:"brand/csgo/item-img/items/containers/50px/c8.webp",url:t("containers/gift-packages")}]}]},{name:b("Collections"),groups:[{name:b("Show Off"),items:[{name:b("The Genesis Collection"),url:t("collection/The-Genesis-Collection"),imageUrl:"https://img.clash.gg/stash/collections-the-genesis-collection"}]},{name:b("Spring Forward"),items:[{name:b("The Train 2025 Collection"),url:t("collection/The-Train-2025-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/the_train_2025_collection.webp"},{name:b("The Boreal Collection"),url:t("collection/The-Boreal-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/the_boreal_collection.webp"},{name:b("The Ascent Collection"),url:t("collection/The-Ascent-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/the_ascent_collection.webp"},{name:b("The Radiant Collection"),url:t("collection/The-Radiant-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/the_radiant_collection.webp"}]},{name:b("The Armory Update"),items:[{name:b("Limited Edition Item"),url:t("collection/Limited-Edition-Item"),imageUrl:"brand/csgo/item-img/collections/50px/limited_edition_item.webp"},{name:b("The Graphic Design Collection"),url:t("collection/The-Graphic-Design-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/the_graphic_design_collection.webp"},{name:b("The Overpass 2024 Collection"),url:t("collection/The-Overpass-2024-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/the_overpass_2024_collection.webp"},{name:b("The Sport & Field Collection"),url:t("collection/The-Sport-&-Field-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/the_sport_&_field_collection.webp"}]},{name:b("Copenhagen Souvenirs"),items:[{name:b("Ancient"),url:t("collection/The-Ancient-Collection")},{name:b("Anubis"),url:t("collection/The-Anubis-Collection")},{name:b("Inferno (2018)"),url:t("collection/The-2018-Inferno-Collection")},{name:b("Mirage (2021)"),url:t("collection/The-2021-Mirage-Collection")},{name:b("Nuke (2018)"),url:t("collection/The-2018-Nuke-Collection")},{name:b("Overpass"),url:t("collection/The-Overpass-Collection")},{name:b("Vertigo (2021)"),url:t("collection/The-2021-Vertigo-Collection")}]},{name:null,items:[{name:b("Alpha"),url:t("collection/The-Alpha-Collection")},{name:b("Assault"),url:t("collection/The-Assault-Collection")},{name:b("Aztec"),url:t("collection/The-Aztec-Collection")},{name:b("Baggage"),url:t("collection/The-Baggage-Collection")},{name:b("Bank"),url:t("collection/The-Bank-Collection")},{name:b("Blacksite"),url:t("collection/The-Blacksite-Collection")},{name:b("Cache"),url:t("collection/The-Cache-Collection")},{name:b("Canals"),url:t("collection/The-Canals-Collection")},{name:b("Chop Shop"),url:t("collection/The-Chop-Shop-Collection")},{name:b("Cobblestone"),url:t("collection/The-Cobblestone-Collection")},{name:b("Control"),url:t("collection/The-Control-Collection")},{name:b("Dust"),url:t("collection/The-Dust-Collection")},{name:b("Dust 2 (2021)"),url:t("collection/The-2021-Dust-2-Collection")},{name:b("Dust 2 (Old)"),url:t("collection/The-Dust-2-Collection")},{name:b("Gods and Monsters"),url:t("collection/The-Gods-and-Monsters-Collection")},{name:b("Havoc"),url:t("collection/The-Havoc-Collection")},{name:b("Inferno (Old)"),url:t("collection/The-Inferno-Collection")},{name:b("Italy"),url:t("collection/The-Italy-Collection")},{name:b("Lake"),url:t("collection/The-Lake-Collection")},{name:b("Militia"),url:t("collection/The-Militia-Collection")},{name:b("Mirage (Old)"),url:t("collection/The-Mirage-Collection")},{name:b("Norse"),url:t("collection/The-Norse-Collection")},{name:b("Nuke (Old)"),url:t("collection/The-Nuke-Collection")},{name:b("Office"),url:t("collection/The-Office-Collection")},{name:b("Rising Sun"),url:t("collection/The-Rising-Sun-Collection")},{name:b("Safehouse"),url:t("collection/The-Safehouse-Collection")},{name:b("St. Marc"),url:t("collection/The-St.-Marc-Collection")},{name:b("Train (2021)"),url:t("collection/The-2021-Train-Collection")},{name:b("Train (Old)"),url:t("collection/The-Train-Collection")},{name:b("Vertigo (Old)"),url:t("collection/The-Vertigo-Collection")}]}]},{name:b("Stickers"),groups:[{name:null,items:[{name:b("Regular Stickers"),url:t("stickers/regular")},{name:b("Tournament Stickers"),url:t("stickers/tournament")},{name:b("Sticker Capsules"),imageUrl:"brand/csgo/item-img/items/containers/50px/c9.webp",url:t("containers/sticker-capsules")},{name:b("Autograph Capsules"),imageUrl:"brand/csgo/item-img/items/containers/50px/c93.webp",url:t("containers/autograph-capsules")}]},{name:b("Tournament Stickers"),items:[{name:b("Budapest 2025"),url:t("stickers/tournament/Budapest-2025")},{name:b("Austin 2025"),url:t("stickers/tournament/Austin-2025")},{name:b("Shanghai 2024"),url:t("stickers/tournament/Shanghai-2024")},{name:b("Copenhagen 2024"),url:t("stickers/tournament/Copenhagen-2024")},{name:b("Paris 2023"),url:t("stickers/tournament/Paris-2023")},{name:b("Rio 2022"),url:t("stickers/tournament/Rio-2022")},{name:b("Antwerp 2022"),url:t("stickers/tournament/Antwerp-2022")},{name:b("Stockholm 2021"),url:t("stickers/tournament/Stockholm-2021")},{name:b("2020 Regional Major Rankings"),url:t("stickers/tournament/2020-RMR")},{name:b("Berlin 2019"),url:t("stickers/tournament/Berlin-2019")},{name:b("Katowice 2019"),url:t("stickers/tournament/Katowice-2019")},{name:b("London 2018"),url:t("stickers/tournament/London-2018")},{name:b("Boston 2018"),url:t("stickers/tournament/Boston-2018")},{name:b("Krakow 2017"),url:t("stickers/tournament/Krakow-2017")},{name:b("Atlanta 2017"),url:t("stickers/tournament/Atlanta-2017")},{name:b("Cologne 2016"),url:t("stickers/tournament/Cologne-2016")},{name:b("MLG Columbus 2016"),url:t("stickers/tournament/MLG-Columbus-2016")},{name:b("Cluj-Napoca 2015"),url:t("stickers/tournament/Cluj-Napoca-2015")},{name:b("Cologne 2015"),url:t("stickers/tournament/Cologne-2015")},{name:b("Katowice 2015"),url:t("stickers/tournament/Katowice-2015")},{name:b("DreamHack 2014"),url:t("stickers/tournament/DreamHack-2014")},{name:b("Cologne 2014"),url:t("stickers/tournament/Cologne-2014")},{name:b("Katowice 2014"),url:t("stickers/tournament/Katowice-2014")}]},{name:b("Regular Stickers"),items:[{name:b("Elemental Craft Stickers"),imageUrl:"brand/csgo/item-img/collections/50px/elemental_craft_stickers.webp",url:t("stickers/community/Elemental-Craft-Stickers")},{name:b("Character Craft Stickers"),imageUrl:"brand/csgo/item-img/collections/50px/character_craft_stickers.webp",url:t("stickers/community/Character-Craft-Stickers")}]},{name:null,items:[{name:b("10 Year Birthday Sticker Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c356.webp",url:t("stickers/capsule/356/10-Year-Birthday-Sticker-Capsule")},{name:b("The Boardroom Sticker Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c340.webp",url:t("stickers/capsule/340/The-Boardroom-Sticker-Capsule")},{name:b("Operation Riptide Sticker Collection"),url:t("stickers/community/Operation-Riptide-Sticker-Collection")},{name:b("Riptide Surf Shop Sticker Collection"),url:t("stickers/community/Riptide-Surf-Shop-Sticker-Collection")},{name:b("2021 Community Sticker Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c319.webp",url:t("stickers/capsule/319/2021-Community-Sticker-Capsule")},{name:b("Poorly Drawn Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c314.webp",url:t("stickers/capsule/314/Poorly-Drawn-Capsule")},{name:b("Broken Fang Sticker Collection"),url:t("stickers/community/Broken-Fang-Sticker-Collection")},{name:b("Recoil Sticker Collection"),url:t("stickers/community/Recoil-Sticker-Collection")},{name:b("Warhammer 40k Sticker Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c306.webp",url:t("stickers/capsule/306/Warhammer-40-000-Sticker-Capsule")},{name:b("Half-Life: Alyx Sticker Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c301.webp",url:t("stickers/capsule/301/Half-Life:-Alyx-Sticker-Capsule")},{name:b("Halo Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c295.webp",url:t("stickers/capsule/295/Halo-Capsule")},{name:b("Shattered Web Sticker Collection"),url:t("stickers/community/Shattered-Web-Sticker-Collection")},{name:b("CS20 Sticker Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c294.webp",url:t("stickers/capsule/294/CS20-Sticker-Capsule")},{name:b("Chicken Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c276.webp",url:t("stickers/capsule/276/Chicken-Capsule")},{name:b("Feral Predators Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c275.webp",url:t("stickers/capsule/275/Feral-Predators-Capsule")},{name:b("Skill Groups Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c258.webp",url:t("stickers/capsule/258/Skill-Groups-Capsule")},{name:b("Community Capsule 2018"),imageUrl:"brand/csgo/item-img/items/containers/50px/c237.webp",url:t("stickers/capsule/237/Community-Capsule-2018")},{name:b("Perfect World Sticker Capsule 1"),imageUrl:"brand/csgo/item-img/items/containers/50px/c221.webp",url:t("stickers/capsule/221/Perfect-World-Sticker-Capsule-1")},{name:b("Perfect World Sticker Capsule 2"),imageUrl:"brand/csgo/item-img/items/containers/50px/c222.webp",url:t("stickers/capsule/222/Perfect-World-Sticker-Capsule-2")},{name:b("Bestiary Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c174.webp",url:t("stickers/capsule/174/Bestiary-Capsule")},{name:b("Sugarface Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c173.webp",url:t("stickers/capsule/173/Sugarface-Capsule")},{name:b("Team Roles Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c110.webp",url:t("stickers/capsule/110/Team-Roles-Capsule")},{name:b("Slid3 Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c109.webp",url:t("stickers/capsule/109/Slid3-Capsule")},{name:b("Pinups Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c108.webp",url:t("stickers/capsule/108/Pinups-Capsule")},{name:b("Enfu Sticker Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c49.webp",url:t("stickers/capsule/49/Enfu-Sticker-Capsule")},{name:b("Community Stickers Series 5"),url:t("stickers/community/Community-Stickers-Series-5")},{name:b("Community Stickers Series 4"),url:t("stickers/community/Community-Stickers-Series-4")},{name:b("Community Stickers Series 3"),url:t("stickers/community/Community-Stickers-Series-3")},{name:b("Community Stickers Halloween 2014"),url:t("stickers/community/Community-Stickers-Halloween-2014")},{name:b("Community Stickers Series 2"),url:t("stickers/community/Community-Stickers-Series-2")},{name:b("Community Sticker Capsule 1"),imageUrl:"brand/csgo/item-img/items/containers/50px/c16.webp",url:t("stickers/capsule/16/Community-Sticker-Capsule-1")},{name:b("Sticker Capsule 2"),imageUrl:"brand/csgo/item-img/items/containers/50px/c12.webp",url:t("stickers/capsule/12/Sticker-Capsule-2")},{name:b("Sticker Capsule"),imageUrl:"brand/csgo/item-img/items/containers/50px/c9.webp",url:t("stickers/capsule/9/Sticker-Capsule")}]}]},{name:b("Other"),groups:[{name:b("Music Kits"),items:[{name:b("Music Kits"),imageUrl:"brand/csgo/item-img/menu/music-kit.webp",url:t("music")},{name:b("Deluge Music Kit Box"),imageUrl:"https://img.clash.gg/stash/containers-deluge-music-kit-box",url:t("music/box/441/Deluge-Music-Kit-Box")},{name:b("Startrak™ Deluge Music Kit Box"),imageUrl:"https://img.clash.gg/stash/containers-startraktm-deluge-music-kit-box",url:t("music/box/442/Startrak-Deluge-Music-Kit-Box")},{name:b("Masterminds 2 Music Kit Box"),imageUrl:"brand/csgo/item-img/items/containers/50px/c413.webp",url:t("music/box/413/Masterminds-2-Music-Kit-Box")},{name:b("NIGHTMODE Music Kit Box"),imageUrl:"brand/csgo/item-img/items/containers/50px/c396.webp",url:t("music/box/396/NIGHTMODE-Music-Kit-Box")},{name:b("Initiators Music Kit Box"),imageUrl:"brand/csgo/item-img/items/containers/50px/c357.webp",url:t("music/box/357/Initiators-Music-Kit-Box")},{name:b("Tacticians Music Kit Box"),imageUrl:"brand/csgo/item-img/items/containers/50px/c316.webp",url:t("music/box/316/Tacticians-Music-Kit-Box")},{name:b("Masterminds Music Kit Box"),imageUrl:"brand/csgo/item-img/items/containers/50px/c304.webp",url:t("music/box/304/Masterminds-Music-Kit-Box")}]},{name:b("Agents"),items:[{name:b("All Agents"),imageUrl:"brand/csgo/item-img/menu/agent.webp",url:t("agents")},{name:b("Operation Riptide Agents"),url:t("agents/Operation-Riptide-Agents")},{name:b("Broken Fang Agents"),url:t("agents/Broken-Fang-Agents")},{name:b("Shattered Web Agents"),url:t("agents/Shattered-Web-Agents")}]},{name:b("Charms",{desc:"Refers to a new type of collectible in CS2. Charms are dynamic keychains which you can precisely attach to your weapon."}),items:[{name:b("Small Arms Charm Collection"),url:t("charms/collection/Small-Arms-Charm-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/small_arms_charm_collection.webp"},{name:b("Missing Link Charm Collection"),url:t("charms/collection/Missing-Link-Charm-Collection"),imageUrl:"brand/csgo/item-img/collections/50px/missing_link_charm_collection.webp"}]},{name:b("Patches",{desc:"Patches are similar to stickers, but instead of applying them to a weapon skin, patches can be applied to agents."}),items:[{name:b("All Agent Patches"),imageUrl:"brand/csgo/item-img/menu/agent-patch.webp",url:t("patches")},{name:b("Stockholm 2021 Patches"),url:t("patches/Stockholm-2021-Patches")},{name:b("Operation Riptide Patch Collection"),url:t("patches/Operation-Riptide-Patch-Collection")},{name:b("Metal Skill Group Patch Collection"),url:t("patches/Metal-Skill-Group-Patch-Collection")},{name:b("Half-Life: Alyx Patch Pack"),imageUrl:"brand/csgo/item-img/items/containers/50px/c302.webp",url:t("patches/pack/302/Half-Life:-Alyx-Patch-Pack")},{name:b("CS:GO Patch Pack"),imageUrl:"brand/csgo/item-img/items/containers/50px/c296.webp",url:t("patches/pack/296/CS:GO-Patch-Pack")}]},{name:b("Pins"),items:[{name:b("Collectable Pins"),imageUrl:"brand/csgo/item-img/menu/pin.webp",url:t("pins")},{name:b("Half-Life: Alyx Collectible Pins"),imageUrl:"brand/csgo/item-img/items/containers/50px/c300.webp",url:t("pins/capsule/300/Half-Life:-Alyx-Collectible-Pins-Capsule")},{name:b("Series 2"),url:t("pins/capsule/175/Collectible-Pins-Capsule-Series-2")},{name:b("Series 3"),url:t("pins/series/3")},{name:b("Series 1"),url:t("pins/capsule/143/Collectible-Pins-Capsule-Series-1")}]},{name:b("Graffiti"),items:[{name:b("Graffiti"),imageUrl:"brand/csgo/item-img/menu/graffiti.webp",url:t("graffiti")},{name:b("CS:GO Graffiti #3 Collection (Recoil)"),url:t("graffiti/collection/CSGO-Graffiti-3-Collection")},{name:b("CS:GO Graffiti #2 Collection"),url:t("graffiti/collection/CSGO-Graffiti-2-Collection")},{name:b("Trolling Graffiti Collection"),url:t("graffiti/collection/Trolling-Graffiti-Collection")},{name:b("London 2018 Team Graffiti"),url:t("graffiti/tournament/London-2018")},{name:b("Boston 2018 Team Graffiti"),url:t("graffiti/tournament/Boston-2018")},{name:b("Krakow 2017 Team Graffiti"),url:t("graffiti/tournament/Krakow-2017")},{name:b("Atlanta 2017 Team Graffiti"),url:t("graffiti/tournament/Atlanta-2017")},{name:b("Perfect World Graffiti Box"),imageUrl:"brand/csgo/item-img/items/containers/50px/c223.webp",url:t("graffiti/box/223/Perfect-World-Graffiti-Box")},{name:b("CS:GO Graffiti Box"),imageUrl:"brand/csgo/item-img/items/containers/50px/c176.webp",url:t("graffiti/box/176/CS:GO-Graffiti-Box")},{name:b("Community Graffiti Box 1"),imageUrl:"brand/csgo/item-img/items/containers/50px/c142.webp",url:t("graffiti/box/142/Community-Graffiti-Box-1")}]},{name:b("Other Items"),items:[{name:b("Keys & Other Items"),imageUrl:"brand/csgo/item-img/menu/key.webp",url:t("items")}]}]}],n=(e,a)=>{if(e.id&&a.includes(e.id))return null;if(e.items&&e.items.length>0){const t=e.items.map((e=>n(e,a))).filter((e=>null!==e));return 0===t.length&&!e.url&&e.items.length>0?null:{...e,items:t}}return e};return i.map((e=>{if(e.id&&a.includes(e.id))return null;if(e.groups){const t=e.groups.map((e=>{const t=e.items.length,i=e.items.map((e=>n(e,a))).filter((e=>null!==e));return 0===i.length&&t>0?null:{...e,items:i}})).filter((e=>null!==e));return 0===t.length&&e.groups.length>0?null:{...e,groups:t}}return e})).filter((e=>null!==e))};
+/**
+ * @license
+ * Copyright 2018 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+const X="important",ee=" !"+X,ae=l(class extends c{constructor(e){if(super(e),e.type!==m.ATTRIBUTE||"style"!==e.name||e.strings?.length>2)throw Error("The `styleMap` directive must be used in the `style` attribute and must be the only part in the attribute.")}render(e){return Object.keys(e).reduce(((a,t)=>{const i=e[t];return null==i?a:a+`${t=t.includes("-")?t:t.replace(/(?:^(webkit|moz|ms|o)|)(?=[A-Z])/g,"-$&").toLowerCase()}:${i};`}),"")}update(e,[a]){const{style:t}=e.element;if(void 0===this.ft)return this.ft=new Set(Object.keys(a)),this.render(a);for(const e of this.ft)null==a[e]&&(this.ft.delete(e),e.includes("-")?t.removeProperty(e):t[e]=null);for(const e in a){const i=a[e];if(null!=i){this.ft.add(e);const a="string"==typeof i&&i.endsWith(ee);e.includes("-")||a?t.setProperty(e,a?i.slice(0,-11):i,a?X:""):t[e]=i}}return s}});
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+class te extends c{constructor(e){if(super(e),this.it=o,e.type!==m.CHILD)throw Error(this.constructor.directiveName+"() can only be used in child bindings")}render(e){if(e===o||null==e)return this._t=void 0,this.it=e;if(e===s)return e;if("string"!=typeof e)throw Error(this.constructor.directiveName+"() called with a non-string value");if(e===this.it)return this._t;this.it=e;const a=[e];return a.raw=a,this._t={_$litType$:this.constructor.resultType,strings:a,values:[]}}}te.directiveName="unsafeHTML",te.resultType=1;const ie=l(te);var ne,se,oe=function(e,a,t,i){for(var n,s=arguments.length,o=s<3?a:null===i?i=Object.getOwnPropertyDescriptor(a,t):i,r=e.length-1;r>=0;r--)(n=e[r])&&(o=(s<3?n(o):s>3?n(a,t,o):n(a,t))||o);return s>3&&o&&Object.defineProperty(a,t,o),o};const re=n`<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class="search-icon"
+  opacity="0.5"
+>
+  <path
+    d="M15.4898 14.5735L11.6818 10.6129C12.6612 9.45085 13.1981 7.97978 13.1973 6.45999C13.1973 2.89801 10.2993 0 6.73734 0C3.17535 0 0.277344 2.89801 0.277344 6.45999C0.277344 10.022 3.17535 12.92 6.73734 12.92C8.07456 12.92 9.34886 12.5167 10.4384 11.751L14.2753 15.7416C14.4357 15.9082 14.6514 16 14.8825 16C15.1013 16 15.3089 15.9166 15.4665 15.7649C15.6273 15.6099 15.7201 15.3974 15.7244 15.174C15.7288 14.9507 15.6444 14.7347 15.4898 14.5735ZM6.73734 1.68522C9.37021 1.68522 11.5121 3.82713 11.5121 6.45999C11.5121 9.09286 9.37021 11.2348 6.73734 11.2348C4.10447 11.2348 1.96256 9.09286 1.96256 6.45999C1.96256 3.82713 4.10447 1.68522 6.73734 1.68522Z"
+    fill="white"
+  />
+</svg>`,le=n`<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  class="drop-arrow"
+>
+  <path
+    d="M15 35 L50 70 L85 35"
+    fill="none"
+    stroke="#FFD700"
+    stroke-width="12"
+    stroke-linecap="square"
+  />
+</svg>`,ce=n`<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  opacity="0.5"
+>
+  <path d="M18 6L6 18" stroke-width="2" stroke-linecap="round" stroke="white" />
+  <path d="M6 6L18 18" stroke-width="2" stroke-linecap="round" stroke="white" />
+</svg>`,me=n`<svg viewBox="0 0 24 24" fill="white" opacity="0.5">
+  <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+</svg>`;let pe=class extends i{constructor(){super(...arguments),this.isOpen=!1,this.hoveredNestedDropdown=[],this.searchQuery=""}get _filteredGroups(){if(!this.tabData.groups)return[];if(!this.searchQuery.trim())return this.tabData.groups;const e=this.searchQuery.toLowerCase();return this.tabData.groups.map((a=>{const t=a.items.filter((a=>a.name.toLowerCase().includes(e)));return{...a,items:t}})).filter((e=>e.items.length>0))}renderItems(e){return n`
+      ${R(e,(e=>e.url),(e=>{const a=`${this.tabData.name}-${e.name}-${e.url}`,t=this.hoveredNestedDropdown.find((e=>e.id===a));return n`
+            <li
+              class="item"
+              @mouseenter=${this.handleItemMouseEnter}
+              @mouseleave=${this.handleItemMouseLeave}
+              id=${a}
+            >
+              ${e.url?n`<a href=${e.url} class="item-link">
+                    ${e.imageUrl?n`<img
+                          src="${r(e.imageUrl)}"
+                          alt="${e.name}"
+                          class="item-image"
+                        />`:o}
+                    <span>${e.name}</span>
+                  </a>`:n`<div>
+                    ${e.imageUrl?n`<img
+                          src="${r(e.imageUrl)}"
+                          alt="${e.name}"
+                          class="item-image"
+                        />`:o}
+                    <span>${e.name}</span>
+                  </div>`}
+              ${e.items?n`
+                    <div
+                      class=${_({"nested-dropdown":!0,visible:!!t})}
+                      style=${t?ae({left:`${t.right}px`,top:t.top-5+"px"}):{}}
+                    >
+                      <ul>
+                        ${this.renderItems(e.items)}
+                      </ul>
+                    </div>
+                    ${le}
+                  `:o}
+            </li>
+          `}))}
+    `}render(){const e=this.tabData.groups&&this.tabData.groups.length>0,a=this.tabData.groups?.reduce(((e,a)=>e+a.items.length),0)??0,t=n`
+      ${this.tabData.name} ${e?le:o}
+    `,i=this.tabData.link?n`<a class="nav-button" href="${this.tabData.link}">${t}</a>`:n`<button class="nav-button" @click=${this.handleClick}>
+          ${t}
+        </button>`,s=e?n`
+          <div class="dropdown">
+            <ul>
+              ${a>10?n`
+                    <div class="search-container">
+                      <input
+                        type="text"
+                        class="dropdown-search"
+                        placeholder=${b(w`Search for ${this.tabData.name}...`)}
+                        .value=${this.searchQuery}
+                        @input=${this.handleSearchInput}
+                        @click=${e=>e.stopPropagation()}
+                      />
+                    </div>
+
+                    <div class="separator"></div>
+                  `:o}
+              ${R(this._filteredGroups,(e=>e.name),((e,a)=>n`
+                  ${0!==a?n`<div class="separator"></div>`:o}
+                  ${e.name?n`<div class="group-name">${e.name}</div>`:o}
+                  ${this.renderItems(e.items)}
+                `))}
+            </ul>
+          </div>
+        `:o;return n` ${i} ${s} `}handleClick(){this.isOpen=!this.isOpen}handleItemMouseEnter(e){if(!e.target)return;const a=e.target,t=a.getBoundingClientRect();this.hoveredNestedDropdown=[...this.hoveredNestedDropdown,{id:a.id,right:t.right,top:t.top}]}handleItemMouseLeave(e){if(!e.target)return;const a=e.target.id;this.hoveredNestedDropdown=this.hoveredNestedDropdown.filter((e=>e.id!==a))}connectedCallback(){super.connectedCallback(),this.addEventListener("mouseenter",this.handleMouseEnter),this.addEventListener("mouseleave",this.handleMouseLeave)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("mouseenter",this.handleMouseEnter),this.removeEventListener("mouseleave",this.handleMouseLeave)}handleMouseEnter(){this.isOpen=!0}handleMouseLeave(){this.isOpen=!1}handleSearchInput(e){this.searchQuery=e.target.value}};pe.styles=t`
+    :host {
+      position: relative;
+      --nav-dropdown-gap: 4px;
+    }
+
+    .nav-button {
+      all: unset;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: inherit;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.4px;
+      cursor: pointer;
+      padding: 6px 8px;
+      transition: color 0.2s;
+    }
+
+    .nav-button:hover {
+      color: #fff;
+    }
+
+    .drop-arrow {
+      color: var(--primary-500);
+      width: 10px;
+      height: 10px;
+    }
+
+    .drop-arrow > path {
+      transition: d 0.15s ease-out;
+    }
+
+    :host([data-is-open]) .drop-arrow > path {
+      d: path('M15 65 L50 30 L85 65');
+    }
+
+    ul {
+      all: unset;
+      display: block;
+      list-style-type: none;
+      overflow-y: auto;
+      max-height: min(70dvh, 1000px);
+      min-height: 0px;
+    }
+
+    ul::-webkit-scrollbar {
+      width: 6px;
+    }
+    ul::-webkit-scrollbar-thumb {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    ul::-webkit-scrollbar-track {
+      background-color: var(--gray-300);
+    }
+
+    .dropdown {
+      background-color: var(--gray-300);
+      position: absolute;
+      top: calc(100% + var(--nav-dropdown-gap));
+      left: 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      pointer-events: none;
+      transition: all 0.1s ease-in-out;
+      opacity: 0;
+      min-width: 200px;
+      padding: 5px 0;
+    }
+
+    .dropdown::before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      width: 100%;
+      height: var(--nav-dropdown-gap);
+    }
+
+    :host([data-is-open]) .dropdown {
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    li {
+      position: relative;
+      padding: 0px 16px;
+      font-size: 14px;
+      min-height: 30px;
+    }
+
+    li:hover {
+      background-color: var(--gray-500);
+    }
+
+    .group-name {
+      font-weight: bold;
+      color: #888;
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+
+    .separator {
+      height: 1px;
+      background-color: #444;
+      margin: 5px 0;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item > .drop-arrow {
+      position: absolute;
+      right: 10px;
+      transform: rotate(90deg);
+    }
+
+    .item-image {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+      margin-left: -2px;
+    }
+
+    a {
+      all: unset;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 30px;
+    }
+
+    .nested-dropdown {
+      position: fixed;
+      background-color: var(--gray-300);
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      min-width: 200px;
+      z-index: 10;
+      pointer-events: none;
+      transition: all 0.1s ease-in-out;
+      opacity: 0;
+      padding: 5px 0;
+      display: none;
+    }
+
+    .nested-dropdown.visible {
+      pointer-events: auto;
+      opacity: 1;
+      display: flex;
+    }
+
+    .nested-dropdown > ul {
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      min-width: 200px;
+      max-height: min(30dvh, 1000px);
+    }
+
+    .search-container {
+      padding: 10px 16px 10px 16px;
+      min-height: 30px;
+    }
+    .dropdown-search {
+      height: 30px;
+      width: 100%;
+      background: transparent;
+      border: solid 1px #4e5152;
+      border-radius: 0.25rem;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: white;
+      outline: none;
+    }
+  `,oe([y({type:Object})],pe.prototype,"tabData",void 0),oe([y({type:Boolean,attribute:"data-is-open",reflect:!0})],pe.prototype,"isOpen",void 0),oe([y({attribute:!1})],pe.prototype,"global",void 0),oe([S()],pe.prototype,"hoveredNestedDropdown",void 0),oe([S()],pe.prototype,"searchQuery",void 0),pe=oe([v("desktop-nav-tab"),x()],pe);let ge=ne=class extends i{constructor(){super(...arguments),this.query="",this.results=[],this.showDropdown=!1,this.isLoading=!1,this.selectedIndex=-1}static get isInitialized(){return null!==ne.fuse&&null!==ne.searchItems}render(){return n`
+      <form @submit=${this.handleSubmit} @blur=${this.handleBlur}>
+        <input
+          type="text"
+          placeholder=${b("Search")}
+          .value=${this.query}
+          @input=${this.handleInput}
+          @focus=${this.handleInteraction}
+          @click=${this.handleInteraction}
+          @keydown=${this.handleKeyDown}
+        />
+        <div
+          class=${_({"search-icon":!0,disabled:!this.query})}
+          @click=${this.handleSubmit}
+        >
+          ${re}
+        </div>
+
+        ${this.renderDropdown()}
+      </form>
+    `}renderDropdown(){return n`
+      <div
+        class="dropdown ${this.showDropdown&&this.results.length>0?"visible":""}"
+      >
+        <div class="scroll-container">
+          ${this.isLoading?n`${((e,a)=>{const t=void 0===a?0:e,i=(a=a??e)-t;return Array.from({length:i},((e,a)=>a+t))})(8).map((e=>n`<div
+                    class="skeleton-item skeleton"
+                    style=${ae({width:`calc(${ne.skeletonWidths[e%8]}% - 20px)`})}
+                  ></div>`))}`:n`${this.results.map(((e,a)=>n`
+                  <a
+                    class="dropdown-item ${this.selectedIndex===a?"selected":""}"
+                    href=${`${this.global.wikiDomain}${e.url}`}
+                  >
+                    <div>${e.name}</div>
+                    <div class="group">${e.group}</div>
+                  </a>
+                `))}`}
+        </div>
+      </div>
+    `}handleBlur(){this.showDropdown=!1,this.selectedIndex=-1}async handleInteraction(){ne.isInitialized||(this.isLoading=!0,await this.initializeSearch(),this.isLoading=!1)}async initializeSearch(){if(!ne.isInitialized)try{const[{default:e},a]=await Promise.all([import("./fuse-CqtIuP_i.js"),this.fetchSearchData()]);ne.searchItems=a,ne.fuse=new e(ne.searchItems,{keys:["name","group"],threshold:.3})}catch(e){console.error("Failed to initialize search:",e)}}async fetchSearchData(){const e=await fetch(r("brand/csgo/search-data.json")),a=await e.json();return(t=a,Object.entries(t)).flatMap((([e,a])=>a.map((([a,t])=>({name:a,url:t,group:e})))));var t}async handleInput(e){this.query=e.target.value,await this.updateResults()}async updateResults(){this.showDropdown=!0,ne.isInitialized||await this.initializeSearch(),ne.fuse&&this.query?this.results=ne.fuse.search(this.query,{limit:30}).map((e=>e.item)):this.results=[],this.selectedIndex=-1}handleKeyDown(e){if(this.showDropdown&&0!==this.results.length)if("ArrowDown"===e.key)e.preventDefault(),this.selectedIndex=Math.min(this.selectedIndex+1,this.results.length-1);else if("ArrowUp"===e.key)e.preventDefault(),this.selectedIndex=Math.max(this.selectedIndex-1,-1);else if("Enter"===e.key){if(this.selectedIndex>=0){e.preventDefault();const a=this.results[this.selectedIndex];window.location.href=`${this.global.wikiDomain}${a.url}`}}else"Escape"===e.key&&(this.showDropdown=!1,this.selectedIndex=-1)}handleSubmit(e){if(e.preventDefault(),this.query){const e=`${this.global.wikiDomain}/google-search?q=${encodeURIComponent(this.query)}`;window.location.href=e}}};ge.styles=t`
+    :host {
+      font-size: 13px;
+      width: 210px;
+    }
+    input {
+      all: unset;
+      border: 1px solid #fff2;
+      padding: 10px 14px 10px 38px;
+      border-radius: 5px;
+      font-size: 14px;
+      max-width: none;
+      flex-grow: 1;
+    }
+    form {
+      display: flex;
+      position: relative;
+      width: 100%;
+    }
+    .search-icon {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 7px;
+      cursor: pointer;
+    }
+    .search-icon:hover {
+      opacity: 0.8;
+    }
+    .search-icon.disabled {
+      pointer-events: none;
+    }
+    .search-icon.disabled > svg {
+      opacity: 0.5;
+    }
+    .search-icon > svg {
+      opacity: 0.9;
+    }
+    .dropdown {
+      background-color: var(--gray-300);
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      right: 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 0.1s ease-in-out;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .dropdown.visible {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+    .scroll-container {
+      overflow-y: auto;
+      width: 100%;
+      max-height: min(70dvh, 1000px);
+    }
+    .scroll-container::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .scroll-container::-webkit-scrollbar-track {
+      background-color: var(--gray-300);
+    }
+    .dropdown-item {
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+    }
+    .dropdown-item:hover,
+    .dropdown-item.selected {
+      background-color: var(--gray-500);
+    }
+    .group {
+      font-size: 10px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .skeleton {
+      background: linear-gradient(90deg, #fff1 25%, #fff2 50%, #fff1 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite ease-in-out;
+    }
+    .skeleton-item {
+      height: 20px;
+      margin: 10px;
+      border-radius: 4px;
+    }
+    a {
+      all: unset;
+      cursor: pointer;
+    }
+    input {
+      width: 100%;
+    }
+
+    @keyframes loading {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+  `,ge.fuse=null,ge.searchItems=null,ge.skeletonWidths=[100,80,90,70,80,60,70,90],oe([y({type:String})],ge.prototype,"query",void 0),oe([S()],ge.prototype,"results",void 0),oe([S()],ge.prototype,"showDropdown",void 0),oe([S()],ge.prototype,"isLoading",void 0),oe([S()],ge.prototype,"selectedIndex",void 0),oe([y({attribute:!1})],ge.prototype,"global",void 0),ge=ne=oe([v("search-bar"),x()],ge);let de=se=class extends i{constructor(){super(...arguments),this.homeUrl="/",this.desktopSlotPosition="bottom",this.isStaging=!1,this.blacklistedIds=[],this.isScrolled=!1,this.isMenuOpen=!1,this.expandedCategory=null,this.isSearchOpen=!1,this.navbarTabs=null,this.forceMobile=!1,this.hideTabs=!1,this.hideSearch=!1}render(){const e={isStaging:this.isStaging,wikiDomain:this.isStaging?"https://stash-staging.clash.gg":"https://stash.clash.gg"};this.navbarTabs||(this.navbarTabs=Q({isStaging:this.isStaging,blacklistedIds:this.blacklistedIds}));const a=`\n      :host {\n        --navbar-height: 58px;\n      }\n\n      .nav-items {\n        display: flex;\n        align-items: center;\n        gap: 0px;\n        margin: 7px 0;\n      }\n\n      .navbar-contents {\n        max-width: var(--clash-navbar-max-width, 1450px);\n        margin: 0 auto;\n        padding: 0 var(--clash-navbar-horizontal-padding, 20px);\n        position: relative;\n        transition: height 0.3s;\n      }\n\n      nav {\n        display: block;\n        position: fixed;\n        top: 0;\n        left: 0;\n        right: 0;\n        background-color: var(--gray-500);\n        color: #bbb;\n        z-index: 50;\n      }\n\n      ${this.forceMobile?se.mobileStyles:`\n        @media (min-width: 1300px) {\n          ${se.desktopStyles}\n        }\n        @media (max-width: 1300px) {\n          ${se.mobileStyles}\n        }\n        `}\n\n      .slot-parent {\n        flex-grow: 1;\n      }\n\n      a {\n        all: unset;\n        cursor: pointer;\n      }\n\n      .navbar-inner-contents {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        align-self: stretch;\n        position: relative;\n        z-index: 10;\n      }\n\n      .navbar-inner-contents[data-desktop-slot-position='top'] {\n        width: 100%;\n      }\n      .navbar-inner-contents[data-desktop-slot-position='bottom'] {\n        flex-basis: 0;\n      }\n      .nav-items {\n        flex-grow: 1;\n      }`;return n`
+      ${ie(`<style>${a}</style>`)}
+
+      <div class="navbar-padding"></div>
+
+      <div
+        class=${_({"mobile-search-container":!0,open:this.isSearchOpen})}
+      >
+        <search-bar class="search-bar" .global=${e}></search-bar>
+      </div>
+
+      <nav>
+        <div class="navbar-contents" ?data-shorter=${this.isScrolled}>
+          <div
+            class="navbar-inner-contents"
+            data-desktop-slot-position=${this.desktopSlotPosition}
+            ?data-hide=${this.isScrolled}
+          >
+            <slot name="logo-left"></slot>
+            <clash-logo .homeUrl=${this.homeUrl}></clash-logo>
+
+            ${"top"===this.desktopSlotPosition?n`<div class="slot-parent">
+                  <slot></slot>
+                </div>`:o}
+
+            <div class="awp-approximate-padding"></div>
+          </div>
+
+          <img
+            src=${r("brand/csgo/navbar-hero.webp")}
+            alt="Logo"
+            class="awp-img"
+            ?data-hide=${this.isScrolled}
+          />
+
+          <div
+            class="nav-items"
+            data-desktop-slot-position=${this.desktopSlotPosition}
+          >
+            <a href=${this.homeUrl} class="home-button">
+              <img src=${r("home.svg")} alt="Home" />
+            </a>
+
+            ${this.hideTabs?o:n`<div class="desktop-nav-tabs">
+                  ${R(this.navbarTabs,(e=>e.name),(a=>n`
+                      <desktop-nav-tab
+                        .tabData=${a}
+                        .global=${e}
+                      ></desktop-nav-tab>
+                    `))}
+                </div>`}
+            ${"bottom"===this.desktopSlotPosition?n`<div class="slot-parent">
+                  <slot></slot>
+                </div>`:o}
+            ${this.hideSearch?o:n`<search-bar
+                  class="desktop-search-bar"
+                  .global=${e}
+                ></search-bar>`}
+
+            <div class="mobile-nav-buttons">
+              ${this.hideSearch?o:n`<button
+                    class="search-toggle"
+                    @click=${this.toggleMobileSearch}
+                  >
+                    ${this.isSearchOpen?ce:re}
+                  </button>`}
+              ${this.hideTabs?o:n`<button
+                    class="hamburger"
+                    @click=${this.toggleMobileMenu}
+                  >
+                    ${this.isMenuOpen?ce:me}
+                  </button>`}
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class=${_({"mobile-menu":!0,"no-scrollbar":!0,open:this.isMenuOpen})}
+      >
+        <div class="no-scrollbar">
+          ${R(this.navbarTabs,(e=>e.name),(e=>n`<mobile-nav-tab .tabData=${e}></mobile-nav-tab>`))}
+        </div>
+      </div>
+    `}handleScroll(){this.isScrolled=window.scrollY>80}toggleMobileMenu(){this.isMenuOpen=!this.isMenuOpen,this.isMenuOpen&&(this.isSearchOpen=!1)}toggleMobileSearch(){this.isSearchOpen=!this.isSearchOpen,this.isSearchOpen&&(this.isMenuOpen=!1)}connectedCallback(){super.connectedCallback(),window.addEventListener("scroll",this.handleScroll.bind(this)),window.addEventListener("lit-localize-status",this.handleLocaleChange.bind(this))}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("scroll",this.handleScroll.bind(this)),window.removeEventListener("lit-localize-status",this.handleLocaleChange.bind(this))}handleLocaleChange(){var e,a;e=M.CSGO,a=this.isStaging,Y(e,a,!0),this.navbarTabs=Q({isStaging:this.isStaging,blacklistedIds:this.blacklistedIds}),this.requestUpdate()}};de.fullHeightPx=156,de.shortHeightPx=58,de.desktopStyles=t`
+    .home-button {
+      padding: 6px;
+      margin-right: 5px;
+      transform: translateY(-0.5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar-contents {
+      height: ${se.fullHeightPx}px;
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+    }
+    .navbar-contents[data-shorter] {
+      height: ${se.shortHeightPx}px;
+    }
+    .navbar-padding {
+      height: ${se.fullHeightPx}px;
+    }
+    .navbar-inner-contents {
+      height: 100px;
+      transition:
+        height 0.3s,
+        opacity 0.15s,
+        transform 0.3s;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .navbar-inner-contents[data-hide] {
+      height: 0px;
+      opacity: 0;
+      transform: translateY(
+        ${se.shortHeightPx-se.fullHeightPx}px
+      );
+    }
+    .desktop-nav-tabs {
+      display: flex;
+      align-items: center;
+    }
+    .search-bar {
+      margin-left: auto;
+    }
+    .mobile-nav-buttons {
+      display: none;
+    }
+    .mobile-menu {
+      display: none;
+    }
+    .mobile-search-container {
+      display: none;
+    }
+    .awp-img {
+      position: absolute;
+      bottom: -16px;
+      right: -100px;
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.15s;
+      user-select: none;
+    }
+
+    .awp-img[data-hide] {
+      opacity: 0;
+    }
+
+    .awp-approximate-padding {
+      width: 380px;
+    }
+    .desktop-search-bar {
+      margin-left: auto;
+      width: var(--clash-navbar-search-width, 200px);
+    }
+  `,de.mobileStyles=t`
+    .navbar-contents {
+      height: ${se.shortHeightPx}px;
+      display: flex;
+      align-items: center;
+    }
+    .desktop-nav-tabs,
+    .desktop-search-bar,
+    .home-button,
+    .awp-img {
+      display: none;
+    }
+    .navbar-padding {
+      height: ${se.shortHeightPx}px;
+    }
+    clash-logo {
+      height: 40px;
+      --clash-logo-height: 40px;
+      --clash-logo-gap: 8px;
+    }
+    .mobile-nav-buttons {
+      display: flex;
+      gap: 16px;
+    }
+    .search-toggle {
+      transform: translateY(1px);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      z-index: 30;
+      top: var(--navbar-height);
+      left: 0;
+      right: 0;
+      height: 0;
+      background-color: var(--gray-500);
+      overflow-y: auto;
+      transition: height 0.2s ease-out;
+      overscroll-behavior: contain;
+    }
+
+    .mobile-menu.open {
+      height: calc(100dvh - var(--navbar-height));
+    }
+
+    .mobile-search-container {
+      position: fixed;
+      top: var(--navbar-height);
+      left: 0;
+      right: 0;
+      background-color: var(--gray-500);
+      display: flex;
+      align-items: center;
+      padding: 0 16px 10px;
+      transform: translateY(-100%);
+      transition: transform 0.2s ease-out;
+      z-index: 20;
+    }
+
+    .mobile-search-container.open {
+      transform: translateY(0);
+    }
+
+    .hamburger,
+    .search-toggle {
+      width: 24px;
+      height: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+    }
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      height: 44px;
+      padding: 0 16px;
+      font-size: 12px;
+    }
+
+    .group-header svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .group-header > svg > path {
+      transition: d 0.15s ease-out;
+    }
+
+    .group-header[data-expanded] > svg > path {
+      d: path('M15 65 L50 30 L85 65');
+    }
+
+    .group-items {
+      max-height: 0;
+      overflow: hidden;
+      background-color: var(--gray-700);
+      transition: max-height 0.15s ease-out;
+    }
+
+    .group-items[data-expanded] {
+      max-height: 314px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .item {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      font-size: 14px;
+      padding-left: 16px;
+      gap: 10px;
+    }
+
+    .shadow-top,
+    .shadow-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 12px;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .shadow-top {
+      top: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(var(--gray-700-rgb), 0.8),
+        transparent
+      );
+    }
+
+    .shadow-bottom {
+      bottom: 0;
+      background: linear-gradient(
+        to top,
+        rgba(var(--gray-700-rgb), 0.8),
+        transparent
+      );
+    }
+
+    .no-scrollbar {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .item-image {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+      margin-left: -2px;
+    }
+
+    .separator {
+      height: 1px;
+      background-color: #444;
+      margin: 5px 0;
+    }
+
+    .group-name {
+      font-weight: bold;
+      color: #888;
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  `,de.styles=[T],oe([y({attribute:"home-url"})],de.prototype,"homeUrl",void 0),oe([y({reflect:!0,attribute:"desktop-slot-position"})],de.prototype,"desktopSlotPosition",void 0),oe([y({attribute:"is-staging",type:Boolean})],de.prototype,"isStaging",void 0),oe([y({attribute:"blacklisted-ids",type:Array})],de.prototype,"blacklistedIds",void 0),oe([S()],de.prototype,"isScrolled",void 0),oe([S()],de.prototype,"isMenuOpen",void 0),oe([S()],de.prototype,"expandedCategory",void 0),oe([S()],de.prototype,"isSearchOpen",void 0),oe([S()],de.prototype,"navbarTabs",void 0),oe([y({type:Boolean,reflect:!0,attribute:"force-mobile"})],de.prototype,"forceMobile",void 0),oe([y({type:Boolean,reflect:!0,attribute:"hide-tabs"})],de.prototype,"hideTabs",void 0),oe([y({type:Boolean,reflect:!0,attribute:"hide-search"})],de.prototype,"hideSearch",void 0),de=se=oe([v("clash-navbar"),x()],de);let ue=class extends i{constructor(){super(...arguments),this.expandedItems=new Set}toggleExpanded(e){this.expandedItems.has(e)?this.expandedItems.delete(e):this.expandedItems.add(e),this.requestUpdate()}renderItem(e,a=0){const t=e.items&&e.items.length>0,i=`${a}-${e.name}`,s=this.expandedItems.has(i);return n`
+      ${t?n`
+            <div
+              class="item"
+              style="padding-left: ${20+20*a}px;"
+              @click=${()=>this.toggleExpanded(i)}
+              ?data-expanded=${s}
+            >
+              ${le}
+              ${e.imageUrl?n`<img
+                    src="${r(e.imageUrl)}"
+                    alt="${e.name}"
+                    class="item-image"
+                  />`:o}
+              <span>${e.name}</span>
+            </div>
+            <div class="group-items" ?data-expanded=${s}>
+              ${e.url?this.renderItem({name:b(w`All ${e.name}`),url:e.url},a+1):o}
+              ${e.items?.map((e=>this.renderItem(e,a+1)))}
+            </div>
+          `:n`
+            ${e.url?n`<a
+                  href=${e.url}
+                  class="item"
+                  style="padding-left: ${22+22*a}px;"
+                >
+                  ${e.imageUrl?n`<img
+                        src="${r(e.imageUrl)}"
+                        alt="${e.name}"
+                        class="item-image"
+                      />`:o}
+                  <span>${e.name}</span>
+                </a>`:n`<div
+                  class="item"
+                  style="padding-left: ${22+22*a}px;"
+                >
+                  ${e.imageUrl?n`<img
+                        src="${r(e.imageUrl)}"
+                        alt="${e.name}"
+                        class="item-image"
+                      />`:o}
+                  <span>${e.name}</span>
+                </div>`}
+          `}
+    `}render(){const{name:e,groups:a,link:t}=this.tabData,i=a&&a.length>0,s=this.expandedItems.has(e);return n`
+      <div>
+        ${i?n`
+              <div
+                class="group-header"
+                ?data-expanded=${s}
+                @click=${()=>this.toggleExpanded(e)}
+              >
+                ${le} ${e}
+              </div>
+            `:n`<a href="${t}" class="group-header">${e}</a>`}
+
+        <div class="group-items" ?data-expanded=${s}>
+          ${a?.map(((e,a)=>n`
+              ${0!==a?n`<div class="separator"></div>`:o}
+              ${e.name?n`<div class="group-name">${e.name}</div>`:o}
+              ${e.items.map((e=>this.renderItem(e)))}
+            `))}
+        </div>
+      </div>
+    `}};ue.styles=t`
+    .group-header,
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 44px;
+      padding: 0 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .group-header {
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 12px;
+    }
+
+    .item {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 14px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.15s ease-out;
+    }
+
+    svg > path {
+      transition: d 0.15s ease-out;
+    }
+
+    [data-expanded] > svg > path {
+      d: path('M15 65 L50 30 L85 65');
+    }
+
+    .group-items {
+      height: 0;
+      overflow: hidden;
+      background-color: var(--gray-700);
+      transition: height 0.15s ease-out;
+    }
+
+    .group-items[data-expanded] {
+      height: auto;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .item-image {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+      margin-left: -2px;
+    }
+
+    .separator {
+      height: 1px;
+      background-color: #444;
+      margin: 5px 0;
+    }
+
+    .group-name {
+      font-weight: bold;
+      color: #888;
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  `,oe([y({type:Object})],ue.prototype,"tabData",void 0),oe([S()],ue.prototype,"expandedItems",void 0),ue=oe([v("mobile-nav-tab"),x()],ue);const he=t`
+  clash-logo {
+    --clash-logo-height: 48px;
+    --clash-logo-gap: 10px;
+  }
+`;var be=function(e,a,t,i){for(var n,s=arguments.length,o=s<3?a:null===i?i=Object.getOwnPropertyDescriptor(a,t):i,r=e.length-1;r>=0;r--)(n=e[r])&&(o=(s<3?n(o):s>3?n(a,t,o):n(a,t))||o);return s>3&&o&&Object.defineProperty(a,t,o),o};let fe=class extends i{render(){if(!this.group)throw new Error("[group-section] Group is not defined");const e=q(M.CSGO,this.group,this.global.isStaging),a=this.group===K.SOCIAL,t=this.link?n`<a href=${this.link} class="title-link">
+          <div class="title">${D(this.group)}</div>
+        </a>`:n`<div class="title">${D(this.group)}</div>`;return n`
+      <section>
+        ${t}
+        <ul>
+          ${e.map((e=>{const t=a&&e.icon?n`<img
+                    src=${r(`icons/${e.icon}`)}
+                    class="icon"
+                    alt=${e.name}
+                  />`:o;return n`
+              <li>
+                <a
+                  href=${i=e.link,i.startsWith("http")?i:`${A.mainDomain}${i}`}
+                  data-track-event=${e.seo?.trackEvent??o}
+                  data-track-param-game_name=${e.seo?.trackParamGameName??o}
+                  >${t}<span>${e.seo?.name??e.name}</span></a
+                >
+              </li>
+            `;var i}))}
+        </ul>
+      </section>
+    `}};fe.styles=t`
+    :host {
+      max-width: 99999px;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      background-color: rgba(var(--gray-700-rgb), 0.4);
+    }
+    .title {
+      padding: 16px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .title-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.1s ease-out;
+    }
+    .title-link:hover {
+      color: white;
+    }
+    ul {
+      all: unset;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px;
+      padding-top: 0;
+    }
+    @media (min-width: 768px) {
+      section {
+        background-color: transparent;
+      }
+      .title {
+        padding: 20px;
+      }
+      ul {
+        padding: 20px;
+        padding-top: 0;
+      }
+    }
+    @media (min-width: 1024px) {
+      section {
+        flex-grow: 1;
+        flex-basis: 0;
+        flex-shrink: 1;
+      }
+    }
+    @media (min-width: 1280px) {
+      :host {
+        max-width: 224px;
+      }
+    }
+    li {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      line-height: 20px;
+    }
+    li:hover {
+      text-decoration: underline;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      color: white;
+      /* TODO import the icon as avg and set the color properly */
+      filter: invert(1);
+    }
+  `,be([y()],fe.prototype,"group",void 0),be([y()],fe.prototype,"link",void 0),be([y({attribute:!1})],fe.prototype,"global",void 0),fe=be([v("group-section"),x()],fe);var we=function(e,a,t,i){for(var n,s=arguments.length,o=s<3?a:null===i?i=Object.getOwnPropertyDescriptor(a,t):i,r=e.length-1;r>=0;r--)(n=e[r])&&(o=(s<3?n(o):s>3?n(a,t,o):n(a,t))||o);return s>3&&o&&Object.defineProperty(a,t,o),o};const xe=n`<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="14"
+  height="14"
+  viewBox="0 0 24 24"
+>
+  <path
+    fill="currentColor"
+    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"
+  />
+</svg>`,ve=n`<svg
+  stroke="currentColor"
+  fill="currentColor"
+  stroke-width="0"
+  viewBox="0 0 24 24"
+  class="css-1504nod"
+  height="1em"
+  width="1em"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path fill="none" d="M0 0h24v24H0z"></path>
+  <path
+    d="M17.38 10.79l-2.2-2.2c-.28-.28-.36-.67-.25-1.02.37-1.12.57-2.32.57-3.57 0-.55.45-1 1-1H20c.55 0 1 .45 1 1 0 9.39-7.61 17-17 17-.55 0-1-.45-1-1v-3.49c0-.55.45-1 1-1 1.24 0 2.45-.2 3.57-.57.35-.12.75-.03 1.02.24l2.2 2.2c2.83-1.45 5.15-3.76 6.59-6.59z"
+  ></path>
+</svg>`;let ke=class extends i{constructor(){super(...arguments),this.homeUrl="/"}render(){const e=(new Date).getFullYear();return n`
+      <div class="container">
+        <clash-logo class="clash-logo" .homeUrl=${this.homeUrl}></clash-logo>
+
+        <div>
+          <slot name="inner-information"></slot>
+        </div>
+        <div>
+          ${b(n`
+            Clash.gg is owned and operated by Rust Clash Entertainment Ltd
+            located at
+            <p style="display: inline">
+              Thermistokli Dervi, 48, 3rd Floor, Office 306, 1065, Nicosia,
+              Cyprus
+            </p>
+          `)}
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            ${xe}
+            <a href="mailto:${A.contactEmail}"
+              >${A.contactEmail}</a
+            >
+          </div>
+          <div class="contact-item">
+            ${ve}
+            <a href="tel:+353212128322">+353 21 212 8322</a>
+          </div>
+        </div>
+
+        <p>${b(n`© All rights reserved 2021 - ${e}`)}</p>
+      </div>
+    `}};ke.styles=[t`
+      :host {
+        display: block;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      p {
+        all: unset;
+      }
+      @media (max-width: 768px) {
+        .clash-logo {
+          display: none;
+        }
+      }
+    `,he],we([y()],ke.prototype,"homeUrl",void 0),ke=we([v("information-component"),x()],ke);var Ce=function(e,a,t,i){for(var n,s=arguments.length,o=s<3?a:null===i?i=Object.getOwnPropertyDescriptor(a,t):i,r=e.length-1;r>=0;r--)(n=e[r])&&(o=(s<3?n(o):s>3?n(a,t,o):n(a,t))||o);return s>3&&o&&Object.defineProperty(a,t,o),o};let ye=class extends i{render(){return n`
+      <div class="container">
+        <div class="age-restriction"><span>18+</span></div>
+
+        <div class="info">
+          <span>
+            ${b(n`
+              By accessing this site you attest that
+              <b>you are over 18 years old.</b>
+            `)}
+          </span>
+          <span>
+            ${b(n`
+              Have a Gambling Problem?
+              <a href="https://begambleaware.org" rel="noreferrer">
+                Reach out for help
+              </a>
+            `)}
+          </span>
+        </div>
+      </div>
+    `}};ye.styles=t`
+    :host {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .age-restriction {
+      aspect-ratio: 1;
+      box-sizing: border-box;
+      padding: 7px 5px 0 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 4px solid #ef4444;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+        drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+      flex-shrink: 0;
+    }
+    .age-restriction span {
+      transform: translateY(-4px);
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    a {
+      position: relative;
+      font-weight: 600;
+      color: white;
+    }
+  `,ye=Ce([v("disclaimers-component"),x()],ye);var Se=function(e,a,t,i){for(var n,s=arguments.length,o=s<3?a:null===i?i=Object.getOwnPropertyDescriptor(a,t):i,r=e.length-1;r>=0;r--)(n=e[r])&&(o=(s<3?n(o):s>3?n(a,t,o):n(a,t))||o);return s>3&&o&&Object.defineProperty(a,t,o),o};let $e=class extends i{constructor(){if(super(),globalThis.noltThis=this,"undefined"!=typeof document){const e=document.createElement("script");e.src=r("js/patched-nolt-min.js"),this.shadowRoot?.appendChild(e)}}render(){return n`
+      <div>
+        <a
+          data-nolt="button"
+          class="nolt-feedback-button"
+          href="https://suggestions.clash.gg/"
+        >
+          ${b("Leave your feedback")}
+        </a>
+      </div>
+    `}};$e.styles=t`
+    a {
+      font-weight: bold;
+      color: var(--primary-500-color, #007bff);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .nolt-feedback-button {
+      --shadow-color: rgba(0, 0, 0, 0.25);
+      display: inline-flex;
+      background: #fd6a65;
+      border-radius: 4px;
+      color: #fff;
+      font:
+        normal normal 500 13px/1.2 Helvetica Neue,
+        Arial,
+        sans-serif;
+      padding: 6px 10px;
+      white-space: nowrap;
+      outline: 0;
+      text-decoration: none;
+      text-shadow:
+        0.05em 0 var(--shadow-color),
+        0 0.05em var(--shadow-color),
+        -0.05em 0 var(--shadow-color),
+        0 -0.05em var(--shadow-color);
+    }
+    .nolt-feedback-button:active,
+    .nolt-feedback-button:focus,
+    .nolt-feedback-button:hover {
+      background: #fc4e49;
+    }
+    .nolt-feedback-button:active {
+      box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1);
+    }
+    .nolt-feedback-button:before {
+      content: ' ';
+      display: inline-block;
+      position: relative;
+      top: 1px;
+      margin-right: 6px;
+      background: transparent 0 0 no-repeat;
+      background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMCAwaDEydjEySDB6Ii8+PHBhdGggZmlsbC1vcGFjaXR5PSIuOCIgZD0iTTEyIDBoMTJ2MTJIMTJ6Ii8+PHBhdGggZmlsbC1vcGFjaXR5PSIuNiIgZD0iTTEyIDEyaDEydjEySDEyeiIvPjwvZz48L3N2Zz4=);
+      background-size: 13px 13px;
+      height: 13px;
+      width: 13px;
+    }
+  `,$e=Se([v("nolt-component"),x()],$e);var Ue=function(e,a,t,i){for(var n,s=arguments.length,o=s<3?a:null===i?i=Object.getOwnPropertyDescriptor(a,t):i,r=e.length-1;r>=0;r--)(n=e[r])&&(o=(s<3?n(o):s>3?n(a,t,o):n(a,t))||o);return s>3&&o&&Object.defineProperty(a,t,o),o};let Ge=class extends i{constructor(){super(...arguments),this.homeUrl="/",this.isStaging=!1}render(){const e={isStaging:this.isStaging,wikiDomain:this.isStaging?"https://stash-staging.clash.gg":"https://stash.clash.gg"};return n`
+      <footer>
+        <div class="container">
+          <clash-logo .homeUrl=${this.homeUrl} class="clash-logo"></clash-logo>
+
+          <div class="left-column">
+            <information-component .homeUrl=${this.homeUrl}>
+              <slot name="information" slot="inner-information">
+                ${b(n`
+                  The Premier
+                  <a class="clash-link" href=${A.mainDomain}
+                    >CS:GO Gambling</a
+                  >
+                  and case battle site.
+                `)}
+              </slot>
+            </information-component>
+            <div class="spacer"></div>
+            <nolt-component></nolt-component>
+            <slot name="language-picker"></slot>
+            <div class="spacer"></div>
+            <disclaimers-component></disclaimers-component>
+          </div>
+
+          <div class="right-column">
+            <group-section
+              style=${ae({flexGrow:1})}
+              .group=${K.INFO}
+              .global=${e}
+            ></group-section>
+            <group-section
+              style=${ae({flexGrow:1})}
+              .group=${K.GAME}
+              .link=${A.mainDomain}
+              .global=${e}
+            ></group-section>
+            <group-section
+              style=${ae({flexGrow:1})}
+              .group=${K.ADDITIONAL}
+              .global=${e}
+            ></group-section>
+            <group-section
+              style=${ae({flexGrow:1})}
+              .group=${K.SOCIAL}
+              .global=${e}
+            ></group-section>
+          </div>
+        </div>
+      </footer>
+    `}};Ge.styles=[T,t`
+      :host {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        background-color: var(--gray-500);
+        color: var(--gray-200);
+        font-weight: 400;
+      }
+
+      .container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 32px;
+        font-size: 14px;
+        max-width: var(--clash-footer-max-width, 1600px);
+      }
+      .left-column {
+        width: 100%;
+        font-size: 12px;
+        padding-bottom: 48px;
+        order: 2;
+      }
+      .right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: end;
+        order: 1;
+      }
+      .spacer {
+        padding-top: 16px;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .clash-link {
+        color: var(--primary-500);
+        font-weight: 600;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          flex-direction: row;
+          padding: 40px;
+        }
+        .left-column {
+          order: 1;
+          max-width: 384px;
+          padding-bottom: 0;
+        }
+        .right-column {
+          order: 2;
+          flex-direction: row;
+          flex-grow: 1;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .clash-logo {
+          display: none;
+        }
+      }
+    `,he],Ue([y({attribute:"home-url"})],Ge.prototype,"homeUrl",void 0),Ue([y({attribute:"is-staging",type:Boolean})],Ge.prototype,"isStaging",void 0),Ge=Ue([v("clash-footer"),x()],Ge);export{Ge as ClashFooter,de as ClashNavbar};
