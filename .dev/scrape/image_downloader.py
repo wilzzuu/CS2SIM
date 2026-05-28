@@ -6,10 +6,11 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
-IMAGE_DIR = SCRIPT_DIR / "raw_data" / "IMAGE"
+IMAGE_DIR = SCRIPT_DIR / "data" / "IMAGE"
 IMAGE_DIR.mkdir(exist_ok=True)
 
 DATA_PATH = SCRIPT_DIR / "data"
+DATA_FILE = DATA_PATH / "data.json"
 
 session = requests.Session()
 
@@ -19,20 +20,11 @@ HEADERS = {
 
 DELAY_SECONDS = 5
 
-def safe_filename(url):
-    name = filename_from_url(url)
-    return re.sub(r'[^a-zA-Z0-9_-]', '_', name)
-
-def filename_from_url(url):
-    return url.rsplit("/", 1)[1] + ".png"
-
-def download_image(dirname, url, prc):
-    filename = safe_filename(url)
-
+def download_image(filename, dirname, url, prc):
     subdir = IMAGE_DIR / dirname
     subdir.mkdir(exist_ok=True)
 
-    filepath = subdir / filename
+    filepath = subdir / f"{filename}.png"
 
     if filepath.exists():
         print(f"Skipping existing: {url}")
@@ -57,26 +49,28 @@ def download_image(dirname, url, prc):
 
 def request_locs(dirname, locs_list):
     locs_count = len(locs_list)
-    for i, loc in enumerate(locs_list):
+    caseIDs = [id["ID"] for id in locs_list]
+    locs = [loc["IMAGE"] for loc in locs_list]
+    for i, loc in enumerate(locs):
         prc = 100*(i/locs_count)
         try:
-            download_image(dirname, loc, prc)
+            download_image(caseIDs[i], dirname, loc, prc)
         except Exception as e:
             print(f"Failed: {loc} with {e}")
     print("\n\n-- Downloading done. --\n")
 
 def scrape(scrape_file):
-    path = DATA_PATH / "pre_processed_item_data.json"
-    with open(path, "r", encoding="utf-8") as f:
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
         
     locs_list = []
-    items = data["items"]
-    for item in items:
-        loc = item["image"]
-        locs_list.append(loc)
+    cases = data["cases"]
+    for case in cases:
+        caseID = case["ID"]
+        loc = case["IMAGE"]
+        locs_list.append({"ID": caseID, "IMAGE": loc})
 
     request_locs(scrape_file, locs_list)
 
 if __name__ == "__main__":
-    scrape("item")
+    scrape("case")
