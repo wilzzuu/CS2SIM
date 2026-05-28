@@ -89,7 +89,7 @@ public class HighLowManager : MonoBehaviour
         TextMeshProUGUI nameText = revealItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = revealItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
         
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id.Split("_", 2)}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
         gunText.text = item.gun;
         nameText.text = item.name;

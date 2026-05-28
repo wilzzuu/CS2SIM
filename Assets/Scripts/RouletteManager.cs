@@ -251,7 +251,7 @@ public class RouletteManager : MonoBehaviour
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
         TextMeshProUGUI ownerText = reelItem.transform.Find("OwnerText").GetComponent<TextMeshProUGUI>();
 
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id.Split("_", 2)}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
 
         ownerText.text = isPlayerOwned ? "Player" : "Bot";

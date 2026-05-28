@@ -14,7 +14,7 @@ public class CollectionItem : MonoBehaviour
 
     public void Setup(ItemData item, bool isCollected)
     {
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id.Split("_", 2)}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
         itemNameText.text = item.name;
 
