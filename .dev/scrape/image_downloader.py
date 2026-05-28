@@ -19,7 +19,7 @@ HEADERS = {
     "User-Agent": "Personal-Non-Commercial"
 }
 
-DELAY_SECONDS = 10
+DELAY_SECONDS = 6
 
 def download_image(filename, dirname, url, prc):
     subdir = IMAGE_DIR / dirname
