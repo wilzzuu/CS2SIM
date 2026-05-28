@@ -17,7 +17,7 @@ child : (child URL)
       <div class="row"> (first)
         <div class="col-lg-4 col-md-6 col-widen text-center"> (get all of these within row, special instructions **) 
 	  <div class="well result-box nomargin">
-            <h2>
+        <h2>
 	      <a>[track this]</a> (string : Weapon Name)
 	      <a>[track this]</a> (string : Skin Name)
 	    <a class="nounderline">
