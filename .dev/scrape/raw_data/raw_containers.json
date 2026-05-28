@@ -1,0 +1,421 @@
+{
+    "cases": [
+        {
+            "name": "Sealed Dead Hand Terminal",
+            "price": "1,67",
+            "link": "https://stash.clash.gg/case/458/Sealed-Dead-Hand-Terminal",
+            "items": [
+                {
+                    "weapon": "AWP",
+                    "name": "Queen's Gambit",
+                    "rarity": "Covert",
+                    "type": "Sniper Rifle",
+                    "conditions": [
+                        {
+                            "condition": "Factory New",
+                            "price": "355,21"
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "price": "144,28"
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "price": "75,77"
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "price": "66,53"
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "price": "53,34"
+                        }
+                    ]
+                },
+                {
+                    "weapon": "Glock-18",
+                    "name": "Fully Tuned",
+                    "rarity": "Covert",
+                    "type": "Pistol",
+                    "conditions": []
+                },
+                {
+                    "weapon": "AK-47",
+                    "name": "Crane Flight",
+                    "rarity": "Classified",
+                    "type": "Rifle",
+                    "conditions": []
+                },
+                {
+                    "weapon": "P90",
+                    "name": "Deathgaze",
+                    "rarity": "Classified",
+                    "type": "SMG",
+                    "conditions": []
+                },
+                {
+                    "weapon": "P250",
+                    "name": "Kintsugi",
+                    "rarity": "Classified",
+                    "type": "Pistol",
+                    "conditions": []
+                },
+                {
+                    "weapon": "M4A1-S",
+                    "name": "Electrum",
+                    "rarity": "Restricted",
+                    "type": "Rifle",
+                    "conditions": []
+                },
+                {
+                    "weapon": "Desert Eagle",
+                    "name": "Firebreathing",
+                    "rarity": "Restricted",
+                    "type": "Pistol",
+                    "conditions": []
+                },
+                {
+                    "weapon": "MP7",
+                    "name": "Amberline",
+                    "rarity": "Restricted",
+                    "type": "SMG",
+                    "conditions": []
+                },
+                {
+                    "weapon": "Galil AR",
+                    "name": "Galigator",
+                    "rarity": "Restricted",
+                    "type": "Rifle",
+                    "conditions": []
+                },
+                {
+                    "weapon": "MP9",
+                    "name": "Urban Sovereign",
+                    "rarity": "Restricted",
+                    "type": "SMG",
+                    "conditions": []
+                },
+                {
+                    "weapon": "USP-S",
+                    "name": "Silent Shot",
+                    "rarity": "Mil-Spec",
+                    "type": "Pistol",
+                    "conditions": []
+                },
+                {
+                    "weapon": "M4A4",
+                    "name": "Zubastick",
+                    "rarity": "Mil-Spec",
+                    "type": "Rifle",
+                    "conditions": []
+                },
+                {
+                    "weapon": "Five-SeveN",
+                    "name": "Dark Polymer",
+                    "rarity": "Mil-Spec",
+                    "type": "Pistol",
+                    "conditions": []
+                },
+                {
+                    "weapon": "PP-Bizon",
+                    "name": "RMX",
+                    "rarity": "Mil-Spec",
+                    "type": "SMG",
+                    "conditions": []
+                },
+                {
+                    "weapon": "Sawed-Off",
+                    "name": "Fusion",
+                    "rarity": "Mil-Spec",
+                    "type": "Shotgun",
+                    "conditions": []
+                },
+                {
+                    "weapon": "UMP-45",
+                    "name": "Fragment",
+                    "rarity": "Mil-Spec",
+                    "type": "SMG",
+                    "conditions": []
+                },
+                {
+                    "weapon": "M249",
+                    "name": "Bock Blocks",
+                    "rarity": "Mil-Spec",
+                    "type": "Machine Gun",
+                    "conditions": []
+                }
+            ]
+        },
+        {
+            "name": "Sealed Genesis Terminal",
+            "price": "0,15",
+            "link": "https://stash.clash.gg/case/443/Sealed-Genesis-Terminal",
+            "items": []
+        },
+        {
+            "name": "Fever Case",
+            "price": "0,81",
+            "link": "https://stash.clash.gg/case/422/Fever-Case",
+            "items": []
+        },
+        {
+            "name": "Gallery Case",
+            "price": "1,24",
+            "link": "https://stash.clash.gg/case/412/Gallery-Case",
+            "items": []
+        },
+        {
+            "name": "Kilowatt Case",
+            "price": "0,26",
+            "link": "https://stash.clash.gg/case/393/Kilowatt-Case",
+            "items": []
+        },
+        {
+            "name": "Anubis Collection Package",
+            "price": "2,67",
+            "link": "https://stash.clash.gg/case/378/Anubis-Collection-Package",
+            "items": []
+        },
+        {
+            "name": "Revolution Case",
+            "price": "0,34",
+            "link": "https://stash.clash.gg/case/376/Revolution-Case",
+            "items": []
+        },
+        {
+            "name": "Recoil Case",
+            "price": "0,50",
+            "link": "https://stash.clash.gg/case/355/Recoil-Case",
+            "items": []
+        },
+        {
+            "name": "Dreams & Nightmares Case",
+            "price": "1,73",
+            "link": "https://stash.clash.gg/case/339/Dreams-&-Nightmares-Case",
+            "items": []
+        },
+        {
+            "name": "Operation Riptide Case",
+            "price": "12,74",
+            "link": "https://stash.clash.gg/case/321/Operation-Riptide-Case",
+            "items": []
+        },
+        {
+            "name": "Snakebite Case",
+            "price": "0,76",
+            "link": "https://stash.clash.gg/case/315/Snakebite-Case",
+            "items": []
+        },
+        {
+            "name": "Operation Broken Fang Case",
+            "price": "9,02",
+            "link": "https://stash.clash.gg/case/308/Operation-Broken-Fang-Case",
+            "items": []
+        },
+        {
+            "name": "Fracture Case",
+            "price": "0,74",
+            "link": "https://stash.clash.gg/case/307/Fracture-Case",
+            "items": []
+        },
+        {
+            "name": "Prisma 2 Case",
+            "price": "2,08",
+            "link": "https://stash.clash.gg/case/303/Prisma-2-Case",
+            "items": []
+        },
+        {
+            "name": "CS20 Case",
+            "price": "1,79",
+            "link": "https://stash.clash.gg/case/293/CS20-Case",
+            "items": []
+        },
+        {
+            "name": "X-Ray P250 Package",
+            "price": "2,17",
+            "link": "https://stash.clash.gg/case/292/X-Ray-P250-Package",
+            "items": []
+        },
+        {
+            "name": "Shattered Web Case",
+            "price": "8,32",
+            "link": "https://stash.clash.gg/case/277/Shattered-Web-Case",
+            "items": []
+        },
+        {
+            "name": "Prisma Case",
+            "price": "2,06",
+            "link": "https://stash.clash.gg/case/274/Prisma-Case",
+            "items": []
+        },
+        {
+            "name": "Danger Zone Case",
+            "price": "2,07",
+            "link": "https://stash.clash.gg/case/259/Danger-Zone-Case",
+            "items": []
+        },
+        {
+            "name": "Horizon Case",
+            "price": "2,47",
+            "link": "https://stash.clash.gg/case/244/Horizon-Case",
+            "items": []
+        },
+        {
+            "name": "Clutch Case",
+            "price": "0,95",
+            "link": "https://stash.clash.gg/case/238/Clutch-Case",
+            "items": []
+        },
+        {
+            "name": "Spectrum 2 Case",
+            "price": "4,17",
+            "link": "https://stash.clash.gg/case/220/Spectrum-2-Case",
+            "items": []
+        },
+        {
+            "name": "Operation Hydra Case",
+            "price": "41,87",
+            "link": "https://stash.clash.gg/case/208/Operation-Hydra-Case",
+            "items": []
+        },
+        {
+            "name": "Spectrum Case",
+            "price": "5,29",
+            "link": "https://stash.clash.gg/case/207/Spectrum-Case",
+            "items": []
+        },
+        {
+            "name": "Glove Case",
+            "price": "13,08",
+            "link": "https://stash.clash.gg/case/179/Glove-Case",
+            "items": []
+        },
+        {
+            "name": "Gamma 2 Case",
+            "price": "4,25",
+            "link": "https://stash.clash.gg/case/172/Gamma-2-Case",
+            "items": []
+        },
+        {
+            "name": "Gamma Case",
+            "price": "4,09",
+            "link": "https://stash.clash.gg/case/144/Gamma-Case",
+            "items": []
+        },
+        {
+            "name": "Chroma 3 Case",
+            "price": "4,68",
+            "link": "https://stash.clash.gg/case/141/Chroma-3-Case",
+            "items": []
+        },
+        {
+            "name": "Operation Wildfire Case",
+            "price": "4,82",
+            "link": "https://stash.clash.gg/case/112/Operation-Wildfire-Case",
+            "items": []
+        },
+        {
+            "name": "Revolver Case",
+            "price": "4,02",
+            "link": "https://stash.clash.gg/case/111/Revolver-Case",
+            "items": []
+        },
+        {
+            "name": "Shadow Case",
+            "price": "2,59",
+            "link": "https://stash.clash.gg/case/80/Shadow-Case",
+            "items": []
+        },
+        {
+            "name": "Falchion Case",
+            "price": "2,39",
+            "link": "https://stash.clash.gg/case/50/Falchion-Case",
+            "items": []
+        },
+        {
+            "name": "Chroma 2 Case",
+            "price": "5,64",
+            "link": "https://stash.clash.gg/case/48/Chroma-2-Case",
+            "items": []
+        },
+        {
+            "name": "Chroma Case",
+            "price": "6,85",
+            "link": "https://stash.clash.gg/case/38/Chroma-Case",
+            "items": []
+        },
+        {
+            "name": "Operation Vanguard Weapon Case",
+            "price": "6,63",
+            "link": "https://stash.clash.gg/case/29/Operation-Vanguard-Weapon-Case",
+            "items": []
+        },
+        {
+            "name": "eSports 2014 Summer Case",
+            "price": "25,55",
+            "link": "https://stash.clash.gg/case/19/eSports-2014-Summer-Case",
+            "items": []
+        },
+        {
+            "name": "Operation Breakout Weapon Case",
+            "price": "10,56",
+            "link": "https://stash.clash.gg/case/18/Operation-Breakout-Weapon-Case",
+            "items": []
+        },
+        {
+            "name": "Huntsman Weapon Case",
+            "price": "12,36",
+            "link": "https://stash.clash.gg/case/17/Huntsman-Weapon-Case",
+            "items": []
+        },
+        {
+            "name": "Operation Phoenix Weapon Case",
+            "price": "5,32",
+            "link": "https://stash.clash.gg/case/11/Operation-Phoenix-Weapon-Case",
+            "items": []
+        },
+        {
+            "name": "CS:GO Weapon Case 3",
+            "price": "19,77",
+            "link": "https://stash.clash.gg/case/10/CS:GO-Weapon-Case-3",
+            "items": []
+        },
+        {
+            "name": "Winter Offensive Weapon Case",
+            "price": "15,21",
+            "link": "https://stash.clash.gg/case/7/Winter-Offensive-Weapon-Case",
+            "items": []
+        },
+        {
+            "name": "eSports 2013 Winter Case",
+            "price": "29,73",
+            "link": "https://stash.clash.gg/case/5/eSports-2013-Winter-Case",
+            "items": []
+        },
+        {
+            "name": "CS:GO Weapon Case 2",
+            "price": "29,83",
+            "link": "https://stash.clash.gg/case/4/CS:GO-Weapon-Case-2",
+            "items": []
+        },
+        {
+            "name": "Operation Bravo Case",
+            "price": "84,26",
+            "link": "https://stash.clash.gg/case/3/Operation-Bravo-Case",
+            "items": []
+        },
+        {
+            "name": "eSports 2013 Case",
+            "price": "74,29",
+            "link": "https://stash.clash.gg/case/2/eSports-2013-Case",
+            "items": []
+        },
+        {
+            "name": "CS:GO Weapon Case",
+            "price": "190,34",
+            "link": "https://stash.clash.gg/case/1/CS:GO-Weapon-Case",
+            "items": []
+        }
+    ]
+}

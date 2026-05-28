@@ -1,0 +1,1 @@
+<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-0"><template id="P:5"></template><template id="P:6"></template><template id="P:7"></template><template id="P:8"></template><template id="P:9"></template><template id="P:a"></template><template id="P:b"></template><template id="P:c"></template><template id="P:d"></template><template id="P:e"></template></div>
