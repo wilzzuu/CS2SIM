@@ -335,7 +335,7 @@ public class CaseOpening : MonoBehaviour
         Image itemImage = reelItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
 
-        string imagePath = "ItemImages/" + itemData.id;
+        string imagePath = $"ItemImages/{itemData.id.Remove(itemData.id.LastIndexOf('_'))}";
         string rarityPath = "RarityImages/" + itemData.rarity;
 
         itemImage.sprite = Resources.Load<Sprite>(imagePath);
@@ -392,7 +392,7 @@ public class CaseOpening : MonoBehaviour
                 TextMeshProUGUI nameText = item.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
                 TextMeshProUGUI priceText = item.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
-                itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{bestConditionItem.id}");
+                itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{bestConditionItem.id.Remove(bestConditionItem.id.LastIndexOf('_'))}");
                 rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{bestConditionItem.rarity}");
                 gunText.text = bestConditionItem.gun;
                 nameText.text = bestConditionItem.name;

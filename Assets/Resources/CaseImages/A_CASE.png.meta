@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: A_CASE_0
+      name: 0_CASE_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 41
-        width: 240
-        height: 176
+        x: 7
+        y: 11
+        width: 243
+        height: 177
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47bcc115255f9f010800000000000000
-      internalID: 1223278507704765300
+      spriteID: 5c79c73b54efdffe0800000000000000
+      internalID: -1153486354219493435
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      A_CASE_0: 1223278507704765300
+      0_CASE_0: -1153486354219493435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

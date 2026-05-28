@@ -53,7 +53,7 @@ public class InventoryScreen : MonoBehaviour
 
             if (itemImage != null)
             {
-                string imagePath = $"ItemImages/{item.id.Split("_", 2)}";
+                string imagePath = $"ItemImages/{item.id.Remove(item.id.LastIndexOf('_'))}";
                 Sprite itemSprite = Resources.Load<Sprite>(imagePath);
                 if (itemSprite != null)
                 {

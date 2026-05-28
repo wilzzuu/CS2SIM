@@ -323,7 +323,7 @@ public class CaseBattleManager : MonoBehaviour
         TextMeshProUGUI nameText = resultItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = resultItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id.Remove(itemData.id.LastIndexOf('_'))}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
         gunText.text = itemData.gun;
         nameText.text = itemData.name;
@@ -335,7 +335,7 @@ public class CaseBattleManager : MonoBehaviour
         Image itemImage = reelItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
         
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id.Remove(itemData.id.LastIndexOf('_'))}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
     }
     

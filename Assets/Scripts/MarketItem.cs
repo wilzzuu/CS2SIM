@@ -24,7 +24,7 @@ public class MarketplaceItem : MonoBehaviour
     {
         _itemData = item;
         
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{_itemData.id.Split("_", 2)}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{_itemData.id.Remove(_itemData.id.LastIndexOf('_'))}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{_itemData.rarity}");
         conditionImage.sprite = Resources.Load<Sprite>($"ConditionImages/{_itemData.condition}");
         if (_itemData.isStatTrak)
