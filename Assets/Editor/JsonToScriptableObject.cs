@@ -86,7 +86,7 @@ namespace Editor
                 foreach (var cond in itemJson.CONDITIONS)
                 {   
                     ItemData itemAsset = CreateInstance<ItemData>();
-                    string itemID = $"{itemJson.ID}{AbbreviatedConditions.CondList[cond.condition]}";
+                    string itemID = $"{itemJson.ID}_{AbbreviatedConditions.CondList[cond.condition]}";
                     itemAsset.id = itemID;
                     itemAsset.gun = itemJson.GUN;
                     itemAsset.name = itemJson.NAME;
@@ -104,7 +104,7 @@ namespace Editor
                     if (itemJson.HAS_ST == true)
                     {
                         ItemData itemAssetST = CreateInstance<ItemData>();
-                        string itemSTID = $"{itemJson.ID}{AbbreviatedConditions.CondList[cond.condition]}ST";
+                        string itemSTID = $"{itemJson.ID}_{AbbreviatedConditions.CondList[cond.condition]}ST";
                         itemAssetST.id = itemSTID;
                         itemAssetST.gun = itemJson.GUN;
                         itemAssetST.name = itemJson.NAME;

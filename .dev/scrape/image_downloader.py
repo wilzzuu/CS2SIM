@@ -1,8 +1,9 @@
 import time
 import requests
-import re
 import json
 from pathlib import Path
+from PIL import Image
+from io import BytesIO
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
@@ -18,7 +19,7 @@ HEADERS = {
     "User-Agent": "Personal-Non-Commercial"
 }
 
-DELAY_SECONDS = 5
+DELAY_SECONDS = 10
 
 def download_image(filename, dirname, url, prc):
     subdir = IMAGE_DIR / dirname
@@ -64,13 +65,13 @@ def scrape(scrape_file):
         data = json.load(f)
         
     locs_list = []
-    cases = data["cases"]
-    for case in cases:
-        caseID = case["ID"]
-        loc = case["IMAGE"]
-        locs_list.append({"ID": caseID, "IMAGE": loc})
+    for case in data["cases"]:
+        for item in case["ITEMS"]:
+            itemID = item["ID"]
+            loc = item["IMAGE"]
+            locs_list.append({"ID": itemID, "IMAGE": loc})
 
     request_locs(scrape_file, locs_list)
 
 if __name__ == "__main__":
-    scrape("case")
+    scrape("item")
