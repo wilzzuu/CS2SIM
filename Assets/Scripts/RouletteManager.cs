@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using TMPro;
-using UnityEngine.Rendering.UI;
 using Random = UnityEngine.Random;
 
 public class RouletteManager : MonoBehaviour
@@ -12,14 +11,21 @@ public class RouletteManager : MonoBehaviour
     public static RouletteManager Instance { get; private set; }
     public GameObject rouletteItemPrefab;
     public GameObject inventoryItemPrefab;
-    public GameObject itemSelectorView, gameView;
+    public GameObject itemSelectorView, gameView, pageControls;
     public Transform reelContainer;
     public Transform inventoryCatalogGrid;
     public Transform selectedItemsGrid;
     public TextMeshProUGUI selectedPlayerItemsTotalValue, chanceOfWinningText, totalValueText, totalPlayerValueText, outcomeText;
     public Button startGameButton, confirmSelectionButton, replayButton, backButton;
 
+    public TextMeshProUGUI currentPageText;
+    public TextMeshProUGUI maxPageText;
+    private int currentPage;
+
+    const int ItemsPerPage = 28;
+
     private List<ItemData> _allItems = new List<ItemData>();
+    private List<ItemData> _playerItems = new List<ItemData>();
     private readonly List<ItemData> _selectedPlayerItems = new List<ItemData>();
     private readonly List<RouletteItem> _reelItems = new List<RouletteItem>();
     private readonly Dictionary<ItemData, bool> _itemOwnership = new Dictionary<ItemData, bool>();
@@ -47,6 +53,9 @@ public class RouletteManager : MonoBehaviour
 
     void Start()
     {
+        LoadAllGameItems();
+        LoadInventoryItems();
+
         confirmSelectionButton.onClick.AddListener(ConfirmSelection);
         startGameButton.onClick.AddListener(StartGame);
         replayButton.onClick.AddListener(RestartGame);
@@ -55,23 +64,68 @@ public class RouletteManager : MonoBehaviour
         _gridLayout = reelContainer.GetComponent<GridLayoutGroup>();
         _reelTransform = reelContainer.GetComponent<RectTransform>();
 
+        pageControls.SetActive(true);
         itemSelectorView.SetActive(true);
         gameView.SetActive(false);
 
-        PopulateInventoryCatalog();
+        currentPage = 0;
+        PopulateInventoryCatalog(currentPage);
     }
 
-    private void PopulateInventoryCatalog()
+    void LoadAllGameItems()
     {
+        _allItems = Resources.LoadAll<ItemData>("ItemAssets").ToList();
+    }
+
+    void LoadInventoryItems()
+    {
+        _playerItems = InventoryManager.Instance.GetAllItems();
+    }
+
+    private void PopulateInventoryCatalog(int page)
+    {
+        int pageCount = Mathf.CeilToInt((float)_playerItems.Count / ItemsPerPage);
+
+        if (inventoryCatalogGrid == null) return;
+        
         foreach (Transform child in inventoryCatalogGrid)
         {
-            Destroy(child.gameObject);
+            if (child != null)
+            {
+                Destroy(child.gameObject);
+            }
         }
 
-        foreach (var item in InventoryManager.Instance.GetAllItems())
+        int startIndex = page * ItemsPerPage;
+        int endIndex = Mathf.Min(startIndex + ItemsPerPage, _playerItems.Count);
+        for (int i = startIndex; i < endIndex; i++)
         {
             GameObject itemObj = Instantiate(inventoryItemPrefab, inventoryCatalogGrid);
-            itemObj.GetComponent<RouletteInventoryItem>().Setup(item, _selectedPlayerItems.Contains(item));
+            itemObj.GetComponent<RouletteInventoryItem>().Setup(_playerItems[i], _selectedPlayerItems.Contains(_playerItems[i]));
+        }
+
+        currentPageText.text = ((pageCount > 0) ? page+1 : page).ToString();
+        maxPageText.text = pageCount.ToString();
+    }
+
+    public void NextPage()
+    {
+        int itemsCount = _playerItems.Count;
+        int pageCount = Mathf.CeilToInt((float)itemsCount / ItemsPerPage);
+
+        if (currentPage < pageCount - 1)
+        {
+            currentPage++;
+            PopulateInventoryCatalog(currentPage);
+        }
+    }
+
+    public void PreviousPage()
+    {
+        if (currentPage > 0)
+        {
+            currentPage--;
+            PopulateInventoryCatalog(currentPage);
         }
     }
 
@@ -126,6 +180,7 @@ public class RouletteManager : MonoBehaviour
         GenerateBotsAndPopulateReel();
         SetInitialReelPosition();
         UpdateUI();
+        pageControls.SetActive(false);
         itemSelectorView.SetActive(false);
         replayButton.interactable = false;
         gameView.SetActive(true);
@@ -297,7 +352,7 @@ public class RouletteManager : MonoBehaviour
         int playerItemCount = _selectedPlayerItems.Count;
         int botItemsCount = Mathf.Clamp(playerItemCount * 5, 1, numberOfReelItems - playerItemCount);
 
-        float scalingFactor = (float)botItemsCount / playerItemCount;
+        float scalingFactor = (float)numberOfReelItems / playerItemCount;
         float botItemTargetValue = _totalPlayerValue * scalingFactor;
         HashSet<ItemData> usedBotItems = new HashSet<ItemData>();
 
@@ -377,10 +432,11 @@ public class RouletteManager : MonoBehaviour
         _winChance = 0f;
         startGameButton.interactable = true;
         backButton.interactable = true;
+        pageControls.SetActive(true);
         itemSelectorView.SetActive(true);
         UpdateSelectedItemsGrid();
-        PopulateInventoryCatalog();
-        selectedPlayerItemsTotalValue.text = "Total Value: 0";
+        PopulateInventoryCatalog(0);
+        selectedPlayerItemsTotalValue.text = "Total Value: 0€";
         gameView.SetActive(false);
     }
 

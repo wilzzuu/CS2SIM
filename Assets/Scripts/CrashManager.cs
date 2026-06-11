@@ -12,10 +12,12 @@ public class CrashManager : MonoBehaviour
 
     private float _currentMultiplier = 1.0f;
     private const float InitialMultiplierRate = 0.02f;
-    private const float AccelerationFactor = 0.05f;
+    private const float MinCrashPoint = 1.01f;
+    private const float MaxCrashPoint = 100f;
+    private const float AccelerationFactor = 0.075f;
     private float _elapsedTime = 0f;
     private float _crashPoint;
-    private const float DifficultyBias = 2.15f;
+    private const float HouseEdge = 0.02f;
     private bool _isGameRunning = false;
     private float _betAmount = 0f;
     private bool _hasCashedOut = false;
@@ -38,7 +40,7 @@ public class CrashManager : MonoBehaviour
             _elapsedTime += Time.deltaTime;
             float currentMultiplierRate = InitialMultiplierRate + (AccelerationFactor * _elapsedTime);
             _currentMultiplier += currentMultiplierRate * Time.deltaTime;
-            multiplierText.text = $"Multiplier: {_currentMultiplier:F2}x";
+            multiplierText.text = $"x{_currentMultiplier:F2}";
 
             if (_currentMultiplier >= _crashPoint)
             {
@@ -49,13 +51,29 @@ public class CrashManager : MonoBehaviour
 
     public void StartCrashGame()
     {
-        if (float.TryParse(betAmountInput.text, out _betAmount) && _betAmount > 0 && _betAmount <= PlayerManager.Instance.GetPlayerBalance())
+        string _betText;
+        if (betAmountInput.text.Contains("."))
+        {
+            _betText = betAmountInput.text.Replace(".", ",");
+        }
+        else
+        {
+            _betText = betAmountInput.text;
+        }
+        if (float.TryParse(_betText, out _betAmount) && _betAmount > 0 && _betAmount <= PlayerManager.Instance.GetPlayerBalance())
         {
             PlayerManager.Instance.DeductCurrency(_betAmount);
+
+            LogUtil.Economy.LogEuro(
+                "PLAY_CRASH",
+                -_betAmount,
+                PlayerManager.Instance.GetPlayerBalance()
+            );
+
             UpdateUI();
             ResetGame();
 
-            _crashPoint = GenerateBiasedCrashPoint(1.1f, 20.0f, DifficultyBias);
+            _crashPoint = GenerateBiasedCrashPoint(MinCrashPoint, MaxCrashPoint, HouseEdge);
             _isGameRunning = true;
             cashOutButton.interactable = true;
             startGameButton.interactable = false;
@@ -68,10 +86,20 @@ public class CrashManager : MonoBehaviour
         }
     }
 
-    private float GenerateBiasedCrashPoint(float min, float max, float bias)
+    private float GenerateBiasedCrashPoint(float min, float max, float houseEdge)
     {
-        float randomValue = Mathf.Pow(Random.value, bias);
-        return Mathf.Lerp(min, max, randomValue);
+        float r = Random.value;
+
+        float logMin = Mathf.Log(min);
+        float logMax = Mathf.Log(max);
+
+        float t = Mathf.Pow(r, 2.4f); // main tuning knob
+
+        float value = Mathf.Exp(Mathf.Lerp(logMin, logMax, t));
+
+        value *= 1f - houseEdge;
+
+        return Mathf.Clamp(value, min, max);
     }
 
     private void ResetGame()
@@ -98,7 +126,14 @@ public class CrashManager : MonoBehaviour
         {
             float winnings = _betAmount * _currentMultiplier;
             PlayerManager.Instance.AddCurrency(winnings);
-            outcomeText.text = $"You cashed out {winnings:F2}€";
+
+            LogUtil.Economy.LogEuro(
+                "WIN_CRASH",
+                winnings,
+                PlayerManager.Instance.GetPlayerBalance()
+            );
+
+            outcomeText.text = $"+{winnings:F2}€";
             _hasCashedOut = true;
             EndGame();
             uiManager.UnlockUI();
@@ -115,6 +150,6 @@ public class CrashManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        multiplierText.text = $"Multiplier: {_currentMultiplier:F2}x";
+        multiplierText.text = $"x{_currentMultiplier:F2}";
     }
 }

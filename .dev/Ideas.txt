@@ -1,3 +1,25 @@
+NEW IDEAS:
+- change entire currency system from float to int (1234€ / 100f = 12,34€)
+- slot machine with balance bet and win pays with skins (knife or gloves = jackpot)
+- skin deposits in games ?
+- quick buy skins with balance (calculated with regular extra market cost, which lowers the end value)
+- crypto
+  - upgrades? (needs miningrig scriptable objects)
+  - very expensive
+  - mining
+  - can be exchanged
+
+FIX:
+- Roulette total value should be multiplied more if player isn't playing with full 12 items
+- Doesn't have knives:
+  - CS:GO Weapon Case 3
+  - eSports 2013 Winter Case
+  - eSports 2014 Summer Case
+  - CS:GO Weapon Case 2
+  - eSports 2013 Case
+  - Operation Bravo Case
+- CS:GO Weapon Case has a ton of items, maybe too many
+
 Feature: Marketplace
 - Catalog of all items
 - Sorting options based on Rarity, Color, Style, Item, Price, Crate

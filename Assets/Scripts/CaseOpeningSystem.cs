@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Random = UnityEngine.Random;
+using System.Text.RegularExpressions;
 
 public class CaseOpening : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class CaseOpening : MonoBehaviour
 
     public GameObject caseButtonPrefab;
     public Transform caseSelectorPanel;
+    public GameObject currentCase;
     public Button normalCasesButton;
     public Button customCasesButton;
     public Button selectCaseButton;
@@ -43,6 +45,7 @@ public class CaseOpening : MonoBehaviour
     void Start()
     {   
         openCaseButton.interactable = false;
+        currentCase.gameObject.SetActive(false);
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>("CaseAssets"));
         DisplayCaseSelector(_availableCases);
         
@@ -80,7 +83,16 @@ public class CaseOpening : MonoBehaviour
     private void SelectCase(CaseData chosenCase)
     {
         _selectedCaseData = chosenCase;
+
+        currentCase.gameObject.SetActive(true);
+        Image caseImage = currentCase.transform.Find("CaseImage").GetComponent<Image>();
+        TextMeshProUGUI nameText = currentCase.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI priceText = currentCase.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
         
+        caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{_selectedCaseData.id}");
+        nameText.text = _selectedCaseData.name;
+        priceText.text = $"{_selectedCaseData.price:F2}€";
+
         GroupItemsByRarity();
 
         if (_selectedCaseData) openCaseButton.interactable = true;
@@ -138,6 +150,14 @@ public class CaseOpening : MonoBehaviour
         if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price)
         {
             PlayerManager.Instance.DeductCurrency(_selectedCaseData.price);
+
+            LogUtil.Economy.LogEuro(
+                "OPEN_CASE",
+                -_selectedCaseData.price,
+                PlayerManager.Instance.GetPlayerBalance(),
+                $"{_selectedCaseData.name}"
+            );
+
             ItemData openedItem = GetRandomItemByPercentage();
             StartCoroutine(AnimateScrollingReel(openedItem));
         }
@@ -162,7 +182,7 @@ public class CaseOpening : MonoBehaviour
             return null;
         }
 
-        float totalRarityWeight = RarityWeights.WeightList
+        float totalRarityWeight = RarityData.Weight
             .Where(rarity => _rarityGroups.ContainsKey(rarity.Key))
             .Sum(rarity => rarity.Value);
 
@@ -171,7 +191,7 @@ public class CaseOpening : MonoBehaviour
         float cumulativeRarityWeight = 0f;
         string selectedRarity = null;
 
-        foreach (var rarity in RarityWeights.WeightList)
+        foreach (var rarity in RarityData.Weight)
         {
             if (!_rarityGroups.ContainsKey(rarity.Key)) continue;
             cumulativeRarityWeight += rarity.Value;
@@ -198,7 +218,7 @@ public class CaseOpening : MonoBehaviour
     private ItemData GetRandomNonSpecialItem()
     {
         List<ItemData> nonSpecialItems = _selectedCaseData.items
-            .Where(item => item != null && item.rarity != "SPECIAL")
+            .Where(item => item != null && item.rarity != RarityData.Name[RarityNames.Special])
             .ToList();
 
         if (nonSpecialItems == null || nonSpecialItems.Count == 0)
@@ -207,8 +227,8 @@ public class CaseOpening : MonoBehaviour
             return null;
         }
         
-        float totalRarityWeight = RarityWeights.WeightList
-            .Where(rarity => rarity.Key != "SPECIAL")
+        float totalRarityWeight = RarityData.Weight
+            .Where(rarity => rarity.Key != RarityData.Name[RarityNames.Special])
             .Sum(rarity => rarity.Value);
 
         if (totalRarityWeight <= 0)
@@ -222,12 +242,12 @@ public class CaseOpening : MonoBehaviour
         float cumulativeRarityWeight = 0f;
         string selectedRarity = null;
         
-        foreach (var rarity in RarityWeights.WeightList)
+        foreach (var rarity in RarityData.Weight)
         {
-            if (rarity.Key == "SPECIAL") continue;
+            if (rarity.Key == RarityData.Name[RarityNames.Special]) continue;
             
             cumulativeRarityWeight += rarity.Value;
-            if (rarityRandomValue <= cumulativeRarityWeight && rarity.Key != "SPECIAL")
+            if (rarityRandomValue <= cumulativeRarityWeight && rarity.Key != RarityData.Name[RarityNames.Special])
             {
                 selectedRarity = rarity.Key;
                 break;
@@ -274,7 +294,7 @@ public class CaseOpening : MonoBehaviour
             }
             else
             {
-                if (_rarityGroups.Count == 1 && _rarityGroups.ContainsKey("SPECIAL"))
+                if (_rarityGroups.Count == 1 && _rarityGroups.ContainsKey(RarityData.Name[RarityNames.Special]))
                 {
                     itemData = GetRandomItemByPercentage();
                 }
@@ -334,9 +354,31 @@ public class CaseOpening : MonoBehaviour
     {
         Image itemImage = reelItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
+        TextMeshProUGUI conditionText = reelItem.transform.Find("ConditionText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI statTrakText = reelItem.transform.Find("StatTrakText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI priceText = reelItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
         string imagePath = $"ItemImages/{itemData.id.Remove(itemData.id.LastIndexOf('_'))}";
         string rarityPath = "RarityImages/" + itemData.rarity;
+        priceText.text = $"{itemData.price:F2}€";
+        
+        if (conditionText != null)
+        {
+            conditionText.text = itemData.condition;
+        }
+
+        if (statTrakText != null)
+        {
+            if (itemData.isStatTrak)
+            {
+                statTrakText.gameObject.SetActive(true);
+                statTrakText.text = Globals.StatTrakUIText;
+            }
+        }
+        else
+        {
+            statTrakText.gameObject.SetActive(false);
+        }
 
         itemImage.sprite = Resources.Load<Sprite>(imagePath);
         rarityImage.sprite = Resources.Load<Sprite>(rarityPath);
@@ -366,11 +408,18 @@ public class CaseOpening : MonoBehaviour
 
         var groupedItems = selectedCase.items
             .Where(item => item != null)
+            .OrderBy(item => RarityData.Order.TryGetValue(item.rarity, out int order) ? order: 0)
             .GroupBy(item =>
             {
-                string itemIndex = item.id.Split('_')[1].TrimEnd('B', 'W', 'F', 'T', 'N', 'M', 'S');
+                string itemIndex = item.id.Split('_')[1];
+                itemIndex = Regex.Match(itemIndex, @"^\d+").Value;
                 return itemIndex;
-            });
+            })
+            .OrderBy(group =>
+                RarityData.Order.TryGetValue(group.First().rarity, out int order)
+                    ? order
+                    : int.MaxValue)
+            .ThenBy(group => group.Max(item => item.price));
 
         foreach (var group in groupedItems)
         {
@@ -379,8 +428,8 @@ public class CaseOpening : MonoBehaviour
             float maxPrice = itemsInGroup.Max(item => item.price);
             
             var bestConditionItem = itemsInGroup
-                .Where(item => item.rarity != "SPECIAL")
-                .OrderByDescending(item => ConditionOrder.ConditionOrderList.TryGetValue(item.condition, out int order) ? order : 0)
+                .Where(item => item.rarity != RarityData.Name[RarityNames.Special])
+                .OrderByDescending(item => ConditionData.Order.TryGetValue(item.condition, out int order) ? order : 0)
                 .FirstOrDefault();
 
             if (bestConditionItem != null)
@@ -396,10 +445,10 @@ public class CaseOpening : MonoBehaviour
                 rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{bestConditionItem.rarity}");
                 gunText.text = bestConditionItem.gun;
                 nameText.text = bestConditionItem.name;
-                priceText.text = $"{minPrice:F2}€ - {maxPrice:F2}€";
+                priceText.text = $"{minPrice:F2} - {maxPrice:F2}€";
             }
 
-            if (itemsInGroup.Any(item => item.rarity == "SPECIAL"))
+            if (itemsInGroup.Any(item => item.rarity == RarityData.Name[RarityNames.Special]))
             {
                 hasSpecialItem = true;
                 minSpecialPrice = Mathf.Min(minSpecialPrice, minPrice);
@@ -415,7 +464,7 @@ public class CaseOpening : MonoBehaviour
             TextMeshProUGUI nameText = specialItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = specialItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
-            itemImage.sprite = Resources.Load<Sprite>($"OtherImages/special_item");
+            itemImage.sprite = Resources.Load<Sprite>($"ItemImages/special_item");
             rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/SPECIAL");
             nameText.text = "Special Item";
             priceText.text = $"{minSpecialPrice:F2}€ - {maxSpecialPrice:F2}€";
@@ -427,6 +476,7 @@ public class CaseOpening : MonoBehaviour
         _isSelectorOpen = !_isSelectorOpen;
         caseSelectorPanel.gameObject.SetActive(_isSelectorOpen);
         openCaseButton.interactable = !_isSelectorOpen;
+        currentCase.gameObject.SetActive(!_isSelectorOpen);
 
         if (_isFirstSelection && !_isSelectorOpen)
         {

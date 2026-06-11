@@ -66,4 +66,4 @@ def scrape(scrape_file):
     request_locs(scrape_file, locs_list)
 
 if __name__ == "__main__":
-    scrape("sticker")
+    scrape("graffiti")

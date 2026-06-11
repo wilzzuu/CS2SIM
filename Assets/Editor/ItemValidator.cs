@@ -71,7 +71,7 @@ namespace Editor
             foreach (var item in caseData.items)
             {
                 string itemRarity = item.rarity;
-                if (!RarityOrder.RarityOrderList.ContainsKey(itemRarity))
+                if (!RarityData.Order.ContainsKey(itemRarity))
                 {
                     Debug.Log($"Item {item.id} has an invalid Rarity of {itemRarity}");
                 }

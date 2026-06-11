@@ -55,7 +55,7 @@ public class SimulationLogger : MonoBehaviour
         _logBuilder.AppendLine($"Simulation Duration: {stopwatch.ElapsedMilliseconds} ms\n");
 
         itemCounts = itemCounts.OrderBy(item =>
-                RarityOrder.RarityOrderList.ContainsKey(item.Key.rarity) ? RarityOrder.RarityOrderList[item.Key.rarity] : int.MaxValue)
+                RarityData.Order.ContainsKey(item.Key.rarity) ? RarityData.Order[item.Key.rarity] : int.MaxValue)
             .ToDictionary(data => data.Key, data => data.Value);
         foreach (var entry in itemCounts)
         {
@@ -64,7 +64,7 @@ public class SimulationLogger : MonoBehaviour
             _logBuilder.AppendLine($"Appeared: {entry.Value} times ({percentage:F5}%)\n");
         }
         rarityCounts = rarityCounts.OrderBy(item =>
-                RarityOrder.RarityOrderList.ContainsKey(item.Key) ? RarityOrder.RarityOrderList[item.Key] : int.MaxValue)
+                RarityData.Order.ContainsKey(item.Key) ? RarityData.Order[item.Key] : int.MaxValue)
             .ToDictionary(data => data.Key, data => data.Value);
         List<float> averagePercentageDifList = new List<float>();
         
@@ -72,7 +72,7 @@ public class SimulationLogger : MonoBehaviour
         {
             float percentage = (float)entry.Value / numberOfSimulations * 100;
 
-            if (RarityWeights.WeightList.TryGetValue(entry.Key, out float weight))
+            if (RarityData.Weight.TryGetValue(entry.Key, out float weight))
             {
                 float expectedPercentage = weight * 100;
                 float percentageDif = percentage - expectedPercentage;

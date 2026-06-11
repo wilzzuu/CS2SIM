@@ -12,7 +12,9 @@ public class CaseBattleManager : MonoBehaviour
     public GameObject reelItemPrefab;
     public GameObject resultPrefab;
     public Transform playerResultArea;
+    public List<GameObject> playerSlots = new();
     public Transform botResultArea;
+    public List<GameObject> botSlots = new();
     public TextMeshProUGUI playerTotalValueText;
     public TextMeshProUGUI botTotalValueText;
     public TextMeshProUGUI playerWinsText;
@@ -71,6 +73,8 @@ public class CaseBattleManager : MonoBehaviour
         
         SetInitialReelPosition(playerReelParent);
         SetInitialReelPosition(botReelParent);
+
+        SetUncoveredResultItems();
     }
 
     public void ChangeToNormalCase()
@@ -180,11 +184,20 @@ public class CaseBattleManager : MonoBehaviour
             Destroy(child.gameObject);
         }
         
+        SetUncoveredResultItems();
+        
         float casePrice = GetCasePrice(_selectedCaseData);
         
         if (PlayerManager.Instance.GetPlayerBalance() >= casePrice)
         {
             PlayerManager.Instance.DeductCurrency(casePrice);
+
+            LogUtil.Economy.LogEuro(
+                "CASE_BATTLE",
+                -casePrice,
+                PlayerManager.Instance.GetPlayerBalance(),
+                $"{_selectedCaseData.name}"
+            );
         }
         else
         {
@@ -211,8 +224,6 @@ public class CaseBattleManager : MonoBehaviour
 
         foreach (Transform child in playerReelParent) Destroy(child.gameObject);
         foreach (Transform child in botReelParent) Destroy(child.gameObject);
-        foreach (Transform child in playerResultArea) Destroy(child.gameObject);
-        foreach (Transform child in botResultArea) Destroy(child.gameObject);
 
         StartCoroutine(PlayRounds(5));
     }
@@ -275,10 +286,10 @@ public class CaseBattleManager : MonoBehaviour
             PopulateReel(botReelParent, _botItems, botSelectedItem, botOpenedItemIndex, itemSize);
 
             yield return StartCoroutine(AnimateScrollingReel(playerReelParent, _playerReelTransform, playerOpenedItemIndex));
-            DisplayPlayerRoundResult(playerSelectedItem);
+            DisplayPlayerRoundResult(playerSelectedItem, i);
             
             yield return StartCoroutine(AnimateScrollingReel(botReelParent, _botReelTransform, botOpenedItemIndex));
-            DisplayBotRoundResult(botSelectedItem);
+            DisplayBotRoundResult(botSelectedItem, i);
         }
 
         DetermineWinner();
@@ -298,18 +309,32 @@ public class CaseBattleManager : MonoBehaviour
             SetUpReelItem(reelItem, itemData); 
         }
     }
-    
-    private void DisplayPlayerRoundResult(ItemData playerItem)
+
+    private void SetUncoveredResultItems()
     {
-        GameObject playerResultItem = Instantiate(resultPrefab, playerResultArea);
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject playerResultItem = Instantiate(resultPrefab, playerResultArea);
+            Image playerUncovered =  playerResultItem.transform.Find("UncoveredImage")?.GetComponent<Image>();
+            playerUncovered.enabled = true;
+
+            GameObject botResultItem = Instantiate(resultPrefab, botResultArea);
+            Image botUncovered =  botResultItem.transform.Find("UncoveredImage")?.GetComponent<Image>();
+            botUncovered.enabled = true;
+        }
+    }
+    
+    private void DisplayPlayerRoundResult(ItemData playerItem, int roundNumber)
+    {
+        GameObject playerResultItem = playerResultArea.GetChild(roundNumber).gameObject;
         SetUpResultItem(playerResultItem, playerItem);
         _playerTotalValue += playerItem.price;
         playerTotalValueText.text = $"Total Value: {_playerTotalValue:F2}€";
     }
     
-    private void DisplayBotRoundResult(ItemData botItem)
+    private void DisplayBotRoundResult(ItemData botItem, int roundNumber)
     {
-        GameObject botResultItem = Instantiate(resultPrefab, botResultArea);
+        GameObject botResultItem = botResultArea.GetChild(roundNumber).gameObject;
         SetUpResultItem(botResultItem, botItem);
         _botTotalValue += botItem.price;
         botTotalValueText.text = $"Total Value: {_botTotalValue:F2}€";
@@ -317,12 +342,14 @@ public class CaseBattleManager : MonoBehaviour
     
     private void SetUpResultItem(GameObject resultItem, ItemData itemData)
     {
+        Image uncoveredImage =  resultItem.transform.Find("UncoveredImage")?.GetComponent<Image>();
         Image itemImage = resultItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = resultItem.transform.Find("RarityImage").GetComponent<Image>();
         TextMeshProUGUI gunText = resultItem.transform.Find("GunText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI nameText = resultItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = resultItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
+        uncoveredImage.enabled = false;
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id.Remove(itemData.id.LastIndexOf('_'))}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
         gunText.text = itemData.gun;
@@ -334,7 +361,30 @@ public class CaseBattleManager : MonoBehaviour
     {
         Image itemImage = reelItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
+        TextMeshProUGUI conditionText = reelItem.transform.Find("ConditionText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI statTrakText = reelItem.transform.Find("StatTrakText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI priceText = reelItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
         
+        if (conditionText != null)
+        {
+            conditionText.text = itemData.condition;
+        }
+
+        if (statTrakText != null)
+        {
+            if (itemData.isStatTrak)
+            {
+                statTrakText.gameObject.SetActive(true);
+                statTrakText.text = Globals.StatTrakUIText;
+            }
+        }
+        else
+        {
+            statTrakText.gameObject.SetActive(false);
+        }
+
+        priceText.text = $"{itemData.price:F2}€";
+
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id.Remove(itemData.id.LastIndexOf('_'))}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
     }
@@ -404,7 +454,7 @@ public class CaseBattleManager : MonoBehaviour
             return null;
         }
         
-        float totalRarityWeight = RarityWeights.WeightList
+        float totalRarityWeight = RarityData.Weight
             .Where(rarity => _rarityGroups.ContainsKey(rarity.Key))
             .Sum(rarity => rarity.Value);
         float rarityRandomValue = Random.Range(0, totalRarityWeight);
@@ -412,7 +462,7 @@ public class CaseBattleManager : MonoBehaviour
         float cumulativeRarityWeight = 0f;
         string selectedRarity = null;
         
-        foreach (var rarity in RarityWeights.WeightList)
+        foreach (var rarity in RarityData.Weight)
         {
             if (!_rarityGroups.ContainsKey(rarity.Key)) continue;
             cumulativeRarityWeight += rarity.Value;

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ public class InventoryScreen : MonoBehaviour
     public GameObject inventorySlotPrefab;
     public Transform inventoryGrid;
     public Text totalValueText;
-    public int itemsPerPage = 112;
+    public int itemsPerPage = 72;
     private int _currentPage;
 
     private List<ItemData> _items = new List<ItemData>();
@@ -48,8 +49,11 @@ public class InventoryScreen : MonoBehaviour
 
             Image itemImage = slot.transform.Find("ItemImage")?.GetComponent<Image>();
             Image rarityImage = slot.transform.Find("RarityImage")?.GetComponent<Image>();
-            Image conditionImage = slot.transform.Find("ConditionImage")?.GetComponent<Image>();
-            Image statTrakImage = slot.transform.Find("StatTrakImage")?.GetComponent<Image>();
+            TextMeshProUGUI conditionText = slot.transform.Find("ConditionText")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI statTrakText = slot.transform.Find("StatTrakText")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI gunText = slot.transform.Find("GunText")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI nameText = slot.transform.Find("NameText")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI priceText = slot.transform.Find("PriceText")?.GetComponent<TextMeshProUGUI>();
 
             if (itemImage != null)
             {
@@ -79,41 +83,26 @@ public class InventoryScreen : MonoBehaviour
                 }
             }
 
-            if (conditionImage != null)
+            if (conditionText != null)
             {
-                string conditionPath = "ConditionImages/" + item.condition;
-                Sprite conditionSprite = Resources.Load<Sprite>(conditionPath);
-                if (conditionSprite != null)
-                {
-                    conditionImage.sprite = conditionSprite;
-                }
-                else
-                {
-                    Debug.LogWarning($"Failed to load condition image for path: {conditionPath}");
-                }
+                conditionText.text = item.condition;
             }
-            if (statTrakImage != null)
+            if (statTrakText != null)
             {
                 if (item.isStatTrak)
                 {
-                    statTrakImage.gameObject.SetActive(true);
-                    string statTrakPath = "ConditionImages/StatTrak";
-                    Sprite statTrakSprite = Resources.Load<Sprite>(statTrakPath);
-                    if (statTrakSprite != null)
-                    {
-                        statTrakImage.sprite = statTrakSprite;
-                    }
-                    else
-                    {
-                        Debug.LogWarning("Failed to load stat trak image for path: " + statTrakPath);
-                    }
+                    statTrakText.gameObject.SetActive(true);
+                    statTrakText.text = Globals.StatTrakUIText;
                 }
                 else
                 {
-                    statTrakImage.gameObject.SetActive(false);
+                    statTrakText.gameObject.SetActive(false);
                 }
             }
-            
+
+            gunText.text = item.gun;
+            nameText.text = item.name;
+            priceText.text = $"{item.price:F2}€";
         }
     }
 

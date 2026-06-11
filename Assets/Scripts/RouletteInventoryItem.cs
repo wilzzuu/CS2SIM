@@ -6,6 +6,7 @@ public class RouletteInventoryItem : MonoBehaviour
 {
     public Image itemImage;
     public Image rarityImage;
+    public TextMeshProUGUI gunText;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI priceText;
     public Button chooseButton;
@@ -15,8 +16,9 @@ public class RouletteInventoryItem : MonoBehaviour
     {
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id.Remove(item.id.LastIndexOf('_'))}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
+        gunText.text = item.gun;
         nameText.text = item.name;
-        priceText.text = $"{item.price:0.00}";
+        priceText.text = $"{item.price:0.00}€";
 
         if (!isItemSelected)
         {

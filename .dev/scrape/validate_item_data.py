@@ -6,9 +6,15 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 
 DATA_PATH = SCRIPT_DIR / "data"
 
-INPUT_FILE = DATA_PATH / "pre_processed_item_data.json"
+COMPARE_CASE_FILE = DATA_PATH / "pre_processed_case_data_backup.json"
+COMPARE_ITEM_FILE = DATA_PATH / "pre_processed_item_data_backup.json"
+VALIDATE_FILE = DATA_PATH / "new_processed_data.json"
 OUTPUT_FILE = DATA_PATH / "validation_report.txt"
 
+MATCHING_CASE_FILE = DATA_PATH / "matching_cases.json"
+MATCHING_ITEM_FILE = DATA_PATH / "matching_items.json"
+MISSING_CASE_FILE = DATA_PATH / "missing_cases.json"
+MISSING_ITEM_FILE = DATA_PATH / "missing_items.json"
 
 
 def is_empty(value):
@@ -127,11 +133,60 @@ def validate_item(item):
 
     return errors
 
+def compare_data(data):
+    with open(COMPARE_CASE_FILE, "r", encoding="utf-8") as f:
+        case_data = json.load(f)
+
+    cases = []
+    for case in case_data["cases"]:
+        case_name = case["name"]
+        cases.append(case_name)
+
+    with open(COMPARE_ITEM_FILE, "r", encoding="utf-8") as f:
+        item_data = json.load(f)
+
+    items = []
+    for item in item_data["items"]:
+        item_name = item["name"]
+        item_skin = item["skin"]
+        items.append({item_name, item_skin})
+
+    matching_cases = []
+    missing_cases = []
+    matching_items = []
+    missing_items = []
+
+    for case in data["cases"]:
+        case_name = case["name"]
+        if case_name in cases:
+            matching_cases.append(case_name)
+        else:
+            missing_cases.append(case_name)
+        for item in case["items"]:
+            item_name = item["name"]
+            item_skin = item["skin"]
+            if {item_name, item_skin} in items:
+                matching_items.append({item_name, item_skin})
+            else:
+                missing_items.append({item_name, item_skin})
+    
+    with open(MATCHING_CASE_FILE, "w", encoding="utf-8") as f:
+        f.write("\n".join(matching_cases))
+
+    with open(MATCHING_ITEM_FILE, "w", encoding="utf-8") as f:
+        f.write("\n".join(" : ".join(matching_items)))
+
+    with open(MISSING_CASE_FILE, "w", encoding="utf-8") as f:
+        f.write("\n".join(missing_cases))
+
+    with open(MISSING_ITEM_FILE, "w", encoding="utf-8") as f:
+        f.write("\n".join(" : ".join(missing_items)))
 
 def main():
-
-    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+    with open(VALIDATE_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
+    
+    #compare_data(data)
 
     items = data.get("items", [])
 

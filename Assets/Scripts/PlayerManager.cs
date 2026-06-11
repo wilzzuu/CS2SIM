@@ -1,16 +1,19 @@
 using UnityEngine;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections;
 
 [System.Serializable]
 public class Player
 {
     public float balance;
+    public float btcOwned;
+    public float ethOwned;
 
-    public Player(float initialBalance)
+    public Player(float initialBalance, float initialBtc, float initialEth)
     {
         balance = initialBalance;
+        btcOwned = initialBtc;
+        ethOwned = initialEth;
     }
 }
 
@@ -23,7 +26,6 @@ public class PlayerManager : MonoBehaviour
     {
         get
         {
-
             #if UNITY_EDITOR
                 return Path.Combine(Application.persistentDataPath, "EditorData");
             #else
@@ -36,6 +38,10 @@ public class PlayerManager : MonoBehaviour
 
     public delegate void BalanceChangedHandler();
     public event BalanceChangedHandler OnBalanceChanged;
+    public delegate void BtcChangedHandler();
+    public event BtcChangedHandler OnBtcChanged;
+    public delegate void EthChangedHandler();
+    public event EthChangedHandler OnEthChanged;
 
     void Awake()
     {
@@ -64,24 +70,155 @@ public class PlayerManager : MonoBehaviour
 
     public void AddCurrency(float amount)
     {
-        player.balance += amount;
+        player.balance = Globals.FloatUtil.Round(player.balance + amount);
+
+        LogUtil.Economy.LogEuro(
+            "ADD_CURRENCY",
+            amount,
+            player.balance
+        );
+
         SavePlayerData();
         OnBalanceChanged?.Invoke();
     }
 
     public void DeductCurrency(float amount)
     {
-        if (player.balance >= amount)
+        if (Globals.FloatUtil.GreaterOrEqual(player.balance, amount))
         {
-            player.balance -= amount;
+            player.balance = Globals.FloatUtil.Round(player.balance - amount);
+
+            LogUtil.Economy.LogEuro(
+                "DEDUCT_CURRENCY",
+                -amount,
+                player.balance
+            );
+
             SavePlayerData();
             OnBalanceChanged?.Invoke();
         }
     }
 
+    public void AddBtc(float amount)
+    {
+        player.btcOwned = Globals.FloatUtil.RoundCrypto(player.btcOwned + amount);
+        float euroAmount = amount * CryptoSystem.Instance.GetBtcPrice();
+
+        LogUtil.Economy.LogCrypto(
+            "ADD_CRYPTO",
+            amount,
+            "BTC",
+            player.btcOwned,
+            $"-{euroAmount:F2}€"
+        );
+
+        SavePlayerData();
+        OnBtcChanged?.Invoke();
+    }
+
+    public void DeductBtc(float amount)
+    {
+        if (Globals.FloatUtil.GreaterOrEqual(player.btcOwned, amount))
+        {
+            player.btcOwned = Globals.FloatUtil.RoundCrypto(player.btcOwned - amount);
+            float euroAmount = amount * CryptoSystem.Instance.GetBtcPrice();
+
+            LogUtil.Economy.LogCrypto(
+                "DEDUCT_CRYPTO",
+                -amount,
+                "BTC",
+                player.btcOwned,
+                $"+{euroAmount:F2}€"
+            );
+
+            SavePlayerData();
+            OnBtcChanged?.Invoke();
+        }
+    }
+
+    public void MineBtc(float amount)
+    {
+        player.btcOwned = Globals.FloatUtil.RoundCrypto(player.btcOwned + amount);
+        float euroAmount = amount * CryptoSystem.Instance.GetBtcPrice();
+
+        LogUtil.Economy.LogCrypto(
+            "MINE_CRYPTO",
+            amount,
+            "BTC",
+            player.btcOwned
+        );
+
+        SavePlayerData();
+        OnBtcChanged?.Invoke();
+    }
+
+    public void AddEth(float amount)
+    {
+        player.ethOwned = Globals.FloatUtil.RoundCrypto(player.ethOwned + amount);
+
+        float euroAmount = amount * CryptoSystem.Instance.GetEthPrice();
+
+        LogUtil.Economy.LogCrypto(
+            "ADD_CRYPTO",
+            amount,
+            "ETH",
+            player.ethOwned,
+            $"-{euroAmount:F2}€"
+        );
+
+        SavePlayerData();
+        OnEthChanged?.Invoke();
+    }
+
+    public void DeductEth(float amount)
+    {
+        if (Globals.FloatUtil.GreaterOrEqual(player.ethOwned, amount))
+        {
+            player.ethOwned = Globals.FloatUtil.RoundCrypto(player.ethOwned - amount);
+            float euroAmount = amount * CryptoSystem.Instance.GetEthPrice();
+
+            LogUtil.Economy.LogCrypto(
+                "DEDUCT_CRYPTO",
+                -amount,
+                "ETH",
+                player.ethOwned,
+                $"+{euroAmount:F2}€"
+            );
+
+            SavePlayerData();
+            OnEthChanged?.Invoke();
+        }
+    }
+
+    public void MineEth(float amount)
+    {
+        player.ethOwned = Globals.FloatUtil.RoundCrypto(player.ethOwned + amount);
+        float euroAmount = amount * CryptoSystem.Instance.GetEthPrice();
+
+        LogUtil.Economy.LogCrypto(
+            "MINE_CRYPTO",
+            amount,
+            "ETH",
+            player.ethOwned
+        );
+
+        SavePlayerData();
+        OnBtcChanged?.Invoke();
+    }
+
     public float GetPlayerBalance()
     {
-        return player.balance;
+        return Globals.FloatUtil.Round(player.balance);
+    }
+
+    public float GetBtcOwned()
+    {   
+        return Globals.FloatUtil.RoundCrypto(player.btcOwned);
+    }
+
+    public float GetEthOwned()
+    {
+        return Globals.FloatUtil.RoundCrypto(player.ethOwned);
     }
 
     void CheckPlayerSave()
@@ -91,7 +228,7 @@ public class PlayerManager : MonoBehaviour
         if (!File.Exists(path))
         {
             Debug.LogWarning("Player save file missing or tampered with. Clearing inventory as a security measure.");
-            InventoryManager.Instance.ClearInventory();
+            InventoryManager.Instance.ClearInventory(true);
 
             ResetProgress();
         }
@@ -123,15 +260,15 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            player = new Player(200f);
+            player = new Player(200f, 0f, 0f);
         }
     }
 
     public void ResetProgress()
     {
-        player = new Player(200f);
+        player = new Player(200f, 0f, 0f);
         SavePlayerData();
-        InventoryManager.Instance.ClearInventory();
+        InventoryManager.Instance.ClearInventory(true);
         CollectionManager.Instance.ClearCollection();
     }
 }
@@ -140,9 +277,13 @@ public class PlayerManager : MonoBehaviour
 public class PlayerData
 {
     public float balance;
+    public float btcOwned;
+    public float ethOwned;
 
     public PlayerData(PlayerManager playerManager)
     {
         balance = playerManager.GetPlayerBalance();
+        btcOwned = playerManager.GetBtcOwned();
+        ethOwned = playerManager.GetEthOwned();
     }
 }

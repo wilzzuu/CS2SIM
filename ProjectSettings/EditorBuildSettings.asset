@@ -48,9 +48,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Plinko.unity
     guid: 05320a8ec4df2db4d94a3c696d7c1a6b
   - enabled: 1
-    path: Assets/Scenes/Clicker.unity
-    guid: 58514ac5846557b4da9f7d2920041272
-  - enabled: 1
     path: Assets/Scenes/HighLow.unity
     guid: 801951bc79a5ce84d9a750ebb08e59a0
   - enabled: 1
@@ -71,5 +68,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Investing.unity
     guid: 089d8318866c4214aa607616b206e716
+  - enabled: 1
+    path: Assets/Scenes/DailyRewards.unity
+    guid: 04ff330272ddc834593c2bcf31cc0fba
+  - enabled: 1
+    path: Assets/Scenes/Crypto.unity
+    guid: d69dd2d5b58480540b6b9120813f8797
+  - enabled: 1
+    path: Assets/Scenes/SlotMachine.unity
+    guid: 9596f896ac478f34cb54ba2ce14914c3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

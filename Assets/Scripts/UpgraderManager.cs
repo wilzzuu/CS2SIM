@@ -3,7 +3,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor;
 
 public class UpgraderManager : MonoBehaviour
 {
@@ -36,9 +35,11 @@ public class UpgraderManager : MonoBehaviour
     public GameObject selectItemText1;
     public GameObject selectItemText2;
     public Button upgradeButton;
-
-    private int _itemsLoaded;
-    private bool _isLoadingMoreItems;
+    
+    public TextMeshProUGUI currentPageText;
+    public TextMeshProUGUI maxPageText;
+    private int currentPage;
+    const int ItemsPerPage = 24;
 
     private List<ItemData> _allItems = new List<ItemData>();
     private List<ItemData> _inventoryItems = new List<ItemData>();
@@ -46,24 +47,6 @@ public class UpgraderManager : MonoBehaviour
     private ItemData _selectedInventoryItem;
     private ItemData _selectedUpgradeItem;
     private float _successProbability;
-
-    private static readonly Dictionary<string, int> RarityOrder = new Dictionary<string, int>
-    {
-        {"MIL_SPEC", 1},
-        {"RESTRICTED", 2},
-        {"CLASSIFIED", 3},
-        {"COVERT", 4},
-        {"SPECIAL", 5}
-    };
-
-    private static readonly Dictionary<string, int> ConditionOrder = new Dictionary<string, int>
-    {
-        {"Battle-Scarred",1},
-        {"Well-Worn",2},
-        {"Field-Tested",3},
-        {"Minimal Wear",4},
-        {"Factory New",5}
-    };
 
     private float[] _multipliers = { 1.5f, 2f, 5f, 10f, 20f };
 
@@ -92,9 +75,6 @@ public class UpgraderManager : MonoBehaviour
         inventoryTabButton.onClick.AddListener(ShowInventoryTab);
         upgradeTabButton.onClick.AddListener(ShowUpgradeTab);
 
-        ScrollRect scrollRect = (_isInventoryTabActive ? inventoryScrollView : upgradeItemsScrollView).GetComponent<ScrollRect>();
-        scrollRect.onValueChanged.AddListener(OnScroll);
-
         searchBtn.onClick.AddListener(SearchItems);
         searchInput.onValueChanged.AddListener(delegate { ClearSearch(); });
         searchPriceBtn.onClick.AddListener(SearchPrices);
@@ -121,7 +101,7 @@ public class UpgraderManager : MonoBehaviour
 
     private void UpdateCurrentTab()
     {
-        DisplayItems();
+        DisplayPage(currentPage);
     }
 
     void DisplayItems()
@@ -151,6 +131,63 @@ public class UpgraderManager : MonoBehaviour
             upgraderItem.Setup(displayedItems[i], _isInventoryTabActive);
         }
     }
+
+    void DisplayPage(int page)
+    {
+        Transform currentCatalogGrid = _isInventoryTabActive ? inventoryCatalogGrid : upgradeCatalogGrid;
+        List<ItemData> displayedItems = _isInventoryTabActive ? _inventoryItems : _allItems;
+
+        int pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
+
+        if (currentCatalogGrid == null) return;
+
+        if (!_isInventoryTabActive && _selectedInventoryItem != null)
+        {
+            displayedItems = _allItems.FindAll(upgradeItem => upgradeItem.price > _selectedInventoryItem.price);
+            pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
+        }
+
+        foreach (Transform child in currentCatalogGrid)
+        {
+            if (child != null)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
+        int startIndex = page * ItemsPerPage;
+        int endIndex = Mathf.Min(startIndex + ItemsPerPage, displayedItems.Count);
+
+        for (int i = startIndex; i < endIndex; i++)
+        {
+            GameObject itemObj = Instantiate(upgraderItemPrefab, currentCatalogGrid);
+            UpgraderItem upgraderItem = itemObj.GetComponent<UpgraderItem>();
+            upgraderItem.Setup(displayedItems[i], _isInventoryTabActive);
+        }
+        currentPageText.text = ((pageCount > 0) ? page+1 : page).ToString();
+        maxPageText.text = pageCount.ToString();
+    }
+
+    public void NextPage()
+    {
+        int itemsCount = _isInventoryTabActive ? _inventoryItems.Count : _allItems.Count;
+        int pageCount = Mathf.CeilToInt((float)itemsCount / ItemsPerPage);
+
+        if (currentPage < pageCount - 1)
+        {
+            currentPage++;
+            DisplayPage(currentPage);
+        }
+    }
+
+    public void PreviousPage()
+    {
+        if (currentPage > 0)
+        {
+            currentPage--;
+            DisplayPage(currentPage);
+        }
+    }
     
     public void ClearSearch()
     {
@@ -170,15 +207,6 @@ public class UpgraderManager : MonoBehaviour
         }
     }
 
-    void OnScroll(Vector2 scrollPosition)
-    {
-        if (scrollPosition.y <= 0.1f && !_isLoadingMoreItems && _itemsLoaded < (_isInventoryTabActive ? _allItems.Count : _inventoryItems.Count))
-        {
-            _isLoadingMoreItems = true;
-            DisplayItems();
-        }
-    }
-
     void LoadAllGameItems()
     {
         _allItems = Resources.LoadAll<ItemData>("ItemAssets").ToList();
@@ -194,9 +222,9 @@ public class UpgraderManager : MonoBehaviour
         _isInventoryTabActive = true;
         inventoryScrollView.SetActive(true);
         upgradeItemsScrollView.SetActive(false);
-        _itemsLoaded = 0;
         RefreshInventoryValue();
-        DisplayItems();
+        currentPage = 0;
+        DisplayPage(currentPage);
     }
 
     public void ShowUpgradeTab()
@@ -204,9 +232,9 @@ public class UpgraderManager : MonoBehaviour
         _isInventoryTabActive = false;
         inventoryScrollView.SetActive(false);
         upgradeItemsScrollView.SetActive(true);
-        _itemsLoaded = 0;
         RefreshInventoryValue();
-        DisplayItems();
+        currentPage = 0;
+        DisplayPage(currentPage);
     }
 
     public void SelectInventoryItem(ItemData item)
@@ -423,20 +451,20 @@ public class UpgraderManager : MonoBehaviour
                 : _allItems.OrderByDescending(i => i.type).ToList(),
             "Rarity" => ascending
                 ? _allItems
-                    .OrderBy(i => RarityOrder.ContainsKey(i.rarity) ? RarityOrder[i.rarity] : int.MaxValue)
+                    .OrderBy(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MaxValue)
                     .ToList()
                 : _allItems
-                    .OrderByDescending(i => RarityOrder.ContainsKey(i.rarity) ? RarityOrder[i.rarity] : int.MinValue)
+                    .OrderByDescending(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MinValue)
                     .ToList(),
             "Gun" => ascending
                 ? _allItems.OrderBy(i => i.gun).ToList()
                 : _allItems.OrderByDescending(i => i.gun).ToList(),
             "Condition" => ascending
                 ? _allItems
-                    .OrderBy(i => ConditionOrder.ContainsKey(i.condition) ? RarityOrder[i.condition] : int.MaxValue)
+                    .OrderBy(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MaxValue)
                     .ToList()
                 : _allItems
-                    .OrderByDescending(i => ConditionOrder.ContainsKey(i.condition) ? RarityOrder[i.condition] : int.MinValue)
+                    .OrderByDescending(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MinValue)
                     .ToList(),
             "Price" => ascending
                 ? _allItems.OrderBy(i => i.price).ToList()
@@ -454,20 +482,20 @@ public class UpgraderManager : MonoBehaviour
                 : _inventoryItems.OrderByDescending(i => i.type).ToList(),
             "Rarity" => ascending
                 ? _inventoryItems
-                    .OrderBy(i => RarityOrder.ContainsKey(i.rarity) ? RarityOrder[i.rarity] : int.MaxValue)
+                    .OrderBy(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MaxValue)
                     .ToList()
                 : _inventoryItems
-                    .OrderByDescending(i => RarityOrder.ContainsKey(i.rarity) ? RarityOrder[i.rarity] : int.MinValue)
+                    .OrderByDescending(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MinValue)
                     .ToList(),
             "Gun" => ascending
                 ? _inventoryItems.OrderBy(i => i.gun).ToList()
                 : _inventoryItems.OrderByDescending(i => i.gun).ToList(),
             "Condition" => ascending
                 ? _inventoryItems
-                    .OrderBy(i => ConditionOrder.ContainsKey(i.condition) ? RarityOrder[i.condition] : int.MaxValue)
+                    .OrderBy(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MaxValue)
                     .ToList()
                 : _inventoryItems
-                    .OrderByDescending(i => ConditionOrder.ContainsKey(i.condition) ? RarityOrder[i.condition] : int.MinValue)
+                    .OrderByDescending(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MinValue)
                     .ToList(),
             "Price" => ascending
                 ? _inventoryItems.OrderBy(i => i.price).ToList()

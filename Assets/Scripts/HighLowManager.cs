@@ -147,6 +147,13 @@ public class HighLowManager : MonoBehaviour
             _betAmount <= PlayerManager.Instance.GetPlayerBalance())
         {
             PlayerManager.Instance.DeductCurrency(_betAmount);
+
+            LogUtil.Economy.LogEuro(
+                "PLAY_HIGHLOW",
+                -_betAmount,
+                PlayerManager.Instance.GetPlayerBalance()
+            );
+
             guessHighButton.interactable = true;
             guessLowButton.interactable = true;
             startRoundButton.interactable = false;
@@ -246,6 +253,13 @@ public class HighLowManager : MonoBehaviour
     {
         float winnings = _betAmount * _roundNumber * RoundMultiplier;
         PlayerManager.Instance.AddCurrency(winnings);
+
+        LogUtil.Economy.LogEuro(
+            "CASHOUT_HIGHLOW",
+            winnings,
+            PlayerManager.Instance.GetPlayerBalance()
+        );
+
         resultText.text = $"You cashed out {winnings:F2}€ at {_roundNumber * RoundMultiplier}x";
         GameOver();
     }

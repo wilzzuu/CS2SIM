@@ -1,52 +1,14 @@
 ================================================================================
 VALIDATION SUMMARY
 ================================================================================
-Total items checked: 1899
-Items with errors: 7
-Items without errors: 1892
+Total items checked: 0
+Items with errors: 0
+Items without errors: 0
 
 ERROR TYPE COUNTS
 --------------------------------------------------------------------------------
-missing_collection_and_container: 6
-missing_regular_price: 1
-stattrak_without_regular: 1
+No errors found.
 
 ================================================================================
 DETAILED ERRORS
 ================================================================================
-
-================================================================================
-ITEM: Bayonet | Vanilla
-
-- Both collection and container are missing/None
-
-================================================================================
-ITEM: Desert Eagle | Trigger Discipline
-
-- Battle-Scarred: regular_price missing/null
-- Battle-Scarred: stattrak_price exists without regular_price
-
-================================================================================
-ITEM: Flip Knife | Vanilla
-
-- Both collection and container are missing/None
-
-================================================================================
-ITEM: Gut Knife | Vanilla
-
-- Both collection and container are missing/None
-
-================================================================================
-ITEM: Karambit | Vanilla
-
-- Both collection and container are missing/None
-
-================================================================================
-ITEM: M9 Bayonet | Vanilla
-
-- Both collection and container are missing/None
-
-================================================================================
-ITEM: Sport Gloves | Pandora's Box
-
-- Both collection and container are missing/None

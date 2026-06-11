@@ -98,19 +98,24 @@ public class InventoryManager : MonoBehaviour
         {
             totalValue += item.price;
         }
-        return totalValue * 0.85f;
+        return totalValue;
     }
 
-    public void ClearInventory()
+    public void ClearInventory(bool delete)
     {
         _inventoryItems.Clear();
-        string path = Path.Combine(SaveFilePath, SaveFileName);
+        OnInventoryValueChanged?.Invoke();
 
-        if (File.Exists(path))
+        if (delete)
         {
-            File.Delete(path);
+            string path = Path.Combine(SaveFilePath, SaveFileName);
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
         }
-        
+
         SaveInventory();
     }
 
