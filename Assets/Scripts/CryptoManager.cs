@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class CryptoManager : MonoBehaviour
 {
-
     public Button showExchangeTab;
     public Button showMiningTab;
     public Button showBtcTab;
@@ -121,7 +120,7 @@ public class CryptoManager : MonoBehaviour
         minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.btcMiners}" : $"{CryptoSystem.Instance.ethMiners}";
         string spriteName = _isBtcTab ? "bitcoin" : "ethereum"; 
         bigIcon.sprite = Resources.Load<Sprite>($"Images/GUI/Icons/Icons8/{spriteName}");
-        minerPriceText.text = _isBtcTab ? $"{CryptoSystem.Instance.GetBtcPrice():F2}€" : $"{CryptoSystem.Instance.GetEthPrice():F2}€";
+        minerPriceText.text = _isBtcTab ? $"1 BTC" : $"1 ETH";
 
         if (_isBtcTab)
         {

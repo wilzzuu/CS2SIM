@@ -5,6 +5,7 @@ using UnityEngine;
 public class CryptoSystem : MonoBehaviour
 {
     public static CryptoSystem Instance { get; private set; }
+    public AutoTrader autoTrader;
 
     [Header("Market Prices")]
     public float btcPrice = 100000f;
@@ -92,6 +93,9 @@ public class CryptoSystem : MonoBehaviour
 
         OnBtcPriceChanged?.Invoke();
         OnEthPriceChanged?.Invoke();
+
+        autoTrader.RecordMarketPrices();
+        autoTrader.ExecuteAutoTrader();
 
         _nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
 
@@ -181,7 +185,8 @@ public class CryptoSystem : MonoBehaviour
         if (btcMiners > 0)
         {
             btcMiners--;
-            PlayerManager.Instance.AddCurrency(GetBtcPrice());
+            float minerSellPrice = GetBtcPrice() * 0.8f;
+            PlayerManager.Instance.AddCurrency(minerSellPrice);
             GetBtcPerHour();
             OnBtcMinersChanged?.Invoke();
             SaveData();
@@ -209,7 +214,8 @@ public class CryptoSystem : MonoBehaviour
         if (ethMiners > 0)
         {
             ethMiners--;
-            PlayerManager.Instance.AddCurrency(GetEthPrice());
+            float minerSellPrice = GetEthPrice() * 0.8f;
+            PlayerManager.Instance.AddCurrency(minerSellPrice);
             GetEthPerHour();
             OnEthMinersChanged?.Invoke();
             SaveData();

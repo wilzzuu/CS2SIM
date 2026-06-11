@@ -100,7 +100,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            btcAmountText.text = $"{0}";
+            btcAmountText.text = $"{0:F8}";
             btcValueText.text = $"{0:F2}€";
         }
 
@@ -140,7 +140,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            ethAmountText.text = $"{0}";
+            ethAmountText.text = $"{0:F8}";
             ethValueText.text = $"{0:F2}€";
         }
 
