@@ -397,6 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5621486647239001482}
+  - component: {fileID: 7236115561438064116}
   m_Layer: 5
   m_Name: SideBar
   m_TagString: Untagged
@@ -425,6 +426,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7236115561438064116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540680228929679285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f8e7fa75f80b14d9ca0fa1b684488b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SidebarAlertUI
+  alerts:
+  - type: 0
+    alertObject: {fileID: 2611923902938657876}
+  - type: 1
+    alertObject: {fileID: 9149829671675333412}
+  - type: 2
+    alertObject: {fileID: 9058820469660422804}
 --- !u!1 &604881957532266590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,7 +6342,7 @@ GameObject:
   - component: {fileID: 3893047729950924551}
   - component: {fileID: 909182640130987127}
   m_Layer: 5
-  m_Name: Number
+  m_Name: Alert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

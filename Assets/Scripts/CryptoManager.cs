@@ -26,8 +26,8 @@ public class CryptoManager : MonoBehaviour
     public TextMeshProUGUI cryptoAmountPlaceholder;
     public TextMeshProUGUI cryptoOutputText;
     public TextMeshProUGUI euroOutputText;
-
     public TextMeshProUGUI priceDiffText;
+    public TextMeshProUGUI marketEventText;
 
     void Start()
     {
@@ -75,6 +75,8 @@ public class CryptoManager : MonoBehaviour
 
     private void UpdateExchangeUI()
     {
+        AlertManager.Set(AlertType.Crypto, false);
+
         float _btcPrice = CryptoSystem.Instance.GetBtcPrice();
         float _ethPrice = CryptoSystem.Instance.GetEthPrice();
         float _btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
@@ -90,7 +92,8 @@ public class CryptoManager : MonoBehaviour
         buySectionText.text = $"Buy {(_isBtcTab ? "BTC" : "ETH")}";
         sellSectionText.text = $"Sell {(_isBtcTab ? "BTC" : "ETH")}";
         cryptoAmountPlaceholder.text = $"Enter {(_isBtcTab ? "BTC" : "ETH")} Amount";
-        euroAmountPlaceholder.text = $"Enter Euro Amount";
+        euroAmountPlaceholder.text = "Enter Euro Amount";
+        marketEventText.text = CryptoSystem.Instance.currentMarketEvent;
 
         if (_isBtcTab)
         {
@@ -110,6 +113,8 @@ public class CryptoManager : MonoBehaviour
 
     private void UpdateMiningUI()
     {
+        AlertManager.Set(AlertType.Crypto, false);
+
         float _btcPrice = CryptoSystem.Instance.GetBtcPrice();
         float _ethPrice = CryptoSystem.Instance.GetEthPrice();
         float _btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
@@ -120,7 +125,7 @@ public class CryptoManager : MonoBehaviour
         minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.btcMiners}" : $"{CryptoSystem.Instance.ethMiners}";
         string spriteName = _isBtcTab ? "bitcoin" : "ethereum"; 
         bigIcon.sprite = Resources.Load<Sprite>($"Images/GUI/Icons/Icons8/{spriteName}");
-        minerPriceText.text = _isBtcTab ? $"1 BTC" : $"1 ETH";
+        minerPriceText.text = _isBtcTab ? "1 BTC" : "1 ETH";
 
         if (_isBtcTab)
         {

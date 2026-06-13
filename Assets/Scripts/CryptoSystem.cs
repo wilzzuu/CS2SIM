@@ -21,15 +21,16 @@ public class CryptoSystem : MonoBehaviour
     public int ethMiners = 0;
     public float btcMinerPrice = 100000f;
     public float ethMinerPrice = 5000f;
-    public float btcPerHour;
-    public float ethPerHour;
+    public float btcPerHour = 0;
+    public float ethPerHour = 0;
 
     [Header("Price Updates")]
 
+    private DateTime _lastMiningUpdate;
     private DateTime _nextMiningUpdate;
     private DateTime _nextMarketUpdate;
     private DateTime _nextMarketEvent;
-    private DateTime _lastMiningUpdate;
+    public string currentMarketEvent = "No Event";
 
     private const string SaveKey = "CryptoSave";
 
@@ -93,13 +94,11 @@ public class CryptoSystem : MonoBehaviour
 
         OnBtcPriceChanged?.Invoke();
         OnEthPriceChanged?.Invoke();
-
-        autoTrader.RecordMarketPrices();
-        autoTrader.ExecuteAutoTrader();
-
+        
         _nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
 
         SaveData();
+
         TimeSpan remaining = _nextMarketEvent - DateTime.UtcNow;
         bool canUpdate = remaining <= TimeSpan.Zero;
         if (canUpdate)
@@ -110,7 +109,14 @@ public class CryptoSystem : MonoBehaviour
                 GenerateMarketEvent();
                 _nextMarketEvent = DateTime.UtcNow.AddHours(1);
             }
+            else
+            {
+                currentMarketEvent = "No Event";
+            }
         }
+
+        //autoTrader.RecordMarketPrices();
+        //autoTrader.ExecuteAutoTrader();
     }
 
     private IEnumerator UpdateMiners()
@@ -260,6 +266,15 @@ public class CryptoSystem : MonoBehaviour
 
     #region SAVE
 
+    public void ClearData()
+    {
+        if (PlayerPrefs.HasKey(SaveKey))
+        {
+            PlayerPrefs.DeleteKey(SaveKey);
+            SaveData();
+        }
+    }
+
     [System.Serializable]
     private class CryptoSaveData
     {
@@ -388,11 +403,13 @@ public class CryptoSystem : MonoBehaviour
     public void GenerateMarketEvent()
     {
         int eventRoll = UnityEngine.Random.Range(0, 5);
+        AlertManager.Set(AlertType.Crypto, true);
 
         switch (eventRoll)
         {
             case 0:
                 btcPrice *= 1.15f;
+                currentMarketEvent = "BTC Bull Run [+15%]";
                 LogUtil.Event.Log(
                     "BTC Bull Run",
                     "BTC Price +15%");
@@ -400,6 +417,7 @@ public class CryptoSystem : MonoBehaviour
 
             case 1:
                 btcPrice *= 0.85f;
+                currentMarketEvent = "BTC Crash [-15%]";
                 LogUtil.Event.Log(
                     "BTC Crash",
                     "BTC Price -15%");
@@ -407,6 +425,7 @@ public class CryptoSystem : MonoBehaviour
 
             case 2:
                 ethPrice *= 1.20f;
+                currentMarketEvent = "ETH Rally [+20%]";
                 LogUtil.Event.Log(
                     "ETH Rally",
                     "ETH Price +20%");
@@ -414,6 +433,7 @@ public class CryptoSystem : MonoBehaviour
 
             case 3:
                 ethPrice *= 0.80f;
+                currentMarketEvent = "ETH Correction [-20%]";
                 LogUtil.Event.Log(
                     "ETH Correction",
                     "ETH Price -20%");
@@ -422,6 +442,7 @@ public class CryptoSystem : MonoBehaviour
             case 4:
                 btcPrice *= 1.05f;
                 ethPrice *= 1.05f;
+                currentMarketEvent = "Market Optimism [+5%]";
                 LogUtil.Event.Log(
                     "Market Optimism",
                     "BTC & ETH Price +5%"

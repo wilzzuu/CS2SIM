@@ -267,15 +267,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe82a3e7df2c5f4a9cc6603a1e5b0c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CryptoSystem
+  autoTrader: {fileID: 0}
   btcPrice: 100000
   lastBtcPrice: 100000
   ethPrice: 5000
   lastEthPrice: 5000
+  maxBtcMiners: 100
   btcMiners: 0
+  maxEthMiners: 100
   ethMiners: 0
+  btcMinerPrice: 100000
+  ethMinerPrice: 5000
   btcPerHour: 0
   ethPerHour: 0
-  priceUpdateIntervalMinutes: 10
 --- !u!4 &125178687
 Transform:
   m_ObjectHideFlags: 0

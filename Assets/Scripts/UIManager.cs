@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using UnityEngine.Windows;
 using System;
 
 public class UIManager : MonoBehaviour
@@ -25,10 +24,24 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI ethPerHourText;
     public TextMeshProUGUI ethEurPerHourText;
 
+    public enum SidebarPage
+    {
+        Inventory,
+        Market,
+        CaseOpening,
+        GameSelector,
+        Crypto,
+        Collection,
+        Achievements,
+        Rewards,
+        DailyRewards,
+        Notifications,
+        Settings
+    }
 
     [SerializeField] private List<Button> buttonList = new List<Button>();
-
     private bool _isUILocked = false;
+
 
     void Start()
     {
@@ -165,13 +178,6 @@ public class UIManager : MonoBehaviour
         float inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
         inventoryValueText.text = $"{inventoryValue:F2}€";
     }
-
-    // public static void SetButtonAlert(string buttonName, bool isAlert)
-    // {
-    //     Button button = buttonList.Find(x => x.name == buttonName);
-    //     Image alertImage = button.transform.Find("Alert").GetComponent<Image>();
-    //     alertImage.enabled = isAlert;
-    // }
 
     public void LockButton(Button button)
     {

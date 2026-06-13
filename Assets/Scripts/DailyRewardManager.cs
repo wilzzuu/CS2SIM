@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DailyRewardSystem : MonoBehaviour
+public class DailyRewardManager : MonoBehaviour
 {
     public TextMeshProUGUI timerDateText;
     public TextMeshProUGUI timerTimeText;
@@ -23,7 +23,6 @@ public class DailyRewardSystem : MonoBehaviour
     [Header("UI Slots (7 elements)")]
     [SerializeField] private List<DailyRewardSlot> slots;
 
-
     private const string DailySaveKey = "DailyReward";
 
     private int _currentDay;
@@ -41,15 +40,13 @@ public class DailyRewardSystem : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
         StartCoroutine(UpdateTimer());
         RefreshUI();
-        //_lastClaim = DateTime.UtcNow.AddSeconds(-86385);
-        //SaveData();
     }
 
-    private void ValidateStreak()
+    void ValidateStreak()
     {
         if (_lastClaim == DateTime.MinValue)
             return;
@@ -63,7 +60,7 @@ public class DailyRewardSystem : MonoBehaviour
             SaveData();
         }
     }
-    
+
     private IEnumerator UpdateTimer()
     {
         while (true)
@@ -75,6 +72,7 @@ public class DailyRewardSystem : MonoBehaviour
             {
                 RefreshUI();
                 timerText.text = "Ready!";
+                AlertManager.Set(AlertType.DailyRewards, true);
             }
             else
             {
@@ -107,13 +105,11 @@ public class DailyRewardSystem : MonoBehaviour
             {
                 if (CanClaimToday())
                 {
-                    //UIManager.SetButtonAlert("DailyRewardsBtn", true);
                     slot.SetAvailable(buttonText);
                 }
                 else
                 {
                     slot.SetLocked(buttonText);
-
                 }
                 continue;
             }
@@ -146,7 +142,7 @@ public class DailyRewardSystem : MonoBehaviour
             rewards.Find(r => r.day == day);
 
         GiveReward(reward.rewardAmount);
-        //UIManager.SetButtonAlert("DailyRewardsBtn", false);
+        AlertManager.Set(AlertType.DailyRewards, false);
 
         _lastClaim = DateTime.UtcNow;
 
@@ -188,6 +184,15 @@ public class DailyRewardSystem : MonoBehaviour
     private DateTime GetNextAvailableTime()
     {
         return _lastClaim.AddHours(24);
+    }
+
+    public void ClearData()
+    {
+        if (PlayerPrefs.HasKey(DailySaveKey))
+        {
+            PlayerPrefs.DeleteKey(DailySaveKey);
+            SaveData();
+        }
     }
 
     [System.Serializable]

@@ -1,4 +1,11 @@
 NEW IDEAS:
+- roulette/coinflip hybrid
+  - 10% increment chances by player selection
+  - select one item to bet with
+  - winning item is selected by multiplying the bet item based on chance selection
+  - spin a roulette wheel that is either winning item or losing slot
+  - player loses bet item or wins winning item
+  - if bet item is the most expensive item, payout can be multiple items or money
 - slot machine with balance bet and win pays with skins (knife or gloves = jackpot)
 - skin deposits in games ?
 - quick buy skins with balance (calculated with regular extra market cost, which lowers the end value)

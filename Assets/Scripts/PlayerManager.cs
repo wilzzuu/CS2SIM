@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections;
 
 [System.Serializable]
-public class Player
+public class Player : MonoBehaviour
 {
     public float balance;
     public float btcOwned;
@@ -270,6 +270,10 @@ public class PlayerManager : MonoBehaviour
         SavePlayerData();
         InventoryManager.Instance.ClearInventory(true);
         CollectionManager.Instance.ClearCollection();
+        CryptoSystem.Instance.ClearData();
+        
+        DailyRewardManager dailyRewardManager = new DailyRewardManager();
+        dailyRewardManager.ClearData();
     }
 }
 
