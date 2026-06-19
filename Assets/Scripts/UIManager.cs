@@ -128,7 +128,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            btcPerHourText.text = $"{0}/h";
+            btcPerHourText.text = $"{0:F8}/h";
             btcEurPerHourText.text = $"{0:F2}€/h";
         }
     }
@@ -168,7 +168,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            ethPerHourText.text = $"{0}/h";
+            ethPerHourText.text = $"{0:F8}/h";
             ethEurPerHourText.text = $"{0:F2}€/h";
         }
     }
