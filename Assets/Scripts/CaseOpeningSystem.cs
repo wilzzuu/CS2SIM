@@ -17,6 +17,7 @@ public class CaseOpening : MonoBehaviour
     public Transform caseGridParent;
     public int numberOfReelItems = 40;
     public float easingDuration = 7f;
+    public float keyPrice = 2.19f;
     
     private bool _isScrolling;
     private Vector3 _initialReelPosition;
@@ -91,7 +92,7 @@ public class CaseOpening : MonoBehaviour
         
         caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{_selectedCaseData.id}");
         nameText.text = _selectedCaseData.name;
-        priceText.text = $"{_selectedCaseData.price:F2}€";
+        priceText.text = $"{_selectedCaseData.price + keyPrice:F2}€";
 
         GroupItemsByRarity();
 
@@ -149,7 +150,7 @@ public class CaseOpening : MonoBehaviour
 
         if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price)
         {
-            PlayerManager.Instance.DeductCurrency(_selectedCaseData.price);
+            PlayerManager.Instance.DeductCurrency(_selectedCaseData.price + keyPrice);
 
             LogUtil.Economy.LogEuro(
                 "OPEN_CASE",
@@ -503,7 +504,7 @@ public class CaseOpening : MonoBehaviour
             
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
-            priceText.text = $"{caseData.price:F2}€";
+            priceText.text = $"{caseData.price + keyPrice:F2}€";
 
             Button button = caseButton.GetComponent<Button>();
             button.onClick.AddListener(() => SelectCase(caseData));

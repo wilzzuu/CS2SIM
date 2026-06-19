@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.IO;
 using UnityEngine;
 
 public class CryptoSystem : MonoBehaviour
@@ -16,13 +17,13 @@ public class CryptoSystem : MonoBehaviour
 
     [Header("Mining")]
     public int maxBtcMiners = 100;
-    public int btcMiners = 0;
+    public int _btcMiners = 0;
     public int maxEthMiners = 100;
-    public int ethMiners = 0;
+    public int _ethMiners = 0;
     public float btcMinerPrice = 100000f;
     public float ethMinerPrice = 5000f;
-    public float btcPerHour = 0;
-    public float ethPerHour = 0;
+    public float _btcPerHour = 0;
+    public float _ethPerHour = 0;
 
     [Header("Price Updates")]
 
@@ -32,7 +33,19 @@ public class CryptoSystem : MonoBehaviour
     private DateTime _nextMarketEvent;
     public string currentMarketEvent = "No Event";
 
-    private const string SaveKey = "CryptoSave";
+    private string SaveFilePath
+    {
+        get
+        {
+            #if UNITY_EDITOR
+                return Path.Combine(Application.persistentDataPath, "EditorData");
+            #else
+                return Path.Combine(Application.persistentDataPath, "SaveData");
+            #endif
+        }
+    }
+
+    private const string SaveFileName = "CryptoData.save";
 
     public delegate void BtcPriceHandler();
     public event BtcPriceHandler OnBtcPriceChanged;
@@ -43,7 +56,7 @@ public class CryptoSystem : MonoBehaviour
     public delegate void EthMinerHandler();
     public event EthPriceHandler OnEthMinersChanged;
     
-    private void Awake()
+    void Awake()
     {
         if (Instance == null)
         {
@@ -58,7 +71,7 @@ public class CryptoSystem : MonoBehaviour
         LoadData();
     }
 
-    private void Start()
+    void Start()
     {
         ProcessOfflineProgress();
         StartCoroutine(UpdateTimer());
@@ -128,11 +141,11 @@ public class CryptoSystem : MonoBehaviour
             bool canUpdate = remaining <= TimeSpan.Zero;
             if (canUpdate)
             {
-                if (btcMiners > 0)
+                if (_btcMiners > 0)
                 {
                     PlayerManager.Instance.MineBtc(GetBtcPerHour());
                 }
-                if (ethMiners > 0)
+                if (_ethMiners > 0)
                 {
                     PlayerManager.Instance.MineEth(GetEthPerHour());
                 }
@@ -156,11 +169,11 @@ public class CryptoSystem : MonoBehaviour
         if (hoursPassed <= 0)
             return;
         
-        if (btcMiners > 0)
+        if (_btcMiners > 0)
         {
             PlayerManager.Instance.MineBtc(GetBtcPerHour() * (float)hoursPassed);
         }
-        if (ethMiners > 0)
+        if (_ethMiners > 0)
         {
             PlayerManager.Instance.MineEth(GetEthPerHour() * (float)hoursPassed);
         }
@@ -172,12 +185,12 @@ public class CryptoSystem : MonoBehaviour
 
     public void AddBtcMiningRig()
     {
-        if (btcMiners < maxBtcMiners)
+        if (_btcMiners < maxBtcMiners)
         {
             float btcMinerPrice = GetBtcPrice();
             if (PlayerManager.Instance.GetPlayerBalance() >= btcMinerPrice)
             {
-                btcMiners++;
+                _btcMiners++;
                 PlayerManager.Instance.DeductCurrency(btcMinerPrice);
                 GetBtcPerHour();
                 OnBtcMinersChanged?.Invoke();
@@ -188,9 +201,9 @@ public class CryptoSystem : MonoBehaviour
 
     public void RemoveBtcMiningRig()
     {
-        if (btcMiners > 0)
+        if (_btcMiners > 0)
         {
-            btcMiners--;
+            _btcMiners--;
             float minerSellPrice = GetBtcPrice() * 0.8f;
             PlayerManager.Instance.AddCurrency(minerSellPrice);
             GetBtcPerHour();
@@ -199,14 +212,19 @@ public class CryptoSystem : MonoBehaviour
         }  
     }
 
+    public int GetBtcMinerCount()
+    {
+        return _btcMiners;
+    }
+
     public void AddEthMiningRig()
     {
-        if (ethMiners < maxEthMiners)
+        if (_ethMiners < maxEthMiners)
         {
             float ethMinerPrice = GetEthPrice();
             if (PlayerManager.Instance.GetPlayerBalance() >= ethMinerPrice)
             {
-                ethMiners++;
+                _ethMiners++;
                 PlayerManager.Instance.DeductCurrency(ethMinerPrice);
                 GetEthPerHour();
                 OnEthMinersChanged?.Invoke();
@@ -217,15 +235,20 @@ public class CryptoSystem : MonoBehaviour
 
     public void RemoveEthMiningRig()
     {
-        if (ethMiners > 0)
+        if (_ethMiners > 0)
         {
-            ethMiners--;
+            _ethMiners--;
             float minerSellPrice = GetEthPrice() * 0.8f;
             PlayerManager.Instance.AddCurrency(minerSellPrice);
             GetEthPerHour();
             OnEthMinersChanged?.Invoke();
             SaveData();
         }
+    }
+
+    public int GetEthMinerCount()
+    {
+        return _ethMiners;
     }
 
     public float GetBtcPrice()
@@ -240,39 +263,43 @@ public class CryptoSystem : MonoBehaviour
 
     public float GetBtcPerHour()
     {
-        if (btcMiners > 0)
+        if (_btcMiners > 0)
         {
-            btcPerHour = 1/(1200000/(1+(btcMiners-1)*0.041225f)/3600);
+            _btcPerHour = 1/(1200000/(1+(_btcMiners-1)*0.041225f)/3600);
         }
         else
         {
-            btcPerHour = 0;
+            _btcPerHour = 0;
         }
-        return btcPerHour;
+        return _btcPerHour;
     }
     
     public float GetEthPerHour()
     {
-        if (ethMiners > 0)
+        if (_ethMiners > 0)
         {
-            ethPerHour = 1/(1200000/(1+(ethMiners-1)*0.041225f)/3600);
+            _ethPerHour = 1/(1200000/(1+(_ethMiners-1)*0.041225f)/3600);
         }
         else
         {
-            ethPerHour = 0;
+            _ethPerHour = 0;
         }
-        return ethPerHour;
+        return _ethPerHour;
     }
 
     #region SAVE
 
-    public void ClearData()
+    public void ClearData(bool delete)
     {
-        if (PlayerPrefs.HasKey(SaveKey))
+        if (delete)
         {
-            PlayerPrefs.DeleteKey(SaveKey);
-            SaveData();
+            string path = Path.Combine(SaveFilePath, SaveFileName);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
         }
+        LoadData();
     }
 
     [System.Serializable]
@@ -309,11 +336,11 @@ public class CryptoSystem : MonoBehaviour
             lastBtcPrice = lastBtcPrice,
             lastEthPrice = lastEthPrice,
 
-            btcPerHour = btcPerHour,
-            ethPerHour = ethPerHour,
+            btcPerHour = _btcPerHour,
+            ethPerHour = _ethPerHour,
 
-            btcMiners = btcMiners,
-            ethMiners = ethMiners,
+            btcMiners = _btcMiners,
+            ethMiners = _ethMiners,
 
             lastMiningUpdate =
                 _lastMiningUpdate.ToString("O"),
@@ -325,17 +352,23 @@ public class CryptoSystem : MonoBehaviour
                 _nextMarketEvent.ToString("O")
         };
 
-        PlayerPrefs.SetString(
-            SaveKey,
-            JsonUtility.ToJson(data));
+        string path = Path.Combine(SaveFilePath, SaveFileName);
+        string jsonData = JsonUtility.ToJson(data);
+        string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
 
-        PlayerPrefs.Save();
+        File.WriteAllText(path, encryptedData);
     }
 
     public void LoadData()
     {
-        if (!PlayerPrefs.HasKey(SaveKey))
+        string path = Path.Combine(SaveFilePath, SaveFileName);
+
+        if (!File.Exists(path))
         {
+            _btcPerHour = 0;
+            _ethPerHour = 0;
+            _btcMiners = 0;
+            _ethMiners = 0;
             _lastMiningUpdate = DateTime.UtcNow;
             _nextMiningUpdate = DateTime.UtcNow;
             _nextMarketUpdate = DateTime.UtcNow;
@@ -346,9 +379,9 @@ public class CryptoSystem : MonoBehaviour
             return;
         }
 
-        CryptoSaveData data =
-            JsonUtility.FromJson<CryptoSaveData>(
-                PlayerPrefs.GetString(SaveKey));
+        string encryptedData = File.ReadAllText(path);
+        string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
+        CryptoSaveData data = JsonUtility.FromJson<CryptoSaveData>(jsonData);
 
         btcPrice = data.btcPrice;
         ethPrice = data.ethPrice;
@@ -356,11 +389,11 @@ public class CryptoSystem : MonoBehaviour
         lastBtcPrice = data.lastBtcPrice;
         lastEthPrice = data.lastEthPrice;
 
-        btcPerHour = data.btcPerHour;
-        ethPerHour = data.ethPerHour;
+        _btcPerHour = data.btcPerHour;
+        _ethPerHour = data.ethPerHour;
 
-        btcMiners = data.btcMiners;
-        ethMiners = data.ethMiners;
+        _btcMiners = data.btcMiners;
+        _ethMiners = data.ethMiners;
 
         _lastMiningUpdate =
             DateTime.Parse(

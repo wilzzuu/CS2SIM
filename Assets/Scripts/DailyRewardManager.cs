@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DailyRewardManager : MonoBehaviour
+public class DailyRewardUI : MonoBehaviour
 {
     public TextMeshProUGUI timerDateText;
     public TextMeshProUGUI timerTimeText;
@@ -23,16 +23,8 @@ public class DailyRewardManager : MonoBehaviour
     [Header("UI Slots (7 elements)")]
     [SerializeField] private List<DailyRewardSlot> slots;
 
-    private const string DailySaveKey = "DailyReward";
-
-    private int _currentDay;
-    private DateTime _lastClaim;
-
     private void Awake()
     {
-        LoadData();
-        ValidateStreak();
-
         foreach (var slot in slots)
         {
             int day = slot.dayIndex;
@@ -42,44 +34,16 @@ public class DailyRewardManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(UpdateTimer());
+        DailyRewardSystem.Instance.OnDailyTimerTick += UpdateTimerDisplay;
+        UpdateTimerDisplay();
         RefreshUI();
     }
 
-    void ValidateStreak()
+    void OnDestroy()
     {
-        if (_lastClaim == DateTime.MinValue)
-            return;
-
-        int daysPassed =
-            (DateTime.UtcNow.Date - _lastClaim.Date).Days;
-
-        if (daysPassed > 1)
+        if (DailyRewardSystem.Instance != null)
         {
-            _currentDay = 1;
-            SaveData();
-        }
-    }
-
-    private IEnumerator UpdateTimer()
-    {
-        while (true)
-        {
-            TimeSpan remaining = GetNextAvailableTime() - DateTime.UtcNow;
-            bool canClaim = remaining <= TimeSpan.Zero;
-            
-            if (canClaim)
-            {
-                RefreshUI();
-                timerText.text = "Ready!";
-                AlertManager.Set(AlertType.DailyRewards, true);
-            }
-            else
-            {
-                timerText.text = $"{remaining.Hours:D2}:{remaining.Minutes:D2}:{remaining.Seconds:D2}";
-            }
-
-            yield return new WaitForSeconds(1f);
+            DailyRewardSystem.Instance.OnDailyTimerTick -= UpdateTimerDisplay;
         }
     }
 
@@ -95,15 +59,15 @@ public class DailyRewardManager : MonoBehaviour
             if (reward != null)
                 slot.rewardText.text = $"{reward.rewardAmount:F1}€";
 
-            if (slot.dayIndex < _currentDay)
+            if (slot.dayIndex < DailyRewardSystem.Instance.currentDay)
             {
                 slot.SetClaimed(buttonText);
                 continue;
             }
 
-            if (slot.dayIndex == _currentDay)
+            if (slot.dayIndex == DailyRewardSystem.Instance.currentDay)
             {
-                if (CanClaimToday())
+                if (DailyRewardSystem.Instance.CanClaimToday())
                 {
                     slot.SetAvailable(buttonText);
                 }
@@ -114,7 +78,7 @@ public class DailyRewardManager : MonoBehaviour
                 continue;
             }
             
-            if (slot.dayIndex > _currentDay)
+            if (slot.dayIndex > DailyRewardSystem.Instance.currentDay)
             {
                 slot.SetLocked(buttonText);
                 continue;
@@ -122,124 +86,40 @@ public class DailyRewardManager : MonoBehaviour
         }
     }
 
-    private bool CanClaimToday()
+    private void UpdateTimerDisplay()
     {
-        if (GetNextAvailableTime() <= DateTime.UtcNow)
-            return true;
-
-        return false;
+        string timerString = DailyRewardSystem.Instance.dailyTimerString;
+        timerText.text = timerString;
+        if (timerString == "Claim!")
+        {
+            RefreshUI();
+        }
     }
-
+    
     private void Claim(int day)
     {
+        int _currentDay = DailyRewardSystem.Instance.currentDay;
         if (day != _currentDay)
             return;
 
-        if (!CanClaimToday())
+        if (!DailyRewardSystem.Instance.CanClaimToday())
             return;
 
         DailyReward reward =
             rewards.Find(r => r.day == day);
 
-        GiveReward(reward.rewardAmount);
+        DailyRewardSystem.Instance.GiveReward(reward.rewardAmount);
         AlertManager.Set(AlertType.DailyRewards, false);
 
-        _lastClaim = DateTime.UtcNow;
+        DailyRewardSystem.Instance.lastClaim = DateTime.UtcNow;
 
         if (_currentDay >= 7)
             _currentDay = 1;
         else
             _currentDay++;
 
-        SaveData();
+        DailyRewardSystem.Instance.SaveData();
         RefreshUI();
     }
 
-    private void GiveReward(float amount)
-    {
-        if (_currentDay == 6)
-        {   
-            float cryptoAmount = (float)amount / CryptoSystem.Instance.GetEthPrice();
-            PlayerManager.Instance.AddEth(cryptoAmount);
-
-            LogUtil.Economy.LogCrypto(
-                "CLAIM_LAST_DAILY",
-                cryptoAmount,
-                "ETH",
-                PlayerManager.Instance.GetEthOwned()
-            );
-        }
-        else
-        {
-            PlayerManager.Instance.AddCurrency(amount);
-        
-            LogUtil.Economy.LogEuro(
-                "CLAIM_DAILY",
-                amount,
-                PlayerManager.Instance.GetPlayerBalance()
-            );
-        }
-    }
-
-    private DateTime GetNextAvailableTime()
-    {
-        return _lastClaim.AddHours(24);
-    }
-
-    public void ClearData()
-    {
-        if (PlayerPrefs.HasKey(DailySaveKey))
-        {
-            PlayerPrefs.DeleteKey(DailySaveKey);
-            SaveData();
-        }
-    }
-
-    [System.Serializable]
-    private class DailyRewardSaveData
-    {
-        public int currentDay;
-        public string lastClaim;
-    }
-
-    public void SaveData()
-    {
-        DailyRewardSaveData data = new DailyRewardSaveData
-        {
-            currentDay = _currentDay,
-            lastClaim = _lastClaim.ToString("O")
-        };
-
-        PlayerPrefs.SetString(
-            DailySaveKey,
-            JsonUtility.ToJson(data));
-
-        PlayerPrefs.Save();
-    }
-
-    public void LoadData()
-    {
-        if (!PlayerPrefs.HasKey(DailySaveKey))
-        {
-            _currentDay = 0;
-            _lastClaim = DateTime.UtcNow;
-
-            SaveData();
-
-            return;
-        }
-
-        DailyRewardSaveData data = 
-            JsonUtility.FromJson<DailyRewardSaveData>(
-                PlayerPrefs.GetString(DailySaveKey));
-
-        _currentDay = data.currentDay;
-        _lastClaim = 
-            DateTime.Parse(
-                data.lastClaim,
-                null,
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
-    }
 }

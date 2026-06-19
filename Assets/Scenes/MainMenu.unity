@@ -273,13 +273,14 @@ MonoBehaviour:
   ethPrice: 5000
   lastEthPrice: 5000
   maxBtcMiners: 100
-  btcMiners: 0
+  _btcMiners: 0
   maxEthMiners: 100
-  ethMiners: 0
+  _ethMiners: 0
   btcMinerPrice: 100000
   ethMinerPrice: 5000
-  btcPerHour: 0
-  ethPerHour: 0
+  _btcPerHour: 0
+  _ethPerHour: 0
+  currentMarketEvent: No Event
 --- !u!4 &125178687
 Transform:
   m_ObjectHideFlags: 0
@@ -477,7 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player:
-    balance: 200
+    balance: 0
     btcOwned: 0
     ethOwned: 0
 --- !u!1 &509470213
@@ -1083,6 +1084,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058064507}
   m_CullTransparentMesh: 1
+--- !u!1 &1060165934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060165935}
+  - component: {fileID: 1060165936}
+  m_Layer: 0
+  m_Name: DailyRewardSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1060165935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060165934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 984.28143, y: 525.16626, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1060165936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060165934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af0734e9ba10de41b733b231f2e4b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DailyRewardSystem
+  currentDay: 0
+  dailyTimerString: No Timer
 --- !u!1 &1687895183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1174,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1568c6fcd33346b43852fa4c12c43b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1704463200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1704463201}
+  - component: {fileID: 1704463202}
+  m_Layer: 0
+  m_Name: GiftManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1704463201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704463200}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1141.23, y: 695.1349, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1704463202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704463200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9658d4505bc0fb740bb24b2f6ef86521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GiftManager
+  cooldownHours: 4
+  RewardAmount: 5
+  giftTimerString: No Timer
 --- !u!1 &1801615635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,3 +1553,5 @@ SceneRoots:
   - {fileID: 1687895184}
   - {fileID: 2048212933}
   - {fileID: 125178687}
+  - {fileID: 1060165935}
+  - {fileID: 1704463201}

@@ -117,7 +117,7 @@ public class UIManager : MonoBehaviour
             btcValueText.text = $"{0:F2}€";
         }
 
-        int btcMiners = CryptoSystem.Instance.btcMiners;
+        int btcMiners = CryptoSystem.Instance.GetBtcMinerCount();
         float btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
         float eurPerHour = btcValue * btcPerHour;
 
@@ -157,7 +157,7 @@ public class UIManager : MonoBehaviour
             ethValueText.text = $"{0:F2}€";
         }
 
-        int ethMiners = CryptoSystem.Instance.ethMiners;
+        int ethMiners = CryptoSystem.Instance.GetEthMinerCount();
         float ethPerHour = CryptoSystem.Instance.GetEthPerHour();
         float eurPerHour = ethValue * ethPerHour;
 

@@ -29,6 +29,7 @@ public class CaseBattleManager : MonoBehaviour
     public TMP_Dropdown gameModeDropdown;
     public float easingDuration = 7f;
     public int numberOfReelItems = 40;
+    public float keyPrice = 2.19f;
     
     private bool _isScrolling;
     private GridLayoutGroup _gridLayout;
@@ -488,6 +489,7 @@ public class CaseBattleManager : MonoBehaviour
 
     private float GetCasePrice(CaseData caseData)
     {
-        return caseData.price * 5;
+        int amountOfRounds = 5;
+        return (caseData.price + keyPrice) * amountOfRounds;
     }
 }

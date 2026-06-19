@@ -17,7 +17,6 @@ public class InventoryManager : MonoBehaviour
     {
         get
         {
-
             #if UNITY_EDITOR
                 return Path.Combine(Application.persistentDataPath, "EditorData");
             #else

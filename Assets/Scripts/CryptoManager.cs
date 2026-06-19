@@ -86,7 +86,7 @@ public class CryptoManager : MonoBehaviour
         euroOutputText.text = "0";
         priceText.text = _isBtcTab ? $"{_btcPrice:F2}€" : $"{_ethPrice:F2}€";
         perHourText.text = _isBtcTab ? $"{_btcPerHour}/h" : $"{_ethPerHour}/h";
-        minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.btcMiners}" : $"{CryptoSystem.Instance.ethMiners}";
+        minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.GetBtcMinerCount()}" : $"{CryptoSystem.Instance.GetEthMinerCount()}";
         string spriteName = _isBtcTab ? "bitcoin" : "ethereum"; 
         bigIcon.sprite = Resources.Load<Sprite>($"Images/GUI/Icons/Icons8/{spriteName}");
         buySectionText.text = $"Buy {(_isBtcTab ? "BTC" : "ETH")}";
@@ -122,7 +122,7 @@ public class CryptoManager : MonoBehaviour
 
         priceText.text = _isBtcTab ? $"{_btcPrice:F2}€" : $"{_ethPrice:F2}€";
         perHourText.text = _isBtcTab ? $"{_btcPerHour}/h" : $"{_ethPerHour}/h";
-        minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.btcMiners}" : $"{CryptoSystem.Instance.ethMiners}";
+        minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.GetBtcMinerCount()}" : $"{CryptoSystem.Instance.GetEthMinerCount()}";
         string spriteName = _isBtcTab ? "bitcoin" : "ethereum"; 
         bigIcon.sprite = Resources.Load<Sprite>($"Images/GUI/Icons/Icons8/{spriteName}");
         minerPriceText.text = _isBtcTab ? "1 BTC" : "1 ETH";
@@ -385,7 +385,7 @@ public class CryptoManager : MonoBehaviour
 
     public void UpdateBtcRigs()
     {
-        for (int i = 0; i < CryptoSystem.Instance.btcMiners; i++)
+        for (int i = 0; i < CryptoSystem.Instance.GetBtcMinerCount(); i++)
         {
             // Instantiate mining rigs
         }
@@ -393,7 +393,7 @@ public class CryptoManager : MonoBehaviour
 
     public void UpdateEthRigs()
     {
-        for (int i = 0; i < CryptoSystem.Instance.ethMiners; i++)
+        for (int i = 0; i < CryptoSystem.Instance.GetEthMinerCount(); i++)
         {
             // Instantiate mining rigs
         }

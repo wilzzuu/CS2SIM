@@ -18,8 +18,6 @@ public static class AlertManager
 
         _states[type] = state;
 
-        Debug.Log($"Alert {type} = {state}");
-
         OnAlertChanged?.Invoke(type, state);
     }
 

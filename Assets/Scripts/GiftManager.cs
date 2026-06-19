@@ -1,26 +1,21 @@
 using System;
 using System.IO;
 using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class GiftTimer : MonoBehaviour
+public class GiftManager : MonoBehaviour
 {
+    public static GiftManager Instance { get; private set; }
+
     [Header("Settings")]
     [SerializeField] private int cooldownHours = 4;
 
-    [Header("UI")]
-    [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private Button claimButton;
-
-    private const float RewardAmount = 5f;
+    public float RewardAmount = 5f;
 
     private string SaveFilePath
     {
         get
         {
-
             #if UNITY_EDITOR
                 return Path.Combine(Application.persistentDataPath, "EditorData");
             #else
@@ -29,18 +24,28 @@ public class GiftTimer : MonoBehaviour
         }
     }
 
-    private const string SaveKey = "NextGiftTime";
+    private const string SaveFileName = "GiftData.save";
+
+    public string giftTimerString = "No Timer";
+
+    public delegate void GiftTimerHandler();
+    public event GiftTimerHandler OnGiftTimerTick;
 
     private DateTime _nextGiftTime;
 
     private void Awake()
     {
-        LoadGiftTimer();
-
-        if (claimButton != null)
+        if (Instance == null)
         {
-            claimButton.onClick.AddListener(ClaimGift);
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        LoadData();
     }
 
     private void Start()
@@ -48,98 +53,25 @@ public class GiftTimer : MonoBehaviour
         StartCoroutine(UpdateTimer());
     }
 
-    private void OnDestroy()
-    {
-        if (claimButton != null)
-        {
-            claimButton.onClick.RemoveListener(ClaimGift);
-        }
-    }
-
-    private void LoadGiftTimer()
-    {
-        if (PlayerPrefs.HasKey(SaveKey))
-        {
-            _nextGiftTime = DateTime.Parse(
-                PlayerPrefs.GetString(SaveKey),
-                null,
-                System.Globalization.DateTimeStyles.RoundtripKind
-            );
-        }
-        else
-        {
-            _nextGiftTime = DateTime.UtcNow;
-        }
-    }
-
-    private void SaveGiftTimer()
-    {
-        PlayerPrefs.SetString(
-            SaveKey,
-            _nextGiftTime.ToString("O")
-        );
-
-        PlayerPrefs.Save();
-    }
-
     private IEnumerator UpdateTimer()
     {
         while (true)
         {
-            RefreshUI();
+            OnGiftTimerTick?.Invoke();
+            TimeSpan remaining = _nextGiftTime - DateTime.UtcNow;
+            bool canClaim = remaining <= TimeSpan.Zero;
 
-            yield return new WaitForSeconds(1f);
-        }
-    }
-
-    private void RefreshUI()
-    {
-        TimeSpan remaining = _nextGiftTime - DateTime.UtcNow;
-
-        bool canClaim = remaining <= TimeSpan.Zero;
-
-        if (claimButton != null)
-        {
-            claimButton.interactable = canClaim;
-        }
-
-        if (timerText != null)
-        {
             if (canClaim)
             {
-                timerText.text = "Claim!";
+                giftTimerString = "Claim!";
             }
             else
             {
-                timerText.text =
-                    $"{remaining.Hours:D2}:{remaining.Minutes:D2}:{remaining.Seconds:D2}";
+                giftTimerString = $"{remaining.Hours:D2}:{remaining.Minutes:D2}:{remaining.Seconds:D2}";
             }
+
+            yield return new WaitForSeconds(1f);
         }
-    }
-
-    public void ClaimGift()
-    {
-        if (DateTime.UtcNow < _nextGiftTime)
-            return;
-
-        GiveReward();
-
-        _nextGiftTime = DateTime.UtcNow.AddHours(cooldownHours);
-
-        SaveGiftTimer();
-
-        RefreshUI();
-    }
-
-    private void GiveReward()
-    {
-        PlayerManager.Instance.AddCurrency(RewardAmount);
-
-        LogUtil.Economy.LogEuro(
-            "CLAIM_GIFT",
-            RewardAmount,
-            PlayerManager.Instance.GetPlayerBalance()
-        );
     }
 
     public bool CanClaim()
@@ -152,15 +84,72 @@ public class GiftTimer : MonoBehaviour
         return _nextGiftTime - DateTime.UtcNow;
     }
 
-    [ContextMenu("Reset Gift Timer")]
-    public void ResetGiftTimer()
+    public DateTime GetNextGiftTime()
     {
-        _nextGiftTime = DateTime.UtcNow;
+        return _nextGiftTime;
+    }
 
-        SaveGiftTimer();
+    public void ResetNextGiftTime()
+    {
+        _nextGiftTime = DateTime.UtcNow.AddHours(cooldownHours);
+        SaveData();
+    }
 
-        RefreshUI();
+    public void ClearData(bool delete)
+    {
+        if (delete)
+        {
+            string path = Path.Combine(SaveFilePath, SaveFileName);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+        LoadData();
+    }
 
-        Debug.Log("Gift timer reset.");
+    [System.Serializable]
+    private class GiftSaveData
+    {
+        public string nextGiftTime;
+    }
+
+    public void SaveData()
+    {
+        GiftSaveData data = new GiftSaveData
+        {
+            nextGiftTime = _nextGiftTime.ToString("O")
+        };
+
+        string path = Path.Combine(SaveFilePath, SaveFileName);
+        string jsonData = JsonUtility.ToJson(data);
+        string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
+
+        File.WriteAllText(path, encryptedData);
+    }
+
+    public void LoadData()
+    {
+        string path = Path.Combine(SaveFilePath, SaveFileName);
+        if (!File.Exists(path))
+        {
+            _nextGiftTime = DateTime.UtcNow.AddHours(cooldownHours);
+
+            SaveData();
+
+            return;
+        }
+
+        string encryptedData = File.ReadAllText(path);
+        string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
+
+        GiftSaveData data = JsonUtility.FromJson<GiftSaveData>(jsonData);
+        _nextGiftTime =
+            DateTime.Parse(
+                data.nextGiftTime,
+                null,
+                System.Globalization.DateTimeStyles.AssumeUniversal
+                | 
+                System.Globalization.DateTimeStyles.AdjustToUniversal);
     }
 }
