@@ -30,6 +30,7 @@ def doit(data):
             special_items.append(item)
     
     special_price = total_price / item_count
+    special_price *= 1.50
 
     specials = {"cases" : [{"ID": "A_CASE", "NAME": "Fade Case", "PRICE": round(special_price, 2), "ITEMS": special_items}]}
 
