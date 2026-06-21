@@ -418,6 +418,7 @@ public class RouletteManager : MonoBehaviour
 
     void RestartGame()
     {
+        LoadInventoryItems();
         _selectedPlayerItems.Clear();
         _reelItems.Clear();
         _itemOwnership.Clear();
