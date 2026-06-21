@@ -881,11 +881,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 3
     m_Right: 0
     m_Top: 3
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 154, y: 119}
@@ -2064,6 +2064,7 @@ MonoBehaviour:
   caseGridParent: {fileID: 1231975789}
   numberOfReelItems: 40
   easingDuration: 7
+  keyPrice: 2.19
   caseButtonPrefab: {fileID: 123025997980287184, guid: f87ff3d3840b35f4fb18b7312be526b2, type: 3}
   caseSelectorPanel: {fileID: 465343517}
   currentCase: {fileID: 46843065}
