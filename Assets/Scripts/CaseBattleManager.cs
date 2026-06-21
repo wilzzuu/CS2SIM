@@ -400,7 +400,8 @@ public class CaseBattleManager : MonoBehaviour
             winningText.text = result;
             if (_playerTotalValue > _botTotalValue)
             {
-                PlayerManager.Instance.AddCurrency(_playerTotalValue);
+                float _totalGameValue = _playerTotalValue + _botTotalValue;
+                PlayerManager.Instance.AddCurrency(_totalGameValue);
             }
             else if (Mathf.Approximately(_playerTotalValue, _botTotalValue))
             {
@@ -416,7 +417,8 @@ public class CaseBattleManager : MonoBehaviour
             winningText.text = result;
             if (_playerTotalValue < _botTotalValue)
             {
-                PlayerManager.Instance.AddCurrency(_botTotalValue);
+                float _totalGameValue = _playerTotalValue + _botTotalValue;
+                PlayerManager.Instance.AddCurrency(_totalGameValue);
             }
             else if (Mathf.Approximately(_playerTotalValue, _botTotalValue))
             {

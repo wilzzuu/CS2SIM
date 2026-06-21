@@ -99,7 +99,7 @@ public class CaseOpening : MonoBehaviour
         if (_selectedCaseData) openCaseButton.interactable = true;
         else openCaseButton.interactable = false;
 
-        if (_selectedCaseData.price <= PlayerManager.Instance.GetPlayerBalance()) openCaseButton.interactable = true;
+        if (Globals.FloatUtil.LessOrEqual(_selectedCaseData.price + keyPrice, PlayerManager.Instance.GetPlayerBalance())) openCaseButton.interactable = true;
         else openCaseButton.interactable = false;
         
         DisplayCaseItems(_selectedCaseData);
@@ -148,7 +148,7 @@ public class CaseOpening : MonoBehaviour
 
         caseGridParent.localPosition = _initialReelPosition;
 
-        if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price)
+        if (Globals.FloatUtil.GreaterOrEqual(PlayerManager.Instance.GetPlayerBalance(), _selectedCaseData.price + keyPrice))
         {
             PlayerManager.Instance.DeductCurrency(_selectedCaseData.price + keyPrice);
 

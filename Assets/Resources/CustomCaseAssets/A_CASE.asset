@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: A_CASE
   name: Fade Case
-  price: 360.64
+  price: 540.96
   items:
   - {fileID: 11400000, guid: d3016e16435f09949b29a350afbc108f, type: 2}
   - {fileID: 11400000, guid: b399b3482d76fc043966a8d3d039d53b, type: 2}
