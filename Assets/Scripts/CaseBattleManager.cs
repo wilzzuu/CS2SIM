@@ -351,7 +351,7 @@ public class CaseBattleManager : MonoBehaviour
         TextMeshProUGUI priceText = resultItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
         uncoveredImage.enabled = false;
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id.Remove(itemData.id.LastIndexOf('_'))}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.imageName}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
         gunText.text = itemData.gun;
         nameText.text = itemData.name;
@@ -386,7 +386,7 @@ public class CaseBattleManager : MonoBehaviour
 
         priceText.text = $"{itemData.price:F2}€";
 
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.id.Remove(itemData.id.LastIndexOf('_'))}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.imageName}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
     }
     

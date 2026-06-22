@@ -302,7 +302,7 @@ public class UpgraderManager : MonoBehaviour
         TextMeshProUGUI nameText = itemObj.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = itemObj.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id.Remove(item.id.LastIndexOf('_'))}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.imageName}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
         nameText.text = item.name;
         priceText.text = $"{item.price:0.00}";

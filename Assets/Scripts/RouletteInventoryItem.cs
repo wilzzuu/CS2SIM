@@ -14,7 +14,7 @@ public class RouletteInventoryItem : MonoBehaviour
 
     public void Setup(ItemData item, bool isItemSelected)
     {
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.id.Remove(item.id.LastIndexOf('_'))}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.imageName}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
         gunText.text = item.gun;
         nameText.text = item.name;

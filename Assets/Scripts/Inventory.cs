@@ -57,7 +57,7 @@ public class InventoryScreen : MonoBehaviour
 
             if (itemImage != null)
             {
-                string imagePath = $"ItemImages/{item.id.Remove(item.id.LastIndexOf('_'))}";
+                string imagePath = $"ItemImages/{item.imageName}";
                 Sprite itemSprite = Resources.Load<Sprite>(imagePath);
                 if (itemSprite != null)
                 {

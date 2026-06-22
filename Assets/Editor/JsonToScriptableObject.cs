@@ -86,7 +86,7 @@ namespace Editor
                 foreach (var cond in itemJson.CONDITIONS)
                 {   
                     ItemData itemAsset = CreateInstance<ItemData>();
-                    string itemID = $"{itemJson.ID}_{AbbreviatedConditions.CondList[cond.condition]}";
+                    string itemID = $"{itemJson.ID}-{AbbreviatedConditions.CondList[cond.condition]}";
                     itemAsset.id = itemID;
                     itemAsset.gun = itemJson.GUN;
                     itemAsset.name = itemJson.NAME;
@@ -96,6 +96,8 @@ namespace Editor
                     itemAsset.type = itemJson.TYPE;
                     itemAsset.rarity = itemJson.RARITY;
                     itemAsset.weight = RarityWeights.WeightList[itemJson.RARITY];
+                    itemAsset.imageName = itemJson.ID;
+
                     Debug.Log($"Creating item: {cond.condition} {itemJson.GUN} {itemJson.NAME} | ID: {itemID}");
                     
                     SaveAsset(itemAsset, $"Assets/Resources/ItemAssets/{itemID}.asset");
@@ -104,7 +106,7 @@ namespace Editor
                     if (itemJson.HAS_ST == true)
                     {
                         ItemData itemAssetST = CreateInstance<ItemData>();
-                        string itemSTID = $"{itemJson.ID}_{AbbreviatedConditions.CondList[cond.condition]}ST";
+                        string itemSTID = $"{itemJson.ID}-{AbbreviatedConditions.CondList[cond.condition]}st";
                         itemAssetST.id = itemSTID;
                         itemAssetST.gun = itemJson.GUN;
                         itemAssetST.name = itemJson.NAME;
@@ -115,6 +117,7 @@ namespace Editor
                         itemAssetST.isStatTrak = itemJson.HAS_ST;
                         itemAssetST.rarity = itemJson.RARITY;
                         itemAssetST.weight = RarityWeights.WeightList[itemJson.RARITY];
+                        itemAssetST.imageName = itemJson.ID;
 
                         Debug.Log($"Creating item: ST {cond.condition} {itemJson.GUN} {itemJson.NAME} | ID: {itemSTID}");
 
@@ -148,11 +151,11 @@ namespace Editor
     {
         public static readonly Dictionary<string, string> CondList = new Dictionary<string, string>
         {
-            {"Factory New", "FN"},
-            {"Minimal Wear", "MW"},
-            {"Field-Tested", "FT"},
-            {"Well-Worn", "WW"},
-            {"Battle-Scarred", "BS"},
+            {"Factory New", "fn"},
+            {"Minimal Wear", "mw"},
+            {"Field-Tested", "ft"},
+            {"Well-Worn", "ww"},
+            {"Battle-Scarred", "bs"},
             {"Vanilla", ""}
         };
     }

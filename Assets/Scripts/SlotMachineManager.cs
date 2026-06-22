@@ -100,6 +100,6 @@ public class SlotMachineManager : MonoBehaviour
         ItemData item =
             slotMachine.RandomPoolItem();
 
-        return Resources.Load<Sprite>($"ItemImages/{item.id.Remove(item.id.LastIndexOf('_'))}");
+        return Resources.Load<Sprite>($"ItemImages/{item.imageName}");
     }
 }

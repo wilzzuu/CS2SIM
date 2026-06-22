@@ -14,6 +14,7 @@ public class ItemData : ScriptableObject
     public string rarity;
     public float weight;
     public int demandScore;
+    public string imageName;
 
     public float lastActivityTime;
     public const float DemandDecayInterval = 120f;
