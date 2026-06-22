@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,6 +8,7 @@ namespace Editor
 {
     public class JsonToScriptableObject : EditorWindow
     {
+        private string _jsonPath = "";
 
         [MenuItem("Tools/Import JSON Data")]
         public static void ShowWindow()
@@ -20,18 +20,64 @@ namespace Editor
         void OnGUI()
         {
             GUILayout.Label("JSON Data", EditorStyles.boldLabel);
-            
-            string path = Application.dataPath + $"/StreamingAssets/data.json";
 
-            if (File.Exists(path) && GUILayout.Button("Import JSON Data"))
+            EditorGUILayout.BeginHorizontal();
+
+            _jsonPath = EditorGUILayout.TextField("JSON File", _jsonPath);
+
+            if (GUILayout.Button("Browse", GUILayout.Width(80)))
             {
-                ImportJsonData(path);
+                string selectedPath = EditorUtility.OpenFilePanel(
+                    "Select JSON File",
+                    Application.dataPath + "/StreamingAssets",
+                    "json"
+                );
+
+                if (!string.IsNullOrEmpty(selectedPath))
+                {
+                    _jsonPath = selectedPath;
+                }
+            }
+
+            EditorGUILayout.EndHorizontal();
+
+            GUI.enabled = File.Exists(_jsonPath);
+            
+            if (GUILayout.Button("Import JSON Data"))
+            {
+                ImportJsonData(_jsonPath);
+            }
+
+            GUI.enabled = true;
+
+            if (!string.IsNullOrEmpty(_jsonPath))
+            {
+                EditorGUILayout.HelpBox(
+                    $"Selected: {Path.GetFileName(_jsonPath)}",
+                    MessageType.Info
+                );
             }
         }
         
         // ReSharper disable Unity.PerformanceAnalysis
         public void ImportJsonData(string path)
         {
+
+            string caseAssetPath = Application.dataPath + "/Resources/CaseAssets/";
+
+            foreach (string file in Directory.GetFiles(caseAssetPath))
+            {
+                File.Delete(file);
+            }
+            Debug.Log("Old Case Assets Deleted");
+
+            string itemAssetPath = Application.dataPath + "/Resources/ItemAssets/";
+
+            foreach (string file in Directory.GetFiles(itemAssetPath))
+            {
+                File.Delete(file);
+            }
+            Debug.Log("Old Item Assets Deleted");
 
             string jsonContent = File.ReadAllText(path);
             Debug.Log("JSON Content: " + jsonContent);
@@ -47,11 +93,15 @@ namespace Editor
                     Debug.LogError("Failed to parse JSON: Case data is null or empty.");
                     return;
                 }
-
+                
+                int casesComplete = 0;
+                int caseCount = dataWrapper.cases.Count;
                 foreach (var caseData in dataWrapper.cases)
                 {
                     Debug.Log($"Processing case: {caseData.ID} | {caseData.NAME} | Price: {caseData.PRICE}");
                     CreateCaseDataAsset(caseData);
+                    casesComplete++;
+                    Debug.Log($"Cases Done: {casesComplete}/{caseCount}");
                 }
 
                 Debug.Log("Data imported successfully!");
@@ -71,7 +121,6 @@ namespace Editor
             caseAsset.price = jsonData.PRICE;
             
             caseAsset.items = new List<ItemData>();
-            
             // Create ItemData assets and add them to the case
             foreach (var itemJson in jsonData.ITEMS)
             {   
@@ -85,8 +134,9 @@ namespace Editor
                 // Create ItemData ScriptableObject
                 foreach (var cond in itemJson.CONDITIONS)
                 {   
-                    ItemData itemAsset = CreateInstance<ItemData>();
                     string itemID = $"{itemJson.ID}-{AbbreviatedConditions.CondList[cond.condition]}";
+                    string itemPath = $"Assets/Resources/ItemAssets/{itemID}.asset";
+                    ItemData itemAsset = GetOrCreateItemAsset(itemID, itemPath);
                     itemAsset.id = itemID;
                     itemAsset.gun = itemJson.GUN;
                     itemAsset.name = itemJson.NAME;
@@ -96,17 +146,16 @@ namespace Editor
                     itemAsset.type = itemJson.TYPE;
                     itemAsset.rarity = itemJson.RARITY;
                     itemAsset.weight = RarityWeights.WeightList[itemJson.RARITY];
-                    itemAsset.imageName = itemJson.ID;
-
-                    Debug.Log($"Creating item: {cond.condition} {itemJson.GUN} {itemJson.NAME} | ID: {itemID}");
+                    itemAsset.imageName = $"{itemJson.ID}";
                     
-                    SaveAsset(itemAsset, $"Assets/Resources/ItemAssets/{itemID}.asset");
+                    EditorUtility.SetDirty(itemAsset);
                     caseAsset.items.Add(itemAsset);
 
                     if (itemJson.HAS_ST == true)
                     {
-                        ItemData itemAssetST = CreateInstance<ItemData>();
                         string itemSTID = $"{itemJson.ID}-{AbbreviatedConditions.CondList[cond.condition]}st";
+                        string itemSTPath = $"Assets/Resources/ItemAssets/{itemSTID}.asset";
+                        ItemData itemAssetST = GetOrCreateItemAsset(itemSTID, itemSTPath);
                         itemAssetST.id = itemSTID;
                         itemAssetST.gun = itemJson.GUN;
                         itemAssetST.name = itemJson.NAME;
@@ -117,32 +166,58 @@ namespace Editor
                         itemAssetST.isStatTrak = itemJson.HAS_ST;
                         itemAssetST.rarity = itemJson.RARITY;
                         itemAssetST.weight = RarityWeights.WeightList[itemJson.RARITY];
-                        itemAssetST.imageName = itemJson.ID;
+                        itemAssetST.imageName = $"{itemJson.ID}";
 
-                        Debug.Log($"Creating item: ST {cond.condition} {itemJson.GUN} {itemJson.NAME} | ID: {itemSTID}");
-
-                        SaveAsset(itemAssetST, $"Assets/Resources/ItemAssets/{itemSTID}.asset");
+                        EditorUtility.SetDirty(itemAssetST);
                         caseAsset.items.Add(itemAssetST);
                     }
                 }
             }
 
             SaveAsset(caseAsset, $"Assets/Resources/CaseAssets/{caseAsset.id}.asset");
+            EditorUtility.SetDirty(caseAsset);
+
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
         }
 
-        private static void SaveAsset(ScriptableObject asset, string path)
+        private static void SaveAsset(
+            ScriptableObject asset,
+            string path)
         {
-            Debug.Log(path);
-            // Ensure the directory exists
-            string directory = Path.GetDirectoryName(path);
+            string directory =
+                Path.GetDirectoryName(path);
+
             if (!Directory.Exists(directory))
             {
-                if (directory != null) Directory.CreateDirectory(directory);
+                Directory.CreateDirectory(directory);
             }
 
-            // Create and save the asset
-            AssetDatabase.CreateAsset(asset, path);
-            AssetDatabase.SaveAssets();
+            if (AssetDatabase.LoadAssetAtPath<ScriptableObject>(path) == null)
+            {
+                AssetDatabase.CreateAsset(asset, path);
+            }
+
+            EditorUtility.SetDirty(asset);
+        }
+
+        private static ItemData GetOrCreateItemAsset(
+            string itemID,
+            string path)
+        {
+            ItemData existing =
+                AssetDatabase.LoadAssetAtPath<ItemData>(path);
+
+            if (existing != null)
+            {
+                return existing;
+            }
+
+            ItemData newAsset = CreateInstance<ItemData>();
+
+            AssetDatabase.CreateAsset(newAsset, path);
+
+            return newAsset;
         }
     }
 

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7379142d41e540449558e98e4eec32b, type: 3}
+  m_Name: mac-10-monkeyflage-fn
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  id: mac-10-monkeyflage-fn
+  gun: MAC-10
+  name: Monkeyflage
+  basePrice: 0.94
+  price: 0.94
+  condition: Factory New
+  isStatTrak: 0
+  type: SMG
+  rarity: Mil-Spec
+  weight: 0.7992
+  demandScore: 0
+  imageName: mac-10-monkeyflage
+  lastActivityTime: 74.406006

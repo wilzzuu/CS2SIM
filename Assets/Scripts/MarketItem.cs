@@ -23,7 +23,7 @@ public class MarketplaceItem : MonoBehaviour
     {
         _itemData = item;
         
-        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{_itemData.id.Remove(_itemData.id.LastIndexOf('_'))}");
+        itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{_itemData.imageName}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{_itemData.rarity}");
         conditionText.text = _itemData.condition;
         if (_itemData.isStatTrak)

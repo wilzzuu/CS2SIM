@@ -76,13 +76,13 @@ public class SlotMachineManager : MonoBehaviour
 
     private IEnumerator StopReels(SlotResult result)
     {
-        reel1Image.sprite = Resources.Load<Sprite>($"ItemImages/{result.reel1.id.Remove(result.reel1.id.LastIndexOf('_'))}");
+        reel1Image.sprite = Resources.Load<Sprite>($"ItemImages/{result.reel1.imageName}");
         yield return new WaitForSeconds(0.25f);
 
-        reel2Image.sprite = Resources.Load<Sprite>($"ItemImages/{result.reel2.id.Remove(result.reel2.id.LastIndexOf('_'))}");
+        reel2Image.sprite = Resources.Load<Sprite>($"ItemImages/{result.reel2.imageName}");
         yield return new WaitForSeconds(0.25f);
 
-        reel3Image.sprite = Resources.Load<Sprite>($"ItemImages/{result.reel3.id.Remove(result.reel3.id.LastIndexOf('_'))}");
+        reel3Image.sprite = Resources.Load<Sprite>($"ItemImages/{result.reel3.imageName}");
 
         if (result.isWin)
         {

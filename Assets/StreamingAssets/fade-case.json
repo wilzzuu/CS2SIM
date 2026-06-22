@@ -1,0 +1,564 @@
+{
+    "cases": [
+        {
+            "ID": "fade-case",
+            "NAME": "Fade Case",
+            "PRICE": 540.96,
+            "ITEMS": [
+                {
+                    "ID": "falchion-knife-crimson-web",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Crimson Web",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 2055.26,
+                            "stattrak_price": 19700.0
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 201.89,
+                            "stattrak_price": 273.85
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 122.14,
+                            "stattrak_price": 160.41
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 124.27,
+                            "stattrak_price": 252.56
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 118.01,
+                            "stattrak_price": 186.95
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/a4dbe02e53bb2be9e12682749e485a75d9ec7f18.webp"
+                },
+                {
+                    "ID": "falchion-knife-night",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Night",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 493.99,
+                            "stattrak_price": 1879.37
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 107.07,
+                            "stattrak_price": 205.3
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 79.67,
+                            "stattrak_price": 134.05
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 79.51,
+                            "stattrak_price": 168.66
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 84.42,
+                            "stattrak_price": 148.81
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/3ffb0cfeeb12ac2615c41294fe059f42e903491b.webp"
+                },
+                {
+                    "ID": "falchion-knife-case-hardened",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Case Hardened",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 311.12,
+                            "stattrak_price": 661.91
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 217.31,
+                            "stattrak_price": 292.27
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 165.23,
+                            "stattrak_price": 252.84
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 154.77,
+                            "stattrak_price": 218.07
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 150.23,
+                            "stattrak_price": 211.47
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/ab9f24826d73ba1a795aa841a40b01436afe90e8.webp"
+                },
+                {
+                    "ID": "falchion-knife-ultraviolet",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Ultraviolet",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 292.46,
+                            "stattrak_price": 1102.59
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 121.81,
+                            "stattrak_price": 159.01
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 87.97,
+                            "stattrak_price": 115.11
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 88.16,
+                            "stattrak_price": 130.45
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 80.32,
+                            "stattrak_price": 106.68
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/fa5b342faeb0b1f4428ad4932b8a2b7f96397897.webp"
+                },
+                {
+                    "ID": "falchion-knife-blue-steel",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Blue Steel",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 281.77,
+                            "stattrak_price": 450.0
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 165.99,
+                            "stattrak_price": 224.43
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 147.75,
+                            "stattrak_price": 210.03
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 132.15,
+                            "stattrak_price": 242.11
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 126.68,
+                            "stattrak_price": 201.5
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/7316829aad48ea93402dd0f2bf74503cc8fee05c.webp"
+                },
+                {
+                    "ID": "falchion-knife-slaughter",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Slaughter",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 249.29,
+                            "stattrak_price": 384.01
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 204.8,
+                            "stattrak_price": 254.26
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 206.89,
+                            "stattrak_price": 288.8
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/215961a06ad8a396be94abe34487ba8b3011557b.webp"
+                },
+                {
+                    "ID": "falchion-knife-boreal-forest",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Boreal Forest",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 241.14,
+                            "stattrak_price": 1403.27
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 88.7,
+                            "stattrak_price": 172.7
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 73.03,
+                            "stattrak_price": 91.39
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 79.02,
+                            "stattrak_price": 142.96
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 72.16,
+                            "stattrak_price": 105.96
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/913846b3bcfc086bda7754a86c68a1cbe6e18fcf.webp"
+                },
+                {
+                    "ID": "falchion-knife-urban-masked",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Urban Masked",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 234.17,
+                            "stattrak_price": 445.36
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 119.22,
+                            "stattrak_price": 168.07
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 81.81,
+                            "stattrak_price": 104.39
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 85.27,
+                            "stattrak_price": 133.0
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 78.11,
+                            "stattrak_price": 112.91
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/58b0e079c0c7aed51998f10bcf69ac61665f1e8f.webp"
+                },
+                {
+                    "ID": "falchion-knife-marble-fade",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Marble Fade",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 196.8,
+                            "stattrak_price": 262.89
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 250.54,
+                            "stattrak_price": 458.7
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/dd2c5b1f607ab926de725cea550c3ddb0d35dd4a.webp"
+                },
+                {
+                    "ID": "falchion-knife-fade",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Fade",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 196.8,
+                            "stattrak_price": 262.89
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 250.54,
+                            "stattrak_price": 871.78
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/6c41271cb1531070590d878682a519f75db315f6.webp"
+                },
+                {
+                    "ID": "falchion-knife-scorched",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Scorched",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 195.21,
+                            "stattrak_price": 355.24
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 91.83,
+                            "stattrak_price": 120.03
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 73.52,
+                            "stattrak_price": 101.54
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 77.31,
+                            "stattrak_price": 86.41
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 73.33,
+                            "stattrak_price": 129.35
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/4ce60033bb4cb022786bca60f11d6b07638f9406.webp"
+                },
+                {
+                    "ID": "falchion-knife-stained",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Stained",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 175.46,
+                            "stattrak_price": 267.86
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 110.6,
+                            "stattrak_price": 170.41
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 90.37,
+                            "stattrak_price": 122.06
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 88.84,
+                            "stattrak_price": 141.62
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 84.96,
+                            "stattrak_price": 210.09
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/486544b92bd9f4b69d06b19d9f5891446902b575.webp"
+                },
+                {
+                    "ID": "falchion-knife-forest-ddpat",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Forest DDPAT",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 165.52,
+                            "stattrak_price": 240.19
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 79.77,
+                            "stattrak_price": 95.9
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 68.28,
+                            "stattrak_price": 91.52
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 73.63,
+                            "stattrak_price": 109.36
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 70.6,
+                            "stattrak_price": 94.64
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/27b13d456ea3dc39cf84718af1d32ca90a9be92b.webp"
+                },
+                {
+                    "ID": "falchion-knife-safari-mesh",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Safari Mesh",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 165.15,
+                            "stattrak_price": 539.16
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 72.84,
+                            "stattrak_price": 122.61
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 65.47,
+                            "stattrak_price": 86.14
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 68.15,
+                            "stattrak_price": 105.46
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 69.61,
+                            "stattrak_price": 114.43
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/e9dcf25dff3a43c2b3eabd3aaa36437d61d34475.webp"
+                },
+                {
+                    "ID": "falchion-knife-tiger-tooth",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Tiger Tooth",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 153.41,
+                            "stattrak_price": 204.65
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 187.11,
+                            "stattrak_price": 429.25
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/2a19b6e71486af332fea019a8860639828f370e5.webp"
+                },
+                {
+                    "ID": "falchion-knife-damascus-steel",
+                    "GUN": "Falchion Knife",
+                    "NAME": "Damascus Steel",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 125.48,
+                            "stattrak_price": 211.89
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 106.65,
+                            "stattrak_price": 137.09
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 98.04,
+                            "stattrak_price": 146.4
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 106.58,
+                            "stattrak_price": 248.45
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 114.28,
+                            "stattrak_price": 184.26
+                        }
+                    ],
+                    "COLLECTION": "The Falchion Collection",
+                    "CONTAINER": "Falchion Case",
+                    "IMAGE": "https://cache.steamanalyst.com/21ea77b025983e7c276769d0322d0e713844ee28.webp"
+                }
+            ]
+        }
+    ]
+}

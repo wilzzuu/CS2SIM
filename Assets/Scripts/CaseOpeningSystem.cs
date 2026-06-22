@@ -412,9 +412,7 @@ public class CaseOpening : MonoBehaviour
             .OrderBy(item => RarityData.Order.TryGetValue(item.rarity, out int order) ? order: 0)
             .GroupBy(item =>
             {
-                string itemIndex = item.id.Split('_')[1];
-                itemIndex = Regex.Match(itemIndex, @"^\d+").Value;
-                return itemIndex;
+                return item.imageName;
             })
             .OrderBy(group =>
                 RarityData.Order.TryGetValue(group.First().rarity, out int order)
