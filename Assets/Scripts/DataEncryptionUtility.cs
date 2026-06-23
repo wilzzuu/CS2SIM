@@ -1,44 +1,103 @@
-using System.Text;
-using UnityEngine;
+using System;
 using System.Security.Cryptography;
+using System.Text;
 
 public static class DataEncryptionUtility
 {
-    private static readonly string EncryptionKey = "YourSecureKey123"; // Change this to a secure key
+    private const string EncryptionKey = "DVCL1at2KVWANdLqNJeKrgQaShmtlgOR";
 
-    public static string Encrypt(string data)
+    public static string Encrypt(string plainText)
     {
-        byte[] dataBytes = Encoding.UTF8.GetBytes(data);
-        byte[] keyBytes = Encoding.UTF8.GetBytes(EncryptionKey);
+        using Aes aes = Aes.Create();
 
-        using (Aes aes = Aes.Create())
-        {
-            aes.Key = keyBytes;
-            aes.Mode = CipherMode.ECB;
-            aes.Padding = PaddingMode.PKCS7;
+        aes.Key = GenerateKey(EncryptionKey);
+        aes.GenerateIV();
 
-            ICryptoTransform encryptor = aes.CreateEncryptor();
-            byte[] encryptedBytes = encryptor.TransformFinalBlock(dataBytes, 0, dataBytes.Length);
+        aes.Mode = CipherMode.CBC;
+        aes.Padding = PaddingMode.PKCS7;
 
-            return System.Convert.ToBase64String(encryptedBytes);
-        }
+        ICryptoTransform encryptor =
+            aes.CreateEncryptor(aes.Key, aes.IV);
+
+        byte[] plainBytes =
+            Encoding.UTF8.GetBytes(plainText);
+
+        byte[] encryptedBytes =
+            encryptor.TransformFinalBlock(
+                plainBytes,
+                0,
+                plainBytes.Length);
+
+        byte[] combined =
+            new byte[aes.IV.Length + encryptedBytes.Length];
+
+        Buffer.BlockCopy(
+            aes.IV,
+            0,
+            combined,
+            0,
+            aes.IV.Length);
+
+        Buffer.BlockCopy(
+            encryptedBytes,
+            0,
+            combined,
+            aes.IV.Length,
+            encryptedBytes.Length);
+
+        return Convert.ToBase64String(combined);
     }
 
-    public static string Decrypt(string encryptedData)
+    public static string Decrypt(string encryptedText)
     {
-        byte[] encryptedBytes = System.Convert.FromBase64String(encryptedData);
-        byte[] keyBytes = Encoding.UTF8.GetBytes(EncryptionKey);
+        byte[] combined =
+            Convert.FromBase64String(encryptedText);
 
-        using (Aes aes = Aes.Create())
-        {
-            aes.Key = keyBytes;
-            aes.Mode = CipherMode.ECB;
-            aes.Padding = PaddingMode.PKCS7;
+        using Aes aes = Aes.Create();
 
-            ICryptoTransform decryptor = aes.CreateDecryptor();
-            byte[] decryptedBytes = decryptor.TransformFinalBlock(encryptedBytes, 0, encryptedBytes.Length);
+        aes.Key = GenerateKey(EncryptionKey);
 
-            return Encoding.UTF8.GetString(decryptedBytes);
-        }
+        byte[] iv = new byte[16];
+
+        Buffer.BlockCopy(
+            combined,
+            0,
+            iv,
+            0,
+            iv.Length);
+
+        aes.IV = iv;
+
+        byte[] encryptedBytes =
+            new byte[combined.Length - iv.Length];
+
+        Buffer.BlockCopy(
+            combined,
+            iv.Length,
+            encryptedBytes,
+            0,
+            encryptedBytes.Length);
+
+        aes.Mode = CipherMode.CBC;
+        aes.Padding = PaddingMode.PKCS7;
+
+        ICryptoTransform decryptor =
+            aes.CreateDecryptor(aes.Key, aes.IV);
+
+        byte[] decryptedBytes =
+            decryptor.TransformFinalBlock(
+                encryptedBytes,
+                0,
+                encryptedBytes.Length);
+
+        return Encoding.UTF8.GetString(decryptedBytes);
+    }
+
+    private static byte[] GenerateKey(string key)
+    {
+        using SHA256 sha = SHA256.Create();
+
+        return sha.ComputeHash(
+            Encoding.UTF8.GetBytes(key));
     }
 }
