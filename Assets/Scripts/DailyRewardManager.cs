@@ -98,8 +98,7 @@ public class DailyRewardUI : MonoBehaviour
     
     private void Claim(int day)
     {
-        int _currentDay = DailyRewardSystem.Instance.currentDay;
-        if (day != _currentDay)
+        if (day != DailyRewardSystem.Instance.currentDay)
             return;
 
         if (!DailyRewardSystem.Instance.CanClaimToday())
@@ -113,10 +112,10 @@ public class DailyRewardUI : MonoBehaviour
 
         DailyRewardSystem.Instance.lastClaim = DateTime.UtcNow;
 
-        if (_currentDay >= 7)
-            _currentDay = 1;
+        if (DailyRewardSystem.Instance.currentDay >= 7)
+            DailyRewardSystem.Instance.currentDay = 1;
         else
-            _currentDay++;
+            DailyRewardSystem.Instance.currentDay++;
 
         DailyRewardSystem.Instance.SaveData();
         RefreshUI();
