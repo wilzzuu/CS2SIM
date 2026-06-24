@@ -455,7 +455,7 @@ public class CryptoSystem : MonoBehaviour
                 break;
 
             case 1:
-                if (Globals.FloatUtil.GreaterOrEqual(btcPrice *= 0.85f, btcMinMarketPrice))
+                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 0.85f, btcMinMarketPrice))
                 {
                     btcPrice *= 0.85f;
                     OnBtcPriceChanged?.Invoke();
@@ -465,7 +465,6 @@ public class CryptoSystem : MonoBehaviour
                         "BTC Price -15%"
                     );
                 }
-                
                 break;
 
             case 2:
@@ -478,7 +477,7 @@ public class CryptoSystem : MonoBehaviour
                 break;
 
             case 3:
-                if (Globals.FloatUtil.GreaterOrEqual(ethPrice *= 0.80f, ethMinMarketPrice))
+                if (Globals.FloatUtil.GreaterOrEqual(ethPrice * 0.80f, ethMinMarketPrice))
                 {
                     ethPrice *= 0.80f;
                     OnEthPriceChanged?.Invoke();
@@ -503,7 +502,7 @@ public class CryptoSystem : MonoBehaviour
                 break;
 
             case 5:
-                if (Globals.FloatUtil.GreaterOrEqual(btcPrice *= 0.5f, btcMinMarketPrice))
+                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 0.5f, btcMinMarketPrice))
                 {
                     btcPrice *= 0.5f;
                     OnBtcPriceChanged?.Invoke();
@@ -516,7 +515,7 @@ public class CryptoSystem : MonoBehaviour
                 break;
 
             case 6:
-                if (Globals.FloatUtil.GreaterOrEqual(ethPrice *= 0.5f, ethMinMarketPrice))
+                if (Globals.FloatUtil.GreaterOrEqual(ethPrice * 0.5f, ethMinMarketPrice))
                 {
                     ethPrice *= 0.5f;
                     OnEthPriceChanged?.Invoke();
