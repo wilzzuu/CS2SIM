@@ -82,7 +82,7 @@ public class MarketplaceItem : MonoBehaviour
             ? $"+{priceVariation:F2}€"
             : $"{priceVariation:F2}€";
         priceVariationText.color = priceVariation > 0
-            ? new Color32(104, 215, 49, 255)
-            : new Color32(215, 49, 49, 255);
+            ? new Color32(215, 49, 49, 255)
+            : new Color32(104, 215, 49, 255);
     }
 }
