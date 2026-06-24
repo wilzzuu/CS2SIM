@@ -24,7 +24,6 @@ public class InventoryScreen : MonoBehaviour
         _items = InventoryManager.Instance.GetInventoryItems();
         if (_items == null || _items.Count == 0)
         {
-            Debug.LogWarning("No items found in inventory.");
             return;
         }
 
