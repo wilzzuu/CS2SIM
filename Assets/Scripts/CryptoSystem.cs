@@ -487,6 +487,42 @@ public class CryptoSystem : MonoBehaviour
                     "BTC & ETH Price +5%"
                     );
                 break;
+
+            case 5:
+                btcPrice *= 0.5f;
+                OnBtcPriceChanged?.Invoke();
+                currentMarketEvent = "BTC Manipulation [-100%]";
+                LogUtil.Event.Log(
+                    "BTC Manipulation",
+                    "BTC Price -100%");
+                break;
+
+            case 6:
+                ethPrice *= 0.5f;
+                OnEthPriceChanged?.Invoke();
+                currentMarketEvent = "ETH Manipulation [-100%]";
+                LogUtil.Event.Log(
+                    "ETH Manipulation",
+                    "ETH Price -100%");
+                break;
+
+            case 7:
+                btcPrice *= 2.0f;
+                OnBtcPriceChanged?.Invoke();
+                currentMarketEvent = "BTC Insider Trading [+100%]";
+                LogUtil.Event.Log(
+                    "BTC Insider Trading",
+                    "BTC Price +100%");
+                break;
+
+            case 8:
+                ethPrice *= 2.0f;
+                OnEthPriceChanged?.Invoke();
+                currentMarketEvent = "ETH Insider Trading [+100%]";
+                LogUtil.Event.Log(
+                    "ETH Insider Trading",
+                    "ETH Price +100%");
+                break;
         }
 
         SaveData();
