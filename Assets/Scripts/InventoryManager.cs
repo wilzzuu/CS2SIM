@@ -56,10 +56,6 @@ public class InventoryManager : MonoBehaviour
             {
                 items.Add(item);
             }
-            else
-            {
-                Debug.LogWarning($"Failed to load ItemData at {itemPath}. Asset with ID {sItem.id} may be missing or incorrectly named.");
-            }
         }
         return items;
     }
