@@ -437,7 +437,7 @@ public class CryptoSystem : MonoBehaviour
     [ContextMenu("Generate Market Event")]
     public void GenerateMarketEvent()
     {
-        int eventRoll = UnityEngine.Random.Range(0, 5);
+        int eventRoll = UnityEngine.Random.Range(0, 8);
         AlertManager.Set(AlertType.Crypto, true);
 
         switch (eventRoll)
