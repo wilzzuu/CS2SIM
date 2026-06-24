@@ -442,6 +442,7 @@ public class CryptoSystem : MonoBehaviour
         {
             case 0:
                 btcPrice *= 1.15f;
+                OnBtcPriceChanged?.Invoke();
                 currentMarketEvent = "BTC Bull Run [+15%]";
                 LogUtil.Event.Log(
                     "BTC Bull Run",
@@ -450,6 +451,7 @@ public class CryptoSystem : MonoBehaviour
 
             case 1:
                 btcPrice *= 0.85f;
+                OnBtcPriceChanged?.Invoke();
                 currentMarketEvent = "BTC Crash [-15%]";
                 LogUtil.Event.Log(
                     "BTC Crash",
@@ -458,6 +460,7 @@ public class CryptoSystem : MonoBehaviour
 
             case 2:
                 ethPrice *= 1.20f;
+                OnEthPriceChanged?.Invoke();
                 currentMarketEvent = "ETH Rally [+20%]";
                 LogUtil.Event.Log(
                     "ETH Rally",
@@ -466,6 +469,7 @@ public class CryptoSystem : MonoBehaviour
 
             case 3:
                 ethPrice *= 0.80f;
+                OnEthPriceChanged?.Invoke();
                 currentMarketEvent = "ETH Correction [-20%]";
                 LogUtil.Event.Log(
                     "ETH Correction",
@@ -474,7 +478,9 @@ public class CryptoSystem : MonoBehaviour
 
             case 4:
                 btcPrice *= 1.05f;
+                OnBtcPriceChanged?.Invoke();
                 ethPrice *= 1.05f;
+                OnEthPriceChanged?.Invoke();
                 currentMarketEvent = "Market Optimism [+5%]";
                 LogUtil.Event.Log(
                     "Market Optimism",
