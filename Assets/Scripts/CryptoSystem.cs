@@ -11,8 +11,10 @@ public class CryptoSystem : MonoBehaviour
     [Header("Market Prices")]
     public float btcPrice = 100000f;
     public float lastBtcPrice = 100000f;
+    public float btcMinMarketPrice = 10000f;
     public float ethPrice = 5000f;
     public float lastEthPrice = 5000f;
+    public float ethMinMarketPrice = 500f;
     private float _marketEventChance = 10f;
 
     [Header("Mining")]
@@ -446,16 +448,22 @@ public class CryptoSystem : MonoBehaviour
                 currentMarketEvent = "BTC Bull Run [+15%]";
                 LogUtil.Event.Log(
                     "BTC Bull Run",
-                    "BTC Price +15%");
+                    "BTC Price +15%"
+                );
                 break;
 
             case 1:
-                btcPrice *= 0.85f;
-                OnBtcPriceChanged?.Invoke();
-                currentMarketEvent = "BTC Crash [-15%]";
-                LogUtil.Event.Log(
-                    "BTC Crash",
-                    "BTC Price -15%");
+                if (Globals.FloatUtil.GreaterOrEqual(btcPrice *= 0.85f, btcMinMarketPrice))
+                {
+                    btcPrice *= 0.85f;
+                    OnBtcPriceChanged?.Invoke();
+                    currentMarketEvent = "BTC Crash [-15%]";
+                    LogUtil.Event.Log(
+                        "BTC Crash",
+                        "BTC Price -15%"
+                    );
+                }
+                
                 break;
 
             case 2:
@@ -468,12 +476,16 @@ public class CryptoSystem : MonoBehaviour
                 break;
 
             case 3:
-                ethPrice *= 0.80f;
-                OnEthPriceChanged?.Invoke();
-                currentMarketEvent = "ETH Correction [-20%]";
-                LogUtil.Event.Log(
-                    "ETH Correction",
-                    "ETH Price -20%");
+                if (Globals.FloatUtil.GreaterOrEqual(ethPrice *= 0.80f, ethMinMarketPrice))
+                {
+                    ethPrice *= 0.80f;
+                    OnEthPriceChanged?.Invoke();
+                    currentMarketEvent = "ETH Correction [-20%]";
+                    LogUtil.Event.Log(
+                        "ETH Correction",
+                        "ETH Price -20%"
+                    );
+                }
                 break;
 
             case 4:
@@ -485,25 +497,33 @@ public class CryptoSystem : MonoBehaviour
                 LogUtil.Event.Log(
                     "Market Optimism",
                     "BTC & ETH Price +5%"
-                    );
+                );
                 break;
 
             case 5:
-                btcPrice *= 0.5f;
-                OnBtcPriceChanged?.Invoke();
-                currentMarketEvent = "BTC Manipulation [-100%]";
-                LogUtil.Event.Log(
-                    "BTC Manipulation",
-                    "BTC Price -100%");
+                if (Globals.FloatUtil.GreaterOrEqual(btcPrice *= 0.5f, btcMinMarketPrice))
+                {
+                    btcPrice *= 0.5f;
+                    OnBtcPriceChanged?.Invoke();
+                    currentMarketEvent = "BTC Manipulation [-100%]";
+                    LogUtil.Event.Log(
+                        "BTC Manipulation",
+                        "BTC Price -100%"
+                    );
+                }
                 break;
 
             case 6:
-                ethPrice *= 0.5f;
-                OnEthPriceChanged?.Invoke();
-                currentMarketEvent = "ETH Manipulation [-100%]";
-                LogUtil.Event.Log(
-                    "ETH Manipulation",
-                    "ETH Price -100%");
+                if (Globals.FloatUtil.GreaterOrEqual(ethPrice *= 0.5f, ethMinMarketPrice))
+                {
+                    ethPrice *= 0.5f;
+                    OnEthPriceChanged?.Invoke();
+                    currentMarketEvent = "ETH Manipulation [-100%]";
+                    LogUtil.Event.Log(
+                        "ETH Manipulation",
+                        "ETH Price -100%"
+                    );
+                }
                 break;
 
             case 7:
@@ -512,7 +532,8 @@ public class CryptoSystem : MonoBehaviour
                 currentMarketEvent = "BTC Insider Trading [+100%]";
                 LogUtil.Event.Log(
                     "BTC Insider Trading",
-                    "BTC Price +100%");
+                    "BTC Price +100%"
+                );
                 break;
 
             case 8:
@@ -521,7 +542,8 @@ public class CryptoSystem : MonoBehaviour
                 currentMarketEvent = "ETH Insider Trading [+100%]";
                 LogUtil.Event.Log(
                     "ETH Insider Trading",
-                    "ETH Price +100%");
+                    "ETH Price +100%"
+                );
                 break;
         }
 
