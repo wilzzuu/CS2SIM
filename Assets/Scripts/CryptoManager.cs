@@ -33,6 +33,7 @@ public class CryptoManager : MonoBehaviour
     {
         CryptoSystem.Instance.OnBtcPriceChanged += UpdateBitcoinPriceDisplay;
         CryptoSystem.Instance.OnEthPriceChanged += UpdateEthereumPriceDisplay;
+        CryptoSystem.Instance.OnCurrentMarketEventChanged += UpdateMarketEventDisplay;
         ShowExchangeTab();
     }
 
@@ -42,6 +43,7 @@ public class CryptoManager : MonoBehaviour
         {
             CryptoSystem.Instance.OnBtcPriceChanged += UpdateBitcoinPriceDisplay;
             CryptoSystem.Instance.OnEthPriceChanged += UpdateEthereumPriceDisplay;
+            CryptoSystem.Instance.OnCurrentMarketEventChanged += UpdateMarketEventDisplay;
         }
     }
 
@@ -141,6 +143,11 @@ public class CryptoManager : MonoBehaviour
             priceDiffText.text = $"{(isEthNegative ? "" : "+")}{ethPriceDiff:F2}€";
             priceDiffText.color = isEthNegative ? Color.red : Color.green;
         }
+    }
+
+    private void UpdateMarketEventDisplay()
+    {
+        marketEventText.text = CryptoSystem.Instance.currentMarketEvent;
     }
 
     #region BUY / SELL

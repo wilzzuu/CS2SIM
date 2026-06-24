@@ -57,6 +57,8 @@ public class CryptoSystem : MonoBehaviour
     public event EthPriceHandler OnEthPriceChanged;
     public delegate void EthMinerHandler();
     public event EthPriceHandler OnEthMinersChanged;
+    public delegate void CryptoEventHandler();
+    public event CryptoEventHandler OnCurrentMarketEventChanged;
     
     void Awake()
     {
@@ -109,7 +111,6 @@ public class CryptoSystem : MonoBehaviour
 
         OnBtcPriceChanged?.Invoke();
         OnEthPriceChanged?.Invoke();
-        
         _nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
 
         SaveData();
@@ -128,6 +129,7 @@ public class CryptoSystem : MonoBehaviour
             {
                 currentMarketEvent = "No Event";
             }
+            OnCurrentMarketEventChanged?.Invoke();
         }
 
         //autoTrader.RecordMarketPrices();
