@@ -546,6 +546,9 @@ public class CryptoSystem : MonoBehaviour
                     "ETH Price +100%"
                 );
                 break;
+            default:
+                currentMarketEvent = "No Event";
+                break;
         }
 
         SaveData();
