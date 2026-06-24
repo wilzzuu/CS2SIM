@@ -5,7 +5,6 @@ using TMPro;
 using System.Linq;
 using System.Collections;
 using System;
-using System.IO;
 
 public class MarketManager : MonoBehaviour
 {
@@ -49,20 +48,6 @@ public class MarketManager : MonoBehaviour
     private float _lastInteractionTime;
     private const string LastUpdateKey = "LastMarketUpdate";
 
-    private string SaveFilePath
-    {
-        get
-        {
-            #if UNITY_EDITOR
-                return Path.Combine(Application.persistentDataPath, "EditorData");
-            #else
-                return Path.Combine(Application.persistentDataPath, "SaveData");
-            #endif
-        }
-    }
-    
-    private const string SaveFileName = "MarketData.save";
-
     void Awake()
     {
         if (Instance == null)
@@ -95,7 +80,7 @@ public class MarketManager : MonoBehaviour
         filterByBalanceToggle.onValueChanged.AddListener(delegate { DisplayPage(0); });
         PlayerManager.Instance.OnBalanceChanged += RefreshBalanceFilter;
 
-        LoadMarketData();
+        LoadLastUpdateTimestamp();
         ApplyRealTimeFluctuations();
         StartCoroutine(MarketFluctuationCoroutine());
         StartCoroutine(DemandScoreDecayCoroutine());
@@ -105,6 +90,12 @@ public class MarketManager : MonoBehaviour
     private void UpdateCurrentTab()
     {
         DisplayPage(currentPage);
+    }
+
+    void LoadLastUpdateTimestamp()
+    {
+        string lastUpdateString = PlayerPrefs.GetString(LastUpdateKey, DateTime.UtcNow.ToString());
+        _lastUpdateTimestamp = DateTime.Parse(lastUpdateString);
     }
 
     void ApplyRealTimeFluctuations()
@@ -127,7 +118,8 @@ public class MarketManager : MonoBehaviour
             }
 
             _lastUpdateTimestamp = currentTime;
-            SaveMarketData();
+            PlayerPrefs.SetString(LastUpdateKey, _lastUpdateTimestamp.ToString());
+            PlayerPrefs.Save();
         }
     }
 
@@ -569,47 +561,5 @@ public class MarketManager : MonoBehaviour
             
             yield return new WaitForSeconds(ItemData.DemandDecayInterval);
         }
-    }
-
-    [System.Serializable]
-    private class MarketSaveData
-    {
-        public DateTime lastUpdateTimestamp;
-    }
-
-    public void SaveMarketData()
-    {
-        MarketSaveData data = new MarketSaveData
-        {
-            lastUpdateTimestamp = _lastUpdateTimestamp
-        };
-        
-        string path = Path.Combine(SaveFilePath, SaveFileName);
-        string jsonData = JsonUtility.ToJson(data);
-        string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
-
-        File.WriteAllText(path, encryptedData);
-    }
-
-    public void LoadMarketData()
-    {
-        string path = Path.Combine(SaveFilePath, SaveFileName);
-        if (!File.Exists(path))
-        {
-            _lastUpdateTimestamp = DateTime.UtcNow;
-        }
-
-        string encryptedData = File.ReadAllText(path);
-        string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
-
-        MarketSaveData data = JsonUtility.FromJson<MarketSaveData>(jsonData);
-
-        _lastUpdateTimestamp =
-            DateTime.Parse(
-                data.lastUpdateTimestamp.ToString(),
-                null,
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
     }
 }
