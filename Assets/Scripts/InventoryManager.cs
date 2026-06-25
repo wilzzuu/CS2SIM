@@ -81,6 +81,18 @@ public class InventoryManager : MonoBehaviour
         OnInventoryValueChanged?.Invoke();
     }
 
+    public void AddRandomItemToInventory()
+    {
+        string itemPath = "ItemAssets";
+        ItemData[] allItems = Resources.LoadAll<ItemData>(itemPath);
+        ItemData randomItem = allItems[Random.Range(0, allItems.Length)];
+        if (randomItem != null)
+        {
+            AddItemToInventory(randomItem);
+            LoadInventory();
+        }
+    }
+
     public List<ItemData> GetAllItems()
     {
         return new List<ItemData>(_inventoryItems);

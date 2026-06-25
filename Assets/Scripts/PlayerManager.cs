@@ -113,6 +113,23 @@ public class PlayerManager : MonoBehaviour
         OnBalanceChanged?.Invoke();
     }
 
+    public void SetBtc(float amount)
+    {
+        player.btcOwned = Globals.FloatUtil.RoundCrypto(amount);
+        float euroAmount = amount * CryptoSystem.Instance.GetBtcPrice();
+
+        LogUtil.Economy.LogCrypto(
+            "SET_CRYPTO",
+            amount,
+            "BTC",
+            player.btcOwned,
+            $"-{euroAmount:F2}€"
+        );
+
+        SavePlayerData();
+        OnBtcChanged?.Invoke();
+    }
+
     public void AddBtc(float amount)
     {
         player.btcOwned = Globals.FloatUtil.RoundCrypto(player.btcOwned + amount);
@@ -164,6 +181,23 @@ public class PlayerManager : MonoBehaviour
 
         SavePlayerData();
         OnBtcChanged?.Invoke();
+    }
+
+    public void SetEth(float amount)
+    {
+        player.ethOwned = Globals.FloatUtil.RoundCrypto(amount);
+        float euroAmount = amount * CryptoSystem.Instance.GetEthPrice();
+
+        LogUtil.Economy.LogCrypto(
+            "SET_CRYPTO",
+            amount,
+            "ETH",
+            player.ethOwned,
+            $"-{euroAmount:F2}€"
+        );
+
+        SavePlayerData();
+        OnEthChanged?.Invoke();
     }
 
     public void AddEth(float amount)
