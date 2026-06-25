@@ -4,7 +4,6 @@ using TMPro;
 
 public class CoinFlipManager : MonoBehaviour
 {
-    public static CoinFlipManager Instance;
 
     [Header("UI")]
     [SerializeField] private Image coinImage;
@@ -31,15 +30,12 @@ public class CoinFlipManager : MonoBehaviour
     private CoinFace _selectedFace;
     private bool _hasSelection;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
-
     private void Start()
     {
         headsButton.onClick.AddListener(() => SelectFace(CoinFace.Heads));
         tailsButton.onClick.AddListener(() => SelectFace(CoinFace.Tails));
+
+        playButton.interactable = false;
         playButton.onClick.AddListener(Play);
 
         UpdateUI(CoinFace.Heads, "Ready");
@@ -50,6 +46,7 @@ public class CoinFlipManager : MonoBehaviour
     {
         _selectedFace = face;
         _hasSelection = true;
+        playButton.interactable = true;
 
         SetSelectionVisual(face == CoinFace.Heads, face == CoinFace.Tails);
     }
@@ -80,6 +77,7 @@ public class CoinFlipManager : MonoBehaviour
             ? CoinFace.Heads
             : CoinFace.Tails;
 
+        playButton.interactable = false;
         ShowResult(outcome, bet);
     }
 
