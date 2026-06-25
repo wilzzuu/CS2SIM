@@ -82,6 +82,16 @@ public class CryptoSystem : MonoBehaviour
         StartCoroutine(UpdateMiners());
     }
 
+    public void InvokeBtcPriceChanged()
+    {
+        OnBtcPriceChanged?.Invoke();
+    }
+
+    public void InvokeEthPriceChanged()
+    {
+        OnEthPriceChanged?.Invoke();
+    }
+
     private IEnumerator UpdateTimer()
     {
         while (true)
@@ -195,7 +205,7 @@ public class CryptoSystem : MonoBehaviour
             if (PlayerManager.Instance.GetPlayerBalance() >= btcMinerPrice)
             {
                 _btcMiners++;
-                PlayerManager.Instance.DeductCurrency(btcMinerPrice);
+                PlayerManager.Instance.DeductMoney(btcMinerPrice);
                 GetBtcPerHour();
                 OnBtcMinersChanged?.Invoke();
                 SaveData();
@@ -209,7 +219,7 @@ public class CryptoSystem : MonoBehaviour
         {
             _btcMiners--;
             float minerSellPrice = GetBtcPrice() * 0.8f;
-            PlayerManager.Instance.AddCurrency(minerSellPrice);
+            PlayerManager.Instance.AddMoney(minerSellPrice);
             GetBtcPerHour();
             OnBtcMinersChanged?.Invoke();
             SaveData();
@@ -221,6 +231,14 @@ public class CryptoSystem : MonoBehaviour
         return _btcMiners;
     }
 
+    public void SetBtcMinerCount(int count)
+    {
+        _btcMiners = Mathf.Clamp(count, 0, maxBtcMiners);
+        GetBtcPerHour();
+        OnBtcMinersChanged?.Invoke();
+        SaveData();
+    }
+
     public void AddEthMiningRig()
     {
         if (_ethMiners < maxEthMiners)
@@ -229,7 +247,7 @@ public class CryptoSystem : MonoBehaviour
             if (PlayerManager.Instance.GetPlayerBalance() >= ethMinerPrice)
             {
                 _ethMiners++;
-                PlayerManager.Instance.DeductCurrency(ethMinerPrice);
+                PlayerManager.Instance.DeductMoney(ethMinerPrice);
                 GetEthPerHour();
                 OnEthMinersChanged?.Invoke();
                 SaveData();
@@ -243,7 +261,7 @@ public class CryptoSystem : MonoBehaviour
         {
             _ethMiners--;
             float minerSellPrice = GetEthPrice() * 0.8f;
-            PlayerManager.Instance.AddCurrency(minerSellPrice);
+            PlayerManager.Instance.AddMoney(minerSellPrice);
             GetEthPerHour();
             OnEthMinersChanged?.Invoke();
             SaveData();
@@ -255,13 +273,33 @@ public class CryptoSystem : MonoBehaviour
         return _ethMiners;
     }
 
+    public void SetEthMinerCount(int count)
+    {
+        _ethMiners = Mathf.Clamp(count, 0, maxEthMiners);
+        GetEthPerHour();
+        OnEthMinersChanged?.Invoke();
+        SaveData();
+    }
+
     public float GetBtcPrice()
     {
         return btcPrice;
     }
 
+    public float SetBtcPrice(float newPrice)
+    {
+        btcPrice = newPrice;
+        return btcPrice;
+    }
+
     public float GetEthPrice()
     {
+        return ethPrice;
+    }
+
+    public float SetEthPrice(float newPrice)
+    {
+        ethPrice = newPrice;
         return ethPrice;
     }
 

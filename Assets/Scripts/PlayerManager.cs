@@ -68,12 +68,12 @@ public class PlayerManager : MonoBehaviour
         CheckPlayerSave();
     }
 
-    public void AddCurrency(float amount)
+    public void AddMoney(float amount)
     {
         player.balance = Globals.FloatUtil.Round(player.balance + amount);
 
         LogUtil.Economy.LogEuro(
-            "ADD_CURRENCY",
+            "ADD_MONEY",
             amount,
             player.balance
         );
@@ -82,14 +82,14 @@ public class PlayerManager : MonoBehaviour
         OnBalanceChanged?.Invoke();
     }
 
-    public void DeductCurrency(float amount)
+    public void DeductMoney(float amount)
     {
         if (Globals.FloatUtil.GreaterOrEqual(player.balance, amount))
         {
             player.balance = Globals.FloatUtil.Round(player.balance - amount);
 
             LogUtil.Economy.LogEuro(
-                "DEDUCT_CURRENCY",
+                "DEDUCT_MONEY",
                 -amount,
                 player.balance
             );
@@ -97,6 +97,20 @@ public class PlayerManager : MonoBehaviour
             SavePlayerData();
             OnBalanceChanged?.Invoke();
         }
+    }
+
+    public void SetMoney(float amount)
+    {
+        player.balance = Globals.FloatUtil.Round(amount);
+
+        LogUtil.Economy.LogEuro(
+            "SET_MONEY",
+            amount,
+            player.balance
+        );
+
+        SavePlayerData();
+        OnBalanceChanged?.Invoke();
     }
 
     public void AddBtc(float amount)
