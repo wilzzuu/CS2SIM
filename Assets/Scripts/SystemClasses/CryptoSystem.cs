@@ -94,8 +94,8 @@ public class CryptoSystem : MonoBehaviour
 
     public void InvokeCryptoEventChanged()
     {
-        OnCurrentMarketEventChanged?.Invoke();
         nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
+        OnCurrentMarketEventChanged?.Invoke();
     }
 
     private IEnumerator UpdateTimer()
