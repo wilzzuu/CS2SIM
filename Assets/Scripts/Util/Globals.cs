@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Globals
@@ -21,6 +22,11 @@ public class Globals
         {
             return Color.red;
         }
+    }
+
+    public static string GetFormattedUtcNow(DateTime dateTime)
+    {
+        return dateTime.ToString("dd'/'MM'/'yyyy @ HH':'mm':'ss");
     }
 
     public class FloatUtil
