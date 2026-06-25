@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class Console : MonoBehaviour
 {
@@ -10,11 +12,27 @@ public class Console : MonoBehaviour
     [SerializeField]
     public TMP_InputField inputField;
 
-    private readonly Dictionary<string, Action<string[]>> _commands =
-        new Dictionary<string, Action<string[]>>();
+    private readonly Dictionary<string, ConsoleCommand> _commands =
+        new Dictionary<string, ConsoleCommand>();
 
     private readonly List<string> _history =
         new List<string>();
+
+    private Action<bool> _pendingConfirmation;
+    private string _pendingPrompt;
+
+    private static readonly string[] MarketEvents =
+    {
+        "bull",
+        "crash",
+        "rally",
+        "correction",
+        "optimism",
+        "btc_manipulation",
+        "eth_manipulation",
+        "btc_insider_trading",
+        "eth_insider_trading"
+    };
 
     private int _historyIndex = -1;
     
@@ -40,21 +58,125 @@ public class Console : MonoBehaviour
         RegisterCommands();
     }
 
+    private void OnEnable()
+    {
+        Application.logMessageReceived += HandleLog;
+    }
+
+    private void OnDisable()
+    {
+        Application.logMessageReceived -= HandleLog;
+    }
+
+    private void HandleLog(
+    string condition,
+    string stackTrace,
+    LogType type)
+    {
+        switch (type)
+        {
+            case LogType.Warning:
+                ConsoleOutput.Instance.AddLine($"<color=yellow>{condition}</color>");
+                break;
+
+            case LogType.Error:
+            case LogType.Exception:
+                ConsoleOutput.Instance.AddLine($"<color=red>{condition}</color>");
+                break;
+
+            default:
+                ConsoleOutput.Instance.AddLine(condition);
+                break;
+        }
+    }
+
     private void RegisterCommands()
     {
-        Register("help", Help);
+        // Console
+        Register("help", "Display help information", "help", 0, Help);
 
-        Register("money", Money);
-        Register("setmoney", SetMoney);
+        // PlayerManager
+        Register("addmoney", "Display current money", "addmoney <amount>", 1, AddMoney);
+        Register("deductmoney", "Deduct money", "deductmoney <amount>", 1, DeductMoney);
+        Register("setmoney", "Set current money", "setmoney <amount>", 1, SetMoney);
 
-        Register("givebtc", GiveBTC);
-        Register("giveeth", GiveETH);
+        Register("givebtc", "Give Bitcoin", "givebtc <amount>", 1, GiveBTC);
+        Register("deductbtc", "Deduct Bitcoin", "deductbtc <amount>", 1, DeductBTC);
+        Register("minebtc", "Mine Bitcoin", "minebtc <amount>", 1, MineBTC);
 
-        Register("log", LogMessage);
+        Register("giveeth", "Give Ethereum", "giveeth <amount>", 1, GiveETH);
+        Register("deducteth", "Deduct Ethereum", "deducteth <amount>", 1, DeductETH);
+        Register("mineeth", "Mine Ethereum", "mineeth <amount>", 1, MineETH);
+
+        // CryptoSystem
+        Register("setbtcprice", "Set Bitcoin price", "setbtcprice <price>", 1, SetBtcPrice);
+        Register("addbtcminer", "Add Bitcoin miner", "addbtcminer <count>", 1, AddBtcMiner);
+        Register("removebtcminer", "Remove Bitcoin miner", "removebtcminer <count>", 1, RemoveBtcMiner);
+        Register("setethprice", "Set Ethereum price", "setethprice <price>", 1, SetEthPrice);
+        Register("addethminer", "Add Ethereum miner", "addethminer <count>", 1, AddEthMiner);
+        Register("removeethminer", "Remove Ethereum miner", "removeethminer <count>", 1, RemoveEthMiner);
+        Register("randommarketevent", "Trigger a random market event", "randommarketevent", 0, TriggerRandomMarketEvent);
+        Register("marketevent", "Trigger a market event", "marketevent <event>", 1, TriggerMarketEvent);
+
+        // InventoryManager
+        Register("giveitem", "Give an item", "giveitem <item_id>", 1, GiveItem);
+
+        // SettingsManager
+        Register("resetprogress", "Reset player progress", "resetprogress", 0, ResetProgress);
+
+        // Log
+        Register("log", "Log a message", "log <message>", 1, LogMessage);
+    }
+
+    public class ConsoleCommand
+    {
+        public string Name;
+        public string Description;
+        public string Usage;
+        public int RequiredArgs;
+        public Action<string[]> Action;
     }
 
     public void Execute(string commandLine)
     {
+        if (_pendingConfirmation != null)
+        {
+            string response =
+                commandLine.Trim().ToLower();
+
+            if (response == "confirm")
+            {
+                Action<bool> callback =
+                    _pendingConfirmation;
+
+                _pendingConfirmation = null;
+                _pendingPrompt = null;
+
+                callback.Invoke(true);
+
+                return;
+            }
+
+            if (response == "cancel")
+            {
+                Action<bool> callback =
+                    _pendingConfirmation;
+
+                _pendingConfirmation = null;
+                _pendingPrompt = null;
+
+                callback.Invoke(false);
+
+                return;
+            }
+
+            LogUtil.Console.Log(
+                "Please enter confirm or cancel."
+            );
+
+            return;
+        }
+
         if (string.IsNullOrWhiteSpace(commandLine))
             return;
 
@@ -72,30 +194,67 @@ public class Console : MonoBehaviour
         for (int i = 1; i < split.Length; i++)
             args[i - 1] = split[i];
 
-        if (_commands.TryGetValue(command, out Action<string[]> action))
+        if (_commands.TryGetValue(command, out ConsoleCommand consoleCommand))
         {
             try
             {
-                action.Invoke(args);
+                if (args.Length < consoleCommand.RequiredArgs)
+                {
+                    string message =
+                        $"Usage: {consoleCommand.Usage}";
+
+                    Debug.Log(message);
+                    LogUtil.Console.Log(message);
+                    return;
+                }
+
+                consoleCommand.Action.Invoke(args);
             }
             catch (Exception ex)
             {
-                ConsoleOutput.Instance.AddLine($"Command '{command}' failed:\n{ex}");
+                Debug.Log($"Command '{command}' failed:\n{ex}");
+                LogUtil.Console.Log(
+                    $"Command '{command}' failed:\n{ex}"
+                );
             }
         }
         else
         {
-            ConsoleOutput.Instance.AddLine($"Unknown command: {command}");
+            Debug.Log($"Unknown command: {command}");
+            LogUtil.Console.Log(
+                $"Unknown command: {command}"
+            );
         }
+    }
+
+    public void RequestConfirmation(
+    string prompt,
+    Action<bool> callback)
+    {
+        _pendingPrompt = prompt;
+        _pendingConfirmation = callback;
+
+        LogUtil.Console.Log(
+            $"{prompt} (confirm/cancel)"
+        );
     }
 
     public void Register(
         string command,
+        string description,
+        string usage,
+        int requiredArgs,
         Action<string[]> action)
     {
-        _commands[command.ToLower()] = action;
+        _commands[command.ToLower()] = new ConsoleCommand
+        {
+            Name = command,
+            Description = description,
+            Usage = usage,
+            RequiredArgs = requiredArgs,
+            Action = action,
+        };
     }
-
     
     private void Update()
     {
@@ -125,7 +284,8 @@ public class Console : MonoBehaviour
         if (string.IsNullOrEmpty(command))
             return;
 
-        ConsoleOutput.Instance.AddLine($"> {command}");
+        Debug.Log($"\n[{DateTime.UtcNow.ToString("dd'/'MM'/'yyyy @ HH':'mm':'ss")}] :: {command}");
+        LogUtil.Console.Log(command);
 
         Execute(command);
 
@@ -219,81 +379,422 @@ public class Console : MonoBehaviour
         _history.AddRange(wrapper.commands);
     }
 
+    public static bool TryGetFloat(
+    string[] args,
+    int index,
+    out float value)
+    {
+        value = 0;
+
+        return args.Length > index &&
+            float.TryParse(args[index], out value);
+    }
+
+    public static bool TryGetInt(
+    string[] args,
+    int index,
+    out int value)
+    {
+        value = 0;
+
+        return args.Length > index &&
+            int.TryParse(args[index], out value);
+    }
+
     #region Built-In Commands
 
     private void Help(string[] args)
     {
-        foreach (var command in _commands.Keys)
+        if (args.Length > 0)
         {
-            ConsoleOutput.Instance.AddLine(command);
-        }
-    }
+            string command = args[0].ToLower();
 
-    private void Money(string[] args)
-    {
-        if (args.Length < 1)
-        {
-            ConsoleOutput.Instance.AddLine("money <amount>");
+            if (_commands.TryGetValue(command, out ConsoleCommand cmd))
+            {
+                Debug.Log($"Command: {cmd.Name}");
+                Debug.Log($"Usage: {cmd.Usage}");
+                Debug.Log($"Description: {cmd.Description}");
+            }
+
             return;
         }
 
-        if (float.TryParse(args[0], out float amount))
+        foreach (var cmd in _commands.Values)
         {
-            PlayerManager.Instance.AddCurrency(amount);
-
-            ConsoleOutput.Instance.AddLine($"Added {amount:F2}€");
+            Debug.Log($"{cmd.Name} - {cmd.Description}");
         }
+    }
+
+    private void AddMoney(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float amount))
+        {
+            Debug.Log("Invalid amount. Please enter a valid number.");
+            return;
+        }
+
+        PlayerManager.Instance.AddMoney(amount);
+        Debug.Log($"Added {amount:F2}€");
+    }
+
+    private void DeductMoney(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float amount))
+        {
+            Debug.Log("Invalid amount. Please enter a valid number.");
+            return;
+        }
+
+        PlayerManager.Instance.DeductMoney(amount);
+        Debug.Log($"Deducted {amount:F2}€");
     }
 
     private void SetMoney(string[] args)
     {
-        if (args.Length < 1)
+        if (!TryGetFloat(args, 0, out float amount))
         {
-            ConsoleOutput.Instance.AddLine("setmoney <amount>");
+            Debug.Log("Invalid amount. Please enter a valid number.");
             return;
         }
 
-        if (float.TryParse(args[0], out float amount))
-        {
-            PlayerManager.Instance.player.balance = amount;
-            PlayerManager.Instance.SavePlayerData();
+        PlayerManager.Instance.SetMoney(amount);
 
-            ConsoleOutput.Instance.AddLine($"Balance set to {amount:F2}€");
-        }
+        Debug.Log($"Balance set to {amount:F2}€");
     }
 
     private void GiveBTC(string[] args)
     {
-        if (args.Length < 1)
+        if (!TryGetFloat(args, 0, out float amount))
         {
-            ConsoleOutput.Instance.AddLine("givebtc <amount>");
+            Debug.Log("Invalid amount. Please enter a valid number.");
             return;
         }
 
-        if (float.TryParse(args[0], out float amount))
-        {
-            PlayerManager.Instance.AddBtc(amount);
-            PlayerManager.Instance.SavePlayerData();
+        PlayerManager.Instance.AddBtc(amount);
 
-            ConsoleOutput.Instance.AddLine($"Added {amount} BTC");
+        Debug.Log($"Added {amount} BTC");
+    }
+
+    private void MineBTC(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float amount))
+        {
+            Debug.Log("Invalid amount. Please enter a valid number.");
+            return;
         }
+
+        PlayerManager.Instance.MineBtc(amount);
+
+        Debug.Log($"Mined {amount} BTC");
+    }
+
+    private void DeductBTC(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float amount))
+        {
+            Debug.Log("Invalid amount. Please enter a valid number.");
+            return;
+        }
+
+        PlayerManager.Instance.DeductBtc(amount);
+
+        Debug.Log($"Deducted {amount} BTC");
     }
 
     private void GiveETH(string[] args)
     {
-        if (args.Length < 1)
+        if (!TryGetFloat(args, 0, out float amount))
         {
-            ConsoleOutput.Instance.AddLine("giveeth <amount>");
+            Debug.Log("Invalid amount. Please enter a valid number.");
             return;
         }
 
-        if (float.TryParse(args[0], out float amount))
-        {
-            PlayerManager.Instance.AddEth(amount);
-            PlayerManager.Instance.SavePlayerData();
+        PlayerManager.Instance.AddEth(amount);
 
-            ConsoleOutput.Instance.AddLine($"Added {amount} ETH");
+        Debug.Log($"Added {amount} ETH");
+    }
+
+    private void DeductETH(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float amount))
+        {
+            Debug.Log("Invalid amount. Please enter a valid number.");
+            return;
         }
+
+        PlayerManager.Instance.DeductEth(amount);
+
+        Debug.Log($"Deducted {amount} ETH");
+    }
+
+    private void MineETH(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float amount))
+        {
+            Debug.Log("Invalid amount. Please enter a valid number.");
+            return;
+        }
+
+        PlayerManager.Instance.MineEth(amount);
+
+        Debug.Log($"Mined {amount} ETH");
+    }
+
+    private void SetBtcPrice(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float price))
+        {
+            Debug.Log("Invalid price. Please enter a valid number.");
+            return;
+        }
+
+        CryptoSystem.Instance.SetBtcPrice(price);
+
+        Debug.Log($"Bitcoin price set to {price:F2}€");
+    }
+
+    private void AddBtcMiner(string[] args)
+    {
+        if (!TryGetInt(args, 0, out int count))
+        {
+            Debug.Log("Invalid count. Please enter a valid number.");
+            return;
+        }
+
+        CryptoSystem.Instance.SetBtcMinerCount(CryptoSystem.Instance.GetBtcMinerCount() + count);
+
+        Debug.Log($"Added {count} BTC mining rig(s)");
+    }
+
+    private void RemoveBtcMiner(string[] args)
+    {
+        if (!TryGetInt(args, 0, out int count))
+        {
+            Debug.Log("Invalid count. Please enter a valid number.");
+            return;
+        }
+
+        CryptoSystem.Instance.SetBtcMinerCount(CryptoSystem.Instance.GetBtcMinerCount() - count);
+
+        Debug.Log($"Removed {count} BTC mining rig(s)");
+    }
+
+    private void SetEthPrice(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float price))
+        {
+            Debug.Log("Invalid price. Please enter a valid number.");
+            return;
+        }
+
+        CryptoSystem.Instance.SetEthPrice(price);
+
+        Debug.Log($"Ethereum price set to {price:F2}€");
+    }
+
+    private void AddEthMiner(string[] args)
+    {
+        if (!TryGetInt(args, 0, out int count))
+        {
+            Debug.Log("Invalid count. Please enter a valid number.");
+            return;
+        }
+
+        CryptoSystem.Instance.SetEthMinerCount(CryptoSystem.Instance.GetEthMinerCount() + count);
+
+        Debug.Log($"Added {count} ETH mining rig(s)");
+    }
+
+    private void RemoveEthMiner(string[] args)
+    {
+        if (!TryGetInt(args, 0, out int count))
+        {
+            Debug.Log("Invalid count. Please enter a valid number.");
+            return;
+        }
+
+        CryptoSystem.Instance.SetEthMinerCount(CryptoSystem.Instance.GetEthMinerCount() - count);
+
+        Debug.Log($"Removed {count} ETH mining rig(s)");
+    }
+
+    private void TriggerRandomMarketEvent(string[] args)
+    {
+        CryptoSystem.Instance.GenerateMarketEvent();
+
+        Debug.Log("Random market event triggered.");
+    }
+
+    private void TriggerMarketEvent(string[] args)
+    {
+        if (args.Length == 0)
+        {
+            Debug.Log("Please specify a market event type.");
+            return;
+        }
+
+        string eventType = args[0].ToLower();
+
+        if (!MarketEvents.Contains(eventType))
+        {
+            Debug.Log(
+                $"Invalid market event.\n" +
+                $"Available events:\n" +
+                $"{string.Join(", ", MarketEvents)}"
+            );
+
+            return;
+        }
+
+        switch (eventType)
+        {
+            case "bull":
+                CryptoSystem.Instance.btcPrice *= 1.15f;
+                CryptoSystem.Instance.InvokeBtcPriceChanged();
+                CryptoSystem.Instance.currentMarketEvent = "BTC Bull Run [+15%]";
+                LogUtil.Event.Log(
+                    "BTC Bull Run",
+                    "BTC Price +15%"
+                );
+                break;
+
+            case "crash":
+                if (Globals.FloatUtil.GreaterOrEqual(CryptoSystem.Instance.btcPrice * 0.85f, CryptoSystem.Instance.btcMinMarketPrice))
+                {
+                    CryptoSystem.Instance.btcPrice *= 0.85f;
+                    CryptoSystem.Instance.InvokeBtcPriceChanged();
+                    CryptoSystem.Instance.currentMarketEvent = "BTC Crash [-15%]";
+                    LogUtil.Event.Log(
+                        "BTC Crash",
+                        "BTC Price -15%"
+                    );
+                }
+                break;
+
+            case "rally":
+                CryptoSystem.Instance.ethPrice *= 1.20f;
+                CryptoSystem.Instance.InvokeEthPriceChanged();
+                CryptoSystem.Instance.currentMarketEvent = "ETH Rally [+20%]";
+                LogUtil.Event.Log(
+                    "ETH Rally",
+                    "ETH Price +20%");
+                break;
+
+            case "correction":
+                if (Globals.FloatUtil.GreaterOrEqual(CryptoSystem.Instance.ethPrice * 0.80f, CryptoSystem.Instance.ethMinMarketPrice))
+                {
+                    CryptoSystem.Instance.ethPrice *= 0.80f;
+                    CryptoSystem.Instance.InvokeEthPriceChanged();
+                    CryptoSystem.Instance.currentMarketEvent = "ETH Correction [-20%]";
+                    LogUtil.Event.Log(
+                        "ETH Correction",
+                        "ETH Price -20%"
+                    );
+                }
+                break;
+
+            case "optimism":
+                CryptoSystem.Instance.btcPrice *= 1.05f;
+                CryptoSystem.Instance.InvokeBtcPriceChanged();
+                CryptoSystem.Instance.ethPrice *= 1.05f;
+                CryptoSystem.Instance.InvokeEthPriceChanged();
+                CryptoSystem.Instance.currentMarketEvent = "Market Optimism [+5%]";
+                LogUtil.Event.Log(
+                    "Market Optimism",
+                    "BTC & ETH Price +5%"
+                );
+                break;
+
+            case "btc_manipulation":
+                if (Globals.FloatUtil.GreaterOrEqual(CryptoSystem.Instance.btcPrice * 0.5f, CryptoSystem.Instance.btcMinMarketPrice))
+                {
+                    CryptoSystem.Instance.btcPrice *= 0.5f;
+                    CryptoSystem.Instance.InvokeBtcPriceChanged();
+                    CryptoSystem.Instance.currentMarketEvent = "BTC Manipulation [-100%]";
+                    LogUtil.Event.Log(
+                        "BTC Manipulation",
+                        "BTC Price -100%"
+                    );
+                }
+                break;
+
+            case "eth_manipulation":
+                if (Globals.FloatUtil.GreaterOrEqual(CryptoSystem.Instance.ethPrice * 0.5f, CryptoSystem.Instance.ethMinMarketPrice))
+                {
+                    CryptoSystem.Instance.ethPrice *= 0.5f;
+                    CryptoSystem.Instance.InvokeEthPriceChanged();
+                    CryptoSystem.Instance.currentMarketEvent = "ETH Manipulation [-100%]";
+                    LogUtil.Event.Log(
+                        "ETH Manipulation",
+                        "ETH Price -100%"
+                    );
+                }
+                break;
+
+            case "btc_insider_trading":
+                CryptoSystem.Instance.btcPrice *= 2.0f;
+                CryptoSystem.Instance.InvokeBtcPriceChanged();
+                CryptoSystem.Instance.currentMarketEvent = "BTC Insider Trading [+100%]";
+                LogUtil.Event.Log(
+                    "BTC Insider Trading",
+                    "BTC Price +100%"
+                );
+                break;
+
+            case "eth_insider_trading":
+                CryptoSystem.Instance.ethPrice *= 2.0f;
+                CryptoSystem.Instance.InvokeEthPriceChanged();
+                CryptoSystem.Instance.currentMarketEvent = "ETH Insider Trading [+100%]";
+                LogUtil.Event.Log(
+                    "ETH Insider Trading",
+                    "ETH Price +100%"
+                );
+                break;
+        }
+
+        Debug.Log($"Market event '{eventType}' triggered.");
+    }
+
+    private void GiveItem(string[] args)
+    {
+        if (args.Length == 0)
+        {
+            Debug.Log("Please specify an item ID.");
+            return;
+        }
+
+        string itemId = args[0];
+
+        string itemPath = $"ItemAssets/{itemId}";
+        ItemData item = Resources.Load<ItemData>(itemPath);
+
+        if (item == null)
+        {
+            Debug.Log($"Item with ID '{itemId}' not found.");
+            return;
+        }
+
+        InventoryManager.Instance.AddItemToInventory(item);
+        Debug.Log($"Added item '{item.name}' to inventory.");
+    }
+
+    private void ResetProgress(string[] args)
+    {
+        RequestConfirmation(
+            "Are you sure you want to reset your progress? This action cannot be undone.",
+            confirmed =>
+            {
+                if (confirmed)
+                {
+                    PlayerManager.Instance.ResetProgress();
+                    SceneManager.LoadScene(1);
+                    Debug.Log("Player progress has been reset.");
+                }
+                else
+                {
+                    Debug.Log("Reset progress canceled.");
+                }
+            });
     }
 
     private void LogMessage(string[] args)
@@ -301,7 +802,7 @@ public class Console : MonoBehaviour
         string text =
             string.Join(" ", args);
 
-        ConsoleOutput.Instance.AddLine(text);
+        Debug.Log(text);
     }
 
     #endregion
@@ -309,13 +810,6 @@ public class Console : MonoBehaviour
 
 // COMMAND IDEAS
 //caseopen 100
-//inventoryvalue
-//giveitem <id>
-//setbtcprice 50000
-//setethprice 3000
-//marketevent
-//minerbtc 10
-//minereth 25
 //autotrader 5
 //dailyclaim
 //giftclaim
