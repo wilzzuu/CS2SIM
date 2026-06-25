@@ -8,7 +8,7 @@ public class GiftManager : MonoBehaviour
     public static GiftManager Instance { get; private set; }
 
     [Header("Settings")]
-    [SerializeField] private int cooldownHours = 4;
+    [SerializeField] private int cooldownHours = 2;
 
     public float RewardAmount = 5f;
 
