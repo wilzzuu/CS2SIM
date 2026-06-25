@@ -90,7 +90,7 @@ public class CryptoManager : MonoBehaviour
         perHourText.text = _isBtcTab ? $"{_btcPerHour}/h" : $"{_ethPerHour}/h";
         minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.GetBtcMinerCount()}" : $"{CryptoSystem.Instance.GetEthMinerCount()}";
         string spriteName = _isBtcTab ? "BTC-860x860" : "ETH-860x860";
-        bigIcon.sprite = Resources.Load<Sprite>($"Images/GUI/{spriteName}");
+        bigIcon.sprite = Resources.Load<Sprite>($"Images/HighRes/{spriteName}");
         buySectionText.text = $"Buy {(_isBtcTab ? "BTC" : "ETH")}";
         sellSectionText.text = $"Sell {(_isBtcTab ? "BTC" : "ETH")}";
         cryptoAmountPlaceholder.text = $"Enter {(_isBtcTab ? "BTC" : "ETH")} Amount";
@@ -126,7 +126,7 @@ public class CryptoManager : MonoBehaviour
         perHourText.text = _isBtcTab ? $"{_btcPerHour}/h" : $"{_ethPerHour}/h";
         minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.GetBtcMinerCount()}" : $"{CryptoSystem.Instance.GetEthMinerCount()}";
         string spriteName = _isBtcTab ? "BTC-860x860" : "ETH-860x860"; 
-        bigIcon.sprite = Resources.Load<Sprite>($"Images/GUI/{spriteName}");
+        bigIcon.sprite = Resources.Load<Sprite>($"Images/HighRes/{spriteName}");
         minerPriceText.text = _isBtcTab ? "1 BTC" : "1 ETH";
 
         if (_isBtcTab)
