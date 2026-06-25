@@ -123,7 +123,7 @@ public class Console : MonoBehaviour
         // InventoryManager
         Register("giveitem", "Give an item by ID", "giveitem <item_id>", 1, GiveItem);
         Register("giverandomitem", "Give a random item", "giverandomitem", 0, GiveRandomItem);
-        Register("playroulette", "Give 12 random items from roulette", "playroulette", 1, GiveRouletteItems);
+        Register("playroulette", "Give 12 random items from roulette", "playroulette", 0, GiveRouletteItems);
 
         // SettingsManager
         Register("resetprogress", "Reset player progress", "resetprogress", 0, ResetProgress);
