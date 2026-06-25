@@ -2656,6 +2656,23 @@ MonoBehaviour:
       m_Action: Submit
       m_Flags: 0
     m_Flags: 0
+  autoCompleteAction:
+    m_Name: Auto Complete
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 45873034-3ab9-4b3f-9c03-9779aadeb0f7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 807c5cb6-2ff4-43b7-92e4-0f15e247647b
+      m_Path: <Keyboard>/tab
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Auto Complete
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &2048212932
 GameObject:
   m_ObjectHideFlags: 0

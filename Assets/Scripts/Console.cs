@@ -15,6 +15,9 @@ public class Console : MonoBehaviour
     private readonly Dictionary<string, ConsoleCommand> _commands =
         new Dictionary<string, ConsoleCommand>();
 
+    private int _autoIndex = 0;
+    private List<string> _autoMatches = new();
+
     private readonly List<string> _history =
         new List<string>();
 
@@ -139,6 +142,53 @@ public class Console : MonoBehaviour
         public string Usage;
         public int RequiredArgs;
         public Action<string[]> Action;
+    }
+
+    public List<string> GetAutocomplete(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return new List<string>();
+
+        input = input.ToLower();
+
+        return _commands.Keys
+            .Where(cmd =>
+                cmd.StartsWith(input) ||
+                cmd.Contains(input))
+            .OrderBy(cmd => cmd.Length)
+            .ToList();
+    }
+
+    public void AutoComplete()
+    {
+        string input = inputField.text;
+
+        _autoMatches = GetAutocomplete(input);
+
+        if (_autoMatches.Count == 0)
+            return;
+
+        if (_autoMatches.Count == 1)
+        {
+            inputField.text = _autoMatches[0] + " ";
+            inputField.caretPosition = inputField.text.Length;
+
+            _autoIndex = 0;
+            return;
+        }
+    
+        inputField.text = _autoMatches[_autoIndex];
+
+        inputField.caretPosition = inputField.text.Length;
+
+        ShowSuggestions(_autoMatches);
+    }
+
+    private void ShowSuggestions(List<string> matches)
+    {
+        ConsoleOutput.Instance.AddLine(
+            string.Join(", ", matches)
+        );
     }
 
     public void Execute(string commandLine)

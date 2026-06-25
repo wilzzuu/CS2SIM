@@ -7,7 +7,10 @@ public class ToggleConsole : MonoBehaviour
     public GameObject consoleUI;
     public InputAction toggleAction;
     public InputAction submitAction;
+    public InputAction autoCompleteAction;
+
     private System.Action<InputAction.CallbackContext> submitCallback;
+    private System.Action<InputAction.CallbackContext> autoCompleteCallback;
     
     private bool isToggleActive = false;
 
@@ -15,6 +18,7 @@ public class ToggleConsole : MonoBehaviour
     {
         toggleAction.Enable();
         submitAction.Enable();
+        autoCompleteAction.Enable();
         
         toggleAction.performed += OnTogglePerformed;
         submitCallback = context =>
@@ -25,6 +29,20 @@ public class ToggleConsole : MonoBehaviour
             }
         };
         submitAction.performed += submitCallback;
+
+        autoCompleteCallback = context =>
+        {
+            if (isToggleActive)
+            {
+                Console.Instance.AutoComplete();
+            }
+        };
+        autoCompleteAction.performed += autoCompleteCallback;
+    }
+
+    void Start()
+    {
+        Keyboard.current.SetIMEEnabled(false);
     }
 
     void OnDestroy()
@@ -33,9 +51,12 @@ public class ToggleConsole : MonoBehaviour
 
         if (submitCallback != null)
             submitAction.performed -= submitCallback;
+        if (autoCompleteCallback != null)
+            autoCompleteAction.performed -= autoCompleteCallback;
 
         toggleAction.Disable();
         submitAction.Disable();
+        autoCompleteAction.Disable();
     }
 
     void OnEnable()
