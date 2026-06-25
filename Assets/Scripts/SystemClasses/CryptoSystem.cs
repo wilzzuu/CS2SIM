@@ -141,6 +141,8 @@ public class CryptoSystem : MonoBehaviour
             else
             {
                 currentMarketEvent = "Stable Market";
+                nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
+                OnCurrentMarketEventChanged?.Invoke();
             }
         }
 
