@@ -26,7 +26,7 @@ public class Globals
 
     public static string GetFormattedDateTime(DateTime dateTime)
     {
-        return dateTime.ToString("dd'/'MM'/'yyyy @ HH':'mm':'ss");
+        return dateTime.ToString("dd'.'MM'.'yyyy @ HH':'mm':'ss");
     }
 
     public class FloatUtil
