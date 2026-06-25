@@ -33,7 +33,7 @@ public class CryptoSystem : MonoBehaviour
     private DateTime _nextMiningUpdate;
     private DateTime _nextMarketUpdate;
     private DateTime _nextMarketEvent;
-    public string currentMarketEvent = "No Event";
+    public string currentMarketEvent = "Stable Market";
 
     private string SaveFilePath
     {
@@ -137,7 +137,7 @@ public class CryptoSystem : MonoBehaviour
             }
             else
             {
-                currentMarketEvent = "No Event";
+                currentMarketEvent = "Stable Market";
             }
             OnCurrentMarketEventChanged?.Invoke();
         }
@@ -585,7 +585,7 @@ public class CryptoSystem : MonoBehaviour
                 );
                 break;
             default:
-                currentMarketEvent = "No Event";
+                currentMarketEvent = "Stable Market";
                 break;
         }
 
