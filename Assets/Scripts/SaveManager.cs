@@ -8,19 +8,19 @@ public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
 
-    private static string SaveFilePath
-    {
-        get
-        {
-            #if UNITY_EDITOR
-                return Path.Combine(Application.persistentDataPath, "EditorData");
-            #else
-                return Path.Combine(Application.persistentDataPath, "SaveData");
-            #endif
-        }
-    }
+    // private static string SaveFilePath
+    // {
+    //     get
+    //     {
+    //         #if UNITY_EDITOR
+    //             return Path.Combine(Application.persistentDataPath, "EditorData");
+    //         #else
+    //             return Path.Combine(Application.persistentDataPath, "SaveData");
+    //         #endif
+    //     }
+    // }
 
-    private static string SaveFileName = "save.cs2sim.json";
+    // private static string SaveFileName = "save.cs2sim.json";
 
     void Awake()
     {
