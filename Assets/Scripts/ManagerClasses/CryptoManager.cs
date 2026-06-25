@@ -28,6 +28,7 @@ public class CryptoManager : MonoBehaviour
     public TextMeshProUGUI euroOutputText;
     public TextMeshProUGUI priceDiffText;
     public TextMeshProUGUI marketEventText;
+    public TextMeshProUGUI marketEventTimeText;
 
     void Start()
     {
@@ -95,7 +96,7 @@ public class CryptoManager : MonoBehaviour
         sellSectionText.text = $"Sell {(_isBtcTab ? "BTC" : "ETH")}";
         cryptoAmountPlaceholder.text = $"Enter {(_isBtcTab ? "BTC" : "ETH")} Amount";
         euroAmountPlaceholder.text = "Enter Euro Amount";
-        marketEventText.text = CryptoSystem.Instance.currentMarketEvent;
+        UpdateMarketEventDisplay();
 
         if (_isBtcTab)
         {
@@ -148,6 +149,7 @@ public class CryptoManager : MonoBehaviour
     private void UpdateMarketEventDisplay()
     {
         marketEventText.text = CryptoSystem.Instance.currentMarketEvent;
+        marketEventTimeText.text = $"Updated: {CryptoSystem.Instance.currentMarketEventTime.ToString("dd'/'MM'/'yyyy @ HH':'mm':'ss")}";
     }
 
     #region BUY / SELL
