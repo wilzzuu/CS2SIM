@@ -11,7 +11,6 @@ public class CoinFlipManager : MonoBehaviour
     [SerializeField] private Sprite headsSprite;
     [SerializeField] private Sprite tailsSprite;
 
-    [SerializeField] private TMP_Text faceNameText;
     [SerializeField] private TMP_Text resultText;
 
     [SerializeField] private TMP_InputField betInput;
@@ -114,12 +113,10 @@ public class CoinFlipManager : MonoBehaviour
         {
             case CoinFace.Heads:
                 coinImage.sprite = headsSprite;
-                faceNameText.text = "HEADS";
                 break;
 
             case CoinFace.Tails:
                 coinImage.sprite = tailsSprite;
-                faceNameText.text = "TAILS";
                 break;
         }
 
