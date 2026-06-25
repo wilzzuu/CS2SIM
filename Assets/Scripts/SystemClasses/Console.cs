@@ -121,7 +121,18 @@ public class Console : MonoBehaviour
         Register("addethminer", "Add Ethereum miner", "addethminer <count>", 1, AddEthMiner);
         Register("removeethminer", "Remove Ethereum miner", "removeethminer <count>", 1, RemoveEthMiner);
         Register("randomcryptoevent", "Trigger a random crypto market event", "randomcryptoevent", 0, TriggerRandomCryptoEvent);
-        Register("cryptoevent", "Trigger a crypto market event", "cryptoevent <event>", 1, TriggerCryptoEvent);
+        Register("cryptoevent", "Trigger a crypto market event", "cryptoevent <event>", 1, TriggerCryptoEvent, new[]
+        {
+            "bull",
+            "crash",
+            "rally",
+            "correction",
+            "optimism",
+            "btc_manipulation",
+            "eth_manipulation",
+            "btc_insider_trading",
+            "eth_insider_trading"
+        });
         Register("resetcryptoprices", "Reset crypto prices to default", "resetcryptoprices", 0, ResetCryptoPrices);
         Register("resetbtcprice", "Reset Bitcoin price to default", "resetbtcprice", 0, ResetBtcPrice);
         Register("resetethprice", "Reset Ethereum price to default", "resetethprice", 0, ResetEthPrice);
@@ -145,6 +156,7 @@ public class Console : MonoBehaviour
         public string Usage;
         public int RequiredArgs;
         public Action<string[]> Action;
+        public string[] ValidArgs;
     }
 
     public List<string> GetAutocomplete(string input)
@@ -301,7 +313,8 @@ public class Console : MonoBehaviour
         string description,
         string usage,
         int requiredArgs,
-        Action<string[]> action)
+        Action<string[]> action,
+        string[] ValidArgs = null)
     {
         _commands[command.ToLower()] = new ConsoleCommand
         {
@@ -310,6 +323,7 @@ public class Console : MonoBehaviour
             Usage = usage,
             RequiredArgs = requiredArgs,
             Action = action,
+            ValidArgs = ValidArgs
         };
     }
     
@@ -471,6 +485,10 @@ public class Console : MonoBehaviour
                 Debug.Log($"Command: {cmd.Name}");
                 Debug.Log($"Usage: {cmd.Usage}");
                 Debug.Log($"Description: {cmd.Description}");
+                if (cmd.ValidArgs != null)
+                {
+                    Debug.Log($"Valid Arguments: {string.Join(", ", cmd.ValidArgs)}");
+                }
             }
 
             return;
