@@ -123,7 +123,7 @@ public class CryptoSystem : MonoBehaviour
             if (isMarketEvent)
             {
                 GenerateMarketEvent();
-                _nextMarketEvent = DateTime.UtcNow.AddHours(1);
+                _nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
             }
             else
             {
