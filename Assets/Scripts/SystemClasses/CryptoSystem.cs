@@ -362,6 +362,8 @@ public class CryptoSystem : MonoBehaviour
         public int btcMiners;
         public int ethMiners;
 
+        public string currentMarketEvent;
+
         public string lastMiningUpdate;
         public string nextMiningUpdate;
         public string nextMarketUpdate;
@@ -383,6 +385,8 @@ public class CryptoSystem : MonoBehaviour
 
             btcMiners = _btcMiners,
             ethMiners = _ethMiners,
+
+            currentMarketEvent = currentMarketEvent,
 
             lastMiningUpdate =
                 _lastMiningUpdate.ToString("O"),
@@ -411,6 +415,7 @@ public class CryptoSystem : MonoBehaviour
             _ethPerHour = 0;
             _btcMiners = 0;
             _ethMiners = 0;
+            currentMarketEvent = "Stable Market";
             _lastMiningUpdate = DateTime.UtcNow;
             _nextMiningUpdate = DateTime.UtcNow;
             _nextMarketUpdate = DateTime.UtcNow;
@@ -436,6 +441,8 @@ public class CryptoSystem : MonoBehaviour
 
         _btcMiners = data.btcMiners;
         _ethMiners = data.ethMiners;
+
+        currentMarketEvent = data.currentMarketEvent;
 
         _lastMiningUpdate =
             DateTime.Parse(
