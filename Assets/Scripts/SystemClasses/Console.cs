@@ -744,7 +744,7 @@ public class Console : MonoBehaviour
     {
         CryptoSystem.Instance.GenerateMarketEvent();
 
-        Debug.Log("Random crypto market event triggered.");
+        Debug.Log($"Random crypto market event triggered: {CryptoSystem.Instance.currentMarketEvent}");
     }
 
     private void TriggerCryptoEvent(string[] args)
