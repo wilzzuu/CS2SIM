@@ -368,7 +368,7 @@ public class Console : MonoBehaviour
         if (string.IsNullOrEmpty(command))
             return;
 
-        Debug.Log($"\n[{DateTime.UtcNow.ToString("dd'/'MM'/'yyyy @ HH':'mm':'ss")}] :: {command}");
+        Debug.Log($"\n[{Globals.GetFormattedDateTime(DateTime.UtcNow)}] :: {command}");
         LogUtil.Console.Log(
             command,
             null,

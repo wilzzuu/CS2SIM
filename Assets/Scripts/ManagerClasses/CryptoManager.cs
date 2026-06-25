@@ -149,7 +149,7 @@ public class CryptoManager : MonoBehaviour
     private void UpdateMarketEventDisplay()
     {
         marketEventText.text = CryptoSystem.Instance.currentMarketEvent;
-        marketEventTimeText.text = $"Next Event: {Globals.GetFormattedUtcNow(CryptoSystem.Instance.nextMarketEvent.ToLocalTime())}";
+        marketEventTimeText.text = $"Next Event: {Globals.GetFormattedDateTime(CryptoSystem.Instance.nextMarketEvent.ToLocalTime())}";
     }
 
     #region BUY / SELL
