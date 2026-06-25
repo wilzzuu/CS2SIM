@@ -444,9 +444,9 @@ public class CryptoSystem : MonoBehaviour
             _ethMiners = 0;
             currentMarketEvent = "Stable Market";
             _lastMiningUpdate = DateTime.UtcNow;
-            _nextMiningUpdate = DateTime.UtcNow;
-            _nextMarketUpdate = DateTime.UtcNow;
-            nextMarketEvent = DateTime.UtcNow;
+            _nextMiningUpdate = DateTime.UtcNow.AddHours(1);
+            _nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
+            nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
 
             SaveData();
 
