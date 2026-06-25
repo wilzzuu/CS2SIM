@@ -60,7 +60,7 @@ public class DailyRewardUI : MonoBehaviour
                 rewards.Find(r => r.day == slot.dayIndex);
 
             if (reward != null)
-                slot.rewardText.text = $"{reward.rewardAmount:F1}€";
+                slot.rewardText.text = $"{reward.rewardAmount}€";
 
             if (slot.dayIndex < DailyRewardSystem.Instance.currentDay)
             {
