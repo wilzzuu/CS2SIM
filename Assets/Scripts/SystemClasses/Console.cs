@@ -846,6 +846,7 @@ public class Console : MonoBehaviour
                 break;
         }
 
+        CryptoSystem.Instance.InvokeCryptoEventChanged();
         Debug.Log($"Market event '{eventType}' triggered.");
     }
 

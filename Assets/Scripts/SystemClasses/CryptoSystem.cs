@@ -92,6 +92,12 @@ public class CryptoSystem : MonoBehaviour
         OnEthPriceChanged?.Invoke();
     }
 
+    public void InvokeCryptoEventChanged()
+    {
+        OnCurrentMarketEventChanged?.Invoke();
+        nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
+    }
+
     private IEnumerator UpdateTimer()
     {
         while (true)
@@ -131,13 +137,11 @@ public class CryptoSystem : MonoBehaviour
             if (isMarketEvent)
             {
                 GenerateMarketEvent();
-                nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
             }
             else
             {
                 currentMarketEvent = "Stable Market";
             }
-            OnCurrentMarketEventChanged?.Invoke();
         }
 
         SaveData();
@@ -623,7 +627,9 @@ public class CryptoSystem : MonoBehaviour
                 currentMarketEvent = "Stable Market";
                 break;
         }
-
+        
+        nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
+        OnCurrentMarketEventChanged?.Invoke();
         SaveData();
     }
 
