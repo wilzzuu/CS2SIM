@@ -1,20 +1,41 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Console : MonoBehaviour
 {
     public static Console Instance;
 
+    [SerializeField]
+    public TMP_InputField inputField;
+
     private readonly Dictionary<string, Action<string[]>> _commands =
         new Dictionary<string, Action<string[]>>();
 
-    private void Awake()
+    private readonly List<string> _history =
+        new List<string>();
+
+    private int _historyIndex = -1;
+    
+    private const string HistoryKey = "ConsoleHistory";
+
+    void Start()
+    {
+        LoadHistory();
+    }
+
+    void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
+        {
             Destroy(gameObject);
+        }
 
         RegisterCommands();
     }
@@ -59,14 +80,12 @@ public class Console : MonoBehaviour
             }
             catch (Exception ex)
             {
-                Debug.LogError(
-                    $"Command '{command}' failed:\n{ex}");
+                ConsoleOutput.Instance.AddLine($"Command '{command}' failed:\n{ex}");
             }
         }
         else
         {
-            Debug.LogWarning(
-                $"Unknown command: {command}");
+            ConsoleOutput.Instance.AddLine($"Unknown command: {command}");
         }
     }
 
@@ -77,13 +96,136 @@ public class Console : MonoBehaviour
         _commands[command.ToLower()] = action;
     }
 
+    
+    private void Update()
+    {
+        if (!inputField.isFocused)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Submit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            PreviousCommand();
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            NextCommand();
+        }
+    }
+
+    public void Submit()
+    {
+        string command = inputField.text.Trim();
+
+        if (string.IsNullOrEmpty(command))
+            return;
+
+        ConsoleOutput.Instance.AddLine($"> {command}");
+
+        Execute(command);
+
+        AddToHistory(command);
+
+        inputField.text = "";
+        inputField.ActivateInputField();
+    }
+
+    private void AddToHistory(string command)
+    {
+        if (_history.Count == 0 ||
+            _history[_history.Count - 1] != command)
+        {
+            _history.Add(command);
+        }
+
+        _historyIndex = _history.Count;
+        SaveHistory();
+    }
+
+    private void PreviousCommand()
+    {
+        if (_history.Count == 0)
+            return;
+
+        _historyIndex--;
+
+        if (_historyIndex < 0)
+            _historyIndex = 0;
+
+        inputField.text = _history[_historyIndex];
+
+        inputField.caretPosition =
+            inputField.text.Length;
+    }
+
+    private void NextCommand()
+    {
+        if (_history.Count == 0)
+            return;
+
+        _historyIndex++;
+
+        if (_historyIndex >= _history.Count)
+        {
+            _historyIndex = _history.Count;
+            inputField.text = "";
+            return;
+        }
+
+        inputField.text = _history[_historyIndex];
+
+        inputField.caretPosition =
+            inputField.text.Length;
+    }
+
+    [System.Serializable]
+    public class HistoryWrapper
+    {
+        public List<string> commands =
+            new List<string>();
+    }
+
+    private void SaveHistory()
+    {
+        string json =
+            JsonUtility.ToJson(
+                new HistoryWrapper
+                {
+                    commands = _history
+                });
+
+        PlayerPrefs.SetString(
+            HistoryKey,
+            json);
+    }
+
+    private void LoadHistory()
+    {
+        if (!PlayerPrefs.HasKey(HistoryKey))
+            return;
+
+        string json =
+            PlayerPrefs.GetString(HistoryKey);
+
+        HistoryWrapper wrapper =
+            JsonUtility.FromJson<HistoryWrapper>(json);
+
+        _history.Clear();
+        _history.AddRange(wrapper.commands);
+    }
+
     #region Built-In Commands
 
     private void Help(string[] args)
     {
         foreach (var command in _commands.Keys)
         {
-            Debug.Log(command);
+            ConsoleOutput.Instance.AddLine(command);
         }
     }
 
@@ -91,7 +233,7 @@ public class Console : MonoBehaviour
     {
         if (args.Length < 1)
         {
-            Debug.Log("money <amount>");
+            ConsoleOutput.Instance.AddLine("money <amount>");
             return;
         }
 
@@ -99,7 +241,7 @@ public class Console : MonoBehaviour
         {
             PlayerManager.Instance.AddCurrency(amount);
 
-            Debug.Log($"Added {amount:F2}€");
+            ConsoleOutput.Instance.AddLine($"Added {amount:F2}€");
         }
     }
 
@@ -107,7 +249,7 @@ public class Console : MonoBehaviour
     {
         if (args.Length < 1)
         {
-            Debug.Log("setmoney <amount>");
+            ConsoleOutput.Instance.AddLine("setmoney <amount>");
             return;
         }
 
@@ -116,7 +258,7 @@ public class Console : MonoBehaviour
             PlayerManager.Instance.player.balance = amount;
             PlayerManager.Instance.SavePlayerData();
 
-            Debug.Log($"Balance set to {amount:F2}€");
+            ConsoleOutput.Instance.AddLine($"Balance set to {amount:F2}€");
         }
     }
 
@@ -124,7 +266,7 @@ public class Console : MonoBehaviour
     {
         if (args.Length < 1)
         {
-            Debug.Log("givebtc <amount>");
+            ConsoleOutput.Instance.AddLine("givebtc <amount>");
             return;
         }
 
@@ -133,7 +275,7 @@ public class Console : MonoBehaviour
             PlayerManager.Instance.AddBtc(amount);
             PlayerManager.Instance.SavePlayerData();
 
-            Debug.Log($"Added {amount} BTC");
+            ConsoleOutput.Instance.AddLine($"Added {amount} BTC");
         }
     }
 
@@ -141,7 +283,7 @@ public class Console : MonoBehaviour
     {
         if (args.Length < 1)
         {
-            Debug.Log("giveeth <amount>");
+            ConsoleOutput.Instance.AddLine("giveeth <amount>");
             return;
         }
 
@@ -150,7 +292,7 @@ public class Console : MonoBehaviour
             PlayerManager.Instance.AddEth(amount);
             PlayerManager.Instance.SavePlayerData();
 
-            Debug.Log($"Added {amount} ETH");
+            ConsoleOutput.Instance.AddLine($"Added {amount} ETH");
         }
     }
 
@@ -159,8 +301,22 @@ public class Console : MonoBehaviour
         string text =
             string.Join(" ", args);
 
-        Debug.Log(text);
+        ConsoleOutput.Instance.AddLine(text);
     }
 
     #endregion
 }
+
+// COMMAND IDEAS
+//caseopen 100
+//inventoryvalue
+//giveitem <id>
+//setbtcprice 50000
+//setethprice 3000
+//marketevent
+//minerbtc 10
+//minereth 25
+//autotrader 5
+//dailyclaim
+//giftclaim
+//achievementunlock all
