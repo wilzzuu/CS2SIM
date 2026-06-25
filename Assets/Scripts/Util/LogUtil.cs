@@ -35,7 +35,7 @@ public static class LogUtil
                 }
 
                 string timestamp =
-                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    Globals.GetFormattedDateTime(DateTime.UtcNow);
 
                 string sign =
                     amount >= 0 ? "+" : "";
@@ -79,7 +79,7 @@ public static class LogUtil
                 }
 
                 string timestamp =
-                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    Globals.GetFormattedDateTime(DateTime.UtcNow);
 
                 string sign =
                     cryptoAmount >= 0 ? "+" : "";
@@ -127,7 +127,7 @@ public static class LogUtil
                 }
 
                 string timestamp =
-                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    Globals.GetFormattedDateTime(DateTime.UtcNow);
 
                 string entry =
                     $"[{timestamp}] " +
@@ -168,7 +168,7 @@ public static class LogUtil
                 }
 
                 string timestamp =
-                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    Globals.GetFormattedDateTime(DateTime.UtcNow);
 
                 string entry =
                     $"[{timestamp}] " +
@@ -200,7 +200,7 @@ public static class LogUtil
 
     public static string GetLogPath(string _loggerName)
     {
-        string LogFile = Path.Combine(LogDirectory, $"{_loggerName}_{DateTime.Now:yyyy-MM-dd}.txt");
+        string LogFile = Path.Combine(LogDirectory, $"{_loggerName}_{Globals.GetFormattedDateTime(DateTime.UtcNow).Replace("/", "-").Replace(" ", "_")}.txt");
         return LogFile;
     }
 }
