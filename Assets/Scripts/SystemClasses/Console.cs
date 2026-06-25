@@ -210,6 +210,12 @@ public class Console : MonoBehaviour
 
                 callback.Invoke(true);
 
+                LogUtil.Console.Log(
+                    response,
+                    null,
+                    $"User confirmed: {_pendingPrompt}"
+                );
+
                 return;
             }
 
@@ -223,11 +229,22 @@ public class Console : MonoBehaviour
 
                 callback.Invoke(false);
 
+                Debug.Log("Confirmation canceled.");
+                LogUtil.Console.Log(
+                    response,
+                    null,
+                    $"User canceled: {_pendingPrompt}"
+                );
+
                 return;
             }
 
+            string message = "Invalid response. Please enter 'confirm' or 'cancel'.";
+            Debug.Log(message);
             LogUtil.Console.Log(
-                "Please enter confirm or cancel."
+                response,
+                message,
+                "Invalid response to confirmation prompt."
             );
 
             return;
@@ -260,7 +277,11 @@ public class Console : MonoBehaviour
                         $"Usage: {consoleCommand.Usage}";
 
                     Debug.Log(message);
-                    LogUtil.Console.Log(message);
+                    LogUtil.Console.Log(
+                        command,
+                        message,
+                        "Insufficient arguments provided."
+                    );
                     return;
                 }
 
@@ -268,17 +289,21 @@ public class Console : MonoBehaviour
             }
             catch (Exception ex)
             {
-                Debug.Log($"Command '{command}' failed:\n{ex}");
+                string message = $"Command '{command}' failed:\n{ex}";
+                Debug.Log(message);
                 LogUtil.Console.Log(
-                    $"Command '{command}' failed:\n{ex}"
+                    command,
+                    message
                 );
             }
         }
         else
         {
-            Debug.Log($"Unknown command: {command}");
+            string message = $"Unknown command: {command}";
+            Debug.Log(message);
             LogUtil.Console.Log(
-                $"Unknown command: {command}"
+                command,
+                message
             );
         }
     }
@@ -291,6 +316,7 @@ public class Console : MonoBehaviour
         _pendingConfirmation = callback;
 
         LogUtil.Console.Log(
+            "SYSTEM PROMPT",
             $"{prompt} (confirm/cancel)"
         );
     }
@@ -343,7 +369,11 @@ public class Console : MonoBehaviour
             return;
 
         Debug.Log($"\n[{DateTime.UtcNow.ToString("dd'/'MM'/'yyyy @ HH':'mm':'ss")}] :: {command}");
-        LogUtil.Console.Log(command);
+        LogUtil.Console.Log(
+            command,
+            null,
+            "User submitted command"
+        );
 
         Execute(command);
 
