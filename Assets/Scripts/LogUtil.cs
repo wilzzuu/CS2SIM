@@ -153,6 +153,45 @@ public static class LogUtil
         }
     }
 
+    public static class Console
+    {
+        public static void Log(
+            string command,
+            string details = "")
+        {
+            try
+            {
+                if (!Directory.Exists(LogDirectory))
+                {
+                    Directory.CreateDirectory(LogDirectory);
+                }
+
+                string timestamp =
+                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                string entry =
+                    $"[{timestamp}] " +
+                    $"COMMAND={command}";
+
+                if (!string.IsNullOrWhiteSpace(details))
+                {
+                    entry += $" | DETAILS={details}";
+                }
+
+                File.AppendAllText(
+                    GetLogPath("console"),
+                    entry + Environment.NewLine
+                );
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(
+                    $"ConsoleLogger failed: {e.Message}"
+                );
+            }
+        }
+    }
+
     public static string GetLogPath(string _loggerName)
     {
         string LogFile = Path.Combine(LogDirectory, $"{_loggerName}_{DateTime.Now:yyyy-MM-dd}.txt");
