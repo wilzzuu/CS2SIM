@@ -96,14 +96,16 @@ public class Console : MonoBehaviour
         Register("help", "Display help information", "help", 0, Help);
 
         // PlayerManager
-        Register("addmoney", "Display current money", "addmoney <amount>", 1, AddMoney);
+        Register("addmoney", "Add money", "addmoney <amount>", 1, AddMoney);
         Register("deductmoney", "Deduct money", "deductmoney <amount>", 1, DeductMoney);
         Register("setmoney", "Set current money", "setmoney <amount>", 1, SetMoney);
 
+        Register("setbtc", "Set Bitcoin amount", "setbtc <amount>", 1, SetBtc);
         Register("givebtc", "Give Bitcoin", "givebtc <amount>", 1, GiveBTC);
         Register("deductbtc", "Deduct Bitcoin", "deductbtc <amount>", 1, DeductBTC);
         Register("minebtc", "Mine Bitcoin", "minebtc <amount>", 1, MineBTC);
 
+        Register("seteth", "Set Ethereum amount", "seteth <amount>", 1, SetEth);
         Register("giveeth", "Give Ethereum", "giveeth <amount>", 1, GiveETH);
         Register("deducteth", "Deduct Ethereum", "deducteth <amount>", 1, DeductETH);
         Register("mineeth", "Mine Ethereum", "mineeth <amount>", 1, MineETH);
@@ -115,11 +117,13 @@ public class Console : MonoBehaviour
         Register("setethprice", "Set Ethereum price", "setethprice <price>", 1, SetEthPrice);
         Register("addethminer", "Add Ethereum miner", "addethminer <count>", 1, AddEthMiner);
         Register("removeethminer", "Remove Ethereum miner", "removeethminer <count>", 1, RemoveEthMiner);
-        Register("randommarketevent", "Trigger a random market event", "randommarketevent", 0, TriggerRandomMarketEvent);
-        Register("marketevent", "Trigger a market event", "marketevent <event>", 1, TriggerMarketEvent);
+        Register("randomcryptoevent", "Trigger a random crypto market event", "randomcryptoevent", 0, TriggerRandomCryptoEvent);
+        Register("cryptoevent", "Trigger a crypto market event", "cryptoevent <event>", 1, TriggerCryptoEvent);
 
         // InventoryManager
-        Register("giveitem", "Give an item", "giveitem <item_id>", 1, GiveItem);
+        Register("giveitem", "Give an item by ID", "giveitem <item_id>", 1, GiveItem);
+        Register("giverandomitem", "Give a random item", "giverandomitem", 0, GiveRandomItem);
+        Register("playroulette", "Give 12 random items from roulette", "playroulette", 1, GiveRouletteItems);
 
         // SettingsManager
         Register("resetprogress", "Reset player progress", "resetprogress", 0, ResetProgress);
@@ -462,6 +466,19 @@ public class Console : MonoBehaviour
         Debug.Log($"Balance set to {amount:F2}€");
     }
 
+    private void SetBtc(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float amount))
+        {
+            Debug.Log("Invalid amount. Please enter a valid number.");
+            return;
+        }
+
+        PlayerManager.Instance.SetBtc(amount);
+
+        Debug.Log($"Bitcoin amount set to {amount:F8} BTC");
+    }
+
     private void GiveBTC(string[] args)
     {
         if (!TryGetFloat(args, 0, out float amount))
@@ -499,6 +516,19 @@ public class Console : MonoBehaviour
         PlayerManager.Instance.DeductBtc(amount);
 
         Debug.Log($"Deducted {amount} BTC");
+    }
+
+    private void SetEth(string[] args)
+    {
+        if (!TryGetFloat(args, 0, out float amount))
+        {
+            Debug.Log("Invalid amount. Please enter a valid number.");
+            return;
+        }
+
+        PlayerManager.Instance.SetEth(amount);
+
+        Debug.Log($"Ethereum amount set to {amount:F8} ETH");
     }
 
     private void GiveETH(string[] args)
@@ -618,18 +648,18 @@ public class Console : MonoBehaviour
         Debug.Log($"Removed {count} ETH mining rig(s)");
     }
 
-    private void TriggerRandomMarketEvent(string[] args)
+    private void TriggerRandomCryptoEvent(string[] args)
     {
         CryptoSystem.Instance.GenerateMarketEvent();
 
-        Debug.Log("Random market event triggered.");
+        Debug.Log("Random crypto market event triggered.");
     }
 
-    private void TriggerMarketEvent(string[] args)
+    private void TriggerCryptoEvent(string[] args)
     {
         if (args.Length == 0)
         {
-            Debug.Log("Please specify a market event type.");
+            Debug.Log("Please specify a crypto market event type.");
             return;
         }
 
@@ -638,7 +668,7 @@ public class Console : MonoBehaviour
         if (!MarketEvents.Contains(eventType))
         {
             Debug.Log(
-                $"Invalid market event.\n" +
+                $"Invalid crypto market event.\n" +
                 $"Available events:\n" +
                 $"{string.Join(", ", MarketEvents)}"
             );
@@ -776,6 +806,21 @@ public class Console : MonoBehaviour
 
         InventoryManager.Instance.AddItemToInventory(item);
         Debug.Log($"Added item '{item.name}' to inventory.");
+    }
+
+    private void GiveRandomItem(string[] args)
+    {
+        InventoryManager.Instance.AddRandomItemToInventory();
+        Debug.Log("Added a random item to inventory.");
+    }
+
+    private void GiveRouletteItems(string[] args)
+    {
+        for (int i = 0; i < 12; i++)
+        {
+            InventoryManager.Instance.AddRandomItemToInventory();
+        }
+        Debug.Log("Added 12 random items to inventory.");
     }
 
     private void ResetProgress(string[] args)
