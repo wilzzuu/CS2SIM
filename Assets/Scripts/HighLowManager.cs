@@ -146,7 +146,7 @@ public class HighLowManager : MonoBehaviour
         if (float.TryParse(betAmountInput.text, out _betAmount) && _betAmount > 0 &&
             _betAmount <= PlayerManager.Instance.GetPlayerBalance())
         {
-            PlayerManager.Instance.DeductCurrency(_betAmount);
+            PlayerManager.Instance.DeductMoney(_betAmount);
 
             LogUtil.Economy.LogEuro(
                 "PLAY_HIGHLOW",
@@ -252,7 +252,7 @@ public class HighLowManager : MonoBehaviour
     private void CashOut()
     {
         float winnings = _betAmount * _roundNumber * RoundMultiplier;
-        PlayerManager.Instance.AddCurrency(winnings);
+        PlayerManager.Instance.AddMoney(winnings);
 
         LogUtil.Economy.LogEuro(
             "CASHOUT_HIGHLOW",

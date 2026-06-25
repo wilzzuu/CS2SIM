@@ -191,7 +191,7 @@ public class CaseBattleManager : MonoBehaviour
         
         if (PlayerManager.Instance.GetPlayerBalance() >= casePrice)
         {
-            PlayerManager.Instance.DeductCurrency(casePrice);
+            PlayerManager.Instance.DeductMoney(casePrice);
 
             LogUtil.Economy.LogEuro(
                 "CASE_BATTLE",
@@ -401,13 +401,13 @@ public class CaseBattleManager : MonoBehaviour
             if (_playerTotalValue > _botTotalValue)
             {
                 float _totalGameValue = _playerTotalValue + _botTotalValue;
-                PlayerManager.Instance.AddCurrency(_totalGameValue);
+                PlayerManager.Instance.AddMoney(_totalGameValue);
             }
             else if (Mathf.Approximately(_playerTotalValue, _botTotalValue))
             {
                 playerWinsText.text = "Tie!";
                 botWinsText.text = "Tie!";
-                PlayerManager.Instance.AddCurrency(casePrice);
+                PlayerManager.Instance.AddMoney(casePrice);
             }
         }
         else if (gameModeDropdown.options[gameModeDropdown.value].text == "Lower Wins")
@@ -418,13 +418,13 @@ public class CaseBattleManager : MonoBehaviour
             if (_playerTotalValue < _botTotalValue)
             {
                 float _totalGameValue = _playerTotalValue + _botTotalValue;
-                PlayerManager.Instance.AddCurrency(_totalGameValue);
+                PlayerManager.Instance.AddMoney(_totalGameValue);
             }
             else if (Mathf.Approximately(_playerTotalValue, _botTotalValue))
             {
                 playerWinsText.text = "Tie!";
                 botWinsText.text = "Tie!";
-                PlayerManager.Instance.AddCurrency(casePrice);
+                PlayerManager.Instance.AddMoney(casePrice);
             }
         }
     

@@ -63,7 +63,7 @@ public class BankManager : MonoBehaviour
         if (PlayerManager.Instance.GetPlayerBalance() < amount)
             return false;
 
-        PlayerManager.Instance.DeductCurrency(amount);
+        PlayerManager.Instance.DeductMoney(amount);
 
         bankBalance += amount;
 
@@ -79,7 +79,7 @@ public class BankManager : MonoBehaviour
 
         bankBalance -= amount;
 
-        PlayerManager.Instance.AddCurrency(amount);
+        PlayerManager.Instance.AddMoney(amount);
 
         SaveData();
 
@@ -133,7 +133,7 @@ public class BankManager : MonoBehaviour
 
         hasLoan = true;
 
-        PlayerManager.Instance.AddCurrency(amount);
+        PlayerManager.Instance.AddMoney(amount);
 
         LogUtil.Economy.LogEuro(
             "Loan Taken",
@@ -167,7 +167,7 @@ public class BankManager : MonoBehaviour
                 PlayerManager.Instance.GetPlayerBalance(),
                 remaining);
 
-        PlayerManager.Instance.DeductCurrency(walletUsed);
+        PlayerManager.Instance.DeductMoney(walletUsed);
 
         remaining -= walletUsed;
 

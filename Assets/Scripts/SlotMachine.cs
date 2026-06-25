@@ -27,7 +27,7 @@ public class SlotMachine : MonoBehaviour
             return false;
         }
 
-        PlayerManager.Instance.DeductCurrency(spinCost);
+        PlayerManager.Instance.DeductMoney(spinCost);
 
         LastResult = GenerateResult();
 

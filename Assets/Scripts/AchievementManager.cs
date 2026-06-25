@@ -103,7 +103,7 @@ public class AchievementManager : MonoBehaviour
 
         progress.rewardClaimed = true;
 
-        PlayerManager.Instance.AddCurrency(
+        PlayerManager.Instance.AddMoney(
             achievement.reward);
 
         SaveData();

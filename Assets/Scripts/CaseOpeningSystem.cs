@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Random = UnityEngine.Random;
-using System.Text.RegularExpressions;
 
 public class CaseOpening : MonoBehaviour
 {
@@ -150,7 +149,7 @@ public class CaseOpening : MonoBehaviour
 
         if (Globals.FloatUtil.GreaterOrEqual(PlayerManager.Instance.GetPlayerBalance(), _selectedCaseData.price + keyPrice))
         {
-            PlayerManager.Instance.DeductCurrency(_selectedCaseData.price + keyPrice);
+            PlayerManager.Instance.DeductMoney(_selectedCaseData.price + keyPrice);
 
             LogUtil.Economy.LogEuro(
                 "OPEN_CASE",

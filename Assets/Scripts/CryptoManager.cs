@@ -164,7 +164,7 @@ public class CryptoManager : MonoBehaviour
             float cryptoValue = (float)euroAmount / (_isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice);
             if (Globals.FloatUtil.GreaterOrEqual(PlayerManager.Instance.GetPlayerBalance(), cryptoValue))
             {
-                PlayerManager.Instance.DeductCurrency(euroAmount);
+                PlayerManager.Instance.DeductMoney(euroAmount);
                 if (_isBtcTab)
                 {
                     PlayerManager.Instance.AddBtc(cryptoValue);
@@ -192,7 +192,7 @@ public class CryptoManager : MonoBehaviour
             float euroValue = (float)cryptoAmount * cryptoPrice;
             if (Globals.FloatUtil.GreaterOrEqual(cryptoOwned, cryptoAmount))
             {
-                PlayerManager.Instance.AddCurrency(euroValue);
+                PlayerManager.Instance.AddMoney(euroValue);
                 if (_isBtcTab)
                 {
                     PlayerManager.Instance.DeductBtc(cryptoAmount);
@@ -261,7 +261,7 @@ public class CryptoManager : MonoBehaviour
         if (euroAmount > _playerBal)
             return false;
 
-        PlayerManager.Instance.DeductCurrency(euroAmount);
+        PlayerManager.Instance.DeductMoney(euroAmount);
 
         PlayerManager.Instance.AddBtc(euroAmount / CryptoSystem.Instance.btcPrice);
 
@@ -276,7 +276,7 @@ public class CryptoManager : MonoBehaviour
         if (euroAmount > _playerBal)
             return false;
 
-        PlayerManager.Instance.DeductCurrency(euroAmount);
+        PlayerManager.Instance.DeductMoney(euroAmount);
 
         PlayerManager.Instance.AddEth(euroAmount / CryptoSystem.Instance.ethPrice);
 
@@ -294,7 +294,7 @@ public class CryptoManager : MonoBehaviour
         PlayerManager.Instance.DeductBtc(btcAmount);
 
         float euroAmount = btcAmount * CryptoSystem.Instance.btcPrice;
-        PlayerManager.Instance.AddCurrency(euroAmount);
+        PlayerManager.Instance.AddMoney(euroAmount);
 
         UpdateExchangeUI();
 
@@ -309,7 +309,7 @@ public class CryptoManager : MonoBehaviour
         PlayerManager.Instance.DeductEth(ethAmount);
 
         float euroAmount = ethAmount * CryptoSystem.Instance.ethPrice;
-        PlayerManager.Instance.AddCurrency(euroAmount);
+        PlayerManager.Instance.AddMoney(euroAmount);
 
         UpdateExchangeUI();
 

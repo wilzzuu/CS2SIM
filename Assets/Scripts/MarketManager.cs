@@ -419,7 +419,7 @@ public class MarketManager : MonoBehaviour
         float purchasePrice = item.price * Globals.MarketBuyPriceModifier;
         if (PlayerManager.Instance.GetPlayerBalance() >= purchasePrice)
         {
-            PlayerManager.Instance.DeductCurrency(purchasePrice);
+            PlayerManager.Instance.DeductMoney(purchasePrice);
 
             LogUtil.Economy.LogEuro(
                 "MARKET_PURCHASE",
@@ -446,7 +446,7 @@ public class MarketManager : MonoBehaviour
         if (_items.Count > 0)
         {
             InventoryManager.Instance.ClearInventory(false);
-            PlayerManager.Instance.AddCurrency(inventoryValue);
+            PlayerManager.Instance.AddMoney(inventoryValue);
             
             foreach (ItemData item in _items)
             {
@@ -469,7 +469,7 @@ public class MarketManager : MonoBehaviour
         {
             InventoryManager.Instance.RemoveItemFromInventory(item);
             LoadInventoryItems();
-            PlayerManager.Instance.AddCurrency(sellingPrice);
+            PlayerManager.Instance.AddMoney(sellingPrice);
 
             LogUtil.Economy.LogEuro(
                 "MARKET_SALE",

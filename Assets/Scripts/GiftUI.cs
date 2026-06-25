@@ -49,7 +49,7 @@ public class GiftUI : MonoBehaviour
     private void GiveReward()
     {
         float rewardAmount = GiftManager.Instance.RewardAmount;
-        PlayerManager.Instance.AddCurrency(rewardAmount);
+        PlayerManager.Instance.AddMoney(rewardAmount);
 
         LogUtil.Economy.LogEuro(
             "CLAIM_GIFT",

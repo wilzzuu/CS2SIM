@@ -108,11 +108,11 @@ public class InvestingManager : MonoBehaviour
         float totalCost = stock.currentPrice * quantity;
         if (PlayerManager.Instance.GetPlayerBalance() < totalCost)
         {
-            Debug.Log("Not enough currency to buy stocks.");
+            Debug.Log("Not enough money to buy stocks.");
             return;
         }
 
-        PlayerManager.Instance.DeductCurrency(totalCost);
+        PlayerManager.Instance.DeductMoney(totalCost);
 
         var portfolioEntry = _portfolio.FirstOrDefault(e => e.stockID == stockID);
         if (portfolioEntry != null)
@@ -143,7 +143,7 @@ public class InvestingManager : MonoBehaviour
         float totalValue = stock.currentPrice * quantity;
 
         portfolioEntry.quantityOwned -= quantity;
-        PlayerManager.Instance.AddCurrency(totalValue);
+        PlayerManager.Instance.AddMoney(totalValue);
 
         if (portfolioEntry.quantityOwned == 0)
         {

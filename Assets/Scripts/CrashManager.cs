@@ -62,7 +62,7 @@ public class CrashManager : MonoBehaviour
         }
         if (float.TryParse(_betText, out _betAmount) && _betAmount > 0 && _betAmount <= PlayerManager.Instance.GetPlayerBalance())
         {
-            PlayerManager.Instance.DeductCurrency(_betAmount);
+            PlayerManager.Instance.DeductMoney(_betAmount);
 
             LogUtil.Economy.LogEuro(
                 "PLAY_CRASH",
@@ -125,7 +125,7 @@ public class CrashManager : MonoBehaviour
         if (_isGameRunning)
         {
             float winnings = _betAmount * _currentMultiplier;
-            PlayerManager.Instance.AddCurrency(winnings);
+            PlayerManager.Instance.AddMoney(winnings);
 
             LogUtil.Economy.LogEuro(
                 "WIN_CRASH",

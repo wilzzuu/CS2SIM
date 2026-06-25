@@ -113,7 +113,7 @@ public class DailyRewardSystem : MonoBehaviour
         }
         else
         {
-            PlayerManager.Instance.AddCurrency(amount);
+            PlayerManager.Instance.AddMoney(amount);
         
             LogUtil.Economy.LogEuro(
                 "CLAIM_DAILY",

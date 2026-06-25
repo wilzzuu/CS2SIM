@@ -75,7 +75,7 @@ public class CoinFlipManager : MonoBehaviour
             return;
         }
 
-        PlayerManager.Instance.DeductCurrency(bet);
+        PlayerManager.Instance.DeductMoney(bet);
 
         CoinFace outcome = (Random.value < 0.5f)
             ? CoinFace.Heads
@@ -96,7 +96,7 @@ public class CoinFlipManager : MonoBehaviour
         if (win)
         {
             float payout = bet * 2f;
-            PlayerManager.Instance.AddCurrency(payout);
+            PlayerManager.Instance.AddMoney(payout);
 
             resultText.text =
                 $"WIN! +{payout:F2}€";
