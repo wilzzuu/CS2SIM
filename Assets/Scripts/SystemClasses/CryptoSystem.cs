@@ -32,8 +32,7 @@ public class CryptoSystem : MonoBehaviour
     private DateTime _lastMiningUpdate;
     private DateTime _nextMiningUpdate;
     private DateTime _nextMarketUpdate;
-    private DateTime _nextMarketEvent;
-    public DateTime currentMarketEventTime;
+    public DateTime nextMarketEvent;
     public string currentMarketEvent = "Stable Market";
 
     private string SaveFilePath
@@ -124,7 +123,7 @@ public class CryptoSystem : MonoBehaviour
         OnEthPriceChanged?.Invoke();
         _nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
 
-        TimeSpan remaining = _nextMarketEvent - DateTime.UtcNow;
+        TimeSpan remaining = nextMarketEvent - DateTime.UtcNow;
         bool canUpdate = remaining <= TimeSpan.Zero;
         if (canUpdate)
         {
@@ -132,15 +131,13 @@ public class CryptoSystem : MonoBehaviour
             if (isMarketEvent)
             {
                 GenerateMarketEvent();
-                currentMarketEventTime = DateTime.UtcNow;
-                _nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
+                nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
             }
             else
             {
                 currentMarketEvent = "Stable Market";
             }
             OnCurrentMarketEventChanged?.Invoke();
-            currentMarketEventTime = DateTime.UtcNow;
         }
 
         SaveData();
@@ -398,7 +395,6 @@ public class CryptoSystem : MonoBehaviour
         public string nextMiningUpdate;
         public string nextMarketUpdate;
         public string nextMarketEvent;
-        public string currentMarketEventTime;
     }
 
     public void SaveData()
@@ -426,9 +422,7 @@ public class CryptoSystem : MonoBehaviour
             nextMarketUpdate = 
                 _nextMarketUpdate.ToString("O"),
             nextMarketEvent =
-                _nextMarketEvent.ToString("O"),
-            currentMarketEventTime =
-                currentMarketEventTime.ToString("O"),
+                nextMarketEvent.ToString("O"),
         };
 
         string path = Path.Combine(SaveFilePath, SaveFileName);
@@ -452,8 +446,7 @@ public class CryptoSystem : MonoBehaviour
             _lastMiningUpdate = DateTime.UtcNow;
             _nextMiningUpdate = DateTime.UtcNow;
             _nextMarketUpdate = DateTime.UtcNow;
-            _nextMarketEvent = DateTime.UtcNow;
-            currentMarketEventTime = DateTime.UtcNow;
+            nextMarketEvent = DateTime.UtcNow;
 
             SaveData();
 
@@ -502,18 +495,10 @@ public class CryptoSystem : MonoBehaviour
                  | 
                 System.Globalization.DateTimeStyles.AdjustToUniversal);
     
-        _nextMarketEvent = 
+        nextMarketEvent = 
             DateTime.Parse(
                 data.nextMarketEvent, 
                 null, 
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                 | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
-
-        currentMarketEventTime =
-            DateTime.Parse(
-                data.currentMarketEventTime,
-                null,
                 System.Globalization.DateTimeStyles.AssumeUniversal
                  | 
                 System.Globalization.DateTimeStyles.AdjustToUniversal);
