@@ -24,19 +24,6 @@ public class Console : MonoBehaviour
     private Action<bool> _pendingConfirmation;
     private string _pendingPrompt;
 
-    private static readonly string[] MarketEvents =
-    {
-        "bull",
-        "crash",
-        "rally",
-        "correction",
-        "optimism",
-        "btc_manipulation",
-        "eth_manipulation",
-        "btc_insider_trading",
-        "eth_insider_trading"
-    };
-
     private int _historyIndex = -1;
     
     private const string HistoryKey = "ConsoleHistory";
@@ -490,6 +477,10 @@ public class Console : MonoBehaviour
                     Debug.Log($"Valid Arguments: {string.Join(", ", cmd.ValidArgs)}");
                 }
             }
+            else
+            {
+                Debug.Log($"Unknown command: {command}");
+            }
 
             return;
         }
@@ -736,12 +727,14 @@ public class Console : MonoBehaviour
 
         string eventType = args[0].ToLower();
 
-        if (!MarketEvents.Contains(eventType))
+        if (!_commands.TryGetValue("cryptoevent", out ConsoleCommand cmd) ||
+            cmd.ValidArgs == null ||
+            !cmd.ValidArgs.Contains(eventType))
         {
             Debug.Log(
                 $"Invalid crypto market event.\n" +
                 $"Available events:\n" +
-                $"{string.Join(", ", MarketEvents)}"
+                $"{string.Join(", ", cmd.ValidArgs ?? new string[0])}"
             );
 
             return;
