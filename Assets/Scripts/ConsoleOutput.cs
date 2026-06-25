@@ -8,10 +8,16 @@ public class ConsoleOutput : MonoBehaviour
     [SerializeField] private Transform contentParent;
     [SerializeField] private ConsoleLine linePrefab;
     [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private int maxLines = 200;
 
     private void Awake()
     {
         Instance = this;
+
+        while (contentParent.childCount > maxLines)
+        {
+            Destroy(contentParent.GetChild(0).gameObject);
+        }
     }
 
     public void AddLine(string text)
