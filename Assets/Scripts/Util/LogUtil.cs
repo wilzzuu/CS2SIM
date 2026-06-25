@@ -157,6 +157,7 @@ public static class LogUtil
     {
         public static void Log(
             string command,
+            string output = "",
             string details = "")
         {
             try
@@ -172,6 +173,11 @@ public static class LogUtil
                 string entry =
                     $"[{timestamp}] " +
                     $"COMMAND={command}";
+
+                if (!string.IsNullOrWhiteSpace(output))
+                {
+                    entry += $" | OUTPUT={output}";
+                }
 
                 if (!string.IsNullOrWhiteSpace(details))
                 {
