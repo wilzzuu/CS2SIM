@@ -122,6 +122,9 @@ public class Console : MonoBehaviour
         Register("removeethminer", "Remove Ethereum miner", "removeethminer <count>", 1, RemoveEthMiner);
         Register("randomcryptoevent", "Trigger a random crypto market event", "randomcryptoevent", 0, TriggerRandomCryptoEvent);
         Register("cryptoevent", "Trigger a crypto market event", "cryptoevent <event>", 1, TriggerCryptoEvent);
+        Register("resetcryptoprices", "Reset crypto prices to default", "resetcryptoprices", 0, ResetCryptoPrices);
+        Register("resetbtcprice", "Reset Bitcoin price to default", "resetbtcprice", 0, ResetBtcPrice);
+        Register("resetethprice", "Reset Ethereum price to default", "resetethprice", 0, ResetEthPrice);
 
         // InventoryManager
         Register("giveitem", "Give an item by ID", "giveitem <item_id>", 1, GiveItem);
@@ -833,6 +836,24 @@ public class Console : MonoBehaviour
         }
 
         Debug.Log($"Market event '{eventType}' triggered.");
+    }
+
+    private void ResetCryptoPrices(string[] args)
+    {
+        CryptoSystem.Instance.ResetCryptoPrices();
+        Debug.Log("Crypto prices have been reset to default.");
+    }
+
+    private void ResetBtcPrice(string[] args)
+    {
+        CryptoSystem.Instance.ResetBtcPrice();
+        Debug.Log("Bitcoin price has been reset to default.");
+    }
+
+    private void ResetEthPrice(string[] args)
+    {
+        CryptoSystem.Instance.ResetEthPrice();
+        Debug.Log("Ethereum price has been reset to default.");
     }
 
     private void GiveItem(string[] args)

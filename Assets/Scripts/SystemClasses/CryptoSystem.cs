@@ -197,6 +197,33 @@ public class CryptoSystem : MonoBehaviour
         SaveData();
     }
 
+    public void ResetCryptoPrices()
+    {
+        btcPrice = 100000f;
+        ethPrice = 5000f;
+        lastBtcPrice = btcPrice;
+        lastEthPrice = ethPrice;
+        OnBtcPriceChanged?.Invoke();
+        OnEthPriceChanged?.Invoke();
+        SaveData();
+    }
+
+    public void ResetBtcPrice()
+    {
+        btcPrice = 100000f;
+        lastBtcPrice = btcPrice;
+        OnBtcPriceChanged?.Invoke();
+        SaveData();
+    }
+
+    public void ResetEthPrice()
+    {
+        ethPrice = 5000f;
+        lastEthPrice = ethPrice;
+        OnEthPriceChanged?.Invoke();
+        SaveData();
+    }
+
     public void AddBtcMiningRig()
     {
         if (_btcMiners < maxBtcMiners)
