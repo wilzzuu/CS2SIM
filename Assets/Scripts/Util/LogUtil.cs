@@ -200,7 +200,7 @@ public static class LogUtil
 
     public static string GetLogPath(string _loggerName)
     {
-        string LogFile = Path.Combine(LogDirectory, $"{_loggerName}_{Globals.GetFormattedDateTime(DateTime.UtcNow).Replace("/", "-").Replace(" ", "_")}.txt");
+        string LogFile = Path.Combine(LogDirectory, $"{_loggerName}_{DateTime.Now:yyyy-MM-dd}.txt");
         return LogFile;
     }
 }
