@@ -1911,7 +1911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9658d4505bc0fb740bb24b2f6ef86521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GiftManager
-  cooldownHours: 4
+  cooldownHours: 2
   RewardAmount: 5
   giftTimerString: No Timer
 --- !u!1 &1801615635
