@@ -1,0 +1,2166 @@
+{
+    "cases": [
+        {
+            "ID": "bang-case",
+            "NAME": "Bang Case",
+            "PRICE": 1061.22,
+            "ITEMS": [
+                {
+                    "ID": "bayonet-fade",
+                    "GUN": "Bayonet",
+                    "NAME": "Fade",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 423.91,
+                            "stattrak_price": 444.15
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 545.44,
+                            "stattrak_price": 725.02
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/2b1cb0cfe2e0607a86a143f22ba11ca8d4bd98c4.webp"
+                },
+                {
+                    "ID": "bayonet-slaughter",
+                    "GUN": "Bayonet",
+                    "NAME": "Slaughter",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 452.26,
+                            "stattrak_price": 458.24
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 357.08,
+                            "stattrak_price": 412.31
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 315.74,
+                            "stattrak_price": 387.13
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/04ef9f04deadfbcd309cc89058bafd6485ae7390.webp"
+                },
+                {
+                    "ID": "bayonet-blue-steel",
+                    "GUN": "Bayonet",
+                    "NAME": "Blue Steel",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 429.77,
+                            "stattrak_price": 1038.37
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 296.7,
+                            "stattrak_price": 283.1
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 248.25,
+                            "stattrak_price": 307.71
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 239.87,
+                            "stattrak_price": 335.19
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 219.1,
+                            "stattrak_price": 298.06
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/f7ce82fa49b369185aa5aedee08dde2d95c66f25.webp"
+                },
+                {
+                    "ID": "bayonet-case-hardened",
+                    "GUN": "Bayonet",
+                    "NAME": "Case Hardened",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 635.57,
+                            "stattrak_price": 828.28
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 331.87,
+                            "stattrak_price": 418.11
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 259.39,
+                            "stattrak_price": 384.06
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 258.59,
+                            "stattrak_price": 340.49
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 236.16,
+                            "stattrak_price": 326.96
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/a5822f1556333debca349d6ad495f77f0919e23c.webp"
+                },
+                {
+                    "ID": "bayonet-night",
+                    "GUN": "Bayonet",
+                    "NAME": "Night",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1176.42,
+                            "stattrak_price": 977.03
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 209.65,
+                            "stattrak_price": 412.4
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 156.32,
+                            "stattrak_price": 174.79
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 137.83,
+                            "stattrak_price": 316.8
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 156.37,
+                            "stattrak_price": 184.84
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/7da1ed18578c52236e844fa12fa09ed9400a5670.webp"
+                },
+                {
+                    "ID": "bayonet-crimson-web",
+                    "GUN": "Bayonet",
+                    "NAME": "Crimson Web",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1976.57,
+                            "stattrak_price": 17330.09
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 364.4,
+                            "stattrak_price": 484.97
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 231.46,
+                            "stattrak_price": 252.91
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 220.48,
+                            "stattrak_price": 288.59
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 196.82,
+                            "stattrak_price": 282.77
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/89edc6d3fcf8259abb6f7838696c73549b87bad5.webp"
+                },
+                {
+                    "ID": "bayonet-boreal-forest",
+                    "GUN": "Bayonet",
+                    "NAME": "Boreal Forest",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 813.31,
+                            "stattrak_price": 684.29
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 154.82,
+                            "stattrak_price": 257.37
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 145.49,
+                            "stattrak_price": 152.05
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 143.22,
+                            "stattrak_price": 175.21
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 143.02,
+                            "stattrak_price": 179.68
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/6e98850542432abe5c317327a553b6a2da111750.webp"
+                },
+                {
+                    "ID": "bayonet-stained",
+                    "GUN": "Bayonet",
+                    "NAME": "Stained",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 285.8,
+                            "stattrak_price": 665.1
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 225.39,
+                            "stattrak_price": 200.27
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 181.61,
+                            "stattrak_price": 204.01
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 194.05,
+                            "stattrak_price": 230.12
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 178.64,
+                            "stattrak_price": 236.97
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/9e3b5e6e7ae785d4fc02fe90e9471f5c8623ea74.webp"
+                },
+                {
+                    "ID": "bayonet-urban-masked",
+                    "GUN": "Bayonet",
+                    "NAME": "Urban Masked",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 521.5,
+                            "stattrak_price": 499.99
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 186.88,
+                            "stattrak_price": 263.77
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 160.66,
+                            "stattrak_price": 159.2
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 156.26,
+                            "stattrak_price": 226.77
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 144.44,
+                            "stattrak_price": 182.6
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/53f6b766c51b26f1da0189d2c05879e2eaa8fb25.webp"
+                },
+                {
+                    "ID": "bayonet-scorched",
+                    "GUN": "Bayonet",
+                    "NAME": "Scorched",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 294.44,
+                            "stattrak_price": 624.88
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 182.69,
+                            "stattrak_price": 228.99
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 155.16,
+                            "stattrak_price": 153.59
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 146.71,
+                            "stattrak_price": 162.03
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 139.61,
+                            "stattrak_price": 166.96
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/6f4487305f291425673550d01c4956c256e213c3.webp"
+                },
+                {
+                    "ID": "bayonet-safari-mesh",
+                    "GUN": "Bayonet",
+                    "NAME": "Safari Mesh",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 390.82,
+                            "stattrak_price": 1011.45
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 164.32,
+                            "stattrak_price": 188.37
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 136.3,
+                            "stattrak_price": 140.48
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 127.31,
+                            "stattrak_price": 163.5
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 138.12,
+                            "stattrak_price": 165.36
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/7451d9424effc41be8484d857dd9a120e99dd8cb.webp"
+                },
+                {
+                    "ID": "bayonet-forest-ddpat",
+                    "GUN": "Bayonet",
+                    "NAME": "Forest DDPAT",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 632.37,
+                            "stattrak_price": 1857.91
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 168.11,
+                            "stattrak_price": 196.77
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 129.61,
+                            "stattrak_price": 146.86
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 152.48,
+                            "stattrak_price": 171.22
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 125.18,
+                            "stattrak_price": 209.23
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/3ff087ad550897c142c1c20095c9f5cffa6198e8.webp"
+                },
+                {
+                    "ID": "flip-knife-slaughter",
+                    "GUN": "Flip Knife",
+                    "NAME": "Slaughter",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 332.04,
+                            "stattrak_price": 401.73
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 292.97,
+                            "stattrak_price": 306.8
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 278.24,
+                            "stattrak_price": 315.13
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/72703bb7ff72a6501d556ba6f879fadead083817.webp"
+                },
+                {
+                    "ID": "flip-knife-fade",
+                    "GUN": "Flip Knife",
+                    "NAME": "Fade",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 351.56,
+                            "stattrak_price": 301.74
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 354.64,
+                            "stattrak_price": 448.55
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/6668b89bca0991ed35af40efdbd6d2d50c95c4cf.webp"
+                },
+                {
+                    "ID": "flip-knife-crimson-web",
+                    "GUN": "Flip Knife",
+                    "NAME": "Crimson Web",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 2080.6,
+                            "stattrak_price": 3851.67
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 307.16,
+                            "stattrak_price": 638.4
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 200.17,
+                            "stattrak_price": 210.84
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 207.91,
+                            "stattrak_price": 247.29
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 169.52,
+                            "stattrak_price": 212.99
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/4f548fb8f3987ccbde2f35d14a1304cd5322255a.webp"
+                },
+                {
+                    "ID": "flip-knife-case-hardened",
+                    "GUN": "Flip Knife",
+                    "NAME": "Case Hardened",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 537.46,
+                            "stattrak_price": 502.88
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 204.53,
+                            "stattrak_price": 259.85
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 184.45,
+                            "stattrak_price": 186.53
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 178.37,
+                            "stattrak_price": 234.98
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 176.56,
+                            "stattrak_price": 373.08
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/e5c836ebda5da52ea46d522f74ccb00171f5c038.webp"
+                },
+                {
+                    "ID": "flip-knife-safari-mesh",
+                    "GUN": "Flip Knife",
+                    "NAME": "Safari Mesh",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 219.84,
+                            "stattrak_price": 1800.0
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 128.24,
+                            "stattrak_price": 166.64
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 123.74,
+                            "stattrak_price": 116.94
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 109.79,
+                            "stattrak_price": 297.57
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 110.1,
+                            "stattrak_price": 121.29
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/d39c95fb4d8d8856c2c937513871f7eb9ed38e08.webp"
+                },
+                {
+                    "ID": "flip-knife-blue-steel",
+                    "GUN": "Flip Knife",
+                    "NAME": "Blue Steel",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 401.97,
+                            "stattrak_price": 451.49
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 203.84,
+                            "stattrak_price": 264.17
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 171.94,
+                            "stattrak_price": 191.35
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 179.67,
+                            "stattrak_price": 176.8
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 189.13,
+                            "stattrak_price": 176.76
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/145ae05f4aa07dc940f4d3561f5603b6f0fedac8.webp"
+                },
+                {
+                    "ID": "flip-knife-stained",
+                    "GUN": "Flip Knife",
+                    "NAME": "Stained",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 219.16,
+                            "stattrak_price": 387.16
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 147.29,
+                            "stattrak_price": 170.64
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 131.39,
+                            "stattrak_price": 151.86
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 139.03,
+                            "stattrak_price": 192.21
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 129.65,
+                            "stattrak_price": 157.54
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/96489da68eedbeddc554f58d07c4eb7e7a7e2c49.webp"
+                },
+                {
+                    "ID": "flip-knife-urban-masked",
+                    "GUN": "Flip Knife",
+                    "NAME": "Urban Masked",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 390.45,
+                            "stattrak_price": 1800.0
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 145.83,
+                            "stattrak_price": 187.86
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 126.25,
+                            "stattrak_price": 125.49
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 127.25,
+                            "stattrak_price": 184.52
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 113.68,
+                            "stattrak_price": 143.32
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/31918b3fbd3723f3e2d77fefd0ba79c2aa8d4d3c.webp"
+                },
+                {
+                    "ID": "flip-knife-forest-ddpat",
+                    "GUN": "Flip Knife",
+                    "NAME": "Forest DDPAT",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 258.18,
+                            "stattrak_price": 898.3
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 142.63,
+                            "stattrak_price": 181.42
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 123.62,
+                            "stattrak_price": 112.47
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 113.24,
+                            "stattrak_price": 145.35
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 114.98,
+                            "stattrak_price": 137.44
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/24ce75d4f0a6ee4bbaeac5e54e40777ee58e69a0.webp"
+                },
+                {
+                    "ID": "flip-knife-boreal-forest",
+                    "GUN": "Flip Knife",
+                    "NAME": "Boreal Forest",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 287.58,
+                            "stattrak_price": 461.26
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 128.24,
+                            "stattrak_price": 130.43
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 120.92,
+                            "stattrak_price": 116.1
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 122.72,
+                            "stattrak_price": 159.92
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 122.54,
+                            "stattrak_price": 122.41
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/073bee044cdfe5f31e8637a608f44a1d163ec871.webp"
+                },
+                {
+                    "ID": "flip-knife-scorched",
+                    "GUN": "Flip Knife",
+                    "NAME": "Scorched",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 280.62,
+                            "stattrak_price": 280.0
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 137.26,
+                            "stattrak_price": 158.8
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 132.96,
+                            "stattrak_price": 116.58
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 127.58,
+                            "stattrak_price": 130.03
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 123.78,
+                            "stattrak_price": 115.37
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/4c1b527669ef7d071e32cbe60405e11b895c033e.webp"
+                },
+                {
+                    "ID": "flip-knife-night",
+                    "GUN": "Flip Knife",
+                    "NAME": "Night",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 494.75,
+                            "stattrak_price": 924.4
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 181.94,
+                            "stattrak_price": 190.41
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 146.15,
+                            "stattrak_price": 135.52
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 124.21,
+                            "stattrak_price": 184.36
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 139.73,
+                            "stattrak_price": 131.0
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/7e2e10b5b113afb7f2823e6fa7271037501f6060.webp"
+                },
+                {
+                    "ID": "gut-knife-urban-masked",
+                    "GUN": "Gut Knife",
+                    "NAME": "Urban Masked",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 215.82,
+                            "stattrak_price": 2116.71
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 76.8,
+                            "stattrak_price": 106.05
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 65.77,
+                            "stattrak_price": 83.09
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 66.28,
+                            "stattrak_price": 109.98
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 79.18,
+                            "stattrak_price": 85.22
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/effe5a5bec94afd9fbab59afd5ee9c6e57cb2990.webp"
+                },
+                {
+                    "ID": "gut-knife-case-hardened",
+                    "GUN": "Gut Knife",
+                    "NAME": "Case Hardened",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 220.37,
+                            "stattrak_price": 638.29
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 146.64,
+                            "stattrak_price": 178.94
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 120.55,
+                            "stattrak_price": 153.57
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 104.46,
+                            "stattrak_price": 163.65
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 104.53,
+                            "stattrak_price": 164.51
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/d5bb0f0c3decc7469d5432a94cf902a12881495a.webp"
+                },
+                {
+                    "ID": "gut-knife-fade",
+                    "GUN": "Gut Knife",
+                    "NAME": "Fade",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 152.2,
+                            "stattrak_price": 164.09
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 193.51,
+                            "stattrak_price": 545.75
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/ea153b2eb0c0c7a9f1f890c25b27a212041a04d7.webp"
+                },
+                {
+                    "ID": "gut-knife-crimson-web",
+                    "GUN": "Gut Knife",
+                    "NAME": "Crimson Web",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 732.98,
+                            "stattrak_price": 2199.99
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 120.96,
+                            "stattrak_price": 258.15
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 93.38,
+                            "stattrak_price": 112.62
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 79.56,
+                            "stattrak_price": 201.04
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 92.11,
+                            "stattrak_price": 130.53
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/1a340f31535993f8e3cd9f1beb567ef94e474793.webp"
+                },
+                {
+                    "ID": "gut-knife-boreal-forest",
+                    "GUN": "Gut Knife",
+                    "NAME": "Boreal Forest",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 234.1,
+                            "stattrak_price": 656.24
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 72.41,
+                            "stattrak_price": 124.16
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 57.6,
+                            "stattrak_price": 71.55
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 70.32,
+                            "stattrak_price": 86.83
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 69.01,
+                            "stattrak_price": 74.85
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/e9f7269b82d259ed0f6e13c969df18d1304b06f3.webp"
+                },
+                {
+                    "ID": "gut-knife-night",
+                    "GUN": "Gut Knife",
+                    "NAME": "Night",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 498.2,
+                            "stattrak_price": 526.31
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 93.51,
+                            "stattrak_price": 237.85
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 64.41,
+                            "stattrak_price": 76.07
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 68.78,
+                            "stattrak_price": 123.74
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 62.58,
+                            "stattrak_price": 124.55
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/3b91cb08b647b702a338cef7e07949a1ba5205d8.webp"
+                },
+                {
+                    "ID": "gut-knife-blue-steel",
+                    "GUN": "Gut Knife",
+                    "NAME": "Blue Steel",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 154.9,
+                            "stattrak_price": 293.64
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 98.77,
+                            "stattrak_price": 122.06
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 78.1,
+                            "stattrak_price": 105.57
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 76.96,
+                            "stattrak_price": 146.74
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 97.7,
+                            "stattrak_price": 108.27
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/6554e64a606b6076e9c995fc53ee62c82494095a.webp"
+                },
+                {
+                    "ID": "gut-knife-slaughter",
+                    "GUN": "Gut Knife",
+                    "NAME": "Slaughter",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 146.02,
+                            "stattrak_price": 184.14
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 125.0,
+                            "stattrak_price": 157.07
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 128.34,
+                            "stattrak_price": 166.09
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/f7acfb6051a3ca0474538fef348a80932a85bb24.webp"
+                },
+                {
+                    "ID": "gut-knife-scorched",
+                    "GUN": "Gut Knife",
+                    "NAME": "Scorched",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 499.2,
+                            "stattrak_price": 372.5
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 74.26,
+                            "stattrak_price": 138.38
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 59.9,
+                            "stattrak_price": 94.08
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 65.07,
+                            "stattrak_price": 181.04
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 59.64,
+                            "stattrak_price": 114.31
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/0225b983c230f6ea8baf373fcd37a7c91208560a.webp"
+                },
+                {
+                    "ID": "gut-knife-safari-mesh",
+                    "GUN": "Gut Knife",
+                    "NAME": "Safari Mesh",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 262.68,
+                            "stattrak_price": 314.95
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 65.25,
+                            "stattrak_price": 95.03
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 53.49,
+                            "stattrak_price": 64.54
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 63.37,
+                            "stattrak_price": 86.37
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 63.56,
+                            "stattrak_price": 89.34
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/ebfe4202335c55773f39e0a8997e3426e97b8269.webp"
+                },
+                {
+                    "ID": "gut-knife-stained",
+                    "GUN": "Gut Knife",
+                    "NAME": "Stained",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 133.08,
+                            "stattrak_price": 377.4
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 92.13,
+                            "stattrak_price": 113.3
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 75.35,
+                            "stattrak_price": 101.83
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 74.15,
+                            "stattrak_price": 105.02
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 74.99,
+                            "stattrak_price": 107.23
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/24022f92097ca972d0733c868298aaa2a4499107.webp"
+                },
+                {
+                    "ID": "gut-knife-forest-ddpat",
+                    "GUN": "Gut Knife",
+                    "NAME": "Forest DDPAT",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 227.75,
+                            "stattrak_price": 449.0
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 69.07,
+                            "stattrak_price": 97.06
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 58.52,
+                            "stattrak_price": 78.26
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 66.41,
+                            "stattrak_price": 144.0
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 54.54,
+                            "stattrak_price": 100.14
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/6f5e1415514599170502dd7ca89b6641d81a4460.webp"
+                },
+                {
+                    "ID": "karambit-stained",
+                    "GUN": "Karambit",
+                    "NAME": "Stained",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 923.09,
+                            "stattrak_price": 1013.41
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 750.93,
+                            "stattrak_price": 681.16
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 644.13,
+                            "stattrak_price": 673.23
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 613.94,
+                            "stattrak_price": 642.3
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 558.29,
+                            "stattrak_price": 636.76
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/a4d81594f9bf520425af59dfa6762581543a769e.webp"
+                },
+                {
+                    "ID": "karambit-night",
+                    "GUN": "Karambit",
+                    "NAME": "Night",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1982.07,
+                            "stattrak_price": 3425.83
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 716.9,
+                            "stattrak_price": 755.15
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 580.2,
+                            "stattrak_price": 572.1
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 564.84,
+                            "stattrak_price": 635.61
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 570.49,
+                            "stattrak_price": 535.08
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/8a52437f8de5e695b7315c90a8336e90f715234d.webp"
+                },
+                {
+                    "ID": "karambit-case-hardened",
+                    "GUN": "Karambit",
+                    "NAME": "Case Hardened",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 4817.5,
+                            "stattrak_price": 4817.5
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 1006.93,
+                            "stattrak_price": 1263.73
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 850.97,
+                            "stattrak_price": 867.57
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 815.16,
+                            "stattrak_price": 738.77
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 741.0,
+                            "stattrak_price": 810.53
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/093238b646a821cc4893d69f4c4fdfe9bb4448b6.webp"
+                },
+                {
+                    "ID": "karambit-blue-steel",
+                    "GUN": "Karambit",
+                    "NAME": "Blue Steel",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1219.68,
+                            "stattrak_price": 3086.81
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 956.86,
+                            "stattrak_price": 1046.24
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 827.63,
+                            "stattrak_price": 827.63
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 867.71,
+                            "stattrak_price": 842.85
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 808.78,
+                            "stattrak_price": 780.47
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/782025c8383533df82ffae379793c1e1f6b163c3.webp"
+                },
+                {
+                    "ID": "karambit-crimson-web",
+                    "GUN": "Karambit",
+                    "NAME": "Crimson Web",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 10889.93,
+                            "stattrak_price": 50000.0
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 1141.27,
+                            "stattrak_price": 1174.11
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 730.27,
+                            "stattrak_price": 724.01
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 741.94,
+                            "stattrak_price": 772.96
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 581.13,
+                            "stattrak_price": 581.13
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/ac2e827f3a66f590a826dfb50a66fea3e6a41492.webp"
+                },
+                {
+                    "ID": "karambit-scorched",
+                    "GUN": "Karambit",
+                    "NAME": "Scorched",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1144.33,
+                            "stattrak_price": 871.99
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 565.33,
+                            "stattrak_price": 585.37
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 523.75,
+                            "stattrak_price": 526.96
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 501.37,
+                            "stattrak_price": 549.04
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 478.42,
+                            "stattrak_price": 426.22
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/0269d22140f1a8773c549b0405dadd6398250f2f.webp"
+                },
+                {
+                    "ID": "karambit-boreal-forest",
+                    "GUN": "Karambit",
+                    "NAME": "Boreal Forest",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 986.92,
+                            "stattrak_price": 853.71
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 533.63,
+                            "stattrak_price": 737.5
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 443.71,
+                            "stattrak_price": 433.67
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 453.63,
+                            "stattrak_price": 584.37
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 415.24,
+                            "stattrak_price": 415.24
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/bd228e0391adfc7e33610aa4b524919600903ba4.webp"
+                },
+                {
+                    "ID": "karambit-safari-mesh",
+                    "GUN": "Karambit",
+                    "NAME": "Safari Mesh",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 845.09,
+                            "stattrak_price": 1209.57
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 468.8,
+                            "stattrak_price": 630.5
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 433.35,
+                            "stattrak_price": 399.23
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 414.36,
+                            "stattrak_price": 440.46
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 428.49,
+                            "stattrak_price": 442.48
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/2b9fec4b1ee5d4bed917abfa904a3eb063108628.webp"
+                },
+                {
+                    "ID": "karambit-urban-masked",
+                    "GUN": "Karambit",
+                    "NAME": "Urban Masked",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 770.15,
+                            "stattrak_price": 1359.81
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 529.3,
+                            "stattrak_price": 539.22
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 446.07,
+                            "stattrak_price": 446.07
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 448.59,
+                            "stattrak_price": 660.69
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 442.5,
+                            "stattrak_price": 499.15
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/24cce1899cec1c21c47159bc1bd6d914ccf8706a.webp"
+                },
+                {
+                    "ID": "karambit-forest-ddpat",
+                    "GUN": "Karambit",
+                    "NAME": "Forest DDPAT",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 815.59,
+                            "stattrak_price": 1359.81
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 474.01,
+                            "stattrak_price": 474.01
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 445.04,
+                            "stattrak_price": 424.69
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 437.68,
+                            "stattrak_price": 543.78
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 455.26,
+                            "stattrak_price": 669.74
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/33250d215ded70dfe330aa43a9d036c77fdcaef1.webp"
+                },
+                {
+                    "ID": "karambit-slaughter",
+                    "GUN": "Karambit",
+                    "NAME": "Slaughter",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1277.16,
+                            "stattrak_price": 1277.16
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 1054.0,
+                            "stattrak_price": 1054.0
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 987.07,
+                            "stattrak_price": 1099.59
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/0074aed9787c5413e9b55dc84340e88d9ad2260d.webp"
+                },
+                {
+                    "ID": "karambit-fade",
+                    "GUN": "Karambit",
+                    "NAME": "Fade",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1195.27,
+                            "stattrak_price": 1195.27
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 1300.79,
+                            "stattrak_price": 1403.41
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/bb8bbbd53714af929c6a42bc835755e18ee013a0.webp"
+                },
+                {
+                    "ID": "m9-bayonet-fade",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Fade",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 898.42,
+                            "stattrak_price": 925.64
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 908.62,
+                            "stattrak_price": 1024.47
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/9359133beef4872ea363d558b5f5700b690bfaad.webp"
+                },
+                {
+                    "ID": "m9-bayonet-slaughter",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Slaughter",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1019.75,
+                            "stattrak_price": 1086.54
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 847.87,
+                            "stattrak_price": 813.35
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 686.98,
+                            "stattrak_price": 866.42
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/d18ab68464313a73af197415e79bcebf055de509.webp"
+                },
+                {
+                    "ID": "m9-bayonet-case-hardened",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Case Hardened",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1205.4,
+                            "stattrak_price": 2611.88
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 682.69,
+                            "stattrak_price": 735.83
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 611.89,
+                            "stattrak_price": 596.83
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 528.46,
+                            "stattrak_price": 593.91
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 474.25,
+                            "stattrak_price": 532.28
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/a6463f185269aea49baaf03c917d5236eb8c4524.webp"
+                },
+                {
+                    "ID": "m9-bayonet-crimson-web",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Crimson Web",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 5203.09,
+                            "stattrak_price": 50000.0
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 938.56,
+                            "stattrak_price": 944.76
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 512.92,
+                            "stattrak_price": 512.89
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 461.4,
+                            "stattrak_price": 511.22
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 433.85,
+                            "stattrak_price": 605.1
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/75b51ed342fe6999782aef9f13595d6a1e91b53e.webp"
+                },
+                {
+                    "ID": "m9-bayonet-night",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Night",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1176.42,
+                            "stattrak_price": 2173.2
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 575.73,
+                            "stattrak_price": 617.96
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 402.82,
+                            "stattrak_price": 396.35
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 389.0,
+                            "stattrak_price": 608.85
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 448.51,
+                            "stattrak_price": 391.08
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/abb7cdcc0d3690350cfd3b0c672116dd5c21c3fc.webp"
+                },
+                {
+                    "ID": "m9-bayonet-stained",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Stained",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 580.83,
+                            "stattrak_price": 665.1
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 543.16,
+                            "stattrak_price": 487.27
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 477.73,
+                            "stattrak_price": 439.78
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 478.28,
+                            "stattrak_price": 542.18
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 412.47,
+                            "stattrak_price": 601.02
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/d5944495ea77c273d6b225804470c9ae53014112.webp"
+                },
+                {
+                    "ID": "m9-bayonet-blue-steel",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Blue Steel",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 861.41,
+                            "stattrak_price": 1038.37
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 661.72,
+                            "stattrak_price": 866.09
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 541.82,
+                            "stattrak_price": 541.82
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 606.48,
+                            "stattrak_price": 601.73
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 592.39,
+                            "stattrak_price": 568.51
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/a7ffc5b658251059c02191be0eb13b80edf5ff98.webp"
+                },
+                {
+                    "ID": "m9-bayonet-forest-ddpat",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Forest DDPAT",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 3158.32,
+                            "stattrak_price": 1194.26
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 395.77,
+                            "stattrak_price": 358.92
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 339.28,
+                            "stattrak_price": 314.77
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 316.64,
+                            "stattrak_price": 557.92
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 334.73,
+                            "stattrak_price": 322.88
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/ad1accf77d73f47a5beb6fb21656af25b855196a.webp"
+                },
+                {
+                    "ID": "m9-bayonet-boreal-forest",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Boreal Forest",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 813.31,
+                            "stattrak_price": 1141.62
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 340.2,
+                            "stattrak_price": 577.27
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 328.58,
+                            "stattrak_price": 314.03
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 341.45,
+                            "stattrak_price": 543.64
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 338.98,
+                            "stattrak_price": 344.4
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/ac7d62604e80d83a82c22b968e01897d90cb6bc9.webp"
+                },
+                {
+                    "ID": "m9-bayonet-urban-masked",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Urban Masked",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 953.92,
+                            "stattrak_price": 1194.26
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 392.74,
+                            "stattrak_price": 403.74
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 347.0,
+                            "stattrak_price": 315.63
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 347.28,
+                            "stattrak_price": 349.79
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 380.7,
+                            "stattrak_price": 363.61
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/42c35a029d97407dcffc2285dad3024e6941de58.webp"
+                },
+                {
+                    "ID": "m9-bayonet-scorched",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Scorched",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 957.33,
+                            "stattrak_price": 1141.62
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 394.06,
+                            "stattrak_price": 510.75
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 359.29,
+                            "stattrak_price": 310.48
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 357.15,
+                            "stattrak_price": 393.36
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 353.68,
+                            "stattrak_price": 374.39
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/25963aba594c2fd37378f58532d895dff707550d.webp"
+                },
+                {
+                    "ID": "m9-bayonet-safari-mesh",
+                    "GUN": "M9 Bayonet",
+                    "NAME": "Safari Mesh",
+                    "RARITY": "Special",
+                    "TYPE": "Knife",
+                    "HAS_ST": true,
+                    "CONDITIONS": [
+                        {
+                            "condition": "Factory New",
+                            "regular_price": 1387.66,
+                            "stattrak_price": 1776.47
+                        },
+                        {
+                            "condition": "Minimal Wear",
+                            "regular_price": 342.71,
+                            "stattrak_price": 368.98
+                        },
+                        {
+                            "condition": "Field-Tested",
+                            "regular_price": 323.07,
+                            "stattrak_price": 314.76
+                        },
+                        {
+                            "condition": "Well-Worn",
+                            "regular_price": 339.69,
+                            "stattrak_price": 489.35
+                        },
+                        {
+                            "condition": "Battle-Scarred",
+                            "regular_price": 321.67,
+                            "stattrak_price": 331.36
+                        }
+                    ],
+                    "COLLECTION": "None",
+                    "CONTAINER": "CS:GO Weapon Case",
+                    "IMAGE": "https://cache.steamanalyst.com/d1bb86e54567d53316c98d3a066cda1f1655e84a.webp"
+                }
+            ]
+        }
+    ]
+}
