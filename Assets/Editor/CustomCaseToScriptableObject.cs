@@ -29,7 +29,7 @@ namespace Editor
             {
                 string selectedPath = EditorUtility.OpenFilePanel(
                     "Select JSON File",
-                    Application.dataPath + "/StreamingAssets",
+                    Application.dataPath + "/StreamingAssets/CustomCases",
                     "json"
                 );
 
