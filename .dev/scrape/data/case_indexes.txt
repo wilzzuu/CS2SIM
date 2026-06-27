@@ -1,0 +1,42 @@
+0 - Chroma 2 Case
+1 - Chroma 3 Case
+2 - Chroma Case
+3 - Clutch Case
+4 - CS:GO Weapon Case 2
+5 - CS:GO Weapon Case 3
+6 - CS:GO Weapon Case
+7 - CS20 Case
+8 - Danger Zone Case
+9 - Dreams & Nightmares Case
+10 - eSports 2013 Case
+11 - eSports 2013 Winter Case
+12 - eSports 2014 Summer Case
+13 - Falchion Case
+14 - Fever Case
+15 - Fracture Case
+16 - Gallery Case
+17 - Gamma 2 Case
+18 - Gamma Case
+19 - Glove Case
+20 - Horizon Case
+21 - Huntsman Weapon Case
+22 - Kilowatt Case
+23 - Operation Bravo Case
+24 - Operation Breakout Weapon Case
+25 - Operation Broken Fang Case
+26 - Operation Hydra Case
+27 - Operation Phoenix Weapon Case
+28 - Operation Riptide Case
+29 - Operation Vanguard Weapon Case
+30 - Operation Wildfire Case
+31 - Prisma 2 Case
+32 - Prisma Case
+33 - Recoil Case
+34 - Revolution Case
+35 - Revolver Case
+36 - Shadow Case
+37 - Shattered Web Case
+38 - Snakebite Case
+39 - Spectrum 2 Case
+40 - Spectrum Case
+41 - Winter Offensive Weapon Case

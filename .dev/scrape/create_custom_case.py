@@ -11,11 +11,11 @@ def get_data():
         data = json.load(f)
     return data
 
-def doit(data):
+def doit(data, case_index):
     
     special_items = []
 
-    case = data["cases"][13]
+    case = data["cases"][case_index]
     items = case["ITEMS"]
     item_count = 0
     total_price = 0
@@ -50,6 +50,7 @@ def save_data(data):
 
 if __name__ == "__main__":
     custom_case_name = input("Custom Case Name:\n")
+    case_index = int(input("Case Index:\n"))
     OUTPUT_FILE = DATA_PATH / f"{slugify(custom_case_name)}.json"
     data = get_data()
-    doit(data)
+    doit(data, case_index)
