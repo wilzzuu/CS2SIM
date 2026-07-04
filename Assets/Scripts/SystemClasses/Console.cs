@@ -80,6 +80,7 @@ public class Console : MonoBehaviour
         }
     }
 
+    #region Registration
     private void RegisterCommands()
     {
         // Console
@@ -132,9 +133,14 @@ public class Console : MonoBehaviour
         // SettingsManager
         Register("resetprogress", "Reset player progress", "resetprogress", 0, ResetProgress);
 
+        // DailyRewardSystem
+        Register("setcurrentday", "Set the current day", "setcurrentday <0-6>", 1, SetCurrentDay);
+        Register("setclaimable", "Set whether the daily reward can be claimed", "setclaimable <true/false>", 1, SetClaimable);
+
         // Log
         Register("log", "Log a message", "log <message>", 1, LogMessage);
     }
+    #endregion
 
     public class ConsoleCommand
     {
@@ -953,6 +959,51 @@ public class Console : MonoBehaviour
                     Debug.Log("Reset progress canceled.");
                 }
             });
+    }
+
+    private void SetCurrentDay(string[] args)
+    {
+        if (!TryGetInt(args, 0, out int day))
+        {
+            Debug.Log("Invalid day. Please enter a valid number.");
+            return;
+        }
+
+        if (day < 0 || day > 6)
+        {
+            Debug.Log("Day must be between 0 and 6.");
+            return;
+        }
+
+        DailyRewardSystem.Instance.currentDay = day;
+        Debug.Log($"Current day set to {day}.");
+    }
+
+    private void SetClaimable(string[] args)
+    {
+        if (args.Length == 0)
+        {
+            Debug.Log("Please specify 'true' or 'false'.");
+            return;
+        }
+
+        string input = args[0].ToLower();
+
+        if (input == "true")
+        {
+            DailyRewardSystem.Instance.lastClaim = DateTime.UtcNow.AddDays(-1);
+        }
+        else if (input == "false")
+        {
+            DailyRewardSystem.Instance.lastClaim = DateTime.UtcNow;
+        }
+        else
+        {
+            Debug.Log("Invalid input. Please specify 'true' or 'false'.");
+            return;
+        }
+
+        Debug.Log($"Daily reward claimable set to '{input}'.");
     }
 
     private void LogMessage(string[] args)
