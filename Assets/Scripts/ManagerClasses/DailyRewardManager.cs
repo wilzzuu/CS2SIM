@@ -98,7 +98,7 @@ public class DailyRewardUI : MonoBehaviour
             RefreshUI();
         }
     }
-    
+
     private void Claim(int day)
     {
         if (day != DailyRewardSystem.Instance.currentDay)
@@ -114,14 +114,12 @@ public class DailyRewardUI : MonoBehaviour
         AlertManager.Set(AlertType.DailyRewards, false);
 
         DailyRewardSystem.Instance.lastClaim = DateTime.UtcNow;
-
-        if (DailyRewardSystem.Instance.currentDay >= 7)
-            DailyRewardSystem.Instance.currentDay = 1;
-        else
-            DailyRewardSystem.Instance.currentDay++;
+        
+        DailyRewardSystem.Instance.currentDay++;
+        if (DailyRewardSystem.Instance.currentDay > 6)
+            DailyRewardSystem.Instance.currentDay = 0;
 
         DailyRewardSystem.Instance.SaveData();
         RefreshUI();
     }
-
 }
