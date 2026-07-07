@@ -15,7 +15,7 @@ public class CryptoSystem : MonoBehaviour
     public float ethPrice = 5000f;
     public float lastEthPrice = 5000f;
     public float ethMinMarketPrice = 500f;
-    private float _marketEventChance = 10f;
+    private float _marketEventChance = 40f;
 
     [Header("Mining")]
     public int maxBtcMiners = 100;
