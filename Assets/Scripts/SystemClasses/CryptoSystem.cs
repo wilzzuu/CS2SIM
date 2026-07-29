@@ -357,9 +357,9 @@ public class CryptoSystem : MonoBehaviour
         }
         else
         {
-            _ethPerHour = 0;
+            ethPerHour = 0;
         }
-        return _ethPerHour;
+        return ethPerHour;
     }
 
     #region SAVE
@@ -413,20 +413,20 @@ public class CryptoSystem : MonoBehaviour
             lastBtcPrice = lastBtcPrice,
             lastEthPrice = lastEthPrice,
 
-            btcPerHour = _btcPerHour,
-            ethPerHour = _ethPerHour,
+            btcPerHour = btcPerHour,
+            ethPerHour = ethPerHour,
 
-            btcMiners = _btcMiners,
-            ethMiners = _ethMiners,
+            btcMiners = btcMiners,
+            ethMiners = ethMiners,
 
             currentMarketEvent = currentMarketEvent,
 
             lastMiningUpdate =
-                _lastMiningUpdate.ToString("O"),
+                lastMiningUpdate.ToString("O"),
             nextMiningUpdate =
-                _nextMiningUpdate.ToString("O"),
+                nextMiningUpdate.ToString("O"),
             nextMarketUpdate = 
-                _nextMarketUpdate.ToString("O"),
+                nextMarketUpdate.ToString("O"),
             nextMarketEvent =
                 nextMarketEvent.ToString("O"),
         };
@@ -444,14 +444,14 @@ public class CryptoSystem : MonoBehaviour
 
         if (!File.Exists(path))
         {
-            _btcPerHour = 0;
-            _ethPerHour = 0;
-            _btcMiners = 0;
-            _ethMiners = 0;
+            btcPerHour = 0;
+            ethPerHour = 0;
+            btcMiners = 0;
+            ethMiners = 0;
             currentMarketEvent = "Stable Market";
-            _lastMiningUpdate = DateTime.UtcNow;
-            _nextMiningUpdate = DateTime.UtcNow.AddHours(1);
-            _nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
+            lastMiningUpdate = DateTime.UtcNow;
+            nextMiningUpdate = DateTime.UtcNow.AddHours(1);
+            nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
             nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
 
             SaveData();
@@ -469,15 +469,15 @@ public class CryptoSystem : MonoBehaviour
         lastBtcPrice = data.lastBtcPrice;
         lastEthPrice = data.lastEthPrice;
 
-        _btcPerHour = data.btcPerHour;
-        _ethPerHour = data.ethPerHour;
+        btcPerHour = data.btcPerHour;
+        ethPerHour = data.ethPerHour;
 
-        _btcMiners = data.btcMiners;
-        _ethMiners = data.ethMiners;
+        btcMiners = data.btcMiners;
+        ethMiners = data.ethMiners;
 
         currentMarketEvent = data.currentMarketEvent;
 
-        _lastMiningUpdate =
+        lastMiningUpdate =
             DateTime.Parse(
                 data.lastMiningUpdate, 
                 null, 
@@ -485,7 +485,7 @@ public class CryptoSystem : MonoBehaviour
                  | 
                 System.Globalization.DateTimeStyles.AdjustToUniversal);
 
-        _nextMiningUpdate =
+        nextMiningUpdate =
             DateTime.Parse(
                 data.nextMiningUpdate, 
                 null, 
@@ -493,7 +493,7 @@ public class CryptoSystem : MonoBehaviour
                  | 
                 System.Globalization.DateTimeStyles.AdjustToUniversal);
 
-        _nextMarketUpdate =
+        nextMarketUpdate =
             DateTime.Parse(
                 data.nextMarketUpdate, 
                 null, 
