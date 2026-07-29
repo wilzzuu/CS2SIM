@@ -12,9 +12,11 @@ public class CryptoSystem : MonoBehaviour
     public float btcPrice = 100000f;
     public float lastBtcPrice = 100000f;
     public float btcMinMarketPrice = 10000f;
+    public float btcMaxMarketPrice = 500000f;
     public float ethPrice = 5000f;
     public float lastEthPrice = 5000f;
     public float ethMinMarketPrice = 500f;
+    public float ethMaxMarketPrice = 25000f;
     private float _marketEventChance = 40f;
 
     [Header("Mining")]
@@ -523,13 +525,16 @@ public class CryptoSystem : MonoBehaviour
         switch (eventRoll)
         {
             case 0:
-                btcPrice *= 1.15f;
-                OnBtcPriceChanged?.Invoke();
-                currentMarketEvent = "BTC Bull Run [+15%]";
-                LogUtil.Event.Log(
-                    "BTC Bull Run",
-                    "BTC Price +15%"
-                );
+                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 1.15f, btcMaxMarketPrice))
+                {
+                    btcPrice *= 1.15f;
+                    OnBtcPriceChanged?.Invoke();
+                    currentMarketEvent = "BTC Bull Run [+15%]";
+                    LogUtil.Event.Log(
+                        "BTC Bull Run",
+                        "BTC Price +15%"
+                    );
+                }
                 break;
 
             case 1:
@@ -546,13 +551,16 @@ public class CryptoSystem : MonoBehaviour
                 break;
 
             case 2:
-                ethPrice *= 1.20f;
-                OnEthPriceChanged?.Invoke();
-                currentMarketEvent = "ETH Rally [+20%]";
-                LogUtil.Event.Log(
-                    "ETH Rally",
-                    "ETH Price +20%"
-                );
+                if (Globals.FloatUtil.GreaterOrEqual(ethPrice * 1.20f, ethMaxMarketPrice))
+                {
+                    ethPrice *= 1.20f;
+                    OnEthPriceChanged?.Invoke();
+                    currentMarketEvent = "ETH Rally [+20%]";
+                    LogUtil.Event.Log(
+                        "ETH Rally",
+                        "ETH Price +20%"
+                    );
+                }
                 break;
 
             case 3:
@@ -569,15 +577,18 @@ public class CryptoSystem : MonoBehaviour
                 break;
 
             case 4:
-                btcPrice *= 1.05f;
-                OnBtcPriceChanged?.Invoke();
-                ethPrice *= 1.05f;
-                OnEthPriceChanged?.Invoke();
-                currentMarketEvent = "Market Optimism [+5%]";
-                LogUtil.Event.Log(
-                    "Market Optimism",
-                    "BTC & ETH Price +5%"
-                );
+                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 1.05f, btcMaxMarketPrice))
+                {
+                    btcPrice *= 1.05f;
+                    OnBtcPriceChanged?.Invoke();
+                    ethPrice *= 1.05f;
+                    OnEthPriceChanged?.Invoke();
+                    currentMarketEvent = "Market Optimism [+5%]";
+                    LogUtil.Event.Log(
+                        "Market Optimism",
+                        "BTC & ETH Price +5%"
+                    );
+                }
                 break;
 
             case 5:
@@ -607,23 +618,29 @@ public class CryptoSystem : MonoBehaviour
                 break;
 
             case 7:
-                btcPrice *= 2.0f;
-                OnBtcPriceChanged?.Invoke();
-                currentMarketEvent = "BTC Insider Trading [+100%]";
-                LogUtil.Event.Log(
-                    "BTC Insider Trading",
-                    "BTC Price +100%"
-                );
+                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 2.0f, btcMaxMarketPrice))
+                {
+                    btcPrice *= 2.0f;
+                    OnBtcPriceChanged?.Invoke();
+                    currentMarketEvent = "BTC Insider Trading [+100%]";
+                    LogUtil.Event.Log(
+                        "BTC Insider Trading",
+                        "BTC Price +100%"
+                    );
+                }
                 break;
 
             case 8:
-                ethPrice *= 2.0f;
-                OnEthPriceChanged?.Invoke();
-                currentMarketEvent = "ETH Insider Trading [+100%]";
-                LogUtil.Event.Log(
-                    "ETH Insider Trading",
-                    "ETH Price +100%"
-                );
+                if (Globals.FloatUtil.GreaterOrEqual(ethPrice * 2.0f, ethMaxMarketPrice))
+                {
+                    ethPrice *= 2.0f;
+                    OnEthPriceChanged?.Invoke();
+                    currentMarketEvent = "ETH Insider Trading [+100%]";
+                    LogUtil.Event.Log(
+                        "ETH Insider Trading",
+                        "ETH Price +100%"
+                    );
+                }
                 break;
             default:
                 currentMarketEvent = "Stable Market";
