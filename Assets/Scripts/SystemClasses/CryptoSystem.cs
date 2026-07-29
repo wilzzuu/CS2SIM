@@ -19,19 +19,19 @@ public class CryptoSystem : MonoBehaviour
 
     [Header("Mining")]
     public int maxBtcMiners = 100;
-    public int _btcMiners = 0;
+    public int btcMiners = 0;
     public int maxEthMiners = 100;
-    public int _ethMiners = 0;
+    public int ethMiners = 0;
     public float btcMinerPrice = 100000f;
     public float ethMinerPrice = 5000f;
-    public float _btcPerHour = 0;
-    public float _ethPerHour = 0;
+    public float btcPerHour = 0;
+    public float ethPerHour = 0;
 
     [Header("Price Updates")]
 
-    private DateTime _lastMiningUpdate;
-    private DateTime _nextMiningUpdate;
-    private DateTime _nextMarketUpdate;
+    public DateTime lastMiningUpdate;
+    public DateTime nextMiningUpdate;
+    public DateTime nextMarketUpdate;
     public DateTime nextMarketEvent;
     public string currentMarketEvent = "Stable Market";
 
@@ -102,7 +102,7 @@ public class CryptoSystem : MonoBehaviour
     {
         while (true)
         {
-            TimeSpan remaining = _nextMarketUpdate - DateTime.UtcNow;
+            TimeSpan remaining = nextMarketUpdate - DateTime.UtcNow;
 
             bool canUpdate = remaining <= TimeSpan.Zero;
             if (canUpdate)
@@ -127,7 +127,7 @@ public class CryptoSystem : MonoBehaviour
 
         OnBtcPriceChanged?.Invoke();
         OnEthPriceChanged?.Invoke();
-        _nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
+        nextMarketUpdate = DateTime.UtcNow.AddMinutes(1);
 
         TimeSpan remaining = nextMarketEvent - DateTime.UtcNow;
         bool canUpdate = remaining <= TimeSpan.Zero;
@@ -156,20 +156,20 @@ public class CryptoSystem : MonoBehaviour
     {
         while (true)
         {
-            TimeSpan remaining = _nextMiningUpdate - DateTime.UtcNow;
+            TimeSpan remaining = nextMiningUpdate - DateTime.UtcNow;
 
             bool canUpdate = remaining <= TimeSpan.Zero;
             if (canUpdate)
             {
-                if (_btcMiners > 0)
+                if (btcMiners > 0)
                 {
                     PlayerManager.Instance.MineBtc(GetBtcPerHour());
                 }
-                if (_ethMiners > 0)
+                if (ethMiners > 0)
                 {
                     PlayerManager.Instance.MineEth(GetEthPerHour());
                 }
-                _nextMiningUpdate = DateTime.UtcNow.AddHours(1);
+                nextMiningUpdate = DateTime.UtcNow.AddHours(1);
 
                 SaveData();
             }
@@ -183,22 +183,22 @@ public class CryptoSystem : MonoBehaviour
         DateTime now = DateTime.UtcNow;
 
         double hoursPassed =
-            (now - _lastMiningUpdate).TotalHours;
+            (now - lastMiningUpdate).TotalHours;
 
 
         if (hoursPassed <= 0)
             return;
         
-        if (_btcMiners > 0)
+        if (btcMiners > 0)
         {
             PlayerManager.Instance.MineBtc(GetBtcPerHour() * (float)hoursPassed);
         }
-        if (_ethMiners > 0)
+        if (ethMiners > 0)
         {
             PlayerManager.Instance.MineEth(GetEthPerHour() * (float)hoursPassed);
         }
         
-        _lastMiningUpdate = now;
+        lastMiningUpdate = now;
 
         SaveData();
     }
@@ -232,12 +232,12 @@ public class CryptoSystem : MonoBehaviour
 
     public void AddBtcMiningRig()
     {
-        if (_btcMiners < maxBtcMiners)
+        if (btcMiners < maxBtcMiners)
         {
             float btcMinerPrice = GetBtcPrice();
             if (PlayerManager.Instance.GetPlayerBalance() >= btcMinerPrice)
             {
-                _btcMiners++;
+                btcMiners++;
                 PlayerManager.Instance.DeductMoney(btcMinerPrice);
                 GetBtcPerHour();
                 OnBtcMinersChanged?.Invoke();
@@ -248,9 +248,9 @@ public class CryptoSystem : MonoBehaviour
 
     public void RemoveBtcMiningRig()
     {
-        if (_btcMiners > 0)
+        if (btcMiners > 0)
         {
-            _btcMiners--;
+            btcMiners--;
             float minerSellPrice = GetBtcPrice() * 0.8f;
             PlayerManager.Instance.AddMoney(minerSellPrice);
             GetBtcPerHour();
@@ -261,12 +261,12 @@ public class CryptoSystem : MonoBehaviour
 
     public int GetBtcMinerCount()
     {
-        return _btcMiners;
+        return btcMiners;
     }
 
     public void SetBtcMinerCount(int count)
     {
-        _btcMiners = Mathf.Clamp(count, 0, maxBtcMiners);
+        btcMiners = Mathf.Clamp(count, 0, maxBtcMiners);
         GetBtcPerHour();
         OnBtcMinersChanged?.Invoke();
         SaveData();
@@ -274,12 +274,12 @@ public class CryptoSystem : MonoBehaviour
 
     public void AddEthMiningRig()
     {
-        if (_ethMiners < maxEthMiners)
+        if (ethMiners < maxEthMiners)
         {
             float ethMinerPrice = GetEthPrice();
             if (PlayerManager.Instance.GetPlayerBalance() >= ethMinerPrice)
             {
-                _ethMiners++;
+                ethMiners++;
                 PlayerManager.Instance.DeductMoney(ethMinerPrice);
                 GetEthPerHour();
                 OnEthMinersChanged?.Invoke();
@@ -290,9 +290,9 @@ public class CryptoSystem : MonoBehaviour
 
     public void RemoveEthMiningRig()
     {
-        if (_ethMiners > 0)
+        if (ethMiners > 0)
         {
-            _ethMiners--;
+            ethMiners--;
             float minerSellPrice = GetEthPrice() * 0.8f;
             PlayerManager.Instance.AddMoney(minerSellPrice);
             GetEthPerHour();
@@ -303,12 +303,12 @@ public class CryptoSystem : MonoBehaviour
 
     public int GetEthMinerCount()
     {
-        return _ethMiners;
+        return ethMiners;
     }
 
     public void SetEthMinerCount(int count)
     {
-        _ethMiners = Mathf.Clamp(count, 0, maxEthMiners);
+        ethMiners = Mathf.Clamp(count, 0, maxEthMiners);
         GetEthPerHour();
         OnEthMinersChanged?.Invoke();
         SaveData();
@@ -338,22 +338,22 @@ public class CryptoSystem : MonoBehaviour
 
     public float GetBtcPerHour()
     {
-        if (_btcMiners > 0)
+        if (btcMiners > 0)
         {
-            _btcPerHour = 1/(1200000/(1+(_btcMiners-1)*0.041225f)/3600);
+            btcPerHour = 1/(1200000/(1+(btcMiners-1)*0.041225f)/3600);
         }
         else
         {
-            _btcPerHour = 0;
+            btcPerHour = 0;
         }
-        return _btcPerHour;
+        return btcPerHour;
     }
     
     public float GetEthPerHour()
     {
-        if (_ethMiners > 0)
+        if (ethMiners > 0)
         {
-            _ethPerHour = 1/(1200000/(1+(_ethMiners-1)*0.041225f)/3600);
+            ethPerHour = 1/(1200000/(1+(ethMiners-1)*0.041225f)/3600);
         }
         else
         {
