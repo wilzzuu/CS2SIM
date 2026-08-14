@@ -17,7 +17,6 @@ public class CryptoSystem : MonoBehaviour
     public float lastEthPrice = 5000f;
     public float ethMinMarketPrice = 500f;
     public float ethMaxMarketPrice = 25000f;
-    private float _marketEventChance = 75f;
 
     [Header("Mining")]
     public int maxBtcMiners = 100;
@@ -135,17 +134,7 @@ public class CryptoSystem : MonoBehaviour
         bool canUpdate = remaining <= TimeSpan.Zero;
         if (canUpdate)
         {
-            bool isMarketEvent = UnityEngine.Random.Range(0, 100) < _marketEventChance;
-            if (isMarketEvent)
-            {
-                GenerateMarketEvent();
-            }
-            else
-            {
-                currentMarketEvent = "Stable Market";
-                nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
-                OnCurrentMarketEventChanged?.Invoke();
-            }
+            GenerateMarketEvent();
         }
 
         SaveData();
@@ -519,137 +508,169 @@ public class CryptoSystem : MonoBehaviour
     [ContextMenu("Generate Market Event")]
     public void GenerateMarketEvent()
     {
-        int eventRoll = UnityEngine.Random.Range(0, 8);
+        int eventRoll = UnityEngine.Random.Range(0, 9);
+
         AlertManager.Set(AlertType.Crypto, true);
 
         switch (eventRoll)
         {
             case 0:
-                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 1.15f, btcMaxMarketPrice))
-                {
-                    btcPrice *= 1.15f;
-                    OnBtcPriceChanged?.Invoke();
-                    currentMarketEvent = "BTC Bull Run [+15%]";
-                    LogUtil.Event.Log(
-                        "BTC Bull Run",
-                        "BTC Price +15%"
-                    );
-                }
+                ApplyBtcEvent(
+                    1.15f,
+                    btcMaxMarketPrice,
+                    "BTC Bull Run",
+                    "BTC Price +15%");
                 break;
 
             case 1:
-                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 0.85f, btcMinMarketPrice))
-                {
-                    btcPrice *= 0.85f;
-                    OnBtcPriceChanged?.Invoke();
-                    currentMarketEvent = "BTC Crash [-15%]";
-                    LogUtil.Event.Log(
-                        "BTC Crash",
-                        "BTC Price -15%"
-                    );
-                }
+                ApplyBtcEvent(
+                    0.85f,
+                    btcMinMarketPrice,
+                    "BTC Crash",
+                    "BTC Price -15%");
                 break;
 
             case 2:
-                if (Globals.FloatUtil.GreaterOrEqual(ethPrice * 1.20f, ethMaxMarketPrice))
-                {
-                    ethPrice *= 1.20f;
-                    OnEthPriceChanged?.Invoke();
-                    currentMarketEvent = "ETH Rally [+20%]";
-                    LogUtil.Event.Log(
-                        "ETH Rally",
-                        "ETH Price +20%"
-                    );
-                }
+                ApplyEthEvent(
+                    1.20f,
+                    ethMaxMarketPrice,
+                    "ETH Rally",
+                    "ETH Price +20%");
                 break;
 
             case 3:
-                if (Globals.FloatUtil.GreaterOrEqual(ethPrice * 0.80f, ethMinMarketPrice))
-                {
-                    ethPrice *= 0.80f;
-                    OnEthPriceChanged?.Invoke();
-                    currentMarketEvent = "ETH Correction [-20%]";
-                    LogUtil.Event.Log(
-                        "ETH Correction",
-                        "ETH Price -20%"
-                    );
-                }
+                ApplyEthEvent(
+                    0.80f,
+                    ethMinMarketPrice,
+                    "ETH Correction",
+                    "ETH Price -20%");
                 break;
 
             case 4:
-                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 1.05f, btcMaxMarketPrice))
-                {
-                    btcPrice *= 1.05f;
-                    OnBtcPriceChanged?.Invoke();
-                    ethPrice *= 1.05f;
-                    OnEthPriceChanged?.Invoke();
-                    currentMarketEvent = "Market Optimism [+5%]";
-                    LogUtil.Event.Log(
-                        "Market Optimism",
-                        "BTC & ETH Price +5%"
-                    );
-                }
+                ApplyMarketOptimism();
                 break;
 
             case 5:
-                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 0.5f, btcMinMarketPrice))
-                {
-                    btcPrice *= 0.5f;
-                    OnBtcPriceChanged?.Invoke();
-                    currentMarketEvent = "BTC Manipulation [-100%]";
-                    LogUtil.Event.Log(
-                        "BTC Manipulation",
-                        "BTC Price -100%"
-                    );
-                }
+                ApplyBtcEvent(
+                    0.50f,
+                    btcMinMarketPrice,
+                    "BTC Manipulation",
+                    "BTC Price -50%");
                 break;
 
             case 6:
-                if (Globals.FloatUtil.GreaterOrEqual(ethPrice * 0.5f, ethMinMarketPrice))
-                {
-                    ethPrice *= 0.5f;
-                    OnEthPriceChanged?.Invoke();
-                    currentMarketEvent = "ETH Manipulation [-100%]";
-                    LogUtil.Event.Log(
-                        "ETH Manipulation",
-                        "ETH Price -100%"
-                    );
-                }
+                ApplyEthEvent(
+                    0.50f,
+                    ethMinMarketPrice,
+                    "ETH Manipulation",
+                    "ETH Price -50%");
                 break;
 
             case 7:
-                if (Globals.FloatUtil.GreaterOrEqual(btcPrice * 2.0f, btcMaxMarketPrice))
-                {
-                    btcPrice *= 2.0f;
-                    OnBtcPriceChanged?.Invoke();
-                    currentMarketEvent = "BTC Insider Trading [+100%]";
-                    LogUtil.Event.Log(
-                        "BTC Insider Trading",
-                        "BTC Price +100%"
-                    );
-                }
+                ApplyBtcEvent(
+                    2.00f,
+                    btcMaxMarketPrice,
+                    "BTC Insider Trading",
+                    "BTC Price +100%");
                 break;
 
             case 8:
-                if (Globals.FloatUtil.GreaterOrEqual(ethPrice * 2.0f, ethMaxMarketPrice))
-                {
-                    ethPrice *= 2.0f;
-                    OnEthPriceChanged?.Invoke();
-                    currentMarketEvent = "ETH Insider Trading [+100%]";
-                    LogUtil.Event.Log(
-                        "ETH Insider Trading",
-                        "ETH Price +100%"
-                    );
-                }
-                break;
-            default:
-                currentMarketEvent = "Stable Market";
+                ApplyEthEvent(
+                    2.00f,
+                    ethMaxMarketPrice,
+                    "ETH Insider Trading",
+                    "ETH Price +100%");
                 break;
         }
-        
+
         nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
+
         OnCurrentMarketEventChanged?.Invoke();
+
         SaveData();
+    }
+
+    private void ApplyBtcEvent(
+    float multiplier,
+    float priceLimit,
+    string eventName,
+    string logDetails)
+    {
+        float newPrice = btcPrice * multiplier;
+
+        bool withinLimit = multiplier > 1f
+            ? Globals.FloatUtil.LessOrEqual(newPrice, priceLimit)
+            : Globals.FloatUtil.GreaterOrEqual(newPrice, priceLimit);
+
+        if (!withinLimit)
+            return;
+
+        btcPrice = newPrice;
+
+        OnBtcPriceChanged?.Invoke();
+
+        currentMarketEvent = eventName;
+
+        LogUtil.Event.Log(
+            eventName,
+            logDetails);
+    }
+
+    private void ApplyEthEvent(
+    float multiplier,
+    float priceLimit,
+    string eventName,
+    string logDetails)
+    {
+        float newPrice = ethPrice * multiplier;
+
+        bool withinLimit = multiplier > 1f
+            ? Globals.FloatUtil.LessOrEqual(newPrice, priceLimit)
+            : Globals.FloatUtil.GreaterOrEqual(newPrice, priceLimit);
+
+        if (!withinLimit)
+            return;
+
+        ethPrice = newPrice;
+
+        OnEthPriceChanged?.Invoke();
+
+        currentMarketEvent = eventName;
+
+        LogUtil.Event.Log(
+            eventName,
+            logDetails);
+    }
+
+    private void ApplyMarketOptimism()
+    {
+        float newBtcPrice = btcPrice * 1.05f;
+        float newEthPrice = ethPrice * 1.05f;
+
+        bool btcAllowed =
+            Globals.FloatUtil.LessOrEqual(
+                newBtcPrice,
+                btcMaxMarketPrice);
+
+        bool ethAllowed =
+            Globals.FloatUtil.LessOrEqual(
+                newEthPrice,
+                ethMaxMarketPrice);
+
+        if (!btcAllowed || !ethAllowed)
+            return;
+
+        btcPrice = newBtcPrice;
+        ethPrice = newEthPrice;
+
+        OnBtcPriceChanged?.Invoke();
+        OnEthPriceChanged?.Invoke();
+
+        currentMarketEvent = "Market Optimism [+5%]";
+
+        LogUtil.Event.Log(
+            "Market Optimism",
+            "BTC & ETH Price +5%");
     }
 
     #endregion
