@@ -511,6 +511,7 @@ public class CryptoSystem : MonoBehaviour
         int eventRoll = UnityEngine.Random.Range(0, 9);
 
         AlertManager.Set(AlertType.Crypto, true);
+        string previousEvent = currentMarketEvent;
 
         switch (eventRoll)
         {
@@ -585,8 +586,8 @@ public class CryptoSystem : MonoBehaviour
 
         nextMarketEvent = DateTime.UtcNow.AddMinutes(30);
 
-        OnCurrentMarketEventChanged?.Invoke();
-
+        if (currentMarketEvent != previousEvent)
+            OnCurrentMarketEventChanged?.Invoke();
         SaveData();
     }
 
