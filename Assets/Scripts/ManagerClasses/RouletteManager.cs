@@ -139,7 +139,7 @@ public class RouletteManager : MonoBehaviour
 
         _selectedPlayerItems.Add(item);
         _totalPlayerValue += item.price;
-        selectedPlayerItemsTotalValue.text = $"Total Value: {_totalPlayerValue:N2}€";
+        selectedPlayerItemsTotalValue.text = $"Total Value: {Globals.FormatCurrencyStr(_totalPlayerValue, Globals.EURO_DECIMAL)}€";
 
         UpdateSelectedItemsGrid();
     }
@@ -149,7 +149,7 @@ public class RouletteManager : MonoBehaviour
         if (_selectedPlayerItems.Remove(item))
         {
             _totalPlayerValue -= item.price;
-            selectedPlayerItemsTotalValue.text = $"Total Value: {_totalPlayerValue:N2}€";
+            selectedPlayerItemsTotalValue.text = $"Total Value: {Globals.FormatCurrencyStr(_totalPlayerValue, Globals.EURO_DECIMAL)}€";
         }
 
         UpdateSelectedItemsGrid();
@@ -330,9 +330,9 @@ public class RouletteManager : MonoBehaviour
 
         _winChance = reelItemCount > 0 ? (float)playerItemCount / reelItemCount * 100f : 0f;
 
-        chanceOfWinningText.text = $"Win Chance: {_winChance:N2}%";
-        totalPlayerValueText.text = $"Total Player Value: {totalPlayerItemValue:N2}€";
-        totalValueText.text = $"Total Game Value: {_totalGameValue:N2}€";
+        chanceOfWinningText.text = $"Win Chance: {_winChance:F2}%";
+        totalPlayerValueText.text = $"Total Player Value: {Globals.FormatCurrencyStr(totalPlayerItemValue, Globals.EURO_DECIMAL)}€";
+        totalValueText.text = $"Total Game Value: {Globals.FormatCurrencyStr(_totalGameValue, Globals.EURO_DECIMAL)}€";
         outcomeText.text = "";
     }
 

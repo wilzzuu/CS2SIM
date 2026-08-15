@@ -139,7 +139,7 @@ public class BankManager : MonoBehaviour
             "Loan Taken",
             amount,
             loanAmount,
-            "Repay {repaymentAmount:N2}€"
+            $"Repay {Globals.FormatCurrencyStr(repaymentAmount, Globals.EURO_DECIMAL)}€"
         );
 
         SaveData();
@@ -207,7 +207,7 @@ public class BankManager : MonoBehaviour
             "Loan Penalty",
             repaymentAmount,
             loanAmount,
-            $"Debt increased to {repaymentAmount:N2}€"
+            $"Debt increased to {Globals.FormatCurrencyStr(repaymentAmount, Globals.EURO_DECIMAL)}€"
         );
 
         SaveData();

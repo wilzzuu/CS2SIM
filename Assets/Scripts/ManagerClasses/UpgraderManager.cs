@@ -96,7 +96,7 @@ public class UpgraderManager : MonoBehaviour
     void RefreshInventoryValue()
     {
         float inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
-        inventoryValueText.text = $"Inventory Value:        {inventoryValue:N2}";
+        inventoryValueText.text = $"Inventory Value:        {Globals.FormatCurrencyStr(inventoryValue, Globals.EURO_DECIMAL)}€";
     }
 
     private void UpdateCurrentTab()

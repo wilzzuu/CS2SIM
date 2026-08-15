@@ -129,7 +129,7 @@ public class AutoTrader : MonoBehaviour
 
         LogUtil.Event.Log(
             "AutoTrader BTC Buy",
-            $"{btcAmount:F6} BTC @ {price:N2}"
+            $"{btcAmount:F6} BTC @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
         );
     }
 
@@ -149,7 +149,7 @@ public class AutoTrader : MonoBehaviour
 
         LogUtil.Event.Log(
             "AutoTrader BTC Sell",
-            $"{amount:F6} BTC @ {price:N2}"
+            $"{amount:F6} BTC @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
         );
     }
 
@@ -169,7 +169,7 @@ public class AutoTrader : MonoBehaviour
 
         LogUtil.Event.Log(
             "AutoTrader ETH Buy",
-            $"{ethAmount:F6} ETH @ {price:N2}"
+            $"{ethAmount:F6} ETH @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
         );
     }
 
@@ -189,7 +189,7 @@ public class AutoTrader : MonoBehaviour
 
         LogUtil.Event.Log(
             "AutoTrader ETH Sell",
-            $"{amount:F6} ETH @ {price:N2}"
+            $"{amount:F6} ETH @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
         );
     }
 

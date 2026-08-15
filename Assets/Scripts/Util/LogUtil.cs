@@ -43,8 +43,8 @@ public static class LogUtil
                 string entry =
                     $"[{timestamp}] " +
                     $"ACTION={action} | " +
-                    $"AMOUNT={sign}{amount:N2}€ | " +
-                    $"BALANCE={resultingBalance:N2}€";
+                    $"AMOUNT={sign}{Globals.FormatCurrencyStr(amount, Globals.EURO_DECIMAL)}€ | " +
+                    $"BALANCE={Globals.FormatCurrencyStr(resultingBalance, Globals.EURO_DECIMAL)}€";
 
                 if (!string.IsNullOrWhiteSpace(details))
                 {
@@ -87,8 +87,8 @@ public static class LogUtil
                 string entry =
                     $"[{timestamp}] " +
                     $"ACTION={action} | " +
-                    $"AMOUNT={sign}{cryptoAmount:F8} | " +
-                    $"BALANCE={resultingBalance:F8} {cryptoType}";
+                    $"AMOUNT={sign}{Globals.FormatCurrencyStr(cryptoAmount, Globals.CRYPTO_DECIMAL)} | " +
+                    $"BALANCE={Globals.FormatCurrencyStr(resultingBalance, Globals.CRYPTO_DECIMAL)} {cryptoType}";
 
                 if (!string.IsNullOrWhiteSpace(details))
                 {

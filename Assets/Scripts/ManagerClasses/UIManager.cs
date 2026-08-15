@@ -90,7 +90,7 @@ public class UIManager : MonoBehaviour
     void UpdateBalanceDisplay()
     {
         float bal = PlayerManager.Instance.GetPlayerBalance();
-        balance.text = $"{bal:N2}€";
+        balance.text = $"{Globals.FormatCurrencyStr(bal, Globals.EURO_DECIMAL)}€";
     }
 
     void UpdateBitcoinDisplay()
@@ -102,19 +102,19 @@ public class UIManager : MonoBehaviour
         float btcPriceDiff = btcValue - CryptoSystem.Instance.lastBtcPrice;
         bool isBtcNegative = Single.IsNegative(btcPriceDiff);
 
-        btcPriceText.text = $"{btcValue:N2}€";
-        btcDiffText.text = $"{(isBtcNegative ? "" : "+")}{btcPriceDiff:N2}€";
+        btcPriceText.text = $"{Globals.FormatCurrencyStr(btcValue, Globals.EURO_DECIMAL)}€";
+        btcDiffText.text = $"{(isBtcNegative ? "" : "+")}{Globals.FormatCurrencyStr(btcPriceDiff, Globals.EURO_DECIMAL)}€";
         btcDiffText.color = isBtcNegative ? Color.red : Color.green;
 
         if (btcWallet > 0.01f)
         {
-            btcAmountText.text = $"{btc:F8}";
-            btcValueText.text = $"{btcWallet:N2}€";
+            btcAmountText.text = $"{Globals.FormatCurrencyStr(btc, Globals.CRYPTO_DECIMAL)}";
+            btcValueText.text = $"{Globals.FormatCurrencyStr(btcWallet, Globals.EURO_DECIMAL)}€";
         }
         else
         {
-            btcAmountText.text = $"{0:F8}";
-            btcValueText.text = $"{0:N2}€";
+            btcAmountText.text = $"{Globals.FormatCurrencyStr(0, Globals.CRYPTO_DECIMAL)}";
+            btcValueText.text = $"{Globals.FormatCurrencyStr(0, Globals.EURO_DECIMAL)}€";
         }
 
         int btcMiners = CryptoSystem.Instance.GetBtcMinerCount();
@@ -123,13 +123,13 @@ public class UIManager : MonoBehaviour
 
         if (btcMiners > 0)
         {
-            btcPerHourText.text = $"{btcPerHour:F8}/h";
-            btcEurPerHourText.text = $"{eurPerHour:N2}€/h";
+            btcPerHourText.text = $"{Globals.FormatCurrencyStr(btcPerHour, Globals.CRYPTO_DECIMAL)}/h";
+            btcEurPerHourText.text = $"{Globals.FormatCurrencyStr(eurPerHour, Globals.EURO_DECIMAL)}€/h";
         }
         else
         {
-            btcPerHourText.text = $"{0:F8}/h";
-            btcEurPerHourText.text = $"{0:N2}€/h";
+            btcPerHourText.text = $"{Globals.FormatCurrencyStr(0, Globals.CRYPTO_DECIMAL)}/h";
+            btcEurPerHourText.text = $"{Globals.FormatCurrencyStr(0, Globals.EURO_DECIMAL)}€/h";
         }
     }
 
@@ -142,19 +142,19 @@ public class UIManager : MonoBehaviour
         float ethPriceDiff = ethValue - CryptoSystem.Instance.lastEthPrice;
         bool isEthNegative = Single.IsNegative(ethPriceDiff);
 
-        ethPriceText.text = $"{ethValue:N2}€";
-        ethDiffText.text = $"{(isEthNegative ? "" : "+")}{ethPriceDiff:N2}€";
+        ethPriceText.text = $"{Globals.FormatCurrencyStr(ethValue, Globals.EURO_DECIMAL)}€";
+        ethDiffText.text = $"{(isEthNegative ? "" : "+")}{Globals.FormatCurrencyStr(ethPriceDiff, Globals.EURO_DECIMAL)}€";
         ethDiffText.color = isEthNegative ? Color.red : Color.green;
 
         if (ethWallet > 0.01f)
         {
-            ethAmountText.text = $"{eth:F8}";
-            ethValueText.text = $"{ethWallet:N2}€";
+            ethAmountText.text = $"{Globals.FormatCurrencyStr(eth, Globals.CRYPTO_DECIMAL)}";
+            ethValueText.text = $"{Globals.FormatCurrencyStr(ethWallet, Globals.EURO_DECIMAL)}€";
         }
         else
         {
-            ethAmountText.text = $"{0:F8}";
-            ethValueText.text = $"{0:N2}€";
+            ethAmountText.text = $"{Globals.FormatCurrencyStr(0, Globals.CRYPTO_DECIMAL)}";
+            ethValueText.text = $"{Globals.FormatCurrencyStr(0, Globals.EURO_DECIMAL)}€";
         }
 
         int ethMiners = CryptoSystem.Instance.GetEthMinerCount();
@@ -163,20 +163,20 @@ public class UIManager : MonoBehaviour
 
         if (ethMiners > 0)
         {
-            ethPerHourText.text = $"{ethPerHour:F8}/h";
-            ethEurPerHourText.text = $"{eurPerHour:N2}€/h";
+            ethPerHourText.text = $"{Globals.FormatCurrencyStr(ethPerHour, Globals.CRYPTO_DECIMAL)}/h";
+            ethEurPerHourText.text = $"{Globals.FormatCurrencyStr(eurPerHour, Globals.EURO_DECIMAL)}€/h";
         }
         else
         {
-            ethPerHourText.text = $"{0:F8}/h";
-            ethEurPerHourText.text = $"{0:N2}€/h";
+            ethPerHourText.text = $"{Globals.FormatCurrencyStr(0, Globals.CRYPTO_DECIMAL)}/h";
+            ethEurPerHourText.text = $"{Globals.FormatCurrencyStr(0, Globals.EURO_DECIMAL)}€/h";
         }
     }
 
     void UpdateInventoryValueDisplay()
     {
         float inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
-        inventoryValueText.text = $"{inventoryValue:N2}€";
+        inventoryValueText.text = $"{Globals.FormatCurrencyStr(inventoryValue, Globals.EURO_DECIMAL)}€";
     }
 
     public void LockButton(Button button)

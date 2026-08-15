@@ -96,12 +96,12 @@ public class CoinFlipManager : MonoBehaviour
             PlayerManager.Instance.AddMoney(payout);
 
             resultText.text =
-                $"WIN! +{payout:N2}€";
+                $"WIN! +{Globals.FormatCurrencyStr(payout, Globals.EURO_DECIMAL)}€";
         }
         else
         {
             resultText.text =
-                $"LOSE! -{bet:N2}€";
+                $"LOSE! -{Globals.FormatCurrencyStr(bet, Globals.EURO_DECIMAL)}€";
         }
     }
 

@@ -77,7 +77,7 @@ public class InvestingManager : MonoBehaviour
 
         // Update stock details
         stockNameText.text = stock.stockName;
-        stockPriceText.text = $"Price: {stock.currentPrice:N2}€";
+        stockPriceText.text = $"Price: {Globals.FormatCurrencyStr(stock.currentPrice, Globals.EURO_DECIMAL)}€";
         stockOwnedText.text = $"Owned: {GetStockQuantity(stock.stockID)}";
 
         // Draw graph
@@ -195,7 +195,7 @@ public class InvestingManager : MonoBehaviour
     {
         if (_selectedStock != null)
         {
-            stockPriceText.text = $"Price: {_selectedStock.currentPrice:N2}€";
+            stockPriceText.text = $"Price: {Globals.FormatCurrencyStr(_selectedStock.currentPrice, Globals.EURO_DECIMAL)}€";
             DrawStockGraph(_selectedStock);
         }
     }

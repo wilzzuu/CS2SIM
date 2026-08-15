@@ -91,7 +91,7 @@ public class CaseOpening : MonoBehaviour
         
         caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{_selectedCaseData.id}");
         nameText.text = _selectedCaseData.name;
-        priceText.text = $"{_selectedCaseData.price + keyPrice:N2}€";
+        priceText.text = $"{_selectedCaseData.price + Globals.FormatCurrencyStr(keyPrice, Globals.EURO_DECIMAL)}€";
 
         GroupItemsByRarity();
 
@@ -360,7 +360,7 @@ public class CaseOpening : MonoBehaviour
 
         string imagePath = $"ItemImages/{itemData.imageName}";
         string rarityPath = "RarityImages/" + itemData.rarity;
-        priceText.text = $"{itemData.price:N2}€";
+        priceText.text = $"{Globals.FormatCurrencyStr(itemData.price, Globals.EURO_DECIMAL)}€";
         
         if (conditionText != null)
         {
@@ -443,7 +443,7 @@ public class CaseOpening : MonoBehaviour
                 rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{bestConditionItem.rarity}");
                 gunText.text = bestConditionItem.gun;
                 nameText.text = bestConditionItem.name;
-                priceText.text = $"{minPrice:N2} - {maxPrice:N2}€";
+                priceText.text = $"{Globals.FormatCurrencyStr(minPrice, Globals.EURO_DECIMAL)} - {Globals.FormatCurrencyStr(maxPrice, Globals.EURO_DECIMAL)}€";
             }
 
             if (itemsInGroup.Any(item => item.rarity == RarityData.Name[RarityNames.Special]))
@@ -465,7 +465,7 @@ public class CaseOpening : MonoBehaviour
             itemImage.sprite = Resources.Load<Sprite>($"ItemImages/special_item");
             rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/SPECIAL");
             nameText.text = "Special Item";
-            priceText.text = $"{minSpecialPrice:N2}€ - {maxSpecialPrice:N2}€";
+            priceText.text = $"{Globals.FormatCurrencyStr(minSpecialPrice, Globals.EURO_DECIMAL)}€ - {Globals.FormatCurrencyStr(maxSpecialPrice, Globals.EURO_DECIMAL)}€";
         }
     }
 
@@ -501,7 +501,7 @@ public class CaseOpening : MonoBehaviour
             
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
-            priceText.text = $"{caseData.price + keyPrice:N2}€";
+            priceText.text = $"{caseData.price + Globals.FormatCurrencyStr(keyPrice, Globals.EURO_DECIMAL)}€";
 
             Button button = caseButton.GetComponent<Button>();
             button.onClick.AddListener(() => SelectCase(caseData));

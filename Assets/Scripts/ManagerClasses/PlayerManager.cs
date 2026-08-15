@@ -123,7 +123,7 @@ public class PlayerManager : MonoBehaviour
             amount,
             "BTC",
             player.btcOwned,
-            $"-{euroAmount:N2}€"
+            $"-{Globals.FormatCurrencyStr(euroAmount, Globals.EURO_DECIMAL)}€"
         );
 
         SavePlayerData();
@@ -140,7 +140,7 @@ public class PlayerManager : MonoBehaviour
             amount,
             "BTC",
             player.btcOwned,
-            $"-{euroAmount:N2}€"
+            $"-{Globals.FormatCurrencyStr(euroAmount, Globals.EURO_DECIMAL)}€"
         );
 
         SavePlayerData();
@@ -159,7 +159,7 @@ public class PlayerManager : MonoBehaviour
                 -amount,
                 "BTC",
                 player.btcOwned,
-                $"+{euroAmount:N2}€"
+                $"+{Globals.FormatCurrencyStr(euroAmount, Globals.EURO_DECIMAL)}€"
             );
 
             SavePlayerData();
@@ -193,7 +193,7 @@ public class PlayerManager : MonoBehaviour
             amount,
             "ETH",
             player.ethOwned,
-            $"-{euroAmount:N2}€"
+            $"-{Globals.FormatCurrencyStr(euroAmount, Globals.EURO_DECIMAL)}€"
         );
 
         SavePlayerData();
@@ -211,7 +211,7 @@ public class PlayerManager : MonoBehaviour
             amount,
             "ETH",
             player.ethOwned,
-            $"-{euroAmount:N2}€"
+            $"-{Globals.FormatCurrencyStr(euroAmount, Globals.EURO_DECIMAL)}€"
         );
 
         SavePlayerData();
@@ -230,7 +230,7 @@ public class PlayerManager : MonoBehaviour
                 -amount,
                 "ETH",
                 player.ethOwned,
-                $"+{euroAmount:N2}€"
+                $"+{Globals.FormatCurrencyStr(euroAmount, Globals.EURO_DECIMAL)}€"
             );
 
             SavePlayerData();
