@@ -536,7 +536,7 @@ public class Console : MonoBehaviour
         }
 
         PlayerManager.Instance.AddMoney(amount);
-        Debug.Log($"Added {amount:F2}€");
+        Debug.Log($"Added {amount:N2}€");
     }
 
     private void DeductMoney(string[] args)
@@ -548,7 +548,7 @@ public class Console : MonoBehaviour
         }
 
         PlayerManager.Instance.DeductMoney(amount);
-        Debug.Log($"Deducted {amount:F2}€");
+        Debug.Log($"Deducted {amount:N2}€");
     }
 
     private void SetMoney(string[] args)
@@ -561,7 +561,7 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.SetMoney(amount);
 
-        Debug.Log($"Balance set to {amount:F2}€");
+        Debug.Log($"Balance set to {amount:N2}€");
     }
 
     private void SetBtc(string[] args)
@@ -678,7 +678,7 @@ public class Console : MonoBehaviour
 
         CryptoSystem.Instance.SetBtcPrice(price);
 
-        Debug.Log($"Bitcoin price set to {price:F2}€");
+        Debug.Log($"Bitcoin price set to {price:N2}€");
     }
 
     private void AddBtcMiner(string[] args)
@@ -717,7 +717,7 @@ public class Console : MonoBehaviour
 
         CryptoSystem.Instance.SetEthPrice(price);
 
-        Debug.Log($"Ethereum price set to {price:F2}€");
+        Debug.Log($"Ethereum price set to {price:N2}€");
     }
 
     private void AddEthMiner(string[] args)

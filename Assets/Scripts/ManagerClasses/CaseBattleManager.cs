@@ -140,7 +140,7 @@ public class CaseBattleManager : MonoBehaviour
             
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
-            priceText.text = $"{casePrice:F2}€";
+            priceText.text = $"{casePrice:N2}€";
 
             Button button = caseButton.GetComponent<Button>();
             button.onClick.AddListener(() => SelectCase(caseData));
@@ -330,7 +330,7 @@ public class CaseBattleManager : MonoBehaviour
         GameObject playerResultItem = playerResultArea.GetChild(roundNumber).gameObject;
         SetUpResultItem(playerResultItem, playerItem);
         _playerTotalValue += playerItem.price;
-        playerTotalValueText.text = $"Total Value: {_playerTotalValue:F2}€";
+        playerTotalValueText.text = $"Total Value: {_playerTotalValue:N2}€";
     }
     
     private void DisplayBotRoundResult(ItemData botItem, int roundNumber)
@@ -338,7 +338,7 @@ public class CaseBattleManager : MonoBehaviour
         GameObject botResultItem = botResultArea.GetChild(roundNumber).gameObject;
         SetUpResultItem(botResultItem, botItem);
         _botTotalValue += botItem.price;
-        botTotalValueText.text = $"Total Value: {_botTotalValue:F2}€";
+        botTotalValueText.text = $"Total Value: {_botTotalValue:N2}€";
     }
     
     private void SetUpResultItem(GameObject resultItem, ItemData itemData)
@@ -355,7 +355,7 @@ public class CaseBattleManager : MonoBehaviour
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
         gunText.text = itemData.gun;
         nameText.text = itemData.name;
-        priceText.text = $"{itemData.price:F2}€";
+        priceText.text = $"{itemData.price:N2}€";
     }
 
     private void SetUpReelItem(GameObject reelItem, ItemData itemData)
@@ -384,7 +384,7 @@ public class CaseBattleManager : MonoBehaviour
             statTrakText.gameObject.SetActive(false);
         }
 
-        priceText.text = $"{itemData.price:F2}€";
+        priceText.text = $"{itemData.price:N2}€";
 
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.imageName}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");

@@ -77,7 +77,7 @@ public class InvestingManager : MonoBehaviour
 
         // Update stock details
         stockNameText.text = stock.stockName;
-        stockPriceText.text = $"Price: {stock.currentPrice:F2}€";
+        stockPriceText.text = $"Price: {stock.currentPrice:N2}€";
         stockOwnedText.text = $"Owned: {GetStockQuantity(stock.stockID)}";
 
         // Draw graph
@@ -195,7 +195,7 @@ public class InvestingManager : MonoBehaviour
     {
         if (_selectedStock != null)
         {
-            stockPriceText.text = $"Price: {_selectedStock.currentPrice:F2}€";
+            stockPriceText.text = $"Price: {_selectedStock.currentPrice:N2}€";
             DrawStockGraph(_selectedStock);
         }
     }

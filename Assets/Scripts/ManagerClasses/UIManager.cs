@@ -90,7 +90,7 @@ public class UIManager : MonoBehaviour
     void UpdateBalanceDisplay()
     {
         float bal = PlayerManager.Instance.GetPlayerBalance();
-        balance.text = $"{bal:F2}€";
+        balance.text = $"{bal:N2}€";
     }
 
     void UpdateBitcoinDisplay()
@@ -102,19 +102,19 @@ public class UIManager : MonoBehaviour
         float btcPriceDiff = btcValue - CryptoSystem.Instance.lastBtcPrice;
         bool isBtcNegative = Single.IsNegative(btcPriceDiff);
 
-        btcPriceText.text = $"{btcValue:F2}€";
-        btcDiffText.text = $"{(isBtcNegative ? "" : "+")}{btcPriceDiff:F2}€";
+        btcPriceText.text = $"{btcValue:N2}€";
+        btcDiffText.text = $"{(isBtcNegative ? "" : "+")}{btcPriceDiff:N2}€";
         btcDiffText.color = isBtcNegative ? Color.red : Color.green;
 
         if (btcWallet > 0.01f)
         {
             btcAmountText.text = $"{btc:F8}";
-            btcValueText.text = $"{btcWallet:F2}€";
+            btcValueText.text = $"{btcWallet:N2}€";
         }
         else
         {
             btcAmountText.text = $"{0:F8}";
-            btcValueText.text = $"{0:F2}€";
+            btcValueText.text = $"{0:N2}€";
         }
 
         int btcMiners = CryptoSystem.Instance.GetBtcMinerCount();
@@ -124,12 +124,12 @@ public class UIManager : MonoBehaviour
         if (btcMiners > 0)
         {
             btcPerHourText.text = $"{btcPerHour:F8}/h";
-            btcEurPerHourText.text = $"{eurPerHour:F2}€/h";
+            btcEurPerHourText.text = $"{eurPerHour:N2}€/h";
         }
         else
         {
             btcPerHourText.text = $"{0:F8}/h";
-            btcEurPerHourText.text = $"{0:F2}€/h";
+            btcEurPerHourText.text = $"{0:N2}€/h";
         }
     }
 
@@ -142,19 +142,19 @@ public class UIManager : MonoBehaviour
         float ethPriceDiff = ethValue - CryptoSystem.Instance.lastEthPrice;
         bool isEthNegative = Single.IsNegative(ethPriceDiff);
 
-        ethPriceText.text = $"{ethValue:F2}€";
-        ethDiffText.text = $"{(isEthNegative ? "" : "+")}{ethPriceDiff:F2}€";
+        ethPriceText.text = $"{ethValue:N2}€";
+        ethDiffText.text = $"{(isEthNegative ? "" : "+")}{ethPriceDiff:N2}€";
         ethDiffText.color = isEthNegative ? Color.red : Color.green;
 
         if (ethWallet > 0.01f)
         {
             ethAmountText.text = $"{eth:F8}";
-            ethValueText.text = $"{ethWallet:F2}€";
+            ethValueText.text = $"{ethWallet:N2}€";
         }
         else
         {
             ethAmountText.text = $"{0:F8}";
-            ethValueText.text = $"{0:F2}€";
+            ethValueText.text = $"{0:N2}€";
         }
 
         int ethMiners = CryptoSystem.Instance.GetEthMinerCount();
@@ -164,19 +164,19 @@ public class UIManager : MonoBehaviour
         if (ethMiners > 0)
         {
             ethPerHourText.text = $"{ethPerHour:F8}/h";
-            ethEurPerHourText.text = $"{eurPerHour:F2}€/h";
+            ethEurPerHourText.text = $"{eurPerHour:N2}€/h";
         }
         else
         {
             ethPerHourText.text = $"{0:F8}/h";
-            ethEurPerHourText.text = $"{0:F2}€/h";
+            ethEurPerHourText.text = $"{0:N2}€/h";
         }
     }
 
     void UpdateInventoryValueDisplay()
     {
         float inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
-        inventoryValueText.text = $"{inventoryValue:F2}€";
+        inventoryValueText.text = $"{inventoryValue:N2}€";
     }
 
     public void LockButton(Button button)

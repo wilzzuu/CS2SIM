@@ -139,7 +139,7 @@ public class BankManager : MonoBehaviour
             "Loan Taken",
             amount,
             loanAmount,
-            "Repay {repaymentAmount:F2}€"
+            "Repay {repaymentAmount:N2}€"
         );
 
         SaveData();
@@ -207,7 +207,7 @@ public class BankManager : MonoBehaviour
             "Loan Penalty",
             repaymentAmount,
             loanAmount,
-            $"Debt increased to {repaymentAmount:F2}€"
+            $"Debt increased to {repaymentAmount:N2}€"
         );
 
         SaveData();

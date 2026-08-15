@@ -43,8 +43,8 @@ public static class LogUtil
                 string entry =
                     $"[{timestamp}] " +
                     $"ACTION={action} | " +
-                    $"AMOUNT={sign}{amount:F2}€ | " +
-                    $"BALANCE={resultingBalance:F2}€";
+                    $"AMOUNT={sign}{amount:N2}€ | " +
+                    $"BALANCE={resultingBalance:N2}€";
 
                 if (!string.IsNullOrWhiteSpace(details))
                 {

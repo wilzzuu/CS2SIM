@@ -123,7 +123,7 @@ public class PlayerManager : MonoBehaviour
             amount,
             "BTC",
             player.btcOwned,
-            $"-{euroAmount:F2}€"
+            $"-{euroAmount:N2}€"
         );
 
         SavePlayerData();
@@ -140,7 +140,7 @@ public class PlayerManager : MonoBehaviour
             amount,
             "BTC",
             player.btcOwned,
-            $"-{euroAmount:F2}€"
+            $"-{euroAmount:N2}€"
         );
 
         SavePlayerData();
@@ -159,7 +159,7 @@ public class PlayerManager : MonoBehaviour
                 -amount,
                 "BTC",
                 player.btcOwned,
-                $"+{euroAmount:F2}€"
+                $"+{euroAmount:N2}€"
             );
 
             SavePlayerData();
@@ -193,7 +193,7 @@ public class PlayerManager : MonoBehaviour
             amount,
             "ETH",
             player.ethOwned,
-            $"-{euroAmount:F2}€"
+            $"-{euroAmount:N2}€"
         );
 
         SavePlayerData();
@@ -211,7 +211,7 @@ public class PlayerManager : MonoBehaviour
             amount,
             "ETH",
             player.ethOwned,
-            $"-{euroAmount:F2}€"
+            $"-{euroAmount:N2}€"
         );
 
         SavePlayerData();
@@ -230,7 +230,7 @@ public class PlayerManager : MonoBehaviour
                 -amount,
                 "ETH",
                 player.ethOwned,
-                $"+{euroAmount:F2}€"
+                $"+{euroAmount:N2}€"
             );
 
             SavePlayerData();

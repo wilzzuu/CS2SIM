@@ -40,7 +40,7 @@ public class CrashManager : MonoBehaviour
             _elapsedTime += Time.deltaTime;
             float currentMultiplierRate = InitialMultiplierRate + (AccelerationFactor * _elapsedTime);
             _currentMultiplier += currentMultiplierRate * Time.deltaTime;
-            multiplierText.text = $"x{_currentMultiplier:F2}";
+            multiplierText.text = $"x{_currentMultiplier:N2}";
 
             if (_currentMultiplier >= _crashPoint)
             {
@@ -133,7 +133,7 @@ public class CrashManager : MonoBehaviour
                 PlayerManager.Instance.GetPlayerBalance()
             );
 
-            outcomeText.text = $"+{winnings:F2}€";
+            outcomeText.text = $"+{winnings:N2}€";
             _hasCashedOut = true;
             EndGame();
             uiManager.UnlockUI();
@@ -150,6 +150,6 @@ public class CrashManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        multiplierText.text = $"x{_currentMultiplier:F2}";
+        multiplierText.text = $"x{_currentMultiplier:N2}";
     }
 }

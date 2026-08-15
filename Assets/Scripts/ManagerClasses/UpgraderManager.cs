@@ -96,7 +96,7 @@ public class UpgraderManager : MonoBehaviour
     void RefreshInventoryValue()
     {
         float inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
-        inventoryValueText.text = $"Inventory Value:        {inventoryValue:F2}";
+        inventoryValueText.text = $"Inventory Value:        {inventoryValue:N2}";
     }
 
     private void UpdateCurrentTab()

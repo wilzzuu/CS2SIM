@@ -93,7 +93,7 @@ public class HighLowManager : MonoBehaviour
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
         gunText.text = item.gun;
         nameText.text = item.name;
-        priceText.text = $"{item.price:F2}€";
+        priceText.text = $"{item.price:N2}€";
     }
 
     private void PopulatePreviousItem(ItemData item)
@@ -114,7 +114,7 @@ public class HighLowManager : MonoBehaviour
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
         gunText.text = item.gun;
         nameText.text = item.name;
-        priceText.text = $"{item.price:F2}€";
+        priceText.text = $"{item.price:N2}€";
     }
     
     private ItemData GetRandomItem()
@@ -194,7 +194,7 @@ public class HighLowManager : MonoBehaviour
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
             float cashOutAmount = _betAmount * _roundNumber * RoundMultiplier;
-            cashOutText.text = $"Cash Out {cashOutAmount:F2}€ at {_roundNumber * RoundMultiplier}x";
+            cashOutText.text = $"Cash Out {cashOutAmount:N2}€ at {_roundNumber * RoundMultiplier}x";
         }
         else if (_currentItem.price < _previousItem.price)
         {
@@ -221,7 +221,7 @@ public class HighLowManager : MonoBehaviour
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
             float cashOutAmount = _betAmount * _roundNumber * RoundMultiplier;
-            cashOutText.text = $"Cash Out {cashOutAmount:F2}€ at {_roundNumber * RoundMultiplier}x";
+            cashOutText.text = $"Cash Out {cashOutAmount:N2}€ at {_roundNumber * RoundMultiplier}x";
         }
         else if (_currentItem.price > _previousItem.price)
         {
@@ -260,7 +260,7 @@ public class HighLowManager : MonoBehaviour
             PlayerManager.Instance.GetPlayerBalance()
         );
 
-        resultText.text = $"You cashed out {winnings:F2}€ at {_roundNumber * RoundMultiplier}x";
+        resultText.text = $"You cashed out {winnings:N2}€ at {_roundNumber * RoundMultiplier}x";
         GameOver();
     }
 }
