@@ -1,0 +1,18 @@
+TWO BUTTONS
+[ 1 ] [ 2 ]
+
+-List of 20 inputs
+Initially the first game:
+    - 10 [1]
+    - 10 [2]
+-> Odds start at 50/50 for [1] and [2]
+
+LOOP
+1. Game displays current odds
+2. Player bets money
+3. Player chooses to press [1] or [2]
+4. Game decides outcome based on current odds
+5. Payout/loss -> payout is multiplied by odds
+6. Game logs and saves the outcome into list of inputs, replacing one previous input from end of list
+7. Game calculates new odds for [1] and [2] based on new list of 20 inputs
+8. Repeat
