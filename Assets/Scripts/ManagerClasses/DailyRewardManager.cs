@@ -116,7 +116,7 @@ public class DailyRewardUI : MonoBehaviour
         DailyRewardSystem.Instance.lastClaim = DateTime.UtcNow;
         
         DailyRewardSystem.Instance.currentDay++;
-        if (DailyRewardSystem.Instance.currentDay > 6)
+        if (DailyRewardSystem.Instance.currentDay >= 7)
             DailyRewardSystem.Instance.currentDay = 0;
 
         DailyRewardSystem.Instance.SaveData();
