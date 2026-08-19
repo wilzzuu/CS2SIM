@@ -51,7 +51,7 @@ public class DailyRewardUI : MonoBehaviour
     private void RefreshUI()
     {
         float ethValue =  rewards[6].rewardAmount / CryptoSystem.Instance.GetEthPrice();
-        seventhSlotEthValueText.text = $"{ethValue:F8}";
+        seventhSlotEthValueText.text = $"{Globals.FormatCurrencyStr(ethValue, Globals.CRYPTO_DECIMAL)}";
         foreach (var slot in slots)
         {
             TextMeshProUGUI buttonText = slot.GetComponentInChildren<TextMeshProUGUI>();

@@ -136,6 +136,7 @@ public class Console : MonoBehaviour
         // DailyRewardSystem
         Register("setcurrentday", "Set the current day", "setcurrentday <0-6>", 1, SetCurrentDay);
         Register("setclaimable", "Set whether the daily reward can be claimed", "setclaimable <true/false>", 1, SetClaimable);
+        //Register("setdailyremaining", "Set daily reward remaining time", "setdailyremaining", 0, SetDailyRemaining);
 
         // Log
         Register("log", "Log a message", "log <message>", 1, LogMessage);
@@ -536,7 +537,7 @@ public class Console : MonoBehaviour
         }
 
         PlayerManager.Instance.AddMoney(amount);
-        Debug.Log($"Added {amount:N2}€");
+        Debug.Log($"Added {Globals.FormatCurrencyStr(amount, Globals.EURO_DECIMAL)}€");
     }
 
     private void DeductMoney(string[] args)
@@ -548,7 +549,7 @@ public class Console : MonoBehaviour
         }
 
         PlayerManager.Instance.DeductMoney(amount);
-        Debug.Log($"Deducted {amount:N2}€");
+        Debug.Log($"Deducted {Globals.FormatCurrencyStr(amount, Globals.EURO_DECIMAL)}€");
     }
 
     private void SetMoney(string[] args)
@@ -561,7 +562,7 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.SetMoney(amount);
 
-        Debug.Log($"Balance set to {amount:N2}€");
+        Debug.Log($"Balance set to {Globals.FormatCurrencyStr(amount, Globals.EURO_DECIMAL)}€");
     }
 
     private void SetBtc(string[] args)
@@ -574,7 +575,7 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.SetBtc(amount);
 
-        Debug.Log($"Bitcoin amount set to {amount:F8} BTC");
+        Debug.Log($"Bitcoin amount set to {Globals.FormatCurrencyStr(amount, Globals.CRYPTO_DECIMAL)} BTC");
     }
 
     private void GiveBTC(string[] args)
@@ -626,7 +627,7 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.SetEth(amount);
 
-        Debug.Log($"Ethereum amount set to {amount:F8} ETH");
+        Debug.Log($"Ethereum amount set to {Globals.FormatCurrencyStr(amount, Globals.CRYPTO_DECIMAL)} ETH");
     }
 
     private void GiveETH(string[] args)
@@ -678,7 +679,7 @@ public class Console : MonoBehaviour
 
         CryptoSystem.Instance.SetBtcPrice(price);
 
-        Debug.Log($"Bitcoin price set to {price:N2}€");
+        Debug.Log($"Bitcoin price set to {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}€");
     }
 
     private void AddBtcMiner(string[] args)
@@ -717,7 +718,7 @@ public class Console : MonoBehaviour
 
         CryptoSystem.Instance.SetEthPrice(price);
 
-        Debug.Log($"Ethereum price set to {price:N2}€");
+        Debug.Log($"Ethereum price set to {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}€");
     }
 
     private void AddEthMiner(string[] args)
