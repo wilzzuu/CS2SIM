@@ -91,7 +91,7 @@ public class CaseOpening : MonoBehaviour
         
         caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{_selectedCaseData.id}");
         nameText.text = _selectedCaseData.name;
-        priceText.text = $"{_selectedCaseData.price + Globals.FormatCurrencyStr(keyPrice, Globals.EURO_DECIMAL)}€";
+        priceText.text = $"{Globals.FormatCurrencyStr(_selectedCaseData.price + keyPrice, Globals.EURO_DECIMAL)}€";
 
         GroupItemsByRarity();
 
@@ -501,7 +501,7 @@ public class CaseOpening : MonoBehaviour
             
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
-            priceText.text = $"{caseData.price + Globals.FormatCurrencyStr(keyPrice, Globals.EURO_DECIMAL)}€";
+            priceText.text = $"{Globals.FormatCurrencyStr(caseData.price + keyPrice, Globals.EURO_DECIMAL)}€";
 
             Button button = caseButton.GetComponent<Button>();
             button.onClick.AddListener(() => SelectCase(caseData));
