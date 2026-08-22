@@ -200,7 +200,7 @@ public static class LogUtil
 
     public static string GetLogPath(string _loggerName)
     {
-        string LogFile = Path.Combine(LogDirectory, $"{_loggerName}_{DateTime.Now:yyyy-MM-dd}.txt");
+        string LogFile = Path.Combine(LogDirectory, $"{char.ToUpper(_loggerName[0]) + _loggerName[1..]}Logs" ,$"{_loggerName}_{DateTime.Now:yyyy-MM-dd}.txt");
         return LogFile;
     }
 }
