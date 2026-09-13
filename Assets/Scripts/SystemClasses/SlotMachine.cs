@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlotMachine : MonoBehaviour
 {
     [Header("Machine")]
-    [SerializeField] private float spinCost = 5f;
+    [SerializeField] private int spinCost = 5 * Globals.EURO_SCALE;
 
     [Header("Pool")]
     [SerializeField] private List<ItemData> slotPool = new();
@@ -119,7 +119,7 @@ public class SlotMachine : MonoBehaviour
 
     private float GetItemWeight(ItemData item)
     {
-        float value = Mathf.Max(item.price, 0.01f);
+        float value = Mathf.Max(item.price, 1);
 
         // Cheap items appear more often
         return 1f / value;
@@ -138,8 +138,8 @@ public class SlotMachine : MonoBehaviour
             .Where(x =>
                 x != null &&
                 !x.isStatTrak &&
-                x.price >= 1f &&
-                x.price <= 100f)
+                x.price >= 1 * Globals.EURO_SCALE &&
+                x.price <= 100 * Globals.EURO_SCALE)
             .ToList();
 
         Debug.Log(

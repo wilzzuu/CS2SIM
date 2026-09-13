@@ -9,24 +9,24 @@ public class CryptoSystem : MonoBehaviour
     public AutoTrader autoTrader;
 
     [Header("Market Prices")]
-    public float btcPrice = 100000f;
-    public float lastBtcPrice = 100000f;
-    public float btcMinMarketPrice = 10000f;
-    public float btcMaxMarketPrice = 500000f;
-    public float ethPrice = 5000f;
-    public float lastEthPrice = 5000f;
-    public float ethMinMarketPrice = 500f;
-    public float ethMaxMarketPrice = 25000f;
+    public int btcPrice = 100000 * Globals.EURO_SCALE;
+    public int lastBtcPrice = 100000 * Globals.EURO_SCALE;
+    public int btcMinMarketPrice = 10000 * Globals.EURO_SCALE;
+    public int btcMaxMarketPrice = 500000 * Globals.EURO_SCALE;
+    public int ethPrice = 5000 * Globals.EURO_SCALE;
+    public int lastEthPrice = 5000 * Globals.EURO_SCALE;
+    public int ethMinMarketPrice = 500 * Globals.EURO_SCALE;
+    public int ethMaxMarketPrice = 25000 * Globals.EURO_SCALE;
 
     [Header("Mining")]
     public int maxBtcMiners = 100;
     public int btcMiners = 0;
     public int maxEthMiners = 100;
     public int ethMiners = 0;
-    public float btcMinerPrice = 100000f;
-    public float ethMinerPrice = 5000f;
-    public float btcPerHour = 0;
-    public float ethPerHour = 0;
+    public int btcMinerPrice = 100000 * Globals.EURO_SCALE;
+    public int ethMinerPrice = 5000 * Globals.EURO_SCALE;
+    public long btcPerHour = 0;
+    public long ethPerHour = 0;
 
     [Header("Price Updates")]
 
@@ -120,11 +120,11 @@ public class CryptoSystem : MonoBehaviour
         lastBtcPrice = btcPrice;
         lastEthPrice = ethPrice;
 
-        btcPrice *= UnityEngine.Random.Range(0.99f, 1.01f);
-        ethPrice *= UnityEngine.Random.Range(0.97f, 1.03f);
+        btcPrice = Globals.MoneyUtil.RoundEuro(btcPrice * UnityEngine.Random.Range(0.99f, 1.01f));
+        ethPrice = Globals.MoneyUtil.RoundEuro(ethPrice * UnityEngine.Random.Range(0.97f, 1.03f));
 
-        btcPrice = Mathf.Max(1000f, btcPrice);
-        ethPrice = Mathf.Max(100f, ethPrice);
+        btcPrice = Mathf.Max(1000 * Globals.EURO_SCALE, btcPrice);
+        ethPrice = Mathf.Max(100 * Globals.EURO_SCALE, ethPrice);
 
         OnBtcPriceChanged?.Invoke();
         OnEthPriceChanged?.Invoke();
@@ -182,11 +182,11 @@ public class CryptoSystem : MonoBehaviour
         
         if (btcMiners > 0)
         {
-            PlayerManager.Instance.MineBtc(GetBtcPerHour() * (float)hoursPassed);
+            PlayerManager.Instance.MineBtc(Globals.MoneyUtil.RoundCryptoUnits(GetBtcPerHour() * hoursPassed));
         }
         if (ethMiners > 0)
         {
-            PlayerManager.Instance.MineEth(GetEthPerHour() * (float)hoursPassed);
+            PlayerManager.Instance.MineEth(Globals.MoneyUtil.RoundCryptoUnits(GetEthPerHour() * hoursPassed));
         }
         
         lastMiningUpdate = now;
@@ -196,8 +196,8 @@ public class CryptoSystem : MonoBehaviour
 
     public void ResetCryptoPrices()
     {
-        btcPrice = 100000f;
-        ethPrice = 5000f;
+        btcPrice = 100000 * Globals.EURO_SCALE;
+        ethPrice = 5000 * Globals.EURO_SCALE;
         lastBtcPrice = btcPrice;
         lastEthPrice = ethPrice;
         OnBtcPriceChanged?.Invoke();
@@ -207,7 +207,7 @@ public class CryptoSystem : MonoBehaviour
 
     public void ResetBtcPrice()
     {
-        btcPrice = 100000f;
+        btcPrice = 100000 * Globals.EURO_SCALE;
         lastBtcPrice = btcPrice;
         OnBtcPriceChanged?.Invoke();
         SaveData();
@@ -215,7 +215,7 @@ public class CryptoSystem : MonoBehaviour
 
     public void ResetEthPrice()
     {
-        ethPrice = 5000f;
+        ethPrice = 5000 * Globals.EURO_SCALE;
         lastEthPrice = ethPrice;
         OnEthPriceChanged?.Invoke();
         SaveData();
@@ -225,7 +225,7 @@ public class CryptoSystem : MonoBehaviour
     {
         if (btcMiners < maxBtcMiners)
         {
-            float btcMinerPrice = GetBtcPrice();
+            int btcMinerPrice = GetBtcPrice();
             if (PlayerManager.Instance.GetPlayerBalance() >= btcMinerPrice)
             {
                 btcMiners++;
@@ -242,7 +242,7 @@ public class CryptoSystem : MonoBehaviour
         if (btcMiners > 0)
         {
             btcMiners--;
-            float minerSellPrice = GetBtcPrice() * 0.8f;
+            int minerSellPrice = Globals.MoneyUtil.RoundEuro(GetBtcPrice() * 0.8f);
             PlayerManager.Instance.AddMoney(minerSellPrice);
             GetBtcPerHour();
             OnBtcMinersChanged?.Invoke();
@@ -267,7 +267,7 @@ public class CryptoSystem : MonoBehaviour
     {
         if (ethMiners < maxEthMiners)
         {
-            float ethMinerPrice = GetEthPrice();
+            int ethMinerPrice = GetEthPrice();
             if (PlayerManager.Instance.GetPlayerBalance() >= ethMinerPrice)
             {
                 ethMiners++;
@@ -284,7 +284,7 @@ public class CryptoSystem : MonoBehaviour
         if (ethMiners > 0)
         {
             ethMiners--;
-            float minerSellPrice = GetEthPrice() * 0.8f;
+            int minerSellPrice = Globals.MoneyUtil.RoundEuro(GetEthPrice() * 0.8f);
             PlayerManager.Instance.AddMoney(minerSellPrice);
             GetEthPerHour();
             OnEthMinersChanged?.Invoke();
@@ -305,33 +305,34 @@ public class CryptoSystem : MonoBehaviour
         SaveData();
     }
 
-    public float GetBtcPrice()
+    public int GetBtcPrice()
     {
         return btcPrice;
     }
 
-    public float SetBtcPrice(float newPrice)
+    public int SetBtcPrice(int newPrice)
     {
         btcPrice = newPrice;
         return btcPrice;
     }
 
-    public float GetEthPrice()
+    public int GetEthPrice()
     {
         return ethPrice;
     }
 
-    public float SetEthPrice(float newPrice)
+    public int SetEthPrice(int newPrice)
     {
         ethPrice = newPrice;
         return ethPrice;
     }
 
-    public float GetBtcPerHour()
+    public long GetBtcPerHour()
     {
         if (btcMiners > 0)
         {
-            btcPerHour = 1/(1200000/(1+(btcMiners-1)*0.041225f)/3600);
+            btcPerHour = Globals.MoneyUtil.RoundCryptoUnits(
+                (1 / (1200000 / (1 + (btcMiners - 1) * 0.041225f) / 3600)) * Globals.CRYPTO_SCALE);
         }
         else
         {
@@ -340,11 +341,12 @@ public class CryptoSystem : MonoBehaviour
         return btcPerHour;
     }
     
-    public float GetEthPerHour()
+    public long GetEthPerHour()
     {
         if (ethMiners > 0)
         {
-            ethPerHour = 1/(1200000/(1+(ethMiners-1)*0.041225f)/3600);
+            ethPerHour = Globals.MoneyUtil.RoundCryptoUnits(
+                (1 / (1200000 / (1 + (ethMiners - 1) * 0.041225f) / 3600)) * Globals.CRYPTO_SCALE);
         }
         else
         {
@@ -371,17 +373,17 @@ public class CryptoSystem : MonoBehaviour
     [System.Serializable]
     private class CryptoSaveData
     {
-        public float btcPrice;
-        public float ethPrice;
+        public int btcPrice;
+        public int ethPrice;
 
-        public float lastBtcPrice;
-        public float lastEthPrice;
+        public int lastBtcPrice;
+        public int lastEthPrice;
 
-        public float btcOwned;
-        public float ethOwned;
+        public long btcOwned;
+        public long ethOwned;
 
-        public float btcPerHour;
-        public float ethPerHour;
+        public long btcPerHour;
+        public long ethPerHour;
 
         public int btcMiners;
         public int ethMiners;
@@ -593,15 +595,15 @@ public class CryptoSystem : MonoBehaviour
 
     private void ApplyBtcEvent(
     float multiplier,
-    float priceLimit,
+    int priceLimit,
     string eventName,
     string logDetails)
     {
-        float newPrice = btcPrice * multiplier;
+        int newPrice = Globals.MoneyUtil.RoundEuro(btcPrice * multiplier);
 
         bool withinLimit = multiplier > 1f
-            ? Globals.FloatUtil.LessOrEqual(newPrice, priceLimit)
-            : Globals.FloatUtil.GreaterOrEqual(newPrice, priceLimit);
+            ? newPrice <= priceLimit
+            : newPrice >= priceLimit;
 
         if (!withinLimit)
             return;
@@ -619,15 +621,15 @@ public class CryptoSystem : MonoBehaviour
 
     private void ApplyEthEvent(
     float multiplier,
-    float priceLimit,
+    int priceLimit,
     string eventName,
     string logDetails)
     {
-        float newPrice = ethPrice * multiplier;
+        int newPrice = Globals.MoneyUtil.RoundEuro(ethPrice * multiplier);
 
         bool withinLimit = multiplier > 1f
-            ? Globals.FloatUtil.LessOrEqual(newPrice, priceLimit)
-            : Globals.FloatUtil.GreaterOrEqual(newPrice, priceLimit);
+            ? newPrice <= priceLimit
+            : newPrice >= priceLimit;
 
         if (!withinLimit)
             return;
@@ -645,18 +647,12 @@ public class CryptoSystem : MonoBehaviour
 
     private void ApplyMarketOptimism()
     {
-        float newBtcPrice = btcPrice * 1.05f;
-        float newEthPrice = ethPrice * 1.05f;
+        int newBtcPrice = Globals.MoneyUtil.RoundEuro(btcPrice * 1.05f);
+        int newEthPrice = Globals.MoneyUtil.RoundEuro(ethPrice * 1.05f);
 
-        bool btcAllowed =
-            Globals.FloatUtil.LessOrEqual(
-                newBtcPrice,
-                btcMaxMarketPrice);
+        bool btcAllowed = newBtcPrice <= btcMaxMarketPrice;
 
-        bool ethAllowed =
-            Globals.FloatUtil.LessOrEqual(
-                newEthPrice,
-                ethMaxMarketPrice);
+        bool ethAllowed = newEthPrice <= ethMaxMarketPrice;
 
         if (!btcAllowed || !ethAllowed)
             return;

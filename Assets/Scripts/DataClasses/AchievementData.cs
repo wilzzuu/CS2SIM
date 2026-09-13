@@ -11,7 +11,7 @@ public class AchievementData : ScriptableObject
     public string description;
 
     [Header("Reward")]
-    public float reward;
+    public int reward;
 
     [Header("Condition")]
     public AchievementType type;

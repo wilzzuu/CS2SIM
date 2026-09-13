@@ -98,9 +98,9 @@ public class InventoryManager : MonoBehaviour
         return new List<ItemData>(_inventoryItems);
     }
 
-    public float CalculateInventoryValue()
+    public int CalculateInventoryValue()
     {
-        float totalValue = 0;
+        int totalValue = 0;
         foreach (ItemData item in _inventoryItems)
         {
             totalValue += item.price;

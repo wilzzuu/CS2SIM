@@ -59,13 +59,13 @@ public class CoinFlipManager : MonoBehaviour
             return;
         }
 
-        if (!float.TryParse(betInput.text, out float bet) || bet <= 0)
+        if (!Globals.TryParseEuroInput(betInput.text, out int bet) || bet <= 0)
         {
             resultText.text = "Invalid bet!";
             return;
         }
 
-        if (Globals.FloatUtil.Round(PlayerManager.Instance.GetPlayerBalance()) < Globals.FloatUtil.Round(bet))
+        if (PlayerManager.Instance.GetPlayerBalance() < bet)
         {
             resultText.text = "Not enough balance!";
             return;
@@ -81,7 +81,7 @@ public class CoinFlipManager : MonoBehaviour
         ShowResult(outcome, bet);
     }
 
-    private void ShowResult(CoinFace outcome, float bet)
+    private void ShowResult(CoinFace outcome, int bet)
     {
         bool win = outcome == _selectedFace;
 
@@ -92,7 +92,7 @@ public class CoinFlipManager : MonoBehaviour
 
         if (win)
         {
-            float payout = bet * 2f;
+            int payout = bet * 2;
             PlayerManager.Instance.AddMoney(payout);
 
             resultText.text =

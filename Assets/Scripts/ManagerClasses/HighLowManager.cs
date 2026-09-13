@@ -20,7 +20,7 @@ public class HighLowManager : MonoBehaviour
     
     public UIManager uIManager;
 
-    private float _betAmount;
+    private int _betAmount;
     private int _roundNumber;
     private const float RoundMultiplier = 1.25f;
 
@@ -119,7 +119,7 @@ public class HighLowManager : MonoBehaviour
     
     private ItemData GetRandomItem()
     {
-        var filteredItems = _allItems.Where(item => !Mathf.Approximately(item.price, _previousItem?.price ?? -1f)).ToList();
+        var filteredItems = _allItems.Where(item => item.price != (_previousItem?.price ?? -1)).ToList();
 
         if (filteredItems.Count == 0)
         {
@@ -143,7 +143,7 @@ public class HighLowManager : MonoBehaviour
             Destroy(child.gameObject);
         }
         
-        if (float.TryParse(betAmountInput.text, out _betAmount) && _betAmount > 0 &&
+        if (Globals.TryParseEuroInput(betAmountInput.text, out _betAmount) && _betAmount > 0 &&
             _betAmount <= PlayerManager.Instance.GetPlayerBalance())
         {
             PlayerManager.Instance.DeductMoney(_betAmount);
@@ -193,7 +193,7 @@ public class HighLowManager : MonoBehaviour
             _roundNumber++;
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
-            float cashOutAmount = _betAmount * _roundNumber * RoundMultiplier;
+            int cashOutAmount = Globals.MoneyUtil.RoundEuro(_betAmount * _roundNumber * RoundMultiplier);
             cashOutText.text = $"Cash Out {Globals.FormatCurrencyStr(cashOutAmount, Globals.EURO_DECIMAL)}€ at {_roundNumber * RoundMultiplier}x";
         }
         else if (_currentItem.price < _previousItem.price)
@@ -220,7 +220,7 @@ public class HighLowManager : MonoBehaviour
             _roundNumber++;
             resultText.text = $"You guessed right on round {_roundNumber}!";
             
-            float cashOutAmount = _betAmount * _roundNumber * RoundMultiplier;
+            int cashOutAmount = Globals.MoneyUtil.RoundEuro(_betAmount * _roundNumber * RoundMultiplier);
             cashOutText.text = $"Cash Out {Globals.FormatCurrencyStr(cashOutAmount, Globals.EURO_DECIMAL)}€ at {_roundNumber * RoundMultiplier}x";
         }
         else if (_currentItem.price > _previousItem.price)
@@ -251,7 +251,7 @@ public class HighLowManager : MonoBehaviour
     
     private void CashOut()
     {
-        float winnings = _betAmount * _roundNumber * RoundMultiplier;
+        int winnings = Globals.MoneyUtil.RoundEuro(_betAmount * _roundNumber * RoundMultiplier);
         PlayerManager.Instance.AddMoney(winnings);
 
         LogUtil.Economy.LogEuro(

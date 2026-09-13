@@ -16,7 +16,7 @@ public class CaseOpening : MonoBehaviour
     public Transform caseGridParent;
     public int numberOfReelItems = 40;
     public float easingDuration = 7f;
-    public float keyPrice = 2.19f;
+    public int keyPrice = 2 * Globals.EURO_SCALE + 19;
     
     private bool _isScrolling;
     private Vector3 _initialReelPosition;
@@ -98,7 +98,7 @@ public class CaseOpening : MonoBehaviour
         if (_selectedCaseData) openCaseButton.interactable = true;
         else openCaseButton.interactable = false;
 
-        if (Globals.FloatUtil.LessOrEqual(_selectedCaseData.price + keyPrice, PlayerManager.Instance.GetPlayerBalance())) openCaseButton.interactable = true;
+        if (_selectedCaseData.price + keyPrice <= PlayerManager.Instance.GetPlayerBalance()) openCaseButton.interactable = true;
         else openCaseButton.interactable = false;
         
         DisplayCaseItems(_selectedCaseData);
@@ -147,7 +147,7 @@ public class CaseOpening : MonoBehaviour
 
         caseGridParent.localPosition = _initialReelPosition;
 
-        if (Globals.FloatUtil.GreaterOrEqual(PlayerManager.Instance.GetPlayerBalance(), _selectedCaseData.price + keyPrice))
+        if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price + keyPrice)
         {
             PlayerManager.Instance.DeductMoney(_selectedCaseData.price + keyPrice);
 
@@ -403,8 +403,8 @@ public class CaseOpening : MonoBehaviour
         }
         
         bool hasSpecialItem = false;
-        float minSpecialPrice = float.MaxValue;
-        float maxSpecialPrice = float.MinValue;
+        int minSpecialPrice = int.MaxValue;
+        int maxSpecialPrice = int.MinValue;
 
         var groupedItems = selectedCase.items
             .Where(item => item != null)
@@ -422,8 +422,8 @@ public class CaseOpening : MonoBehaviour
         foreach (var group in groupedItems)
         {
             var itemsInGroup = group.ToList();
-            float minPrice = itemsInGroup.Min(item=> item.price);
-            float maxPrice = itemsInGroup.Max(item => item.price);
+            int minPrice = itemsInGroup.Min(item=> item.price);
+            int maxPrice = itemsInGroup.Max(item => item.price);
             
             var bestConditionItem = itemsInGroup
                 .Where(item => item.rarity != RarityData.Name[RarityNames.Special])

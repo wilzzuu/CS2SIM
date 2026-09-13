@@ -15,7 +15,7 @@ public class DailyRewardUI : MonoBehaviour
     public class DailyReward
     {
         public int day;
-        public float rewardAmount;
+        public int rewardAmount;
     }
 
     [Header("Rewards")]
@@ -50,7 +50,7 @@ public class DailyRewardUI : MonoBehaviour
 
     private void RefreshUI()
     {
-        float ethValue =  rewards[6].rewardAmount / CryptoSystem.Instance.GetEthPrice();
+        long ethValue = (long)rewards[6].rewardAmount * Globals.CRYPTO_SCALE / CryptoSystem.Instance.GetEthPrice();
         seventhSlotEthValueText.text = $"{Globals.FormatCurrencyStr(ethValue, Globals.CRYPTO_DECIMAL)}";
         foreach (var slot in slots)
         {
@@ -60,7 +60,7 @@ public class DailyRewardUI : MonoBehaviour
                 rewards.Find(r => r.day == slot.dayIndex);
 
             if (reward != null)
-                slot.rewardText.text = $"{reward.rewardAmount}€";
+                slot.rewardText.text = $"{Globals.FormatCurrencyStr(reward.rewardAmount, Globals.EURO_DECIMAL)}€";
 
             if (slot.dayIndex < DailyRewardSystem.Instance.currentDay)
             {

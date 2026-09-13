@@ -5,11 +5,11 @@ using System.Collections;
 [System.Serializable]
 public class Player
 {
-    public float balance;
-    public float btcOwned;
-    public float ethOwned;
+    public int balance;
+    public long btcOwned;
+    public long ethOwned;
 
-    public Player(float initialBalance, float initialBtc, float initialEth)
+    public Player(int initialBalance, long initialBtc, long initialEth)
     {
         balance = initialBalance;
         btcOwned = initialBtc;
@@ -68,9 +68,9 @@ public class PlayerManager : MonoBehaviour
         CheckPlayerSave();
     }
 
-    public void AddMoney(float amount)
+    public void AddMoney(int amount)
     {
-        player.balance = Globals.FloatUtil.Round(player.balance + amount);
+        player.balance += amount;
 
         LogUtil.Economy.LogEuro(
             "ADD_MONEY",
@@ -82,11 +82,11 @@ public class PlayerManager : MonoBehaviour
         OnBalanceChanged?.Invoke();
     }
 
-    public void DeductMoney(float amount)
+    public void DeductMoney(int amount)
     {
-        if (Globals.FloatUtil.GreaterOrEqual(player.balance, amount))
+        if (player.balance >= amount)
         {
-            player.balance = Globals.FloatUtil.Round(player.balance - amount);
+            player.balance -= amount;
 
             LogUtil.Economy.LogEuro(
                 "DEDUCT_MONEY",
@@ -99,9 +99,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void SetMoney(float amount)
+    public void SetMoney(int amount)
     {
-        player.balance = Globals.FloatUtil.Round(amount);
+        player.balance = amount;
 
         LogUtil.Economy.LogEuro(
             "SET_MONEY",
@@ -113,10 +113,10 @@ public class PlayerManager : MonoBehaviour
         OnBalanceChanged?.Invoke();
     }
 
-    public void SetBtc(float amount)
+    public void SetBtc(long amount)
     {
-        player.btcOwned = Globals.FloatUtil.RoundCrypto(amount);
-        float euroAmount = amount * CryptoSystem.Instance.GetBtcPrice();
+        player.btcOwned = amount;
+        long euroAmount = amount * CryptoSystem.Instance.GetBtcPrice() / Globals.CRYPTO_SCALE;
 
         LogUtil.Economy.LogCrypto(
             "SET_CRYPTO",
@@ -130,10 +130,10 @@ public class PlayerManager : MonoBehaviour
         OnBtcChanged?.Invoke();
     }
 
-    public void AddBtc(float amount)
+    public void AddBtc(long amount)
     {
-        player.btcOwned = Globals.FloatUtil.RoundCrypto(player.btcOwned + amount);
-        float euroAmount = amount * CryptoSystem.Instance.GetBtcPrice();
+        player.btcOwned += amount;
+        long euroAmount = amount * CryptoSystem.Instance.GetBtcPrice() / Globals.CRYPTO_SCALE;
 
         LogUtil.Economy.LogCrypto(
             "ADD_CRYPTO",
@@ -147,12 +147,12 @@ public class PlayerManager : MonoBehaviour
         OnBtcChanged?.Invoke();
     }
 
-    public void DeductBtc(float amount)
+    public void DeductBtc(long amount)
     {
-        if (Globals.FloatUtil.GreaterOrEqual(player.btcOwned, amount))
+        if (player.btcOwned >= amount)
         {
-            player.btcOwned = Globals.FloatUtil.RoundCrypto(player.btcOwned - amount);
-            float euroAmount = amount * CryptoSystem.Instance.GetBtcPrice();
+            player.btcOwned -= amount;
+            long euroAmount = amount * CryptoSystem.Instance.GetBtcPrice() / Globals.CRYPTO_SCALE;
 
             LogUtil.Economy.LogCrypto(
                 "DEDUCT_CRYPTO",
@@ -167,10 +167,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void MineBtc(float amount)
+    public void MineBtc(long amount)
     {
-        player.btcOwned = Globals.FloatUtil.RoundCrypto(player.btcOwned + amount);
-        float euroAmount = amount * CryptoSystem.Instance.GetBtcPrice();
+        player.btcOwned += amount;
 
         LogUtil.Economy.LogCrypto(
             "MINE_CRYPTO",
@@ -183,10 +182,10 @@ public class PlayerManager : MonoBehaviour
         OnBtcChanged?.Invoke();
     }
 
-    public void SetEth(float amount)
+    public void SetEth(long amount)
     {
-        player.ethOwned = Globals.FloatUtil.RoundCrypto(amount);
-        float euroAmount = amount * CryptoSystem.Instance.GetEthPrice();
+        player.ethOwned = amount;
+        long euroAmount = amount * CryptoSystem.Instance.GetEthPrice() / Globals.CRYPTO_SCALE;
 
         LogUtil.Economy.LogCrypto(
             "SET_CRYPTO",
@@ -200,11 +199,11 @@ public class PlayerManager : MonoBehaviour
         OnEthChanged?.Invoke();
     }
 
-    public void AddEth(float amount)
+    public void AddEth(long amount)
     {
-        player.ethOwned = Globals.FloatUtil.RoundCrypto(player.ethOwned + amount);
+        player.ethOwned += amount;
 
-        float euroAmount = amount * CryptoSystem.Instance.GetEthPrice();
+        long euroAmount = amount * CryptoSystem.Instance.GetEthPrice() / Globals.CRYPTO_SCALE;
 
         LogUtil.Economy.LogCrypto(
             "ADD_CRYPTO",
@@ -218,12 +217,12 @@ public class PlayerManager : MonoBehaviour
         OnEthChanged?.Invoke();
     }
 
-    public void DeductEth(float amount)
+    public void DeductEth(long amount)
     {
-        if (Globals.FloatUtil.GreaterOrEqual(player.ethOwned, amount))
+        if (player.ethOwned >= amount)
         {
-            player.ethOwned = Globals.FloatUtil.RoundCrypto(player.ethOwned - amount);
-            float euroAmount = amount * CryptoSystem.Instance.GetEthPrice();
+            player.ethOwned -= amount;
+            long euroAmount = amount * CryptoSystem.Instance.GetEthPrice() / Globals.CRYPTO_SCALE;
 
             LogUtil.Economy.LogCrypto(
                 "DEDUCT_CRYPTO",
@@ -238,10 +237,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void MineEth(float amount)
+    public void MineEth(long amount)
     {
-        player.ethOwned = Globals.FloatUtil.RoundCrypto(player.ethOwned + amount);
-        float euroAmount = amount * CryptoSystem.Instance.GetEthPrice();
+        player.ethOwned += amount;
 
         LogUtil.Economy.LogCrypto(
             "MINE_CRYPTO",
@@ -254,19 +252,19 @@ public class PlayerManager : MonoBehaviour
         OnBtcChanged?.Invoke();
     }
 
-    public float GetPlayerBalance()
+    public int GetPlayerBalance()
     {
-        return Globals.FloatUtil.Round(player.balance);
+        return player.balance;
     }
 
-    public float GetBtcOwned()
+    public long GetBtcOwned()
     {   
-        return Globals.FloatUtil.RoundCrypto(player.btcOwned);
+        return player.btcOwned;
     }
 
-    public float GetEthOwned()
+    public long GetEthOwned()
     {
-        return Globals.FloatUtil.RoundCrypto(player.ethOwned);
+        return player.ethOwned;
     }
 
     void CheckPlayerSave()
@@ -308,13 +306,13 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            player = new Player(200f, 0f, 0f);
+            player = new Player(200 * Globals.EURO_SCALE, 0L, 0L);
         }
     }
 
     public void ResetProgress()
     {
-        player = new Player(200f, 0f, 0f);
+        player = new Player(200 * Globals.EURO_SCALE, 0L, 0L);
         SavePlayerData();
         InventoryManager.Instance.ClearInventory(true);
         CollectionManager.Instance.ClearCollection();
@@ -327,9 +325,9 @@ public class PlayerManager : MonoBehaviour
 [System.Serializable]
 public class PlayerData
 {
-    public float balance;
-    public float btcOwned;
-    public float ethOwned;
+    public int balance;
+    public long btcOwned;
+    public long ethOwned;
 
     public PlayerData(PlayerManager playerManager)
     {

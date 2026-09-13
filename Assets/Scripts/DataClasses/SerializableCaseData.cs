@@ -5,7 +5,7 @@ public class SerializableCaseData
 {
     public string ID { get; }
     public string Name { get; }
-    public float Price { get; }
+    public int Price { get; }
     public List<SerializableItemData> items;
 
     public SerializableCaseData(CaseData @case)

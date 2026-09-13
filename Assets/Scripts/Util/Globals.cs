@@ -7,6 +7,8 @@ public class Globals
     public const float EPSILON = 0.0001f;
     public const int EURO_DECIMAL = 2;
     public const int CRYPTO_DECIMAL = 8;
+    public const int EURO_SCALE = 100;
+    public const long CRYPTO_SCALE = 100000000L;
     public const float MarketBuyPriceModifier = 1.15f;
     public const float MarketSellPriceModifier = 0.85f;
     public const float MarketPriceMinFluctuation = 0.5f;
@@ -32,39 +34,53 @@ public class Globals
         return dateTime.ToLocalTime().ToString("dd'.'MM'.'yyyy @ HH':'mm':'ss");
     }
 
-    public static string FormatCurrencyStr(float amount, int _n)
+    public static string FormatCurrencyStr(long amount, int _n)
     {
         NumberFormatInfo nfi = (NumberFormatInfo)CultureInfo.InvariantCulture.NumberFormat.Clone();
         nfi.NumberGroupSeparator = ",";
-        string currencyStrFormatted = amount.ToString($"N{_n}", nfi);
+        decimal scale = (decimal)Math.Pow(10, _n);
+        decimal value = amount / scale;
+        string currencyStrFormatted = value.ToString($"N{_n}", nfi);
         return currencyStrFormatted;
     }
 
-    public class FloatUtil
+    // Parses a user-entered decimal Euro string (e.g. "10.50") into whole cents.
+    public static bool TryParseEuroInput(string text, out int cents)
     {
-        public static float Round(float f)
+        if (decimal.TryParse(text, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal value))
         {
-            return Mathf.Round(f * 100f) / 100f;
+            cents = (int)Math.Round(value * EURO_SCALE, MidpointRounding.AwayFromZero);
+            return true;
         }
 
-        public static float RoundCrypto(float f)
+        cents = 0;
+        return false;
+    }
+
+    // Parses a user-entered decimal Crypto string (e.g. "0.00045678") into whole satoshi-like units.
+    public static bool TryParseCryptoInput(string text, out long units)
+    {
+        if (decimal.TryParse(text, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal value))
         {
-            return Mathf.Round(f * 100000000f) / 100000000f;
+            units = (long)Math.Round(value * CRYPTO_SCALE, MidpointRounding.AwayFromZero);
+            return true;
         }
 
-        public static bool Equal(float a, float b)
+        units = 0;
+        return false;
+    }
+
+    // Converts float ratios/computations back into fixed-point currency amounts.
+    public class MoneyUtil
+    {
+        public static int RoundEuro(float rawCents)
         {
-            return Mathf.Abs(a - b) < EPSILON;
+            return Mathf.RoundToInt(rawCents);
         }
 
-        public static bool GreaterOrEqual(float a, float b)
+        public static long RoundCryptoUnits(double rawUnits)
         {
-            return a > b - EPSILON;
-        }
-
-        public static bool LessOrEqual(float a, float b)
-        {
-            return a < b + EPSILON;
+            return (long)Math.Round(rawUnits);
         }
     }
 }

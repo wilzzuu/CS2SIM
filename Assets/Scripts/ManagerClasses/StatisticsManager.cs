@@ -8,8 +8,8 @@ public class StatisticsManager : MonoBehaviour
     public int totalItemsSold;
     public int totalItemsBought;
 
-    public float totalCryptoMined;
-    public float totalCryptoProfit;
+    public long totalCryptoMined;
+    public long totalCryptoProfit;
 
     public int totalSlotWins;
     public int totalCrashWins;

@@ -10,7 +10,7 @@ public class GiftManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private int cooldownHours = 2;
 
-    public float RewardAmount = 5f;
+    public int RewardAmount = 5 * Globals.EURO_SCALE;
 
     private string SaveFilePath
     {

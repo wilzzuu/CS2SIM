@@ -52,11 +52,11 @@ public class CryptoManager : MonoBehaviour
     {
         if (_isBtcTab)
         {
-            float _btcPrice = CryptoSystem.Instance.GetBtcPrice();
+            int _btcPrice = CryptoSystem.Instance.GetBtcPrice();
             priceText.text = $"{Globals.FormatCurrencyStr(_btcPrice, Globals.EURO_DECIMAL)}€";
 
-            float btcPriceDiff = _btcPrice - CryptoSystem.Instance.lastBtcPrice;
-            bool isBtcNegative = Single.IsNegative(btcPriceDiff);
+            int btcPriceDiff = _btcPrice - CryptoSystem.Instance.lastBtcPrice;
+            bool isBtcNegative = btcPriceDiff < 0;
             priceDiffText.text = $"{(isBtcNegative ? "" : "+")}{Globals.FormatCurrencyStr(btcPriceDiff, Globals.EURO_DECIMAL)}€";
             priceDiffText.color = isBtcNegative ? Color.red : Color.green;
         }
@@ -66,11 +66,11 @@ public class CryptoManager : MonoBehaviour
     {
         if (!_isBtcTab)
         {
-            float _ethPrice = CryptoSystem.Instance.GetEthPrice();
+            int _ethPrice = CryptoSystem.Instance.GetEthPrice();
             priceText.text = $"{Globals.FormatCurrencyStr(_ethPrice, Globals.EURO_DECIMAL)}€";
 
-            float ethPriceDiff = _ethPrice - CryptoSystem.Instance.lastEthPrice;
-            bool isEthNegative = Single.IsNegative(ethPriceDiff);
+            int ethPriceDiff = _ethPrice - CryptoSystem.Instance.lastEthPrice;
+            bool isEthNegative = ethPriceDiff < 0;
             priceDiffText.text = $"{(isEthNegative ? "" : "+")}{Globals.FormatCurrencyStr(ethPriceDiff, Globals.EURO_DECIMAL)}€";
             priceDiffText.color = isEthNegative ? Color.red : Color.green;
         }
@@ -80,15 +80,15 @@ public class CryptoManager : MonoBehaviour
     {
         AlertManager.Set(AlertType.Crypto, false);
 
-        float _btcPrice = CryptoSystem.Instance.GetBtcPrice();
-        float _ethPrice = CryptoSystem.Instance.GetEthPrice();
-        float _btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
-        float _ethPerHour = CryptoSystem.Instance.GetEthPerHour();
+        int _btcPrice = CryptoSystem.Instance.GetBtcPrice();
+        int _ethPrice = CryptoSystem.Instance.GetEthPrice();
+        long _btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
+        long _ethPerHour = CryptoSystem.Instance.GetEthPerHour();
 
         cryptoOutputText.text = "0";
         euroOutputText.text = "0";
         priceText.text = _isBtcTab ? $"{Globals.FormatCurrencyStr(_btcPrice, Globals.EURO_DECIMAL)}€" : $"{Globals.FormatCurrencyStr(_ethPrice, Globals.EURO_DECIMAL)}€";
-        perHourText.text = _isBtcTab ? $"{_btcPerHour}/h" : $"{_ethPerHour}/h";
+        perHourText.text = _isBtcTab ? $"{Globals.FormatCurrencyStr(_btcPerHour, Globals.CRYPTO_DECIMAL)}/h" : $"{Globals.FormatCurrencyStr(_ethPerHour, Globals.CRYPTO_DECIMAL)}/h";
         minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.GetBtcMinerCount()}" : $"{CryptoSystem.Instance.GetEthMinerCount()}";
         string spriteName = _isBtcTab ? "BTC-860x860" : "ETH-860x860";
         bigIcon.sprite = Resources.Load<Sprite>($"Images/HighRes/{spriteName}");
@@ -100,15 +100,15 @@ public class CryptoManager : MonoBehaviour
 
         if (_isBtcTab)
         {
-            float btcPriceDiff = _btcPrice - CryptoSystem.Instance.lastBtcPrice;
-            bool isBtcNegative = Single.IsNegative(btcPriceDiff);
+            int btcPriceDiff = _btcPrice - CryptoSystem.Instance.lastBtcPrice;
+            bool isBtcNegative = btcPriceDiff < 0;
             priceDiffText.text = $"{(isBtcNegative ? "" : "+")}{Globals.FormatCurrencyStr(btcPriceDiff, Globals.EURO_DECIMAL)}€";
             priceDiffText.color = isBtcNegative ? Color.red : Color.green;
         }
         else
         {
-            float ethPriceDiff = _ethPrice - CryptoSystem.Instance.lastEthPrice;
-            bool isEthNegative = Single.IsNegative(ethPriceDiff);
+            int ethPriceDiff = _ethPrice - CryptoSystem.Instance.lastEthPrice;
+            bool isEthNegative = ethPriceDiff < 0;
             priceDiffText.text = $"{(isEthNegative ? "" : "+")}{Globals.FormatCurrencyStr(ethPriceDiff, Globals.EURO_DECIMAL)}€";
             priceDiffText.color = isEthNegative ? Color.red : Color.green;
         }
@@ -118,13 +118,13 @@ public class CryptoManager : MonoBehaviour
     {
         AlertManager.Set(AlertType.Crypto, false);
 
-        float _btcPrice = CryptoSystem.Instance.GetBtcPrice();
-        float _ethPrice = CryptoSystem.Instance.GetEthPrice();
-        float _btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
-        float _ethPerHour = CryptoSystem.Instance.GetEthPerHour();
+        int _btcPrice = CryptoSystem.Instance.GetBtcPrice();
+        int _ethPrice = CryptoSystem.Instance.GetEthPrice();
+        long _btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
+        long _ethPerHour = CryptoSystem.Instance.GetEthPerHour();
 
         priceText.text = _isBtcTab ? $"{Globals.FormatCurrencyStr(_btcPrice, Globals.EURO_DECIMAL)}€" : $"{Globals.FormatCurrencyStr(_ethPrice, Globals.EURO_DECIMAL)}€";
-        perHourText.text = _isBtcTab ? $"{_btcPerHour}/h" : $"{_ethPerHour}/h";
+        perHourText.text = _isBtcTab ? $"{Globals.FormatCurrencyStr(_btcPerHour, Globals.CRYPTO_DECIMAL)}/h" : $"{Globals.FormatCurrencyStr(_ethPerHour, Globals.CRYPTO_DECIMAL)}/h";
         minerAmountText.text = _isBtcTab ? $"{CryptoSystem.Instance.GetBtcMinerCount()}" : $"{CryptoSystem.Instance.GetEthMinerCount()}";
         string spriteName = _isBtcTab ? "BTC-860x860" : "ETH-860x860"; 
         bigIcon.sprite = Resources.Load<Sprite>($"Images/HighRes/{spriteName}");
@@ -132,15 +132,15 @@ public class CryptoManager : MonoBehaviour
 
         if (_isBtcTab)
         {
-            float btcPriceDiff = _btcPrice - CryptoSystem.Instance.lastBtcPrice;
-            bool isBtcNegative = Single.IsNegative(btcPriceDiff);
+            int btcPriceDiff = _btcPrice - CryptoSystem.Instance.lastBtcPrice;
+            bool isBtcNegative = btcPriceDiff < 0;
             priceDiffText.text = $"{(isBtcNegative ? "" : "+")}{Globals.FormatCurrencyStr(btcPriceDiff, Globals.EURO_DECIMAL)}€";
             priceDiffText.color = isBtcNegative ? Color.red : Color.green;
         }
         else
         {
-            float ethPriceDiff = _ethPrice - CryptoSystem.Instance.lastEthPrice;
-            bool isEthNegative = Single.IsNegative(ethPriceDiff);
+            int ethPriceDiff = _ethPrice - CryptoSystem.Instance.lastEthPrice;
+            bool isEthNegative = ethPriceDiff < 0;
             priceDiffText.text = $"{(isEthNegative ? "" : "+")}{Globals.FormatCurrencyStr(ethPriceDiff, Globals.EURO_DECIMAL)}€";
             priceDiffText.color = isEthNegative ? Color.red : Color.green;
         }
@@ -161,10 +161,10 @@ public class CryptoManager : MonoBehaviour
             return;
         }
 
-        if (float.TryParse(euroAmountInput.text, out float euroAmount))
+        if (Globals.TryParseEuroInput(euroAmountInput.text, out int euroAmount))
         {
-            float cryptoValue = (float)euroAmount / (_isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice);
-            if (Globals.FloatUtil.GreaterOrEqual(PlayerManager.Instance.GetPlayerBalance(), cryptoValue))
+            long cryptoValue = (long)euroAmount * Globals.CRYPTO_SCALE / (_isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice);
+            if (PlayerManager.Instance.GetPlayerBalance() >= euroAmount)
             {
                 PlayerManager.Instance.DeductMoney(euroAmount);
                 if (_isBtcTab)
@@ -186,13 +186,13 @@ public class CryptoManager : MonoBehaviour
             return;
         }
 
-        if (float.TryParse(cryptoAmountInput.text, out float cryptoAmount))
+        if (Globals.TryParseCryptoInput(cryptoAmountInput.text, out long cryptoAmount))
         {
-            float cryptoPrice = _isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice;
-            float cryptoOwned = _isBtcTab ? PlayerManager.Instance.GetBtcOwned() : PlayerManager.Instance.GetEthOwned();
+            int cryptoPrice = _isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice;
+            long cryptoOwned = _isBtcTab ? PlayerManager.Instance.GetBtcOwned() : PlayerManager.Instance.GetEthOwned();
 
-            float euroValue = (float)cryptoAmount * cryptoPrice;
-            if (Globals.FloatUtil.GreaterOrEqual(cryptoOwned, cryptoAmount))
+            int euroValue = Globals.MoneyUtil.RoundEuro((float)cryptoAmount * cryptoPrice / Globals.CRYPTO_SCALE);
+            if (cryptoOwned >= cryptoAmount)
             {
                 PlayerManager.Instance.AddMoney(euroValue);
                 if (_isBtcTab)
@@ -214,9 +214,9 @@ public class CryptoManager : MonoBehaviour
             return;
         }
 
-        if (float.TryParse(cryptoAmountInput.text, out float cryptoAmount))
+        if (Globals.TryParseCryptoInput(cryptoAmountInput.text, out long cryptoAmount))
         {
-            float euroValue = (float)cryptoAmount * (_isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice);
+            long euroValue = cryptoAmount * (_isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice) / Globals.CRYPTO_SCALE;
             euroOutputText.text = $"{Globals.FormatCurrencyStr(euroValue, Globals.EURO_DECIMAL)}€";
         }
         else
@@ -232,11 +232,11 @@ public class CryptoManager : MonoBehaviour
             return;
         }
 
-        if (float.TryParse(euroAmountInput.text, out float euroAmount))
+        if (Globals.TryParseEuroInput(euroAmountInput.text, out int euroAmount))
         {
-            float cryptoPrice = _isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice;
+            int cryptoPrice = _isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice;
 
-            float cryptoValue = (float)euroAmount / cryptoPrice;
+            long cryptoValue = (long)euroAmount * Globals.CRYPTO_SCALE / cryptoPrice;
             cryptoOutputText.text = $"{Globals.FormatCurrencyStr(cryptoValue, Globals.CRYPTO_DECIMAL)}";
         }
         else
@@ -247,47 +247,47 @@ public class CryptoManager : MonoBehaviour
 
     public void BuyMaxCrypto()
     {
-        float playerBal = PlayerManager.Instance.GetPlayerBalance();
-        euroAmountInput.text = $"{playerBal}";
+        int playerBal = PlayerManager.Instance.GetPlayerBalance();
+        euroAmountInput.text = $"{playerBal / (float)Globals.EURO_SCALE}";
     }
 
     public void SellMaxCrypto()
     {
-        float cryptoOwned = _isBtcTab ? PlayerManager.Instance.GetBtcOwned() : PlayerManager.Instance.GetEthOwned();
-        cryptoAmountInput.text = $"{cryptoOwned}";
+        long cryptoOwned = _isBtcTab ? PlayerManager.Instance.GetBtcOwned() : PlayerManager.Instance.GetEthOwned();
+        cryptoAmountInput.text = $"{cryptoOwned / (double)Globals.CRYPTO_SCALE}";
     }
 
-    public bool BuyBTC(float euroAmount)
+    public bool BuyBTC(int euroAmount)
     {
-        float _playerBal = PlayerManager.Instance.GetPlayerBalance();
+        int _playerBal = PlayerManager.Instance.GetPlayerBalance();
         if (euroAmount > _playerBal)
             return false;
 
         PlayerManager.Instance.DeductMoney(euroAmount);
 
-        PlayerManager.Instance.AddBtc(euroAmount / CryptoSystem.Instance.btcPrice);
+        PlayerManager.Instance.AddBtc((long)euroAmount * Globals.CRYPTO_SCALE / CryptoSystem.Instance.btcPrice);
 
         UpdateExchangeUI();
 
         return true;
     }
 
-    public bool BuyETH(float euroAmount)
+    public bool BuyETH(int euroAmount)
     {
-        float _playerBal = PlayerManager.Instance.GetPlayerBalance();
+        int _playerBal = PlayerManager.Instance.GetPlayerBalance();
         if (euroAmount > _playerBal)
             return false;
 
         PlayerManager.Instance.DeductMoney(euroAmount);
 
-        PlayerManager.Instance.AddEth(euroAmount / CryptoSystem.Instance.ethPrice);
+        PlayerManager.Instance.AddEth((long)euroAmount * Globals.CRYPTO_SCALE / CryptoSystem.Instance.ethPrice);
 
         UpdateExchangeUI();
 
         return true;
     }
 
-    public bool SellBTC(float btcAmount)
+    public bool SellBTC(long btcAmount)
     {
 
         if (btcAmount > PlayerManager.Instance.GetBtcOwned())
@@ -295,7 +295,7 @@ public class CryptoManager : MonoBehaviour
 
         PlayerManager.Instance.DeductBtc(btcAmount);
 
-        float euroAmount = btcAmount * CryptoSystem.Instance.btcPrice;
+        int euroAmount = (int)(btcAmount * CryptoSystem.Instance.btcPrice / Globals.CRYPTO_SCALE);
         PlayerManager.Instance.AddMoney(euroAmount);
 
         UpdateExchangeUI();
@@ -303,14 +303,14 @@ public class CryptoManager : MonoBehaviour
         return true;
     }
 
-    public bool SellETH(float ethAmount)
+    public bool SellETH(long ethAmount)
     {
         if (ethAmount > PlayerManager.Instance.GetEthOwned())
             return false;
 
         PlayerManager.Instance.DeductEth(ethAmount);
 
-        float euroAmount = ethAmount * CryptoSystem.Instance.ethPrice;
+        int euroAmount = (int)(ethAmount * CryptoSystem.Instance.ethPrice / Globals.CRYPTO_SCALE);
         PlayerManager.Instance.AddMoney(euroAmount);
 
         UpdateExchangeUI();

@@ -485,6 +485,28 @@ public class Console : MonoBehaviour
             float.TryParse(args[index], out value);
     }
 
+    public static bool TryGetEuro(
+    string[] args,
+    int index,
+    out int value)
+    {
+        value = 0;
+
+        return args.Length > index &&
+            Globals.TryParseEuroInput(args[index], out value);
+    }
+
+    public static bool TryGetCrypto(
+    string[] args,
+    int index,
+    out long value)
+    {
+        value = 0;
+
+        return args.Length > index &&
+            Globals.TryParseCryptoInput(args[index], out value);
+    }
+
     public static bool TryGetInt(
     string[] args,
     int index,
@@ -530,7 +552,7 @@ public class Console : MonoBehaviour
 
     private void AddMoney(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetEuro(args, 0, out int amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -542,7 +564,7 @@ public class Console : MonoBehaviour
 
     private void DeductMoney(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetEuro(args, 0, out int amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -554,7 +576,7 @@ public class Console : MonoBehaviour
 
     private void SetMoney(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetEuro(args, 0, out int amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -567,7 +589,7 @@ public class Console : MonoBehaviour
 
     private void SetBtc(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetCrypto(args, 0, out long amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -580,7 +602,7 @@ public class Console : MonoBehaviour
 
     private void GiveBTC(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetCrypto(args, 0, out long amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -588,12 +610,12 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.AddBtc(amount);
 
-        Debug.Log($"Added {amount} BTC");
+        Debug.Log($"Added {Globals.FormatCurrencyStr(amount, Globals.CRYPTO_DECIMAL)} BTC");
     }
 
     private void MineBTC(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetCrypto(args, 0, out long amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -601,12 +623,12 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.MineBtc(amount);
 
-        Debug.Log($"Mined {amount} BTC");
+        Debug.Log($"Mined {Globals.FormatCurrencyStr(amount, Globals.CRYPTO_DECIMAL)} BTC");
     }
 
     private void DeductBTC(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetCrypto(args, 0, out long amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -614,12 +636,12 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.DeductBtc(amount);
 
-        Debug.Log($"Deducted {amount} BTC");
+        Debug.Log($"Deducted {Globals.FormatCurrencyStr(amount, Globals.CRYPTO_DECIMAL)} BTC");
     }
 
     private void SetEth(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetCrypto(args, 0, out long amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -632,7 +654,7 @@ public class Console : MonoBehaviour
 
     private void GiveETH(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetCrypto(args, 0, out long amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -640,12 +662,12 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.AddEth(amount);
 
-        Debug.Log($"Added {amount} ETH");
+        Debug.Log($"Added {Globals.FormatCurrencyStr(amount, Globals.CRYPTO_DECIMAL)} ETH");
     }
 
     private void DeductETH(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetCrypto(args, 0, out long amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -653,12 +675,12 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.DeductEth(amount);
 
-        Debug.Log($"Deducted {amount} ETH");
+        Debug.Log($"Deducted {Globals.FormatCurrencyStr(amount, Globals.CRYPTO_DECIMAL)} ETH");
     }
 
     private void MineETH(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float amount))
+        if (!TryGetCrypto(args, 0, out long amount))
         {
             Debug.Log("Invalid amount. Please enter a valid number.");
             return;
@@ -666,12 +688,12 @@ public class Console : MonoBehaviour
 
         PlayerManager.Instance.MineEth(amount);
 
-        Debug.Log($"Mined {amount} ETH");
+        Debug.Log($"Mined {Globals.FormatCurrencyStr(amount, Globals.CRYPTO_DECIMAL)} ETH");
     }
 
     private void SetBtcPrice(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float price))
+        if (!TryGetEuro(args, 0, out int price))
         {
             Debug.Log("Invalid price. Please enter a valid number.");
             return;
@@ -710,7 +732,7 @@ public class Console : MonoBehaviour
 
     private void SetEthPrice(string[] args)
     {
-        if (!TryGetFloat(args, 0, out float price))
+        if (!TryGetEuro(args, 0, out int price))
         {
             Debug.Log("Invalid price. Please enter a valid number.");
             return;
@@ -780,7 +802,7 @@ public class Console : MonoBehaviour
         switch (eventType)
         {
             case "bull":
-                CryptoSystem.Instance.btcPrice *= 1.15f;
+                CryptoSystem.Instance.btcPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.btcPrice * 1.15f);
                 CryptoSystem.Instance.InvokeBtcPriceChanged();
                 CryptoSystem.Instance.currentMarketEvent = "BTC Bull Run [+15%]";
                 LogUtil.Event.Log(
@@ -790,9 +812,9 @@ public class Console : MonoBehaviour
                 break;
 
             case "crash":
-                if (Globals.FloatUtil.GreaterOrEqual(CryptoSystem.Instance.btcPrice * 0.85f, CryptoSystem.Instance.btcMinMarketPrice))
+                if (CryptoSystem.Instance.btcPrice * 0.85f >= CryptoSystem.Instance.btcMinMarketPrice)
                 {
-                    CryptoSystem.Instance.btcPrice *= 0.85f;
+                    CryptoSystem.Instance.btcPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.btcPrice * 0.85f);
                     CryptoSystem.Instance.InvokeBtcPriceChanged();
                     CryptoSystem.Instance.currentMarketEvent = "BTC Crash [-15%]";
                     LogUtil.Event.Log(
@@ -803,7 +825,7 @@ public class Console : MonoBehaviour
                 break;
 
             case "rally":
-                CryptoSystem.Instance.ethPrice *= 1.20f;
+                CryptoSystem.Instance.ethPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.ethPrice * 1.20f);
                 CryptoSystem.Instance.InvokeEthPriceChanged();
                 CryptoSystem.Instance.currentMarketEvent = "ETH Rally [+20%]";
                 LogUtil.Event.Log(
@@ -812,9 +834,9 @@ public class Console : MonoBehaviour
                 break;
 
             case "correction":
-                if (Globals.FloatUtil.GreaterOrEqual(CryptoSystem.Instance.ethPrice * 0.80f, CryptoSystem.Instance.ethMinMarketPrice))
+                if (CryptoSystem.Instance.ethPrice * 0.80f >= CryptoSystem.Instance.ethMinMarketPrice)
                 {
-                    CryptoSystem.Instance.ethPrice *= 0.80f;
+                    CryptoSystem.Instance.ethPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.ethPrice * 0.80f);
                     CryptoSystem.Instance.InvokeEthPriceChanged();
                     CryptoSystem.Instance.currentMarketEvent = "ETH Correction [-20%]";
                     LogUtil.Event.Log(
@@ -825,9 +847,9 @@ public class Console : MonoBehaviour
                 break;
 
             case "optimism":
-                CryptoSystem.Instance.btcPrice *= 1.05f;
+                CryptoSystem.Instance.btcPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.btcPrice * 1.05f);
                 CryptoSystem.Instance.InvokeBtcPriceChanged();
-                CryptoSystem.Instance.ethPrice *= 1.05f;
+                CryptoSystem.Instance.ethPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.ethPrice * 1.05f);
                 CryptoSystem.Instance.InvokeEthPriceChanged();
                 CryptoSystem.Instance.currentMarketEvent = "Market Optimism [+5%]";
                 LogUtil.Event.Log(
@@ -837,9 +859,9 @@ public class Console : MonoBehaviour
                 break;
 
             case "btc_manipulation":
-                if (Globals.FloatUtil.GreaterOrEqual(CryptoSystem.Instance.btcPrice * 0.5f, CryptoSystem.Instance.btcMinMarketPrice))
+                if (CryptoSystem.Instance.btcPrice * 0.5f >= CryptoSystem.Instance.btcMinMarketPrice)
                 {
-                    CryptoSystem.Instance.btcPrice *= 0.5f;
+                    CryptoSystem.Instance.btcPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.btcPrice * 0.5f);
                     CryptoSystem.Instance.InvokeBtcPriceChanged();
                     CryptoSystem.Instance.currentMarketEvent = "BTC Manipulation [-100%]";
                     LogUtil.Event.Log(
@@ -850,9 +872,9 @@ public class Console : MonoBehaviour
                 break;
 
             case "eth_manipulation":
-                if (Globals.FloatUtil.GreaterOrEqual(CryptoSystem.Instance.ethPrice * 0.5f, CryptoSystem.Instance.ethMinMarketPrice))
+                if (CryptoSystem.Instance.ethPrice * 0.5f >= CryptoSystem.Instance.ethMinMarketPrice)
                 {
-                    CryptoSystem.Instance.ethPrice *= 0.5f;
+                    CryptoSystem.Instance.ethPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.ethPrice * 0.5f);
                     CryptoSystem.Instance.InvokeEthPriceChanged();
                     CryptoSystem.Instance.currentMarketEvent = "ETH Manipulation [-100%]";
                     LogUtil.Event.Log(
@@ -863,7 +885,7 @@ public class Console : MonoBehaviour
                 break;
 
             case "btc_insider_trading":
-                CryptoSystem.Instance.btcPrice *= 2.0f;
+                CryptoSystem.Instance.btcPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.btcPrice * 2.0f);
                 CryptoSystem.Instance.InvokeBtcPriceChanged();
                 CryptoSystem.Instance.currentMarketEvent = "BTC Insider Trading [+100%]";
                 LogUtil.Event.Log(
@@ -873,7 +895,7 @@ public class Console : MonoBehaviour
                 break;
 
             case "eth_insider_trading":
-                CryptoSystem.Instance.ethPrice *= 2.0f;
+                CryptoSystem.Instance.ethPrice = Globals.MoneyUtil.RoundEuro(CryptoSystem.Instance.ethPrice * 2.0f);
                 CryptoSystem.Instance.InvokeEthPriceChanged();
                 CryptoSystem.Instance.currentMarketEvent = "ETH Insider Trading [+100%]";
                 LogUtil.Event.Log(

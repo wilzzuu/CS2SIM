@@ -39,9 +39,9 @@ public class RouletteManager : MonoBehaviour
     private bool _isScrolling;
     private Vector3 _initialReelPosition;
 
-    private float _accumulatedBotValue;
-    private float _totalPlayerValue;
-    private float _totalGameValue;
+    private int _accumulatedBotValue;
+    private int _totalPlayerValue;
+    private int _totalGameValue;
     private float _winChance;
     public UIManager uiManager;
 
@@ -320,8 +320,8 @@ public class RouletteManager : MonoBehaviour
 
     void UpdateUI()
     {
-        float totalPlayerItemValue = _selectedPlayerItems.Sum(item => item.price);
-        float totalUniqueBotValue = _accumulatedBotValue;
+        int totalPlayerItemValue = _selectedPlayerItems.Sum(item => item.price);
+        int totalUniqueBotValue = _accumulatedBotValue;
 
         _totalGameValue = totalPlayerItemValue + totalUniqueBotValue;
 
@@ -340,7 +340,7 @@ public class RouletteManager : MonoBehaviour
     {
         _reelItems.Clear();
         _itemOwnership.Clear();
-        _accumulatedBotValue = 0f;
+        _accumulatedBotValue = 0;
 
         foreach (var playerItem in _selectedPlayerItems)
         {
@@ -428,8 +428,8 @@ public class RouletteManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        _totalPlayerValue = 0f;
-        _totalGameValue = 0f;
+        _totalPlayerValue = 0;
+        _totalGameValue = 0;
         _winChance = 0f;
         startGameButton.interactable = true;
         backButton.interactable = true;

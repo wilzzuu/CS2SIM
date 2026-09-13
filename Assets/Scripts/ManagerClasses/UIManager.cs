@@ -89,24 +89,24 @@ public class UIManager : MonoBehaviour
     
     void UpdateBalanceDisplay()
     {
-        float bal = PlayerManager.Instance.GetPlayerBalance();
+        int bal = PlayerManager.Instance.GetPlayerBalance();
         balance.text = $"{Globals.FormatCurrencyStr(bal, Globals.EURO_DECIMAL)}€";
     }
 
     void UpdateBitcoinDisplay()
     {
-        float btc = PlayerManager.Instance.GetBtcOwned();
-        float btcValue = CryptoSystem.Instance.GetBtcPrice();
-        float btcWallet = btc * btcValue;
+        long btc = PlayerManager.Instance.GetBtcOwned();
+        int btcValue = CryptoSystem.Instance.GetBtcPrice();
+        long btcWallet = btc * btcValue / Globals.CRYPTO_SCALE;
 
-        float btcPriceDiff = btcValue - CryptoSystem.Instance.lastBtcPrice;
-        bool isBtcNegative = Single.IsNegative(btcPriceDiff);
+        int btcPriceDiff = btcValue - CryptoSystem.Instance.lastBtcPrice;
+        bool isBtcNegative = btcPriceDiff < 0;
 
         btcPriceText.text = $"{Globals.FormatCurrencyStr(btcValue, Globals.EURO_DECIMAL)}€";
         btcDiffText.text = $"{(isBtcNegative ? "" : "+")}{Globals.FormatCurrencyStr(btcPriceDiff, Globals.EURO_DECIMAL)}€";
         btcDiffText.color = isBtcNegative ? Color.red : Color.green;
 
-        if (btcWallet > 0.01f)
+        if (btcWallet > 0)
         {
             btcAmountText.text = $"{Globals.FormatCurrencyStr(btc, Globals.CRYPTO_DECIMAL)}";
             btcValueText.text = $"{Globals.FormatCurrencyStr(btcWallet, Globals.EURO_DECIMAL)}€";
@@ -118,8 +118,8 @@ public class UIManager : MonoBehaviour
         }
 
         int btcMiners = CryptoSystem.Instance.GetBtcMinerCount();
-        float btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
-        float eurPerHour = btcValue * btcPerHour;
+        long btcPerHour = CryptoSystem.Instance.GetBtcPerHour();
+        long eurPerHour = (long)btcValue * btcPerHour / Globals.CRYPTO_SCALE;
 
         if (btcMiners > 0)
         {
@@ -135,18 +135,18 @@ public class UIManager : MonoBehaviour
 
     void UpdateEthereumDisplay()
     {
-        float eth = PlayerManager.Instance.GetEthOwned();
-        float ethValue = CryptoSystem.Instance.GetEthPrice();
-        float ethWallet = eth * ethValue;
+        long eth = PlayerManager.Instance.GetEthOwned();
+        int ethValue = CryptoSystem.Instance.GetEthPrice();
+        long ethWallet = eth * ethValue / Globals.CRYPTO_SCALE;
 
-        float ethPriceDiff = ethValue - CryptoSystem.Instance.lastEthPrice;
-        bool isEthNegative = Single.IsNegative(ethPriceDiff);
+        int ethPriceDiff = ethValue - CryptoSystem.Instance.lastEthPrice;
+        bool isEthNegative = ethPriceDiff < 0;
 
         ethPriceText.text = $"{Globals.FormatCurrencyStr(ethValue, Globals.EURO_DECIMAL)}€";
         ethDiffText.text = $"{(isEthNegative ? "" : "+")}{Globals.FormatCurrencyStr(ethPriceDiff, Globals.EURO_DECIMAL)}€";
         ethDiffText.color = isEthNegative ? Color.red : Color.green;
 
-        if (ethWallet > 0.01f)
+        if (ethWallet > 0)
         {
             ethAmountText.text = $"{Globals.FormatCurrencyStr(eth, Globals.CRYPTO_DECIMAL)}";
             ethValueText.text = $"{Globals.FormatCurrencyStr(ethWallet, Globals.EURO_DECIMAL)}€";
@@ -158,8 +158,8 @@ public class UIManager : MonoBehaviour
         }
 
         int ethMiners = CryptoSystem.Instance.GetEthMinerCount();
-        float ethPerHour = CryptoSystem.Instance.GetEthPerHour();
-        float eurPerHour = ethValue * ethPerHour;
+        long ethPerHour = CryptoSystem.Instance.GetEthPerHour();
+        long eurPerHour = (long)ethValue * ethPerHour / Globals.CRYPTO_SCALE;
 
         if (ethMiners > 0)
         {
@@ -175,7 +175,7 @@ public class UIManager : MonoBehaviour
 
     void UpdateInventoryValueDisplay()
     {
-        float inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
+        int inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
         inventoryValueText.text = $"{Globals.FormatCurrencyStr(inventoryValue, Globals.EURO_DECIMAL)}€";
     }
 

@@ -4,8 +4,8 @@ public class SerializableItemData
     public string id;
     public string gun;
     public string name;
-    public float basePrice;
-    public float price;
+    public int basePrice;
+    public int price;
     public string condition;
     public bool isStatTrak;
     public string type;

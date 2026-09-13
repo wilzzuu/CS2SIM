@@ -23,8 +23,8 @@ public static class LogUtil
     {
         public static void LogEuro(
             string action,
-            float amount,
-            float resultingBalance,
+            int amount,
+            int resultingBalance,
             string details = "")
         {
             try
@@ -66,9 +66,9 @@ public static class LogUtil
 
         public static void LogCrypto(
             string action,
-            float cryptoAmount,
+            long cryptoAmount,
             string cryptoType,
-            float resultingBalance,
+            long resultingBalance,
             string details = "")
         {
             try

@@ -21,13 +21,13 @@ public class BankManager : MonoBehaviour
     private const string SaveFileName = "BankData.save";
 
     
-    public float bankBalance;
+    public int bankBalance;
 
     public bool hasLoan;
 
-    public float loanAmount;
+    public int loanAmount;
 
-    public float repaymentAmount;
+    public int repaymentAmount;
 
     public DateTime dueDate;
 
@@ -58,7 +58,7 @@ public class BankManager : MonoBehaviour
 
     #region Bank
 
-    public bool Deposit(float amount)
+    public bool Deposit(int amount)
     {
         if (PlayerManager.Instance.GetPlayerBalance() < amount)
             return false;
@@ -72,7 +72,7 @@ public class BankManager : MonoBehaviour
         return true;
     }
 
-    public bool Withdraw(float amount)
+    public bool Withdraw(int amount)
     {
         if (bankBalance < amount)
             return false;
@@ -91,8 +91,8 @@ public class BankManager : MonoBehaviour
         if (DateTime.UtcNow < _nextInterestTick)
             return;
 
-        float interest =
-            bankBalance * DailyBankInterest;
+        int interest =
+            Globals.MoneyUtil.RoundEuro(bankBalance * DailyBankInterest);
 
         bankBalance += interest;
 
@@ -113,7 +113,7 @@ public class BankManager : MonoBehaviour
     #region Loans
 
     public bool TakeLoan(
-        float amount,
+        int amount,
         int days)
     {
         if (hasLoan)
@@ -124,7 +124,7 @@ public class BankManager : MonoBehaviour
         loanAmount = amount;
 
         repaymentAmount =
-            amount * multiplier;
+            Globals.MoneyUtil.RoundEuro(amount * multiplier);
 
         dueDate =
             DateTime.UtcNow.AddDays(days);
@@ -152,17 +152,17 @@ public class BankManager : MonoBehaviour
         if (!hasLoan)
             return false;
 
-        float availableFunds =
+        int availableFunds =
             PlayerManager.Instance.GetPlayerBalance() +
             bankBalance;
 
         if (availableFunds < repaymentAmount)
             return false;
 
-        float remaining =
+        int remaining =
             repaymentAmount;
 
-        float walletUsed =
+        int walletUsed =
             Mathf.Min(
                 PlayerManager.Instance.GetPlayerBalance(),
                 remaining);
@@ -197,8 +197,8 @@ public class BankManager : MonoBehaviour
         if (DateTime.UtcNow < dueDate)
             return;
 
-        repaymentAmount *=
-            1f + LatePenalty;
+        repaymentAmount =
+            Globals.MoneyUtil.RoundEuro(repaymentAmount * (1f + LatePenalty));
 
         dueDate =
             dueDate.AddDays(1);
@@ -270,10 +270,10 @@ public class BankManager : MonoBehaviour
         string path = Path.Combine(SaveFilePath, SaveFileName);
         if (!File.Exists(path))
         {
-            bankBalance = 0f;
+            bankBalance = 0;
             hasLoan = false;
-            loanAmount = 0f;
-            repaymentAmount = 0f;
+            loanAmount = 0;
+            repaymentAmount = 0;
             _nextInterestTick = DateTime.UtcNow;
             loanDays = 0;
         }
@@ -299,12 +299,12 @@ public class BankManager : MonoBehaviour
     [System.Serializable]
     public class BankSaveData
     {
-        public float bankBalance;
+        public int bankBalance;
 
         public bool hasLoan;
 
-        public float loanAmount;
-        public float repaymentAmount;
+        public int loanAmount;
+        public int repaymentAmount;
 
         public string dueDateTicks;
 

@@ -18,7 +18,7 @@ public class RouletteInventoryItem : MonoBehaviour
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
         gunText.text = item.gun;
         nameText.text = item.name;
-        priceText.text = $"{item.price:0.00}€";
+        priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}€";
 
         if (!isItemSelected)
         {

@@ -101,7 +101,7 @@ public class InventoryScreen : MonoBehaviour
 
             gunText.text = item.gun;
             nameText.text = item.name;
-            priceText.text = $"{item.price:F2}€";
+            priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}€";
         }
     }
 
@@ -125,11 +125,11 @@ public class InventoryScreen : MonoBehaviour
 
     public void DisplayTotalValue()
     {
-        float totalValue = InventoryManager.Instance.CalculateInventoryValue();
+        int totalValue = InventoryManager.Instance.CalculateInventoryValue();
 
         if (totalValueText != null)
         {
-            totalValueText.text = $"Total Value: {totalValue:F2}";
+            totalValueText.text = $"Total Value: {Globals.FormatCurrencyStr(totalValue, Globals.EURO_DECIMAL)}";
         }
     }
 }

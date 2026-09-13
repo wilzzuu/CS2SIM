@@ -177,7 +177,7 @@ public class MarketManager : MonoBehaviour
 
         if (_isBuyingTabActive && filterByBalanceToggle.isOn)
         {
-            float playerBalance = PlayerManager.Instance.GetPlayerBalance();
+            int playerBalance = PlayerManager.Instance.GetPlayerBalance();
             displayedItems = displayedItems.Where(item => item.price * Globals.MarketBuyPriceModifier <= playerBalance).ToList();
             pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
         }
@@ -316,7 +316,7 @@ public class MarketManager : MonoBehaviour
             }
         }
 
-        if (float.TryParse(query, out float itemPriceQuery))
+        if (Globals.TryParseEuroInput(query, out int itemPriceQuery))
         {
             if (_isBuyingTabActive)
             {
@@ -416,7 +416,7 @@ public class MarketManager : MonoBehaviour
             return;
         }
 
-        float purchasePrice = item.price * Globals.MarketBuyPriceModifier;
+        int purchasePrice = Globals.MoneyUtil.RoundEuro(item.price * Globals.MarketBuyPriceModifier);
         if (PlayerManager.Instance.GetPlayerBalance() >= purchasePrice)
         {
             PlayerManager.Instance.DeductMoney(purchasePrice);
@@ -442,7 +442,7 @@ public class MarketManager : MonoBehaviour
     public void SellAllItems()
     {
         List<ItemData> _items = InventoryManager.Instance.GetAllItems();
-        float inventoryValue = InventoryManager.Instance.CalculateInventoryValue(); 
+        int inventoryValue = InventoryManager.Instance.CalculateInventoryValue(); 
         if (_items.Count > 0)
         {
             InventoryManager.Instance.ClearInventory(false);
@@ -464,7 +464,7 @@ public class MarketManager : MonoBehaviour
             return;
         }
 
-        float sellingPrice = item.price;
+        int sellingPrice = item.price;
         if (InventoryManager.Instance.HasItem(item))
         {
             InventoryManager.Instance.RemoveItemFromInventory(item);
@@ -493,7 +493,10 @@ public class MarketManager : MonoBehaviour
     private void AdjustItemPrice(ItemData item, int change)
     {
         item.demandScore += change;
-        item.price = Mathf.Clamp(item.basePrice * (1 + item.demandScore * FluctuationIntensity), item.basePrice * 0.75f, item.basePrice * 1.5f);
+        item.price = Mathf.Clamp(
+            Globals.MoneyUtil.RoundEuro(item.basePrice * (1 + item.demandScore * FluctuationIntensity)),
+            Globals.MoneyUtil.RoundEuro(item.basePrice * 0.75f),
+            Globals.MoneyUtil.RoundEuro(item.basePrice * 1.5f));
         if (_marketplaceItems.TryGetValue(item, out MarketplaceItem marketplaceItem))
         {
             marketplaceItem.UpdatePrice(_isBuyingTabActive);
@@ -511,9 +514,9 @@ public class MarketManager : MonoBehaviour
             foreach (ItemData item in itemsForFluctuation)
             {
                 float randomFluctuation = UnityEngine.Random.Range(-FluctuationIntensity, FluctuationIntensity);
-                float newPrice = item.price * (1 + randomFluctuation);
+                int newPrice = Globals.MoneyUtil.RoundEuro(item.price * (1 + randomFluctuation));
 
-                item.price = Mathf.Clamp(newPrice, item.basePrice * 0.5f, item.basePrice * 2f);
+                item.price = Mathf.Clamp(newPrice, Globals.MoneyUtil.RoundEuro(item.basePrice * 0.5f), Globals.MoneyUtil.RoundEuro(item.basePrice * 2f));
             }
             UpdateCurrentTab();
         }
@@ -528,11 +531,11 @@ public class MarketManager : MonoBehaviour
         }
 
         float randomFluctuation = UnityEngine.Random.Range(-FluctuationIntensity, FluctuationIntensity);
-        float newPrice = item.price * (1 + randomFluctuation);
+        int newPrice = Globals.MoneyUtil.RoundEuro(item.price * (1 + randomFluctuation));
 
-        item.price = Mathf.Clamp(newPrice, item.basePrice * 0.5f, item.basePrice * 2f);
+        item.price = Mathf.Clamp(newPrice, Globals.MoneyUtil.RoundEuro(item.basePrice * 0.5f), Globals.MoneyUtil.RoundEuro(item.basePrice * 2f));
 
-        if (item.price < 0.01f)
+        if (item.price < 1)
         {
             item.price = item.basePrice;
         }
@@ -550,7 +553,10 @@ public class MarketManager : MonoBehaviour
                     
                     if (item.demandScore < 0) item.demandScore = 0;
 
-                    item.price = Mathf.Clamp(item.basePrice * (1 + item.demandScore * FluctuationIntensity), item.basePrice * 0.75f, item.basePrice * 1.5f);
+                    item.price = Mathf.Clamp(
+                        Globals.MoneyUtil.RoundEuro(item.basePrice * (1 + item.demandScore * FluctuationIntensity)),
+                        Globals.MoneyUtil.RoundEuro(item.basePrice * 0.75f),
+                        Globals.MoneyUtil.RoundEuro(item.basePrice * 1.5f));
 
                     if (_marketplaceItems.TryGetValue(item, out MarketplaceItem marketplaceItem))
                     {

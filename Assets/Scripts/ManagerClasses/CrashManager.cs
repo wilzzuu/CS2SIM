@@ -19,7 +19,7 @@ public class CrashManager : MonoBehaviour
     private float _crashPoint;
     private const float HouseEdge = 0.02f;
     private bool _isGameRunning = false;
-    private float _betAmount = 0f;
+    private int _betAmount = 0;
     private bool _hasCashedOut = false;
 
 
@@ -51,16 +51,7 @@ public class CrashManager : MonoBehaviour
 
     public void StartCrashGame()
     {
-        string _betText;
-        if (betAmountInput.text.Contains("."))
-        {
-            _betText = betAmountInput.text.Replace(".", ",");
-        }
-        else
-        {
-            _betText = betAmountInput.text;
-        }
-        if (float.TryParse(_betText, out _betAmount) && _betAmount > 0 && _betAmount <= PlayerManager.Instance.GetPlayerBalance())
+        if (Globals.TryParseEuroInput(betAmountInput.text, out _betAmount) && _betAmount > 0 && _betAmount <= PlayerManager.Instance.GetPlayerBalance())
         {
             PlayerManager.Instance.DeductMoney(_betAmount);
 
@@ -124,7 +115,7 @@ public class CrashManager : MonoBehaviour
     {
         if (_isGameRunning)
         {
-            float winnings = _betAmount * _currentMultiplier;
+            int winnings = Globals.MoneyUtil.RoundEuro(_betAmount * _currentMultiplier);
             PlayerManager.Instance.AddMoney(winnings);
 
             LogUtil.Economy.LogEuro(

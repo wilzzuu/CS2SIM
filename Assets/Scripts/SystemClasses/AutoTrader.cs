@@ -10,8 +10,8 @@ public class AutoTrader : MonoBehaviour
     [Header("Settings")]
     public int traderTier;
 
-    private readonly List<float> _btcHistory = new();
-    private readonly List<float> _ethHistory = new();
+    private readonly List<int> _btcHistory = new();
+    private readonly List<int> _ethHistory = new();
 
     private const int HistorySize = 120;
 
@@ -51,7 +51,7 @@ public class AutoTrader : MonoBehaviour
         AddPrice(_ethHistory, CryptoSystem.Instance.GetEthPrice());
     }
 
-    private void AddPrice(List<float> history, float price)
+    private void AddPrice(List<int> history, int price)
     {
         history.Add(price);
 
@@ -74,7 +74,7 @@ public class AutoTrader : MonoBehaviour
     private void TradeBTC()
     {
         float avg = Average(_btcHistory);
-        float current = CryptoSystem.Instance.GetBtcPrice();
+        int current = CryptoSystem.Instance.GetBtcPrice();
 
         float buyThreshold =
             avg * (1f - BuyThresholds[traderTier]);
@@ -95,7 +95,7 @@ public class AutoTrader : MonoBehaviour
     private void TradeETH()
     {
         float avg = Average(_ethHistory);
-        float current = CryptoSystem.Instance.GetEthPrice();
+        int current = CryptoSystem.Instance.GetEthPrice();
 
         float buyThreshold =
             avg * (1f - BuyThresholds[traderTier]);
@@ -113,91 +113,87 @@ public class AutoTrader : MonoBehaviour
         }
     }
 
-    private void BuyBTC(float price)
+    private void BuyBTC(int price)
     {
-        float budget =
+        int budget = Globals.MoneyUtil.RoundEuro(
             player.balance *
-            CapitalUsage[traderTier];
+            CapitalUsage[traderTier]);
 
-        if (budget < 100f)
+        if (budget < 100 * Globals.EURO_SCALE)
             return;
 
-        float btcAmount = budget / price;
+        long btcAmount = (long)budget * Globals.CRYPTO_SCALE / price;
 
         player.balance -= budget;
         player.btcOwned += btcAmount;
 
         LogUtil.Event.Log(
             "AutoTrader BTC Buy",
-            $"{btcAmount:F6} BTC @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
+            $"{(double)btcAmount / Globals.CRYPTO_SCALE:F6} BTC @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
         );
     }
 
-    private void SellBTC(float price)
+    private void SellBTC(int price)
     {
-        if (player.btcOwned <= 0f)
+        if (player.btcOwned <= 0L)
             return;
 
-        float amount =
-            player.btcOwned * 0.25f;
+        long amount = Globals.MoneyUtil.RoundCryptoUnits(player.btcOwned * 0.25);
 
-        float revenue =
-            amount * price;
+        int revenue = (int)(amount * (long)price / Globals.CRYPTO_SCALE);
 
         player.btcOwned -= amount;
         player.balance += revenue;
 
         LogUtil.Event.Log(
             "AutoTrader BTC Sell",
-            $"{amount:F6} BTC @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
+            $"{(double)amount / Globals.CRYPTO_SCALE:F6} BTC @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
         );
     }
 
-    private void BuyETH(float price)
+    private void BuyETH(int price)
     {
-        float budget =
+        int budget = Globals.MoneyUtil.RoundEuro(
             player.balance *
-            CapitalUsage[traderTier];
+            CapitalUsage[traderTier]);
 
-        if (budget < 100f)
+        if (budget < 100 * Globals.EURO_SCALE)
             return;
 
-        float ethAmount = budget / price;
+        long ethAmount = (long)budget * Globals.CRYPTO_SCALE / price;
 
         player.balance -= budget;
         player.ethOwned += ethAmount;
 
         LogUtil.Event.Log(
             "AutoTrader ETH Buy",
-            $"{ethAmount:F6} ETH @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
+            $"{(double)ethAmount / Globals.CRYPTO_SCALE:F6} ETH @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
         );
     }
 
-    private void SellETH(float price)
+    private void SellETH(int price)
     {
-        if (player.ethOwned <= 0f)
+        if (player.ethOwned <= 0L)
             return;
 
-        float amount =
-            player.ethOwned * 0.25f;
+        long amount = Globals.MoneyUtil.RoundCryptoUnits(player.ethOwned * 0.25);
 
-        float revenue =
-            amount * price;
+        int revenue = (int)(amount * (long)price / Globals.CRYPTO_SCALE);
 
         player.ethOwned -= amount;
         player.balance += revenue;
 
         LogUtil.Event.Log(
             "AutoTrader ETH Sell",
-            $"{amount:F6} ETH @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
+            $"{(double)amount / Globals.CRYPTO_SCALE:F6} ETH @ {Globals.FormatCurrencyStr(price, Globals.EURO_DECIMAL)}"
         );
     }
 
-    private float Average(List<float> values)
+    private float Average(List<int> values)
     {
         float total = 0f;
 
-        foreach (float value in values)
+        foreach (int value in values)
             total += value;
 
         return total / values.Count;

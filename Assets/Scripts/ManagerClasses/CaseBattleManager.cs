@@ -29,7 +29,7 @@ public class CaseBattleManager : MonoBehaviour
     public TMP_Dropdown gameModeDropdown;
     public float easingDuration = 7f;
     public int numberOfReelItems = 40;
-    public float keyPrice = 2.19f;
+    public int keyPrice = 2 * Globals.EURO_SCALE + 19;
     
     private bool _isScrolling;
     private GridLayoutGroup _gridLayout;
@@ -45,8 +45,8 @@ public class CaseBattleManager : MonoBehaviour
     
     private List<ItemData> _playerItems = new List<ItemData>();
     private List<ItemData> _botItems = new List<ItemData>();
-    private float _playerTotalValue;
-    private float _botTotalValue;
+    private int _playerTotalValue;
+    private int _botTotalValue;
     private bool _isGreaterMode;
     private Dictionary<string, List<ItemData>> _rarityGroups;
     
@@ -136,7 +136,7 @@ public class CaseBattleManager : MonoBehaviour
             TextMeshProUGUI nameText = caseButton.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = caseButton.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
             
-            float casePrice = GetCasePrice(caseData);
+            int casePrice = GetCasePrice(caseData);
             
             caseImage.sprite = Resources.Load<Sprite>($"CaseImages/{caseData.id}");
             nameText.text = caseData.name;
@@ -187,7 +187,7 @@ public class CaseBattleManager : MonoBehaviour
         
         SetUncoveredResultItems();
         
-        float casePrice = GetCasePrice(_selectedCaseData);
+        int casePrice = GetCasePrice(_selectedCaseData);
         
         if (PlayerManager.Instance.GetPlayerBalance() >= casePrice)
         {
@@ -208,8 +208,8 @@ public class CaseBattleManager : MonoBehaviour
 
         _playerItems.Clear();
         _botItems.Clear();
-        _playerTotalValue = 0f;
-        _botTotalValue = 0f;
+        _playerTotalValue = 0;
+        _botTotalValue = 0;
         playerTotalValueText.text = "Total Value: 0€";
         botTotalValueText.text = "Total Value: 0€";
         
@@ -392,7 +392,7 @@ public class CaseBattleManager : MonoBehaviour
     
     private void DetermineWinner()
     {
-        float casePrice = GetCasePrice(_selectedCaseData);
+        int casePrice = GetCasePrice(_selectedCaseData);
         if (gameModeDropdown.options[gameModeDropdown.value].text == "Higher Wins")
         {
             string result = _playerTotalValue > _botTotalValue ? "Player Wins!" : "Bot Wins!"; 
@@ -400,10 +400,10 @@ public class CaseBattleManager : MonoBehaviour
             winningText.text = result;
             if (_playerTotalValue > _botTotalValue)
             {
-                float _totalGameValue = _playerTotalValue + _botTotalValue;
+                int _totalGameValue = _playerTotalValue + _botTotalValue;
                 PlayerManager.Instance.AddMoney(_totalGameValue);
             }
-            else if (Mathf.Approximately(_playerTotalValue, _botTotalValue))
+            else if (_playerTotalValue == _botTotalValue)
             {
                 playerWinsText.text = "Tie!";
                 botWinsText.text = "Tie!";
@@ -417,10 +417,10 @@ public class CaseBattleManager : MonoBehaviour
             winningText.text = result;
             if (_playerTotalValue < _botTotalValue)
             {
-                float _totalGameValue = _playerTotalValue + _botTotalValue;
+                int _totalGameValue = _playerTotalValue + _botTotalValue;
                 PlayerManager.Instance.AddMoney(_totalGameValue);
             }
-            else if (Mathf.Approximately(_playerTotalValue, _botTotalValue))
+            else if (_playerTotalValue == _botTotalValue)
             {
                 playerWinsText.text = "Tie!";
                 botWinsText.text = "Tie!";
@@ -489,7 +489,7 @@ public class CaseBattleManager : MonoBehaviour
         return null;
     }
 
-    private float GetCasePrice(CaseData caseData)
+    private int GetCasePrice(CaseData caseData)
     {
         int amountOfRounds = 5;
         return (caseData.price + keyPrice) * amountOfRounds;

@@ -39,16 +39,17 @@ public class MarketplaceItem : MonoBehaviour
 
         gunText.text = _itemData.gun;
         nameText.text = _itemData.name;
+        int buyPrice = Globals.MoneyUtil.RoundEuro(_itemData.price * BuyMarkup);
         priceText.text = isBuying
-            ? $"{_itemData.price * BuyMarkup:F2}€"
-            : $"{_itemData.price:F2}€";
+            ? $"{Globals.FormatCurrencyStr(buyPrice, Globals.EURO_DECIMAL)}€"
+            : $"{Globals.FormatCurrencyStr(_itemData.price, Globals.EURO_DECIMAL)}€";
         
-        float priceVariation = isBuying
-            ? _itemData.price * BuyMarkup - _itemData.basePrice
+        int priceVariation = isBuying
+            ? buyPrice - _itemData.basePrice
             : _itemData.price - _itemData.basePrice;
         priceVariationText.text = priceVariation > 0
-            ? $"+{priceVariation:F2}€"
-            : $"{priceVariation:F2}€";
+            ? $"+{Globals.FormatCurrencyStr(priceVariation, Globals.EURO_DECIMAL)}€"
+            : $"{Globals.FormatCurrencyStr(priceVariation, Globals.EURO_DECIMAL)}€";
         priceVariationText.color = priceVariation > 0
             ? new Color32(215, 49, 49, 255)
             : new Color32(104, 215, 49, 255);
@@ -71,16 +72,17 @@ public class MarketplaceItem : MonoBehaviour
     public void UpdatePrice(bool isBuying)
     {
         InventoryManager.Instance.CalculateInventoryValue();
+        int buyPrice = Globals.MoneyUtil.RoundEuro(_itemData.price * BuyMarkup);
         priceText.text = isBuying
-            ? $"{_itemData.price * BuyMarkup:F2}€"
-            : $"{_itemData.price:F2}€";
+            ? $"{Globals.FormatCurrencyStr(buyPrice, Globals.EURO_DECIMAL)}€"
+            : $"{Globals.FormatCurrencyStr(_itemData.price, Globals.EURO_DECIMAL)}€";
         
-        float priceVariation = isBuying
-            ? _itemData.price * BuyMarkup - _itemData.basePrice
+        int priceVariation = isBuying
+            ? buyPrice - _itemData.basePrice
             : _itemData.price - _itemData.basePrice;
         priceVariationText.text = priceVariation > 0
-            ? $"+{priceVariation:F2}€"
-            : $"{priceVariation:F2}€";
+            ? $"+{Globals.FormatCurrencyStr(priceVariation, Globals.EURO_DECIMAL)}€"
+            : $"{Globals.FormatCurrencyStr(priceVariation, Globals.EURO_DECIMAL)}€";
         priceVariationText.color = priceVariation > 0
             ? new Color32(215, 49, 49, 255)
             : new Color32(104, 215, 49, 255);

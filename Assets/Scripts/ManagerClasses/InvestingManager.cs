@@ -105,7 +105,7 @@ public class InvestingManager : MonoBehaviour
         Stock stock = _allStocks.FirstOrDefault(s => s.stockID == stockID);
         if (stock == null) return;
 
-        float totalCost = stock.currentPrice * quantity;
+        int totalCost = stock.currentPrice * quantity;
         if (PlayerManager.Instance.GetPlayerBalance() < totalCost)
         {
             Debug.Log("Not enough money to buy stocks.");
@@ -140,7 +140,7 @@ public class InvestingManager : MonoBehaviour
         Stock stock = _allStocks.FirstOrDefault(s => s.stockID == stockID);
         if (stock == null) return;
 
-        float totalValue = stock.currentPrice * quantity;
+        int totalValue = stock.currentPrice * quantity;
 
         portfolioEntry.quantityOwned -= quantity;
         PlayerManager.Instance.AddMoney(totalValue);
@@ -161,8 +161,8 @@ public class InvestingManager : MonoBehaviour
         {
             foreach (var stock in _allStocks)
             {
-                float randomVariation = Random.Range(-stock.priceChangeRate, stock.priceChangeRate);
-                stock.currentPrice = Mathf.Max(0.1f, stock.currentPrice + randomVariation);
+                int randomVariation = Random.Range(-stock.priceChangeRate, stock.priceChangeRate + 1);
+                stock.currentPrice = Mathf.Max(10, stock.currentPrice + randomVariation);
                 stock.priceHistory.Add(stock.currentPrice);
 
                 if (stock.priceHistory.Count > maxPriceHistoryPoints)
@@ -184,8 +184,8 @@ public class InvestingManager : MonoBehaviour
             Stock randomStock = _allStocks[Random.Range(0, _allStocks.Count)];
             bool isBoost = Random.value < 0.5f;
 
-            float eventImpact = isBoost ? randomStock.currentPrice * 0.2f : -randomStock.currentPrice * 0.3f;
-            randomStock.currentPrice = Mathf.Max(0.1f, randomStock.currentPrice + eventImpact);
+            int eventImpact = Globals.MoneyUtil.RoundEuro(isBoost ? randomStock.currentPrice * 0.2f : -randomStock.currentPrice * 0.3f);
+            randomStock.currentPrice = Mathf.Max(10, randomStock.currentPrice + eventImpact);
 
             Debug.Log($"{randomStock.stockName} experienced a {(isBoost ? "boost" : "crash")}!");
         }

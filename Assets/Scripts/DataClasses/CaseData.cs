@@ -7,6 +7,6 @@ public class CaseData : ScriptableObject
 {
     public string id;
     public new string name;
-    public float price;
+    public int price;
     public List<ItemData> items;
 }

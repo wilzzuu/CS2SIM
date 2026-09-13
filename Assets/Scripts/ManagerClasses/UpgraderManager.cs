@@ -95,7 +95,7 @@ public class UpgraderManager : MonoBehaviour
     
     void RefreshInventoryValue()
     {
-        float inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
+        int inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
         inventoryValueText.text = $"Inventory Value:        {Globals.FormatCurrencyStr(inventoryValue, Globals.EURO_DECIMAL)}€";
     }
 
@@ -278,8 +278,8 @@ public class UpgraderManager : MonoBehaviour
         if (_selectedInventoryItem == null) return;
 
         float targetPrice = _selectedInventoryItem.price * multiplier;
-        float minPrice = targetPrice * 0.8f;
-        float maxPrice = targetPrice * 1.2f;
+        int minPrice = Globals.MoneyUtil.RoundEuro(targetPrice * 0.8f);
+        int maxPrice = Globals.MoneyUtil.RoundEuro(targetPrice * 1.2f);
 
         List<ItemData> validItems = _allItems.FindAll(upgradeItem => upgradeItem.price >= minPrice && upgradeItem.price <= maxPrice);
 
@@ -305,17 +305,17 @@ public class UpgraderManager : MonoBehaviour
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.imageName}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
         nameText.text = item.name;
-        priceText.text = $"{item.price:0.00}";
+        priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}";
     }
 
     void UpdateUpgradeProbability()
     {
         if (_selectedInventoryItem != null && _selectedUpgradeItem != null)
         {
-            _successProbability = _selectedInventoryItem.price / _selectedUpgradeItem.price;
+            _successProbability = (float)_selectedInventoryItem.price / _selectedUpgradeItem.price;
             probabilityText.fontSize = 32;
             probabilityText.text = $"{_successProbability * 100:0.00}%";
-            multiplierText.text = $"{_selectedUpgradeItem.price / _selectedInventoryItem.price:0.0}x";
+            multiplierText.text = $"{(float)_selectedUpgradeItem.price / _selectedInventoryItem.price:0.0}x";
         }
         else
         {
@@ -428,7 +428,7 @@ public class UpgraderManager : MonoBehaviour
             }
         }
 
-        if (float.TryParse(query, out float itemPriceQuery))
+        if (Globals.TryParseEuroInput(query, out int itemPriceQuery))
         {
             if (!_isInventoryTabActive)
             {

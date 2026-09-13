@@ -97,11 +97,11 @@ public class DailyRewardSystem : MonoBehaviour
         return false;
     }
 
-    public void GiveReward(float amount)
+    public void GiveReward(int amount)
     {
         if (currentDay == 6)
         {   
-            float cryptoAmount = (float)amount / CryptoSystem.Instance.GetEthPrice();
+            long cryptoAmount = (long)amount * Globals.CRYPTO_SCALE / CryptoSystem.Instance.GetEthPrice();
             PlayerManager.Instance.AddEth(cryptoAmount);
 
             LogUtil.Economy.LogCrypto(
