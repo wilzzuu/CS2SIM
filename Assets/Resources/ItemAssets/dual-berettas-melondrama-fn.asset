@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-melondrama-fn
   gun: Dual Berettas
   name: Melondrama
-  basePrice: 21.94
-  price: 21.94
+  basePrice: 2194
+  price: 2194
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: dual-berettas-melondrama
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

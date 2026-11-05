@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-safari-mesh-bsst
   gun: Stiletto Knife
   name: Safari Mesh
-  basePrice: 134.39
-  price: 134.39
+  basePrice: 13439
+  price: 13439
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

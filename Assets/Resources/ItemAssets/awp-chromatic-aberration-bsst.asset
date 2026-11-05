@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-chromatic-aberration-bsst
   gun: AWP
   name: Chromatic Aberration
-  basePrice: 27.2
-  price: 27.2
+  basePrice: 2720
+  price: 2720
   condition: Battle-Scarred
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-chromatic-aberration
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

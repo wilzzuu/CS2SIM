@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-turf-bsst
   gun: P2000
   name: Turf
-  basePrice: 0.53
-  price: 0.53
+  basePrice: 53
+  price: 53
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-turf
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

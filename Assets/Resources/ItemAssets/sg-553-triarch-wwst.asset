@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-triarch-wwst
   gun: SG 553
   name: Triarch
-  basePrice: 1.03
-  price: 1.03
+  basePrice: 103
+  price: 103
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sg-553-triarch
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

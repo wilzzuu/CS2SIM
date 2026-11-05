@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-magma-mw
   gun: M249
   name: Magma
-  basePrice: 3.33
-  price: 3.33
+  basePrice: 333
+  price: 333
   condition: Minimal Wear
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m249-magma
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-autotronic-mw
   gun: Karambit
   name: Autotronic
-  basePrice: 1275.03
-  price: 1275.03
+  basePrice: 127503
+  price: 127503
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

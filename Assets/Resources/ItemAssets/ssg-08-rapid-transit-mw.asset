@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-rapid-transit-mw
   gun: SSG 08
   name: Rapid Transit
-  basePrice: 3.56
-  price: 3.56
+  basePrice: 356
+  price: 356
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ssg-08-rapid-transit
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

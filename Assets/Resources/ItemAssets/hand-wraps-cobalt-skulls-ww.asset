@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-cobalt-skulls-ww
   gun: Hand Wraps
   name: Cobalt Skulls
-  basePrice: 231.49
-  price: 231.49
+  basePrice: 23149
+  price: 23149
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-cobalt-skulls
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

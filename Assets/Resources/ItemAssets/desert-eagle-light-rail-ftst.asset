@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-light-rail-ftst
   gun: Desert Eagle
   name: Light Rail
-  basePrice: 4.02
-  price: 4.02
+  basePrice: 402
+  price: 402
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-light-rail
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

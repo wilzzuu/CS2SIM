@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-gold-toof-mwst
   gun: Glock-18
   name: Gold Toof
-  basePrice: 89.62
-  price: 89.62
+  basePrice: 8962
+  price: 8962
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: glock-18-gold-toof
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-stained-ft
   gun: Gut Knife
   name: Stained
-  basePrice: 75.35
-  price: 75.35
+  basePrice: 7535
+  price: 7535
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-blue-streak-ftst
   gun: PP-Bizon
   name: Blue Streak
-  basePrice: 4.17
-  price: 4.17
+  basePrice: 417
+  price: 417
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: pp-bizon-blue-streak
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

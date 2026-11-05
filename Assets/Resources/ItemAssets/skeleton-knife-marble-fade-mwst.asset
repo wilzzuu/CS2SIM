@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-marble-fade-mwst
   gun: Skeleton Knife
   name: Marble Fade
-  basePrice: 905.62
-  price: 905.62
+  basePrice: 90562
+  price: 90562
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

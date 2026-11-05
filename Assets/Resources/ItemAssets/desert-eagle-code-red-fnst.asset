@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-code-red-fnst
   gun: Desert Eagle
   name: Code Red
-  basePrice: 230.39
-  price: 230.39
+  basePrice: 23039
+  price: 23039
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: desert-eagle-code-red
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

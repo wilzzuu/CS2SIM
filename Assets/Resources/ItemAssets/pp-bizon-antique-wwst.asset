@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-antique-wwst
   gun: PP-Bizon
   name: Antique
-  basePrice: 8.1
-  price: 8.1
+  basePrice: 810
+  price: 810
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: pp-bizon-antique
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

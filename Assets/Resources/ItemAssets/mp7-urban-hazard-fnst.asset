@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-urban-hazard-fnst
   gun: MP7
   name: Urban Hazard
-  basePrice: 1.89
-  price: 1.89
+  basePrice: 189
+  price: 189
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp7-urban-hazard
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

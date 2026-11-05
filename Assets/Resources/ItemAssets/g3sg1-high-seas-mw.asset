@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-high-seas-mw
   gun: G3SG1
   name: High Seas
-  basePrice: 2.34
-  price: 2.34
+  basePrice: 234
+  price: 234
   condition: Minimal Wear
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: g3sg1-high-seas
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

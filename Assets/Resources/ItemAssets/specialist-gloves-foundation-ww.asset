@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-foundation-ww
   gun: Specialist Gloves
   name: Foundation
-  basePrice: 329.33
-  price: 329.33
+  basePrice: 32933
+  price: 32933
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-foundation
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

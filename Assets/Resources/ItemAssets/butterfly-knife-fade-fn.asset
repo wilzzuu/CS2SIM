@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-fade-fn
   gun: Butterfly Knife
   name: Fade
-  basePrice: 1610.29
-  price: 1610.29
+  basePrice: 161029
+  price: 161029
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-muertos-fnst
   gun: P250
   name: Muertos
-  basePrice: 39.82
-  price: 39.82
+  basePrice: 3982
+  price: 3982
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-muertos
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

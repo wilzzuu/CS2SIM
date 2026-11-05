@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-oni-taiji-bsst
   gun: AWP
   name: Oni Taiji
-  basePrice: 572.24
-  price: 572.24
+  basePrice: 57224
+  price: 57224
   condition: Battle-Scarred
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-oni-taiji
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

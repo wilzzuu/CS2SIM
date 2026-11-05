@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-bloodsport-ft
   gun: SCAR-20
   name: Bloodsport
-  basePrice: 10.23
-  price: 10.23
+  basePrice: 1023
+  price: 1023
   condition: Field-Tested
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: scar-20-bloodsport
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

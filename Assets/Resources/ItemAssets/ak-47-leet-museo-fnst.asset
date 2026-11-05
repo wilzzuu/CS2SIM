@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-leet-museo-fnst
   gun: AK-47
   name: Leet Museo
-  basePrice: 355.66
-  price: 355.66
+  basePrice: 35566
+  price: 35566
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-leet-museo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

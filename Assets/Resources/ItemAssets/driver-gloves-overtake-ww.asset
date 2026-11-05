@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-overtake-ww
   gun: Driver Gloves
   name: Overtake
-  basePrice: 64.86
-  price: 64.86
+  basePrice: 6486
+  price: 6486
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-overtake
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

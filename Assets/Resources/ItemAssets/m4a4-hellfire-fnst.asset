@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-hellfire-fnst
   gun: M4A4
   name: Hellfire
-  basePrice: 272.83
-  price: 272.83
+  basePrice: 27283
+  price: 27283
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: m4a4-hellfire
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

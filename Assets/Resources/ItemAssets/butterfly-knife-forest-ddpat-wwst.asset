@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-forest-ddpat-wwst
   gun: Butterfly Knife
   name: Forest DDPAT
-  basePrice: 532.71
-  price: 532.71
+  basePrice: 53271
+  price: 53271
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

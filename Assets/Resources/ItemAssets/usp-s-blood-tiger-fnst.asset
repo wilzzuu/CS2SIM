@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-blood-tiger-fnst
   gun: USP-S
   name: Blood Tiger
-  basePrice: 12.5
-  price: 12.5
+  basePrice: 1250
+  price: 1250
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-blood-tiger
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

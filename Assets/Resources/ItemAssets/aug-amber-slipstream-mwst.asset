@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-amber-slipstream-mwst
   gun: AUG
   name: Amber Slipstream
-  basePrice: 0.64
-  price: 0.64
+  basePrice: 64
+  price: 64
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-amber-slipstream
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

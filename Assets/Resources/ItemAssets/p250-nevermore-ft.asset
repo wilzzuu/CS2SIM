@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-nevermore-ft
   gun: P250
   name: Nevermore
-  basePrice: 1
-  price: 1
+  basePrice: 100
+  price: 100
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-nevermore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

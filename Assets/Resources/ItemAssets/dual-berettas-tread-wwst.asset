@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-tread-wwst
   gun: Dual Berettas
   name: Tread
-  basePrice: 0.85
-  price: 0.85
+  basePrice: 85
+  price: 85
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-tread
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

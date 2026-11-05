@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-blue-steel-bsst
   gun: Falchion Knife
   name: Blue Steel
-  basePrice: 201.5
-  price: 201.5
+  basePrice: 20150
+  price: 20150
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

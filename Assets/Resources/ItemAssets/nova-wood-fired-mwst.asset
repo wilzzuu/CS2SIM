@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-wood-fired-mwst
   gun: Nova
   name: Wood Fired
-  basePrice: 0.53
-  price: 0.53
+  basePrice: 53
+  price: 53
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-wood-fired
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-heaven-guard-fn
   gun: MAG-7
   name: Heaven Guard
-  basePrice: 1.21
-  price: 1.21
+  basePrice: 121
+  price: 121
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-heaven-guard
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

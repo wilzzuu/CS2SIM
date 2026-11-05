@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-stained-ww
   gun: Talon Knife
   name: Stained
-  basePrice: 308.36
-  price: 308.36
+  basePrice: 30836
+  price: 30836
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

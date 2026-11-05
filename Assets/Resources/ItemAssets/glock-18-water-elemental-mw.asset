@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-water-elemental-mw
   gun: Glock-18
   name: Water Elemental
-  basePrice: 21.66
-  price: 21.66
+  basePrice: 2166
+  price: 2166
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: glock-18-water-elemental
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

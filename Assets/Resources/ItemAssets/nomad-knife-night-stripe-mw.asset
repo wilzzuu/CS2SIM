@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-night-stripe-mw
   gun: Nomad Knife
   name: Night Stripe
-  basePrice: 123.01
-  price: 123.01
+  basePrice: 12301
+  price: 12301
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

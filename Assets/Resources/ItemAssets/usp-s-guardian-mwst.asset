@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-guardian-mwst
   gun: USP-S
   name: Guardian
-  basePrice: 8.08
-  price: 8.08
+  basePrice: 808
+  price: 808
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: usp-s-guardian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

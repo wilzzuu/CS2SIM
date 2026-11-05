@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-tread-plate-mwst
   gun: CZ75-Auto
   name: Tread Plate
-  basePrice: 8.22
-  price: 8.22
+  basePrice: 822
+  price: 822
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: cz75-auto-tread-plate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

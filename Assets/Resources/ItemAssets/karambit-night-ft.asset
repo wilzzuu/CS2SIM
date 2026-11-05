@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-night-ft
   gun: Karambit
   name: Night
-  basePrice: 580.2
-  price: 580.2
+  basePrice: 58020
+  price: 58020
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

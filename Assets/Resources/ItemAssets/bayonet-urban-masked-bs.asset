@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-urban-masked-bs
   gun: Bayonet
   name: Urban Masked
-  basePrice: 144.44
-  price: 144.44
+  basePrice: 14444
+  price: 14444
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

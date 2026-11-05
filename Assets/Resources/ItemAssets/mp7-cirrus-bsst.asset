@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-cirrus-bsst
   gun: MP7
   name: Cirrus
-  basePrice: 1.15
-  price: 1.15
+  basePrice: 115
+  price: 115
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp7-cirrus
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

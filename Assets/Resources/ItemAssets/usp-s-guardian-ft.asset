@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-guardian-ft
   gun: USP-S
   name: Guardian
-  basePrice: 3.05
-  price: 3.05
+  basePrice: 305
+  price: 305
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: usp-s-guardian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

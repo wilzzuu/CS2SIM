@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-chameleon-wwst
   gun: AUG
   name: Chameleon
-  basePrice: 83.19
-  price: 83.19
+  basePrice: 8319
+  price: 8319
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: aug-chameleon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

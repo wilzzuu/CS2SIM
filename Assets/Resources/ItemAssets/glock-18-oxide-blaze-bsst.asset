@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-oxide-blaze-bsst
   gun: Glock-18
   name: Oxide Blaze
-  basePrice: 0.34
-  price: 0.34
+  basePrice: 34
+  price: 34
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-oxide-blaze
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

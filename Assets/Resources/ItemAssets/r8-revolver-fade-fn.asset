@@ -15,8 +15,8 @@ MonoBehaviour:
   id: r8-revolver-fade-fn
   gun: R8 Revolver
   name: Fade
-  basePrice: 2.71
-  price: 2.71
+  basePrice: 271
+  price: 271
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: r8-revolver-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

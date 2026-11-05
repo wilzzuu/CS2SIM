@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-cobra-strike-ft
   gun: Dual Berettas
   name: Cobra Strike
-  basePrice: 59.24
-  price: 59.24
+  basePrice: 5924
+  price: 5924
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: dual-berettas-cobra-strike
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

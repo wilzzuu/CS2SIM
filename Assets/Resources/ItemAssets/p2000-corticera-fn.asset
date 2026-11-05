@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-corticera-fn
   gun: P2000
   name: Corticera
-  basePrice: 94.32
-  price: 94.32
+  basePrice: 9432
+  price: 9432
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p2000-corticera
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

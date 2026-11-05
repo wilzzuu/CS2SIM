@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-forest-ddpat-mw
   gun: Specialist Gloves
   name: Forest DDPAT
-  basePrice: 525.42
-  price: 525.42
+  basePrice: 52542
+  price: 52542
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

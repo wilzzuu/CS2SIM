@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-heavy-metal-ftst
   gun: SG 553
   name: Heavy Metal
-  basePrice: 1.05
-  price: 1.05
+  basePrice: 105
+  price: 105
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-heavy-metal
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

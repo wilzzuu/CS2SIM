@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-freehand-bsst
   gun: Gut Knife
   name: Freehand
-  basePrice: 289.43
-  price: 289.43
+  basePrice: 28943
+  price: 28943
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

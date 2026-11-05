@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: prisma-2-case
   name: Prisma 2 Case
-  price: 1.64
+  price: 164
   items:
   - {fileID: 11400000, guid: 3fc8125b91287ba4c8134a062d38a43e, type: 2}
   - {fileID: 11400000, guid: 36afa4aab7ac2e14b8bff92ffaad6c6a, type: 2}

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-worm-god-fn
   gun: AWP
   name: Worm God
-  basePrice: 6.45
-  price: 6.45
+  basePrice: 645
+  price: 645
   condition: Factory New
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: awp-worm-god
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

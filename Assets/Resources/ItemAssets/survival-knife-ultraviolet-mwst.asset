@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-ultraviolet-mwst
   gun: Survival Knife
   name: Ultraviolet
-  basePrice: 122.27
-  price: 122.27
+  basePrice: 12227
+  price: 12227
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

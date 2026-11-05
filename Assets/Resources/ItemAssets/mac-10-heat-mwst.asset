@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-heat-mwst
   gun: MAC-10
   name: Heat
-  basePrice: 13.54
-  price: 13.54
+  basePrice: 1354
+  price: 1354
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-heat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

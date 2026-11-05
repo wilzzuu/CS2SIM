@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-hydro-strike-bs
   gun: Dual Berettas
   name: Hydro Strike
-  basePrice: 0.78
-  price: 0.78
+  basePrice: 78
+  price: 78
   condition: Battle-Scarred
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: dual-berettas-hydro-strike
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

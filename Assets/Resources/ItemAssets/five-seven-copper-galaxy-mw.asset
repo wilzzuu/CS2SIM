@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-copper-galaxy-mw
   gun: Five-SeveN
   name: Copper Galaxy
-  basePrice: 13.8
-  price: 13.8
+  basePrice: 1380
+  price: 1380
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-copper-galaxy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

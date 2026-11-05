@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-wild-six-mw
   gun: Nova
   name: Wild Six
-  basePrice: 0.88
-  price: 0.88
+  basePrice: 88
+  price: 88
   condition: Minimal Wear
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-wild-six
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: negev-drop-me-ww
   gun: Negev
   name: Drop Me
-  basePrice: 0.6
-  price: 0.6
+  basePrice: 60
+  price: 60
   condition: Well-Worn
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: negev-drop-me
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

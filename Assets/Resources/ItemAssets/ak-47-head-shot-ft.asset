@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-head-shot-ft
   gun: AK-47
   name: Head Shot
-  basePrice: 34.27
-  price: 34.27
+  basePrice: 3427
+  price: 3427
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-head-shot
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

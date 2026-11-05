@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-vaporwave-fn
   gun: M4A1-S
   name: Vaporwave
-  basePrice: 299.43
-  price: 299.43
+  basePrice: 29943
+  price: 29943
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a1-s-vaporwave
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

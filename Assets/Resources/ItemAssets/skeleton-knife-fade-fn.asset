@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-fade-fn
   gun: Skeleton Knife
   name: Fade
-  basePrice: 470.14
-  price: 470.14
+  basePrice: 47014
+  price: 47014
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

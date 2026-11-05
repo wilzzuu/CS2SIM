@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-cartel-ftst
   gun: Dual Berettas
   name: Cartel
-  basePrice: 0.85
-  price: 0.85
+  basePrice: 85
+  price: 85
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-cartel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

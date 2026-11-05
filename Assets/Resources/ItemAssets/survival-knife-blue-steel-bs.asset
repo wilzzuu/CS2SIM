@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-blue-steel-bs
   gun: Survival Knife
   name: Blue Steel
-  basePrice: 78.76
-  price: 78.76
+  basePrice: 7876
+  price: 7876
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

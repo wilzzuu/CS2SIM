@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-swag-7-ww
   gun: MAG-7
   name: SWAG-7
-  basePrice: 0.53
-  price: 0.53
+  basePrice: 53
+  price: 53
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-swag-7
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: glove-case
   name: Glove Case
-  price: 14.41
+  price: 1441
   items:
   - {fileID: 11400000, guid: c40c2af6dddf3834898ff889b36374c6, type: 2}
   - {fileID: 11400000, guid: a7d2e6cab0af8754aacfe6b721c9ecb2, type: 2}

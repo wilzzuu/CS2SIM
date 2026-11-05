@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-brother-mw
   gun: Tec-9
   name: Brother
-  basePrice: 1.15
-  price: 1.15
+  basePrice: 115
+  price: 115
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: tec-9-brother
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

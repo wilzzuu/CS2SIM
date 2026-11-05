@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-briefing-bsst
   gun: M4A1-S
   name: Briefing
-  basePrice: 11.89
-  price: 11.89
+  basePrice: 1189
+  price: 1189
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m4a1-s-briefing
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

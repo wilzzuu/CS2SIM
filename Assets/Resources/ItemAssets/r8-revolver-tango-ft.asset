@@ -15,8 +15,8 @@ MonoBehaviour:
   id: r8-revolver-tango-ft
   gun: R8 Revolver
   name: Tango
-  basePrice: 0.75
-  price: 0.75
+  basePrice: 75
+  price: 75
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: r8-revolver-tango
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

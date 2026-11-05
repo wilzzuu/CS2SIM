@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bloodhound-gloves-guerrilla-ft
   gun: Bloodhound Gloves
   name: Guerrilla
-  basePrice: 226.95
-  price: 226.95
+  basePrice: 22695
+  price: 22695
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bloodhound-gloves-guerrilla
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

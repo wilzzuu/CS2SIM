@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-impire-fn
   gun: MP7
   name: Impire
-  basePrice: 13.49
-  price: 13.49
+  basePrice: 1349
+  price: 1349
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp7-impire
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

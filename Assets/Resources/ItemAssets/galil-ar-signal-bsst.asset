@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-signal-bsst
   gun: Galil AR
   name: Signal
-  basePrice: 1.59
-  price: 1.59
+  basePrice: 159
+  price: 159
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: galil-ar-signal
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

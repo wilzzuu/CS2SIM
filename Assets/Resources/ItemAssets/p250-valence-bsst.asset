@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-valence-bsst
   gun: P250
   name: Valence
-  basePrice: 0.52
-  price: 0.52
+  basePrice: 52
+  price: 52
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-valence
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

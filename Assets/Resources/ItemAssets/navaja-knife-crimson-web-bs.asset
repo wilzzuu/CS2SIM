@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-crimson-web-bs
   gun: Navaja Knife
   name: Crimson Web
-  basePrice: 68.15
-  price: 68.15
+  basePrice: 6815
+  price: 6815
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-grinder-mwst
   gun: Glock-18
   name: Grinder
-  basePrice: 7.57
-  price: 7.57
+  basePrice: 757
+  price: 757
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-grinder
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

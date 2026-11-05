@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-blue-steel-bsst
   gun: M9 Bayonet
   name: Blue Steel
-  basePrice: 568.51
-  price: 568.51
+  basePrice: 56851
+  price: 56851
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-urban-masked-wwst
   gun: Navaja Knife
   name: Urban Masked
-  basePrice: 124.98
-  price: 124.98
+  basePrice: 12498
+  price: 12498
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

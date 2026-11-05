@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-ice-coaled-fnst
   gun: AK-47
   name: Ice Coaled
-  basePrice: 41.49
-  price: 41.49
+  basePrice: 4149
+  price: 4149
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-ice-coaled
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

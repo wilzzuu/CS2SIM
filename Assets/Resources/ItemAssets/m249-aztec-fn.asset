@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-aztec-fn
   gun: M249
   name: Aztec
-  basePrice: 5.53
-  price: 5.53
+  basePrice: 553
+  price: 553
   condition: Factory New
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m249-aztec
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

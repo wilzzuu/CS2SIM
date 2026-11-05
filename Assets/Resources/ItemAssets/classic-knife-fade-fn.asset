@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-fade-fn
   gun: Classic Knife
   name: Fade
-  basePrice: 311.73
-  price: 311.73
+  basePrice: 31173
+  price: 31173
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-scaffold-ftst
   gun: UMP-45
   name: Scaffold
-  basePrice: 2.71
-  price: 2.71
+  basePrice: 271
+  price: 271
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ump-45-scaffold
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

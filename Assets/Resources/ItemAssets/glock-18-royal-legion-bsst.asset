@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-royal-legion-bsst
   gun: Glock-18
   name: Royal Legion
-  basePrice: 6.56
-  price: 6.56
+  basePrice: 656
+  price: 656
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-royal-legion
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

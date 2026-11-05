@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-cut-out-wwst
   gun: Tec-9
   name: Cut Out
-  basePrice: 5.67
-  price: 5.67
+  basePrice: 567
+  price: 567
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: tec-9-cut-out
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

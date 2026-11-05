@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-origami-mwst
   gun: Sawed-Off
   name: Origami
-  basePrice: 0.58
-  price: 0.58
+  basePrice: 58
+  price: 58
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-origami
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

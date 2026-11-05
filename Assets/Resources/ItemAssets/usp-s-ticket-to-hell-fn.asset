@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-ticket-to-hell-fn
   gun: USP-S
   name: Ticket to Hell
-  basePrice: 3.66
-  price: 3.66
+  basePrice: 366
+  price: 366
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: usp-s-ticket-to-hell
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-ultraviolet-bsst
   gun: Gut Knife
   name: Ultraviolet
-  basePrice: 95.15
-  price: 95.15
+  basePrice: 9515
+  price: 9515
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

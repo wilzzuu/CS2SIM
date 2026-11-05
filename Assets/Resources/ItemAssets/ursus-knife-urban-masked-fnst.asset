@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-urban-masked-fnst
   gun: Ursus Knife
   name: Urban Masked
-  basePrice: 870.69
-  price: 870.69
+  basePrice: 87069
+  price: 87069
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

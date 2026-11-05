@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-ranger-mwst
   gun: Nova
   name: Ranger
-  basePrice: 0.84
-  price: 0.84
+  basePrice: 84
+  price: 84
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-ranger
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

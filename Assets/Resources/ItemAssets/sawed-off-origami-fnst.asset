@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-origami-fnst
   gun: Sawed-Off
   name: Origami
-  basePrice: 1.03
-  price: 1.03
+  basePrice: 103
+  price: 103
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-origami
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

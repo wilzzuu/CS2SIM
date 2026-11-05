@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: operation-vanguard-weapon-case
   name: Operation Vanguard Weapon Case
-  price: 6.19
+  price: 619
   items:
   - {fileID: 11400000, guid: 06ca96f8d92fec14ea3f66258cdc515a, type: 2}
   - {fileID: 11400000, guid: 52c80694321ec7d4eb0cdb43907ac9eb, type: 2}

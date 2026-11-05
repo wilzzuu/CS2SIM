@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-arboreal-ww
   gun: Hand Wraps
   name: Arboreal
-  basePrice: 58.15
-  price: 58.15
+  basePrice: 5815
+  price: 5815
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-arboreal
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

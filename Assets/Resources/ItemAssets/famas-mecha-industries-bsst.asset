@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-mecha-industries-bsst
   gun: FAMAS
   name: Mecha Industries
-  basePrice: 19.09
-  price: 19.09
+  basePrice: 1909
+  price: 1909
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: famas-mecha-industries
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

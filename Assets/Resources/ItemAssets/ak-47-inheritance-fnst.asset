@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-inheritance-fnst
   gun: AK-47
   name: Inheritance
-  basePrice: 396.59
-  price: 396.59
+  basePrice: 39659
+  price: 39659
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-inheritance
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

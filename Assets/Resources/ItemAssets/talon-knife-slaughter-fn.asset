@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-slaughter-fn
   gun: Talon Knife
   name: Slaughter
-  basePrice: 734.9
-  price: 734.9
+  basePrice: 73490
+  price: 73490
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

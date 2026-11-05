@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-toy-soldier-ftst
   gun: Nova
   name: Toy Soldier
-  basePrice: 1.59
-  price: 1.59
+  basePrice: 159
+  price: 159
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-toy-soldier
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

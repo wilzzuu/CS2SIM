@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-highwayman-bsst
   gun: Sawed-Off
   name: Highwayman
-  basePrice: 2.96
-  price: 2.96
+  basePrice: 296
+  price: 296
   condition: Battle-Scarred
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-highwayman
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

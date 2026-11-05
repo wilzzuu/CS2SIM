@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-lapis-gator-fnst
   gun: MAC-10
   name: Lapis Gator
-  basePrice: 4.27
-  price: 4.27
+  basePrice: 427
+  price: 427
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-lapis-gator
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

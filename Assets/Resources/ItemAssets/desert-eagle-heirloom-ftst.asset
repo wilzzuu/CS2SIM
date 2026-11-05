@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-heirloom-ftst
   gun: Desert Eagle
   name: Heirloom
-  basePrice: 18.36
-  price: 18.36
+  basePrice: 1836
+  price: 1836
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-heirloom
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

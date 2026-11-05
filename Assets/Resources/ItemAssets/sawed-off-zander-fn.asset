@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-zander-fn
   gun: Sawed-Off
   name: Zander
-  basePrice: 11.57
-  price: 11.57
+  basePrice: 1157
+  price: 1157
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-zander
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

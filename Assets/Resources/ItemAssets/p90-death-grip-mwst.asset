@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-death-grip-mwst
   gun: P90
   name: Death Grip
-  basePrice: 23.65
-  price: 23.65
+  basePrice: 2365
+  price: 2365
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-death-grip
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

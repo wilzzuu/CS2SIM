@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-rapid-eye-movement-mw
   gun: FAMAS
   name: Rapid Eye Movement
-  basePrice: 7.89
-  price: 7.89
+  basePrice: 789
+  price: 789
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: famas-rapid-eye-movement
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

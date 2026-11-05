@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-stymphalian-ww
   gun: AUG
   name: Stymphalian
-  basePrice: 4
-  price: 4
+  basePrice: 400
+  price: 400
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-stymphalian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

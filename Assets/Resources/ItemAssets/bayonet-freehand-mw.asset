@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-freehand-mw
   gun: Bayonet
   name: Freehand
-  basePrice: 190.17
-  price: 190.17
+  basePrice: 19017
+  price: 19017
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

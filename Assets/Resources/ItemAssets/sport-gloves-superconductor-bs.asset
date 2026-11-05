@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-superconductor-bs
   gun: Sport Gloves
   name: Superconductor
-  basePrice: 1160.08
-  price: 1160.08
+  basePrice: 116008
+  price: 116008
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-superconductor
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-atheris-mwst
   gun: AWP
   name: Atheris
-  basePrice: 20.27
-  price: 20.27
+  basePrice: 2027
+  price: 2027
   condition: Minimal Wear
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: awp-atheris
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

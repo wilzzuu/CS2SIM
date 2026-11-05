@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-autotronic-wwst
   gun: Bowie Knife
   name: Autotronic
-  basePrice: 132.57
-  price: 132.57
+  basePrice: 13257
+  price: 13257
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

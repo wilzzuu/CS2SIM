@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-nocts-bs
   gun: Sport Gloves
   name: Nocts
-  basePrice: 487.9
-  price: 487.9
+  basePrice: 48790
+  price: 48790
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-nocts
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

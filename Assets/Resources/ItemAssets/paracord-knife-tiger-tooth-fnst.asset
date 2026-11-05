@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-tiger-tooth-fnst
   gun: Paracord Knife
   name: Tiger Tooth
-  basePrice: 145.8
-  price: 145.8
+  basePrice: 14580
+  price: 14580
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

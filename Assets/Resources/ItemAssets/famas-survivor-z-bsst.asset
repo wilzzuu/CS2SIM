@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-survivor-z-bsst
   gun: FAMAS
   name: Survivor Z
-  basePrice: 0.81
-  price: 0.81
+  basePrice: 81
+  price: 81
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: famas-survivor-z
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

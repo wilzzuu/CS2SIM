@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-supernova-ftst
   gun: P250
   name: Supernova
-  basePrice: 2.18
-  price: 2.18
+  basePrice: 218
+  price: 218
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-supernova
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

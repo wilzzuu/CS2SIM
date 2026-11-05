@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-slaughter-fn
   gun: Karambit
   name: Slaughter
-  basePrice: 1277.16
-  price: 1277.16
+  basePrice: 127716
+  price: 127716
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

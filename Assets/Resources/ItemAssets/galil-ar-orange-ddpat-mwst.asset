@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-orange-ddpat-mwst
   gun: Galil AR
   name: Orange DDPAT
-  basePrice: 54.3
-  price: 54.3
+  basePrice: 5430
+  price: 5430
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: galil-ar-orange-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

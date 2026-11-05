@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-scorched-ftst
   gun: Bayonet
   name: Scorched
-  basePrice: 153.59
-  price: 153.59
+  basePrice: 15359
+  price: 15359
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

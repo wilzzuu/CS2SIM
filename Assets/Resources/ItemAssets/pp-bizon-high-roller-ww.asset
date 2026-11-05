@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-high-roller-ww
   gun: PP-Bizon
   name: High Roller
-  basePrice: 9.05
-  price: 9.05
+  basePrice: 905
+  price: 905
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: pp-bizon-high-roller
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

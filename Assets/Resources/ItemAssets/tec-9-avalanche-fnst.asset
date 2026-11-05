@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-avalanche-fnst
   gun: Tec-9
   name: Avalanche
-  basePrice: 28.23
-  price: 28.23
+  basePrice: 2823
+  price: 2823
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: tec-9-avalanche
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

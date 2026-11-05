@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-riot-wwst
   gun: UMP-45
   name: Riot
-  basePrice: 0.52
-  price: 0.52
+  basePrice: 52
+  price: 52
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ump-45-riot
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

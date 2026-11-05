@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-tiger-tooth-fn
   gun: Gut Knife
   name: Tiger Tooth
-  basePrice: 113.37
-  price: 113.37
+  basePrice: 11337
+  price: 11337
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

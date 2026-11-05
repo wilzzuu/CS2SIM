@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-urban-masked-fnst
   gun: Stiletto Knife
   name: Urban Masked
-  basePrice: 1707.82
-  price: 1707.82
+  basePrice: 170782
+  price: 170782
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

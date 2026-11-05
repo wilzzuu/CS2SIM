@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-caution--mw
   gun: Hand Wraps
   name: CAUTION!
-  basePrice: 318.45
-  price: 318.45
+  basePrice: 31845
+  price: 31845
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-caution-
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

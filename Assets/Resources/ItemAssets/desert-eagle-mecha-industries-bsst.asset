@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-mecha-industries-bsst
   gun: Desert Eagle
   name: Mecha Industries
-  basePrice: 14.43
-  price: 14.43
+  basePrice: 1443
+  price: 1443
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-mecha-industries
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

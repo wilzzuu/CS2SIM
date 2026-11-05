@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-lore-wwst
   gun: Butterfly Knife
   name: Lore
-  basePrice: 697.28
-  price: 697.28
+  basePrice: 69728
+  price: 69728
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

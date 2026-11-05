@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-panther-mw
   gun: Dual Berettas
   name: Panther
-  basePrice: 4.91
-  price: 4.91
+  basePrice: 491
+  price: 491
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-panther
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

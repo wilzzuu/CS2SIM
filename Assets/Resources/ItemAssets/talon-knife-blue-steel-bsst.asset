@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-blue-steel-bsst
   gun: Talon Knife
   name: Blue Steel
-  basePrice: 857.45
-  price: 857.45
+  basePrice: 85745
+  price: 85745
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

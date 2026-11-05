@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-boreal-forest-bsst
   gun: Kukri Knife
   name: Boreal Forest
-  basePrice: 60.47
-  price: 60.47
+  basePrice: 6047
+  price: 6047
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

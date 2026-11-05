@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-blue-fissure-ftst
   gun: Glock-18
   name: Blue Fissure
-  basePrice: 4.95
-  price: 4.95
+  basePrice: 495
+  price: 495
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-blue-fissure
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-acid-wash-mwst
   gun: MP5-SD
   name: Acid Wash
-  basePrice: 2.36
-  price: 2.36
+  basePrice: 236
+  price: 236
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp5-sd-acid-wash
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

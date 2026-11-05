@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-night-stripe-mwst
   gun: Talon Knife
   name: Night Stripe
-  basePrice: 397.84
-  price: 397.84
+  basePrice: 39784
+  price: 39784
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

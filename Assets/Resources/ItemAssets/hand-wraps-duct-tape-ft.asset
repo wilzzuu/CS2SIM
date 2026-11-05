@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-duct-tape-ft
   gun: Hand Wraps
   name: Duct Tape
-  basePrice: 58.98
-  price: 58.98
+  basePrice: 5898
+  price: 5898
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-duct-tape
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

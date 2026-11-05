@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-verdigris-mw
   gun: P250
   name: Verdigris
-  basePrice: 0.54
-  price: 0.54
+  basePrice: 54
+  price: 54
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-verdigris
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-windblown-ft
   gun: Nova
   name: Windblown
-  basePrice: 0.89
-  price: 0.89
+  basePrice: 89
+  price: 89
   condition: Field-Tested
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-windblown
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

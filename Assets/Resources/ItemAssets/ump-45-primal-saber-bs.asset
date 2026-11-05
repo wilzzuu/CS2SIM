@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-primal-saber-bs
   gun: UMP-45
   name: Primal Saber
-  basePrice: 11.67
-  price: 11.67
+  basePrice: 1167
+  price: 1167
   condition: Battle-Scarred
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ump-45-primal-saber
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

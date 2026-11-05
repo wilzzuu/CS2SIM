@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-acid-etched-bs
   gun: P2000
   name: Acid Etched
-  basePrice: 0.75
-  price: 0.75
+  basePrice: 75
+  price: 75
   condition: Battle-Scarred
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-acid-etched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

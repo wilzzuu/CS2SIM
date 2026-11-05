@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-safari-mesh-ww
   gun: Skeleton Knife
   name: Safari Mesh
-  basePrice: 122.28
-  price: 122.28
+  basePrice: 12228
+  price: 12228
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

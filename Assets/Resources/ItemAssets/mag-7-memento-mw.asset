@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-memento-mw
   gun: MAG-7
   name: Memento
-  basePrice: 3.81
-  price: 3.81
+  basePrice: 381
+  price: 381
   condition: Minimal Wear
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-memento
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

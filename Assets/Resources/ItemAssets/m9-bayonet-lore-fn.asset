@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-lore-fn
   gun: M9 Bayonet
   name: Lore
-  basePrice: 1369.8
-  price: 1369.8
+  basePrice: 136980
+  price: 136980
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

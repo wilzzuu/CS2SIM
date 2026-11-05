@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-case-hardened-bs
   gun: Flip Knife
   name: Case Hardened
-  basePrice: 176.56
-  price: 176.56
+  basePrice: 17656
+  price: 17656
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

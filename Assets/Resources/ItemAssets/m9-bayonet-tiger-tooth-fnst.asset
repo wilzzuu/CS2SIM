@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-tiger-tooth-fnst
   gun: M9 Bayonet
   name: Tiger Tooth
-  basePrice: 815.89
-  price: 815.89
+  basePrice: 81589
+  price: 81589
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

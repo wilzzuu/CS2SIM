@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-elite-build-mwst
   gun: AK-47
   name: Elite Build
-  basePrice: 10.48
-  price: 10.48
+  basePrice: 1048
+  price: 1048
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ak-47-elite-build
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

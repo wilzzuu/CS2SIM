@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-wasteland-rebel-fn
   gun: Glock-18
   name: Wasteland Rebel
-  basePrice: 117.94
-  price: 117.94
+  basePrice: 11794
+  price: 11794
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: glock-18-wasteland-rebel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

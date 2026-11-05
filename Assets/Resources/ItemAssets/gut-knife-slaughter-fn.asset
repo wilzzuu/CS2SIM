@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-slaughter-fn
   gun: Gut Knife
   name: Slaughter
-  basePrice: 146.02
-  price: 146.02
+  basePrice: 14602
+  price: 14602
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-aerial-ww
   gun: SG 553
   name: Aerial
-  basePrice: 0.52
-  price: 0.52
+  basePrice: 52
+  price: 52
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-aerial
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

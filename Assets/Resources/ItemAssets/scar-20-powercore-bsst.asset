@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-powercore-bsst
   gun: SCAR-20
   name: Powercore
-  basePrice: 1.07
-  price: 1.07
+  basePrice: 107
+  price: 107
   condition: Battle-Scarred
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: scar-20-powercore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

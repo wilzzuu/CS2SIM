@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-red-rock-ftst
   gun: P250
   name: Red Rock
-  basePrice: 19.76
-  price: 19.76
+  basePrice: 1976
+  price: 1976
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-red-rock
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

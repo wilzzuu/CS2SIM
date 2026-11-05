@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-urban-masked-fn
   gun: Gut Knife
   name: Urban Masked
-  basePrice: 215.82
-  price: 215.82
+  basePrice: 21582
+  price: 21582
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

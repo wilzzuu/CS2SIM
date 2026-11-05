@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-crimson-web-fnst
   gun: Gut Knife
   name: Crimson Web
-  basePrice: 2199.99
-  price: 2199.99
+  basePrice: 219999
+  price: 219999
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-splash-mw
   gun: P250
   name: Splash
-  basePrice: 25.09
-  price: 25.09
+  basePrice: 2509
+  price: 2509
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-splash
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-balance-fn
   gun: Dual Berettas
   name: Balance
-  basePrice: 12.97
-  price: 12.97
+  basePrice: 1297
+  price: 1297
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-balance
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

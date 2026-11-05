@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-torn-mw
   gun: SCAR-20
   name: Torn
-  basePrice: 1.29
-  price: 1.29
+  basePrice: 129
+  price: 129
   condition: Minimal Wear
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-torn
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

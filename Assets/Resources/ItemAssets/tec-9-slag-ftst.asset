@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-slag-ftst
   gun: Tec-9
   name: Slag
-  basePrice: 0.75
-  price: 0.75
+  basePrice: 75
+  price: 75
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: tec-9-slag
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

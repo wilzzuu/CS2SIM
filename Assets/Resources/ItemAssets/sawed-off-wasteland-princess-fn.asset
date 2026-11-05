@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-wasteland-princess-fn
   gun: Sawed-Off
   name: Wasteland Princess
-  basePrice: 28.22
-  price: 28.22
+  basePrice: 2822
+  price: 2822
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: sawed-off-wasteland-princess
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

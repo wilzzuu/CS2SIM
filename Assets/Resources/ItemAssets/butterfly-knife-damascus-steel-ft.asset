@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-damascus-steel-ft
   gun: Butterfly Knife
   name: Damascus Steel
-  basePrice: 814.85
-  price: 814.85
+  basePrice: 81485
+  price: 81485
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

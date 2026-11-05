@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-hemoglobin-mw
   gun: Dual Berettas
   name: Hemoglobin
-  basePrice: 17.21
-  price: 17.21
+  basePrice: 1721
+  price: 1721
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: dual-berettas-hemoglobin
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

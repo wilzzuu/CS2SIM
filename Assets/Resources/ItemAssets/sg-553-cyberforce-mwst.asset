@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-cyberforce-mwst
   gun: SG 553
   name: Cyberforce
-  basePrice: 0.9
-  price: 0.9
+  basePrice: 90
+  price: 90
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-cyberforce
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

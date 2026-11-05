@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-lore-mwst
   gun: Shadow Daggers
   name: Lore
-  basePrice: 111.14
-  price: 111.14
+  basePrice: 11114
+  price: 11114
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

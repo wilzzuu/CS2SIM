@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-blue-steel-fnst
   gun: Falchion Knife
   name: Blue Steel
-  basePrice: 450
-  price: 450
+  basePrice: 45000
+  price: 45000
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

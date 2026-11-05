@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-grotto-bsst
   gun: SCAR-20
   name: Grotto
-  basePrice: 0.59
-  price: 0.59
+  basePrice: 59
+  price: 59
   condition: Battle-Scarred
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-grotto
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

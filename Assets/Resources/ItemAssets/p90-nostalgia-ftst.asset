@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-nostalgia-ftst
   gun: P90
   name: Nostalgia
-  basePrice: 11.72
-  price: 11.72
+  basePrice: 1172
+  price: 1172
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-nostalgia
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

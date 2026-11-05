@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-entombed-fn
   gun: XM1014
   name: Entombed
-  basePrice: 9.17
-  price: 9.17
+  basePrice: 917
+  price: 917
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: xm1014-entombed
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

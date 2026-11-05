@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-damascus-steel-ww
   gun: Survival Knife
   name: Damascus Steel
-  basePrice: 77.9
-  price: 77.9
+  basePrice: 7790
+  price: 7790
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

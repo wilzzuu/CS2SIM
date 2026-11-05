@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-ruby-poison-dart-mwst
   gun: MP9
   name: Ruby Poison Dart
-  basePrice: 5.19
-  price: 5.19
+  basePrice: 519
+  price: 519
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp9-ruby-poison-dart
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

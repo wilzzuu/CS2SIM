@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-space-cat-ww
   gun: PP-Bizon
   name: Space Cat
-  basePrice: 0.55
-  price: 0.55
+  basePrice: 55
+  price: 55
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: pp-bizon-space-cat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

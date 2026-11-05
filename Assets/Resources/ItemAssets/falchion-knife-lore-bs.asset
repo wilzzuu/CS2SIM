@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-lore-bs
   gun: Falchion Knife
   name: Lore
-  basePrice: 102.27
-  price: 102.27
+  basePrice: 10227
+  price: 10227
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

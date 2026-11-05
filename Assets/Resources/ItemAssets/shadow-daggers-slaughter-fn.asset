@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-slaughter-fn
   gun: Shadow Daggers
   name: Slaughter
-  basePrice: 120.28
-  price: 120.28
+  basePrice: 12028
+  price: 12028
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

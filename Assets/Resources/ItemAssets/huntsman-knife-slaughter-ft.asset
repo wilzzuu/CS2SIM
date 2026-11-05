@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-slaughter-ft
   gun: Huntsman Knife
   name: Slaughter
-  basePrice: 218.92
-  price: 218.92
+  basePrice: 21892
+  price: 21892
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

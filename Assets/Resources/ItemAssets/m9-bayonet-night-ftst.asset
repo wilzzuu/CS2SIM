@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-night-ftst
   gun: M9 Bayonet
   name: Night
-  basePrice: 396.35
-  price: 396.35
+  basePrice: 39635
+  price: 39635
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

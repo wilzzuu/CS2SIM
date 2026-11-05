@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-fade-mw
   gun: Bayonet
   name: Fade
-  basePrice: 545.44
-  price: 545.44
+  basePrice: 54544
+  price: 54544
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-boom--fn
   gun: Moto Gloves
   name: Boom!
-  basePrice: 1390.39
-  price: 1390.39
+  basePrice: 139039
+  price: 139039
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-boom-
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

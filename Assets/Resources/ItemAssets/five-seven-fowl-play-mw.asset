@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-fowl-play-mw
   gun: Five-SeveN
   name: Fowl Play
-  basePrice: 21.46
-  price: 21.46
+  basePrice: 2146
+  price: 2146
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: five-seven-fowl-play
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

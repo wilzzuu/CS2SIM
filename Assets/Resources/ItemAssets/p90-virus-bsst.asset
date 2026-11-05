@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-virus-bsst
   gun: P90
   name: Virus
-  basePrice: 4.38
-  price: 4.38
+  basePrice: 438
+  price: 438
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-virus
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

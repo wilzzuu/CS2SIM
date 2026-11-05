@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-damascus-steel-wwst
   gun: Paracord Knife
   name: Damascus Steel
-  basePrice: 99.78
-  price: 99.78
+  basePrice: 9978
+  price: 9978
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

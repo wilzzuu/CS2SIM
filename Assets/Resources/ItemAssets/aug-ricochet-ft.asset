@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-ricochet-ft
   gun: AUG
   name: Ricochet
-  basePrice: 0.63
-  price: 0.63
+  basePrice: 63
+  price: 63
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-ricochet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

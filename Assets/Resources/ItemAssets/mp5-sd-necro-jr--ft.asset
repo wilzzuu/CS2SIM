@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-necro-jr--ft
   gun: MP5-SD
   name: Necro Jr.
-  basePrice: 0.67
-  price: 0.67
+  basePrice: 67
+  price: 67
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp5-sd-necro-jr-
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

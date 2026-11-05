@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-epicenter-mw
   gun: P250
   name: Epicenter
-  basePrice: 13.14
-  price: 13.14
+  basePrice: 1314
+  price: 1314
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-epicenter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

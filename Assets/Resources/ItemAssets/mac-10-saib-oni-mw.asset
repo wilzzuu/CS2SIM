@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-saib-oni-mw
   gun: MAC-10
   name: "Saib\u0101 Oni"
-  basePrice: 2.81
-  price: 2.81
+  basePrice: 281
+  price: 281
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-saib-oni
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

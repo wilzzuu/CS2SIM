@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-safari-mesh-ww
   gun: Bayonet
   name: Safari Mesh
-  basePrice: 127.31
-  price: 127.31
+  basePrice: 12731
+  price: 12731
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

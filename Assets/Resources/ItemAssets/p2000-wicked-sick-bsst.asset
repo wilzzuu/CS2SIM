@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-wicked-sick-bsst
   gun: P2000
   name: Wicked Sick
-  basePrice: 3.46
-  price: 3.46
+  basePrice: 346
+  price: 346
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p2000-wicked-sick
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

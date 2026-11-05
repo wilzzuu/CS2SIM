@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-fire-serpent-bsst
   gun: AK-47
   name: Fire Serpent
-  basePrice: 1537.16
-  price: 1537.16
+  basePrice: 153716
+  price: 153716
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-fire-serpent
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

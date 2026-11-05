@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-red-astor-ft
   gun: CZ75-Auto
   name: Red Astor
-  basePrice: 1.25
-  price: 1.25
+  basePrice: 125
+  price: 125
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: cz75-auto-red-astor
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

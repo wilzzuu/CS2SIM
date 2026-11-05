@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-distressed-mw
   gun: CZ75-Auto
   name: Distressed
-  basePrice: 0.55
-  price: 0.55
+  basePrice: 55
+  price: 55
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: cz75-auto-distressed
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

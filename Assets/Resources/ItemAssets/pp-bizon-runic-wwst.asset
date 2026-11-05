@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-runic-wwst
   gun: PP-Bizon
   name: Runic
-  basePrice: 0.55
-  price: 0.55
+  basePrice: 55
+  price: 55
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: pp-bizon-runic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

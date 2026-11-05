@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-black-sand-bs
   gun: G3SG1
   name: Black Sand
-  basePrice: 0.98
-  price: 0.98
+  basePrice: 98
+  price: 98
   condition: Battle-Scarred
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: g3sg1-black-sand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

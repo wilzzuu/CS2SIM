@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-photic-zone-ft
   gun: PP-Bizon
   name: Photic Zone
-  basePrice: 0.72
-  price: 0.72
+  basePrice: 72
+  price: 72
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: pp-bizon-photic-zone
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

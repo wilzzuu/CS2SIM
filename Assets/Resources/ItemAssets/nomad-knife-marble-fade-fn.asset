@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-marble-fade-fn
   gun: Nomad Knife
   name: Marble Fade
-  basePrice: 272.07
-  price: 272.07
+  basePrice: 27207
+  price: 27207
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

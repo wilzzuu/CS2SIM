@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-ultraviolet-mw
   gun: Gut Knife
   name: Ultraviolet
-  basePrice: 88.09
-  price: 88.09
+  basePrice: 8809
+  price: 8809
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

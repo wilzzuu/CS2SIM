@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-sonar-wwst
   gun: MAG-7
   name: Sonar
-  basePrice: 1.66
-  price: 1.66
+  basePrice: 166
+  price: 166
   condition: Well-Worn
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-sonar
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

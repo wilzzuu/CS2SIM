@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-neon-rider-wwst
   gun: MAC-10
   name: Neon Rider
-  basePrice: 122.43
-  price: 122.43
+  basePrice: 12243
+  price: 12243
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: mac-10-neon-rider
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

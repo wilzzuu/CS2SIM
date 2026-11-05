@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-lt-commander-ft
   gun: Specialist Gloves
   name: Lt. Commander
-  basePrice: 137.81
-  price: 137.81
+  basePrice: 13781
+  price: 13781
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-lt-commander
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

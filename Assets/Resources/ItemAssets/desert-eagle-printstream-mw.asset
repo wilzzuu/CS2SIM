@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-printstream-mw
   gun: Desert Eagle
   name: Printstream
-  basePrice: 48.97
-  price: 48.97
+  basePrice: 4897
+  price: 4897
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: desert-eagle-printstream
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

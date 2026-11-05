@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-the-traitor-ww
   gun: USP-S
   name: The Traitor
-  basePrice: 38.61
-  price: 38.61
+  basePrice: 3861
+  price: 3861
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: usp-s-the-traitor
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

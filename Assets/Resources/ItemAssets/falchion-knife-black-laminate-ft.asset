@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-black-laminate-ft
   gun: Falchion Knife
   name: Black Laminate
-  basePrice: 73.87
-  price: 73.87
+  basePrice: 7387
+  price: 7387
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-roll-cage-mwst
   gun: FAMAS
   name: Roll Cage
-  basePrice: 110.94
-  price: 110.94
+  basePrice: 11094
+  price: 11094
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: famas-roll-cage
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

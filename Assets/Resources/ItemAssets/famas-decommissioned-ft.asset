@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-decommissioned-ft
   gun: FAMAS
   name: Decommissioned
-  basePrice: 0.5
-  price: 0.5
+  basePrice: 50
+  price: 50
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: famas-decommissioned
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

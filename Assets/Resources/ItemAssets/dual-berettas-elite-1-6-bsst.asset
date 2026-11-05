@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-elite-1-6-bsst
   gun: Dual Berettas
   name: Elite 1.6
-  basePrice: 1.35
-  price: 1.35
+  basePrice: 135
+  price: 135
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-elite-1-6
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-blue-steel-fn
   gun: Ursus Knife
   name: Blue Steel
-  basePrice: 165.05
-  price: 165.05
+  basePrice: 16505
+  price: 16505
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

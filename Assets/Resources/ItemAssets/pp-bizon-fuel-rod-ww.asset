@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-fuel-rod-ww
   gun: PP-Bizon
   name: Fuel Rod
-  basePrice: 1.04
-  price: 1.04
+  basePrice: 104
+  price: 104
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: pp-bizon-fuel-rod
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

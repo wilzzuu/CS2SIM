@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-stained-bsst
   gun: M9 Bayonet
   name: Stained
-  basePrice: 601.02
-  price: 601.02
+  basePrice: 60102
+  price: 60102
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

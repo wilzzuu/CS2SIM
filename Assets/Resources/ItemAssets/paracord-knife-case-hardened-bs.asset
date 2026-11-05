@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-case-hardened-bs
   gun: Paracord Knife
   name: Case Hardened
-  basePrice: 95.65
-  price: 95.65
+  basePrice: 9565
+  price: 9565
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

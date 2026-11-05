@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-moonrise-wwst
   gun: UMP-45
   name: Moonrise
-  basePrice: 2.56
-  price: 2.56
+  basePrice: 256
+  price: 256
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ump-45-moonrise
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

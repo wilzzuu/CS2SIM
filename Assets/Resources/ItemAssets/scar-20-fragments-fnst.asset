@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-fragments-fnst
   gun: SCAR-20
   name: Fragments
-  basePrice: 0.57
-  price: 0.57
+  basePrice: 57
+  price: 57
   condition: Factory New
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-fragments
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

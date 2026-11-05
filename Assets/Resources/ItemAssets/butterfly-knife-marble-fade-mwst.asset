@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-marble-fade-mwst
   gun: Butterfly Knife
   name: Marble Fade
-  basePrice: 1976.57
-  price: 1976.57
+  basePrice: 197657
+  price: 197657
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

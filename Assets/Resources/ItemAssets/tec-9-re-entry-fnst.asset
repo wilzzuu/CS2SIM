@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-re-entry-fnst
   gun: Tec-9
   name: Re-Entry
-  basePrice: 6.97
-  price: 6.97
+  basePrice: 697
+  price: 697
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: tec-9-re-entry
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

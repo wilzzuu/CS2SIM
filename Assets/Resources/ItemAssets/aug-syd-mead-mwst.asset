@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-syd-mead-mwst
   gun: AUG
   name: Syd Mead
-  basePrice: 12.22
-  price: 12.22
+  basePrice: 1222
+  price: 1222
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-syd-mead
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

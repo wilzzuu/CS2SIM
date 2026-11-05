@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-hyper-beast-bs
   gun: M4A1-S
   name: Hyper Beast
-  basePrice: 109.87
-  price: 109.87
+  basePrice: 10987
+  price: 10987
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a1-s-hyper-beast
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

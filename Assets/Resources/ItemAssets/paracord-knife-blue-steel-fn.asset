@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-blue-steel-fn
   gun: Paracord Knife
   name: Blue Steel
-  basePrice: 174.15
-  price: 174.15
+  basePrice: 17415
+  price: 17415
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

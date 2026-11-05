@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-boreal-forest-wwst
   gun: M9 Bayonet
   name: Boreal Forest
-  basePrice: 543.64
-  price: 543.64
+  basePrice: 54364
+  price: 54364
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

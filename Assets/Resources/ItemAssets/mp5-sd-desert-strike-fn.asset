@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-desert-strike-fn
   gun: MP5-SD
   name: Desert Strike
-  basePrice: 1.44
-  price: 1.44
+  basePrice: 144
+  price: 144
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp5-sd-desert-strike
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

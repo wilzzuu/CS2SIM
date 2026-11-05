@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-djinn-fnst
   gun: FAMAS
   name: Djinn
-  basePrice: 48.2
-  price: 48.2
+  basePrice: 4820
+  price: 4820
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: famas-djinn
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

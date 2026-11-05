@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-hybrid-wwst
   gun: Five-SeveN
   name: Hybrid
-  basePrice: 1.07
-  price: 1.07
+  basePrice: 107
+  price: 107
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-hybrid
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

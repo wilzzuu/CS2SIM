@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-night-bsst
   gun: M9 Bayonet
   name: Night
-  basePrice: 391.08
-  price: 391.08
+  basePrice: 39108
+  price: 39108
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

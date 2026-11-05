@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-toy-soldier-ww
   gun: Nova
   name: Toy Soldier
-  basePrice: 0.74
-  price: 0.74
+  basePrice: 74
+  price: 74
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-toy-soldier
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

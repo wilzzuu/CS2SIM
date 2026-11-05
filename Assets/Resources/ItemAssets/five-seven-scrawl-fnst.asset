@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-scrawl-fnst
   gun: Five-SeveN
   name: Scrawl
-  basePrice: 1.47
-  price: 1.47
+  basePrice: 147
+  price: 147
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-scrawl
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

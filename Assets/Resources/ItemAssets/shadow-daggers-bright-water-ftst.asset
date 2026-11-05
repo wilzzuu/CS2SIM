@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-bright-water-ftst
   gun: Shadow Daggers
   name: Bright Water
-  basePrice: 55.76
-  price: 55.76
+  basePrice: 5576
+  price: 5576
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

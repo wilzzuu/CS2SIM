@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-choppa-wwst
   gun: M4A4
   name: Choppa
-  basePrice: 0.52
-  price: 0.52
+  basePrice: 52
+  price: 52
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m4a4-choppa
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

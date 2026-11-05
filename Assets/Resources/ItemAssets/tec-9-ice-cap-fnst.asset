@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-ice-cap-fnst
   gun: Tec-9
   name: Ice Cap
-  basePrice: 3.13
-  price: 3.13
+  basePrice: 313
+  price: 313
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: tec-9-ice-cap
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

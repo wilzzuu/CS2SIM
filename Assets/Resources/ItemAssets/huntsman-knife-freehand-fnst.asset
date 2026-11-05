@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-freehand-fnst
   gun: Huntsman Knife
   name: Freehand
-  basePrice: 126.88
-  price: 126.88
+  basePrice: 12688
+  price: 12688
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

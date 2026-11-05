@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-aerial-fnst
   gun: SG 553
   name: Aerial
-  basePrice: 1.15
-  price: 1.15
+  basePrice: 115
+  price: 115
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-aerial
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

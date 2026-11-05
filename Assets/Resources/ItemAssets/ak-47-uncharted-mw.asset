@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-uncharted-mw
   gun: AK-47
   name: Uncharted
-  basePrice: 0.99
-  price: 0.99
+  basePrice: 99
+  price: 99
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ak-47-uncharted
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

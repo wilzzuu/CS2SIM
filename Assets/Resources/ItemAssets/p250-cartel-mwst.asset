@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-cartel-mwst
   gun: P250
   name: Cartel
-  basePrice: 31.41
-  price: 31.41
+  basePrice: 3141
+  price: 3141
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-cartel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-black-sand-ww
   gun: Sawed-Off
   name: Black Sand
-  basePrice: 0.67
-  price: 0.67
+  basePrice: 67
+  price: 67
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-black-sand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

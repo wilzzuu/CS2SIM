@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-desolate-space-ft
   gun: M4A4
   name: Desolate Space
-  basePrice: 14.39
-  price: 14.39
+  basePrice: 1439
+  price: 1439
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: m4a4-desolate-space
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

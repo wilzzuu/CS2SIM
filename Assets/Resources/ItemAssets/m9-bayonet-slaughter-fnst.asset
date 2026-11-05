@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-slaughter-fnst
   gun: M9 Bayonet
   name: Slaughter
-  basePrice: 1086.54
-  price: 1086.54
+  basePrice: 108654
+  price: 108654
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

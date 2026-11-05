@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-clear-polymer-bsst
   gun: Glock-18
   name: Clear Polymer
-  basePrice: 0.5
-  price: 0.5
+  basePrice: 50
+  price: 50
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-clear-polymer
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

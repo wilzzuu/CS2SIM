@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-avalanche-mw
   gun: Tec-9
   name: Avalanche
-  basePrice: 5.31
-  price: 5.31
+  basePrice: 531
+  price: 531
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: tec-9-avalanche
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

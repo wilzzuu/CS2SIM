@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-autotronic-mw
   gun: M9 Bayonet
   name: Autotronic
-  basePrice: 912.68
-  price: 912.68
+  basePrice: 91268
+  price: 91268
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-death-by-puppy-fnst
   gun: AUG
   name: Death by Puppy
-  basePrice: 21.04
-  price: 21.04
+  basePrice: 2104
+  price: 2104
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-death-by-puppy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

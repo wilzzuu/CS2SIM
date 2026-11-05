@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-flux-mw
   gun: G3SG1
   name: Flux
-  basePrice: 13.89
-  price: 13.89
+  basePrice: 1389
+  price: 1389
   condition: Minimal Wear
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: g3sg1-flux
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

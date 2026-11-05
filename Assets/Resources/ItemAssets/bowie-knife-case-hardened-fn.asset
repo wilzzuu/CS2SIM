@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-case-hardened-fn
   gun: Bowie Knife
   name: Case Hardened
-  basePrice: 702.52
-  price: 702.52
+  basePrice: 70252
+  price: 70252
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

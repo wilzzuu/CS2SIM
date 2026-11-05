@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-damascus-steel-bs
   gun: Navaja Knife
   name: Damascus Steel
-  basePrice: 56.73
-  price: 56.73
+  basePrice: 5673
+  price: 5673
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

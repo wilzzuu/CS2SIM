@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: fracture-case
   name: Fracture Case
-  price: 0.68
+  price: 68
   items:
   - {fileID: 11400000, guid: edbcf4b0586afbb4baa6aa1749693d32, type: 2}
   - {fileID: 11400000, guid: 711dbdf2e4997a54da7d90f7559bde5d, type: 2}

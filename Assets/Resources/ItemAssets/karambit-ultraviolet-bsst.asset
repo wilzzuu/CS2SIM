@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-ultraviolet-bsst
   gun: Karambit
   name: Ultraviolet
-  basePrice: 515.91
-  price: 515.91
+  basePrice: 51591
+  price: 51591
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-module-mwst
   gun: P90
   name: Module
-  basePrice: 1.83
-  price: 1.83
+  basePrice: 183
+  price: 183
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p90-module
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

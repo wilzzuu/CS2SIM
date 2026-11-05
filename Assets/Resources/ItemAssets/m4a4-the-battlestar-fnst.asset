@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-the-battlestar-fnst
   gun: M4A4
   name: The Battlestar
-  basePrice: 105.17
-  price: 105.17
+  basePrice: 10517
+  price: 10517
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a4-the-battlestar
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

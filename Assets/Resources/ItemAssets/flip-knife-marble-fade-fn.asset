@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-marble-fade-fn
   gun: Flip Knife
   name: Marble Fade
-  basePrice: 274.64
-  price: 274.64
+  basePrice: 27464
+  price: 27464
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

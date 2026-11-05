@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-neoqueen-mwst
   gun: P90
   name: Neoqueen
-  basePrice: 0.96
-  price: 0.96
+  basePrice: 96
+  price: 96
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-neoqueen
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

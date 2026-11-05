@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-safari-mesh-mwst
   gun: Survival Knife
   name: Safari Mesh
-  basePrice: 75.02
-  price: 75.02
+  basePrice: 7502
+  price: 7502
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

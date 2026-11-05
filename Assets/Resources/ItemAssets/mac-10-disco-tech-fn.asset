@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-disco-tech-fn
   gun: MAC-10
   name: Disco Tech
-  basePrice: 55.94
-  price: 55.94
+  basePrice: 5594
+  price: 5594
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mac-10-disco-tech
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

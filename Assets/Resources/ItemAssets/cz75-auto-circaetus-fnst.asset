@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-circaetus-fnst
   gun: CZ75-Auto
   name: Circaetus
-  basePrice: 10.37
-  price: 10.37
+  basePrice: 1037
+  price: 1037
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: cz75-auto-circaetus
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

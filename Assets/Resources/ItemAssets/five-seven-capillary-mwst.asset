@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-capillary-mwst
   gun: Five-SeveN
   name: Capillary
-  basePrice: 0.89
-  price: 0.89
+  basePrice: 89
+  price: 89
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-capillary
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

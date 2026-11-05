@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-tacticat-mwst
   gun: CZ75-Auto
   name: Tacticat
-  basePrice: 3.42
-  price: 3.42
+  basePrice: 342
+  price: 342
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: cz75-auto-tacticat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

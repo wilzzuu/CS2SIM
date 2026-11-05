@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-iron-clad-fn
   gun: P250
   name: Iron Clad
-  basePrice: 6.38
-  price: 6.38
+  basePrice: 638
+  price: 638
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-iron-clad
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

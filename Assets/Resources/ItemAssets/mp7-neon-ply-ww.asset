@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-neon-ply-ww
   gun: MP7
   name: Neon Ply
-  basePrice: 3.01
-  price: 3.01
+  basePrice: 301
+  price: 301
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp7-neon-ply
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

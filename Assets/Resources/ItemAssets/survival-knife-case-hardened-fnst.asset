@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-case-hardened-fnst
   gun: Survival Knife
   name: Case Hardened
-  basePrice: 572.97
-  price: 572.97
+  basePrice: 57297
+  price: 57297
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

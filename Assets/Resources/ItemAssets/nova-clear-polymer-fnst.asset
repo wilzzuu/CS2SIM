@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-clear-polymer-fnst
   gun: Nova
   name: Clear Polymer
-  basePrice: 15.91
-  price: 15.91
+  basePrice: 1591
+  price: 1591
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-clear-polymer
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-just-smile-mwst
   gun: MP7
   name: Just Smile
-  basePrice: 2.47
-  price: 2.47
+  basePrice: 247
+  price: 247
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp7-just-smile
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

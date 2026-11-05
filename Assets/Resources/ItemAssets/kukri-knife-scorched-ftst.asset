@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-scorched-ftst
   gun: Kukri Knife
   name: Scorched
-  basePrice: 62.67
-  price: 62.67
+  basePrice: 6267
+  price: 6267
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

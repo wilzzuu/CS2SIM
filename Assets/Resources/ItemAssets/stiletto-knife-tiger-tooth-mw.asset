@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-tiger-tooth-mw
   gun: Stiletto Knife
   name: Tiger Tooth
-  basePrice: 344.98
-  price: 344.98
+  basePrice: 34498
+  price: 34498
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

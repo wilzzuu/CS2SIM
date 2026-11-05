@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-scorched-bsst
   gun: Stiletto Knife
   name: Scorched
-  basePrice: 155.58
-  price: 155.58
+  basePrice: 15558
+  price: 15558
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

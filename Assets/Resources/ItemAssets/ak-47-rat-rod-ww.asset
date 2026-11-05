@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-rat-rod-ww
   gun: AK-47
   name: Rat Rod
-  basePrice: 4.68
-  price: 4.68
+  basePrice: 468
+  price: 468
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ak-47-rat-rod
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

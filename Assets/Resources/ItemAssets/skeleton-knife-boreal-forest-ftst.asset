@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-boreal-forest-ftst
   gun: Skeleton Knife
   name: Boreal Forest
-  basePrice: 134.58
-  price: 134.58
+  basePrice: 13458
+  price: 13458
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-sugar-rush-wwst
   gun: Galil AR
   name: Sugar Rush
-  basePrice: 94
-  price: 94
+  basePrice: 9400
+  price: 9400
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: galil-ar-sugar-rush
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

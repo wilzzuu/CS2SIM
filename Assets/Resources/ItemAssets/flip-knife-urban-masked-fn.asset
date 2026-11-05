@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-urban-masked-fn
   gun: Flip Knife
   name: Urban Masked
-  basePrice: 390.45
-  price: 390.45
+  basePrice: 39045
+  price: 39045
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

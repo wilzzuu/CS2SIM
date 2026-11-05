@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-royal-consorts-fn
   gun: Dual Berettas
   name: Royal Consorts
-  basePrice: 14.99
-  price: 14.99
+  basePrice: 1499
+  price: 1499
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: dual-berettas-royal-consorts
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

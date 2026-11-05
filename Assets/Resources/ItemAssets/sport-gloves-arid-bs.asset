@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-arid-bs
   gun: Sport Gloves
   name: Arid
-  basePrice: 384.31
-  price: 384.31
+  basePrice: 38431
+  price: 38431
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-arid
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: revolver-case
   name: Revolver Case
-  price: 3.01
+  price: 301
   items:
   - {fileID: 11400000, guid: 9519b77047b5489408389b680eeee77f, type: 2}
   - {fileID: 11400000, guid: c641aef32b63c20478dccedb3298acfe, type: 2}

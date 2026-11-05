@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-emerald-poison-dart-ft
   gun: M249
   name: Emerald Poison Dart
-  basePrice: 1.45
-  price: 1.45
+  basePrice: 145
+  price: 145
   condition: Field-Tested
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m249-emerald-poison-dart
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

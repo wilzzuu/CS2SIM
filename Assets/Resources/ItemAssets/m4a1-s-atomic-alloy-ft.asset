@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-atomic-alloy-ft
   gun: M4A1-S
   name: Atomic Alloy
-  basePrice: 33
-  price: 33
+  basePrice: 3300
+  price: 3300
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: m4a1-s-atomic-alloy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

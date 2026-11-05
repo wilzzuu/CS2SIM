@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-black-laminate-fn
   gun: Huntsman Knife
   name: Black Laminate
-  basePrice: 146.01
-  price: 146.01
+  basePrice: 14601
+  price: 14601
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

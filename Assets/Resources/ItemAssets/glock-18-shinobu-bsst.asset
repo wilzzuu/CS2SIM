@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-shinobu-bsst
   gun: Glock-18
   name: Shinobu
-  basePrice: 8.71
-  price: 8.71
+  basePrice: 871
+  price: 871
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: glock-18-shinobu
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

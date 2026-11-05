@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-urban-masked-ww
   gun: Shadow Daggers
   name: Urban Masked
-  basePrice: 71.22
-  price: 71.22
+  basePrice: 7122
+  price: 7122
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

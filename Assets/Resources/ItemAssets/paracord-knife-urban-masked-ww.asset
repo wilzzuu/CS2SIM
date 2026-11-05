@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-urban-masked-ww
   gun: Paracord Knife
   name: Urban Masked
-  basePrice: 64.87
-  price: 64.87
+  basePrice: 6487
+  price: 6487
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

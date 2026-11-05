@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-the-emperor-ftst
   gun: M4A4
   name: The Emperor
-  basePrice: 72.19
-  price: 72.19
+  basePrice: 7219
+  price: 7219
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a4-the-emperor
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

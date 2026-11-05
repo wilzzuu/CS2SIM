@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-modest-threat-ftst
   gun: MP9
   name: Modest Threat
-  basePrice: 0.6
-  price: 0.6
+  basePrice: 60
+  price: 60
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp9-modest-threat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

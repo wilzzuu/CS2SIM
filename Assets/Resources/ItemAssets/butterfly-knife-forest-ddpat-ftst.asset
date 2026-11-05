@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-forest-ddpat-ftst
   gun: Butterfly Knife
   name: Forest DDPAT
-  basePrice: 516.45
-  price: 516.45
+  basePrice: 51645
+  price: 51645
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

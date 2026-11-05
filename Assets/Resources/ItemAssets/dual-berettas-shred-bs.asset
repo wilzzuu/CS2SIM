@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-shred-bs
   gun: Dual Berettas
   name: Shred
-  basePrice: 0.53
-  price: 0.53
+  basePrice: 53
+  price: 53
   condition: Battle-Scarred
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-shred
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

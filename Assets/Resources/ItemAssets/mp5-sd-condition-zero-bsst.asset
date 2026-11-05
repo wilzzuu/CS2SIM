@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-condition-zero-bsst
   gun: MP5-SD
   name: Condition Zero
-  basePrice: 0.71
-  price: 0.71
+  basePrice: 71
+  price: 71
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp5-sd-condition-zero
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

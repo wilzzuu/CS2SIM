@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-caiman-fn
   gun: USP-S
   name: Caiman
-  basePrice: 108.99
-  price: 108.99
+  basePrice: 10899
+  price: 10899
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: usp-s-caiman
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

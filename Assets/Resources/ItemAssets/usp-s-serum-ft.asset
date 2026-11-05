@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-serum-ft
   gun: USP-S
   name: Serum
-  basePrice: 49.56
-  price: 49.56
+  basePrice: 4956
+  price: 4956
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: usp-s-serum
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

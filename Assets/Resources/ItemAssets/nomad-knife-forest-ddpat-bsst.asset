@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-forest-ddpat-bsst
   gun: Nomad Knife
   name: Forest DDPAT
-  basePrice: 96.77
-  price: 96.77
+  basePrice: 9677
+  price: 9677
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-conspiracy-mw
   gun: Desert Eagle
   name: Conspiracy
-  basePrice: 20.15
-  price: 20.15
+  basePrice: 2015
+  price: 2015
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-conspiracy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-scorched-mwst
   gun: Skeleton Knife
   name: Scorched
-  basePrice: 201.87
-  price: 201.87
+  basePrice: 20187
+  price: 20187
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

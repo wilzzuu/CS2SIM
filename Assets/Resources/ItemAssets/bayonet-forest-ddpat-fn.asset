@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-forest-ddpat-fn
   gun: Bayonet
   name: Forest DDPAT
-  basePrice: 632.37
-  price: 632.37
+  basePrice: 63237
+  price: 63237
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

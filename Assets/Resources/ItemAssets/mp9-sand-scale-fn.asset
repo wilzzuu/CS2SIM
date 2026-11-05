@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-sand-scale-fn
   gun: MP9
   name: Sand Scale
-  basePrice: 1.23
-  price: 1.23
+  basePrice: 123
+  price: 123
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp9-sand-scale
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

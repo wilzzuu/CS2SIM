@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-slaughter-ft
   gun: Navaja Knife
   name: Slaughter
-  basePrice: 92.62
-  price: 92.62
+  basePrice: 9262
+  price: 9262
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-dragon-tech-fnst
   gun: SG 553
   name: Dragon Tech
-  basePrice: 3.21
-  price: 3.21
+  basePrice: 321
+  price: 321
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sg-553-dragon-tech
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

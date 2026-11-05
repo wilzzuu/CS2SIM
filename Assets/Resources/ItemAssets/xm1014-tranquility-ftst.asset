@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-tranquility-ftst
   gun: XM1014
   name: Tranquility
-  basePrice: 23.2
-  price: 23.2
+  basePrice: 2320
+  price: 2320
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: xm1014-tranquility
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

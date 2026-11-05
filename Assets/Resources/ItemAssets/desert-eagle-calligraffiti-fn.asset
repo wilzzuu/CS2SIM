@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-calligraffiti-fn
   gun: Desert Eagle
   name: Calligraffiti
-  basePrice: 16.2
-  price: 16.2
+  basePrice: 1620
+  price: 1620
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: desert-eagle-calligraffiti
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-cartel-bs
   gun: P250
   name: Cartel
-  basePrice: 9.05
-  price: 9.05
+  basePrice: 905
+  price: 905
   condition: Battle-Scarred
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-cartel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

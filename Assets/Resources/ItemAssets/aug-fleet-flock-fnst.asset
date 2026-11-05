@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-fleet-flock-fnst
   gun: AUG
   name: Fleet Flock
-  basePrice: 37.15
-  price: 37.15
+  basePrice: 3715
+  price: 3715
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-fleet-flock
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

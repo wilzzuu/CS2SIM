@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-cyrex-wwst
   gun: USP-S
   name: Cyrex
-  basePrice: 8.35
-  price: 8.35
+  basePrice: 835
+  price: 835
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: usp-s-cyrex
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

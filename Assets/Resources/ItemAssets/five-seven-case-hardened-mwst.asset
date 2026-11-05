@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-case-hardened-mwst
   gun: Five-SeveN
   name: Case Hardened
-  basePrice: 42.91
-  price: 42.91
+  basePrice: 4291
+  price: 4291
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

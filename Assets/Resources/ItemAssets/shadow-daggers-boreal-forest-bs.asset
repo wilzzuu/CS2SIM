@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-boreal-forest-bs
   gun: Shadow Daggers
   name: Boreal Forest
-  basePrice: 59.28
-  price: 59.28
+  basePrice: 5928
+  price: 5928
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

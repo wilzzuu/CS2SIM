@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-stained-mwst
   gun: Flip Knife
   name: Stained
-  basePrice: 170.64
-  price: 170.64
+  basePrice: 17064
+  price: 17064
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-bullet-queen-ww
   gun: Glock-18
   name: Bullet Queen
-  basePrice: 54.05
-  price: 54.05
+  basePrice: 5405
+  price: 5405
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: glock-18-bullet-queen
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

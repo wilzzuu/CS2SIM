@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-blue-steel-bsst
   gun: Stiletto Knife
   name: Blue Steel
-  basePrice: 243.95
-  price: 243.95
+  basePrice: 24395
+  price: 24395
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

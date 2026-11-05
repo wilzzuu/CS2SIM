@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-arctic-wolf-bsst
   gun: UMP-45
   name: Arctic Wolf
-  basePrice: 0.7
-  price: 0.7
+  basePrice: 70
+  price: 70
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ump-45-arctic-wolf
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

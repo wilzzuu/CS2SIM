@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-cyrex-ww
   gun: SG 553
   name: Cyrex
-  basePrice: 5.22
-  price: 5.22
+  basePrice: 522
+  price: 522
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: sg-553-cyrex
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

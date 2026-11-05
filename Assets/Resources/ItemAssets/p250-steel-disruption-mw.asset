@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-steel-disruption-mw
   gun: P250
   name: Steel Disruption
-  basePrice: 3.36
-  price: 3.36
+  basePrice: 336
+  price: 336
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-steel-disruption
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-tiger-tooth-fn
   gun: Shadow Daggers
   name: Tiger Tooth
-  basePrice: 88.83
-  price: 88.83
+  basePrice: 8883
+  price: 8883
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

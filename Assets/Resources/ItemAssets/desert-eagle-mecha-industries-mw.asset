@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-mecha-industries-mw
   gun: Desert Eagle
   name: Mecha Industries
-  basePrice: 8.69
-  price: 8.69
+  basePrice: 869
+  price: 869
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-mecha-industries
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

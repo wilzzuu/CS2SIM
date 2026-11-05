@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-light-box-fn
   gun: MAC-10
   name: Light Box
-  basePrice: 1.38
-  price: 1.38
+  basePrice: 138
+  price: 138
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-light-box
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

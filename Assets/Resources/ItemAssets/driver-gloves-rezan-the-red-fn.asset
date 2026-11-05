@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-rezan-the-red-fn
   gun: Driver Gloves
   name: Rezan the Red
-  basePrice: 763.89
-  price: 763.89
+  basePrice: 76389
+  price: 76389
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-rezan-the-red
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

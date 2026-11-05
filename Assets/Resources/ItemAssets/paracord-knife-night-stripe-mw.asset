@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-night-stripe-mw
   gun: Paracord Knife
   name: Night Stripe
-  basePrice: 73.71
-  price: 73.71
+  basePrice: 7371
+  price: 7371
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

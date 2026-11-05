@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-heirloom-fnst
   gun: Desert Eagle
   name: Heirloom
-  basePrice: 76.66
-  price: 76.66
+  basePrice: 7666
+  price: 7666
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-heirloom
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

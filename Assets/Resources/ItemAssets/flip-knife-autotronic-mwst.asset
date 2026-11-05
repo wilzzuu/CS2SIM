@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-autotronic-mwst
   gun: Flip Knife
   name: Autotronic
-  basePrice: 253.87
-  price: 253.87
+  basePrice: 25387
+  price: 25387
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

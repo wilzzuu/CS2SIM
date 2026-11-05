@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-scorched-ft
   gun: Butterfly Knife
   name: Scorched
-  basePrice: 502.43
-  price: 502.43
+  basePrice: 50243
+  price: 50243
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

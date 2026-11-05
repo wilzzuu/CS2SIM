@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-night-stripe-bsst
   gun: Paracord Knife
   name: Night Stripe
-  basePrice: 83.73
-  price: 83.73
+  basePrice: 8373
+  price: 8373
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

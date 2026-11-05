@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-serenity-bsst
   gun: Sawed-Off
   name: Serenity
-  basePrice: 5.94
-  price: 5.94
+  basePrice: 594
+  price: 594
   condition: Battle-Scarred
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-serenity
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

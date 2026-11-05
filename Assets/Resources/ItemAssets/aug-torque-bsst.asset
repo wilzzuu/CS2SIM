@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-torque-bsst
   gun: AUG
   name: Torque
-  basePrice: 10.14
-  price: 10.14
+  basePrice: 1014
+  price: 1014
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: aug-torque
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

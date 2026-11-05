@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-ironwork-mwst
   gun: Glock-18
   name: Ironwork
-  basePrice: 1.93
-  price: 1.93
+  basePrice: 193
+  price: 193
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-ironwork
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

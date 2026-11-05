@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-rising-skull-fn
   gun: Nova
   name: Rising Skull
-  basePrice: 13.98
-  price: 13.98
+  basePrice: 1398
+  price: 1398
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-rising-skull
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

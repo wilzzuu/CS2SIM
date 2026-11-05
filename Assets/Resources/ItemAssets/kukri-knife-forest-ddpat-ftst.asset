@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-forest-ddpat-ftst
   gun: Kukri Knife
   name: Forest DDPAT
-  basePrice: 61.45
-  price: 61.45
+  basePrice: 6145
+  price: 6145
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

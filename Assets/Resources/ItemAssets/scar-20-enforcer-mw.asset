@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-enforcer-mw
   gun: SCAR-20
   name: Enforcer
-  basePrice: 1.49
-  price: 1.49
+  basePrice: 149
+  price: 149
   condition: Minimal Wear
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: scar-20-enforcer
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

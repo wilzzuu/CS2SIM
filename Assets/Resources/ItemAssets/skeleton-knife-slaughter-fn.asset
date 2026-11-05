@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-slaughter-fn
   gun: Skeleton Knife
   name: Slaughter
-  basePrice: 490.17
-  price: 490.17
+  basePrice: 49017
+  price: 49017
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

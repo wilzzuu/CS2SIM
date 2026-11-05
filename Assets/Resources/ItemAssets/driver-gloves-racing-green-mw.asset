@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-racing-green-mw
   gun: Driver Gloves
   name: Racing Green
-  basePrice: 100.57
-  price: 100.57
+  basePrice: 10057
+  price: 10057
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-racing-green
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

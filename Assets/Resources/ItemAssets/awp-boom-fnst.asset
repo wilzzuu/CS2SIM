@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-boom-fnst
   gun: AWP
   name: BOOM
-  basePrice: 778.39
-  price: 778.39
+  basePrice: 77839
+  price: 77839
   condition: Factory New
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: awp-boom
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

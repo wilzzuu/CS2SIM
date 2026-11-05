@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-royal-legion-mw
   gun: Glock-18
   name: Royal Legion
-  basePrice: 9.41
-  price: 9.41
+  basePrice: 941
+  price: 941
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-royal-legion
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

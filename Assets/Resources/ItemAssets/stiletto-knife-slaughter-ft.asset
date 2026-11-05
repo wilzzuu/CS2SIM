@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-slaughter-ft
   gun: Stiletto Knife
   name: Slaughter
-  basePrice: 388.05
-  price: 388.05
+  basePrice: 38805
+  price: 38805
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-blue-steel-ww
   gun: Bayonet
   name: Blue Steel
-  basePrice: 239.87
-  price: 239.87
+  basePrice: 23987
+  price: 23987
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

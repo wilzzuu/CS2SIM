@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-night-stripe-fn
   gun: Ursus Knife
   name: Night Stripe
-  basePrice: 240.22
-  price: 240.22
+  basePrice: 24022
+  price: 24022
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

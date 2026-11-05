@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-plague-ww
   gun: AUG
   name: Plague
-  basePrice: 0.89
-  price: 0.89
+  basePrice: 89
+  price: 89
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-plague
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

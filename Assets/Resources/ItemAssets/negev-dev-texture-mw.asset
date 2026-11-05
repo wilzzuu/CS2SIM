@@ -15,8 +15,8 @@ MonoBehaviour:
   id: negev-dev-texture-mw
   gun: Negev
   name: dev_texture
-  basePrice: 0.81
-  price: 0.81
+  basePrice: 81
+  price: 81
   condition: Minimal Wear
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: negev-dev-texture
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

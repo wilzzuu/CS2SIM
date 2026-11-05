@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-cirrus-wwst
   gun: MP7
   name: Cirrus
-  basePrice: 2.18
-  price: 2.18
+  basePrice: 218
+  price: 218
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp7-cirrus
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

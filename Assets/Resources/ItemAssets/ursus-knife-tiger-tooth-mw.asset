@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-tiger-tooth-mw
   gun: Ursus Knife
   name: Tiger Tooth
-  basePrice: 194.33
-  price: 194.33
+  basePrice: 19433
+  price: 19433
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

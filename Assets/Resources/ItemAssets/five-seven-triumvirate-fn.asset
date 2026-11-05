@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-triumvirate-fn
   gun: Five-SeveN
   name: Triumvirate
-  basePrice: 12.12
-  price: 12.12
+  basePrice: 1212
+  price: 1212
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-triumvirate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

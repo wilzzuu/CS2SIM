@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hydra-gloves-case-hardened-fn
   gun: Hydra Gloves
   name: Case Hardened
-  basePrice: 401.54
-  price: 401.54
+  basePrice: 40154
+  price: 40154
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hydra-gloves-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

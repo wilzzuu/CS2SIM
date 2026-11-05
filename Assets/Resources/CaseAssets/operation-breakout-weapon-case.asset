@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: operation-breakout-weapon-case
   name: Operation Breakout Weapon Case
-  price: 8.91
+  price: 891
   items:
   - {fileID: 11400000, guid: c17d2cd8e6a2b184590810a5f6bd5ed4, type: 2}
   - {fileID: 11400000, guid: 17e61409f1c2b54478cca2443cbee7a1, type: 2}

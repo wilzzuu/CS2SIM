@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-scorched-mwst
   gun: Falchion Knife
   name: Scorched
-  basePrice: 120.03
-  price: 120.03
+  basePrice: 12003
+  price: 12003
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

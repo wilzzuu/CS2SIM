@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-scrawl-wwst
   gun: Five-SeveN
   name: Scrawl
-  basePrice: 0.73
-  price: 0.73
+  basePrice: 73
+  price: 73
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-scrawl
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

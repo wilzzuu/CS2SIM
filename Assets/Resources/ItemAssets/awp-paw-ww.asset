@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-paw-ww
   gun: AWP
   name: PAW
-  basePrice: 2.85
-  price: 2.85
+  basePrice: 285
+  price: 285
   condition: Well-Worn
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: awp-paw
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

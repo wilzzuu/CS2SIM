@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-blue-steel-ft
   gun: Kukri Knife
   name: Blue Steel
-  basePrice: 100.15
-  price: 100.15
+  basePrice: 10015
+  price: 10015
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

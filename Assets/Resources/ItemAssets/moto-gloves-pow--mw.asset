@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-pow--mw
   gun: Moto Gloves
   name: POW!
-  basePrice: 270.1
-  price: 270.1
+  basePrice: 27010
+  price: 27010
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-pow-
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

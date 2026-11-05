@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-ultraviolet-ww
   gun: Butterfly Knife
   name: Ultraviolet
-  basePrice: 625.73
-  price: 625.73
+  basePrice: 62573
+  price: 62573
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

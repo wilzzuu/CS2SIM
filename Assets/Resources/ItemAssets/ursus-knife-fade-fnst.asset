@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-fade-fnst
   gun: Ursus Knife
   name: Fade
-  basePrice: 214.19
-  price: 214.19
+  basePrice: 21419
+  price: 21419
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-torn-fnst
   gun: SCAR-20
   name: Torn
-  basePrice: 3.71
-  price: 3.71
+  basePrice: 371
+  price: 371
   condition: Factory New
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-torn
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-slaughter-ft
   gun: Butterfly Knife
   name: Slaughter
-  basePrice: 1312.66
-  price: 1312.66
+  basePrice: 131266
+  price: 131266
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

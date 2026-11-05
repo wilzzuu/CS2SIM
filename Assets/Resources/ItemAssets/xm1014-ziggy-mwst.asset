@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-ziggy-mwst
   gun: XM1014
   name: Ziggy
-  basePrice: 2.07
-  price: 2.07
+  basePrice: 207
+  price: 207
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: xm1014-ziggy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

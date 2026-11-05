@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-bone-pile-fn
   gun: UMP-45
   name: Bone Pile
-  basePrice: 33.41
-  price: 33.41
+  basePrice: 3341
+  price: 3341
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ump-45-bone-pile
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

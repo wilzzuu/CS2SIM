@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-cartel-mw
   gun: AK-47
   name: Cartel
-  basePrice: 24.35
-  price: 24.35
+  basePrice: 2435
+  price: 2435
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-cartel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

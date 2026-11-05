@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-blood-in-the-water-ftst
   gun: SSG 08
   name: Blood in the Water
-  basePrice: 273.35
-  price: 273.35
+  basePrice: 27335
+  price: 27335
   condition: Field-Tested
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ssg-08-blood-in-the-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

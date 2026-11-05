@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-safari-mesh-wwst
   gun: Kukri Knife
   name: Safari Mesh
-  basePrice: 57.11
-  price: 57.11
+  basePrice: 5711
+  price: 5711
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

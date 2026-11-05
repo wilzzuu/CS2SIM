@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-ultraviolet-bsst
   gun: Ursus Knife
   name: Ultraviolet
-  basePrice: 112.21
-  price: 112.21
+  basePrice: 11221
+  price: 11221
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

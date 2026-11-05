@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-overgrowth-ftst
   gun: USP-S
   name: Overgrowth
-  basePrice: 39.44
-  price: 39.44
+  basePrice: 3944
+  price: 3944
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: usp-s-overgrowth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

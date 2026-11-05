@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-code-red-wwst
   gun: Desert Eagle
   name: Code Red
-  basePrice: 62.16
-  price: 62.16
+  basePrice: 6216
+  price: 6216
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: desert-eagle-code-red
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-bi83-spectrum-mwst
   gun: MAG-7
   name: BI83 Spectrum
-  basePrice: 4.21
-  price: 4.21
+  basePrice: 421
+  price: 421
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-bi83-spectrum
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

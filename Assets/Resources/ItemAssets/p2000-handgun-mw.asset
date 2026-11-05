@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-handgun-mw
   gun: P2000
   name: Handgun
-  basePrice: 3.09
-  price: 3.09
+  basePrice: 309
+  price: 309
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-handgun
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

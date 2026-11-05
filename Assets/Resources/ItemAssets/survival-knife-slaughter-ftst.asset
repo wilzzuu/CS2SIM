@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-slaughter-ftst
   gun: Survival Knife
   name: Slaughter
-  basePrice: 175.52
-  price: 175.52
+  basePrice: 17552
+  price: 17552
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

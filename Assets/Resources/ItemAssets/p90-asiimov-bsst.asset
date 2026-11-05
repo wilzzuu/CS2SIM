@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-asiimov-bsst
   gun: P90
   name: Asiimov
-  basePrice: 160.72
-  price: 160.72
+  basePrice: 16072
+  price: 16072
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: p90-asiimov
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

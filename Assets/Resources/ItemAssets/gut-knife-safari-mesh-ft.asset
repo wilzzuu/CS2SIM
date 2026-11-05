@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-safari-mesh-ft
   gun: Gut Knife
   name: Safari Mesh
-  basePrice: 53.49
-  price: 53.49
+  basePrice: 5349
+  price: 5349
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

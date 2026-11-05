@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-crimson-web-ww
   gun: SCAR-20
   name: Crimson Web
-  basePrice: 3.14
-  price: 3.14
+  basePrice: 314
+  price: 314
   condition: Well-Worn
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

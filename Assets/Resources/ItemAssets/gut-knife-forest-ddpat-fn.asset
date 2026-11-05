@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-forest-ddpat-fn
   gun: Gut Knife
   name: Forest DDPAT
-  basePrice: 227.75
-  price: 227.75
+  basePrice: 22775
+  price: 22775
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

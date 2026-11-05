@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-night-stripe-bsst
   gun: Classic Knife
   name: Night Stripe
-  basePrice: 133.08
-  price: 133.08
+  basePrice: 13308
+  price: 13308
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

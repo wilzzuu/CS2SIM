@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-system-lock-mwst
   gun: M249
   name: System Lock
-  basePrice: 0.78
-  price: 0.78
+  basePrice: 78
+  price: 78
   condition: Minimal Wear
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m249-system-lock
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

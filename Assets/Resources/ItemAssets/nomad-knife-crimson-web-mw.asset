@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-crimson-web-mw
   gun: Nomad Knife
   name: Crimson Web
-  basePrice: 257.23
-  price: 257.23
+  basePrice: 25723
+  price: 25723
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

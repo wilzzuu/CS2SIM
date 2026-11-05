@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-orange-ddpat-mw
   gun: Sawed-Off
   name: Orange DDPAT
-  basePrice: 32.09
-  price: 32.09
+  basePrice: 3209
+  price: 3209
   condition: Minimal Wear
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-orange-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-stained-ftst
   gun: Kukri Knife
   name: Stained
-  basePrice: 86.2
-  price: 86.2
+  basePrice: 8620
+  price: 8620
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

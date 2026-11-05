@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-cobalt-core-ftst
   gun: MAG-7
   name: Cobalt Core
-  basePrice: 0.52
-  price: 0.52
+  basePrice: 52
+  price: 52
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-cobalt-core
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

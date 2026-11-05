@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-urban-masked-fn
   gun: Bowie Knife
   name: Urban Masked
-  basePrice: 419.37
-  price: 419.37
+  basePrice: 41937
+  price: 41937
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

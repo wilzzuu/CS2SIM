@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-violent-daimyo-mwst
   gun: Five-SeveN
   name: Violent Daimyo
-  basePrice: 1.77
-  price: 1.77
+  basePrice: 177
+  price: 177
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-violent-daimyo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-safari-mesh-wwst
   gun: M9 Bayonet
   name: Safari Mesh
-  basePrice: 489.35
-  price: 489.35
+  basePrice: 48935
+  price: 48935
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

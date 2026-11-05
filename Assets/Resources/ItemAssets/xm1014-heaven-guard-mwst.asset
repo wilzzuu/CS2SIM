@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-heaven-guard-mwst
   gun: XM1014
   name: Heaven Guard
-  basePrice: 13.45
-  price: 13.45
+  basePrice: 1345
+  price: 1345
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: xm1014-heaven-guard
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

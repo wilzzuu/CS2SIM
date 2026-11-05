@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-black-laminate-ft
   gun: Butterfly Knife
   name: Black Laminate
-  basePrice: 689.43
-  price: 689.43
+  basePrice: 68943
+  price: 68943
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

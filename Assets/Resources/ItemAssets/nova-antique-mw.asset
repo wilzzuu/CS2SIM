@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-antique-mw
   gun: Nova
   name: Antique
-  basePrice: 11.22
-  price: 11.22
+  basePrice: 1122
+  price: 1122
   condition: Minimal Wear
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: nova-antique
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

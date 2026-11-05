@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-wildfire-fn
   gun: AWP
   name: Wildfire
-  basePrice: 259.2
-  price: 259.2
+  basePrice: 25920
+  price: 25920
   condition: Factory New
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-wildfire
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

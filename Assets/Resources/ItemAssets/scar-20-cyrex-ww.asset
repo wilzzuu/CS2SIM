@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-cyrex-ww
   gun: SCAR-20
   name: Cyrex
-  basePrice: 25.59
-  price: 25.59
+  basePrice: 2559
+  price: 2559
   condition: Well-Worn
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: scar-20-cyrex
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

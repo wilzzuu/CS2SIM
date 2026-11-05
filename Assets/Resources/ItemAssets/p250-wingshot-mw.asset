@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-wingshot-mw
   gun: P250
   name: Wingshot
-  basePrice: 3.66
-  price: 3.66
+  basePrice: 366
+  price: 366
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-wingshot
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

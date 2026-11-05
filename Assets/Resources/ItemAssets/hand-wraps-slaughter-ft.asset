@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-slaughter-ft
   gun: Hand Wraps
   name: Slaughter
-  basePrice: 786.13
-  price: 786.13
+  basePrice: 78613
+  price: 78613
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

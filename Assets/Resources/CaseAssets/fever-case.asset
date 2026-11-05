@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: fever-case
   name: Fever Case
-  price: 0.67
+  price: 67
   items:
   - {fileID: 11400000, guid: 25235d8836171b84b984995433c52081, type: 2}
   - {fileID: 11400000, guid: e36638950ac88794b9040bc85ea75746, type: 2}

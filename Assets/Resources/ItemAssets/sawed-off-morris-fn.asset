@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-morris-fn
   gun: Sawed-Off
   name: Morris
-  basePrice: 1.24
-  price: 1.24
+  basePrice: 124
+  price: 124
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-morris
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

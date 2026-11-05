@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-mehndi-fn
   gun: P250
   name: Mehndi
-  basePrice: 70.57
-  price: 70.57
+  basePrice: 7057
+  price: 7057
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-mehndi
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

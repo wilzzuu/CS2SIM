@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-flashback-ftst
   gun: USP-S
   name: Flashback
-  basePrice: 1.94
-  price: 1.94
+  basePrice: 194
+  price: 194
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: usp-s-flashback
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

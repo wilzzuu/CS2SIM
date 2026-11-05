@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-point-disarray-ft
   gun: AK-47
   name: Point Disarray
-  basePrice: 15.67
-  price: 15.67
+  basePrice: 1567
+  price: 1567
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-point-disarray
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

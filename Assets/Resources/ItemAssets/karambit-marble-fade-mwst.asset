@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-marble-fade-mwst
   gun: Karambit
   name: Marble Fade
-  basePrice: 1403.41
-  price: 1403.41
+  basePrice: 140341
+  price: 140341
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-3rd-commando-company-bs
   gun: Moto Gloves
   name: 3rd Commando Company
-  basePrice: 52.47
-  price: 52.47
+  basePrice: 5247
+  price: 5247
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-3rd-commando-company
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

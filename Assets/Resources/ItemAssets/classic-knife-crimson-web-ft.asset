@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-crimson-web-ft
   gun: Classic Knife
   name: Crimson Web
-  basePrice: 161.34
-  price: 161.34
+  basePrice: 16134
+  price: 16134
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

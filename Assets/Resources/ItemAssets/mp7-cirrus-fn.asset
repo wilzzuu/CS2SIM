@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-cirrus-fn
   gun: MP7
   name: Cirrus
-  basePrice: 7.48
-  price: 7.48
+  basePrice: 748
+  price: 748
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp7-cirrus
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

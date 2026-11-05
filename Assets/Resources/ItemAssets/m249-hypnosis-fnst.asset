@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-hypnosis-fnst
   gun: M249
   name: Hypnosis
-  basePrice: 2.06
-  price: 2.06
+  basePrice: 206
+  price: 206
   condition: Factory New
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m249-hypnosis
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

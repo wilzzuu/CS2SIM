@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-marble-fade-bs
   gun: Specialist Gloves
   name: Marble Fade
-  basePrice: 132.82
-  price: 132.82
+  basePrice: 13282
+  price: 13282
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

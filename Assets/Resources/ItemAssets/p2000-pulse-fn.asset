@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-pulse-fn
   gun: P2000
   name: Pulse
-  basePrice: 5.77
-  price: 5.77
+  basePrice: 577
+  price: 577
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-pulse
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-bright-water-mwst
   gun: Gut Knife
   name: Bright Water
-  basePrice: 84.09
-  price: 84.09
+  basePrice: 8409
+  price: 8409
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

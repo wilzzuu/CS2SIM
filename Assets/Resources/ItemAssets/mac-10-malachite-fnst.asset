@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-malachite-fnst
   gun: MAC-10
   name: Malachite
-  basePrice: 13.41
-  price: 13.41
+  basePrice: 1341
+  price: 1341
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-malachite
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

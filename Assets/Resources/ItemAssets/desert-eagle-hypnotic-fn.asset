@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-hypnotic-fn
   gun: Desert Eagle
   name: Hypnotic
-  basePrice: 333.48
-  price: 333.48
+  basePrice: 33348
+  price: 33348
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-hypnotic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

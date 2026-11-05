@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: winter-offensive-weapon-case
   name: Winter Offensive Weapon Case
-  price: 13.18
+  price: 1318
   items:
   - {fileID: 11400000, guid: d0a2495d982fa47449f8ff6cda2e7cc3, type: 2}
   - {fileID: 11400000, guid: c6e8376e6eb13544989fe708b449a75f, type: 2}

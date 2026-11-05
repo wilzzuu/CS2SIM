@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-bright-water-wwst
   gun: Falchion Knife
   name: Bright Water
-  basePrice: 118.38
-  price: 118.38
+  basePrice: 11838
+  price: 11838
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

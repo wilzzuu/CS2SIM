@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-hedge-maze-ft
   gun: Sport Gloves
   name: Hedge Maze
-  basePrice: 5661.5
-  price: 5661.5
+  basePrice: 566150
+  price: 566150
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-hedge-maze
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

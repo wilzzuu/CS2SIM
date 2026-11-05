@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-jawbreaker-ft
   gun: USP-S
   name: Jawbreaker
-  basePrice: 4.78
-  price: 4.78
+  basePrice: 478
+  price: 478
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: usp-s-jawbreaker
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

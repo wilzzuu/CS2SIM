@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-buzz-kill-ft
   gun: M4A4
   name: Buzz Kill
-  basePrice: 92.92
-  price: 92.92
+  basePrice: 9292
+  price: 9292
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a4-buzz-kill
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

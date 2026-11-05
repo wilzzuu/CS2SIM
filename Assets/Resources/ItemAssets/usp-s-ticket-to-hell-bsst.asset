@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-ticket-to-hell-bsst
   gun: USP-S
   name: Ticket to Hell
-  basePrice: 1.18
-  price: 1.18
+  basePrice: 118
+  price: 118
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: usp-s-ticket-to-hell
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

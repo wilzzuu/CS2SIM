@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-gold-bismuth-fnst
   gun: UMP-45
   name: Gold Bismuth
-  basePrice: 16.92
-  price: 16.92
+  basePrice: 1692
+  price: 1692
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ump-45-gold-bismuth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

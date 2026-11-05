@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-constrictor-mw
   gun: Hand Wraps
   name: Constrictor
-  basePrice: 143.84
-  price: 143.84
+  basePrice: 14384
+  price: 14384
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-constrictor
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

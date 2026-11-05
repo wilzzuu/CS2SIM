@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-amphibious-bs
   gun: Sport Gloves
   name: Amphibious
-  basePrice: 290.97
-  price: 290.97
+  basePrice: 29097
+  price: 29097
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-amphibious
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

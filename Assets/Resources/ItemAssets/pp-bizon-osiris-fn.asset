@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-osiris-fn
   gun: PP-Bizon
   name: Osiris
-  basePrice: 5.13
-  price: 5.13
+  basePrice: 513
+  price: 513
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: pp-bizon-osiris
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

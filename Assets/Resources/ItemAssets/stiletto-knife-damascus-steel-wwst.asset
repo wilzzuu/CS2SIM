@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-damascus-steel-wwst
   gun: Stiletto Knife
   name: Damascus Steel
-  basePrice: 249.02
-  price: 249.02
+  basePrice: 24902
+  price: 24902
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

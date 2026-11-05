@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-case-hardened-ftst
   gun: Nomad Knife
   name: Case Hardened
-  basePrice: 200.23
-  price: 200.23
+  basePrice: 20023
+  price: 20023
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

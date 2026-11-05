@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-hexane-wwst
   gun: FAMAS
   name: Hexane
-  basePrice: 7.03
-  price: 7.03
+  basePrice: 703
+  price: 703
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: famas-hexane
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

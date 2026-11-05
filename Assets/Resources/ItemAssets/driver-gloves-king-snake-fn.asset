@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-king-snake-fn
   gun: Driver Gloves
   name: King Snake
-  basePrice: 2934.56
-  price: 2934.56
+  basePrice: 293456
+  price: 293456
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-king-snake
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

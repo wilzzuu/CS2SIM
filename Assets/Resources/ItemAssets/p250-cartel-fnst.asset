@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-cartel-fnst
   gun: P250
   name: Cartel
-  basePrice: 91.78
-  price: 91.78
+  basePrice: 9178
+  price: 9178
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-cartel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

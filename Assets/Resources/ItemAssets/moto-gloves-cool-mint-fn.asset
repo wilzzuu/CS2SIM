@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-cool-mint-fn
   gun: Moto Gloves
   name: Cool Mint
-  basePrice: 3183.11
-  price: 3183.11
+  basePrice: 318311
+  price: 318311
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-cool-mint
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

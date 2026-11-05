@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-blue-steel-mwst
   gun: Bayonet
   name: Blue Steel
-  basePrice: 283.1
-  price: 283.1
+  basePrice: 28310
+  price: 28310
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

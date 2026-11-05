@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-memorial-fn
   gun: SSG 08
   name: Memorial
-  basePrice: 1.81
-  price: 1.81
+  basePrice: 181
+  price: 181
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ssg-08-memorial
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

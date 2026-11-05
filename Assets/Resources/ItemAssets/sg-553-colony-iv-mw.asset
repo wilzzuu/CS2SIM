@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-colony-iv-mw
   gun: SG 553
   name: Colony IV
-  basePrice: 24.65
-  price: 24.65
+  basePrice: 2465
+  price: 2465
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: sg-553-colony-iv
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

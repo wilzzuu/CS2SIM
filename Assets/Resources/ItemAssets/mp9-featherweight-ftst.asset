@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-featherweight-ftst
   gun: MP9
   name: Featherweight
-  basePrice: 0.67
-  price: 0.67
+  basePrice: 67
+  price: 67
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp9-featherweight
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

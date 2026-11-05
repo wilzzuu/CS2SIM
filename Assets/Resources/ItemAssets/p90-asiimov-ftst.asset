@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-asiimov-ftst
   gun: P90
   name: Asiimov
-  basePrice: 179.53
-  price: 179.53
+  basePrice: 17953
+  price: 17953
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: p90-asiimov
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

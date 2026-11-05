@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-spirit-board-mwst
   gun: Sawed-Off
   name: Spirit Board
-  basePrice: 0.6
-  price: 0.6
+  basePrice: 60
+  price: 60
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-spirit-board
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

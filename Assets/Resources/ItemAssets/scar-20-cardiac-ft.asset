@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-cardiac-ft
   gun: SCAR-20
   name: Cardiac
-  basePrice: 9.24
-  price: 9.24
+  basePrice: 924
+  price: 924
   condition: Field-Tested
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: scar-20-cardiac
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

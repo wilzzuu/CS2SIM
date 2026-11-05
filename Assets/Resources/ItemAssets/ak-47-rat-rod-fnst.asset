@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-rat-rod-fnst
   gun: AK-47
   name: Rat Rod
-  basePrice: 55.4
-  price: 55.4
+  basePrice: 5540
+  price: 5540
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ak-47-rat-rod
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

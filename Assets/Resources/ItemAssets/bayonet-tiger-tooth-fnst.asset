@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-tiger-tooth-fnst
   gun: Bayonet
   name: Tiger Tooth
-  basePrice: 383.31
-  price: 383.31
+  basePrice: 38331
+  price: 38331
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

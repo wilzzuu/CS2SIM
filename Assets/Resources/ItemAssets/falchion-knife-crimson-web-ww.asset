@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-crimson-web-ww
   gun: Falchion Knife
   name: Crimson Web
-  basePrice: 124.27
-  price: 124.27
+  basePrice: 12427
+  price: 12427
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

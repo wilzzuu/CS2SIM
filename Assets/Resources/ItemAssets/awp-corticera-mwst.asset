@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-corticera-mwst
   gun: AWP
   name: Corticera
-  basePrice: 50.56
-  price: 50.56
+  basePrice: 5056
+  price: 5056
   condition: Minimal Wear
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: awp-corticera
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

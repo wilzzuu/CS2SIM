@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-blue-steel-mwst
   gun: Karambit
   name: Blue Steel
-  basePrice: 1046.24
-  price: 1046.24
+  basePrice: 104624
+  price: 104624
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

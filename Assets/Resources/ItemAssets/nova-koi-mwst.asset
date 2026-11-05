@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-koi-mwst
   gun: Nova
   name: Koi
-  basePrice: 2.4
-  price: 2.4
+  basePrice: 240
+  price: 240
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-koi
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

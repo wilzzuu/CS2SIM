@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-forest-ddpat-ft
   gun: Bowie Knife
   name: Forest DDPAT
-  basePrice: 59.13
-  price: 59.13
+  basePrice: 5913
+  price: 5913
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

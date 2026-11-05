@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-gila-fn
   gun: Nova
   name: Gila
-  basePrice: 3.29
-  price: 3.29
+  basePrice: 329
+  price: 329
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-gila
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

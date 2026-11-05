@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-ultraviolet-fn
   gun: Shadow Daggers
   name: Ultraviolet
-  basePrice: 202.22
-  price: 202.22
+  basePrice: 20222
+  price: 20222
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

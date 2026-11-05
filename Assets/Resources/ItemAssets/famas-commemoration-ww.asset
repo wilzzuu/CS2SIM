@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-commemoration-ww
   gun: FAMAS
   name: Commemoration
-  basePrice: 34.64
-  price: 34.64
+  basePrice: 3464
+  price: 3464
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: famas-commemoration
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

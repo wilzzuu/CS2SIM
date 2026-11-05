@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-clear-polymer-mwst
   gun: Glock-18
   name: Clear Polymer
-  basePrice: 1.48
-  price: 1.48
+  basePrice: 148
+  price: 148
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-clear-polymer
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

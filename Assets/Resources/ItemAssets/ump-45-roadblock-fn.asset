@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-roadblock-fn
   gun: UMP-45
   name: Roadblock
-  basePrice: 0.81
-  price: 0.81
+  basePrice: 81
+  price: 81
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ump-45-roadblock
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

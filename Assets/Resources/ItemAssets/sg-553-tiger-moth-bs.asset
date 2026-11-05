@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-tiger-moth-bs
   gun: SG 553
   name: Tiger Moth
-  basePrice: 1.01
-  price: 1.01
+  basePrice: 101
+  price: 101
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sg-553-tiger-moth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

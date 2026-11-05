@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-triqua-fn
   gun: AUG
   name: Triqua
-  basePrice: 2.83
-  price: 2.83
+  basePrice: 283
+  price: 283
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-triqua
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

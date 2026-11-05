@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-dart-bsst
   gun: MP9
   name: Dart
-  basePrice: 3.78
-  price: 3.78
+  basePrice: 378
+  price: 378
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp9-dart
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

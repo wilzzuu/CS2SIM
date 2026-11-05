@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-guerrilla-fnst
   gun: MP7
   name: Guerrilla
-  basePrice: 10.43
-  price: 10.43
+  basePrice: 1043
+  price: 1043
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp7-guerrilla
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

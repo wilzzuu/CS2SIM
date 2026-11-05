@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-night-stripe-ww
   gun: Navaja Knife
   name: Night Stripe
-  basePrice: 48.42
-  price: 48.42
+  basePrice: 4842
+  price: 4842
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

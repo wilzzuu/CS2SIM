@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-blueprint-ww
   gun: USP-S
   name: Blueprint
-  basePrice: 5.8
-  price: 5.8
+  basePrice: 580
+  price: 580
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-blueprint
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

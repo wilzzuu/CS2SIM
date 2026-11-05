@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-safari-mesh-bsst
   gun: Bayonet
   name: Safari Mesh
-  basePrice: 165.36
-  price: 165.36
+  basePrice: 16536
+  price: 16536
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

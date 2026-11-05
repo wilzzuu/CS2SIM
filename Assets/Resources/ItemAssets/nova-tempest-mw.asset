@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-tempest-mw
   gun: Nova
   name: Tempest
-  basePrice: 7.76
-  price: 7.76
+  basePrice: 776
+  price: 776
   condition: Minimal Wear
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-tempest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

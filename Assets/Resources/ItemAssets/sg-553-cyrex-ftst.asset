@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-cyrex-ftst
   gun: SG 553
   name: Cyrex
-  basePrice: 11.78
-  price: 11.78
+  basePrice: 1178
+  price: 1178
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: sg-553-cyrex
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

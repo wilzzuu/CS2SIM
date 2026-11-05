@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-red-fragcam-fn
   gun: P2000
   name: Red FragCam
-  basePrice: 33.76
-  price: 33.76
+  basePrice: 3376
+  price: 3376
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-red-fragcam
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

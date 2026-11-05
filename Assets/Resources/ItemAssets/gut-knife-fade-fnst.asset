@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-fade-fnst
   gun: Gut Knife
   name: Fade
-  basePrice: 164.09
-  price: 164.09
+  basePrice: 16409
+  price: 16409
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

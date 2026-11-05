@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-umbral-rabbit-mwst
   gun: Glock-18
   name: Umbral Rabbit
-  basePrice: 2.13
-  price: 2.13
+  basePrice: 213
+  price: 213
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-umbral-rabbit
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

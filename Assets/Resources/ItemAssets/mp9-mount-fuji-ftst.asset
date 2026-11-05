@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-mount-fuji-ftst
   gun: MP9
   name: Mount Fuji
-  basePrice: 9.32
-  price: 9.32
+  basePrice: 932
+  price: 932
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp9-mount-fuji
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

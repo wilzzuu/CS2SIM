@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-delusion-mwst
   gun: UMP-45
   name: Delusion
-  basePrice: 1.45
-  price: 1.45
+  basePrice: 145
+  price: 145
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ump-45-delusion
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

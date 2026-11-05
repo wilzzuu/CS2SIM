@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-mount-fuji-mw
   gun: MP9
   name: Mount Fuji
-  basePrice: 10.27
-  price: 10.27
+  basePrice: 1027
+  price: 1027
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp9-mount-fuji
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

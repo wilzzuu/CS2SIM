@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-naga-ftst
   gun: Desert Eagle
   name: Naga
-  basePrice: 4.49
-  price: 4.49
+  basePrice: 449
+  price: 449
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-naga
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

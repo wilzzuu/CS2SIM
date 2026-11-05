@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-briefing-fn
   gun: UMP-45
   name: Briefing
-  basePrice: 1.64
-  price: 1.64
+  basePrice: 164
+  price: 164
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ump-45-briefing
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

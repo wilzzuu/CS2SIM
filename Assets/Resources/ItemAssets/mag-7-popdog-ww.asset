@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-popdog-ww
   gun: MAG-7
   name: Popdog
-  basePrice: 0.51
-  price: 0.51
+  basePrice: 51
+  price: 51
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-popdog
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

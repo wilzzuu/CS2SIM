@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-nostalgia-bs
   gun: P90
   name: Nostalgia
-  basePrice: 4.33
-  price: 4.33
+  basePrice: 433
+  price: 433
   condition: Battle-Scarred
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-nostalgia
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

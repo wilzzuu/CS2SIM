@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-forest-ddpat-fn
   gun: Shadow Daggers
   name: Forest DDPAT
-  basePrice: 110.12
-  price: 110.12
+  basePrice: 11012
+  price: 11012
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

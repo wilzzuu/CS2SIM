@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-directive-mw
   gun: Desert Eagle
   name: Directive
-  basePrice: 7.49
-  price: 7.49
+  basePrice: 749
+  price: 749
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-directive
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

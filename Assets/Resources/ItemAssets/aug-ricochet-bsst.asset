@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-ricochet-bsst
   gun: AUG
   name: Ricochet
-  basePrice: 1.48
-  price: 1.48
+  basePrice: 148
+  price: 148
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-ricochet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

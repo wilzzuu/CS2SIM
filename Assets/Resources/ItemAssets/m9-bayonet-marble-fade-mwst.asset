@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-marble-fade-mwst
   gun: M9 Bayonet
   name: Marble Fade
-  basePrice: 1024.47
-  price: 1024.47
+  basePrice: 102447
+  price: 102447
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-flash-out-mwst
   gun: Tec-9
   name: Flash Out
-  basePrice: 0.58
-  price: 0.58
+  basePrice: 58
+  price: 58
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: tec-9-flash-out
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

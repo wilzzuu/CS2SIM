@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-damascus-steel-ft
   gun: Talon Knife
   name: Damascus Steel
-  basePrice: 331.82
-  price: 331.82
+  basePrice: 33182
+  price: 33182
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

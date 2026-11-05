@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-cassette-fnst
   gun: P250
   name: Cassette
-  basePrice: 0.64
-  price: 0.64
+  basePrice: 64
+  price: 64
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-cassette
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

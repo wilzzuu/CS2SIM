@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-arctic-wolf-bsst
   gun: AUG
   name: Arctic Wolf
-  basePrice: 3.91
-  price: 3.91
+  basePrice: 391
+  price: 391
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: aug-arctic-wolf
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

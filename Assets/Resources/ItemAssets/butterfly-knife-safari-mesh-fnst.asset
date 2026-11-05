@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-safari-mesh-fnst
   gun: Butterfly Knife
   name: Safari Mesh
-  basePrice: 1497.13
-  price: 1497.13
+  basePrice: 149713
+  price: 149713
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

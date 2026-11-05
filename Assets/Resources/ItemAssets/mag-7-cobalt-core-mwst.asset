@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-cobalt-core-mwst
   gun: MAG-7
   name: Cobalt Core
-  basePrice: 1.02
-  price: 1.02
+  basePrice: 102
+  price: 102
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-cobalt-core
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

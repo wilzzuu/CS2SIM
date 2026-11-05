@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-blue-laminate-wwst
   gun: AK-47
   name: Blue Laminate
-  basePrice: 67.47
-  price: 67.47
+  basePrice: 6747
+  price: 6747
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ak-47-blue-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

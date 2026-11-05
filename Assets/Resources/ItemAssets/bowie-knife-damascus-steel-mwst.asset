@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-damascus-steel-mwst
   gun: Bowie Knife
   name: Damascus Steel
-  basePrice: 118.1
-  price: 118.1
+  basePrice: 11810
+  price: 11810
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

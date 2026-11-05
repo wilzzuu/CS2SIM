@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-aquamarine-revenge-fn
   gun: AK-47
   name: Aquamarine Revenge
-  basePrice: 284.24
-  price: 284.24
+  basePrice: 28424
+  price: 28424
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-aquamarine-revenge
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

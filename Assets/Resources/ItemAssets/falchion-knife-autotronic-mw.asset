@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-autotronic-mw
   gun: Falchion Knife
   name: Autotronic
-  basePrice: 133.2
-  price: 133.2
+  basePrice: 13320
+  price: 13320
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-boreal-forest-bsst
   gun: Nomad Knife
   name: Boreal Forest
-  basePrice: 115.86
-  price: 115.86
+  basePrice: 11586
+  price: 11586
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

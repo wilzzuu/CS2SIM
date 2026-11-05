@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-pulse-fn
   gun: FAMAS
   name: Pulse
-  basePrice: 33.71
-  price: 33.71
+  basePrice: 3371
+  price: 3371
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: famas-pulse
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

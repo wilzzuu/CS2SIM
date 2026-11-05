@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-tiger-tooth-mw
   gun: Nomad Knife
   name: Tiger Tooth
-  basePrice: 238.73
-  price: 238.73
+  basePrice: 23873
+  price: 23873
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

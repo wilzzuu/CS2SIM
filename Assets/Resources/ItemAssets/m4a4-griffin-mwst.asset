@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-griffin-mwst
   gun: M4A4
   name: Griffin
-  basePrice: 13.4
-  price: 13.4
+  basePrice: 1340
+  price: 1340
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m4a4-griffin
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

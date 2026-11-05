@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-spirit-board-fn
   gun: Sawed-Off
   name: Spirit Board
-  basePrice: 0.84
-  price: 0.84
+  basePrice: 84
+  price: 84
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-spirit-board
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

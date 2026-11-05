@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-diamondback-bs
   gun: Driver Gloves
   name: Diamondback
-  basePrice: 120.86
-  price: 120.86
+  basePrice: 12086
+  price: 12086
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-diamondback
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

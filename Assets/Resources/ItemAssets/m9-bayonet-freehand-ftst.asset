@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-freehand-ftst
   gun: M9 Bayonet
   name: Freehand
-  basePrice: 419.31
-  price: 419.31
+  basePrice: 41931
+  price: 41931
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-ultraviolet-mwst
   gun: Flip Knife
   name: Ultraviolet
-  basePrice: 195.89
-  price: 195.89
+  basePrice: 19589
+  price: 19589
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

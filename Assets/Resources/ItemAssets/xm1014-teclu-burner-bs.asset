@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-teclu-burner-bs
   gun: XM1014
   name: Teclu Burner
-  basePrice: 3.87
-  price: 3.87
+  basePrice: 387
+  price: 387
   condition: Battle-Scarred
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: xm1014-teclu-burner
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

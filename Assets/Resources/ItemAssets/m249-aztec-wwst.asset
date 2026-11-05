@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-aztec-wwst
   gun: M249
   name: Aztec
-  basePrice: 1.8
-  price: 1.8
+  basePrice: 180
+  price: 180
   condition: Well-Worn
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m249-aztec
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

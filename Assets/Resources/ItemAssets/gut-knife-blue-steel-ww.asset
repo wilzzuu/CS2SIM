@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-blue-steel-ww
   gun: Gut Knife
   name: Blue Steel
-  basePrice: 76.96
-  price: 76.96
+  basePrice: 7696
+  price: 7696
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

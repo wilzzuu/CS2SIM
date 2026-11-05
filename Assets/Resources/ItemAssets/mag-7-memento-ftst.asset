@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-memento-ftst
   gun: MAG-7
   name: Memento
-  basePrice: 6.26
-  price: 6.26
+  basePrice: 626
+  price: 626
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-memento
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

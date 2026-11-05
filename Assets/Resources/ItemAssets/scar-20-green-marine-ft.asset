@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-green-marine-ft
   gun: SCAR-20
   name: Green Marine
-  basePrice: 0.5
-  price: 0.5
+  basePrice: 50
+  price: 50
   condition: Field-Tested
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-green-marine
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

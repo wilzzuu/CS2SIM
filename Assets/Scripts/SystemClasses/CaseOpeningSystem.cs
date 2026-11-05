@@ -140,6 +140,8 @@ public class CaseOpening : MonoBehaviour
             return;
         }
 
+        int openingPrice = _selectedCaseData.price + keyPrice;
+
         foreach (Transform child in caseGridParent) 
         {
             Destroy(child.gameObject);
@@ -147,13 +149,13 @@ public class CaseOpening : MonoBehaviour
 
         caseGridParent.localPosition = _initialReelPosition;
 
-        if (PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price + keyPrice)
+        if (PlayerManager.Instance.GetPlayerBalance() >= openingPrice)
         {
-            PlayerManager.Instance.DeductMoney(_selectedCaseData.price + keyPrice);
+            PlayerManager.Instance.DeductMoney(openingPrice);
 
             LogUtil.Economy.LogEuro(
                 "OPEN_CASE",
-                -_selectedCaseData.price,
+                -openingPrice,
                 PlayerManager.Instance.GetPlayerBalance(),
                 $"{_selectedCaseData.name}"
             );
@@ -333,7 +335,7 @@ public class CaseOpening : MonoBehaviour
     {
         InventoryManager.Instance.AddItemToInventory(openedItem);
         CollectionManager.Instance.AddItemToCollection(openedItem);
-        if (PlayerManager.Instance.GetPlayerBalance() < _selectedCaseData.price)
+        if (PlayerManager.Instance.GetPlayerBalance() < _selectedCaseData.price + keyPrice)
         {
             DisplayCaseSelector(_availableCases);
             ToggleCaseSelector();

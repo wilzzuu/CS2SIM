@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-damascus-steel-ftst
   gun: Skeleton Knife
   name: Damascus Steel
-  basePrice: 243.82
-  price: 243.82
+  basePrice: 24382
+  price: 24382
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

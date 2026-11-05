@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-urban-masked-ftst
   gun: Falchion Knife
   name: Urban Masked
-  basePrice: 104.39
-  price: 104.39
+  basePrice: 10439
+  price: 10439
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

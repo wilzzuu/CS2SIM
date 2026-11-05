@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-wings-fnst
   gun: AUG
   name: Wings
-  basePrice: 26.14
-  price: 26.14
+  basePrice: 2614
+  price: 2614
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-wings
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

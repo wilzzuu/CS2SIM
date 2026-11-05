@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-stained-ftst
   gun: Skeleton Knife
   name: Stained
-  basePrice: 249.34
-  price: 249.34
+  basePrice: 24934
+  price: 24934
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

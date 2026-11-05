@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-crimson-web-ww
   gun: Ursus Knife
   name: Crimson Web
-  basePrice: 140.39
-  price: 140.39
+  basePrice: 14039
+  price: 14039
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

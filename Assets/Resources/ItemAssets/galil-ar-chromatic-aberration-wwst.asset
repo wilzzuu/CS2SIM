@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-chromatic-aberration-wwst
   gun: Galil AR
   name: Chromatic Aberration
-  basePrice: 6.79
-  price: 6.79
+  basePrice: 679
+  price: 679
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: galil-ar-chromatic-aberration
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-heavy-metal-fnst
   gun: SG 553
   name: Heavy Metal
-  basePrice: 2.48
-  price: 2.48
+  basePrice: 248
+  price: 248
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-heavy-metal
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

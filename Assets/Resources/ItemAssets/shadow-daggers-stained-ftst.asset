@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-stained-ftst
   gun: Shadow Daggers
   name: Stained
-  basePrice: 97.77
-  price: 97.77
+  basePrice: 9777
+  price: 9777
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-ultraviolet-bsst
   gun: Bayonet
   name: Ultraviolet
-  basePrice: 174.41
-  price: 174.41
+  basePrice: 17441
+  price: 17441
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

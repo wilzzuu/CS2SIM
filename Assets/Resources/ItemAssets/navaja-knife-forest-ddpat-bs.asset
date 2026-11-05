@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-forest-ddpat-bs
   gun: Navaja Knife
   name: Forest DDPAT
-  basePrice: 46.85
-  price: 46.85
+  basePrice: 4685
+  price: 4685
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

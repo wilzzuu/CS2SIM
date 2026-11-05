@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-boreal-forest-wwst
   gun: Talon Knife
   name: Boreal Forest
-  basePrice: 293.5
-  price: 293.5
+  basePrice: 29350
+  price: 29350
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

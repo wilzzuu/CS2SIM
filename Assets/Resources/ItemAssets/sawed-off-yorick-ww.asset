@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-yorick-ww
   gun: Sawed-Off
   name: Yorick
-  basePrice: 0.53
-  price: 0.53
+  basePrice: 53
+  price: 53
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-yorick
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

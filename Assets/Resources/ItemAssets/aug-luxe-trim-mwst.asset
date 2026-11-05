@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-luxe-trim-mwst
   gun: AUG
   name: Luxe Trim
-  basePrice: 1
-  price: 1
+  basePrice: 100
+  price: 100
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-luxe-trim
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

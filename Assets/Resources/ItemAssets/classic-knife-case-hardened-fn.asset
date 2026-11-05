@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-case-hardened-fn
   gun: Classic Knife
   name: Case Hardened
-  basePrice: 301.04
-  price: 301.04
+  basePrice: 30104
+  price: 30104
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

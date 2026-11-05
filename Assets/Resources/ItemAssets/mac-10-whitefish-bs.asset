@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-whitefish-bs
   gun: MAC-10
   name: Whitefish
-  basePrice: 0.84
-  price: 0.84
+  basePrice: 84
+  price: 84
   condition: Battle-Scarred
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-whitefish
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

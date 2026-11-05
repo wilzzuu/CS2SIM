@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-stained-ww
   gun: Falchion Knife
   name: Stained
-  basePrice: 88.84
-  price: 88.84
+  basePrice: 8884
+  price: 8884
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-ultraviolet-fnst
   gun: Skeleton Knife
   name: Ultraviolet
-  basePrice: 2582.89
-  price: 2582.89
+  basePrice: 258289
+  price: 258289
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

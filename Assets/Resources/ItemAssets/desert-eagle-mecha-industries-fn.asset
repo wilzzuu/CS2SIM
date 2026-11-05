@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-mecha-industries-fn
   gun: Desert Eagle
   name: Mecha Industries
-  basePrice: 17.68
-  price: 17.68
+  basePrice: 1768
+  price: 1768
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-mecha-industries
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

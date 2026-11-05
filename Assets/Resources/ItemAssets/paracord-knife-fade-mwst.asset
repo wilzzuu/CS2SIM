@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-fade-mwst
   gun: Paracord Knife
   name: Fade
-  basePrice: 370.76
-  price: 370.76
+  basePrice: 37076
+  price: 37076
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

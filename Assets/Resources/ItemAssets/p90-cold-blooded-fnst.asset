@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-cold-blooded-fnst
   gun: P90
   name: Cold Blooded
-  basePrice: 98.02
-  price: 98.02
+  basePrice: 9802
+  price: 9802
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-cold-blooded
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

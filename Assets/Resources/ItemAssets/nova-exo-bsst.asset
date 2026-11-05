@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-exo-bsst
   gun: Nova
   name: Exo
-  basePrice: 1.14
-  price: 1.14
+  basePrice: 114
+  price: 114
   condition: Battle-Scarred
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-exo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

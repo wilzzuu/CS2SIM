@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-elite-build-ftst
   gun: AK-47
   name: Elite Build
-  basePrice: 6.31
-  price: 6.31
+  basePrice: 631
+  price: 631
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ak-47-elite-build
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

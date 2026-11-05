@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-light-rail-mwst
   gun: Desert Eagle
   name: Light Rail
-  basePrice: 7.95
-  price: 7.95
+  basePrice: 795
+  price: 795
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-light-rail
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

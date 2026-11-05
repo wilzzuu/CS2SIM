@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-transport-bs
   gun: Moto Gloves
   name: Transport
-  basePrice: 46.57
-  price: 46.57
+  basePrice: 4657
+  price: 4657
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-transport
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

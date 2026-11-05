@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-crimson-web-bsst
   gun: Survival Knife
   name: Crimson Web
-  basePrice: 133.34
-  price: 133.34
+  basePrice: 13334
+  price: 13334
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

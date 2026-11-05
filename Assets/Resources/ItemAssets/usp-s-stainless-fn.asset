@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-stainless-fn
   gun: USP-S
   name: Stainless
-  basePrice: 80.11
-  price: 80.11
+  basePrice: 8011
+  price: 8011
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-stainless
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

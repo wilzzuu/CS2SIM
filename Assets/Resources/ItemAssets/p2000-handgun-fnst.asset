@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-handgun-fnst
   gun: P2000
   name: Handgun
-  basePrice: 24.92
-  price: 24.92
+  basePrice: 2492
+  price: 2492
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-handgun
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

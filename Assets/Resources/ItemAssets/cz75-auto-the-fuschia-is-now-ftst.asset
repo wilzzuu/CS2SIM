@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-the-fuschia-is-now-ftst
   gun: CZ75-Auto
   name: The Fuschia Is Now
-  basePrice: 34.08
-  price: 34.08
+  basePrice: 3408
+  price: 3408
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: cz75-auto-the-fuschia-is-now
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-phosphor-bsst
   gun: MP5-SD
   name: Phosphor
-  basePrice: 6.26
-  price: 6.26
+  basePrice: 626
+  price: 626
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mp5-sd-phosphor
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

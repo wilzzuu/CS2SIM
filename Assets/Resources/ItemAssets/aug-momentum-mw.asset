@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-momentum-mw
   gun: AUG
   name: Momentum
-  basePrice: 19.91
-  price: 19.91
+  basePrice: 1991
+  price: 1991
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-momentum
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

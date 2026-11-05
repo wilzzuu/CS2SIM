@@ -15,8 +15,8 @@ MonoBehaviour:
   id: r8-revolver-crazy-8-fn
   gun: R8 Revolver
   name: Crazy 8
-  basePrice: 6.43
-  price: 6.43
+  basePrice: 643
+  price: 643
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: r8-revolver-crazy-8
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

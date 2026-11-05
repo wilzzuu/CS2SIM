@@ -15,8 +15,8 @@ MonoBehaviour:
   id: negev-bratatat-fn
   gun: Negev
   name: Bratatat
-  basePrice: 12.59
-  price: 12.59
+  basePrice: 1259
+  price: 1259
   condition: Factory New
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: negev-bratatat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

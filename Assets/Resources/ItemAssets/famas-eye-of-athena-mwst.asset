@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-eye-of-athena-mwst
   gun: FAMAS
   name: Eye of Athena
-  basePrice: 20.5
-  price: 20.5
+  basePrice: 2050
+  price: 2050
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: famas-eye-of-athena
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

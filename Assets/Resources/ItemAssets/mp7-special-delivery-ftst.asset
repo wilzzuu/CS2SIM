@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-special-delivery-ftst
   gun: MP7
   name: Special Delivery
-  basePrice: 2.78
-  price: 2.78
+  basePrice: 278
+  price: 278
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp7-special-delivery
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

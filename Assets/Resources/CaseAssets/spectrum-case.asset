@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: spectrum-case
   name: Spectrum Case
-  price: 4.01
+  price: 401
   items:
   - {fileID: 11400000, guid: 08c0f450b964fa74697bc0e6a3cc9728, type: 2}
   - {fileID: 11400000, guid: 583555b937865e8418367da6b48c2194, type: 2}

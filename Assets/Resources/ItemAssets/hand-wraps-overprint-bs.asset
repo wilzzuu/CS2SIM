@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-overprint-bs
   gun: Hand Wraps
   name: Overprint
-  basePrice: 100.18
-  price: 100.18
+  basePrice: 10018
+  price: 10018
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-overprint
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

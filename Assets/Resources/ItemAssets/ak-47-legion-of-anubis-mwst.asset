@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-legion-of-anubis-mwst
   gun: AK-47
   name: Legion of Anubis
-  basePrice: 48.07
-  price: 48.07
+  basePrice: 4807
+  price: 4807
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-legion-of-anubis
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

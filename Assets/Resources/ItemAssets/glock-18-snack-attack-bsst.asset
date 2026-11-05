@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-snack-attack-bsst
   gun: Glock-18
   name: Snack Attack
-  basePrice: 17.39
-  price: 17.39
+  basePrice: 1739
+  price: 1739
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: glock-18-snack-attack
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

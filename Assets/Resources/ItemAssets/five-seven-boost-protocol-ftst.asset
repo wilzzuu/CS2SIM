@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-boost-protocol-ftst
   gun: Five-SeveN
   name: Boost Protocol
-  basePrice: 7.06
-  price: 7.06
+  basePrice: 706
+  price: 706
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-boost-protocol
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

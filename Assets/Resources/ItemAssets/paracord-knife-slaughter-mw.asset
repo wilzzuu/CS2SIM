@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-slaughter-mw
   gun: Paracord Knife
   name: Slaughter
-  basePrice: 139.39
-  price: 139.39
+  basePrice: 13939
+  price: 13939
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

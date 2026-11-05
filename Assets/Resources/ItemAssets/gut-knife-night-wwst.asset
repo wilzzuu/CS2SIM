@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-night-wwst
   gun: Gut Knife
   name: Night
-  basePrice: 123.74
-  price: 123.74
+  basePrice: 12374
+  price: 12374
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

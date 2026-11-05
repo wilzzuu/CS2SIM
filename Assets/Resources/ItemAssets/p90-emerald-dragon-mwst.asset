@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-emerald-dragon-mwst
   gun: P90
   name: Emerald Dragon
-  basePrice: 308
-  price: 308
+  basePrice: 30800
+  price: 30800
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-emerald-dragon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-cartel-mw
   gun: Dual Berettas
   name: Cartel
-  basePrice: 1.92
-  price: 1.92
+  basePrice: 192
+  price: 192
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-cartel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -98,7 +98,7 @@ namespace Editor
             CaseData caseAsset = CreateInstance<CaseData>();
             caseAsset.id = jsonData.ID;
             caseAsset.name = jsonData.NAME;
-            caseAsset.price = jsonData.PRICE;
+            caseAsset.price = JsonPriceConversion.ToCents(jsonData.PRICE);
             
             caseAsset.items = new List<ItemData>();
             

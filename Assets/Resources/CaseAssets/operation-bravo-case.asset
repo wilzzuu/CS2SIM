@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: operation-bravo-case
   name: Operation Bravo Case
-  price: 67.11
+  price: 6711
   items:
   - {fileID: 11400000, guid: 09676b23c0ee0aa48b389e37a711ffdd, type: 2}
   - {fileID: 11400000, guid: 47f3e143d78538b4c8f31983cb74de62, type: 2}

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-damascus-steel-mwst
   gun: Gut Knife
   name: Damascus Steel
-  basePrice: 110.89
-  price: 110.89
+  basePrice: 11089
+  price: 11089
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

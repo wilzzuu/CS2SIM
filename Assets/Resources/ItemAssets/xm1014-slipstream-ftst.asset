@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-slipstream-ftst
   gun: XM1014
   name: Slipstream
-  basePrice: 0.52
-  price: 0.52
+  basePrice: 52
+  price: 52
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: xm1014-slipstream
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-asiimov-ftst
   gun: AK-47
   name: Asiimov
-  basePrice: 70.12
-  price: 70.12
+  basePrice: 7012
+  price: 7012
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-asiimov
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

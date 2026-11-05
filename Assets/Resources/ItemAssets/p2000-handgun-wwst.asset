@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-handgun-wwst
   gun: P2000
   name: Handgun
-  basePrice: 2.82
-  price: 2.82
+  basePrice: 282
+  price: 282
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-handgun
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

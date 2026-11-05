@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-crimson-weave-ww
   gun: Driver Gloves
   name: Crimson Weave
-  basePrice: 414.2
-  price: 414.2
+  basePrice: 41420
+  price: 41420
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-crimson-weave
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-hyper-beast-fn
   gun: AWP
   name: Hyper Beast
-  basePrice: 259.31
-  price: 259.31
+  basePrice: 25931
+  price: 25931
   condition: Factory New
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-hyper-beast
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

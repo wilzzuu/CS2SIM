@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: huntsman-weapon-case
   name: Huntsman Weapon Case
-  price: 11.16
+  price: 1116
   items:
   - {fileID: 11400000, guid: 9b62f6e99455a474bb43f7bc1186c6a5, type: 2}
   - {fileID: 11400000, guid: f9ed6c65af059c143931b46bb7f3647b, type: 2}

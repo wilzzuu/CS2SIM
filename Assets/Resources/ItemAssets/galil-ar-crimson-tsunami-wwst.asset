@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-crimson-tsunami-wwst
   gun: Galil AR
   name: Crimson Tsunami
-  basePrice: 7.08
-  price: 7.08
+  basePrice: 708
+  price: 708
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: galil-ar-crimson-tsunami
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

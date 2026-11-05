@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-cyrex-ftst
   gun: SCAR-20
   name: Cyrex
-  basePrice: 48.5
-  price: 48.5
+  basePrice: 4850
+  price: 4850
   condition: Field-Tested
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: scar-20-cyrex
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

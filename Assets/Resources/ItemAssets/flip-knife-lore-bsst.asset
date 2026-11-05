@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-lore-bsst
   gun: Flip Knife
   name: Lore
-  basePrice: 182.84
-  price: 182.84
+  basePrice: 18284
+  price: 18284
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

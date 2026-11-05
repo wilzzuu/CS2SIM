@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-ocean-foam-fnst
   gun: P2000
   name: Ocean Foam
-  basePrice: 325.37
-  price: 325.37
+  basePrice: 32537
+  price: 32537
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p2000-ocean-foam
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-marble-fade-fn
   gun: Gut Knife
   name: Marble Fade
-  basePrice: 126.86
-  price: 126.86
+  basePrice: 12686
+  price: 12686
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

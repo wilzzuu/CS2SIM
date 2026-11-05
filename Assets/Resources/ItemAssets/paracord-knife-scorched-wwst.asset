@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-scorched-wwst
   gun: Paracord Knife
   name: Scorched
-  basePrice: 82.49
-  price: 82.49
+  basePrice: 8249
+  price: 8249
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

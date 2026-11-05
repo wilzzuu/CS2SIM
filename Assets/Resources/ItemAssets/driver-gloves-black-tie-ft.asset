@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-black-tie-ft
   gun: Driver Gloves
   name: Black Tie
-  basePrice: 163.77
-  price: 163.77
+  basePrice: 16377
+  price: 16377
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-black-tie
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

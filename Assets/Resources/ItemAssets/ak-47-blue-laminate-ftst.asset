@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-blue-laminate-ftst
   gun: AK-47
   name: Blue Laminate
-  basePrice: 37.81
-  price: 37.81
+  basePrice: 3781
+  price: 3781
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ak-47-blue-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-forest-ddpat-ftst
   gun: Karambit
   name: Forest DDPAT
-  basePrice: 424.69
-  price: 424.69
+  basePrice: 42469
+  price: 42469
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

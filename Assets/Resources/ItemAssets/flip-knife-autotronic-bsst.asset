@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-autotronic-bsst
   gun: Flip Knife
   name: Autotronic
-  basePrice: 184.39
-  price: 184.39
+  basePrice: 18439
+  price: 18439
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-containment-breach-ftst
   gun: AWP
   name: Containment Breach
-  basePrice: 177.72
-  price: 177.72
+  basePrice: 17772
+  price: 17772
   condition: Field-Tested
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-containment-breach
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

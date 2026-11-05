@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-black-laminate-wwst
   gun: Flip Knife
   name: Black Laminate
-  basePrice: 132.17
-  price: 132.17
+  basePrice: 13217
+  price: 13217
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

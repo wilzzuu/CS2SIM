@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-grinder-ft
   gun: Glock-18
   name: Grinder
-  basePrice: 4.14
-  price: 4.14
+  basePrice: 414
+  price: 414
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-grinder
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

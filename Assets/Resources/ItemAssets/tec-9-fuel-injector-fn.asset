@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-fuel-injector-fn
   gun: Tec-9
   name: Fuel Injector
-  basePrice: 72.25
-  price: 72.25
+  basePrice: 7225
+  price: 7225
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: tec-9-fuel-injector
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

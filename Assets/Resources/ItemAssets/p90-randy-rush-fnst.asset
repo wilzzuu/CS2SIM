@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-randy-rush-fnst
   gun: P90
   name: Randy Rush
-  basePrice: 7.66
-  price: 7.66
+  basePrice: 766
+  price: 766
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-randy-rush
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-deep-relief-bsst
   gun: M249
   name: Deep Relief
-  basePrice: 0.57
-  price: 0.57
+  basePrice: 57
+  price: 57
   condition: Battle-Scarred
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m249-deep-relief
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

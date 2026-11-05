@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-valence-mwst
   gun: FAMAS
   name: Valence
-  basePrice: 13.16
-  price: 13.16
+  basePrice: 1316
+  price: 1316
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: famas-valence
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

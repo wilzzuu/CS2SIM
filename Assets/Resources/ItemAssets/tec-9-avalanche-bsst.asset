@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-avalanche-bsst
   gun: Tec-9
   name: Avalanche
-  basePrice: 3.57
-  price: 3.57
+  basePrice: 357
+  price: 357
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: tec-9-avalanche
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

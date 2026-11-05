@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-giraffe-mw
   gun: Hand Wraps
   name: Giraffe
-  basePrice: 143.63
-  price: 143.63
+  basePrice: 14363
+  price: 14363
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-giraffe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

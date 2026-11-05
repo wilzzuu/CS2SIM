@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-crimson-web-fn
   gun: Specialist Gloves
   name: Crimson Web
-  basePrice: 1565.01
-  price: 1565.01
+  basePrice: 156501
+  price: 156501
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

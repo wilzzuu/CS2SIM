@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-aloha-bsst
   gun: MAC-10
   name: Aloha
-  basePrice: 5
-  price: 5
+  basePrice: 500
+  price: 500
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-aloha
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

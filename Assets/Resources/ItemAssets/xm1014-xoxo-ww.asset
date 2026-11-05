@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-xoxo-ww
   gun: XM1014
   name: XOXO
-  basePrice: 3.86
-  price: 3.86
+  basePrice: 386
+  price: 386
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: xm1014-xoxo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-bright-water-ww
   gun: Bowie Knife
   name: Bright Water
-  basePrice: 68.86
-  price: 68.86
+  basePrice: 6886
+  price: 6886
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

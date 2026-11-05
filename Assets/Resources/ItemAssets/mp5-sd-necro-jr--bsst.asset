@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-necro-jr--bsst
   gun: MP5-SD
   name: Necro Jr.
-  basePrice: 0.64
-  price: 0.64
+  basePrice: 64
+  price: 64
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp5-sd-necro-jr-
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

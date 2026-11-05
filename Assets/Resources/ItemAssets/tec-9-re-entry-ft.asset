@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-re-entry-ft
   gun: Tec-9
   name: Re-Entry
-  basePrice: 1.3
-  price: 1.3
+  basePrice: 130
+  price: 130
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: tec-9-re-entry
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-scorched-wwst
   gun: Huntsman Knife
   name: Scorched
-  basePrice: 146.29
-  price: 146.29
+  basePrice: 14629
+  price: 14629
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

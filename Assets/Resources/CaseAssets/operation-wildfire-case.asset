@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: operation-wildfire-case
   name: Operation Wildfire Case
-  price: 4.45
+  price: 445
   items:
   - {fileID: 11400000, guid: ddeeaaca3cac0f24388a7300def4a1b5, type: 2}
   - {fileID: 11400000, guid: 8530cdfe86ccec342babeb9054acc18c, type: 2}

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: negev-dev-texture-fnst
   gun: Negev
   name: dev_texture
-  basePrice: 3.58
-  price: 3.58
+  basePrice: 358
+  price: 358
   condition: Factory New
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: negev-dev-texture
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

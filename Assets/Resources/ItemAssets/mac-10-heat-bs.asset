@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-heat-bs
   gun: MAC-10
   name: Heat
-  basePrice: 2.87
-  price: 2.87
+  basePrice: 287
+  price: 287
   condition: Battle-Scarred
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-heat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

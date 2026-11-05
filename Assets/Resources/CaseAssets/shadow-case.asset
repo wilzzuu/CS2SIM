@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: shadow-case
   name: Shadow Case
-  price: 2.07
+  price: 207
   items:
   - {fileID: 11400000, guid: b1fc6fb837f42034b92ed2204b5fda97, type: 2}
   - {fileID: 11400000, guid: 48a9d32dea4e6ec4faa9dbd89752d14d, type: 2}

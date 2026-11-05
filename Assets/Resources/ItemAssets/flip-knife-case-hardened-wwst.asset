@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-case-hardened-wwst
   gun: Flip Knife
   name: Case Hardened
-  basePrice: 234.98
-  price: 234.98
+  basePrice: 23498
+  price: 23498
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

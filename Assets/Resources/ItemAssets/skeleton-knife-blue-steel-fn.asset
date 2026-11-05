@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-blue-steel-fn
   gun: Skeleton Knife
   name: Blue Steel
-  basePrice: 422.6
-  price: 422.6
+  basePrice: 42260
+  price: 42260
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

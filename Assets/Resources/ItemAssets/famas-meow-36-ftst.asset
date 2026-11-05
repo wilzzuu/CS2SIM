@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-meow-36-ftst
   gun: FAMAS
   name: Meow 36
-  basePrice: 0.67
-  price: 0.67
+  basePrice: 67
+  price: 67
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: famas-meow-36
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

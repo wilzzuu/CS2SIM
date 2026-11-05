@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-bright-water-wwst
   gun: Flip Knife
   name: Bright Water
-  basePrice: 280.07
-  price: 280.07
+  basePrice: 28007
+  price: 28007
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

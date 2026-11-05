@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-cartel-bs
   gun: AK-47
   name: Cartel
-  basePrice: 18.39
-  price: 18.39
+  basePrice: 1839
+  price: 1839
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-cartel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-see-ya-later-mwst
   gun: P250
   name: See Ya Later
-  basePrice: 92.29
-  price: 92.29
+  basePrice: 9229
+  price: 9229
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: p250-see-ya-later
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

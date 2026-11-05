@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-moonrise-ft
   gun: UMP-45
   name: Moonrise
-  basePrice: 0.6
-  price: 0.6
+  basePrice: 60
+  price: 60
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ump-45-moonrise
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-blue-steel-ftst
   gun: Butterfly Knife
   name: Blue Steel
-  basePrice: 1034.85
-  price: 1034.85
+  basePrice: 103485
+  price: 103485
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-momentum-bsst
   gun: AUG
   name: Momentum
-  basePrice: 6.12
-  price: 6.12
+  basePrice: 612
+  price: 612
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-momentum
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

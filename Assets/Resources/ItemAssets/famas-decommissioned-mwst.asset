@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-decommissioned-mwst
   gun: FAMAS
   name: Decommissioned
-  basePrice: 0.99
-  price: 0.99
+  basePrice: 99
+  price: 99
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: famas-decommissioned
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

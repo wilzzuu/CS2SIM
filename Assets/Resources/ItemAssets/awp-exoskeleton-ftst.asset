@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-exoskeleton-ftst
   gun: AWP
   name: Exoskeleton
-  basePrice: 9.71
-  price: 9.71
+  basePrice: 971
+  price: 971
   condition: Field-Tested
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: awp-exoskeleton
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

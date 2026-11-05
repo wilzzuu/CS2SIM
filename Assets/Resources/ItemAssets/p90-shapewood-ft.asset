@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-shapewood-ft
   gun: P90
   name: Shapewood
-  basePrice: 8.74
-  price: 8.74
+  basePrice: 874
+  price: 874
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-shapewood
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-twist-ft
   gun: CZ75-Auto
   name: Twist
-  basePrice: 1.14
-  price: 1.14
+  basePrice: 114
+  price: 114
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: cz75-auto-twist
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

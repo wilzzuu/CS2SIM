@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-delusion-fn
   gun: UMP-45
   name: Delusion
-  basePrice: 8.71
-  price: 8.71
+  basePrice: 871
+  price: 871
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ump-45-delusion
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

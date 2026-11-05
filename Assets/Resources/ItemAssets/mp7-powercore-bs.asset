@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-powercore-bs
   gun: MP7
   name: Powercore
-  basePrice: 1.38
-  price: 1.38
+  basePrice: 138
+  price: 138
   condition: Battle-Scarred
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp7-powercore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

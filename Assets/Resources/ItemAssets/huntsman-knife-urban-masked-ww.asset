@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-urban-masked-ww
   gun: Huntsman Knife
   name: Urban Masked
-  basePrice: 91.42
-  price: 91.42
+  basePrice: 9142
+  price: 9142
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-vogue-mwst
   gun: Glock-18
   name: Vogue
-  basePrice: 12.82
-  price: 12.82
+  basePrice: 1282
+  price: 1282
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: glock-18-vogue
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

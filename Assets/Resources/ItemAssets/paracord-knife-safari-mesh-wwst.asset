@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-safari-mesh-wwst
   gun: Paracord Knife
   name: Safari Mesh
-  basePrice: 79.58
-  price: 79.58
+  basePrice: 7958
+  price: 7958
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

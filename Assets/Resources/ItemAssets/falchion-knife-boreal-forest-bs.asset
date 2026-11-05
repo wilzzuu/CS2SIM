@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-boreal-forest-bs
   gun: Falchion Knife
   name: Boreal Forest
-  basePrice: 72.16
-  price: 72.16
+  basePrice: 7216
+  price: 7216
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

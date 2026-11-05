@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-crimson-kimono-ft
   gun: Specialist Gloves
   name: Crimson Kimono
-  basePrice: 2319.86
-  price: 2319.86
+  basePrice: 231986
+  price: 231986
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-crimson-kimono
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

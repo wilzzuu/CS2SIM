@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-embargo-bsst
   gun: PP-Bizon
   name: Embargo
-  basePrice: 3.85
-  price: 3.85
+  basePrice: 385
+  price: 385
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: pp-bizon-embargo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

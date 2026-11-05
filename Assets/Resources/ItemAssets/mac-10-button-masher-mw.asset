@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-button-masher-mw
   gun: MAC-10
   name: Button Masher
-  basePrice: 1.15
-  price: 1.15
+  basePrice: 115
+  price: 115
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-button-masher
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

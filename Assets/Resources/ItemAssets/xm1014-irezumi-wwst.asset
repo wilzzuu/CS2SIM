@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-irezumi-wwst
   gun: XM1014
   name: Irezumi
-  basePrice: 1.05
-  price: 1.05
+  basePrice: 105
+  price: 105
   condition: Well-Worn
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: xm1014-irezumi
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

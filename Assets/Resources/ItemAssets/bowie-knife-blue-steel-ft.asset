@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-blue-steel-ft
   gun: Bowie Knife
   name: Blue Steel
-  basePrice: 112.48
-  price: 112.48
+  basePrice: 11248
+  price: 11248
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

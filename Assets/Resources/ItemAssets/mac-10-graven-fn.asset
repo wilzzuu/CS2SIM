@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-graven-fn
   gun: MAC-10
   name: Graven
-  basePrice: 123.5
-  price: 123.5
+  basePrice: 12350
+  price: 12350
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-graven
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-zombie-offensive-wwst
   gun: XM1014
   name: Zombie Offensive
-  basePrice: 0.57
-  price: 0.57
+  basePrice: 57
+  price: 57
   condition: Well-Worn
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: xm1014-zombie-offensive
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

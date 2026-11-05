@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-vice-mw
   gun: Sport Gloves
   name: Vice
-  basePrice: 1831.75
-  price: 1831.75
+  basePrice: 183175
+  price: 183175
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-vice
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

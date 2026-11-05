@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-wings-mw
   gun: AUG
   name: Wings
-  basePrice: 20.9
-  price: 20.9
+  basePrice: 2090
+  price: 2090
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-wings
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

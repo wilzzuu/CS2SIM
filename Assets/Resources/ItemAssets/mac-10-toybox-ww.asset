@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-toybox-ww
   gun: MAC-10
   name: Toybox
-  basePrice: 16.76
-  price: 16.76
+  basePrice: 1676
+  price: 1676
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mac-10-toybox
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

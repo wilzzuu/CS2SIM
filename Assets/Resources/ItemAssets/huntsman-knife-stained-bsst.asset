@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-stained-bsst
   gun: Huntsman Knife
   name: Stained
-  basePrice: 144.12
-  price: 144.12
+  basePrice: 14412
+  price: 14412
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

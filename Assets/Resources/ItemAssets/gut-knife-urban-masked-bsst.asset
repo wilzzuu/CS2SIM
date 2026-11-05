@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-urban-masked-bsst
   gun: Gut Knife
   name: Urban Masked
-  basePrice: 85.22
-  price: 85.22
+  basePrice: 8522
+  price: 8522
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

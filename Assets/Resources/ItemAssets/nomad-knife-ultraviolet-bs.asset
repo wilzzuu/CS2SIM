@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-ultraviolet-bs
   gun: Nomad Knife
   name: Ultraviolet
-  basePrice: 115.9
-  price: 115.9
+  basePrice: 11590
+  price: 11590
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-balance-mwst
   gun: Dual Berettas
   name: Balance
-  basePrice: 4.04
-  price: 4.04
+  basePrice: 404
+  price: 404
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-balance
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

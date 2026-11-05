@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-warhawk-ww
   gun: Glock-18
   name: Warhawk
-  basePrice: 0.5
-  price: 0.5
+  basePrice: 50
+  price: 50
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-warhawk
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

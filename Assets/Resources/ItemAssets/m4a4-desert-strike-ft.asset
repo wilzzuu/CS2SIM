@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-desert-strike-ft
   gun: M4A4
   name: Desert-Strike
-  basePrice: 31.19
-  price: 31.19
+  basePrice: 3119
+  price: 3119
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a4-desert-strike
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

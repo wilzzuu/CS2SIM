@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-safari-mesh-mwst
   gun: Shadow Daggers
   name: Safari Mesh
-  basePrice: 81.25
-  price: 81.25
+  basePrice: 8125
+  price: 8125
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-freehand-ftst
   gun: Bayonet
   name: Freehand
-  basePrice: 195.46
-  price: 195.46
+  basePrice: 19546
+  price: 19546
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

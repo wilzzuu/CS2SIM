@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-statics-ft
   gun: MP5-SD
   name: Statics
-  basePrice: 0.68
-  price: 0.68
+  basePrice: 68
+  price: 68
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp5-sd-statics
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

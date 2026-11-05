@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-stained-bs
   gun: Butterfly Knife
   name: Stained
-  basePrice: 617.95
-  price: 617.95
+  basePrice: 61795
+  price: 61795
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

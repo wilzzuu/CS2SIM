@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: operation-broken-fang-case
   name: Operation Broken Fang Case
-  price: 8.16
+  price: 816
   items:
   - {fileID: 11400000, guid: 7268294e729d3d64fb46acc6daafcae9, type: 2}
   - {fileID: 11400000, guid: c93ef767461a0ca43944adeb2e7da267, type: 2}

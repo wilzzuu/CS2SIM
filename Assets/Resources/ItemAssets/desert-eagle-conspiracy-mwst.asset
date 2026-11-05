@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-conspiracy-mwst
   gun: Desert Eagle
   name: Conspiracy
-  basePrice: 23.5
-  price: 23.5
+  basePrice: 2350
+  price: 2350
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-conspiracy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

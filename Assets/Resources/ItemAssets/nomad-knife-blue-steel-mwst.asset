@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-blue-steel-mwst
   gun: Nomad Knife
   name: Blue Steel
-  basePrice: 212.45
-  price: 212.45
+  basePrice: 21245
+  price: 21245
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

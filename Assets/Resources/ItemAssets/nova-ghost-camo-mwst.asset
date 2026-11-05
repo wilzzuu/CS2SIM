@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-ghost-camo-mwst
   gun: Nova
   name: Ghost Camo
-  basePrice: 3.82
-  price: 3.82
+  basePrice: 382
+  price: 382
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-ghost-camo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-danger-close-ftst
   gun: SG 553
   name: Danger Close
-  basePrice: 0.61
-  price: 0.61
+  basePrice: 61
+  price: 61
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-danger-close
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-imperial-fnst
   gun: P2000
   name: Imperial
-  basePrice: 2.41
-  price: 2.41
+  basePrice: 241
+  price: 241
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-imperial
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

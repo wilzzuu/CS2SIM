@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-autotronic-ww
   gun: Bayonet
   name: Autotronic
-  basePrice: 275.29
-  price: 275.29
+  basePrice: 27529
+  price: 27529
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

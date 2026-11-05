@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-turtle-bs
   gun: Moto Gloves
   name: Turtle
-  basePrice: 73.33
-  price: 73.33
+  basePrice: 7333
+  price: 7333
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-turtle
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-splash-ftst
   gun: P250
   name: Splash
-  basePrice: 41.49
-  price: 41.49
+  basePrice: 4149
+  price: 4149
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-splash
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

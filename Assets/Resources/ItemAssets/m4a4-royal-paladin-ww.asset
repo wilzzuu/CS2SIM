@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-royal-paladin-ww
   gun: M4A4
   name: Royal Paladin
-  basePrice: 81.59
-  price: 81.59
+  basePrice: 8159
+  price: 8159
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a4-royal-paladin
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

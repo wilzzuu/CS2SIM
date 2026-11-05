@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-freehand-mw
   gun: Gut Knife
   name: Freehand
-  basePrice: 76.28
-  price: 76.28
+  basePrice: 7628
+  price: 7628
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-apocalypto-fn
   gun: Sawed-Off
   name: Apocalypto
-  basePrice: 7.8
-  price: 7.8
+  basePrice: 780
+  price: 780
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-apocalypto
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

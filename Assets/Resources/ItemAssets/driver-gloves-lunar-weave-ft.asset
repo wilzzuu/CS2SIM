@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-lunar-weave-ft
   gun: Driver Gloves
   name: Lunar Weave
-  basePrice: 980.76
-  price: 980.76
+  basePrice: 98076
+  price: 98076
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-lunar-weave
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

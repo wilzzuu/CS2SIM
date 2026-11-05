@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-black-lotus-fnst
   gun: USP-S
   name: Black Lotus
-  basePrice: 40.58
-  price: 40.58
+  basePrice: 4058
+  price: 4058
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-black-lotus
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

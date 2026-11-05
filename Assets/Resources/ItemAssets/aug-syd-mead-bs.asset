@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-syd-mead-bs
   gun: AUG
   name: Syd Mead
-  basePrice: 9.11
-  price: 9.11
+  basePrice: 911
+  price: 911
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-syd-mead
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

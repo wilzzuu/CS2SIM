@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-graven-mwst
   gun: MAC-10
   name: Graven
-  basePrice: 51.57
-  price: 51.57
+  basePrice: 5157
+  price: 5157
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-graven
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

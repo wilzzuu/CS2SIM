@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-crimson-web-wwst
   gun: Stiletto Knife
   name: Crimson Web
-  basePrice: 298.81
-  price: 298.81
+  basePrice: 29881
+  price: 29881
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

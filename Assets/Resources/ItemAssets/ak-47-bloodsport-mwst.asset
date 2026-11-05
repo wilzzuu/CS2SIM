@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-bloodsport-mwst
   gun: AK-47
   name: Bloodsport
-  basePrice: 340.71
-  price: 340.71
+  basePrice: 34071
+  price: 34071
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-bloodsport
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-analog-input-ftst
   gun: Sawed-Off
   name: Analog Input
-  basePrice: 1.1
-  price: 1.1
+  basePrice: 110
+  price: 110
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-analog-input
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

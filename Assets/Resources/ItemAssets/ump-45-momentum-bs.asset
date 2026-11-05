@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-momentum-bs
   gun: UMP-45
   name: Momentum
-  basePrice: 5.14
-  price: 5.14
+  basePrice: 514
+  price: 514
   condition: Battle-Scarred
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ump-45-momentum
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

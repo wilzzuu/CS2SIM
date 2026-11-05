@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-marina-ftst
   gun: Dual Berettas
   name: Marina
-  basePrice: 8.45
-  price: 8.45
+  basePrice: 845
+  price: 845
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: dual-berettas-marina
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

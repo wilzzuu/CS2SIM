@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-tatter-mwst
   gun: MAC-10
   name: Tatter
-  basePrice: 11.86
-  price: 11.86
+  basePrice: 1186
+  price: 1186
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-tatter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

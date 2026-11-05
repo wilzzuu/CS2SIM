@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-printstream-ww
   gun: USP-S
   name: Printstream
-  basePrice: 38.45
-  price: 38.45
+  basePrice: 3845
+  price: 3845
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: usp-s-printstream
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

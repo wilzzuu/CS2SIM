@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-ironwork-fnst
   gun: Glock-18
   name: Ironwork
-  basePrice: 10.12
-  price: 10.12
+  basePrice: 1012
+  price: 1012
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-ironwork
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-abyssal-apparition-mw
   gun: MP7
   name: Abyssal Apparition
-  basePrice: 8.03
-  price: 8.03
+  basePrice: 803
+  price: 803
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mp7-abyssal-apparition
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

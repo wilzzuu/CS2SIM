@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-scorched-mw
   gun: Nomad Knife
   name: Scorched
-  basePrice: 116.73
-  price: 116.73
+  basePrice: 11673
+  price: 11673
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

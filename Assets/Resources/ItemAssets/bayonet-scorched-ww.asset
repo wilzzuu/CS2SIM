@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-scorched-ww
   gun: Bayonet
   name: Scorched
-  basePrice: 146.71
-  price: 146.71
+  basePrice: 14671
+  price: 14671
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-nemesis-fn
   gun: MP7
   name: Nemesis
-  basePrice: 42.91
-  price: 42.91
+  basePrice: 4291
+  price: 4291
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mp7-nemesis
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

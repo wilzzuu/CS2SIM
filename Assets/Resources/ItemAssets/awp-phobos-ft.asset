@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-phobos-ft
   gun: AWP
   name: Phobos
-  basePrice: 2.37
-  price: 2.37
+  basePrice: 237
+  price: 237
   condition: Field-Tested
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: awp-phobos
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

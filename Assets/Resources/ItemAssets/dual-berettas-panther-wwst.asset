@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-panther-wwst
   gun: Dual Berettas
   name: Panther
-  basePrice: 4.85
-  price: 4.85
+  basePrice: 485
+  price: 485
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-panther
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

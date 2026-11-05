@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-apocalypto-bsst
   gun: Sawed-Off
   name: Apocalypto
-  basePrice: 0.89
-  price: 0.89
+  basePrice: 89
+  price: 89
   condition: Battle-Scarred
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-apocalypto
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-kami-fn
   gun: Galil AR
   name: Kami
-  basePrice: 8.16
-  price: 8.16
+  basePrice: 816
+  price: 816
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: galil-ar-kami
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

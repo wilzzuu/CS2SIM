@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-necropos-wwst
   gun: SSG 08
   name: Necropos
-  basePrice: 0.55
-  price: 0.55
+  basePrice: 55
+  price: 55
   condition: Well-Worn
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ssg-08-necropos
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

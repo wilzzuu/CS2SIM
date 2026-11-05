@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-heaven-guard-bs
   gun: XM1014
   name: Heaven Guard
-  basePrice: 7.27
-  price: 7.27
+  basePrice: 727
+  price: 727
   condition: Battle-Scarred
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: xm1014-heaven-guard
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

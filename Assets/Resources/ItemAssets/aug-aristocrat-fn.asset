@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-aristocrat-fn
   gun: AUG
   name: Aristocrat
-  basePrice: 9.56
-  price: 9.56
+  basePrice: 956
+  price: 956
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: aug-aristocrat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

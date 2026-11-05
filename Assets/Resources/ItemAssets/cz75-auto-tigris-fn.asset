@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-tigris-fn
   gun: CZ75-Auto
   name: Tigris
-  basePrice: 11.04
-  price: 11.04
+  basePrice: 1104
+  price: 1104
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: cz75-auto-tigris
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

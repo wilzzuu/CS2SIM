@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-fairy-tale-mw
   gun: Five-SeveN
   name: Fairy Tale
-  basePrice: 78.28
-  price: 78.28
+  basePrice: 7828
+  price: 7828
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: five-seven-fairy-tale
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

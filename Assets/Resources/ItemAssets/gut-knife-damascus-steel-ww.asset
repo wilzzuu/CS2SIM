@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-damascus-steel-ww
   gun: Gut Knife
   name: Damascus Steel
-  basePrice: 95.41
-  price: 95.41
+  basePrice: 9541
+  price: 9541
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

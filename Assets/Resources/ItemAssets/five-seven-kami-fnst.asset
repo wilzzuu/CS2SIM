@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-kami-fnst
   gun: Five-SeveN
   name: Kami
-  basePrice: 6.06
-  price: 6.06
+  basePrice: 606
+  price: 606
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-kami
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

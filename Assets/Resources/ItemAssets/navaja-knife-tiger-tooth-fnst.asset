@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-tiger-tooth-fnst
   gun: Navaja Knife
   name: Tiger Tooth
-  basePrice: 109.62
-  price: 109.62
+  basePrice: 10962
+  price: 10962
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

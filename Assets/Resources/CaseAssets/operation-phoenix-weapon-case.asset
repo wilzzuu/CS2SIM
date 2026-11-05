@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: operation-phoenix-weapon-case
   name: Operation Phoenix Weapon Case
-  price: 4.38
+  price: 438
   items:
   - {fileID: 11400000, guid: b11a2e6559e356c48b870418a58f4d4b, type: 2}
   - {fileID: 11400000, guid: b78cdda3ee755a849a33032801bea854, type: 2}

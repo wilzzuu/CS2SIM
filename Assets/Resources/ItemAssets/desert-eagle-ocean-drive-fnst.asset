@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-ocean-drive-fnst
   gun: Desert Eagle
   name: Ocean Drive
-  basePrice: 445.64
-  price: 445.64
+  basePrice: 44564
+  price: 44564
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: desert-eagle-ocean-drive
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

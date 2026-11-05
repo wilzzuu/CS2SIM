@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-imperial-dragon-bs
   gun: P2000
   name: Imperial Dragon
-  basePrice: 11.51
-  price: 11.51
+  basePrice: 1151
+  price: 1151
   condition: Battle-Scarred
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p2000-imperial-dragon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

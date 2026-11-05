@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-nevermore-wwst
   gun: P250
   name: Nevermore
-  basePrice: 4.52
-  price: 4.52
+  basePrice: 452
+  price: 452
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-nevermore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

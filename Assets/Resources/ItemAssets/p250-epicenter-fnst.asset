@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-epicenter-fnst
   gun: P250
   name: Epicenter
-  basePrice: 39.17
-  price: 39.17
+  basePrice: 3917
+  price: 3917
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-epicenter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

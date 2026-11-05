@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-damascus-steel-bs
   gun: Falchion Knife
   name: Damascus Steel
-  basePrice: 114.28
-  price: 114.28
+  basePrice: 11428
+  price: 11428
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

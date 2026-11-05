@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-harvester-ftst
   gun: PP-Bizon
   name: Harvester
-  basePrice: 0.5
-  price: 0.5
+  basePrice: 50
+  price: 50
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: pp-bizon-harvester
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

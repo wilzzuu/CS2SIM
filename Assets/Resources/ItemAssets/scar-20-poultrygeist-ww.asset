@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-poultrygeist-ww
   gun: SCAR-20
   name: Poultrygeist
-  basePrice: 0.63
-  price: 0.63
+  basePrice: 63
+  price: 63
   condition: Well-Worn
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-poultrygeist
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

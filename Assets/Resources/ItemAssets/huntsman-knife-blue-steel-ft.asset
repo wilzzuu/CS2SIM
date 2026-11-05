@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-blue-steel-ft
   gun: Huntsman Knife
   name: Blue Steel
-  basePrice: 141.38
-  price: 141.38
+  basePrice: 14138
+  price: 14138
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

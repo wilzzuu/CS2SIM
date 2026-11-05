@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-ultraviolet-ft
   gun: MAC-10
   name: Ultraviolet
-  basePrice: 2.75
-  price: 2.75
+  basePrice: 275
+  price: 275
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

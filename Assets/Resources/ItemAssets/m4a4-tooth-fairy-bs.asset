@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-tooth-fairy-bs
   gun: M4A4
   name: Tooth Fairy
-  basePrice: 3.96
-  price: 3.96
+  basePrice: 396
+  price: 396
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: m4a4-tooth-fairy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

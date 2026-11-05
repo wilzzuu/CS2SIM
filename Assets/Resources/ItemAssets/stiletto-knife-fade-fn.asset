@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-fade-fn
   gun: Stiletto Knife
   name: Fade
-  basePrice: 339.45
-  price: 339.45
+  basePrice: 33945
+  price: 33945
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

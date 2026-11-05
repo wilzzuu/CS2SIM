@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-zander-mwst
   gun: Sawed-Off
   name: Zander
-  basePrice: 0.68
-  price: 0.68
+  basePrice: 68
+  price: 68
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sawed-off-zander
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

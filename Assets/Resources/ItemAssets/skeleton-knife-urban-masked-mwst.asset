@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-urban-masked-mwst
   gun: Skeleton Knife
   name: Urban Masked
-  basePrice: 336.17
-  price: 336.17
+  basePrice: 33617
+  price: 33617
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-hideout-ww
   gun: Dual Berettas
   name: Hideout
-  basePrice: 0.52
-  price: 0.52
+  basePrice: 52
+  price: 52
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-hideout
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

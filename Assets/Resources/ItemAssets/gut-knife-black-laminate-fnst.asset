@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-black-laminate-fnst
   gun: Gut Knife
   name: Black Laminate
-  basePrice: 221.72
-  price: 221.72
+  basePrice: 22172
+  price: 22172
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

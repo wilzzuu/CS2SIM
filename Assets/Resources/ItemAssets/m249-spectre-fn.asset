@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-spectre-fn
   gun: M249
   name: Spectre
-  basePrice: 0.97
-  price: 0.97
+  basePrice: 97
+  price: 97
   condition: Factory New
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m249-spectre
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

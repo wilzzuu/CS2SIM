@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-point-disarray-wwst
   gun: AK-47
   name: Point Disarray
-  basePrice: 43.39
-  price: 43.39
+  basePrice: 4339
+  price: 4339
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-point-disarray
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

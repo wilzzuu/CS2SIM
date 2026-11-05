@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-slate-bs
   gun: AK-47
   name: Slate
-  basePrice: 4.39
-  price: 4.39
+  basePrice: 439
+  price: 439
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ak-47-slate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

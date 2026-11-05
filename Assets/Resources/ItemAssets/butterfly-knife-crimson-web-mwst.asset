@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-crimson-web-mwst
   gun: Butterfly Knife
   name: Crimson Web
-  basePrice: 1405.34
-  price: 1405.34
+  basePrice: 140534
+  price: 140534
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

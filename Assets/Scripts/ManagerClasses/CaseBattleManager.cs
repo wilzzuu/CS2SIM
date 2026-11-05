@@ -103,7 +103,7 @@ public class CaseBattleManager : MonoBehaviour
         if (_selectedCaseData) startBattleButton.interactable = true;
         else startBattleButton.interactable = false;
 
-        if (_selectedCaseData.price <= PlayerManager.Instance.GetPlayerBalance()) startBattleButton.interactable = true;
+        if (GetCasePrice(_selectedCaseData) <= PlayerManager.Instance.GetPlayerBalance()) startBattleButton.interactable = true;
         else startBattleButton.interactable = false;
         
 

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-the-outsiders-ft
   gun: AK-47
   name: The Outsiders
-  basePrice: 9.41
-  price: 9.41
+  basePrice: 941
+  price: 941
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-the-outsiders
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

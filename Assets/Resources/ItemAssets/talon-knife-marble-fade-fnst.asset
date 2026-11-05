@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-marble-fade-fnst
   gun: Talon Knife
   name: Marble Fade
-  basePrice: 675.64
-  price: 675.64
+  basePrice: 67564
+  price: 67564
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

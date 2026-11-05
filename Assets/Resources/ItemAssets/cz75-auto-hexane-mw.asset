@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-hexane-mw
   gun: CZ75-Auto
   name: Hexane
-  basePrice: 3.13
-  price: 3.13
+  basePrice: 313
+  price: 313
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: cz75-auto-hexane
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

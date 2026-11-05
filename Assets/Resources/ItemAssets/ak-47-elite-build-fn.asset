@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-elite-build-fn
   gun: AK-47
   name: Elite Build
-  basePrice: 14.7
-  price: 14.7
+  basePrice: 1470
+  price: 1470
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ak-47-elite-build
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

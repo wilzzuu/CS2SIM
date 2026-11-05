@@ -2501,7 +2501,7 @@ MonoBehaviour:
   gameModeDropdown: {fileID: 1908936112}
   easingDuration: 7
   numberOfReelItems: 40
-  keyPrice: 2.19
+  keyPrice: 219
   uiManager: {fileID: 1762961115}
 --- !u!1 &1409329737
 GameObject:

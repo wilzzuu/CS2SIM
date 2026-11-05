@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-black-laminate-bsst
   gun: M9 Bayonet
   name: Black Laminate
-  basePrice: 521.93
-  price: 521.93
+  basePrice: 52193
+  price: 52193
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

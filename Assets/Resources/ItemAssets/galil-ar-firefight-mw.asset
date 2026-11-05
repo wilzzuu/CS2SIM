@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-firefight-mw
   gun: Galil AR
   name: Firefight
-  basePrice: 2.26
-  price: 2.26
+  basePrice: 226
+  price: 226
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: galil-ar-firefight
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

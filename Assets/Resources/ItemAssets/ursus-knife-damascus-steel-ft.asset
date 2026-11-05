@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-damascus-steel-ft
   gun: Ursus Knife
   name: Damascus Steel
-  basePrice: 94.48
-  price: 94.48
+  basePrice: 9448
+  price: 9448
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

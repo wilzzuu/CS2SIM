@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-eye-of-athena-bs
   gun: FAMAS
   name: Eye of Athena
-  basePrice: 8.92
-  price: 8.92
+  basePrice: 892
+  price: 892
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: famas-eye-of-athena
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

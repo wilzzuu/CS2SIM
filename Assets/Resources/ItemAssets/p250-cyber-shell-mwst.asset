@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-cyber-shell-mwst
   gun: P250
   name: Cyber Shell
-  basePrice: 1.63
-  price: 1.63
+  basePrice: 163
+  price: 163
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-cyber-shell
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

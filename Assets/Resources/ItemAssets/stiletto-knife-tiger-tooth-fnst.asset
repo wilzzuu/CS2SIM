@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-tiger-tooth-fnst
   gun: Stiletto Knife
   name: Tiger Tooth
-  basePrice: 322.37
-  price: 322.37
+  basePrice: 32237
+  price: 32237
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

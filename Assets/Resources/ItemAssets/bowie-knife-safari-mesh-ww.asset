@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-safari-mesh-ww
   gun: Bowie Knife
   name: Safari Mesh
-  basePrice: 57.74
-  price: 57.74
+  basePrice: 5774
+  price: 5774
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

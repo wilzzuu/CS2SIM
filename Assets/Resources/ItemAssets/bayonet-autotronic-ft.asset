@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-autotronic-ft
   gun: Bayonet
   name: Autotronic
-  basePrice: 284.91
-  price: 284.91
+  basePrice: 28491
+  price: 28491
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

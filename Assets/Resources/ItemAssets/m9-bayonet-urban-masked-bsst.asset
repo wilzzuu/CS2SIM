@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-urban-masked-bsst
   gun: M9 Bayonet
   name: Urban Masked
-  basePrice: 363.61
-  price: 363.61
+  basePrice: 36361
+  price: 36361
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

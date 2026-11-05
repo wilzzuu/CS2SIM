@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-case-hardened-bsst
   gun: AK-47
   name: Case Hardened
-  basePrice: 414.6
-  price: 414.6
+  basePrice: 41460
+  price: 41460
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

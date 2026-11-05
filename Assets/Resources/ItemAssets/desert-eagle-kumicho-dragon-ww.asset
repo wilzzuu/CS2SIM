@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-kumicho-dragon-ww
   gun: Desert Eagle
   name: Kumicho Dragon
-  basePrice: 25.89
-  price: 25.89
+  basePrice: 2589
+  price: 2589
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-kumicho-dragon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

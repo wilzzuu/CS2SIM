@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-mehndi-mwst
   gun: P250
   name: Mehndi
-  basePrice: 48.47
-  price: 48.47
+  basePrice: 4847
+  price: 4847
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-mehndi
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-magma-ftst
   gun: M249
   name: Magma
-  basePrice: 1.21
-  price: 1.21
+  basePrice: 121
+  price: 121
   condition: Field-Tested
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m249-magma
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

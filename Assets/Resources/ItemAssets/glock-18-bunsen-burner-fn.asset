@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-bunsen-burner-fn
   gun: Glock-18
   name: Bunsen Burner
-  basePrice: 9.62
-  price: 9.62
+  basePrice: 962
+  price: 962
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-bunsen-burner
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

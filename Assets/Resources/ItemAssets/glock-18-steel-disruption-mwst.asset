@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-steel-disruption-mwst
   gun: Glock-18
   name: Steel Disruption
-  basePrice: 13.24
-  price: 13.24
+  basePrice: 1324
+  price: 1324
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-steel-disruption
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

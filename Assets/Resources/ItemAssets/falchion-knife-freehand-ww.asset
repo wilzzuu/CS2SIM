@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-freehand-ww
   gun: Falchion Knife
   name: Freehand
-  basePrice: 92.45
-  price: 92.45
+  basePrice: 9245
+  price: 9245
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

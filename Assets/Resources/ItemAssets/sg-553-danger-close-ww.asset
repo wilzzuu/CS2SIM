@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-danger-close-ww
   gun: SG 553
   name: Danger Close
-  basePrice: 0.66
-  price: 0.66
+  basePrice: 66
+  price: 66
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-danger-close
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-contaminant-wwst
   gun: P250
   name: Contaminant
-  basePrice: 5.46
-  price: 5.46
+  basePrice: 546
+  price: 546
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-contaminant
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

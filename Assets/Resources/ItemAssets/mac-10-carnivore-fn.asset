@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-carnivore-fn
   gun: MAC-10
   name: Carnivore
-  basePrice: 5.57
-  price: 5.57
+  basePrice: 557
+  price: 557
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-carnivore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

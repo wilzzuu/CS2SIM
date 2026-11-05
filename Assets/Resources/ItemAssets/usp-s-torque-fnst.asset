@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-torque-fnst
   gun: USP-S
   name: Torque
-  basePrice: 5.17
-  price: 5.17
+  basePrice: 517
+  price: 517
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-torque
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

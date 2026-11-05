@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-damascus-steel-ft
   gun: Bayonet
   name: Damascus Steel
-  basePrice: 171.9
-  price: 171.9
+  basePrice: 17190
+  price: 17190
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

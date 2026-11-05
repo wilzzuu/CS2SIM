@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-bronze-morph-ft
   gun: Sport Gloves
   name: Bronze Morph
-  basePrice: 129.45
-  price: 129.45
+  basePrice: 12945
+  price: 12945
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-bronze-morph
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

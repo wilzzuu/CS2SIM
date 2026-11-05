@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-case-hardened-mwst
   gun: Falchion Knife
   name: Case Hardened
-  basePrice: 292.27
-  price: 292.27
+  basePrice: 29227
+  price: 29227
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

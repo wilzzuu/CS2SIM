@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-rangeen-ww
   gun: MAC-10
   name: Rangeen
-  basePrice: 0.72
-  price: 0.72
+  basePrice: 72
+  price: 72
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-rangeen
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

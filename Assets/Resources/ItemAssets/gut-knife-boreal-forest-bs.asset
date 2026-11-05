@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-boreal-forest-bs
   gun: Gut Knife
   name: Boreal Forest
-  basePrice: 69.01
-  price: 69.01
+  basePrice: 6901
+  price: 6901
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

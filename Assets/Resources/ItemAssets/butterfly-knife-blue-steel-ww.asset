@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-blue-steel-ww
   gun: Butterfly Knife
   name: Blue Steel
-  basePrice: 850.41
-  price: 850.41
+  basePrice: 85041
+  price: 85041
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

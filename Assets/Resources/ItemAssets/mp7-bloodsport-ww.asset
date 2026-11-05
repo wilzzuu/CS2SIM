@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-bloodsport-ww
   gun: MP7
   name: Bloodsport
-  basePrice: 27.26
-  price: 27.26
+  basePrice: 2726
+  price: 2726
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: mp7-bloodsport
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

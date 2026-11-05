@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-autotronic-fn
   gun: Huntsman Knife
   name: Autotronic
-  basePrice: 204.66
-  price: 204.66
+  basePrice: 20466
+  price: 20466
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

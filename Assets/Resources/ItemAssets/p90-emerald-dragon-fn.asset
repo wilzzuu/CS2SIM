@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-emerald-dragon-fn
   gun: P90
   name: Emerald Dragon
-  basePrice: 498.89
-  price: 498.89
+  basePrice: 49889
+  price: 49889
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-emerald-dragon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

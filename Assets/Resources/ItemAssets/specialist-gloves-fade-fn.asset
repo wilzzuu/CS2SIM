@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-fade-fn
   gun: Specialist Gloves
   name: Fade
-  basePrice: 1771.69
-  price: 1771.69
+  basePrice: 177169
+  price: 177169
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

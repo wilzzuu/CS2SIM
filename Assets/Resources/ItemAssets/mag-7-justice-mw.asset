@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-justice-mw
   gun: MAG-7
   name: Justice
-  basePrice: 8.51
-  price: 8.51
+  basePrice: 851
+  price: 851
   condition: Minimal Wear
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mag-7-justice
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

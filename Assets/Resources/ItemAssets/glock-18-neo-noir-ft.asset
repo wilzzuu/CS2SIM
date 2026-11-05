@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-neo-noir-ft
   gun: Glock-18
   name: Neo-Noir
-  basePrice: 44.46
-  price: 44.46
+  basePrice: 4446
+  price: 4446
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: glock-18-neo-noir
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

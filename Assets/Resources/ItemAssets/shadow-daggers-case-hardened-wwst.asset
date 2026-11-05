@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-case-hardened-wwst
   gun: Shadow Daggers
   name: Case Hardened
-  basePrice: 183.42
-  price: 183.42
+  basePrice: 18342
+  price: 18342
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

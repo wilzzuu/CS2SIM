@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-scorched-mwst
   gun: Stiletto Knife
   name: Scorched
-  basePrice: 195.14
-  price: 195.14
+  basePrice: 19514
+  price: 19514
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

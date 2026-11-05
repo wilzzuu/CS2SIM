@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-lore-ww
   gun: Flip Knife
   name: Lore
-  basePrice: 169.45
-  price: 169.45
+  basePrice: 16945
+  price: 16945
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

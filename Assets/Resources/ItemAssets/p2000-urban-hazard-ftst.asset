@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-urban-hazard-ftst
   gun: P2000
   name: Urban Hazard
-  basePrice: 0.65
-  price: 0.65
+  basePrice: 65
+  price: 65
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-urban-hazard
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

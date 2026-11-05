@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-monster-mashup-fn
   gun: USP-S
   name: Monster Mashup
-  basePrice: 121.13
-  price: 121.13
+  basePrice: 12113
+  price: 12113
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: usp-s-monster-mashup
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

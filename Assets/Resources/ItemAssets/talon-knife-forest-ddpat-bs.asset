@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-forest-ddpat-bs
   gun: Talon Knife
   name: Forest DDPAT
-  basePrice: 218.72
-  price: 218.72
+  basePrice: 21872
+  price: 21872
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

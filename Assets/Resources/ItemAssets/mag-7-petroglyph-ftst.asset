@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-petroglyph-ftst
   gun: MAG-7
   name: Petroglyph
-  basePrice: 1.1
-  price: 1.1
+  basePrice: 110
+  price: 110
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-petroglyph
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

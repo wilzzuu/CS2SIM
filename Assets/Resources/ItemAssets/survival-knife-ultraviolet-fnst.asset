@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-ultraviolet-fnst
   gun: Survival Knife
   name: Ultraviolet
-  basePrice: 1646.84
-  price: 1646.84
+  basePrice: 164684
+  price: 164684
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-case-hardened-ftst
   gun: Huntsman Knife
   name: Case Hardened
-  basePrice: 319.24
-  price: 319.24
+  basePrice: 31924
+  price: 31924
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

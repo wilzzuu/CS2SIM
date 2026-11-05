@@ -118,7 +118,7 @@ namespace Editor
             CaseData caseAsset = CreateInstance<CaseData>();
             caseAsset.id = jsonData.ID;
             caseAsset.name = jsonData.NAME;
-            caseAsset.price = jsonData.PRICE;
+            caseAsset.price = JsonPriceConversion.ToCents(jsonData.PRICE);
             
             caseAsset.items = new List<ItemData>();
             // Create ItemData assets and add them to the case
@@ -137,11 +137,12 @@ namespace Editor
                     string itemID = $"{itemJson.ID}-{AbbreviatedConditions.CondList[cond.condition]}";
                     string itemPath = $"Assets/Resources/ItemAssets/{itemID}.asset";
                     ItemData itemAsset = GetOrCreateItemAsset(itemID, itemPath);
+                    int regularPrice = JsonPriceConversion.ToCents(cond.regular_price);
                     itemAsset.id = itemID;
                     itemAsset.gun = itemJson.GUN;
                     itemAsset.name = itemJson.NAME;
-                    itemAsset.basePrice = cond.regular_price;
-                    itemAsset.price = cond.regular_price;
+                    itemAsset.basePrice = regularPrice;
+                    itemAsset.price = regularPrice;
                     itemAsset.condition = cond.condition;
                     itemAsset.type = itemJson.TYPE;
                     itemAsset.rarity = itemJson.RARITY;
@@ -156,11 +157,12 @@ namespace Editor
                         string itemSTID = $"{itemJson.ID}-{AbbreviatedConditions.CondList[cond.condition]}st";
                         string itemSTPath = $"Assets/Resources/ItemAssets/{itemSTID}.asset";
                         ItemData itemAssetST = GetOrCreateItemAsset(itemSTID, itemSTPath);
+                        int stattrakPrice = JsonPriceConversion.ToCents(cond.stattrak_price);
                         itemAssetST.id = itemSTID;
                         itemAssetST.gun = itemJson.GUN;
                         itemAssetST.name = itemJson.NAME;
-                        itemAssetST.basePrice = cond.stattrak_price;
-                        itemAssetST.price = cond.stattrak_price;
+                        itemAssetST.basePrice = stattrakPrice;
+                        itemAssetST.price = stattrakPrice;
                         itemAssetST.condition = cond.condition;
                         itemAssetST.type = itemJson.TYPE;
                         itemAssetST.isStatTrak = itemJson.HAS_ST;
@@ -284,5 +286,27 @@ namespace Editor
         public string condition;
         public float regular_price;
         public float stattrak_price;
+    }
+
+    internal static class JsonPriceConversion
+    {
+        internal static int ToCents(float euroPrice)
+        {
+            if (float.IsNaN(euroPrice) || float.IsInfinity(euroPrice))
+            {
+                throw new ArgumentOutOfRangeException(nameof(euroPrice), "Price must be a finite euro amount.");
+            }
+
+            double cents = Math.Round(
+                (double)euroPrice * Globals.EURO_SCALE,
+                MidpointRounding.AwayFromZero);
+
+            if (cents < int.MinValue || cents > int.MaxValue)
+            {
+                throw new ArgumentOutOfRangeException(nameof(euroPrice), "Price is outside the supported range.");
+            }
+
+            return (int)cents;
+        }
     }
 }

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-oni-taiji-fn
   gun: AWP
   name: Oni Taiji
-  basePrice: 1001.63
-  price: 1001.63
+  basePrice: 100163
+  price: 100163
   condition: Factory New
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-oni-taiji
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

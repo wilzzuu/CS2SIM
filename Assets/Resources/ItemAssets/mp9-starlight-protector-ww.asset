@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-starlight-protector-ww
   gun: MP9
   name: Starlight Protector
-  basePrice: 67.1
-  price: 67.1
+  basePrice: 6710
+  price: 6710
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: mp9-starlight-protector
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

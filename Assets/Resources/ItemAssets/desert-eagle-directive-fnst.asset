@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-directive-fnst
   gun: Desert Eagle
   name: Directive
-  basePrice: 58.69
-  price: 58.69
+  basePrice: 5869
+  price: 5869
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-directive
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

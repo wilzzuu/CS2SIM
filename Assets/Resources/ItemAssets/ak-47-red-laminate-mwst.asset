@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-red-laminate-mwst
   gun: AK-47
   name: Red Laminate
-  basePrice: 287.09
-  price: 287.09
+  basePrice: 28709
+  price: 28709
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-red-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

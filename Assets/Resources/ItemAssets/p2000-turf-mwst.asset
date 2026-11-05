@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-turf-mwst
   gun: P2000
   name: Turf
-  basePrice: 1.43
-  price: 1.43
+  basePrice: 143
+  price: 143
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-turf
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

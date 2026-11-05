@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-block-18-mwst
   gun: Glock-18
   name: Block-18
-  basePrice: 3.02
-  price: 3.02
+  basePrice: 302
+  price: 302
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-block-18
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

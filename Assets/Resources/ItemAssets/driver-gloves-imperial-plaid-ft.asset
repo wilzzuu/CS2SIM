@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-imperial-plaid-ft
   gun: Driver Gloves
   name: Imperial Plaid
-  basePrice: 232.62
-  price: 232.62
+  basePrice: 23262
+  price: 23262
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-imperial-plaid
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

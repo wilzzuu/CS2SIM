@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-fade-mwst
   gun: Falchion Knife
   name: Fade
-  basePrice: 871.78
-  price: 871.78
+  basePrice: 87178
+  price: 87178
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

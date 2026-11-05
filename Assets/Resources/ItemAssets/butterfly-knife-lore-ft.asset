@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-lore-ft
   gun: Butterfly Knife
   name: Lore
-  basePrice: 777.47
-  price: 777.47
+  basePrice: 77747
+  price: 77747
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

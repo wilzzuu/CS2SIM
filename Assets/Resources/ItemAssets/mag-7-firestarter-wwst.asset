@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-firestarter-wwst
   gun: MAG-7
   name: Firestarter
-  basePrice: 1.8
-  price: 1.8
+  basePrice: 180
+  price: 180
   condition: Well-Worn
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-firestarter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

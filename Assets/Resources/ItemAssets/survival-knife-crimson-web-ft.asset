@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-crimson-web-ft
   gun: Survival Knife
   name: Crimson Web
-  basePrice: 101.83
-  price: 101.83
+  basePrice: 10183
+  price: 10183
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-undertow-mw
   gun: P250
   name: Undertow
-  basePrice: 29.9
-  price: 29.9
+  basePrice: 2990
+  price: 2990
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-undertow
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

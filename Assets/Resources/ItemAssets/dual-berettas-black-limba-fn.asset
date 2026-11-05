@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-black-limba-fn
   gun: Dual Berettas
   name: Black Limba
-  basePrice: 56.07
-  price: 56.07
+  basePrice: 5607
+  price: 5607
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-black-limba
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

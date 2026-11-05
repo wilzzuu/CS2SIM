@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-hydra-mwst
   gun: MP9
   name: Hydra
-  basePrice: 29.85
-  price: 29.85
+  basePrice: 2985
+  price: 2985
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mp9-hydra
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

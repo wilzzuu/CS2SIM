@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-stained-bs
   gun: Navaja Knife
   name: Stained
-  basePrice: 52.9
-  price: 52.9
+  basePrice: 5290
+  price: 5290
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

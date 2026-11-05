@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-yellow-jacket-ft
   gun: CZ75-Auto
   name: Yellow Jacket
-  basePrice: 5.59
-  price: 5.59
+  basePrice: 559
+  price: 559
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: cz75-auto-yellow-jacket
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

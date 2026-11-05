@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-bright-water-mw
   gun: Bayonet
   name: Bright Water
-  basePrice: 186.54
-  price: 186.54
+  basePrice: 18654
+  price: 18654
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

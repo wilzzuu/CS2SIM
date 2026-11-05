@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-wraiths-ww
   gun: Glock-18
   name: Wraiths
-  basePrice: 0.69
-  price: 0.69
+  basePrice: 69
+  price: 69
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-wraiths
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

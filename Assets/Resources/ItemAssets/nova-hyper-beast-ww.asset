@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-hyper-beast-ww
   gun: Nova
   name: Hyper Beast
-  basePrice: 15.86
-  price: 15.86
+  basePrice: 1586
+  price: 1586
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: nova-hyper-beast
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

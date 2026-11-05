@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-royal-legion-wwst
   gun: Glock-18
   name: Royal Legion
-  basePrice: 6.35
-  price: 6.35
+  basePrice: 635
+  price: 635
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-royal-legion
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

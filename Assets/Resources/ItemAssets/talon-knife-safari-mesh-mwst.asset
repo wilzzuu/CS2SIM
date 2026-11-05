@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-safari-mesh-mwst
   gun: Talon Knife
   name: Safari Mesh
-  basePrice: 462.87
-  price: 462.87
+  basePrice: 46287
+  price: 46287
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

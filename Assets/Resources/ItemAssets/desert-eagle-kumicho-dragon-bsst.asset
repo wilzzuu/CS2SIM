@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-kumicho-dragon-bsst
   gun: Desert Eagle
   name: Kumicho Dragon
-  basePrice: 38.72
-  price: 38.72
+  basePrice: 3872
+  price: 3872
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-kumicho-dragon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

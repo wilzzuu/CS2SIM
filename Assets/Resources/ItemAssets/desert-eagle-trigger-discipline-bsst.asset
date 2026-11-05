@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-trigger-discipline-bsst
   gun: Desert Eagle
   name: Trigger Discipline
-  basePrice: 1.78
-  price: 1.78
+  basePrice: 178
+  price: 178
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-trigger-discipline
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

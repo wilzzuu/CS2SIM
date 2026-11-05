@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-damascus-steel-mw
   gun: Shadow Daggers
   name: Damascus Steel
-  basePrice: 58.47
-  price: 58.47
+  basePrice: 5847
+  price: 5847
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-scumbria-fnst
   gun: XM1014
   name: Scumbria
-  basePrice: 4.2
-  price: 4.2
+  basePrice: 420
+  price: 420
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: xm1014-scumbria
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

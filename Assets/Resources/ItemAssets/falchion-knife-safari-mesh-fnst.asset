@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-safari-mesh-fnst
   gun: Falchion Knife
   name: Safari Mesh
-  basePrice: 539.16
-  price: 539.16
+  basePrice: 53916
+  price: 53916
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

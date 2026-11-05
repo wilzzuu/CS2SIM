@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-cyber-security-ww
   gun: M4A4
   name: Cyber Security
-  basePrice: 22.95
-  price: 22.95
+  basePrice: 2295
+  price: 2295
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: m4a4-cyber-security
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-vulcan-bsst
   gun: AK-47
   name: Vulcan
-  basePrice: 205.19
-  price: 205.19
+  basePrice: 20519
+  price: 20519
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-vulcan
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

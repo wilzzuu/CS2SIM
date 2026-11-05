@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-black-laminate-bsst
   gun: Shadow Daggers
   name: Black Laminate
-  basePrice: 54.89
-  price: 54.89
+  basePrice: 5489
+  price: 5489
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

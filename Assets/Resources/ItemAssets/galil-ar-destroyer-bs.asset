@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-destroyer-bs
   gun: Galil AR
   name: Destroyer
-  basePrice: 0.7
-  price: 0.7
+  basePrice: 70
+  price: 70
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: galil-ar-destroyer
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-aloha-ftst
   gun: MAC-10
   name: Aloha
-  basePrice: 4.75
-  price: 4.75
+  basePrice: 475
+  price: 475
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-aloha
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

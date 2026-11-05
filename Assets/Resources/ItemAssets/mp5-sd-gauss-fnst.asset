@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-gauss-fnst
   gun: MP5-SD
   name: Gauss
-  basePrice: 5.79
-  price: 5.79
+  basePrice: 579
+  price: 579
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp5-sd-gauss
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

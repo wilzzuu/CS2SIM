@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-cassette-mwst
   gun: P250
   name: Cassette
-  basePrice: 1.09
-  price: 1.09
+  basePrice: 109
+  price: 109
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-cassette
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

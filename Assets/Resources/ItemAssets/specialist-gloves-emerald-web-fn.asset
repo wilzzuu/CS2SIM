@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-emerald-web-fn
   gun: Specialist Gloves
   name: Emerald Web
-  basePrice: 7169.55
-  price: 7169.55
+  basePrice: 716955
+  price: 716955
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-emerald-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-last-dive-fnst
   gun: MAC-10
   name: Last Dive
-  basePrice: 7.23
-  price: 7.23
+  basePrice: 723
+  price: 723
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-last-dive
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

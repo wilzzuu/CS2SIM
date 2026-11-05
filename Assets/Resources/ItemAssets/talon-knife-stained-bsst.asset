@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-stained-bsst
   gun: Talon Knife
   name: Stained
-  basePrice: 358.91
-  price: 358.91
+  basePrice: 35891
+  price: 35891
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

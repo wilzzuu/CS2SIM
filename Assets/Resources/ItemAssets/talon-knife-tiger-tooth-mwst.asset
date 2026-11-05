@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-tiger-tooth-mwst
   gun: Talon Knife
   name: Tiger Tooth
-  basePrice: 738.37
-  price: 738.37
+  basePrice: 73837
+  price: 73837
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-dragon-tattoo-mw
   gun: Glock-18
   name: Dragon Tattoo
-  basePrice: 177.33
-  price: 177.33
+  basePrice: 17733
+  price: 17733
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-dragon-tattoo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

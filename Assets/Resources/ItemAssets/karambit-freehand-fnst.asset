@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-freehand-fnst
   gun: Karambit
   name: Freehand
-  basePrice: 745.1
-  price: 745.1
+  basePrice: 74510
+  price: 74510
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

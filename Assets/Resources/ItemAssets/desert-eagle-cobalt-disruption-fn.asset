@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-cobalt-disruption-fn
   gun: Desert Eagle
   name: Cobalt Disruption
-  basePrice: 177.22
-  price: 177.22
+  basePrice: 17722
+  price: 17722
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-cobalt-disruption
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

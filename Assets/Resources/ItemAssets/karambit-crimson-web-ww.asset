@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-crimson-web-ww
   gun: Karambit
   name: Crimson Web
-  basePrice: 741.94
-  price: 741.94
+  basePrice: 74194
+  price: 74194
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

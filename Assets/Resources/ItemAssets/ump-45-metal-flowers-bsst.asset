@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-metal-flowers-bsst
   gun: UMP-45
   name: Metal Flowers
-  basePrice: 4.06
-  price: 4.06
+  basePrice: 406
+  price: 406
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ump-45-metal-flowers
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

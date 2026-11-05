@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-stained-mw
   gun: Shadow Daggers
   name: Stained
-  basePrice: 73.21
-  price: 73.21
+  basePrice: 7321
+  price: 7321
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

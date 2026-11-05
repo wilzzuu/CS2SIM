@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-neo-noir-fnst
   gun: UMP-45
   name: Neo-Noir
-  basePrice: 60.73
-  price: 60.73
+  basePrice: 6073
+  price: 6073
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ump-45-neo-noir
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

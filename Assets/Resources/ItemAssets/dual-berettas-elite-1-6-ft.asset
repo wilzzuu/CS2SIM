@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-elite-1-6-ft
   gun: Dual Berettas
   name: Elite 1.6
-  basePrice: 0.51
-  price: 0.51
+  basePrice: 51
+  price: 51
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-elite-1-6
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

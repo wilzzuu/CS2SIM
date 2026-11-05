@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-neon-revolution-bs
   gun: AK-47
   name: Neon Revolution
-  basePrice: 93.73
-  price: 93.73
+  basePrice: 9373
+  price: 9373
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-neon-revolution
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

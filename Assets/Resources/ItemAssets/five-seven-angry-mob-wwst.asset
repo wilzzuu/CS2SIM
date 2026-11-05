@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-angry-mob-wwst
   gun: Five-SeveN
   name: Angry Mob
-  basePrice: 56.2
-  price: 56.2
+  basePrice: 5620
+  price: 5620
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: five-seven-angry-mob
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

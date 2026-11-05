@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-hypnotic-fn
   gun: MP9
   name: Hypnotic
-  basePrice: 34.05
-  price: 34.05
+  basePrice: 3405
+  price: 3405
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp9-hypnotic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

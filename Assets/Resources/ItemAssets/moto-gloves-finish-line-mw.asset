@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-finish-line-mw
   gun: Moto Gloves
   name: Finish Line
-  basePrice: 288.26
-  price: 288.26
+  basePrice: 28826
+  price: 28826
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-finish-line
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

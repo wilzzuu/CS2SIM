@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-red-fragcam-wwst
   gun: P2000
   name: Red FragCam
-  basePrice: 5.72
-  price: 5.72
+  basePrice: 572
+  price: 572
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-red-fragcam
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

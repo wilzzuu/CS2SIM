@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-tiger-tooth-fnst
   gun: Falchion Knife
   name: Tiger Tooth
-  basePrice: 204.65
-  price: 204.65
+  basePrice: 20465
+  price: 20465
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

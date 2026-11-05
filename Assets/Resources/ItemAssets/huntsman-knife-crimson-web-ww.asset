@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-crimson-web-ww
   gun: Huntsman Knife
   name: Crimson Web
-  basePrice: 112.89
-  price: 112.89
+  basePrice: 11289
+  price: 11289
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-forest-ddpat-mw
   gun: Ursus Knife
   name: Forest DDPAT
-  basePrice: 78.21
-  price: 78.21
+  basePrice: 7821
+  price: 7821
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

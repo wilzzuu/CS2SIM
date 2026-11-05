@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-slaughter-ft
   gun: Nomad Knife
   name: Slaughter
-  basePrice: 246.8
-  price: 246.8
+  basePrice: 24680
+  price: 24680
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

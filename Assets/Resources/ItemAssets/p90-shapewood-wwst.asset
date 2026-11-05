@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-shapewood-wwst
   gun: P90
   name: Shapewood
-  basePrice: 8.12
-  price: 8.12
+  basePrice: 812
+  price: 812
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-shapewood
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

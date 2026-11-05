@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-black-laminate-fnst
   gun: Karambit
   name: Black Laminate
-  basePrice: 1595.22
-  price: 1595.22
+  basePrice: 159522
+  price: 159522
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

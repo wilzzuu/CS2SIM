@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-cold-blooded-mw
   gun: P90
   name: Cold Blooded
-  basePrice: 77.85
-  price: 77.85
+  basePrice: 7785
+  price: 7785
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-cold-blooded
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-xiangliu-ft
   gun: CZ75-Auto
   name: Xiangliu
-  basePrice: 14.11
-  price: 14.11
+  basePrice: 1411
+  price: 1411
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: cz75-auto-xiangliu
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

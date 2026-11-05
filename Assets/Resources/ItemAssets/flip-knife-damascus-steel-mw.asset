@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-damascus-steel-mw
   gun: Flip Knife
   name: Damascus Steel
-  basePrice: 134.42
-  price: 134.42
+  basePrice: 13442
+  price: 13442
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

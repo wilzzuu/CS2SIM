@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-flame-test-mwst
   gun: Five-SeveN
   name: Flame Test
-  basePrice: 0.6
-  price: 0.6
+  basePrice: 60
+  price: 60
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-flame-test
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

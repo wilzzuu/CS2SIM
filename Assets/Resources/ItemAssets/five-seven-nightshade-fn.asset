@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-nightshade-fn
   gun: Five-SeveN
   name: Nightshade
-  basePrice: 6.29
-  price: 6.29
+  basePrice: 629
+  price: 629
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-nightshade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

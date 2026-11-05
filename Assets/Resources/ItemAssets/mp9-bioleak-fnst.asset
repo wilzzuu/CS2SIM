@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-bioleak-fnst
   gun: MP9
   name: Bioleak
-  basePrice: 1.5
-  price: 1.5
+  basePrice: 150
+  price: 150
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp9-bioleak
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-demeter-fnst
   gun: G3SG1
   name: Demeter
-  basePrice: 50.13
-  price: 50.13
+  basePrice: 5013
+  price: 5013
   condition: Factory New
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: g3sg1-demeter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

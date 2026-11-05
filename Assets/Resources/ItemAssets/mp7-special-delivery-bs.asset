@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-special-delivery-bs
   gun: MP7
   name: Special Delivery
-  basePrice: 1.48
-  price: 1.48
+  basePrice: 148
+  price: 148
   condition: Battle-Scarred
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp7-special-delivery
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

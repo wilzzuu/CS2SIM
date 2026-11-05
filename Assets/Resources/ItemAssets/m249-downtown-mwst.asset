@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-downtown-mwst
   gun: M249
   name: Downtown
-  basePrice: 1.02
-  price: 1.02
+  basePrice: 102
+  price: 102
   condition: Minimal Wear
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m249-downtown
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

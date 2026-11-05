@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-scorched-bsst
   gun: Classic Knife
   name: Scorched
-  basePrice: 107.95
-  price: 107.95
+  basePrice: 10795
+  price: 10795
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

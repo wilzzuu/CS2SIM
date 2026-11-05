@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-contaminant-bsst
   gun: P250
   name: Contaminant
-  basePrice: 0.73
-  price: 0.73
+  basePrice: 73
+  price: 73
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-contaminant
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

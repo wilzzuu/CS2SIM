@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-water-elemental-fnst
   gun: Glock-18
   name: Water Elemental
-  basePrice: 69.69
-  price: 69.69
+  basePrice: 6969
+  price: 6969
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: glock-18-water-elemental
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

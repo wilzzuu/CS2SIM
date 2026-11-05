@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-boreal-forest-bsst
   gun: Navaja Knife
   name: Boreal Forest
-  basePrice: 90.71
-  price: 90.71
+  basePrice: 9071
+  price: 9071
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

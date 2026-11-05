@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bloodhound-gloves-charred-bs
   gun: Bloodhound Gloves
   name: Charred
-  basePrice: 152.81
-  price: 152.81
+  basePrice: 15281
+  price: 15281
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bloodhound-gloves-charred
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-vogue-ww
   gun: Glock-18
   name: Vogue
-  basePrice: 4.56
-  price: 4.56
+  basePrice: 456
+  price: 456
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: glock-18-vogue
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

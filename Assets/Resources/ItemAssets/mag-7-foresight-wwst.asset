@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-foresight-wwst
   gun: MAG-7
   name: Foresight
-  basePrice: 0.57
-  price: 0.57
+  basePrice: 57
+  price: 57
   condition: Well-Worn
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-foresight
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

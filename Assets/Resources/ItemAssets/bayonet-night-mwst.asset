@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-night-mwst
   gun: Bayonet
   name: Night
-  basePrice: 412.4
-  price: 412.4
+  basePrice: 41240
+  price: 41240
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

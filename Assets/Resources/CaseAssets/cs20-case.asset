@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: cs20-case
   name: CS20 Case
-  price: 1.28
+  price: 128
   items:
   - {fileID: 11400000, guid: ca17e2ab594e4d0418e81e3e61a0abb1, type: 2}
   - {fileID: 11400000, guid: f50a9d556d6505f44b6e5b61f9dc7ee6, type: 2}

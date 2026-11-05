@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-lore-fn
   gun: Huntsman Knife
   name: Lore
-  basePrice: 203.41
-  price: 203.41
+  basePrice: 20341
+  price: 20341
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-acid-etched-mwst
   gun: P2000
   name: Acid Etched
-  basePrice: 3.51
-  price: 3.51
+  basePrice: 351
+  price: 351
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-acid-etched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

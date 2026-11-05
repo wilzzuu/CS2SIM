@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-abyss-mwst
   gun: SSG 08
   name: Abyss
-  basePrice: 2.47
-  price: 2.47
+  basePrice: 247
+  price: 247
   condition: Minimal Wear
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ssg-08-abyss
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

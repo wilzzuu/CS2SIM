@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-heat-fnst
   gun: MAG-7
   name: Heat
-  basePrice: 15.27
-  price: 15.27
+  basePrice: 1527
+  price: 1527
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-heat
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

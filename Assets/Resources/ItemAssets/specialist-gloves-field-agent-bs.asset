@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-field-agent-bs
   gun: Specialist Gloves
   name: Field Agent
-  basePrice: 116.76
-  price: 116.76
+  basePrice: 11676
+  price: 11676
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-field-agent
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

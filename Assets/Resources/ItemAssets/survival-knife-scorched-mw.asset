@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-scorched-mw
   gun: Survival Knife
   name: Scorched
-  basePrice: 59.81
-  price: 59.81
+  basePrice: 5981
+  price: 5981
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

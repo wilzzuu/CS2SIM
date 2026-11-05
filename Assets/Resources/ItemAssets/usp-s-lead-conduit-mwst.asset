@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-lead-conduit-mwst
   gun: USP-S
   name: Lead Conduit
-  basePrice: 5.28
-  price: 5.28
+  basePrice: 528
+  price: 528
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-lead-conduit
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

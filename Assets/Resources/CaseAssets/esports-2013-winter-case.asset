@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: esports-2013-winter-case
   name: eSports 2013 Winter Case
-  price: 19.15
+  price: 1915
   items:
   - {fileID: 11400000, guid: 343ea6e60b3cefd408861e138289ea1e, type: 2}
   - {fileID: 11400000, guid: 9aadcbc9fadd7294289d81a3434dccaf, type: 2}

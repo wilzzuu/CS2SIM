@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-ultraviolet-mw
   gun: Navaja Knife
   name: Ultraviolet
-  basePrice: 67.25
-  price: 67.25
+  basePrice: 6725
+  price: 6725
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

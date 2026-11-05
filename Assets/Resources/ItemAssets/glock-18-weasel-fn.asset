@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-weasel-fn
   gun: Glock-18
   name: Weasel
-  basePrice: 15.17
-  price: 15.17
+  basePrice: 1517
+  price: 1517
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-weasel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-torque-ww
   gun: AUG
   name: Torque
-  basePrice: 9.6
-  price: 9.6
+  basePrice: 960
+  price: 960
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: aug-torque
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

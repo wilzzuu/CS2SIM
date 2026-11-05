@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-blue-steel-ftst
   gun: Nomad Knife
   name: Blue Steel
-  basePrice: 169.13
-  price: 169.13
+  basePrice: 16913
+  price: 16913
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

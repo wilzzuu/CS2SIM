@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-crimson-web-fn
   gun: M9 Bayonet
   name: Crimson Web
-  basePrice: 5203.09
-  price: 5203.09
+  basePrice: 520309
+  price: 520309
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

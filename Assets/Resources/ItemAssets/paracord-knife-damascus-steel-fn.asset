@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-damascus-steel-fn
   gun: Paracord Knife
   name: Damascus Steel
-  basePrice: 90.7
-  price: 90.7
+  basePrice: 9070
+  price: 9070
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

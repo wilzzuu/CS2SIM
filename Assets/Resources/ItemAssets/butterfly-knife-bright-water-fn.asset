@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-bright-water-fn
   gun: Butterfly Knife
   name: Bright Water
-  basePrice: 726.34
-  price: 726.34
+  basePrice: 72634
+  price: 72634
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

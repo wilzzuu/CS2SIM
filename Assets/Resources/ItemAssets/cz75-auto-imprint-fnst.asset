@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-imprint-fnst
   gun: CZ75-Auto
   name: Imprint
-  basePrice: 4.88
-  price: 4.88
+  basePrice: 488
+  price: 488
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: cz75-auto-imprint
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

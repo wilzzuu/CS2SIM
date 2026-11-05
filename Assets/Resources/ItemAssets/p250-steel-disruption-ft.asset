@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-steel-disruption-ft
   gun: P250
   name: Steel Disruption
-  basePrice: 4.2
-  price: 4.2
+  basePrice: 420
+  price: 420
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-steel-disruption
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

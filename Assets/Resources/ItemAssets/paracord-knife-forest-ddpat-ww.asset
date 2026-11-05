@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-forest-ddpat-ww
   gun: Paracord Knife
   name: Forest DDPAT
-  basePrice: 53.5
-  price: 53.5
+  basePrice: 5350
+  price: 5350
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

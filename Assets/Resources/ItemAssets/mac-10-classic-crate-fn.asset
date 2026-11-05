@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-classic-crate-fn
   gun: MAC-10
   name: Classic Crate
-  basePrice: 2.18
-  price: 2.18
+  basePrice: 218
+  price: 218
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-classic-crate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

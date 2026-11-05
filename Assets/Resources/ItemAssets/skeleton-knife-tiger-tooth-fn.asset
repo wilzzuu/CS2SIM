@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-tiger-tooth-fn
   gun: Skeleton Knife
   name: Tiger Tooth
-  basePrice: 397.52
-  price: 397.52
+  basePrice: 39752
+  price: 39752
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

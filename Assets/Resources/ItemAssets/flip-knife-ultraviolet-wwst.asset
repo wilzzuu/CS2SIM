@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-ultraviolet-wwst
   gun: Flip Knife
   name: Ultraviolet
-  basePrice: 176.35
-  price: 176.35
+  basePrice: 17635
+  price: 17635
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

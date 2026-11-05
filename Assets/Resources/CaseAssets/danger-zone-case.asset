@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: danger-zone-case
   name: Danger Zone Case
-  price: 1.62
+  price: 162
   items:
   - {fileID: 11400000, guid: 6bdf1697671367346b7b32ec03356548, type: 2}
   - {fileID: 11400000, guid: 3e76117fed76de941b2bbda39400735f, type: 2}

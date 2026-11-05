@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-cardiac-wwst
   gun: SCAR-20
   name: Cardiac
-  basePrice: 11.64
-  price: 11.64
+  basePrice: 1164
+  price: 1164
   condition: Well-Worn
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: scar-20-cardiac
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

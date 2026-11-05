@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-paw-ft
   gun: AWP
   name: PAW
-  basePrice: 2.29
-  price: 2.29
+  basePrice: 229
+  price: 229
   condition: Field-Tested
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: awp-paw
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

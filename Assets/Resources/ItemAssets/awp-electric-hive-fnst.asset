@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-electric-hive-fnst
   gun: AWP
   name: Electric Hive
-  basePrice: 114.89
-  price: 114.89
+  basePrice: 11489
+  price: 11489
   condition: Factory New
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: awp-electric-hive
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

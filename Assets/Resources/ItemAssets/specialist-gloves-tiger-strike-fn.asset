@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-tiger-strike-fn
   gun: Specialist Gloves
   name: Tiger Strike
-  basePrice: 1616.83
-  price: 1616.83
+  basePrice: 161683
+  price: 161683
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-tiger-strike
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

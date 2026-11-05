@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-plastique-bsst
   gun: UMP-45
   name: Plastique
-  basePrice: 1.24
-  price: 1.24
+  basePrice: 124
+  price: 124
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ump-45-plastique
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

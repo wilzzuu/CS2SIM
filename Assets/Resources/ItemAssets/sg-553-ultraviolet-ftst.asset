@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-ultraviolet-ftst
   gun: SG 553
   name: Ultraviolet
-  basePrice: 21.92
-  price: 21.92
+  basePrice: 2192
+  price: 2192
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

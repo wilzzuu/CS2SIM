@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-smoke-out-ww
   gun: Moto Gloves
   name: Smoke Out
-  basePrice: 130.96
-  price: 130.96
+  basePrice: 13096
+  price: 13096
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-smoke-out
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

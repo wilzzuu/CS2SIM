@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-elite-build-wwst
   gun: AWP
   name: Elite Build
-  basePrice: 33.4
-  price: 33.4
+  basePrice: 3340
+  price: 3340
   condition: Well-Worn
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: awp-elite-build
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

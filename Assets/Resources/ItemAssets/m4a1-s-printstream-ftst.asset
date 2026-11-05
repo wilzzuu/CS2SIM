@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-printstream-ftst
   gun: M4A1-S
   name: Printstream
-  basePrice: 382.91
-  price: 382.91
+  basePrice: 38291
+  price: 38291
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a1-s-printstream
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

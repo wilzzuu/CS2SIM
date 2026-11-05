@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-scumbria-ww
   gun: Five-SeveN
   name: Scumbria
-  basePrice: 0.93
-  price: 0.93
+  basePrice: 93
+  price: 93
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-scumbria
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

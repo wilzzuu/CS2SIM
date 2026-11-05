@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-night-ft
   gun: Bayonet
   name: Night
-  basePrice: 156.32
-  price: 156.32
+  basePrice: 15632
+  price: 15632
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

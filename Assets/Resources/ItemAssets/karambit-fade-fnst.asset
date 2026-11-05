@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-fade-fnst
   gun: Karambit
   name: Fade
-  basePrice: 1195.27
-  price: 1195.27
+  basePrice: 119527
+  price: 119527
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

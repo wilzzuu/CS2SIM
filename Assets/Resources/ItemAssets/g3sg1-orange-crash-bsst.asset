@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-orange-crash-bsst
   gun: G3SG1
   name: Orange Crash
-  basePrice: 1.74
-  price: 1.74
+  basePrice: 174
+  price: 174
   condition: Battle-Scarred
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: g3sg1-orange-crash
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

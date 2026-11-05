@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-ghost-crusader-ww
   gun: SSG 08
   name: Ghost Crusader
-  basePrice: 1.17
-  price: 1.17
+  basePrice: 117
+  price: 117
   condition: Well-Worn
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ssg-08-ghost-crusader
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

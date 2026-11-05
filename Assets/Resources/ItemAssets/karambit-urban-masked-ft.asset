@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-urban-masked-ft
   gun: Karambit
   name: Urban Masked
-  basePrice: 446.07
-  price: 446.07
+  basePrice: 44607
+  price: 44607
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

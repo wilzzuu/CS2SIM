@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-pc-grn-ww
   gun: USP-S
   name: PC-GRN
-  basePrice: 0.5
-  price: 0.5
+  basePrice: 50
+  price: 50
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-pc-grn
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

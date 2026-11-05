@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-buckshot-bs
   gun: Specialist Gloves
   name: Buckshot
-  basePrice: 56.39
-  price: 56.39
+  basePrice: 5639
+  price: 5639
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-buckshot
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

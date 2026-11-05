@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-lore-bs
   gun: Karambit
   name: Lore
-  basePrice: 534.69
-  price: 534.69
+  basePrice: 53469
+  price: 53469
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

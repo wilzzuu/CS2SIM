@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-ultraviolet-ww
   gun: Huntsman Knife
   name: Ultraviolet
-  basePrice: 77.86
-  price: 77.86
+  basePrice: 7786
+  price: 7786
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

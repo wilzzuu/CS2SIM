@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-wild-child-ftst
   gun: UMP-45
   name: Wild Child
-  basePrice: 3.82
-  price: 3.82
+  basePrice: 382
+  price: 382
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ump-45-wild-child
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

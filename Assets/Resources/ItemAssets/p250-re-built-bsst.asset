@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-re-built-bsst
   gun: P250
   name: Re.built
-  basePrice: 0.57
-  price: 0.57
+  basePrice: 57
+  price: 57
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-re-built
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

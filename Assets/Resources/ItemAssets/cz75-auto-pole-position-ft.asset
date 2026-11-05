@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-pole-position-ft
   gun: CZ75-Auto
   name: Pole Position
-  basePrice: 1.31
-  price: 1.31
+  basePrice: 131
+  price: 131
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: cz75-auto-pole-position
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

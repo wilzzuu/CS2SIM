@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-night-mw
   gun: Huntsman Knife
   name: Night
-  basePrice: 154.44
-  price: 154.44
+  basePrice: 15444
+  price: 15444
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

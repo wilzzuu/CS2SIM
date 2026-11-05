@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: snakebite-case
   name: Snakebite Case
-  price: 0.71
+  price: 71
   items:
   - {fileID: 11400000, guid: c97b2554f05f4ca40b1396f0abcd04c8, type: 2}
   - {fileID: 11400000, guid: b1dca74de10b34d47b9109af53ef227f, type: 2}

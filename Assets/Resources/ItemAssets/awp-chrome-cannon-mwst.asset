@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-chrome-cannon-mwst
   gun: AWP
   name: Chrome Cannon
-  basePrice: 78.22
-  price: 78.22
+  basePrice: 7822
+  price: 7822
   condition: Minimal Wear
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-chrome-cannon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-damascus-steel-fnst
   gun: Survival Knife
   name: Damascus Steel
-  basePrice: 111.46
-  price: 111.46
+  basePrice: 11146
+  price: 11146
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-heat-mw
   gun: MAG-7
   name: Heat
-  basePrice: 2.91
-  price: 2.91
+  basePrice: 291
+  price: 291
   condition: Minimal Wear
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-heat
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

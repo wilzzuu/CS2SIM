@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-bamboozle-ww
   gun: Tec-9
   name: Bamboozle
-  basePrice: 1.06
-  price: 1.06
+  basePrice: 106
+  price: 106
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: tec-9-bamboozle
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

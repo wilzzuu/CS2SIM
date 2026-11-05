@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: esports-2014-summer-case
   name: eSports 2014 Summer Case
-  price: 21.98
+  price: 2198
   items:
   - {fileID: 11400000, guid: a741191a0559c544ea5f543dee68646b, type: 2}
   - {fileID: 11400000, guid: 6d6b472eee8d6c24595350f0cc13cfb1, type: 2}

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-isaac-wwst
   gun: Tec-9
   name: Isaac
-  basePrice: 2.8
-  price: 2.8
+  basePrice: 280
+  price: 280
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: tec-9-isaac
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

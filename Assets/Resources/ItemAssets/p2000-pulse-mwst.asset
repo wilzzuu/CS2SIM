@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-pulse-mwst
   gun: P2000
   name: Pulse
-  basePrice: 3.26
-  price: 3.26
+  basePrice: 326
+  price: 326
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-pulse
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

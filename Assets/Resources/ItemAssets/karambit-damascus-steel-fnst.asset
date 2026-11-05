@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-damascus-steel-fnst
   gun: Karambit
   name: Damascus Steel
-  basePrice: 891.98
-  price: 891.98
+  basePrice: 89198
+  price: 89198
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

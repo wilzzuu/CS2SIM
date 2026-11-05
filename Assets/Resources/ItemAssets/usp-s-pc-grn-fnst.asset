@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-pc-grn-fnst
   gun: USP-S
   name: PC-GRN
-  basePrice: 5.09
-  price: 5.09
+  basePrice: 509
+  price: 509
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-pc-grn
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-stained-ww
   gun: Bayonet
   name: Stained
-  basePrice: 194.05
-  price: 194.05
+  basePrice: 19405
+  price: 19405
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

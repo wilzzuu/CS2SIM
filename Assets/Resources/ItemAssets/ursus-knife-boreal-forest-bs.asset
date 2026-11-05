@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-boreal-forest-bs
   gun: Ursus Knife
   name: Boreal Forest
-  basePrice: 63.62
-  price: 63.62
+  basePrice: 6362
+  price: 6362
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-spearmint-fn
   gun: Moto Gloves
   name: Spearmint
-  basePrice: 10100.11
-  price: 10100.11
+  basePrice: 1010011
+  price: 1010011
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-spearmint
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

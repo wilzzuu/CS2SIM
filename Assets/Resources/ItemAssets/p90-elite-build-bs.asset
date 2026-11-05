@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-elite-build-bs
   gun: P90
   name: Elite Build
-  basePrice: 0.65
-  price: 0.65
+  basePrice: 65
+  price: 65
   condition: Battle-Scarred
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p90-elite-build
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

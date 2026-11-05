@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-kiss-love-mwst
   gun: Sawed-Off
   name: "Kiss\u2665Love"
-  basePrice: 8.7
-  price: 8.7
+  basePrice: 870
+  price: 870
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: sawed-off-kiss-love
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

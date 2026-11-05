@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: shattered-web-case
   name: Shattered Web Case
-  price: 6.79
+  price: 679
   items:
   - {fileID: 11400000, guid: a6453f687f11a224a93282662f747c03, type: 2}
   - {fileID: 11400000, guid: 5f58af9f0038a6242b588e384529c15c, type: 2}

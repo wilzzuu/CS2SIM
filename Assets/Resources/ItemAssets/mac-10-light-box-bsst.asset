@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-light-box-bsst
   gun: MAC-10
   name: Light Box
-  basePrice: 0.67
-  price: 0.67
+  basePrice: 67
+  price: 67
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-light-box
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

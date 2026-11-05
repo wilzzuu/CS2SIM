@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-safari-mesh-fnst
   gun: Ursus Knife
   name: Safari Mesh
-  basePrice: 386.17
-  price: 386.17
+  basePrice: 38617
+  price: 38617
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

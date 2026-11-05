@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-bad-trip-ft
   gun: FAMAS
   name: Bad Trip
-  basePrice: 47.96
-  price: 47.96
+  basePrice: 4796
+  price: 4796
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: famas-bad-trip
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

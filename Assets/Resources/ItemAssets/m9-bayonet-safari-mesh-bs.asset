@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-safari-mesh-bs
   gun: M9 Bayonet
   name: Safari Mesh
-  basePrice: 321.67
-  price: 321.67
+  basePrice: 32167
+  price: 32167
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-slaughter-ft
   gun: Kukri Knife
   name: Slaughter
-  basePrice: 146.63
-  price: 146.63
+  basePrice: 14663
+  price: 14663
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

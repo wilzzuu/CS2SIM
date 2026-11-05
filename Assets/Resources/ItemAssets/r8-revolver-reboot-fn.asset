@@ -15,8 +15,8 @@ MonoBehaviour:
   id: r8-revolver-reboot-fn
   gun: R8 Revolver
   name: Reboot
-  basePrice: 18.02
-  price: 18.02
+  basePrice: 1802
+  price: 1802
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: r8-revolver-reboot
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-fade-mwst
   gun: Talon Knife
   name: Fade
-  basePrice: 878.95
-  price: 878.95
+  basePrice: 87895
+  price: 87895
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

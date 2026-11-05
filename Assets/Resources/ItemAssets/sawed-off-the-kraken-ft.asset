@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-the-kraken-ft
   gun: Sawed-Off
   name: The Kraken
-  basePrice: 88.48
-  price: 88.48
+  basePrice: 8848
+  price: 8848
   condition: Field-Tested
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: sawed-off-the-kraken
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

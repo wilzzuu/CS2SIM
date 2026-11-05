@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-serum-mwst
   gun: USP-S
   name: Serum
-  basePrice: 62.5
-  price: 62.5
+  basePrice: 6250
+  price: 6250
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: usp-s-serum
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

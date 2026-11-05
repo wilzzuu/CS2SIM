@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-digital-mesh-mw
   gun: G3SG1
   name: Digital Mesh
-  basePrice: 1.55
-  price: 1.55
+  basePrice: 155
+  price: 155
   condition: Minimal Wear
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: g3sg1-digital-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

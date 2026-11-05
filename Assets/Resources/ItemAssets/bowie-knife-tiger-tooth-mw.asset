@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-tiger-tooth-mw
   gun: Bowie Knife
   name: Tiger Tooth
-  basePrice: 183.11
-  price: 183.11
+  basePrice: 18311
+  price: 18311
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

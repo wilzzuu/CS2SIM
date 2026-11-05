@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-scorched-bs
   gun: Karambit
   name: Scorched
-  basePrice: 478.42
-  price: 478.42
+  basePrice: 47842
+  price: 47842
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-urban-masked-fn
   gun: Skeleton Knife
   name: Urban Masked
-  basePrice: 388.73
-  price: 388.73
+  basePrice: 38873
+  price: 38873
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

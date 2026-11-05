@@ -15,8 +15,8 @@ MonoBehaviour:
   id: negev-desert-strike-fn
   gun: Negev
   name: Desert-Strike
-  basePrice: 0.74
-  price: 0.74
+  basePrice: 74
+  price: 74
   condition: Factory New
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: negev-desert-strike
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

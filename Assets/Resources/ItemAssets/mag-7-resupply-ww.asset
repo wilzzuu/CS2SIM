@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-resupply-ww
   gun: MAG-7
   name: Resupply
-  basePrice: 0.56
-  price: 0.56
+  basePrice: 56
+  price: 56
   condition: Well-Worn
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-resupply
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

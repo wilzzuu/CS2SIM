@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-liquidation-fn
   gun: MP5-SD
   name: Liquidation
-  basePrice: 1.24
-  price: 1.24
+  basePrice: 124
+  price: 124
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp5-sd-liquidation
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-ol-rusty-wwst
   gun: SG 553
   name: Ol' Rusty
-  basePrice: 0.92
-  price: 0.92
+  basePrice: 92
+  price: 92
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-ol-rusty
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

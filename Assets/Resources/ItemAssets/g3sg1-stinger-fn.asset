@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-stinger-fn
   gun: G3SG1
   name: Stinger
-  basePrice: 4.31
-  price: 4.31
+  basePrice: 431
+  price: 431
   condition: Factory New
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: g3sg1-stinger
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

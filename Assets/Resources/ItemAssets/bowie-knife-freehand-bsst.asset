@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-freehand-bsst
   gun: Bowie Knife
   name: Freehand
-  basePrice: 162.34
-  price: 162.34
+  basePrice: 16234
+  price: 16234
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

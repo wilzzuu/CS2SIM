@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-stained-ft
   gun: Ursus Knife
   name: Stained
-  basePrice: 93.83
-  price: 93.83
+  basePrice: 9383
+  price: 9383
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

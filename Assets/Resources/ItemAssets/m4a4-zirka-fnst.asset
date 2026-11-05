@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-zirka-fnst
   gun: M4A4
   name: Zirka
-  basePrice: 322.38
-  price: 322.38
+  basePrice: 32238
+  price: 32238
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m4a4-zirka
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

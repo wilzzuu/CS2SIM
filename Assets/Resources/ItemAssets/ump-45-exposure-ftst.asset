@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-exposure-ftst
   gun: UMP-45
   name: Exposure
-  basePrice: 1.15
-  price: 1.15
+  basePrice: 115
+  price: 115
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ump-45-exposure
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

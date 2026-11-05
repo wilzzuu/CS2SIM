@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-guardian-ww
   gun: M4A1-S
   name: Guardian
-  basePrice: 34.02
-  price: 34.02
+  basePrice: 3402
+  price: 3402
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: m4a1-s-guardian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

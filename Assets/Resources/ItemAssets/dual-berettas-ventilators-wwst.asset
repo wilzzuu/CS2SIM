@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-ventilators-wwst
   gun: Dual Berettas
   name: Ventilators
-  basePrice: 2.26
-  price: 2.26
+  basePrice: 226
+  price: 226
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-ventilators
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

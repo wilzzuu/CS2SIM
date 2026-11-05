@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-cracked-opal-ft
   gun: Tec-9
   name: Cracked Opal
-  basePrice: 0.84
-  price: 0.84
+  basePrice: 84
+  price: 84
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: tec-9-cracked-opal
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

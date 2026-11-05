@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-crimson-web-mw
   gun: Paracord Knife
   name: Crimson Web
-  basePrice: 135.46
-  price: 135.46
+  basePrice: 13546
+  price: 13546
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

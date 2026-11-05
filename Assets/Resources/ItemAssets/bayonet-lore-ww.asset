@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-lore-ww
   gun: Bayonet
   name: Lore
-  basePrice: 259.79
-  price: 259.79
+  basePrice: 25979
+  price: 25979
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

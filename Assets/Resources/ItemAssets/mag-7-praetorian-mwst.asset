@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-praetorian-mwst
   gun: MAG-7
   name: Praetorian
-  basePrice: 5
-  price: 5
+  basePrice: 500
+  price: 500
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-praetorian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

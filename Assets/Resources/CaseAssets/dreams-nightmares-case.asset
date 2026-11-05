@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: dreams-nightmares-case
   name: Dreams & Nightmares Case
-  price: 1.48
+  price: 148
   items:
   - {fileID: 11400000, guid: 8f0fd6b7d8c102d4a9a594e1d1676bcf, type: 2}
   - {fileID: 11400000, guid: e11817e7bc3d38642adbc99b035c89f6, type: 2}

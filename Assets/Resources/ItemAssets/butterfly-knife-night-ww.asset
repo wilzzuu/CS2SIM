@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-night-ww
   gun: Butterfly Knife
   name: Night
-  basePrice: 593.77
-  price: 593.77
+  basePrice: 59377
+  price: 59377
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-tiger-tooth-fnst
   gun: Flip Knife
   name: Tiger Tooth
-  basePrice: 248.13
-  price: 248.13
+  basePrice: 24813
+  price: 24813
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

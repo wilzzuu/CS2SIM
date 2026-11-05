@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-titanium-bit-ft
   gun: Tec-9
   name: Titanium Bit
-  basePrice: 9.03
-  price: 9.03
+  basePrice: 903
+  price: 903
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: tec-9-titanium-bit
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

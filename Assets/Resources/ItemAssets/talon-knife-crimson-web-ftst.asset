@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-crimson-web-ftst
   gun: Talon Knife
   name: Crimson Web
-  basePrice: 433.88
-  price: 433.88
+  basePrice: 43388
+  price: 43388
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

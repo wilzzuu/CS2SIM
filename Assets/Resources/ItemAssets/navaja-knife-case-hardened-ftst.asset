@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-case-hardened-ftst
   gun: Navaja Knife
   name: Case Hardened
-  basePrice: 146.3
-  price: 146.3
+  basePrice: 14630
+  price: 14630
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

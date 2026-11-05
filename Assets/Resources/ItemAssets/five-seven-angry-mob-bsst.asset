@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-angry-mob-bsst
   gun: Five-SeveN
   name: Angry Mob
-  basePrice: 54.4
-  price: 54.4
+  basePrice: 5440
+  price: 5440
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: five-seven-angry-mob
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

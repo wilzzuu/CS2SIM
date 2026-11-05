@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-monster-call-bs
   gun: MAG-7
   name: Monster Call
-  basePrice: 0.5
-  price: 0.5
+  basePrice: 50
+  price: 50
   condition: Battle-Scarred
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-monster-call
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

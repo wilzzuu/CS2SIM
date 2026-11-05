@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-bengal-tiger-ftst
   gun: AUG
   name: Bengal Tiger
-  basePrice: 20.09
-  price: 20.09
+  basePrice: 2009
+  price: 2009
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-bengal-tiger
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-crimson-web-bsst
   gun: Karambit
   name: Crimson Web
-  basePrice: 581.13
-  price: 581.13
+  basePrice: 58113
+  price: 58113
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-woodsman-mw
   gun: P2000
   name: Woodsman
-  basePrice: 37.61
-  price: 37.61
+  basePrice: 3761
+  price: 3761
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-woodsman
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

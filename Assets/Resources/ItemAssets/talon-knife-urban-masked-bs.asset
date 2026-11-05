@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-urban-masked-bs
   gun: Talon Knife
   name: Urban Masked
-  basePrice: 232.07
-  price: 232.07
+  basePrice: 23207
+  price: 23207
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

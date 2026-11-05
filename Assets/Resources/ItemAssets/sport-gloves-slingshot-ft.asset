@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-slingshot-ft
   gun: Sport Gloves
   name: Slingshot
-  basePrice: 480.2
-  price: 480.2
+  basePrice: 48020
+  price: 48020
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-slingshot
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-bright-water-bs
   gun: M9 Bayonet
   name: Bright Water
-  basePrice: 347.94
-  price: 347.94
+  basePrice: 34794
+  price: 34794
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

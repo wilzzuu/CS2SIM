@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-urban-masked-mwst
   gun: Nomad Knife
   name: Urban Masked
-  basePrice: 174.72
-  price: 174.72
+  basePrice: 17472
+  price: 17472
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

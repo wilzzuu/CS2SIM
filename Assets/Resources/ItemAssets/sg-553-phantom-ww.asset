@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-phantom-ww
   gun: SG 553
   name: Phantom
-  basePrice: 1
-  price: 1
+  basePrice: 100
+  price: 100
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sg-553-phantom
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

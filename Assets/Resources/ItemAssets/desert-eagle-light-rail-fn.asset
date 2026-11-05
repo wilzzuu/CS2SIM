@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-light-rail-fn
   gun: Desert Eagle
   name: Light Rail
-  basePrice: 17.49
-  price: 17.49
+  basePrice: 1749
+  price: 1749
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-light-rail
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-exoskeleton-mw
   gun: AWP
   name: Exoskeleton
-  basePrice: 16.08
-  price: 16.08
+  basePrice: 1608
+  price: 1608
   condition: Minimal Wear
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: awp-exoskeleton
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

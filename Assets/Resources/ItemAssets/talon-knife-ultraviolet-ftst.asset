@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-ultraviolet-ftst
   gun: Talon Knife
   name: Ultraviolet
-  basePrice: 325.11
-  price: 325.11
+  basePrice: 32511
+  price: 32511
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-koi-fn
   gun: Nova
   name: Koi
-  basePrice: 3.94
-  price: 3.94
+  basePrice: 394
+  price: 394
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-koi
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

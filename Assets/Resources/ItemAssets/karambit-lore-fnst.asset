@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-lore-fnst
   gun: Karambit
   name: Lore
-  basePrice: 1400.75
-  price: 1400.75
+  basePrice: 140075
+  price: 140075
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

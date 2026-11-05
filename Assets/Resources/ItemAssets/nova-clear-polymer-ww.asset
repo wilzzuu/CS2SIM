@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-clear-polymer-ww
   gun: Nova
   name: Clear Polymer
-  basePrice: 3.38
-  price: 3.38
+  basePrice: 338
+  price: 338
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-clear-polymer
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

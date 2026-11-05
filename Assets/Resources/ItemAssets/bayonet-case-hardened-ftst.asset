@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-case-hardened-ftst
   gun: Bayonet
   name: Case Hardened
-  basePrice: 384.06
-  price: 384.06
+  basePrice: 38406
+  price: 38406
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

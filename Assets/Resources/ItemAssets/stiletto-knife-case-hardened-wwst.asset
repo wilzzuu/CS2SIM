@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-case-hardened-wwst
   gun: Stiletto Knife
   name: Case Hardened
-  basePrice: 284.12
-  price: 284.12
+  basePrice: 28412
+  price: 28412
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

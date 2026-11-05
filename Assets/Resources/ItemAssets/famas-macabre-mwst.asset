@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-macabre-mwst
   gun: FAMAS
   name: Macabre
-  basePrice: 5.39
-  price: 5.39
+  basePrice: 539
+  price: 539
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: famas-macabre
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

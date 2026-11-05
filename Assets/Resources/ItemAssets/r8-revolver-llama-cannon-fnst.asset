@@ -15,8 +15,8 @@ MonoBehaviour:
   id: r8-revolver-llama-cannon-fnst
   gun: R8 Revolver
   name: Llama Cannon
-  basePrice: 54.72
-  price: 54.72
+  basePrice: 5472
+  price: 5472
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: r8-revolver-llama-cannon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

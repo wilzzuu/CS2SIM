@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-k-o-factory-mwst
   gun: UMP-45
   name: K.O. Factory
-  basePrice: 11.31
-  price: 11.31
+  basePrice: 1131
+  price: 1131
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ump-45-k-o-factory
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-stymphalian-bsst
   gun: AUG
   name: Stymphalian
-  basePrice: 3.92
-  price: 3.92
+  basePrice: 392
+  price: 392
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-stymphalian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

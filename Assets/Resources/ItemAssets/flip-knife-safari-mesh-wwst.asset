@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-safari-mesh-wwst
   gun: Flip Knife
   name: Safari Mesh
-  basePrice: 297.57
-  price: 297.57
+  basePrice: 29757
+  price: 29757
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

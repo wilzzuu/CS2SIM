@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-urban-masked-bsst
   gun: Nomad Knife
   name: Urban Masked
-  basePrice: 117.72
-  price: 117.72
+  basePrice: 11772
+  price: 11772
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

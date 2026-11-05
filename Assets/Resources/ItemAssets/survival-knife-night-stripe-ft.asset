@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-night-stripe-ft
   gun: Survival Knife
   name: Night Stripe
-  basePrice: 58.07
-  price: 58.07
+  basePrice: 5807
+  price: 5807
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

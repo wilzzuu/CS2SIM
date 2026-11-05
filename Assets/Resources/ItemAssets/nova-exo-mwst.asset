@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-exo-mwst
   gun: Nova
   name: Exo
-  basePrice: 0.52
-  price: 0.52
+  basePrice: 52
+  price: 52
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-exo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

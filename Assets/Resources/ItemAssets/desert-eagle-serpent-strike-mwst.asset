@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-serpent-strike-mwst
   gun: Desert Eagle
   name: Serpent Strike
-  basePrice: 3.18
-  price: 3.18
+  basePrice: 318
+  price: 318
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-serpent-strike
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

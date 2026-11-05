@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: operation-riptide-case
   name: Operation Riptide Case
-  price: 11.85
+  price: 1185
   items:
   - {fileID: 11400000, guid: f029db0adfe209a4fa5a3104b819e1dd, type: 2}
   - {fileID: 11400000, guid: d66ca31b3fd638c48bc0b115e3ed5894, type: 2}

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-case-hardened-fn
   gun: Nomad Knife
   name: Case Hardened
-  basePrice: 369.77
-  price: 369.77
+  basePrice: 36977
+  price: 36977
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

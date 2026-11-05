@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-night-ww
   gun: Flip Knife
   name: Night
-  basePrice: 124.21
-  price: 124.21
+  basePrice: 12421
+  price: 12421
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

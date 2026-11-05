@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-flora-carnivora-fn
   gun: Dual Berettas
   name: Flora Carnivora
-  basePrice: 6.2
-  price: 6.2
+  basePrice: 620
+  price: 620
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: dual-berettas-flora-carnivora
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

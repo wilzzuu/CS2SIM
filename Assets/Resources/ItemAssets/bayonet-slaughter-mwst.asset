@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-slaughter-mwst
   gun: Bayonet
   name: Slaughter
-  basePrice: 412.31
-  price: 412.31
+  basePrice: 41231
+  price: 41231
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-red-laminate-bs
   gun: AK-47
   name: Red Laminate
-  basePrice: 72.5
-  price: 72.5
+  basePrice: 7250
+  price: 7250
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-red-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

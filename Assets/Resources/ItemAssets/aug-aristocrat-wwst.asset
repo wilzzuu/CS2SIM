@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-aristocrat-wwst
   gun: AUG
   name: Aristocrat
-  basePrice: 3.5
-  price: 3.5
+  basePrice: 350
+  price: 350
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: aug-aristocrat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

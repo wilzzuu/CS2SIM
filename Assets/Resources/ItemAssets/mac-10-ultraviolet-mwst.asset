@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-ultraviolet-mwst
   gun: MAC-10
   name: Ultraviolet
-  basePrice: 9.01
-  price: 9.01
+  basePrice: 901
+  price: 901
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

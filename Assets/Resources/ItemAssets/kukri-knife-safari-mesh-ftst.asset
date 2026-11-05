@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-safari-mesh-ftst
   gun: Kukri Knife
   name: Safari Mesh
-  basePrice: 54.42
-  price: 54.42
+  basePrice: 5442
+  price: 5442
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

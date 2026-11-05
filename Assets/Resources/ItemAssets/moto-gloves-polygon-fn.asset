@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-polygon-fn
   gun: Moto Gloves
   name: Polygon
-  basePrice: 705.47
-  price: 705.47
+  basePrice: 70547
+  price: 70547
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-polygon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

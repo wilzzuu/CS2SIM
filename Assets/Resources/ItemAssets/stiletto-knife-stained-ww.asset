@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-stained-ww
   gun: Stiletto Knife
   name: Stained
-  basePrice: 182.4
-  price: 182.4
+  basePrice: 18240
+  price: 18240
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

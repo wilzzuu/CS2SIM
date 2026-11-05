@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-wicked-sick-ww
   gun: P2000
   name: Wicked Sick
-  basePrice: 3.49
-  price: 3.49
+  basePrice: 349
+  price: 349
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p2000-wicked-sick
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

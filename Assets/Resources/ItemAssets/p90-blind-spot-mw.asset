@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-blind-spot-mw
   gun: P90
   name: Blind Spot
-  basePrice: 18.13
-  price: 18.13
+  basePrice: 1813
+  price: 1813
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-blind-spot
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

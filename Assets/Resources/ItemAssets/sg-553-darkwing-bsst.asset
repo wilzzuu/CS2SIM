@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-darkwing-bsst
   gun: SG 553
   name: Darkwing
-  basePrice: 0.97
-  price: 0.97
+  basePrice: 97
+  price: 97
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sg-553-darkwing
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

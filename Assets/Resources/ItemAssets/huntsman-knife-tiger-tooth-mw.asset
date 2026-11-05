@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-tiger-tooth-mw
   gun: Huntsman Knife
   name: Tiger Tooth
-  basePrice: 207.53
-  price: 207.53
+  basePrice: 20753
+  price: 20753
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

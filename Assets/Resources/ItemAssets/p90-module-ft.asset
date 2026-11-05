@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-module-ft
   gun: P90
   name: Module
-  basePrice: 1.08
-  price: 1.08
+  basePrice: 108
+  price: 108
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p90-module
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

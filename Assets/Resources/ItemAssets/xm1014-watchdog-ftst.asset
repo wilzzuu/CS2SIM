@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-watchdog-ftst
   gun: XM1014
   name: Watchdog
-  basePrice: 3.04
-  price: 3.04
+  basePrice: 304
+  price: 304
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: xm1014-watchdog
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

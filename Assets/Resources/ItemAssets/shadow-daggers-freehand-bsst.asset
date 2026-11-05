@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-freehand-bsst
   gun: Shadow Daggers
   name: Freehand
-  basePrice: 150.03
-  price: 150.03
+  basePrice: 15003
+  price: 15003
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

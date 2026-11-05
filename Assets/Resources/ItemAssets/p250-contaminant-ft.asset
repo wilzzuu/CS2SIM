@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-contaminant-ft
   gun: P250
   name: Contaminant
-  basePrice: 0.68
-  price: 0.68
+  basePrice: 68
+  price: 68
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-contaminant
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-decimator-ft
   gun: Tec-9
   name: Decimator
-  basePrice: 18.11
-  price: 18.11
+  basePrice: 1811
+  price: 1811
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: tec-9-decimator
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

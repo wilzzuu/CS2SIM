@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-black-laminate-mw
   gun: Shadow Daggers
   name: Black Laminate
-  basePrice: 49.84
-  price: 49.84
+  basePrice: 4984
+  price: 4984
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-primal-saber-wwst
   gun: UMP-45
   name: Primal Saber
-  basePrice: 11.72
-  price: 11.72
+  basePrice: 1172
+  price: 1172
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ump-45-primal-saber
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

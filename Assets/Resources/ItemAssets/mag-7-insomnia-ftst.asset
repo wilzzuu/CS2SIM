@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-insomnia-ftst
   gun: MAG-7
   name: Insomnia
-  basePrice: 0.6
-  price: 0.6
+  basePrice: 60
+  price: 60
   condition: Field-Tested
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mag-7-insomnia
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

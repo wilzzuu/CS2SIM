@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-tiger-tooth-mw
   gun: Karambit
   name: Tiger Tooth
-  basePrice: 1014.54
-  price: 1014.54
+  basePrice: 101454
+  price: 101454
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

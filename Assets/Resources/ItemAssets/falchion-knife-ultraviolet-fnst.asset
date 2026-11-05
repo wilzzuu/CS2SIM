@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-ultraviolet-fnst
   gun: Falchion Knife
   name: Ultraviolet
-  basePrice: 1102.59
-  price: 1102.59
+  basePrice: 110259
+  price: 110259
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

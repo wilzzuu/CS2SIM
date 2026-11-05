@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-urban-masked-wwst
   gun: Survival Knife
   name: Urban Masked
-  basePrice: 169.73
-  price: 169.73
+  basePrice: 16973
+  price: 16973
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

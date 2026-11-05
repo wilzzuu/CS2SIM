@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-autotronic-bsst
   gun: Karambit
   name: Autotronic
-  basePrice: 790.62
-  price: 790.62
+  basePrice: 79062
+  price: 79062
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

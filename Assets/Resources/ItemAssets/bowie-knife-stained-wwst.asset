@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-stained-wwst
   gun: Bowie Knife
   name: Stained
-  basePrice: 161.43
-  price: 161.43
+  basePrice: 16143
+  price: 16143
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

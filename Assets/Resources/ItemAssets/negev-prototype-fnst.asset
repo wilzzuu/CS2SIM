@@ -15,8 +15,8 @@ MonoBehaviour:
   id: negev-prototype-fnst
   gun: Negev
   name: Prototype
-  basePrice: 1.3
-  price: 1.3
+  basePrice: 130
+  price: 130
   condition: Factory New
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: negev-prototype
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-emerald-dragon-bsst
   gun: P90
   name: Emerald Dragon
-  basePrice: 186.47
-  price: 186.47
+  basePrice: 18647
+  price: 18647
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-emerald-dragon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-crimson-web-ftst
   gun: Paracord Knife
   name: Crimson Web
-  basePrice: 128.78
-  price: 128.78
+  basePrice: 12878
+  price: 12878
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

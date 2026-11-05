@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-the-empress-fn
   gun: AK-47
   name: The Empress
-  basePrice: 370.87
-  price: 370.87
+  basePrice: 37087
+  price: 37087
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-the-empress
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

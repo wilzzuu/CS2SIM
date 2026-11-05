@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-searing-rage-wwst
   gun: AK-47
   name: Searing Rage
-  basePrice: 10.28
-  price: 10.28
+  basePrice: 1028
+  price: 1028
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-searing-rage
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-marble-fade-fnst
   gun: Falchion Knife
   name: Marble Fade
-  basePrice: 262.89
-  price: 262.89
+  basePrice: 26289
+  price: 26289
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

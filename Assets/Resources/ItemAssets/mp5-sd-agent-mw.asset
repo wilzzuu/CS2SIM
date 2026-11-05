@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-agent-mw
   gun: MP5-SD
   name: Agent
-  basePrice: 1.97
-  price: 1.97
+  basePrice: 197
+  price: 197
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp5-sd-agent
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

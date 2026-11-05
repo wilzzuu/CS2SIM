@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-ocean-foam-fn
   gun: MP7
   name: Ocean Foam
-  basePrice: 16.54
-  price: 16.54
+  basePrice: 1654
+  price: 1654
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp7-ocean-foam
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

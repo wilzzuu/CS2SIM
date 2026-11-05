@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-serenity-mw
   gun: Sawed-Off
   name: Serenity
-  basePrice: 2.76
-  price: 2.76
+  basePrice: 276
+  price: 276
   condition: Minimal Wear
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-serenity
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

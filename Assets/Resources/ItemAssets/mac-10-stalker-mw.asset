@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-stalker-mw
   gun: MAC-10
   name: Stalker
-  basePrice: 57.14
-  price: 57.14
+  basePrice: 5714
+  price: 5714
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: mac-10-stalker
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

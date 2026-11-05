@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-cut-out-fnst
   gun: Tec-9
   name: Cut Out
-  basePrice: 29.92
-  price: 29.92
+  basePrice: 2992
+  price: 2992
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: tec-9-cut-out
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

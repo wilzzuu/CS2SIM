@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-lore-bs
   gun: Bayonet
   name: Lore
-  basePrice: 225.57
-  price: 225.57
+  basePrice: 22557
+  price: 22557
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

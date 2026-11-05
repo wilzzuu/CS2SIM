@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-decimator-wwst
   gun: Tec-9
   name: Decimator
-  basePrice: 46.7
-  price: 46.7
+  basePrice: 4670
+  price: 4670
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: tec-9-decimator
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

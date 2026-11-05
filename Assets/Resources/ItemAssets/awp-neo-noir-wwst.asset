@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-neo-noir-wwst
   gun: AWP
   name: Neo-Noir
-  basePrice: 57.63
-  price: 57.63
+  basePrice: 5763
+  price: 5763
   condition: Well-Worn
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-neo-noir
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

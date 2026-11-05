@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-spruce-ddpat-ft
   gun: Hand Wraps
   name: Spruce DDPAT
-  basePrice: 497.21
-  price: 497.21
+  basePrice: 49721
+  price: 49721
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-spruce-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-stained-ftst
   gun: Classic Knife
   name: Stained
-  basePrice: 115.62
-  price: 115.62
+  basePrice: 11562
+  price: 11562
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

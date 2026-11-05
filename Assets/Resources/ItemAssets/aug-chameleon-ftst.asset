@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-chameleon-ftst
   gun: AUG
   name: Chameleon
-  basePrice: 75.88
-  price: 75.88
+  basePrice: 7588
+  price: 7588
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: aug-chameleon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-boreal-forest-ft
   gun: Karambit
   name: Boreal Forest
-  basePrice: 443.71
-  price: 443.71
+  basePrice: 44371
+  price: 44371
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-scorched-mwst
   gun: Ursus Knife
   name: Scorched
-  basePrice: 89.38
-  price: 89.38
+  basePrice: 8938
+  price: 8938
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

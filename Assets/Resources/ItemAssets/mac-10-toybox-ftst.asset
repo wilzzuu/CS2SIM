@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-toybox-ftst
   gun: MAC-10
   name: Toybox
-  basePrice: 17.74
-  price: 17.74
+  basePrice: 1774
+  price: 1774
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mac-10-toybox
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

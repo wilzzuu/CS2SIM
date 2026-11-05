@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-stained-wwst
   gun: Navaja Knife
   name: Stained
-  basePrice: 92.56
-  price: 92.56
+  basePrice: 9256
+  price: 9256
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

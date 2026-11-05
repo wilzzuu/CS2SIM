@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-crimson-web-fn
   gun: Kukri Knife
   name: Crimson Web
-  basePrice: 494.86
-  price: 494.86
+  basePrice: 49486
+  price: 49486
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

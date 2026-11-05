@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-tiger-tooth-mw
   gun: Navaja Knife
   name: Tiger Tooth
-  basePrice: 102.42
-  price: 102.42
+  basePrice: 10242
+  price: 10242
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

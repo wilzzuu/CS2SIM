@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-black-laminate-ww
   gun: Bayonet
   name: Black Laminate
-  basePrice: 164.33
-  price: 164.33
+  basePrice: 16433
+  price: 16433
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

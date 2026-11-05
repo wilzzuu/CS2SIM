@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: chroma-3-case
   name: Chroma 3 Case
-  price: 3.69
+  price: 369
   items:
   - {fileID: 11400000, guid: 47b4c3c54c4d70940a28528b357096b7, type: 2}
   - {fileID: 11400000, guid: 40cb7302126988f4fb9f3b43fb46cd1f, type: 2}

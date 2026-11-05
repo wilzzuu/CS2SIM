@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-blue-titanium-fnst
   gun: Galil AR
   name: Blue Titanium
-  basePrice: 13.25
-  price: 13.25
+  basePrice: 1325
+  price: 1325
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: galil-ar-blue-titanium
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

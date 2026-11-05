@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-aztec-bsst
   gun: M249
   name: Aztec
-  basePrice: 1.38
-  price: 1.38
+  basePrice: 138
+  price: 138
   condition: Battle-Scarred
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m249-aztec
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

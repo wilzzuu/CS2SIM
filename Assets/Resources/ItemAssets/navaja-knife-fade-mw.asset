@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-fade-mw
   gun: Navaja Knife
   name: Fade
-  basePrice: 132.49
-  price: 132.49
+  basePrice: 13249
+  price: 13249
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-forest-ddpat-mw
   gun: Flip Knife
   name: Forest DDPAT
-  basePrice: 142.63
-  price: 142.63
+  basePrice: 14263
+  price: 14263
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

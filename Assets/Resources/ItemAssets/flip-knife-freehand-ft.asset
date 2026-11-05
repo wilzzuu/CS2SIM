@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-freehand-ft
   gun: Flip Knife
   name: Freehand
-  basePrice: 125.78
-  price: 125.78
+  basePrice: 12578
+  price: 12578
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

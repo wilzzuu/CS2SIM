@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-crimson-weave-mw
   gun: Driver Gloves
   name: Crimson Weave
-  basePrice: 2269.61
-  price: 2269.61
+  basePrice: 226961
+  price: 226961
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-crimson-weave
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

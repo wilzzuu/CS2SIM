@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-stained-mwst
   gun: Survival Knife
   name: Stained
-  basePrice: 110.83
-  price: 110.83
+  basePrice: 11083
+  price: 11083
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

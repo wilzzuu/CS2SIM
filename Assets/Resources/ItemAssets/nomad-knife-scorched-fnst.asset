@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-scorched-fnst
   gun: Nomad Knife
   name: Scorched
-  basePrice: 736.32
-  price: 736.32
+  basePrice: 73632
+  price: 73632
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

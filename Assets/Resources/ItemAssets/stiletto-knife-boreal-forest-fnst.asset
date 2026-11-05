@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-boreal-forest-fnst
   gun: Stiletto Knife
   name: Boreal Forest
-  basePrice: 360.65
-  price: 360.65
+  basePrice: 36065
+  price: 36065
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

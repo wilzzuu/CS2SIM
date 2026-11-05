@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-leather-ww
   gun: Hand Wraps
   name: Leather
-  basePrice: 270.72
-  price: 270.72
+  basePrice: 27072
+  price: 27072
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-leather
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

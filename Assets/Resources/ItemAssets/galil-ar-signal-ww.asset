@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-signal-ww
   gun: Galil AR
   name: Signal
-  basePrice: 1.05
-  price: 1.05
+  basePrice: 105
+  price: 105
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: galil-ar-signal
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

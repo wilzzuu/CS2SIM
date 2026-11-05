@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-dark-sigil-bs
   gun: Nova
   name: Dark Sigil
-  basePrice: 0.57
-  price: 0.57
+  basePrice: 57
+  price: 57
   condition: Battle-Scarred
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-dark-sigil
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

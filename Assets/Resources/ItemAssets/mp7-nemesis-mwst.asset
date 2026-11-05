@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-nemesis-mwst
   gun: MP7
   name: Nemesis
-  basePrice: 21.57
-  price: 21.57
+  basePrice: 2157
+  price: 2157
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mp7-nemesis
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

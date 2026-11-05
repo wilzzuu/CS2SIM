@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-freehand-ww
   gun: Butterfly Knife
   name: Freehand
-  basePrice: 632.05
-  price: 632.05
+  basePrice: 63205
+  price: 63205
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-freehand
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

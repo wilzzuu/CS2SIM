@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-spearmint-mw
   gun: Moto Gloves
   name: Spearmint
-  basePrice: 4160.7
-  price: 4160.7
+  basePrice: 416070
+  price: 416070
   condition: Minimal Wear
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-spearmint
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

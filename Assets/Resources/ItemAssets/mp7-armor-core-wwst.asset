@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-armor-core-wwst
   gun: MP7
   name: Armor Core
-  basePrice: 0.98
-  price: 0.98
+  basePrice: 98
+  price: 98
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp7-armor-core
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

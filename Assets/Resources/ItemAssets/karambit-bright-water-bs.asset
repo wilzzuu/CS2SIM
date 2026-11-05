@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-bright-water-bs
   gun: Karambit
   name: Bright Water
-  basePrice: 491.66
-  price: 491.66
+  basePrice: 49166
+  price: 49166
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

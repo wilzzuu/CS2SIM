@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-lifted-spirits-mwst
   gun: P2000
   name: Lifted Spirits
-  basePrice: 0.83
-  price: 0.83
+  basePrice: 83
+  price: 83
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-lifted-spirits
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

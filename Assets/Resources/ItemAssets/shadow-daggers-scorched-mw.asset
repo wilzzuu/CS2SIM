@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-scorched-mw
   gun: Shadow Daggers
   name: Scorched
-  basePrice: 65.8
-  price: 65.8
+  basePrice: 6580
+  price: 6580
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

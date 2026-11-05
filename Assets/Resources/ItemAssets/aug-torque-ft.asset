@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-torque-ft
   gun: AUG
   name: Torque
-  basePrice: 7.14
-  price: 7.14
+  basePrice: 714
+  price: 714
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: aug-torque
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

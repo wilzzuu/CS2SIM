@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-boreal-forest-bs
   gun: Butterfly Knife
   name: Boreal Forest
-  basePrice: 470.77
-  price: 470.77
+  basePrice: 47077
+  price: 47077
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

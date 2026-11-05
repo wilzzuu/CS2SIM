@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: falchion-case
   name: Falchion Case
-  price: 2.16
+  price: 216
   items:
   - {fileID: 11400000, guid: 8939a99beb0abc448934e453c32e2f0a, type: 2}
   - {fileID: 11400000, guid: 78d5e00e0a535e14b8f9269a256ffec1, type: 2}

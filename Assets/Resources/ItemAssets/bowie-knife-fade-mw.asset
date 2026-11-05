@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-fade-mw
   gun: Bowie Knife
   name: Fade
-  basePrice: 278.94
-  price: 278.94
+  basePrice: 27894
+  price: 27894
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

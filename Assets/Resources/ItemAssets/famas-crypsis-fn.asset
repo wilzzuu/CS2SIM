@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-crypsis-fn
   gun: FAMAS
   name: Crypsis
-  basePrice: 1.78
-  price: 1.78
+  basePrice: 178
+  price: 178
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: famas-crypsis
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

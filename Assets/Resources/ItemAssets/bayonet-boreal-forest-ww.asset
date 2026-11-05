@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-boreal-forest-ww
   gun: Bayonet
   name: Boreal Forest
-  basePrice: 143.22
-  price: 143.22
+  basePrice: 14322
+  price: 14322
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

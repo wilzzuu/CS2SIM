@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-dragonfire-wwst
   gun: SSG 08
   name: Dragonfire
-  basePrice: 90.62
-  price: 90.62
+  basePrice: 9062
+  price: 9062
   condition: Well-Worn
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ssg-08-dragonfire
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

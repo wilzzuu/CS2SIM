@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-printstream-wwst
   gun: AWP
   name: Printstream
-  basePrice: 69.6
-  price: 69.6
+  basePrice: 6960
+  price: 6960
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-printstream
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

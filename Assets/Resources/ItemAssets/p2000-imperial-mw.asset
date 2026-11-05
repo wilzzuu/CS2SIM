@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-imperial-mw
   gun: P2000
   name: Imperial
-  basePrice: 0.91
-  price: 0.91
+  basePrice: 91
+  price: 91
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-imperial
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

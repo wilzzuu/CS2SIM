@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-acid-etched-fnst
   gun: P2000
   name: Acid Etched
-  basePrice: 12.73
-  price: 12.73
+  basePrice: 1273
+  price: 1273
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-acid-etched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

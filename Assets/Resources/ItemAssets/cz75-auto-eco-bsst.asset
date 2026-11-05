@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-eco-bsst
   gun: CZ75-Auto
   name: Eco
-  basePrice: 1.57
-  price: 1.57
+  basePrice: 157
+  price: 157
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: cz75-auto-eco
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

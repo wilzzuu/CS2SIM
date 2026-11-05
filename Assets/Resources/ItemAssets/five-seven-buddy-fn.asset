@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-buddy-fn
   gun: Five-SeveN
   name: Buddy
-  basePrice: 6.66
-  price: 6.66
+  basePrice: 666
+  price: 666
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-buddy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

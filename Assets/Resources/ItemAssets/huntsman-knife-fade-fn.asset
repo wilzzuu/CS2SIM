@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-fade-fn
   gun: Huntsman Knife
   name: Fade
-  basePrice: 202.77
-  price: 202.77
+  basePrice: 20277
+  price: 20277
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

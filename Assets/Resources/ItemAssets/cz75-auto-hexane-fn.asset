@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-hexane-fn
   gun: CZ75-Auto
   name: Hexane
-  basePrice: 9.66
-  price: 9.66
+  basePrice: 966
+  price: 966
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: cz75-auto-hexane
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

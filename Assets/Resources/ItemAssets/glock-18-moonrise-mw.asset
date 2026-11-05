@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-moonrise-mw
   gun: Glock-18
   name: Moonrise
-  basePrice: 1.56
-  price: 1.56
+  basePrice: 156
+  price: 156
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: glock-18-moonrise
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

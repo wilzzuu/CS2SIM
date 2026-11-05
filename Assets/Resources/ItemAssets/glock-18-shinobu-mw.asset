@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-shinobu-mw
   gun: Glock-18
   name: Shinobu
-  basePrice: 10.6
-  price: 10.6
+  basePrice: 1060
+  price: 1060
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: glock-18-shinobu
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

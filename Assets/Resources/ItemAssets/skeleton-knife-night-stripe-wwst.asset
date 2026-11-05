@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-night-stripe-wwst
   gun: Skeleton Knife
   name: Night Stripe
-  basePrice: 197.66
-  price: 197.66
+  basePrice: 19766
+  price: 19766
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-azure-zebra-ftst
   gun: G3SG1
   name: Azure Zebra
-  basePrice: 5.32
-  price: 5.32
+  basePrice: 532
+  price: 532
   condition: Field-Tested
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: g3sg1-azure-zebra
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-the-outsiders-bsst
   gun: AK-47
   name: The Outsiders
-  basePrice: 22.41
-  price: 22.41
+  basePrice: 2241
+  price: 2241
   condition: Battle-Scarred
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-the-outsiders
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

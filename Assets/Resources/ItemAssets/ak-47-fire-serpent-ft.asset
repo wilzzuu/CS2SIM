@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-fire-serpent-ft
   gun: AK-47
   name: Fire Serpent
-  basePrice: 896.54
-  price: 896.54
+  basePrice: 89654
+  price: 89654
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-fire-serpent
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

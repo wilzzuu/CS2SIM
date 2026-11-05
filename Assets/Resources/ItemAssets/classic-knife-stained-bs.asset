@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-stained-bs
   gun: Classic Knife
   name: Stained
-  basePrice: 92.57
-  price: 92.57
+  basePrice: 9257
+  price: 9257
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-plastique-mw
   gun: UMP-45
   name: Plastique
-  basePrice: 1.77
-  price: 1.77
+  basePrice: 177
+  price: 177
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ump-45-plastique
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

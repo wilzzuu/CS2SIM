@@ -15,8 +15,8 @@ MonoBehaviour:
   id: r8-revolver-crazy-8-mwst
   gun: R8 Revolver
   name: Crazy 8
-  basePrice: 1.57
-  price: 1.57
+  basePrice: 157
+  price: 157
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: r8-revolver-crazy-8
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

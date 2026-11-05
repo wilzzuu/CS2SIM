@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-limelight-ww
   gun: Sawed-Off
   name: Limelight
-  basePrice: 1.17
-  price: 1.17
+  basePrice: 117
+  price: 117
   condition: Well-Worn
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-limelight
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

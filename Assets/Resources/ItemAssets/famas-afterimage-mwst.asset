@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-afterimage-mwst
   gun: FAMAS
   name: Afterimage
-  basePrice: 32.98
-  price: 32.98
+  basePrice: 3298
+  price: 3298
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: famas-afterimage
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

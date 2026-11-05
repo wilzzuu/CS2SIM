@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-water-sigil-mwst
   gun: PP-Bizon
   name: Water Sigil
-  basePrice: 4.36
-  price: 4.36
+  basePrice: 436
+  price: 436
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: pp-bizon-water-sigil
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

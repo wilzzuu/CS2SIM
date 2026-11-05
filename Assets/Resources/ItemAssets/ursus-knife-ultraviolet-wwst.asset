@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-ultraviolet-wwst
   gun: Ursus Knife
   name: Ultraviolet
-  basePrice: 120.91
-  price: 120.91
+  basePrice: 12091
+  price: 12091
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-obsidian-mwst
   gun: P2000
   name: Obsidian
-  basePrice: 14.02
-  price: 14.02
+  basePrice: 1402
+  price: 1402
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-obsidian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

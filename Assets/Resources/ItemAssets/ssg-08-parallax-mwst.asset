@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-parallax-mwst
   gun: SSG 08
   name: Parallax
-  basePrice: 10.32
-  price: 10.32
+  basePrice: 1032
+  price: 1032
   condition: Minimal Wear
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ssg-08-parallax
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

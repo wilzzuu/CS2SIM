@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-safari-mesh-ww
   gun: Butterfly Knife
   name: Safari Mesh
-  basePrice: 471.03
-  price: 471.03
+  basePrice: 47103
+  price: 47103
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

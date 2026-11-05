@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-forest-ddpat-fnst
   gun: Falchion Knife
   name: Forest DDPAT
-  basePrice: 240.19
-  price: 240.19
+  basePrice: 24019
+  price: 24019
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

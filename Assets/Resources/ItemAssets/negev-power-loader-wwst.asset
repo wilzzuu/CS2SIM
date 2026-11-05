@@ -15,8 +15,8 @@ MonoBehaviour:
   id: negev-power-loader-wwst
   gun: Negev
   name: Power Loader
-  basePrice: 2.68
-  price: 2.68
+  basePrice: 268
+  price: 268
   condition: Well-Worn
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: negev-power-loader
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

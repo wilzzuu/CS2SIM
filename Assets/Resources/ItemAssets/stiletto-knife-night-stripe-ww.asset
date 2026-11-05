@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-night-stripe-ww
   gun: Stiletto Knife
   name: Night Stripe
-  basePrice: 151.5
-  price: 151.5
+  basePrice: 15150
+  price: 15150
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

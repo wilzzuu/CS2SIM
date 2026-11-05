@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-safari-mesh-mwst
   gun: Huntsman Knife
   name: Safari Mesh
-  basePrice: 230
-  price: 230
+  basePrice: 23000
+  price: 23000
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

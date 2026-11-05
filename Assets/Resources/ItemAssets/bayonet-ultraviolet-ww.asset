@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-ultraviolet-ww
   gun: Bayonet
   name: Ultraviolet
-  basePrice: 140.07
-  price: 140.07
+  basePrice: 14007
+  price: 14007
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

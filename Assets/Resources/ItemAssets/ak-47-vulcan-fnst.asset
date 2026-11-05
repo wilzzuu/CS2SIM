@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-vulcan-fnst
   gun: AK-47
   name: Vulcan
-  basePrice: 1558.74
-  price: 1558.74
+  basePrice: 155874
+  price: 155874
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-vulcan
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

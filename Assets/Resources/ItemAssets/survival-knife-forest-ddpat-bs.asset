@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-forest-ddpat-bs
   gun: Survival Knife
   name: Forest DDPAT
-  basePrice: 50.05
-  price: 50.05
+  basePrice: 5005
+  price: 5005
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

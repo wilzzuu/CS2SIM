@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-goo-mwst
   gun: MP9
   name: Goo
-  basePrice: 2.54
-  price: 2.54
+  basePrice: 254
+  price: 254
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp9-goo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

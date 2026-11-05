@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-classic-crate-bsst
   gun: MAC-10
   name: Classic Crate
-  basePrice: 0.2
-  price: 0.2
+  basePrice: 20
+  price: 20
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mac-10-classic-crate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-night-mwst
   gun: Butterfly Knife
   name: Night
-  basePrice: 741.44
-  price: 741.44
+  basePrice: 74144
+  price: 74144
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

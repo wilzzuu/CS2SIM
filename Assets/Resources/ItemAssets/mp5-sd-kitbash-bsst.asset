@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-kitbash-bsst
   gun: MP5-SD
   name: Kitbash
-  basePrice: 0.59
-  price: 0.59
+  basePrice: 59
+  price: 59
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp5-sd-kitbash
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

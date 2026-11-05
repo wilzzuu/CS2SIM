@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-ultraviolet-fn
   gun: Flip Knife
   name: Ultraviolet
-  basePrice: 381.59
-  price: 381.59
+  basePrice: 38159
+  price: 38159
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

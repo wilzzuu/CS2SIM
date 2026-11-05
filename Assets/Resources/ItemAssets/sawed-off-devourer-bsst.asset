@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-devourer-bsst
   gun: Sawed-Off
   name: Devourer
-  basePrice: 7.78
-  price: 7.78
+  basePrice: 778
+  price: 778
   condition: Battle-Scarred
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: sawed-off-devourer
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

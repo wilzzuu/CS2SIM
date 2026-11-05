@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-stained-ftst
   gun: Bayonet
   name: Stained
-  basePrice: 204.01
-  price: 204.01
+  basePrice: 20401
+  price: 20401
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

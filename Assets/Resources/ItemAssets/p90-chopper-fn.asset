@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-chopper-fn
   gun: P90
   name: Chopper
-  basePrice: 7.38
-  price: 7.38
+  basePrice: 738
+  price: 738
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-chopper
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

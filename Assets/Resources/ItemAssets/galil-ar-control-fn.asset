@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-control-fn
   gun: Galil AR
   name: Control
-  basePrice: 7.29
-  price: 7.29
+  basePrice: 729
+  price: 729
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: galil-ar-control
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-blue-steel-ftst
   gun: Bayonet
   name: Blue Steel
-  basePrice: 307.71
-  price: 307.71
+  basePrice: 30771
+  price: 30771
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

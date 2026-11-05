@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-case-hardened-mw
   gun: M9 Bayonet
   name: Case Hardened
-  basePrice: 682.69
-  price: 682.69
+  basePrice: 68269
+  price: 68269
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

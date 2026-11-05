@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-pipe-down-wwst
   gun: MAC-10
   name: Pipe Down
-  basePrice: 0.98
-  price: 0.98
+  basePrice: 98
+  price: 98
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-pipe-down
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

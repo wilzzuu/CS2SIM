@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-virus-mwst
   gun: P90
   name: Virus
-  basePrice: 5.53
-  price: 5.53
+  basePrice: 553
+  price: 553
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-virus
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

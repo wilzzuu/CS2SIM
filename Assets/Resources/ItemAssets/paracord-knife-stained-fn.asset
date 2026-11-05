@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-stained-fn
   gun: Paracord Knife
   name: Stained
-  basePrice: 114.98
-  price: 114.98
+  basePrice: 11498
+  price: 11498
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

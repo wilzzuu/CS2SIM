@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-tiger-tooth-mwst
   gun: Bayonet
   name: Tiger Tooth
-  basePrice: 477.16
-  price: 477.16
+  basePrice: 47716
+  price: 47716
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

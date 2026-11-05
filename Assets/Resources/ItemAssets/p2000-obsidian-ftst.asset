@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-obsidian-ftst
   gun: P2000
   name: Obsidian
-  basePrice: 5.42
-  price: 5.42
+  basePrice: 542
+  price: 542
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-obsidian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

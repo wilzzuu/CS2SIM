@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-tom-cat-bs
   gun: AUG
   name: Tom Cat
-  basePrice: 0.59
-  price: 0.59
+  basePrice: 59
+  price: 59
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-tom-cat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-kill-confirmed-wwst
   gun: USP-S
   name: Kill Confirmed
-  basePrice: 159.3
-  price: 159.3
+  basePrice: 15930
+  price: 15930
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: usp-s-kill-confirmed
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

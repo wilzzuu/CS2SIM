@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-ultraviolet-fnst
   gun: Gut Knife
   name: Ultraviolet
-  basePrice: 629.64
-  price: 629.64
+  basePrice: 62964
+  price: 62964
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

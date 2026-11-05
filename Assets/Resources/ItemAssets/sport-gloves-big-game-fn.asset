@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-big-game-fn
   gun: Sport Gloves
   name: Big Game
-  basePrice: 984.93
-  price: 984.93
+  basePrice: 98493
+  price: 98493
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-big-game
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

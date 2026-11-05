@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-fade-mwst
   gun: Shadow Daggers
   name: Fade
-  basePrice: 345.18
-  price: 345.18
+  basePrice: 34518
+  price: 34518
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-neo-noir-bsst
   gun: UMP-45
   name: Neo-Noir
-  basePrice: 8.94
-  price: 8.94
+  basePrice: 894
+  price: 894
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ump-45-neo-noir
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

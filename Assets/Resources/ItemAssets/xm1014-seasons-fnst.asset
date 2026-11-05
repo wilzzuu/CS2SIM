@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-seasons-fnst
   gun: XM1014
   name: Seasons
-  basePrice: 7.12
-  price: 7.12
+  basePrice: 712
+  price: 712
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: xm1014-seasons
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

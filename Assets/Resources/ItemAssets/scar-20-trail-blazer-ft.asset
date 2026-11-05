@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-trail-blazer-ft
   gun: SCAR-20
   name: Trail Blazer
-  basePrice: 1.2
-  price: 1.2
+  basePrice: 120
+  price: 120
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-trail-blazer
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

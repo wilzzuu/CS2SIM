@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-heat-ft
   gun: MAC-10
   name: Heat
-  basePrice: 3.03
-  price: 3.03
+  basePrice: 303
+  price: 303
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-heat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

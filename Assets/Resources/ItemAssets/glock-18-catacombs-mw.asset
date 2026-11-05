@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-catacombs-mw
   gun: Glock-18
   name: Catacombs
-  basePrice: 1.25
-  price: 1.25
+  basePrice: 125
+  price: 125
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-catacombs
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

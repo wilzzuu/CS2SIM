@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-wave-breaker-ftst
   gun: P90
   name: Wave Breaker
-  basePrice: 0.88
-  price: 0.88
+  basePrice: 88
+  price: 88
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-wave-breaker
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-shallow-grave-mw
   gun: P90
   name: Shallow Grave
-  basePrice: 14.98
-  price: 14.98
+  basePrice: 1498
+  price: 1498
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-shallow-grave
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-lore-mwst
   gun: M9 Bayonet
   name: Lore
-  basePrice: 985.54
-  price: 985.54
+  basePrice: 98554
+  price: 98554
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

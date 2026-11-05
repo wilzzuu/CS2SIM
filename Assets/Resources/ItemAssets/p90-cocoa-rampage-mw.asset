@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-cocoa-rampage-mw
   gun: P90
   name: Cocoa Rampage
-  basePrice: 1.24
-  price: 1.24
+  basePrice: 124
+  price: 124
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p90-cocoa-rampage
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

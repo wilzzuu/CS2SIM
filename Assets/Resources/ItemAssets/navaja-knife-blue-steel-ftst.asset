@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-blue-steel-ftst
   gun: Navaja Knife
   name: Blue Steel
-  basePrice: 92.82
-  price: 92.82
+  basePrice: 9282
+  price: 9282
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

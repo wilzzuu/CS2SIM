@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-mortis-bs
   gun: AWP
   name: Mortis
-  basePrice: 4.22
-  price: 4.22
+  basePrice: 422
+  price: 422
   condition: Battle-Scarred
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: awp-mortis
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-slaughter-mwst
   gun: Survival Knife
   name: Slaughter
-  basePrice: 164.24
-  price: 164.24
+  basePrice: 16424
+  price: 16424
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

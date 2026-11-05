@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-hybrid-fnst
   gun: Five-SeveN
   name: Hybrid
-  basePrice: 6.27
-  price: 6.27
+  basePrice: 627
+  price: 627
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-hybrid
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

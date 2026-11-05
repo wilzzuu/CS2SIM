@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-autotronic-bsst
   gun: Butterfly Knife
   name: Autotronic
-  basePrice: 804.83
-  price: 804.83
+  basePrice: 80483
+  price: 80483
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

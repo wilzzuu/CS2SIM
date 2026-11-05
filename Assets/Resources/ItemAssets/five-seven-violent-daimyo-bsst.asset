@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-violent-daimyo-bsst
   gun: Five-SeveN
   name: Violent Daimyo
-  basePrice: 0.68
-  price: 0.68
+  basePrice: 68
+  price: 68
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-violent-daimyo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

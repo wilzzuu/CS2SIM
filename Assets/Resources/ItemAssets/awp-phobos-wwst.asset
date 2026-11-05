@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-phobos-wwst
   gun: AWP
   name: Phobos
-  basePrice: 12.98
-  price: 12.98
+  basePrice: 1298
+  price: 1298
   condition: Well-Worn
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: awp-phobos
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

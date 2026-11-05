@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-slaughter-ft
   gun: Falchion Knife
   name: Slaughter
-  basePrice: 206.89
-  price: 206.89
+  basePrice: 20689
+  price: 20689
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

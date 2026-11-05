@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-ice-coaled-mwst
   gun: AK-47
   name: Ice Coaled
-  basePrice: 21.39
-  price: 21.39
+  basePrice: 2139
+  price: 2139
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-ice-coaled
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

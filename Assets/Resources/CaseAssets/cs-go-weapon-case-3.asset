@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: cs-go-weapon-case-3
   name: CS:GO Weapon Case 3
-  price: 16.93
+  price: 1693
   items:
   - {fileID: 11400000, guid: 806d502fb45f31448ae536cd628a9576, type: 2}
   - {fileID: 11400000, guid: e738561c97e27fc40ac31ec2391e31fc, type: 2}

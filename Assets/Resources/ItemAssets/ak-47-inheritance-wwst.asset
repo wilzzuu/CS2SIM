@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-inheritance-wwst
   gun: AK-47
   name: Inheritance
-  basePrice: 108.59
-  price: 108.59
+  basePrice: 10859
+  price: 10859
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-inheritance
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

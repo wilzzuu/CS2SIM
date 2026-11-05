@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sawed-off-orange-ddpat-fnst
   gun: Sawed-Off
   name: Orange DDPAT
-  basePrice: 491.71
-  price: 491.71
+  basePrice: 49171
+  price: 49171
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sawed-off-orange-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

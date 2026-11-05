@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-cyber-shell-bs
   gun: P250
   name: Cyber Shell
-  basePrice: 0.66
-  price: 0.66
+  basePrice: 66
+  price: 66
   condition: Battle-Scarred
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-cyber-shell
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

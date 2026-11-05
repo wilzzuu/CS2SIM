@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-atlas-ww
   gun: SG 553
   name: Atlas
-  basePrice: 0.58
-  price: 0.58
+  basePrice: 58
+  price: 58
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-atlas
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-lore-fnst
   gun: Flip Knife
   name: Lore
-  basePrice: 486.58
-  price: 486.58
+  basePrice: 48658
+  price: 48658
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

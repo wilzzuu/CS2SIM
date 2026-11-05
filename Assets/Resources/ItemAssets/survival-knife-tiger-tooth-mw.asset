@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-tiger-tooth-mw
   gun: Survival Knife
   name: Tiger Tooth
-  basePrice: 154.94
-  price: 154.94
+  basePrice: 15494
+  price: 15494
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

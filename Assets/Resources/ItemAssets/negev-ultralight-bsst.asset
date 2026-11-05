@@ -15,8 +15,8 @@ MonoBehaviour:
   id: negev-ultralight-bsst
   gun: Negev
   name: Ultralight
-  basePrice: 0.75
-  price: 0.75
+  basePrice: 75
+  price: 75
   condition: Battle-Scarred
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: negev-ultralight
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

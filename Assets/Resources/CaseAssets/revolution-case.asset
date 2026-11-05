@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: revolution-case
   name: Revolution Case
-  price: 0.35
+  price: 35
   items:
   - {fileID: 11400000, guid: fcce1b4ef3daf62459ba95ca2379e301, type: 2}
   - {fileID: 11400000, guid: 89f853dfab94a6f46856e938d5a53b76, type: 2}

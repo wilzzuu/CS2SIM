@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ursus-knife-slaughter-mw
   gun: Ursus Knife
   name: Slaughter
-  basePrice: 185.59
-  price: 185.59
+  basePrice: 18559
+  price: 18559
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: ursus-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

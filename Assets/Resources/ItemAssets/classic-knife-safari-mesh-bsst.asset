@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-safari-mesh-bsst
   gun: Classic Knife
   name: Safari Mesh
-  basePrice: 81.58
-  price: 81.58
+  basePrice: 8158
+  price: 8158
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-safari-mesh-fn
   gun: Karambit
   name: Safari Mesh
-  basePrice: 845.09
-  price: 845.09
+  basePrice: 84509
+  price: 84509
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-exo-fn
   gun: Nova
   name: Exo
-  basePrice: 0.87
-  price: 0.87
+  basePrice: 87
+  price: 87
   condition: Factory New
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-exo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

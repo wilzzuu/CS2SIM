@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-scavenger-bsst
   gun: G3SG1
   name: Scavenger
-  basePrice: 0.81
-  price: 0.81
+  basePrice: 81
+  price: 81
   condition: Battle-Scarred
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: g3sg1-scavenger
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-retrobution-fn
   gun: Five-SeveN
   name: Retrobution
-  basePrice: 15.12
-  price: 15.12
+  basePrice: 1512
+  price: 1512
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-retrobution
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

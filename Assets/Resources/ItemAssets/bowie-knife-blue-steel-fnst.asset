@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-blue-steel-fnst
   gun: Bowie Knife
   name: Blue Steel
-  basePrice: 582.69
-  price: 582.69
+  basePrice: 58269
+  price: 58269
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-stone-cold-ft
   gun: Galil AR
   name: Stone Cold
-  basePrice: 2.56
-  price: 2.56
+  basePrice: 256
+  price: 256
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: galil-ar-stone-cold
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

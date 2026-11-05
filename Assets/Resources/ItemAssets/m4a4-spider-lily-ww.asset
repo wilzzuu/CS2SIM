@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-spider-lily-ww
   gun: M4A4
   name: Spider Lily
-  basePrice: 6.25
-  price: 6.25
+  basePrice: 625
+  price: 625
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m4a4-spider-lily
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

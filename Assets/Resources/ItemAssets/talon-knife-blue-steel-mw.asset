@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-blue-steel-mw
   gun: Talon Knife
   name: Blue Steel
-  basePrice: 464.6
-  price: 464.6
+  basePrice: 46460
+  price: 46460
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

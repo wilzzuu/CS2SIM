@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-chrome-cannon-fn
   gun: AWP
   name: Chrome Cannon
-  basePrice: 118.06
-  price: 118.06
+  basePrice: 11806
+  price: 11806
   condition: Factory New
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-chrome-cannon
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

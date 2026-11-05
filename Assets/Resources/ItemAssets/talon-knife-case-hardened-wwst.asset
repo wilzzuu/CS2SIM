@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-case-hardened-wwst
   gun: Talon Knife
   name: Case Hardened
-  basePrice: 550.67
-  price: 550.67
+  basePrice: 55067
+  price: 55067
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

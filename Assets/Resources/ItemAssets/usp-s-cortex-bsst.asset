@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-cortex-bsst
   gun: USP-S
   name: Cortex
-  basePrice: 8.28
-  price: 8.28
+  basePrice: 828
+  price: 828
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: usp-s-cortex
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

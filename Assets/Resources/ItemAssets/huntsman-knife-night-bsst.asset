@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-night-bsst
   gun: Huntsman Knife
   name: Night
-  basePrice: 200
-  price: 200
+  basePrice: 20000
+  price: 20000
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

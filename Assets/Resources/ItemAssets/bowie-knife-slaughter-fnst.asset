@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-slaughter-fnst
   gun: Bowie Knife
   name: Slaughter
-  basePrice: 419.03
-  price: 419.03
+  basePrice: 41903
+  price: 41903
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

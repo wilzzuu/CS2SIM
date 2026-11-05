@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-urban-masked-fn
   gun: Butterfly Knife
   name: Urban Masked
-  basePrice: 1468.05
-  price: 1468.05
+  basePrice: 146805
+  price: 146805
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

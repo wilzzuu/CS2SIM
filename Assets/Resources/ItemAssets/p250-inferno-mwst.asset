@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-inferno-mwst
   gun: P250
   name: Inferno
-  basePrice: 2.8
-  price: 2.8
+  basePrice: 280
+  price: 280
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-inferno
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

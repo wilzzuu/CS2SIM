@@ -2064,7 +2064,7 @@ MonoBehaviour:
   caseGridParent: {fileID: 1231975789}
   numberOfReelItems: 40
   easingDuration: 7
-  keyPrice: 2.19
+  keyPrice: 219
   caseButtonPrefab: {fileID: 123025997980287184, guid: f87ff3d3840b35f4fb18b7312be526b2, type: 3}
   caseSelectorPanel: {fileID: 465343517}
   currentCase: {fileID: 46843065}

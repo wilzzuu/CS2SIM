@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-hyper-beast-wwst
   gun: Five-SeveN
   name: Hyper Beast
-  basePrice: 162.71
-  price: 162.71
+  basePrice: 16271
+  price: 16271
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: five-seven-hyper-beast
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

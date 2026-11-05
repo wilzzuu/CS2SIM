@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-wasteland-rebel-fn
   gun: AK-47
   name: Wasteland Rebel
-  basePrice: 562.43
-  price: 562.43
+  basePrice: 56243
+  price: 56243
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-wasteland-rebel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

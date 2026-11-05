@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-case-hardened-bs
   gun: Nomad Knife
   name: Case Hardened
-  basePrice: 160.38
-  price: 160.38
+  basePrice: 16038
+  price: 16038
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

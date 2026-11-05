@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-ultraviolet-mwst
   gun: Karambit
   name: Ultraviolet
-  basePrice: 795.88
-  price: 795.88
+  basePrice: 79588
+  price: 79588
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: recoil-case
   name: Recoil Case
-  price: 0.23
+  price: 23
   items:
   - {fileID: 11400000, guid: 0a467f935122def4eb3692d565ae420d, type: 2}
   - {fileID: 11400000, guid: 7a3be38ba52d2864b916538224109e42, type: 2}

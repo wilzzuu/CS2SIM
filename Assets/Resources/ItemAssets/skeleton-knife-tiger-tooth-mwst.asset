@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-tiger-tooth-mwst
   gun: Skeleton Knife
   name: Tiger Tooth
-  basePrice: 507.25
-  price: 507.25
+  basePrice: 50725
+  price: 50725
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

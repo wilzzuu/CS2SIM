@@ -15,8 +15,8 @@ MonoBehaviour:
   id: navaja-knife-safari-mesh-mw
   gun: Navaja Knife
   name: Safari Mesh
-  basePrice: 55.9
-  price: 55.9
+  basePrice: 5590
+  price: 5590
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: navaja-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

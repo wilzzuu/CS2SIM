@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-amber-slipstream-fnst
   gun: AUG
   name: Amber Slipstream
-  basePrice: 1.35
-  price: 1.35
+  basePrice: 135
+  price: 135
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-amber-slipstream
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

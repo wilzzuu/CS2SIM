@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-powercore-fn
   gun: MP7
   name: Powercore
-  basePrice: 18
-  price: 18
+  basePrice: 1800
+  price: 1800
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp7-powercore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

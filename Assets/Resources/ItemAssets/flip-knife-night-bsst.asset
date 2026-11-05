@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-night-bsst
   gun: Flip Knife
   name: Night
-  basePrice: 131
-  price: 131
+  basePrice: 13100
+  price: 13100
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

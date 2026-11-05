@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-plume-mwst
   gun: Nova
   name: Plume
-  basePrice: 1.85
-  price: 1.85
+  basePrice: 185
+  price: 185
   condition: Minimal Wear
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: nova-plume
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

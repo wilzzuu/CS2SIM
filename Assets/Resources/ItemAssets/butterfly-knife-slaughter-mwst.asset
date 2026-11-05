@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-slaughter-mwst
   gun: Butterfly Knife
   name: Slaughter
-  basePrice: 1407.69
-  price: 1407.69
+  basePrice: 140769
+  price: 140769
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

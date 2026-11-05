@@ -15,8 +15,8 @@ MonoBehaviour:
   id: classic-knife-stained-mw
   gun: Classic Knife
   name: Stained
-  basePrice: 113.96
-  price: 113.96
+  basePrice: 11396
+  price: 11396
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: classic-knife-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-mainframe-001-wwst
   gun: SSG 08
   name: Mainframe 001
-  basePrice: 0.59
-  price: 0.59
+  basePrice: 59
+  price: 59
   condition: Well-Worn
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: ssg-08-mainframe-001
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-in-living-color-ftst
   gun: M4A4
   name: In Living Color
-  basePrice: 32.55
-  price: 32.55
+  basePrice: 3255
+  price: 3255
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a4-in-living-color
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

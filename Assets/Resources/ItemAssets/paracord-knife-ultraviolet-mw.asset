@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-ultraviolet-mw
   gun: Paracord Knife
   name: Ultraviolet
-  basePrice: 106.65
-  price: 106.65
+  basePrice: 10665
+  price: 10665
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

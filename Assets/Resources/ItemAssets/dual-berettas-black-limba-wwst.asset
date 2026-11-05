@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-black-limba-wwst
   gun: Dual Berettas
   name: Black Limba
-  basePrice: 8.28
-  price: 8.28
+  basePrice: 828
+  price: 828
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-black-limba
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

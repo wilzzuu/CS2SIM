@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-case-hardened-wwst
   gun: Karambit
   name: Case Hardened
-  basePrice: 738.77
-  price: 738.77
+  basePrice: 73877
+  price: 73877
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

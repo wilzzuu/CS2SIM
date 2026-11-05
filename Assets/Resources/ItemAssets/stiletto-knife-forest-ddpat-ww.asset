@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-forest-ddpat-ww
   gun: Stiletto Knife
   name: Forest DDPAT
-  basePrice: 131.46
-  price: 131.46
+  basePrice: 13146
+  price: 13146
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

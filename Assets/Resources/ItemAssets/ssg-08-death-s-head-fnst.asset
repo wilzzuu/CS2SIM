@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-death-s-head-fnst
   gun: SSG 08
   name: Death's Head
-  basePrice: 32.23
-  price: 32.23
+  basePrice: 3223
+  price: 3223
   condition: Factory New
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ssg-08-death-s-head
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

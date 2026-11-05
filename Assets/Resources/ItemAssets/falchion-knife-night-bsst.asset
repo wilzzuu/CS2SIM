@@ -15,8 +15,8 @@ MonoBehaviour:
   id: falchion-knife-night-bsst
   gun: Falchion Knife
   name: Night
-  basePrice: 148.81
-  price: 148.81
+  basePrice: 14881
+  price: 14881
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: falchion-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

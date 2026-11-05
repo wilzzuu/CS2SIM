@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-autotronic-bsst
   gun: Bayonet
   name: Autotronic
-  basePrice: 299.66
-  price: 299.66
+  basePrice: 29966
+  price: 29966
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

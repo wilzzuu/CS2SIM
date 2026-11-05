@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-hypnotic-mw
   gun: Desert Eagle
   name: Hypnotic
-  basePrice: 228.34
-  price: 228.34
+  basePrice: 22834
+  price: 22834
   condition: Minimal Wear
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: desert-eagle-hypnotic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

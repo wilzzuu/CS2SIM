@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-wasteland-rebel-mwst
   gun: Glock-18
   name: Wasteland Rebel
-  basePrice: 105.53
-  price: 105.53
+  basePrice: 10553
+  price: 10553
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: glock-18-wasteland-rebel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-winterized-mwst
   gun: Glock-18
   name: Winterized
-  basePrice: 1.16
-  price: 1.16
+  basePrice: 116
+  price: 116
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: glock-18-winterized
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

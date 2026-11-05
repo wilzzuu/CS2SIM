@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-crimson-web-bsst
   gun: CZ75-Auto
   name: Crimson Web
-  basePrice: 3.34
-  price: 3.34
+  basePrice: 334
+  price: 334
   condition: Battle-Scarred
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: cz75-auto-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

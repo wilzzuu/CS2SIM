@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ump-45-momentum-wwst
   gun: UMP-45
   name: Momentum
-  basePrice: 7.4
-  price: 7.4
+  basePrice: 740
+  price: 740
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ump-45-momentum
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

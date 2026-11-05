@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-traction-fn
   gun: P90
   name: Traction
-  basePrice: 4.89
-  price: 4.89
+  basePrice: 489
+  price: 489
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p90-traction
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

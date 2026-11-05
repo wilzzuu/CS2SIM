@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: horizon-case
   name: Horizon Case
-  price: 1.81
+  price: 181
   items:
   - {fileID: 11400000, guid: 8409456698476614182aaa4e1b839021, type: 2}
   - {fileID: 11400000, guid: 610482702f068ef46926efaf69f67674, type: 2}

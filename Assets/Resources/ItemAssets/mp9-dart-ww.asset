@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-dart-ww
   gun: MP9
   name: Dart
-  basePrice: 0.89
-  price: 0.89
+  basePrice: 89
+  price: 89
   condition: Well-Worn
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp9-dart
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

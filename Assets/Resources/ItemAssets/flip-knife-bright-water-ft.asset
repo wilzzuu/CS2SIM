@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-bright-water-ft
   gun: Flip Knife
   name: Bright Water
-  basePrice: 125.89
-  price: 125.89
+  basePrice: 12589
+  price: 12589
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-autotronic-ft
   gun: Gut Knife
   name: Autotronic
-  basePrice: 106.97
-  price: 106.97
+  basePrice: 10697
+  price: 10697
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-autotronic
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

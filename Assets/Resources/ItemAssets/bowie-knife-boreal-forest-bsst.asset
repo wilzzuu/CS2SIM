@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-boreal-forest-bsst
   gun: Bowie Knife
   name: Boreal Forest
-  basePrice: 121
-  price: 121
+  basePrice: 12100
+  price: 12100
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-boreal-forest
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

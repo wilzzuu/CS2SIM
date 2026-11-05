@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-urban-hazard-fn
   gun: Five-SeveN
   name: Urban Hazard
-  basePrice: 5.54
-  price: 5.54
+  basePrice: 554
+  price: 554
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-urban-hazard
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

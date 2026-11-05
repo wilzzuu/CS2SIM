@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-forest-ddpat-ft
   gun: Huntsman Knife
   name: Forest DDPAT
-  basePrice: 66.87
-  price: 66.87
+  basePrice: 6687
+  price: 6687
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

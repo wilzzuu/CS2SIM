@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-seasons-bs
   gun: XM1014
   name: Seasons
-  basePrice: 1.64
-  price: 1.64
+  basePrice: 164
+  price: 164
   condition: Battle-Scarred
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: xm1014-seasons
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

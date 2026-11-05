@@ -15,8 +15,8 @@ MonoBehaviour:
   id: tec-9-cut-out-bs
   gun: Tec-9
   name: Cut Out
-  basePrice: 4.73
-  price: 4.73
+  basePrice: 473
+  price: 473
   condition: Battle-Scarred
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: tec-9-cut-out
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

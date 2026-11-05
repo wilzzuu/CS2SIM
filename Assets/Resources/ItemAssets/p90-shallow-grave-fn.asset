@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-shallow-grave-fn
   gun: P90
   name: Shallow Grave
-  basePrice: 31.76
-  price: 31.76
+  basePrice: 3176
+  price: 3176
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p90-shallow-grave
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

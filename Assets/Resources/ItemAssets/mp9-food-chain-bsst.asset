@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-food-chain-bsst
   gun: MP9
   name: Food Chain
-  basePrice: 5.43
-  price: 5.43
+  basePrice: 543
+  price: 543
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mp9-food-chain
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

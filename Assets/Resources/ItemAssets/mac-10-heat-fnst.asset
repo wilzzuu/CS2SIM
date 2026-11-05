@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-heat-fnst
   gun: MAC-10
   name: Heat
-  basePrice: 32.73
-  price: 32.73
+  basePrice: 3273
+  price: 3273
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-heat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

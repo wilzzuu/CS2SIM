@@ -15,8 +15,8 @@ MonoBehaviour:
   id: desert-eagle-crimson-web-ftst
   gun: Desert Eagle
   name: Crimson Web
-  basePrice: 22.59
-  price: 22.59
+  basePrice: 2259
+  price: 2259
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: desert-eagle-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

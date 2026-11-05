@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-kill-confirmed-ft
   gun: USP-S
   name: Kill Confirmed
-  basePrice: 76.1
-  price: 76.1
+  basePrice: 7610
+  price: 7610
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: usp-s-kill-confirmed
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-flame-test-fnst
   gun: Five-SeveN
   name: Flame Test
-  basePrice: 1.26
-  price: 1.26
+  basePrice: 126
+  price: 126
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: five-seven-flame-test
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-visions-mwst
   gun: P250
   name: Visions
-  basePrice: 7.39
-  price: 7.39
+  basePrice: 739
+  price: 739
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: p250-visions
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

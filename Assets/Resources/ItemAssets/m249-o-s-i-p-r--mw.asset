@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-o-s-i-p-r--mw
   gun: M249
   name: O.S.I.P.R.
-  basePrice: 0.63
-  price: 0.63
+  basePrice: 63
+  price: 63
   condition: Minimal Wear
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m249-o-s-i-p-r-
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

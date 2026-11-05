@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-cartel-fnst
   gun: AK-47
   name: Cartel
-  basePrice: 111.86
-  price: 111.86
+  basePrice: 11186
+  price: 11186
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-cartel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

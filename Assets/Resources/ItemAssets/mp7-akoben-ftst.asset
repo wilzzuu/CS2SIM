@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-akoben-ftst
   gun: MP7
   name: Akoben
-  basePrice: 0.58
-  price: 0.58
+  basePrice: 58
+  price: 58
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp7-akoben
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

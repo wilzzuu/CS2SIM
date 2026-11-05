@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-rose-iron-ft
   gun: MP9
   name: Rose Iron
-  basePrice: 11.33
-  price: 11.33
+  basePrice: 1133
+  price: 1133
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp9-rose-iron
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

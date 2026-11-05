@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-lumen-mw
   gun: PP-Bizon
   name: Lumen
-  basePrice: 2.4
-  price: 2.4
+  basePrice: 240
+  price: 240
   condition: Minimal Wear
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: pp-bizon-lumen
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

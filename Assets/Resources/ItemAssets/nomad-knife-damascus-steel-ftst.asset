@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-damascus-steel-ftst
   gun: Nomad Knife
   name: Damascus Steel
-  basePrice: 147.8
-  price: 147.8
+  basePrice: 14780
+  price: 14780
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

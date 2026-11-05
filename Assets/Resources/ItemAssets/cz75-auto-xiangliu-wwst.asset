@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-xiangliu-wwst
   gun: CZ75-Auto
   name: Xiangliu
-  basePrice: 23.44
-  price: 23.44
+  basePrice: 2344
+  price: 2344
   condition: Well-Worn
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: cz75-auto-xiangliu
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

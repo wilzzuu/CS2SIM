@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a4-etch-lord-fnst
   gun: M4A4
   name: Etch Lord
-  basePrice: 11
-  price: 11
+  basePrice: 1100
+  price: 1100
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m4a4-etch-lord
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

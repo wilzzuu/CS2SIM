@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-phantom-disruptor-fnst
   gun: AK-47
   name: Phantom Disruptor
-  basePrice: 39.65
-  price: 39.65
+  basePrice: 3965
+  price: 3965
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-phantom-disruptor
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

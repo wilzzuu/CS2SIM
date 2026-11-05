@@ -15,8 +15,8 @@ MonoBehaviour:
   id: glock-18-shinobu-fn
   gun: Glock-18
   name: Shinobu
-  basePrice: 49.24
-  price: 49.24
+  basePrice: 4924
+  price: 4924
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: glock-18-shinobu
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

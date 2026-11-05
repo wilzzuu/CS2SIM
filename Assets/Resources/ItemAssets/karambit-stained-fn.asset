@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-stained-fn
   gun: Karambit
   name: Stained
-  basePrice: 923.09
-  price: 923.09
+  basePrice: 92309
+  price: 92309
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-stained
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-ultraviolet-fnst
   gun: Stiletto Knife
   name: Ultraviolet
-  basePrice: 1150
-  price: 1150
+  basePrice: 115000
+  price: 115000
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

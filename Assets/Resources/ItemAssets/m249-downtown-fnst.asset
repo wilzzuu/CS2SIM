@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-downtown-fnst
   gun: M249
   name: Downtown
-  basePrice: 2.22
-  price: 2.22
+  basePrice: 222
+  price: 222
   condition: Factory New
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m249-downtown
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

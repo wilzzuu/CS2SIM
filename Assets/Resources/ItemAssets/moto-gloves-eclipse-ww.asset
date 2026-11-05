@@ -15,8 +15,8 @@ MonoBehaviour:
   id: moto-gloves-eclipse-ww
   gun: Moto Gloves
   name: Eclipse
-  basePrice: 147.6
-  price: 147.6
+  basePrice: 14760
+  price: 14760
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: moto-gloves-eclipse
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

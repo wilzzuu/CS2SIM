@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-woodsman-fnst
   gun: P2000
   name: Woodsman
-  basePrice: 43.4
-  price: 43.4
+  basePrice: 4340
+  price: 4340
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-woodsman
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

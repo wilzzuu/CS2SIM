@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-hunter-fnst
   gun: G3SG1
   name: Hunter
-  basePrice: 2.62
-  price: 2.62
+  basePrice: 262
+  price: 262
   condition: Factory New
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: g3sg1-hunter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

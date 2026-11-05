@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: gallery-case
   name: Gallery Case
-  price: 1.11
+  price: 111
   items:
   - {fileID: 11400000, guid: 6feaf4f96cdb491499951660b575fede, type: 2}
   - {fileID: 11400000, guid: 63971fea24d3ff14ab0cc87e3e64776e, type: 2}

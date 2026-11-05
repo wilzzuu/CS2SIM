@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-mockingbird-fn
   gun: XM1014
   name: Mockingbird
-  basePrice: 1.31
-  price: 1.31
+  basePrice: 131
+  price: 131
   condition: Factory New
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: xm1014-mockingbird
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

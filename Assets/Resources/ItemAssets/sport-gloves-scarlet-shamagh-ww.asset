@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sport-gloves-scarlet-shamagh-ww
   gun: Sport Gloves
   name: Scarlet Shamagh
-  basePrice: 237.61
-  price: 237.61
+  basePrice: 23761
+  price: 23761
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: sport-gloves-scarlet-shamagh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

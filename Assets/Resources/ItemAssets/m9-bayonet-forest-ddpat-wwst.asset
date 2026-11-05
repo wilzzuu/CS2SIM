@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-forest-ddpat-wwst
   gun: M9 Bayonet
   name: Forest DDPAT
-  basePrice: 557.92
-  price: 557.92
+  basePrice: 55792
+  price: 55792
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

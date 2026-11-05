@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-leet-museo-ww
   gun: AK-47
   name: Leet Museo
-  basePrice: 112.25
-  price: 112.25
+  basePrice: 11225
+  price: 11225
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-leet-museo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

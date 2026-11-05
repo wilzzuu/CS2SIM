@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-safari-mesh-bs
   gun: Shadow Daggers
   name: Safari Mesh
-  basePrice: 50.7
-  price: 50.7
+  basePrice: 5070
+  price: 5070
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

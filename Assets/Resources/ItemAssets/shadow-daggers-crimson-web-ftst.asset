@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-crimson-web-ftst
   gun: Shadow Daggers
   name: Crimson Web
-  basePrice: 119.1
-  price: 119.1
+  basePrice: 11910
+  price: 11910
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

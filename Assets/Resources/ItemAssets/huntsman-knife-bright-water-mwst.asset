@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-bright-water-mwst
   gun: Huntsman Knife
   name: Bright Water
-  basePrice: 95.87
-  price: 95.87
+  basePrice: 9587
+  price: 9587
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-bright-water
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-nightwish-bs
   gun: AK-47
   name: Nightwish
-  basePrice: 56.98
-  price: 56.98
+  basePrice: 5698
+  price: 5698
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-nightwish
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-connexion-wwst
   gun: Galil AR
   name: Connexion
-  basePrice: 1.03
-  price: 1.03
+  basePrice: 103
+  price: 103
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: galil-ar-connexion
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

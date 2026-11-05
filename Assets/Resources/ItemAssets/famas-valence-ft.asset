@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-valence-ft
   gun: FAMAS
   name: Valence
-  basePrice: 3.63
-  price: 3.63
+  basePrice: 363
+  price: 363
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: famas-valence
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

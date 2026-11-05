@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-urban-masked-ww
   gun: Kukri Knife
   name: Urban Masked
-  basePrice: 59.03
-  price: 59.03
+  basePrice: 5903
+  price: 5903
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

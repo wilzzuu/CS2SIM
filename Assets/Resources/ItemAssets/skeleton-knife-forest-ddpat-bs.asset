@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-forest-ddpat-bs
   gun: Skeleton Knife
   name: Forest DDPAT
-  basePrice: 121.34
-  price: 121.34
+  basePrice: 12134
+  price: 12134
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-forest-ddpat
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

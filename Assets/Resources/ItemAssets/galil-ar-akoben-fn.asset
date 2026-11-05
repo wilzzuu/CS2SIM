@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-akoben-fn
   gun: Galil AR
   name: Akoben
-  basePrice: 3.17
-  price: 3.17
+  basePrice: 317
+  price: 317
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: galil-ar-akoben
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

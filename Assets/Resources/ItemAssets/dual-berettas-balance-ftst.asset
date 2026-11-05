@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-balance-ftst
   gun: Dual Berettas
   name: Balance
-  basePrice: 2
-  price: 2
+  basePrice: 200
+  price: 200
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: dual-berettas-balance
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

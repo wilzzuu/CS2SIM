@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-ultraviolet-mw
   gun: Bowie Knife
   name: Ultraviolet
-  basePrice: 103.39
-  price: 103.39
+  basePrice: 10339
+  price: 10339
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

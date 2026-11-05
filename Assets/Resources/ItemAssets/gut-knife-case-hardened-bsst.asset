@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-case-hardened-bsst
   gun: Gut Knife
   name: Case Hardened
-  basePrice: 164.51
-  price: 164.51
+  basePrice: 16451
+  price: 16451
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

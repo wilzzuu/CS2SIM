@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-roll-cage-fn
   gun: FAMAS
   name: Roll Cage
-  basePrice: 177.56
-  price: 177.56
+  basePrice: 17756
+  price: 17756
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: famas-roll-cage
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

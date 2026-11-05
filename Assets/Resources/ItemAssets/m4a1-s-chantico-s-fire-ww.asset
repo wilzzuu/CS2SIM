@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-chantico-s-fire-ww
   gun: M4A1-S
   name: Chantico's Fire
-  basePrice: 109.31
-  price: 109.31
+  basePrice: 10931
+  price: 10931
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a1-s-chantico-s-fire
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

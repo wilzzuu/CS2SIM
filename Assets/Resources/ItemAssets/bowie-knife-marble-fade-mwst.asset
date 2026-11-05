@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-marble-fade-mwst
   gun: Bowie Knife
   name: Marble Fade
-  basePrice: 469.24
-  price: 469.24
+  basePrice: 46924
+  price: 46924
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

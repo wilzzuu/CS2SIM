@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-safari-mesh-ft
   gun: Nomad Knife
   name: Safari Mesh
-  basePrice: 90.06
-  price: 90.06
+  basePrice: 9006
+  price: 9006
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-safari-mesh
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

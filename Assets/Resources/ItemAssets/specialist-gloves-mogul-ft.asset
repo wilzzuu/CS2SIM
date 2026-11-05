@@ -15,8 +15,8 @@ MonoBehaviour:
   id: specialist-gloves-mogul-ft
   gun: Specialist Gloves
   name: Mogul
-  basePrice: 131.45
-  price: 131.45
+  basePrice: 13145
+  price: 13145
   condition: Field-Tested
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: specialist-gloves-mogul
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

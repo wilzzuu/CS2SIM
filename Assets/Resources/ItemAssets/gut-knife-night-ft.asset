@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-night-ft
   gun: Gut Knife
   name: Night
-  basePrice: 64.41
-  price: 64.41
+  basePrice: 6441
+  price: 6441
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

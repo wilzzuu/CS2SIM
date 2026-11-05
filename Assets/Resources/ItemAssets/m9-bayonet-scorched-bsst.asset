@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-scorched-bsst
   gun: M9 Bayonet
   name: Scorched
-  basePrice: 374.39
-  price: 374.39
+  basePrice: 37439
+  price: 37439
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

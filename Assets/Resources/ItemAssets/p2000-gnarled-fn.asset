@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-gnarled-fn
   gun: P2000
   name: Gnarled
-  basePrice: 1.53
-  price: 1.53
+  basePrice: 153
+  price: 153
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-gnarled
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

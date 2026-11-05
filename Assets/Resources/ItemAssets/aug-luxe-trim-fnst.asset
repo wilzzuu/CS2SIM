@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-luxe-trim-fnst
   gun: AUG
   name: Luxe Trim
-  basePrice: 22.38
-  price: 22.38
+  basePrice: 2238
+  price: 2238
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: aug-luxe-trim
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

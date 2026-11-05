@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-neural-net-mwst
   gun: FAMAS
   name: Neural Net
-  basePrice: 4.54
-  price: 4.54
+  basePrice: 454
+  price: 454
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: famas-neural-net
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

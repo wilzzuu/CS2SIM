@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-ultraviolet-fnst
   gun: Huntsman Knife
   name: Ultraviolet
-  basePrice: 686.75
-  price: 686.75
+  basePrice: 68675
+  price: 68675
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: kilowatt-case
   name: Kilowatt Case
-  price: 0.28
+  price: 28
   items:
   - {fileID: 11400000, guid: 455c3076992e29a48bb30d6c0dd58421, type: 2}
   - {fileID: 11400000, guid: f1c08ae3875326b479be6e34a01dd502, type: 2}

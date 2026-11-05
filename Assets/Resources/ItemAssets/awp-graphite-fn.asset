@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-graphite-fn
   gun: AWP
   name: Graphite
-  basePrice: 234.37
-  price: 234.37
+  basePrice: 23437
+  price: 23437
   condition: Factory New
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: awp-graphite
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

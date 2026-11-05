@@ -15,8 +15,8 @@ MonoBehaviour:
   id: stiletto-knife-damascus-steel-fn
   gun: Stiletto Knife
   name: Damascus Steel
-  basePrice: 236.19
-  price: 236.19
+  basePrice: 23619
+  price: 23619
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: stiletto-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

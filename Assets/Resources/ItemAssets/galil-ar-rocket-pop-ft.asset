@@ -15,8 +15,8 @@ MonoBehaviour:
   id: galil-ar-rocket-pop-ft
   gun: Galil AR
   name: Rocket Pop
-  basePrice: 1.16
-  price: 1.16
+  basePrice: 116
+  price: 116
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: galil-ar-rocket-pop
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

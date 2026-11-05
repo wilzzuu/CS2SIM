@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-decommissioned-fnst
   gun: FAMAS
   name: Decommissioned
-  basePrice: 4.19
-  price: 4.19
+  basePrice: 419
+  price: 419
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: famas-decommissioned
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

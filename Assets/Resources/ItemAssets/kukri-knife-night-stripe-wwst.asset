@@ -15,8 +15,8 @@ MonoBehaviour:
   id: kukri-knife-night-stripe-wwst
   gun: Kukri Knife
   name: Night Stripe
-  basePrice: 76.68
-  price: 76.68
+  basePrice: 7668
+  price: 7668
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: kukri-knife-night-stripe
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

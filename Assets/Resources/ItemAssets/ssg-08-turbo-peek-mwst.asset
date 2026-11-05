@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-turbo-peek-mwst
   gun: SSG 08
   name: Turbo Peek
-  basePrice: 55.29
-  price: 55.29
+  basePrice: 5529
+  price: 5529
   condition: Minimal Wear
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ssg-08-turbo-peek
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

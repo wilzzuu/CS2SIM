@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-night-bs
   gun: Shadow Daggers
   name: Night
-  basePrice: 53.78
-  price: 53.78
+  basePrice: 5378
+  price: 5378
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

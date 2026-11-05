@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-blue-steel-fnst
   gun: Flip Knife
   name: Blue Steel
-  basePrice: 451.49
-  price: 451.49
+  basePrice: 45149
+  price: 45149
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-bloomstick-ft
   gun: Nova
   name: Bloomstick
-  basePrice: 13.19
-  price: 13.19
+  basePrice: 1319
+  price: 1319
   condition: Field-Tested
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: nova-bloomstick
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

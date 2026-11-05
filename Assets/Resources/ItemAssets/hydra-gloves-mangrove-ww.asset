@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hydra-gloves-mangrove-ww
   gun: Hydra Gloves
   name: Mangrove
-  basePrice: 39.84
-  price: 39.84
+  basePrice: 3984
+  price: 3984
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hydra-gloves-mangrove
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

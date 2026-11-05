@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-case-hardened-fn
   gun: Karambit
   name: Case Hardened
-  basePrice: 4817.5
-  price: 4817.5
+  basePrice: 481750
+  price: 481750
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

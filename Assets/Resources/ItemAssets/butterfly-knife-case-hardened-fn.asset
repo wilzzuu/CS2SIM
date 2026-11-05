@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-case-hardened-fn
   gun: Butterfly Knife
   name: Case Hardened
-  basePrice: 1464.62
-  price: 1464.62
+  basePrice: 146462
+  price: 146462
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

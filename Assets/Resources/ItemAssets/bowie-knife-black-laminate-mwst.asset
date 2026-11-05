@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-black-laminate-mwst
   gun: Bowie Knife
   name: Black Laminate
-  basePrice: 84.64
-  price: 84.64
+  basePrice: 8464
+  price: 8464
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-black-laminate
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

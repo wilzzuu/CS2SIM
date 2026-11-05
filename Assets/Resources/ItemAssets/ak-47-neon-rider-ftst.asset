@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-neon-rider-ftst
   gun: AK-47
   name: Neon Rider
-  basePrice: 97.37
-  price: 97.37
+  basePrice: 9737
+  price: 9737
   condition: Field-Tested
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-neon-rider
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

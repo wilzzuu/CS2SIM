@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-night-ww
   gun: Bowie Knife
   name: Night
-  basePrice: 83.1
-  price: 83.1
+  basePrice: 8310
+  price: 8310
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

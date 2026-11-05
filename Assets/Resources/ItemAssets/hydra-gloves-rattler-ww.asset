@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hydra-gloves-rattler-ww
   gun: Hydra Gloves
   name: Rattler
-  basePrice: 40.52
-  price: 40.52
+  basePrice: 4052
+  price: 4052
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hydra-gloves-rattler
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

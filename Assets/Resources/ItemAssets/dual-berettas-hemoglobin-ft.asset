@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-hemoglobin-ft
   gun: Dual Berettas
   name: Hemoglobin
-  basePrice: 18.5
-  price: 18.5
+  basePrice: 1850
+  price: 1850
   condition: Field-Tested
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: dual-berettas-hemoglobin
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

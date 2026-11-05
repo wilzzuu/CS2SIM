@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-night-ft
   gun: Huntsman Knife
   name: Night
-  basePrice: 80.52
-  price: 80.52
+  basePrice: 8052
+  price: 8052
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

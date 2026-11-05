@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-orbit-mk01-ft
   gun: AK-47
   name: Orbit Mk01
-  basePrice: 33.06
-  price: 33.06
+  basePrice: 3306
+  price: 3306
   condition: Field-Tested
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: ak-47-orbit-mk01
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-case-hardened-mw
   gun: Survival Knife
   name: Case Hardened
-  basePrice: 116.91
-  price: 116.91
+  basePrice: 11691
+  price: 11691
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

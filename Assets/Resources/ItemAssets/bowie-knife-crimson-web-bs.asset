@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-crimson-web-bs
   gun: Bowie Knife
   name: Crimson Web
-  basePrice: 225.03
-  price: 225.03
+  basePrice: 22503
+  price: 22503
   condition: Battle-Scarred
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

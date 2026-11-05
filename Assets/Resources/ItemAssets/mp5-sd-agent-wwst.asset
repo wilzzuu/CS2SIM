@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp5-sd-agent-wwst
   gun: MP5-SD
   name: Agent
-  basePrice: 1.17
-  price: 1.17
+  basePrice: 117
+  price: 117
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mp5-sd-agent
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

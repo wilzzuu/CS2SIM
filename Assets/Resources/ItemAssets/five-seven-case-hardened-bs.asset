@@ -15,8 +15,8 @@ MonoBehaviour:
   id: five-seven-case-hardened-bs
   gun: Five-SeveN
   name: Case Hardened
-  basePrice: 15.92
-  price: 15.92
+  basePrice: 1592
+  price: 1592
   condition: Battle-Scarred
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: five-seven-case-hardened
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

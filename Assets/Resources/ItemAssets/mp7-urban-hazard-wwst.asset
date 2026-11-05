@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp7-urban-hazard-wwst
   gun: MP7
   name: Urban Hazard
-  basePrice: 0.84
-  price: 0.84
+  basePrice: 84
+  price: 84
   condition: Well-Worn
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp7-urban-hazard
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

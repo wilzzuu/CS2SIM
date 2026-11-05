@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-nightmare-fnst
   gun: M4A1-S
   name: Nightmare
-  basePrice: 137.26
-  price: 137.26
+  basePrice: 13726
+  price: 13726
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: m4a1-s-nightmare
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

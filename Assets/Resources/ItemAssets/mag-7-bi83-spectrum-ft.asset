@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-bi83-spectrum-ft
   gun: MAG-7
   name: BI83 Spectrum
-  basePrice: 2.42
-  price: 2.42
+  basePrice: 242
+  price: 242
   condition: Field-Tested
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-bi83-spectrum
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

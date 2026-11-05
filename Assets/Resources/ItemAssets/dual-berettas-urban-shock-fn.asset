@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-urban-shock-fn
   gun: Dual Berettas
   name: Urban Shock
-  basePrice: 10.24
-  price: 10.24
+  basePrice: 1024
+  price: 1024
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: dual-berettas-urban-shock
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

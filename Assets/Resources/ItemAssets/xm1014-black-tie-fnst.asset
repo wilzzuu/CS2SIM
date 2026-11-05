@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-black-tie-fnst
   gun: XM1014
   name: Black Tie
-  basePrice: 14.38
-  price: 14.38
+  basePrice: 1438
+  price: 1438
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: xm1014-black-tie
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

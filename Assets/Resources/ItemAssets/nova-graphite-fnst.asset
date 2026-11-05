@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-graphite-fnst
   gun: Nova
   name: Graphite
-  basePrice: 21.14
-  price: 21.14
+  basePrice: 2114
+  price: 2114
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-graphite
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

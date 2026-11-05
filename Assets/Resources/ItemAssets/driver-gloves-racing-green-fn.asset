@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-racing-green-fn
   gun: Driver Gloves
   name: Racing Green
-  basePrice: 309.83
-  price: 309.83
+  basePrice: 30983
+  price: 30983
   condition: Factory New
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-racing-green
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

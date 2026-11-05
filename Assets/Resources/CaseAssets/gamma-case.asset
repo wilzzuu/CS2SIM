@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: gamma-case
   name: Gamma Case
-  price: 3.49
+  price: 349
   items:
   - {fileID: 11400000, guid: 79ec99c896548a04383d97af769d6d09, type: 2}
   - {fileID: 11400000, guid: 838cef2533e99794fac449675b3ade1f, type: 2}

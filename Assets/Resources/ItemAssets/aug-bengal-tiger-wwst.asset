@@ -15,8 +15,8 @@ MonoBehaviour:
   id: aug-bengal-tiger-wwst
   gun: AUG
   name: Bengal Tiger
-  basePrice: 22.12
-  price: 22.12
+  basePrice: 2212
+  price: 2212
   condition: Well-Worn
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: aug-bengal-tiger
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

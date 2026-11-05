@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-dream-glade-fn
   gun: G3SG1
   name: Dream Glade
-  basePrice: 3.96
-  price: 3.96
+  basePrice: 396
+  price: 396
   condition: Factory New
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: g3sg1-dream-glade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

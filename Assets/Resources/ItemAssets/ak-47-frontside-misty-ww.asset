@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-frontside-misty-ww
   gun: AK-47
   name: Frontside Misty
-  basePrice: 19.46
-  price: 19.46
+  basePrice: 1946
+  price: 1946
   condition: Well-Worn
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ak-47-frontside-misty
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

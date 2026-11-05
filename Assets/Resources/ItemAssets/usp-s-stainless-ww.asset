@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-stainless-ww
   gun: USP-S
   name: Stainless
-  basePrice: 8.66
-  price: 8.66
+  basePrice: 866
+  price: 866
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-stainless
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

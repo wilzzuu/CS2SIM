@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-airlock-ftst
   gun: MP9
   name: Airlock
-  basePrice: 9.83
-  price: 9.83
+  basePrice: 983
+  price: 983
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: mp9-airlock
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

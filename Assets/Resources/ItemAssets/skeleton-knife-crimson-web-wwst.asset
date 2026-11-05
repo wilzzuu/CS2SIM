@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-crimson-web-wwst
   gun: Skeleton Knife
   name: Crimson Web
-  basePrice: 354.74
-  price: 354.74
+  basePrice: 35474
+  price: 35474
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

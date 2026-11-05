@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-nebula-crusader-fn
   gun: M249
   name: Nebula Crusader
-  basePrice: 12.99
-  price: 12.99
+  basePrice: 1299
+  price: 1299
   condition: Factory New
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: m249-nebula-crusader
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

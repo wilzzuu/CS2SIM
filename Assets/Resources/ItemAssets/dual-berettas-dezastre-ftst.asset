@@ -15,8 +15,8 @@ MonoBehaviour:
   id: dual-berettas-dezastre-ftst
   gun: Dual Berettas
   name: Dezastre
-  basePrice: 5.29
-  price: 5.29
+  basePrice: 529
+  price: 529
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: dual-berettas-dezastre
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

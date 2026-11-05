@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-aquamarine-revenge-bs
   gun: AK-47
   name: Aquamarine Revenge
-  basePrice: 40.33
-  price: 40.33
+  basePrice: 4033
+  price: 4033
   condition: Battle-Scarred
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-aquamarine-revenge
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-deadly-poison-fnst
   gun: MP9
   name: Deadly Poison
-  basePrice: 7.6
-  price: 7.6
+  basePrice: 760
+  price: 760
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp9-deadly-poison
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-night-mw
   gun: Karambit
   name: Night
-  basePrice: 716.9
-  price: 716.9
+  basePrice: 71690
+  price: 71690
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-night
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-lore-fn
   gun: Shadow Daggers
   name: Lore
-  basePrice: 142.12
-  price: 142.12
+  basePrice: 14212
+  price: 14212
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

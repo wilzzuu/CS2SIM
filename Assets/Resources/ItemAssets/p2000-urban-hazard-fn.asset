@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-urban-hazard-fn
   gun: P2000
   name: Urban Hazard
-  basePrice: 1.83
-  price: 1.83
+  basePrice: 183
+  price: 183
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p2000-urban-hazard
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

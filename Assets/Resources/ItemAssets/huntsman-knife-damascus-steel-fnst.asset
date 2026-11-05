@@ -15,8 +15,8 @@ MonoBehaviour:
   id: huntsman-knife-damascus-steel-fnst
   gun: Huntsman Knife
   name: Damascus Steel
-  basePrice: 227.61
-  price: 227.61
+  basePrice: 22761
+  price: 22761
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: huntsman-knife-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

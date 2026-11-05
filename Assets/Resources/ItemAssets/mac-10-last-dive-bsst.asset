@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-last-dive-bsst
   gun: MAC-10
   name: Last Dive
-  basePrice: 3.92
-  price: 3.92
+  basePrice: 392
+  price: 392
   condition: Battle-Scarred
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-last-dive
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

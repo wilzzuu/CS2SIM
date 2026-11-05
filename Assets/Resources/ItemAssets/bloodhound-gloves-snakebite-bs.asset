@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bloodhound-gloves-snakebite-bs
   gun: Bloodhound Gloves
   name: Snakebite
-  basePrice: 94.26
-  price: 94.26
+  basePrice: 9426
+  price: 9426
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bloodhound-gloves-snakebite
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

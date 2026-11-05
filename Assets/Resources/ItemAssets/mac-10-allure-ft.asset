@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mac-10-allure-ft
   gun: MAC-10
   name: Allure
-  basePrice: 0.54
-  price: 0.54
+  basePrice: 54
+  price: 54
   condition: Field-Tested
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mac-10-allure
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

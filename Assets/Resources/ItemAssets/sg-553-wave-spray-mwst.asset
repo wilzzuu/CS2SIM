@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-wave-spray-mwst
   gun: SG 553
   name: Wave Spray
-  basePrice: 7.9
-  price: 7.9
+  basePrice: 790
+  price: 790
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: sg-553-wave-spray
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

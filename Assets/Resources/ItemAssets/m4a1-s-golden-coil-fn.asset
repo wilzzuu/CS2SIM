@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m4a1-s-golden-coil-fn
   gun: M4A1-S
   name: Golden Coil
-  basePrice: 379.78
-  price: 379.78
+  basePrice: 37978
+  price: 37978
   condition: Factory New
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: m4a1-s-golden-coil
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

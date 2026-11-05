@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-see-ya-later-fn
   gun: P250
   name: See Ya Later
-  basePrice: 119.36
-  price: 119.36
+  basePrice: 11936
+  price: 11936
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: p250-see-ya-later
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

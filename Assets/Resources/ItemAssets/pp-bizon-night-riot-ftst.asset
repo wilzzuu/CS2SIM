@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-night-riot-ftst
   gun: PP-Bizon
   name: Night Riot
-  basePrice: 0.53
-  price: 0.53
+  basePrice: 53
+  price: 53
   condition: Field-Tested
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: pp-bizon-night-riot
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

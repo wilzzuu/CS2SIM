@@ -15,8 +15,8 @@ MonoBehaviour:
   id: xm1014-xoxo-fnst
   gun: XM1014
   name: XOXO
-  basePrice: 33.06
-  price: 33.06
+  basePrice: 3306
+  price: 3306
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: xm1014-xoxo
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

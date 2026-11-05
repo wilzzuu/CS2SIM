@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ssg-08-big-iron-wwst
   gun: SSG 08
   name: Big Iron
-  basePrice: 27.61
-  price: 27.61
+  basePrice: 2761
+  price: 2761
   condition: Well-Worn
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: ssg-08-big-iron
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

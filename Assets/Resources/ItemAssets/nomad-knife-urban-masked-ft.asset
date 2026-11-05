@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nomad-knife-urban-masked-ft
   gun: Nomad Knife
   name: Urban Masked
-  basePrice: 110.36
-  price: 110.36
+  basePrice: 11036
+  price: 11036
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: nomad-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

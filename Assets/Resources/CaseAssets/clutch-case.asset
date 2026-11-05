@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: clutch-case
   name: Clutch Case
-  price: 0.81
+  price: 81
   items:
   - {fileID: 11400000, guid: 544313d3eef99c941867ea48995b91fa, type: 2}
   - {fileID: 11400000, guid: 4540f0d504889254ea3b24b3705b1aa9, type: 2}

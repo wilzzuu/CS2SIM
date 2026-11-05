@@ -15,8 +15,8 @@ MonoBehaviour:
   id: driver-gloves-convoy-bs
   gun: Driver Gloves
   name: Convoy
-  basePrice: 88.87
-  price: 88.87
+  basePrice: 8887
+  price: 8887
   condition: Battle-Scarred
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: driver-gloves-convoy
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

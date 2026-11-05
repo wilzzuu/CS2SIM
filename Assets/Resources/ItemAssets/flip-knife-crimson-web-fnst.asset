@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-crimson-web-fnst
   gun: Flip Knife
   name: Crimson Web
-  basePrice: 3851.67
-  price: 3851.67
+  basePrice: 385167
+  price: 385167
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-crimson-web
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

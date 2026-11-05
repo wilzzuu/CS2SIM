@@ -15,8 +15,8 @@ MonoBehaviour:
   id: famas-zx-spectron-mwst
   gun: FAMAS
   name: ZX Spectron
-  basePrice: 13.71
-  price: 13.71
+  basePrice: 1371
+  price: 1371
   condition: Minimal Wear
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: famas-zx-spectron
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

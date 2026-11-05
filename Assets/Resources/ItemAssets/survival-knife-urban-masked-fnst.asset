@@ -15,8 +15,8 @@ MonoBehaviour:
   id: survival-knife-urban-masked-fnst
   gun: Survival Knife
   name: Urban Masked
-  basePrice: 392.5
-  price: 392.5
+  basePrice: 39250
+  price: 39250
   condition: Factory New
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: survival-knife-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

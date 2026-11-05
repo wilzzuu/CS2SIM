@@ -15,8 +15,8 @@ MonoBehaviour:
   id: talon-knife-scorched-fn
   gun: Talon Knife
   name: Scorched
-  basePrice: 500.68
-  price: 500.68
+  basePrice: 50068
+  price: 50068
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: talon-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

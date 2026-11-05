@@ -15,8 +15,8 @@ MonoBehaviour:
   id: nova-rising-sun-mw
   gun: Nova
   name: Rising Sun
-  basePrice: 1.37
-  price: 1.37
+  basePrice: 137
+  price: 137
   condition: Minimal Wear
   isStatTrak: 0
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: nova-rising-sun
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

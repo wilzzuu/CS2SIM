@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bayonet-marble-fade-mw
   gun: Bayonet
   name: Marble Fade
-  basePrice: 544.5
-  price: 544.5
+  basePrice: 54450
+  price: 54450
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bayonet-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

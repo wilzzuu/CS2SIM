@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-hive-fn
   gun: P250
   name: Hive
-  basePrice: 18.12
-  price: 18.12
+  basePrice: 1812
+  price: 1812
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-hive
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

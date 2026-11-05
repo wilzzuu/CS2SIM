@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p2000-handgun-mwst
   gun: P2000
   name: Handgun
-  basePrice: 5.85
-  price: 5.85
+  basePrice: 585
+  price: 585
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p2000-handgun
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

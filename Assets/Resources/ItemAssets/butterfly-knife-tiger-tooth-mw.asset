@@ -15,8 +15,8 @@ MonoBehaviour:
   id: butterfly-knife-tiger-tooth-mw
   gun: Butterfly Knife
   name: Tiger Tooth
-  basePrice: 1339.05
-  price: 1339.05
+  basePrice: 133905
+  price: 133905
   condition: Minimal Wear
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: butterfly-knife-tiger-tooth
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

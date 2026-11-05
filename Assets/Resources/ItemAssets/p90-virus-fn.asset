@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-virus-fn
   gun: P90
   name: Virus
-  basePrice: 21.67
-  price: 21.67
+  basePrice: 2167
+  price: 2167
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-virus
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-tigris-ftst
   gun: CZ75-Auto
   name: Tigris
-  basePrice: 2.28
-  price: 2.28
+  basePrice: 228
+  price: 228
   condition: Field-Tested
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: cz75-auto-tigris
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

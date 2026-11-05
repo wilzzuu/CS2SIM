@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-containment-breach-bs
   gun: AWP
   name: Containment Breach
-  basePrice: 55.19
-  price: 55.19
+  basePrice: 5519
+  price: 5519
   condition: Battle-Scarred
   isStatTrak: 0
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-containment-breach
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

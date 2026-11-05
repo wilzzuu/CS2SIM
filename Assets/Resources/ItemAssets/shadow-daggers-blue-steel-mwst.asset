@@ -15,8 +15,8 @@ MonoBehaviour:
   id: shadow-daggers-blue-steel-mwst
   gun: Shadow Daggers
   name: Blue Steel
-  basePrice: 250.96
-  price: 250.96
+  basePrice: 25096
+  price: 25096
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: shadow-daggers-blue-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

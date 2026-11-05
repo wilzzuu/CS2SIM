@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-lore-fn
   gun: Gut Knife
   name: Lore
-  basePrice: 165.04
-  price: 165.04
+  basePrice: 16504
+  price: 16504
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

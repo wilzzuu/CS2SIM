@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-supernova-fn
   gun: P250
   name: Supernova
-  basePrice: 5.01
-  price: 5.01
+  basePrice: 501
+  price: 501
   condition: Factory New
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p250-supernova
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

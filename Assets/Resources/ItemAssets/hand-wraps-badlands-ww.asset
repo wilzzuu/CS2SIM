@@ -15,8 +15,8 @@ MonoBehaviour:
   id: hand-wraps-badlands-ww
   gun: Hand Wraps
   name: Badlands
-  basePrice: 176.89
-  price: 176.89
+  basePrice: 17689
+  price: 17689
   condition: Well-Worn
   isStatTrak: 0
   type: Gloves
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: hand-wraps-badlands
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

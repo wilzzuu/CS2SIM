@@ -15,8 +15,8 @@ MonoBehaviour:
   id: sg-553-triarch-fnst
   gun: SG 553
   name: Triarch
-  basePrice: 7.8
-  price: 7.8
+  basePrice: 780
+  price: 780
   condition: Factory New
   isStatTrak: 1
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: sg-553-triarch
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

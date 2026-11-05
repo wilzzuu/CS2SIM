@@ -15,8 +15,8 @@ MonoBehaviour:
   id: bowie-knife-lore-fn
   gun: Bowie Knife
   name: Lore
-  basePrice: 219.9
-  price: 219.9
+  basePrice: 21990
+  price: 21990
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: bowie-knife-lore
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

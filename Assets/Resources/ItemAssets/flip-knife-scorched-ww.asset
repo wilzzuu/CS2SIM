@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-scorched-ww
   gun: Flip Knife
   name: Scorched
-  basePrice: 127.58
-  price: 127.58
+  basePrice: 12758
+  price: 12758
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

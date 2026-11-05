@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p250-valence-mwst
   gun: P250
   name: Valence
-  basePrice: 1.22
-  price: 1.22
+  basePrice: 122
+  price: 122
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: p250-valence
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

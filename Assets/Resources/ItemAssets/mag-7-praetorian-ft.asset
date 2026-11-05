@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-praetorian-ft
   gun: MAG-7
   name: Praetorian
-  basePrice: 1.9
-  price: 1.9
+  basePrice: 190
+  price: 190
   condition: Field-Tested
   isStatTrak: 0
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-praetorian
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

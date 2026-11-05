@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-27-ww
   gun: USP-S
   name: 27
-  basePrice: 0.62
-  price: 0.62
+  basePrice: 62
+  price: 62
   condition: Well-Worn
   isStatTrak: 0
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: usp-s-27
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

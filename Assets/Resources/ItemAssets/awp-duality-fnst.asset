@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-duality-fnst
   gun: AWP
   name: Duality
-  basePrice: 29.58
-  price: 29.58
+  basePrice: 2958
+  price: 2958
   condition: Factory New
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: awp-duality
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: p90-vent-rush-fn
   gun: P90
   name: Vent Rush
-  basePrice: 2.59
-  price: 2.59
+  basePrice: 259
+  price: 259
   condition: Factory New
   isStatTrak: 0
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: p90-vent-rush
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

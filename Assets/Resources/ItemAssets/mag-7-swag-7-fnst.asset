@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mag-7-swag-7-fnst
   gun: MAG-7
   name: SWAG-7
-  basePrice: 9.88
-  price: 9.88
+  basePrice: 988
+  price: 988
   condition: Factory New
   isStatTrak: 1
   type: Shotgun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: mag-7-swag-7
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

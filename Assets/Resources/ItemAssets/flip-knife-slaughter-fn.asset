@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-slaughter-fn
   gun: Flip Knife
   name: Slaughter
-  basePrice: 332.04
-  price: 332.04
+  basePrice: 33204
+  price: 33204
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-slaughter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

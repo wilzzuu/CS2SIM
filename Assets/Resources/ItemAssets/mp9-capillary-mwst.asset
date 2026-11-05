@@ -15,8 +15,8 @@ MonoBehaviour:
   id: mp9-capillary-mwst
   gun: MP9
   name: Capillary
-  basePrice: 1.1
-  price: 1.1
+  basePrice: 110
+  price: 110
   condition: Minimal Wear
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: mp9-capillary
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

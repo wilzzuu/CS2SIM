@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-damascus-steel-mwst
   gun: M9 Bayonet
   name: Damascus Steel
-  basePrice: 529.47
-  price: 529.47
+  basePrice: 52947
+  price: 52947
   condition: Minimal Wear
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-damascus-steel
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

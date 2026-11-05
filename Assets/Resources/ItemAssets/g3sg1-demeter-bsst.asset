@@ -15,8 +15,8 @@ MonoBehaviour:
   id: g3sg1-demeter-bsst
   gun: G3SG1
   name: Demeter
-  basePrice: 6.6
-  price: 6.6
+  basePrice: 660
+  price: 660
   condition: Battle-Scarred
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: g3sg1-demeter
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

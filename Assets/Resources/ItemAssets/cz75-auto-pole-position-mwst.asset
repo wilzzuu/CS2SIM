@@ -15,8 +15,8 @@ MonoBehaviour:
   id: cz75-auto-pole-position-mwst
   gun: CZ75-Auto
   name: Pole Position
-  basePrice: 2.95
-  price: 2.95
+  basePrice: 295
+  price: 295
   condition: Minimal Wear
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.1598
   demandScore: 0
   imageName: cz75-auto-pole-position
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

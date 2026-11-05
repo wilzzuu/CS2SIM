@@ -15,8 +15,8 @@ MonoBehaviour:
   id: karambit-urban-masked-wwst
   gun: Karambit
   name: Urban Masked
-  basePrice: 660.69
-  price: 660.69
+  basePrice: 66069
+  price: 66069
   condition: Well-Worn
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: karambit-urban-masked
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

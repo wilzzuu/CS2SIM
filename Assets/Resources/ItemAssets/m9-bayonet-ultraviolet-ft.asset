@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m9-bayonet-ultraviolet-ft
   gun: M9 Bayonet
   name: Ultraviolet
-  basePrice: 387.19
-  price: 387.19
+  basePrice: 38719
+  price: 38719
   condition: Field-Tested
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: m9-bayonet-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: pp-bizon-cobalt-halftone-fnst
   gun: PP-Bizon
   name: Cobalt Halftone
-  basePrice: 7.12
-  price: 7.12
+  basePrice: 712
+  price: 712
   condition: Factory New
   isStatTrak: 1
   type: SMG
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: pp-bizon-cobalt-halftone
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

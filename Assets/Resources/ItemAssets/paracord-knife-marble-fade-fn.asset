@@ -15,8 +15,8 @@ MonoBehaviour:
   id: paracord-knife-marble-fade-fn
   gun: Paracord Knife
   name: Marble Fade
-  basePrice: 156.56
-  price: 156.56
+  basePrice: 15656
+  price: 15656
   condition: Factory New
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: paracord-knife-marble-fade
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

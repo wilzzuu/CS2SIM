@@ -15,8 +15,8 @@ MonoBehaviour:
   id: usp-s-neo-noir-fnst
   gun: USP-S
   name: Neo-Noir
-  basePrice: 164.83
-  price: 164.83
+  basePrice: 16483
+  price: 16483
   condition: Factory New
   isStatTrak: 1
   type: Pistol
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: usp-s-neo-noir
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

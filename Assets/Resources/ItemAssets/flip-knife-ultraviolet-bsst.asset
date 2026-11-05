@@ -15,8 +15,8 @@ MonoBehaviour:
   id: flip-knife-ultraviolet-bsst
   gun: Flip Knife
   name: Ultraviolet
-  basePrice: 140.92
-  price: 140.92
+  basePrice: 14092
+  price: 14092
   condition: Battle-Scarred
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: flip-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 2.58052

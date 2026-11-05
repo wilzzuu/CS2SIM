@@ -15,8 +15,8 @@ MonoBehaviour:
   id: scar-20-assault-ftst
   gun: SCAR-20
   name: Assault
-  basePrice: 0.88
-  price: 0.88
+  basePrice: 88
+  price: 88
   condition: Field-Tested
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: scar-20-assault
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

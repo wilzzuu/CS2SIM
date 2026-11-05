@@ -15,8 +15,8 @@ MonoBehaviour:
   id: ak-47-fuel-injector-mw
   gun: AK-47
   name: Fuel Injector
-  basePrice: 281.52
-  price: 281.52
+  basePrice: 28152
+  price: 28152
   condition: Minimal Wear
   isStatTrak: 0
   type: Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: ak-47-fuel-injector
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

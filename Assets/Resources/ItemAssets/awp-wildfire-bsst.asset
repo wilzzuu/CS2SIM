@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-wildfire-bsst
   gun: AWP
   name: Wildfire
-  basePrice: 94.65
-  price: 94.65
+  basePrice: 9465
+  price: 9465
   condition: Battle-Scarred
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0064
   demandScore: 0
   imageName: awp-wildfire
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

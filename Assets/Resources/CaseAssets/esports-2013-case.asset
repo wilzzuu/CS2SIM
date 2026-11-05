@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: esports-2013-case
   name: eSports 2013 Case
-  price: 65.15
+  price: 6515
   items:
   - {fileID: 11400000, guid: 8a7e501cf27c01f439e905ccabf49fcd, type: 2}
   - {fileID: 11400000, guid: cb608f8ef4c51634c999a9d30f84490e, type: 2}

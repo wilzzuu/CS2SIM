@@ -15,8 +15,8 @@ MonoBehaviour:
   id: gut-knife-scorched-ftst
   gun: Gut Knife
   name: Scorched
-  basePrice: 94.08
-  price: 94.08
+  basePrice: 9408
+  price: 9408
   condition: Field-Tested
   isStatTrak: 1
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: gut-knife-scorched
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

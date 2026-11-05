@@ -15,8 +15,8 @@ MonoBehaviour:
   id: awp-fever-dream-ftst
   gun: AWP
   name: Fever Dream
-  basePrice: 22.62
-  price: 22.62
+  basePrice: 2262
+  price: 2262
   condition: Field-Tested
   isStatTrak: 1
   type: Sniper Rifle
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.032
   demandScore: 0
   imageName: awp-fever-dream
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: m249-warbird-fnst
   gun: M249
   name: Warbird
-  basePrice: 8.8
-  price: 8.8
+  basePrice: 880
+  price: 880
   condition: Factory New
   isStatTrak: 1
   type: Machinegun
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.7992
   demandScore: 0
   imageName: m249-warbird
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177

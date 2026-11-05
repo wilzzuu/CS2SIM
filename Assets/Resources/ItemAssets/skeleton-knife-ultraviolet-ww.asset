@@ -15,8 +15,8 @@ MonoBehaviour:
   id: skeleton-knife-ultraviolet-ww
   gun: Skeleton Knife
   name: Ultraviolet
-  basePrice: 228.09
-  price: 228.09
+  basePrice: 22809
+  price: 22809
   condition: Well-Worn
   isStatTrak: 0
   type: Knife
@@ -24,4 +24,4 @@ MonoBehaviour:
   weight: 0.0026
   demandScore: 0
   imageName: skeleton-knife-ultraviolet
-  lastActivityTime: 74.406006
+  lastActivityTime: 3.7081177
