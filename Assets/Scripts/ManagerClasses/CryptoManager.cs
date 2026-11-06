@@ -191,7 +191,7 @@ public class CryptoManager : MonoBehaviour
             int cryptoPrice = _isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice;
             long cryptoOwned = _isBtcTab ? PlayerManager.Instance.GetBtcOwned() : PlayerManager.Instance.GetEthOwned();
 
-            int euroValue = Globals.MoneyUtil.RoundEuro((float)cryptoAmount * cryptoPrice / Globals.CRYPTO_SCALE);
+            int euroValue = Globals.MoneyUtil.CryptoToEuroCents(cryptoAmount, cryptoPrice);
             if (cryptoOwned >= cryptoAmount)
             {
                 PlayerManager.Instance.AddMoney(euroValue);
@@ -216,7 +216,9 @@ public class CryptoManager : MonoBehaviour
 
         if (Globals.TryParseCryptoInput(cryptoAmountInput.text, out long cryptoAmount))
         {
-            long euroValue = cryptoAmount * (_isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice) / Globals.CRYPTO_SCALE;
+            int euroValue = Globals.MoneyUtil.CryptoToEuroCents(
+                cryptoAmount,
+                _isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice);
             euroOutputText.text = $"{Globals.FormatCurrencyStr(euroValue, Globals.EURO_DECIMAL)}€";
         }
         else
@@ -295,7 +297,7 @@ public class CryptoManager : MonoBehaviour
 
         PlayerManager.Instance.DeductBtc(btcAmount);
 
-        int euroAmount = (int)(btcAmount * CryptoSystem.Instance.btcPrice / Globals.CRYPTO_SCALE);
+        int euroAmount = Globals.MoneyUtil.CryptoToEuroCents(btcAmount, CryptoSystem.Instance.btcPrice);
         PlayerManager.Instance.AddMoney(euroAmount);
 
         UpdateExchangeUI();
@@ -310,7 +312,7 @@ public class CryptoManager : MonoBehaviour
 
         PlayerManager.Instance.DeductEth(ethAmount);
 
-        int euroAmount = (int)(ethAmount * CryptoSystem.Instance.ethPrice / Globals.CRYPTO_SCALE);
+        int euroAmount = Globals.MoneyUtil.CryptoToEuroCents(ethAmount, CryptoSystem.Instance.ethPrice);
         PlayerManager.Instance.AddMoney(euroAmount);
 
         UpdateExchangeUI();

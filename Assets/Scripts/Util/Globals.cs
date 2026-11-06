@@ -82,5 +82,12 @@ public class Globals
         {
             return (long)Math.Round(rawUnits);
         }
+
+        public static int CryptoToEuroCents(long cryptoUnits, int cryptoPriceCents)
+        {
+            decimal euroCents =
+                (decimal)cryptoUnits * cryptoPriceCents / CRYPTO_SCALE;
+            return checked((int)Math.Round(euroCents, MidpointRounding.AwayFromZero));
+        }
     }
 }

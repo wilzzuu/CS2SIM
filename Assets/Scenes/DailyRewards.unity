@@ -6251,19 +6251,19 @@ MonoBehaviour:
   seventhSlotEthValueText: {fileID: 192414228}
   rewards:
   - day: 0
-    rewardAmount: 10
+    rewardAmount: 1000
   - day: 1
-    rewardAmount: 15
+    rewardAmount: 1500
   - day: 2
-    rewardAmount: 20
+    rewardAmount: 2000
   - day: 3
-    rewardAmount: 30
+    rewardAmount: 3000
   - day: 4
-    rewardAmount: 40
+    rewardAmount: 4000
   - day: 5
-    rewardAmount: 60
+    rewardAmount: 6000
   - day: 6
-    rewardAmount: 100
+    rewardAmount: 10000
   slots:
   - {fileID: 44814310}
   - {fileID: 1324672097}

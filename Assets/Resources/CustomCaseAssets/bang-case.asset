@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaseData
   id: bang-case
   name: Bang Case
-  price: 1061.22
+  price: 106122
   items:
   - {fileID: 11400000, guid: d15c1ec4e9cb7604daf1016c2afc4fb5, type: 2}
   - {fileID: 11400000, guid: c360d0509ca3f834ca0d750237c14321, type: 2}

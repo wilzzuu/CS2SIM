@@ -268,18 +268,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CryptoSystem
   autoTrader: {fileID: 0}
-  btcPrice: 100000
-  lastBtcPrice: 100000
-  btcMinMarketPrice: 10000
-  ethPrice: 5000
-  lastEthPrice: 5000
-  ethMinMarketPrice: 500
+  btcPrice: 10000000
+  lastBtcPrice: 10000000
+  btcMinMarketPrice: 1000000
+  ethPrice: 500000
+  lastEthPrice: 500000
+  ethMinMarketPrice: 50000
   maxBtcMiners: 100
   _btcMiners: 0
   maxEthMiners: 100
   _ethMiners: 0
-  btcMinerPrice: 100000
-  ethMinerPrice: 5000
+  btcMinerPrice: 10000000
+  ethMinerPrice: 500000
   _btcPerHour: 0
   _ethPerHour: 0
   currentMarketEvent: No Event
@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GiftManager
   cooldownHours: 2
-  RewardAmount: 5
+  RewardAmount: 500
   giftTimerString: No Timer
 --- !u!1 &1801615635
 GameObject:

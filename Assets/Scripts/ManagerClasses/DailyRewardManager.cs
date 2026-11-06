@@ -60,7 +60,8 @@ public class DailyRewardUI : MonoBehaviour
                 rewards.Find(r => r.day == slot.dayIndex);
 
             if (reward != null)
-                slot.rewardText.text = $"{reward.rewardAmount}€";
+                slot.rewardText.text =
+                    $"{Globals.FormatCurrencyStr(reward.rewardAmount, Globals.EURO_DECIMAL)}€";
 
             if (slot.dayIndex < DailyRewardSystem.Instance.currentDay)
             {
