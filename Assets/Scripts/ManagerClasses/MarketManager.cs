@@ -468,7 +468,7 @@ public class MarketManager : MonoBehaviour
         if (InventoryManager.Instance.HasItem(item))
         {
             InventoryManager.Instance.RemoveItemFromInventory(item);
-            LoadInventoryItems();
+            _inventoryItems.Remove(item);
             PlayerManager.Instance.AddMoney(sellingPrice);
 
             LogUtil.Economy.LogEuro(
@@ -479,6 +479,8 @@ public class MarketManager : MonoBehaviour
             );
 
             Destroy(itemPrefab);
+            int pageCount = Mathf.CeilToInt((float)_inventoryItems.Count / ItemsPerPage);
+            currentPage = Mathf.Min(currentPage, Mathf.Max(0, pageCount - 1));
             DisplayPage(currentPage);
             AdjustItemPrice(item, -1);
 
