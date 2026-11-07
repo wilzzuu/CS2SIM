@@ -186,7 +186,7 @@ public class CryptoManager : MonoBehaviour
             return;
         }
 
-        if (Globals.TryParseCryptoInput(cryptoAmountInput.text, out long cryptoAmount))
+        if (Globals.TryParseCryptoInput(cryptoAmountInput.text, out long cryptoAmount) && cryptoAmount > 0)
         {
             int cryptoPrice = _isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice;
             long cryptoOwned = _isBtcTab ? PlayerManager.Instance.GetBtcOwned() : PlayerManager.Instance.GetEthOwned();
@@ -256,7 +256,8 @@ public class CryptoManager : MonoBehaviour
     public void SellMaxCrypto()
     {
         long cryptoOwned = _isBtcTab ? PlayerManager.Instance.GetBtcOwned() : PlayerManager.Instance.GetEthOwned();
-        cryptoAmountInput.text = $"{cryptoOwned / (double)Globals.CRYPTO_SCALE}";
+        cryptoAmountInput.text = Globals.FormatCurrencyStr(cryptoOwned, Globals.CRYPTO_DECIMAL);
+        RefreshEuroOutput();
     }
 
     public bool BuyBTC(int euroAmount)
@@ -291,8 +292,7 @@ public class CryptoManager : MonoBehaviour
 
     public bool SellBTC(long btcAmount)
     {
-
-        if (btcAmount > PlayerManager.Instance.GetBtcOwned())
+        if (btcAmount <= 0 || btcAmount > PlayerManager.Instance.GetBtcOwned())
             return false;
 
         PlayerManager.Instance.DeductBtc(btcAmount);
@@ -307,7 +307,7 @@ public class CryptoManager : MonoBehaviour
 
     public bool SellETH(long ethAmount)
     {
-        if (ethAmount > PlayerManager.Instance.GetEthOwned())
+        if (ethAmount <= 0 || ethAmount > PlayerManager.Instance.GetEthOwned())
             return false;
 
         PlayerManager.Instance.DeductEth(ethAmount);
