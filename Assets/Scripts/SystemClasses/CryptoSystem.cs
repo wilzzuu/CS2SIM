@@ -111,7 +111,7 @@ public class CryptoSystem : MonoBehaviour
                 UpdateMarketPrices();
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1f);
         }
     }
 
@@ -165,7 +165,7 @@ public class CryptoSystem : MonoBehaviour
                 SaveData();
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1f);
         }
     }
 
@@ -414,14 +414,10 @@ public class CryptoSystem : MonoBehaviour
 
             currentMarketEvent = currentMarketEvent,
 
-            lastMiningUpdate =
-                lastMiningUpdate.ToString("O"),
-            nextMiningUpdate =
-                nextMiningUpdate.ToString("O"),
-            nextMarketUpdate = 
-                nextMarketUpdate.ToString("O"),
-            nextMarketEvent =
-                nextMarketEvent.ToString("O"),
+            lastMiningUpdate = Globals.FormatUtcDateTime(lastMiningUpdate),
+            nextMiningUpdate = Globals.FormatUtcDateTime(nextMiningUpdate),
+            nextMarketUpdate = Globals.FormatUtcDateTime(nextMarketUpdate),
+            nextMarketEvent = Globals.FormatUtcDateTime(nextMarketEvent),
         };
 
         string path = Path.Combine(SaveFilePath, SaveFileName);
@@ -470,37 +466,10 @@ public class CryptoSystem : MonoBehaviour
 
         currentMarketEvent = data.currentMarketEvent;
 
-        lastMiningUpdate =
-            DateTime.Parse(
-                data.lastMiningUpdate, 
-                null, 
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                 | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
-
-        nextMiningUpdate =
-            DateTime.Parse(
-                data.nextMiningUpdate, 
-                null, 
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                 | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
-
-        nextMarketUpdate =
-            DateTime.Parse(
-                data.nextMarketUpdate, 
-                null, 
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                 | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
-    
-        nextMarketEvent = 
-            DateTime.Parse(
-                data.nextMarketEvent, 
-                null, 
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                 | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
+        lastMiningUpdate = Globals.ParseUtcDateTime(data.lastMiningUpdate);
+        nextMiningUpdate = Globals.ParseUtcDateTime(data.nextMiningUpdate);
+        nextMarketUpdate = Globals.ParseUtcDateTime(data.nextMarketUpdate);
+        nextMarketEvent = Globals.ParseUtcDateTime(data.nextMarketEvent);
     }
 
     #endregion

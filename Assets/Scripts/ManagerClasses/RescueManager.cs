@@ -63,7 +63,7 @@ public class RescueManager : MonoBehaviour
         while (true)
         {
             OnRescueTimerTick?.Invoke();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1f);
         }
     }
 
@@ -131,7 +131,7 @@ public class RescueManager : MonoBehaviour
     {
         RescueSaveData data = new RescueSaveData
         {
-            nextRescueTime = _nextRescueTime.ToString("O")
+            nextRescueTime = Globals.FormatUtcDateTime(_nextRescueTime)
         };
 
         Directory.CreateDirectory(SaveFilePath);
@@ -155,10 +155,6 @@ public class RescueManager : MonoBehaviour
         string encryptedData = File.ReadAllText(path);
         string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
         RescueSaveData data = JsonUtility.FromJson<RescueSaveData>(jsonData);
-        _nextRescueTime = DateTime.Parse(
-            data.nextRescueTime,
-            null,
-            System.Globalization.DateTimeStyles.AssumeUniversal
-            | System.Globalization.DateTimeStyles.AdjustToUniversal);
+        _nextRescueTime = Globals.ParseUtcDateTime(data.nextRescueTime);
     }
 }

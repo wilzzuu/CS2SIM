@@ -254,7 +254,7 @@ public class BankManager : MonoBehaviour
             hasLoan = hasLoan,
             loanAmount = loanAmount,
             repaymentAmount = repaymentAmount,
-            dueDateTicks = _nextInterestTick.ToString("O"),
+            dueDateTicks = Globals.FormatUtcDateTime(_nextInterestTick),
             loanDays = loanDays
         };
 
@@ -274,8 +274,10 @@ public class BankManager : MonoBehaviour
             hasLoan = false;
             loanAmount = 0;
             repaymentAmount = 0;
-            _nextInterestTick = DateTime.UtcNow;
+            _nextInterestTick = DateTime.UtcNow.AddDays(1);
             loanDays = 0;
+            SaveData();
+            return;
         }
 
         string encryptedData = File.ReadAllText(path);
@@ -287,12 +289,7 @@ public class BankManager : MonoBehaviour
         hasLoan = data.hasLoan;
         loanAmount = data.loanAmount;
         repaymentAmount = data.repaymentAmount;
-        _nextInterestTick = DateTime.Parse(
-            data.dueDateTicks,
-            null,
-            System.Globalization.DateTimeStyles.AssumeUniversal
-            | 
-            System.Globalization.DateTimeStyles.AdjustToUniversal);
+        _nextInterestTick = Globals.ParseUtcDateTime(data.dueDateTicks);
         loanDays = data.loanDays;
     }
 
@@ -313,4 +310,3 @@ public class BankManager : MonoBehaviour
 
     #endregion
 }
-

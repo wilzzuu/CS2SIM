@@ -188,21 +188,10 @@ public class CryptoManager : MonoBehaviour
 
         if (Globals.TryParseCryptoInput(cryptoAmountInput.text, out long cryptoAmount) && cryptoAmount > 0)
         {
-            int cryptoPrice = _isBtcTab ? CryptoSystem.Instance.btcPrice : CryptoSystem.Instance.ethPrice;
-            long cryptoOwned = _isBtcTab ? PlayerManager.Instance.GetBtcOwned() : PlayerManager.Instance.GetEthOwned();
-
-            int euroValue = Globals.MoneyUtil.CryptoToEuroCents(cryptoAmount, cryptoPrice);
-            if (cryptoOwned >= cryptoAmount)
+            bool sold = _isBtcTab ? SellBTC(cryptoAmount) : SellETH(cryptoAmount);
+            if (sold)
             {
-                PlayerManager.Instance.AddMoney(euroValue);
-                if (_isBtcTab)
-                {
-                    PlayerManager.Instance.DeductBtc(cryptoAmount);
-                }
-                else
-                {
-                    PlayerManager.Instance.DeductEth(cryptoAmount);
-                };
+                cryptoAmountInput.text = string.Empty;
             }
         }
     }

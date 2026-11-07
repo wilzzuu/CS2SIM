@@ -70,7 +70,7 @@ public class GiftManager : MonoBehaviour
             }
 
             OnGiftTimerTick?.Invoke();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1f);
         }
     }
 
@@ -118,7 +118,7 @@ public class GiftManager : MonoBehaviour
     {
         GiftSaveData data = new GiftSaveData
         {
-            nextGiftTime = _nextGiftTime.ToString("O")
+            nextGiftTime = Globals.FormatUtcDateTime(_nextGiftTime)
         };
 
         string path = Path.Combine(SaveFilePath, SaveFileName);
@@ -146,12 +146,6 @@ public class GiftManager : MonoBehaviour
         string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
 
         GiftSaveData data = JsonUtility.FromJson<GiftSaveData>(jsonData);
-        _nextGiftTime =
-            DateTime.Parse(
-                data.nextGiftTime,
-                null,
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
+        _nextGiftTime = Globals.ParseUtcDateTime(data.nextGiftTime);
     }
 }

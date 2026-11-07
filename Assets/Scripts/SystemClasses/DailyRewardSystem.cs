@@ -85,7 +85,7 @@ public class DailyRewardSystem : MonoBehaviour
                 AlertManager.Set(AlertType.DailyRewards, false);
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1f);
         }
     }
 
@@ -153,7 +153,7 @@ public class DailyRewardSystem : MonoBehaviour
         DailyRewardSaveData data = new DailyRewardSaveData
         {
             currentDay = currentDay,
-            lastClaim = lastClaim.ToString("O")
+            lastClaim = Globals.FormatUtcDateTime(lastClaim)
         };
         
         string path = Path.Combine(SaveFilePath, SaveFileName);
@@ -183,11 +183,6 @@ public class DailyRewardSystem : MonoBehaviour
 
         currentDay = data.currentDay;
         lastClaim = 
-            DateTime.Parse(
-                data.lastClaim,
-                null,
-                System.Globalization.DateTimeStyles.AssumeUniversal
-                | 
-                System.Globalization.DateTimeStyles.AdjustToUniversal);
+            Globals.ParseUtcDateTime(data.lastClaim);
     }
 }

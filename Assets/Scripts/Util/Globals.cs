@@ -34,6 +34,19 @@ public class Globals
         return dateTime.ToLocalTime().ToString("dd'.'MM'.'yyyy @ HH':'mm':'ss");
     }
 
+    public static string FormatUtcDateTime(DateTime dateTime)
+    {
+        return dateTime.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture);
+    }
+
+    public static DateTime ParseUtcDateTime(string value)
+    {
+        return DateTime.Parse(
+            value,
+            CultureInfo.InvariantCulture,
+            DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
+    }
+
     public static string FormatCurrencyStr(long amount, int _n)
     {
         NumberFormatInfo nfi = (NumberFormatInfo)CultureInfo.InvariantCulture.NumberFormat.Clone();

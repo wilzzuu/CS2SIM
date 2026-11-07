@@ -5,6 +5,7 @@ using TMPro;
 using System.Linq;
 using System.Collections;
 using System;
+using System.Globalization;
 
 public class MarketManager : MonoBehaviour
 {
@@ -94,8 +95,37 @@ public class MarketManager : MonoBehaviour
 
     void LoadLastUpdateTimestamp()
     {
-        string lastUpdateString = PlayerPrefs.GetString(LastUpdateKey, DateTime.UtcNow.ToString());
-        _lastUpdateTimestamp = DateTime.Parse(lastUpdateString);
+        if (!PlayerPrefs.HasKey(LastUpdateKey))
+        {
+            _lastUpdateTimestamp = DateTime.UtcNow;
+            SaveLastUpdateTimestamp();
+            return;
+        }
+
+        string lastUpdateString = PlayerPrefs.GetString(LastUpdateKey);
+        if (!DateTime.TryParse(
+                lastUpdateString,
+                CultureInfo.CurrentCulture,
+                DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal,
+                out _lastUpdateTimestamp)
+            && !DateTime.TryParse(
+                lastUpdateString,
+                CultureInfo.InvariantCulture,
+                DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal,
+                out _lastUpdateTimestamp))
+        {
+            Debug.LogWarning("Invalid saved market update timestamp; resetting its schedule.");
+            _lastUpdateTimestamp = DateTime.UtcNow;
+        }
+
+        _lastUpdateTimestamp = _lastUpdateTimestamp.ToUniversalTime();
+        SaveLastUpdateTimestamp();
+    }
+
+    private void SaveLastUpdateTimestamp()
+    {
+        PlayerPrefs.SetString(LastUpdateKey, Globals.FormatUtcDateTime(_lastUpdateTimestamp));
+        PlayerPrefs.Save();
     }
 
     void ApplyRealTimeFluctuations()
@@ -118,8 +148,7 @@ public class MarketManager : MonoBehaviour
             }
 
             _lastUpdateTimestamp = currentTime;
-            PlayerPrefs.SetString(LastUpdateKey, _lastUpdateTimestamp.ToString());
-            PlayerPrefs.Save();
+            SaveLastUpdateTimestamp();
         }
     }
 
@@ -509,7 +538,7 @@ public class MarketManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(MarketEventInterval);
+            yield return new WaitForSecondsRealtime(MarketEventInterval);
 
             List<ItemData> itemsForFluctuation = _allItems.OrderBy(_ => UnityEngine.Random.value).Take(ItemsToFluctuate).ToList();
 

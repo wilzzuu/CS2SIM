@@ -45,6 +45,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        ConfigureResponsiveLayout();
 
         if (PlayerManager.Instance == null)
         {
@@ -64,6 +65,50 @@ public class UIManager : MonoBehaviour
         UpdateInventoryValueDisplay();
         UpdateBitcoinDisplay();
         UpdateEthereumDisplay();
+    }
+
+    private void ConfigureResponsiveLayout()
+    {
+        RectTransform root = GetComponent<RectTransform>();
+        Transform sidebarTransform = transform.Find("SideBar");
+        RectTransform sidebar = sidebarTransform as RectTransform;
+        Transform backgroundTransform = sidebarTransform != null ? sidebarTransform.Find("Background") : null;
+        RectTransform sidebarBackground = backgroundTransform as RectTransform;
+        RectTransform navigation = buttonsContainer != null ? buttonsContainer.GetComponent<RectTransform>() : null;
+        Image headerImage = GetComponent<Image>();
+        Image sidebarImage = backgroundTransform != null ? backgroundTransform.GetComponent<Image>() : null;
+
+        if (root == null || sidebar == null || sidebarBackground == null || navigation == null ||
+            headerImage == null || sidebarImage == null)
+        {
+            Debug.LogError("The shared UI is missing a required responsive layout component.", this);
+            return;
+        }
+
+        root.anchorMin = new Vector2(0f, root.anchorMin.y);
+        root.anchorMax = new Vector2(1f, root.anchorMax.y);
+        root.anchoredPosition = new Vector2(40f, root.anchoredPosition.y);
+        root.sizeDelta = new Vector2(-80f, root.sizeDelta.y);
+
+        sidebar.anchorMin = new Vector2(0f, sidebar.anchorMin.y);
+        sidebar.anchorMax = new Vector2(0f, sidebar.anchorMax.y);
+        sidebar.anchoredPosition = new Vector2(-40f, sidebar.anchoredPosition.y);
+        sidebarBackground.anchoredPosition = new Vector2(0f, sidebarBackground.anchoredPosition.y);
+        navigation.anchoredPosition = new Vector2(10f, navigation.anchoredPosition.y);
+
+        headerImage.color = new Color32(16, 27, 43, 255);
+        sidebarImage.color = new Color32(11, 20, 33, 255);
+
+        foreach (Button button in buttonsContainer.GetComponentsInChildren<Button>(true))
+        {
+            ColorBlock colors = button.colors;
+            colors.normalColor = new Color32(29, 43, 64, 255);
+            colors.highlightedColor = new Color32(53, 211, 192, 255);
+            colors.pressedColor = new Color32(24, 151, 145, 255);
+            colors.selectedColor = new Color32(42, 180, 167, 255);
+            colors.disabledColor = new Color32(60, 71, 89, 160);
+            button.colors = colors;
+        }
     }
 
     void OnDestroy()
