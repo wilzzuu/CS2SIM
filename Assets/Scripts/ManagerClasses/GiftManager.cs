@@ -57,7 +57,6 @@ public class GiftManager : MonoBehaviour
     {
         while (true)
         {
-            OnGiftTimerTick?.Invoke();
             TimeSpan remaining = _nextGiftTime - DateTime.UtcNow;
             bool canClaim = remaining <= TimeSpan.Zero;
 
@@ -70,6 +69,7 @@ public class GiftManager : MonoBehaviour
                 giftTimerString = $"{remaining.Hours:D2}:{remaining.Minutes:D2}:{remaining.Seconds:D2}";
             }
 
+            OnGiftTimerTick?.Invoke();
             yield return new WaitForSeconds(1f);
         }
     }
@@ -125,11 +125,13 @@ public class GiftManager : MonoBehaviour
         string jsonData = JsonUtility.ToJson(data);
         string encryptedData = DataEncryptionUtility.Encrypt(jsonData);
 
+        Directory.CreateDirectory(SaveFilePath);
         File.WriteAllText(path, encryptedData);
     }
 
     public void LoadData()
     {
+        Directory.CreateDirectory(SaveFilePath);
         string path = Path.Combine(SaveFilePath, SaveFileName);
         if (!File.Exists(path))
         {

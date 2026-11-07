@@ -319,6 +319,7 @@ public class PlayerManager : MonoBehaviour
         CryptoSystem.Instance.ClearData(true);
         DailyRewardSystem.Instance.ClearData(true);
         GiftManager.Instance.ClearData(true);
+        RescueManager.Instance.ClearData(true);
     }
 }
 

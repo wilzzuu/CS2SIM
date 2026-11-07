@@ -29,11 +29,6 @@ public static class LogUtil
         {
             try
             {
-                if (!Directory.Exists(LogDirectory))
-                {
-                    Directory.CreateDirectory(LogDirectory);
-                }
-
                 string timestamp =
                     Globals.GetFormattedDateTime(DateTime.UtcNow);
 
@@ -51,10 +46,7 @@ public static class LogUtil
                     entry += $" | DETAILS={details}";
                 }
 
-                File.AppendAllText(
-                    GetLogPath("economy"),
-                    entry + Environment.NewLine
-                );
+                AppendLog("economy", entry);
             }
             catch (Exception e)
             {
@@ -73,11 +65,6 @@ public static class LogUtil
         {
             try
             {
-                if (!Directory.Exists(LogDirectory))
-                {
-                    Directory.CreateDirectory(LogDirectory);
-                }
-
                 string timestamp =
                     Globals.GetFormattedDateTime(DateTime.UtcNow);
 
@@ -95,10 +82,7 @@ public static class LogUtil
                     entry += $" | DETAILS={details}";
                 }
 
-                File.AppendAllText(
-                    GetLogPath("economy"),
-                    entry + Environment.NewLine
-                );
+                AppendLog("economy", entry);
             }
             catch (Exception e)
             {
@@ -121,11 +105,6 @@ public static class LogUtil
         {
             try
             {
-                if (!Directory.Exists(LogDirectory))
-                {
-                    Directory.CreateDirectory(LogDirectory);
-                }
-
                 string timestamp =
                     Globals.GetFormattedDateTime(DateTime.UtcNow);
 
@@ -139,10 +118,7 @@ public static class LogUtil
                     entry += $" | DETAILS={details}";
                 }
 
-                File.AppendAllText(
-                    GetLogPath("event"),
-                    entry + Environment.NewLine
-                );
+                AppendLog("event", entry);
             }
             catch (Exception e)
             {
@@ -162,11 +138,6 @@ public static class LogUtil
         {
             try
             {
-                if (!Directory.Exists(LogDirectory))
-                {
-                    Directory.CreateDirectory(LogDirectory);
-                }
-
                 string timestamp =
                     Globals.GetFormattedDateTime(DateTime.UtcNow);
 
@@ -184,10 +155,7 @@ public static class LogUtil
                     entry += $" | DETAILS={details}";
                 }
 
-                File.AppendAllText(
-                    GetLogPath("console"),
-                    entry + Environment.NewLine
-                );
+                AppendLog("console", entry);
             }
             catch (Exception e)
             {
@@ -202,5 +170,12 @@ public static class LogUtil
     {
         string LogFile = Path.Combine(LogDirectory, $"{char.ToUpper(_loggerName[0]) + _loggerName[1..]}Logs" ,$"{_loggerName}_{DateTime.Now:yyyy-MM-dd}.txt");
         return LogFile;
+    }
+
+    private static void AppendLog(string loggerName, string entry)
+    {
+        string logPath = GetLogPath(loggerName);
+        Directory.CreateDirectory(Path.GetDirectoryName(logPath));
+        File.AppendAllText(logPath, entry + Environment.NewLine);
     }
 }
