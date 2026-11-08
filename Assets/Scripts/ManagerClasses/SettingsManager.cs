@@ -10,4 +10,9 @@ public class SettingsManager : MonoBehaviour
         PlayerManager.Instance.ResetProgress();
         SceneManager.LoadScene(1);
     }
+
+    public void ClaimRescue()
+    {
+        RescueManager.Instance.Claim();
+    }
 }
