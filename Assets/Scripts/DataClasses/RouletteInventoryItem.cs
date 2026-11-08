@@ -12,7 +12,7 @@ public class RouletteInventoryItem : MonoBehaviour
     public Button chooseButton;
     public TextMeshProUGUI buttonText;
 
-    public void Setup(ItemData item, bool isItemSelected)
+    public void Setup(ItemData item, bool isItemSelected, int inventoryIndex)
     {
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.imageName}");
         rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
@@ -23,13 +23,13 @@ public class RouletteInventoryItem : MonoBehaviour
         if (!isItemSelected)
         {
             chooseButton.onClick.RemoveAllListeners();
-            chooseButton.onClick.AddListener(() => RouletteManager.Instance.AddItemToSelection(item));
+            chooseButton.onClick.AddListener(() => RouletteManager.Instance.AddItemToSelection(inventoryIndex));
             buttonText.text = "Select";
         }
         else
         {
             chooseButton.onClick.RemoveAllListeners();
-            chooseButton.onClick.AddListener(() => RouletteManager.Instance.RemoveItemFromSelection(item));
+            chooseButton.onClick.AddListener(() => RouletteManager.Instance.RemoveItemFromSelection(inventoryIndex));
             buttonText.text = "Unselect";
         }
     }

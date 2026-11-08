@@ -26,9 +26,8 @@ public class RouletteManager : MonoBehaviour
 
     private List<ItemData> _allItems = new List<ItemData>();
     private List<ItemData> _playerItems = new List<ItemData>();
-    private readonly List<ItemData> _selectedPlayerItems = new List<ItemData>();
+    private readonly List<int> _selectedPlayerItemIndices = new List<int>();
     private readonly List<RouletteItem> _reelItems = new List<RouletteItem>();
-    private readonly Dictionary<ItemData, bool> _itemOwnership = new Dictionary<ItemData, bool>();
 
     public int numberOfReelItems = 60;
     public float easingDuration = 7f;
@@ -101,7 +100,7 @@ public class RouletteManager : MonoBehaviour
         for (int i = startIndex; i < endIndex; i++)
         {
             GameObject itemObj = Instantiate(inventoryItemPrefab, inventoryCatalogGrid);
-            itemObj.GetComponent<RouletteInventoryItem>().Setup(_playerItems[i], _selectedPlayerItems.Contains(_playerItems[i]));
+            itemObj.GetComponent<RouletteInventoryItem>().Setup(_playerItems[i], _selectedPlayerItemIndices.Contains(i), i);
         }
 
         currentPageText.text = ((pageCount > 0) ? page+1 : page).ToString();
@@ -129,26 +128,33 @@ public class RouletteManager : MonoBehaviour
         }
     }
 
-    public void AddItemToSelection(ItemData item)
+    public void AddItemToSelection(int inventoryIndex)
     {
-        if (_selectedPlayerItems.Contains(item) || _selectedPlayerItems.Count >= 12)
+        if (inventoryIndex < 0 || inventoryIndex >= _playerItems.Count)
         {
-            Debug.LogWarning("Cannot select duplicates or more than 12 items.");
+            Debug.LogWarning("Cannot select an invalid inventory item.");
             return;
         }
 
-        _selectedPlayerItems.Add(item);
+        if (_selectedPlayerItemIndices.Contains(inventoryIndex) || _selectedPlayerItemIndices.Count >= 12)
+        {
+            Debug.LogWarning("Cannot select more than 12 items or select the same inventory item twice.");
+            return;
+        }
+
+        ItemData item = _playerItems[inventoryIndex];
+        _selectedPlayerItemIndices.Add(inventoryIndex);
         _totalPlayerValue += item.price;
         selectedPlayerItemsTotalValue.text = $"Total Value: {Globals.FormatCurrencyStr(_totalPlayerValue, Globals.EURO_DECIMAL)}€";
 
         UpdateSelectedItemsGrid();
     }
 
-    public void RemoveItemFromSelection(ItemData item)
+    public void RemoveItemFromSelection(int inventoryIndex)
     {
-        if (_selectedPlayerItems.Remove(item))
+        if (_selectedPlayerItemIndices.Remove(inventoryIndex))
         {
-            _totalPlayerValue -= item.price;
+            _totalPlayerValue -= _playerItems[inventoryIndex].price;
             selectedPlayerItemsTotalValue.text = $"Total Value: {Globals.FormatCurrencyStr(_totalPlayerValue, Globals.EURO_DECIMAL)}€";
         }
 
@@ -162,16 +168,16 @@ public class RouletteManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        foreach (var item in _selectedPlayerItems)
+        foreach (int inventoryIndex in _selectedPlayerItemIndices)
         {
             GameObject itemObj = Instantiate(inventoryItemPrefab, selectedItemsGrid);
-            itemObj.GetComponent<RouletteInventoryItem>().Setup(item, true);
+            itemObj.GetComponent<RouletteInventoryItem>().Setup(_playerItems[inventoryIndex], true, inventoryIndex);
         }
     }
 
     void ConfirmSelection()
     {
-        if (_selectedPlayerItems.Count < 1)
+        if (_selectedPlayerItemIndices.Count < 1)
         {
             Debug.LogWarning("Select at least one item to start.");
             return;
@@ -197,7 +203,7 @@ public class RouletteManager : MonoBehaviour
 
     void StartGame()
     {
-        if (_isScrolling || _selectedPlayerItems.Count == 0 || _reelItems.Count == 0) return;
+        if (_isScrolling || _selectedPlayerItemIndices.Count == 0 || _reelItems.Count == 0) return;
 
         foreach (Transform child in reelContainer)
         {
@@ -276,7 +282,7 @@ public class RouletteManager : MonoBehaviour
 
             foreach (var item in _reelItems)
             {
-                if (!_itemOwnership[item.Item])
+                if (!item.OwnerIsPlayer)
                 {
                     uniqueBotItemsToAdd.Add(item.Item);
                 }
@@ -291,9 +297,9 @@ public class RouletteManager : MonoBehaviour
         }
         else
         {
-            foreach (var item in _selectedPlayerItems)
+            foreach (int inventoryIndex in _selectedPlayerItemIndices)
             {
-                InventoryManager.Instance.RemoveItemFromInventory(item);
+                InventoryManager.Instance.RemoveItemFromInventory(_playerItems[inventoryIndex]);
             }
             outcomeText.text = "You lost!";
         }
@@ -320,12 +326,12 @@ public class RouletteManager : MonoBehaviour
 
     void UpdateUI()
     {
-        int totalPlayerItemValue = _selectedPlayerItems.Sum(item => item.price);
+        int totalPlayerItemValue = _selectedPlayerItemIndices.Sum(index => _playerItems[index].price);
         int totalUniqueBotValue = _accumulatedBotValue;
 
         _totalGameValue = totalPlayerItemValue + totalUniqueBotValue;
 
-        int playerItemCount = _selectedPlayerItems.Count;
+        int playerItemCount = _selectedPlayerItemIndices.Count;
         int reelItemCount = _reelItems.Count;
 
         _winChance = reelItemCount > 0 ? (float)playerItemCount / reelItemCount * 100f : 0f;
@@ -339,17 +345,16 @@ public class RouletteManager : MonoBehaviour
     void GenerateBotsAndPopulateReel()
     {
         _reelItems.Clear();
-        _itemOwnership.Clear();
         _accumulatedBotValue = 0;
 
-        foreach (var playerItem in _selectedPlayerItems)
+        foreach (int inventoryIndex in _selectedPlayerItemIndices)
         {
+            ItemData playerItem = _playerItems[inventoryIndex];
             var playerRouletteItem = new RouletteItem { Item = playerItem, OwnerIsPlayer = true };
             _reelItems.Add(playerRouletteItem);
-            _itemOwnership[playerItem] = true;
         }
 
-        int playerItemCount = _selectedPlayerItems.Count;
+        int playerItemCount = _selectedPlayerItemIndices.Count;
         int botItemsCount = Mathf.Clamp(playerItemCount * 5, 1, numberOfReelItems - playerItemCount);
 
         float scalingFactor = (float)numberOfReelItems / playerItemCount;
@@ -361,7 +366,6 @@ public class RouletteManager : MonoBehaviour
             var botItem = GenerateRandomBotItem(botItemTargetValue / botItemsCount, usedBotItems);
             var botRouletteItem = new RouletteItem { Item = botItem, OwnerIsPlayer = false };
             _reelItems.Add(botRouletteItem);
-            _itemOwnership[botItem] = false;
             _accumulatedBotValue += botItem.price;
         }
 
@@ -419,9 +423,8 @@ public class RouletteManager : MonoBehaviour
     void RestartGame()
     {
         LoadInventoryItems();
-        _selectedPlayerItems.Clear();
+        _selectedPlayerItemIndices.Clear();
         _reelItems.Clear();
-        _itemOwnership.Clear();
 
         foreach (Transform child in reelContainer)
         {
