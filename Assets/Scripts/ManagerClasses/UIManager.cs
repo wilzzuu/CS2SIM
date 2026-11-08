@@ -75,11 +75,8 @@ public class UIManager : MonoBehaviour
         Transform backgroundTransform = sidebarTransform != null ? sidebarTransform.Find("Background") : null;
         RectTransform sidebarBackground = backgroundTransform as RectTransform;
         RectTransform navigation = buttonsContainer != null ? buttonsContainer.GetComponent<RectTransform>() : null;
-        Image headerImage = GetComponent<Image>();
-        Image sidebarImage = backgroundTransform != null ? backgroundTransform.GetComponent<Image>() : null;
 
-        if (root == null || sidebar == null || sidebarBackground == null || navigation == null ||
-            headerImage == null || sidebarImage == null)
+        if (root == null || sidebar == null || sidebarBackground == null || navigation == null)
         {
             Debug.LogError("The shared UI is missing a required responsive layout component.", this);
             return;
@@ -95,20 +92,6 @@ public class UIManager : MonoBehaviour
         sidebar.anchoredPosition = new Vector2(-40f, sidebar.anchoredPosition.y);
         sidebarBackground.anchoredPosition = new Vector2(0f, sidebarBackground.anchoredPosition.y);
         navigation.anchoredPosition = new Vector2(10f, navigation.anchoredPosition.y);
-
-        headerImage.color = new Color32(16, 27, 43, 255);
-        sidebarImage.color = new Color32(11, 20, 33, 255);
-
-        foreach (Button button in buttonsContainer.GetComponentsInChildren<Button>(true))
-        {
-            ColorBlock colors = button.colors;
-            colors.normalColor = new Color32(29, 43, 64, 255);
-            colors.highlightedColor = new Color32(53, 211, 192, 255);
-            colors.pressedColor = new Color32(24, 151, 145, 255);
-            colors.selectedColor = new Color32(42, 180, 167, 255);
-            colors.disabledColor = new Color32(60, 71, 89, 160);
-            button.colors = colors;
-        }
     }
 
     void OnDestroy()
