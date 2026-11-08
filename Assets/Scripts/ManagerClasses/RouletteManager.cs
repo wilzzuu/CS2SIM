@@ -212,6 +212,9 @@ public class RouletteManager : MonoBehaviour
 
         reelContainer.localPosition = _initialReelPosition;
         RouletteItem winningItem = GetRandomReelItem();
+        _winningItemIndex = Random.Range(_reelItems.Count / 2, _reelItems.Count - 4);
+        _reelItems[_winningItemIndex] = winningItem;
+        SettleOutcome(winningItem);
         StartCoroutine(AnimateScrollingReel(winningItem));
     }
 
@@ -239,9 +242,6 @@ public class RouletteManager : MonoBehaviour
         float totalReelWidth = itemWidth * _reelItems.Count;
         _reelTransform.sizeDelta = new Vector2(totalReelWidth, _reelTransform.sizeDelta.y);
 
-        _winningItemIndex = Random.Range(_reelItems.Count / 2, _reelItems.Count - 4);
-        _reelItems[_winningItemIndex] = winningItem;
-
         for (int i = 0; i < _reelItems.Count; i++)
         {
             var itemData = _reelItems[i];
@@ -266,7 +266,7 @@ public class RouletteManager : MonoBehaviour
         }
 
         reelContainer.localPosition = new Vector3(targetPosition, reelContainer.localPosition.y, 0);
-        EvaluateOutcome(winningItem);
+        outcomeText.text = winningItem.OwnerIsPlayer ? "You won!" : "You lost!";
         _isScrolling = false;
         uiManager.UnlockUI();
         startGameButton.interactable = false;
@@ -274,7 +274,7 @@ public class RouletteManager : MonoBehaviour
         backButton.interactable = false;
     }
 
-    private void EvaluateOutcome(RouletteItem winningItem)
+    private void SettleOutcome(RouletteItem winningItem)
     {
         if (winningItem.OwnerIsPlayer)
         {
@@ -293,7 +293,6 @@ public class RouletteManager : MonoBehaviour
                 InventoryManager.Instance.AddItemToInventory(uniqueBotItem);
                 CollectionManager.Instance.AddItemToCollection(uniqueBotItem);
             }
-            outcomeText.text = "You won!";
         }
         else
         {
@@ -301,9 +300,7 @@ public class RouletteManager : MonoBehaviour
             {
                 InventoryManager.Instance.RemoveItemFromInventory(_playerItems[inventoryIndex]);
             }
-            outcomeText.text = "You lost!";
         }
-        replayButton.interactable = true;
     }
 
     private void SetUpReelItem(GameObject reelItem, ItemData itemData, bool isPlayerOwned)
