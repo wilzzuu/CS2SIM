@@ -78,7 +78,7 @@ public class RouletteManager : MonoBehaviour
 
     void LoadInventoryItems()
     {
-        _playerItems = InventoryManager.Instance.GetAllItems();
+        _playerItems = InventoryManager.Instance.GetUnlockedItems();
     }
 
     private void PopulateInventoryCatalog(int page)
@@ -143,6 +143,12 @@ public class RouletteManager : MonoBehaviour
         }
 
         ItemData item = _playerItems[inventoryIndex];
+        if (item.isLocked)
+        {
+            Debug.LogWarning("Cannot select a locked item for roulette.");
+            return;
+        }
+
         _selectedPlayerItemIndices.Add(inventoryIndex);
         _totalPlayerValue += item.price;
         selectedPlayerItemsTotalValue.text = $"Total Value: {Globals.FormatCurrencyStr(_totalPlayerValue, Globals.EURO_DECIMAL)}€";

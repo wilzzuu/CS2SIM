@@ -214,7 +214,7 @@ public class UpgraderManager : MonoBehaviour
 
     void LoadInventoryItems()
     {
-        _inventoryItems = InventoryManager.Instance.GetAllItems();
+        _inventoryItems = InventoryManager.Instance.GetUnlockedItems();
     }
 
     public void ShowInventoryTab()
@@ -239,6 +239,12 @@ public class UpgraderManager : MonoBehaviour
 
     public void SelectInventoryItem(ItemData item)
     {
+        if (item.isLocked)
+        {
+            Debug.LogWarning("Cannot select a locked item for upgrading.");
+            return;
+        }
+
         _selectedInventoryItem = item;
         upgradeTabButton.interactable = _selectedInventoryItem != null;
         SetMultiplierButtons(true);
@@ -328,6 +334,11 @@ public class UpgraderManager : MonoBehaviour
     public void AttemptUpgrade()
     {
         if (_selectedInventoryItem == null || _selectedUpgradeItem == null) return;
+        if (_selectedInventoryItem.isLocked)
+        {
+            Debug.LogWarning("Cannot upgrade a locked item.");
+            return;
+        }
         if (_selectedInventoryItem == _selectedUpgradeItem) return;
 
         float chance = Random.value;

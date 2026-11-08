@@ -45,6 +45,13 @@ public class InventoryScreen : MonoBehaviour
         {
             GameObject slot = Instantiate(inventorySlotPrefab, inventoryGrid);
             ItemData item = _items[i];
+            InventoryItemLockToggle lockToggle = slot.GetComponent<InventoryItemLockToggle>();
+            if (lockToggle == null)
+            {
+                Debug.LogError("Inventory slot prefab is missing InventoryItemLockToggle.");
+                continue;
+            }
+            lockToggle.Setup(item);
 
             Image itemImage = slot.transform.Find("ItemImage")?.GetComponent<Image>();
             Image rarityImage = slot.transform.Find("RarityImage")?.GetComponent<Image>();

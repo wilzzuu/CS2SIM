@@ -12,6 +12,7 @@ public class SerializableItemData
     public string rarity;
     public float weight;
     public int demandScore;
+    public bool isLocked;
 
     public SerializableItemData(ItemData item)
     {
@@ -26,5 +27,6 @@ public class SerializableItemData
         rarity = item.rarity;
         weight = item.weight;
         demandScore = item.demandScore;
+        isLocked = item.isLocked;
     }
 }

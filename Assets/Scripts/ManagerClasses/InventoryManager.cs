@@ -51,13 +51,30 @@ public class InventoryManager : MonoBehaviour
         foreach (SerializableItemData sItem in serializableItems)
         {
             string itemPath = $"ItemAssets/{sItem.id}";
-            ItemData item = Resources.Load<ItemData>(itemPath);
-            if (item != null)
+            ItemData itemAsset = Resources.Load<ItemData>(itemPath);
+            if (itemAsset != null)
             {
+                ItemData item = CreateInventoryCopy(itemAsset);
+                item.isLocked = sItem.isLocked;
                 items.Add(item);
             }
         }
         return items;
+    }
+
+    private ItemData CreateInventoryCopy(ItemData source)
+    {
+        int price = source.price;
+        int demandScore = source.demandScore;
+        float lastActivityTime = source.lastActivityTime;
+        bool isLocked = source.isLocked;
+
+        ItemData copy = Instantiate(source);
+        copy.price = price;
+        copy.demandScore = demandScore;
+        copy.lastActivityTime = lastActivityTime;
+        copy.isLocked = isLocked;
+        return copy;
     }
 
     public bool HasItem(ItemData item)
@@ -67,7 +84,23 @@ public class InventoryManager : MonoBehaviour
 
     public void RemoveItemFromInventory(ItemData item)
     {
+        if (item.isLocked)
+        {
+            Debug.LogWarning("Cannot remove a locked item from the inventory.");
+            return;
+        }
+
         if (_inventoryItems.Remove(item))
+        {
+            SaveInventory();
+            OnInventoryValueChanged?.Invoke();
+        }
+    }
+
+    public void RemoveItemsFromInventory(List<ItemData> items)
+    {
+        int removedCount = _inventoryItems.RemoveAll(item => !item.isLocked && items.Contains(item));
+        if (removedCount > 0)
         {
             SaveInventory();
             OnInventoryValueChanged?.Invoke();
@@ -76,9 +109,22 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItemToInventory(ItemData item)
     {
-        _inventoryItems.Add(item);
+        _inventoryItems.Add(CreateInventoryCopy(item));
         SaveInventory();
         OnInventoryValueChanged?.Invoke();
+    }
+
+    public bool SetItemLocked(ItemData item, bool isLocked)
+    {
+        if (!_inventoryItems.Contains(item))
+        {
+            Debug.LogWarning("Cannot change the lock state of an item that is not in the inventory.");
+            return false;
+        }
+
+        item.isLocked = isLocked;
+        SaveInventory();
+        return true;
     }
 
     public void AddRandomItemToInventory()
@@ -96,6 +142,11 @@ public class InventoryManager : MonoBehaviour
     public List<ItemData> GetAllItems()
     {
         return new List<ItemData>(_inventoryItems);
+    }
+
+    public List<ItemData> GetUnlockedItems()
+    {
+        return _inventoryItems.FindAll(item => !item.isLocked);
     }
 
     public int CalculateInventoryValue()

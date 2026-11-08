@@ -159,7 +159,7 @@ public class MarketManager : MonoBehaviour
 
     void LoadInventoryItems()
     {
-        _inventoryItems = InventoryManager.Instance.GetAllItems();
+        _inventoryItems = InventoryManager.Instance.GetUnlockedItems();
     }
 
     public void ShowBuyTab()
@@ -470,11 +470,11 @@ public class MarketManager : MonoBehaviour
 
     public void SellAllItems()
     {
-        List<ItemData> _items = InventoryManager.Instance.GetAllItems();
-        int inventoryValue = InventoryManager.Instance.CalculateInventoryValue(); 
+        List<ItemData> _items = InventoryManager.Instance.GetUnlockedItems();
+        int inventoryValue = _items.Sum(item => item.price);
         if (_items.Count > 0)
         {
-            InventoryManager.Instance.ClearInventory(false);
+            InventoryManager.Instance.RemoveItemsFromInventory(_items);
             PlayerManager.Instance.AddMoney(inventoryValue);
             
             foreach (ItemData item in _items)
@@ -487,6 +487,12 @@ public class MarketManager : MonoBehaviour
 
     public void SellItem(ItemData item, GameObject itemPrefab)
     {
+        if (item.isLocked)
+        {
+            Debug.LogWarning("Cannot sell a locked item.");
+            return;
+        }
+
         if (Time.time - _lastInteractionTime < interactionCooldown)
         {
             Debug.LogWarning("Sell button is being clicked too fast.");
