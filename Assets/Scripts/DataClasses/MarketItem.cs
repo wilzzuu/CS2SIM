@@ -7,7 +7,7 @@ public class MarketplaceItem : MonoBehaviour
     public Image itemImage;
     public Image rarityImage;
     public TextMeshProUGUI conditionText;
-    public TextMeshProUGUI statTrakText;
+    public Image statTrakImage;
     public TextMeshProUGUI gunText;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI priceText;
@@ -17,24 +17,22 @@ public class MarketplaceItem : MonoBehaviour
 
     private ItemData _itemData;
 
-    private const float BuyMarkup = 1.15f;
+    private const float BuyMarkup = 1.025f;
 
     public void Setup(ItemData item, bool isBuying)
     {
         _itemData = item;
         
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{_itemData.imageName}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{_itemData.rarity}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{_itemData.rarity}_MARKET");
         conditionText.text = _itemData.condition;
         if (_itemData.isStatTrak)
         {
-            statTrakText.text = Globals.StatTrakUIText;
-            statTrakText.gameObject.SetActive(true);
+            statTrakImage.gameObject.SetActive(true);
         }
         else
         {
-            statTrakText.text = null;
-            statTrakText.gameObject.SetActive(false);
+            statTrakImage.gameObject.SetActive(false);
         }
 
         gunText.text = _itemData.gun;

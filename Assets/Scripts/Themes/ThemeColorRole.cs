@@ -1,0 +1,22 @@
+public enum ThemeColorRole
+{
+    None,
+    Background,
+    Surface,
+    SecondarySurface,
+    ElevatedSurface,
+    NavigationSurface,
+    Button,
+    Border,
+    PrimaryText,
+    SecondaryText,
+    MutedText,
+    Accent,
+    AccentHover,
+    AccentPressed,
+    AccentSubtle,
+    Success,
+    Warning,
+    Danger,
+    Information
+}

@@ -12,6 +12,15 @@ public class ConditionData
         { Condition.FactoryNew, "Factory New" }
     };
 
+    public static readonly Dictionary<string, string> ShortName = new Dictionary<string, string>
+    {
+        { "Battle-Scarred", "BS" },
+        { "Well-Worn", "WW" },
+        { "Field-Tested", "FT" },
+        { "Minimal Wear", "MW" },
+        { "Factory New", "FN" }
+    };
+
     public static readonly Dictionary<string, int> Order = new Dictionary<string, int>
     {
         { Name[Condition.BattleScarred], 1 },

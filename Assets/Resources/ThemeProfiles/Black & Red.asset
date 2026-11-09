@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d207c757bc4e5fb526f33274686aa5, type: 3}
+  m_Name: Black & Red
+  m_EditorClassIdentifier: 
+  id: black-red
+  displayName: Black & Red
+  description: A dark competitive-style palette with sharp red accents and restrained crimson surfaces.
+  background: {r: 0.054902, g: 0.031373, b: 0.039216, a: 1}
+  surface: {r: 0.094118, g: 0.062745, b: 0.074510, a: 1}
+  secondarySurface: {r: 0.145098, g: 0.090196, b: 0.105882, a: 1}
+  elevatedSurface: {r: 0.200000, g: 0.125490, b: 0.152941, a: 1}
+  navigationSurface: {r: 0.125490, g: 0.078431, b: 0.094118, a: 1}
+  buttonSurface: {r: 0.278431, g: 0.129412, b: 0.168627, a: 1}
+  border: {r: 0.352941, g: 0.188235, b: 0.231373, a: 1}
+  primaryText: {r: 1.000000, g: 0.952941, b: 0.956863, a: 1}
+  secondaryText: {r: 0.843137, g: 0.749020, b: 0.764706, a: 1}
+  mutedText: {r: 0.643137, g: 0.529412, b: 0.552941, a: 1}
+  accent: {r: 1.000000, g: 0.250980, b: 0.345098, a: 1}
+  accentHover: {r: 1.000000, g: 0.419608, b: 0.490196, a: 1}
+  accentPressed: {r: 0.850980, g: 0.137255, b: 0.250980, a: 1}
+  accentSubtle: {r: 0.258824, g: 0.098039, b: 0.137255, a: 1}
+  success: {r: 0.329412, g: 0.839216, b: 0.603922, a: 1}
+  warning: {r: 0.941176, g: 0.764706, b: 0.419608, a: 1}
+  danger: {r: 1.000000, g: 0.325490, b: 0.407843, a: 1}
+  information: {r: 0.458824, g: 0.709804, b: 0.941176, a: 1}

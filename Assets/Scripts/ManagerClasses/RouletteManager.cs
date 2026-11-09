@@ -17,10 +17,12 @@ public class RouletteManager : MonoBehaviour
     public Transform selectedItemsGrid;
     public TextMeshProUGUI selectedPlayerItemsTotalValue, chanceOfWinningText, totalValueText, totalPlayerValueText, outcomeText;
     public Button startGameButton, confirmSelectionButton, replayButton, backButton;
+    public TMP_Dropdown sortDropdown;
+    public Toggle ascendingToggle;
 
-    public TextMeshProUGUI currentPageText;
-    public TextMeshProUGUI maxPageText;
-    private int currentPage;
+    public TextMeshProUGUI pageIndicatorText;
+    private int _currentPage;
+    private int _totalPages;
 
     const int ItemsPerPage = 28;
 
@@ -52,8 +54,19 @@ public class RouletteManager : MonoBehaviour
 
     void Start()
     {
+        if (uiManager == null) uiManager = FindAnyObjectByType<UIManager>();
+
         LoadAllGameItems();
         LoadInventoryItems();
+
+        if (sortDropdown != null)
+        {
+            sortDropdown.onValueChanged.AddListener(delegate { SortItems(); });
+        }
+        if (ascendingToggle != null)
+        {
+            ascendingToggle.onValueChanged.AddListener(delegate { SortItems(); });
+        }
 
         confirmSelectionButton.onClick.AddListener(ConfirmSelection);
         startGameButton.onClick.AddListener(StartGame);
@@ -67,8 +80,9 @@ public class RouletteManager : MonoBehaviour
         itemSelectorView.SetActive(true);
         gameView.SetActive(false);
 
-        currentPage = 0;
-        PopulateInventoryCatalog(currentPage);
+        _currentPage = 0;
+        _totalPages = Mathf.CeilToInt((float)_playerItems.Count / ItemsPerPage);
+        PopulateInventoryCatalog(_currentPage);
     }
 
     void LoadAllGameItems()
@@ -79,6 +93,54 @@ public class RouletteManager : MonoBehaviour
     void LoadInventoryItems()
     {
         _playerItems = InventoryManager.Instance.GetUnlockedItems();
+        _playerItems = GetSortedPlayerItems(_playerItems);
+    }
+
+    public void SortItems()
+    {
+        if (sortDropdown == null || sortDropdown.options.Count == 0) return;
+        if (sortDropdown.options[sortDropdown.value].text == "Random")
+        {
+            Globals.RandomizeItemSortOrder();
+        }
+
+        List<ItemData> selectedItems = _selectedPlayerItemIndices
+            .Where(index => index >= 0 && index < _playerItems.Count)
+            .Select(index => _playerItems[index])
+            .ToList();
+
+        _playerItems = GetSortedPlayerItems(_playerItems);
+        _selectedPlayerItemIndices.Clear();
+
+        var usedIndices = new HashSet<int>();
+        foreach (ItemData selectedItem in selectedItems)
+        {
+            for (int i = 0; i < _playerItems.Count; i++)
+            {
+                if (!usedIndices.Contains(i) && ReferenceEquals(_playerItems[i], selectedItem))
+                {
+                    usedIndices.Add(i);
+                    _selectedPlayerItemIndices.Add(i);
+                    break;
+                }
+            }
+        }
+
+        _currentPage = 0;
+        PopulateInventoryCatalog(_currentPage);
+        UpdateSelectedItemsGrid();
+    }
+
+    private List<ItemData> GetSortedPlayerItems(List<ItemData> items)
+    {
+        if (sortDropdown == null || sortDropdown.options.Count == 0)
+        {
+            return items;
+        }
+
+        string criteria = sortDropdown.options[sortDropdown.value].text;
+        bool ascending = ascendingToggle == null || ascendingToggle.isOn;
+        return Globals.SortItems(items, criteria, ascending);
     }
 
     private void PopulateInventoryCatalog(int page)
@@ -103,8 +165,7 @@ public class RouletteManager : MonoBehaviour
             itemObj.GetComponent<RouletteInventoryItem>().Setup(_playerItems[i], _selectedPlayerItemIndices.Contains(i), i);
         }
 
-        currentPageText.text = ((pageCount > 0) ? page+1 : page).ToString();
-        maxPageText.text = pageCount.ToString();
+        pageIndicatorText.text = $"Page {_currentPage + 1} of {_totalPages}";
     }
 
     public void NextPage()
@@ -112,19 +173,19 @@ public class RouletteManager : MonoBehaviour
         int itemsCount = _playerItems.Count;
         int pageCount = Mathf.CeilToInt((float)itemsCount / ItemsPerPage);
 
-        if (currentPage < pageCount - 1)
+        if (_currentPage < pageCount - 1)
         {
-            currentPage++;
-            PopulateInventoryCatalog(currentPage);
+            _currentPage++;
+            PopulateInventoryCatalog(_currentPage);
         }
     }
 
     public void PreviousPage()
     {
-        if (currentPage > 0)
+        if (_currentPage > 0)
         {
-            currentPage--;
-            PopulateInventoryCatalog(currentPage);
+            _currentPage--;
+            PopulateInventoryCatalog(_currentPage);
         }
     }
 
@@ -312,14 +373,10 @@ public class RouletteManager : MonoBehaviour
     private void SetUpReelItem(GameObject reelItem, ItemData itemData, bool isPlayerOwned)
     {
         Image itemImage = reelItem.transform.Find("ItemImage").GetComponent<Image>();
-        Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
-        TextMeshProUGUI ownerText = reelItem.transform.Find("OwnerText").GetComponent<TextMeshProUGUI>();
+        Image ownerImage = reelItem.transform.Find("OwnerImage").GetComponent<Image>();
 
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.imageName}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
-
-        ownerText.text = isPlayerOwned ? "Player" : "Bot";
-        ownerText.color = isPlayerOwned ? Color.green : Color.red;
+        ownerImage.sprite = Resources.Load<Sprite>($"Images/General/{(isPlayerOwned ? "Player" : "House")}");
     }
 
     private float ErateOutQuint(float t)
@@ -425,9 +482,9 @@ public class RouletteManager : MonoBehaviour
 
     void RestartGame()
     {
-        LoadInventoryItems();
         _selectedPlayerItemIndices.Clear();
         _reelItems.Clear();
+        LoadInventoryItems();
 
         foreach (Transform child in reelContainer)
         {

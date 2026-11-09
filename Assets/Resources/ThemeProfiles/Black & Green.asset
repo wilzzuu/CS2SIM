@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d207c757bc4e5fb526f33274686aa5, type: 3}
+  m_Name: Black & Green
+  m_EditorClassIdentifier: 
+  id: black-green
+  displayName: Black & Green
+  description: A sleek black interface energized by vivid green accents and subtle emerald surfaces.
+  background: {r: 0.031373, g: 0.050980, b: 0.039216, a: 1}
+  surface: {r: 0.062745, g: 0.094118, b: 0.070588, a: 1}
+  secondarySurface: {r: 0.090196, g: 0.141176, b: 0.101961, a: 1}
+  elevatedSurface: {r: 0.125490, g: 0.192157, b: 0.149020, a: 1}
+  navigationSurface: {r: 0.078431, g: 0.125490, b: 0.098039, a: 1}
+  buttonSurface: {r: 0.113725, g: 0.231373, b: 0.156863, a: 1}
+  border: {r: 0.192157, g: 0.317647, b: 0.231373, a: 1}
+  primaryText: {r: 0.945098, g: 1.000000, b: 0.956863, a: 1}
+  secondaryText: {r: 0.717647, g: 0.815686, b: 0.741176, a: 1}
+  mutedText: {r: 0.509804, g: 0.607843, b: 0.533333, a: 1}
+  accent: {r: 0.223529, g: 0.901961, b: 0.419608, a: 1}
+  accentHover: {r: 0.396078, g: 0.949020, b: 0.541176, a: 1}
+  accentPressed: {r: 0.133333, g: 0.725490, b: 0.301961, a: 1}
+  accentSubtle: {r: 0.090196, g: 0.223529, b: 0.137255, a: 1}
+  success: {r: 0.321569, g: 0.898039, b: 0.603922, a: 1}
+  warning: {r: 0.917647, g: 0.796078, b: 0.384314, a: 1}
+  danger: {r: 0.941176, g: 0.443137, b: 0.470588, a: 1}
+  information: {r: 0.411765, g: 0.725490, b: 0.937255, a: 1}

@@ -28,14 +28,14 @@ public class MarketManager : MonoBehaviour
     public Toggle filterByBalanceToggle;
     public Button sellAllButton;
 
-    public TextMeshProUGUI currentPageText;
-    public TextMeshProUGUI maxPageText;
+    public TextMeshProUGUI pageIndicatorText;
 
     private List<ItemData> _allItems = new List<ItemData>();
     private List<ItemData> _inventoryItems = new List<ItemData>();
     private readonly Dictionary<ItemData, MarketplaceItem> _marketplaceItems = new Dictionary<ItemData, MarketplaceItem>();
 
-    private int currentPage;
+    private int _currentPage;
+    private int _totalPages;
 
     const int ItemsPerPage = 30;
 
@@ -78,7 +78,13 @@ public class MarketManager : MonoBehaviour
 
         sortDropdown.onValueChanged.AddListener(delegate { SortItems(); });
         toggleSortingOrder.onValueChanged.AddListener(delegate { SortItems(); });
-        filterByBalanceToggle.onValueChanged.AddListener(delegate { DisplayPage(0); });
+        filterByBalanceToggle.onValueChanged.AddListener(delegate
+        {
+            _currentPage = 0;
+            DisplayPage(_currentPage);
+        });
+        _totalPages = Mathf.CeilToInt((float)GetDisplayedItems().Count / ItemsPerPage);
+
         PlayerManager.Instance.OnBalanceChanged += RefreshBalanceFilter;
 
         LoadLastUpdateTimestamp();
@@ -90,7 +96,7 @@ public class MarketManager : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private void UpdateCurrentTab()
     {
-        DisplayPage(currentPage);
+        DisplayPage(_currentPage);
     }
 
     void LoadLastUpdateTimestamp()
@@ -169,8 +175,8 @@ public class MarketManager : MonoBehaviour
         sellScrollView.SetActive(false);
         sellAllButton.gameObject.SetActive(false);
 
-        currentPage = 0;
-        DisplayPage(currentPage);
+        _currentPage = 0;
+        DisplayPage(_currentPage);
     }
 
     public void ShowSellTab()
@@ -182,8 +188,8 @@ public class MarketManager : MonoBehaviour
         
         LoadInventoryItems();
         
-        currentPage = 0;
-        DisplayPage(currentPage);
+        _currentPage = 0;
+        DisplayPage(_currentPage);
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -198,18 +204,12 @@ public class MarketManager : MonoBehaviour
     void DisplayPage(int page)
     {
         Transform currentCatalogGrid = _isBuyingTabActive ? buyCatalogContent : sellCatalogContent;
-        List<ItemData> displayedItems = _isBuyingTabActive ? _allItems : _inventoryItems;
-
-        int pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
-
         if (currentCatalogGrid == null) return;
 
-        if (_isBuyingTabActive && filterByBalanceToggle.isOn)
-        {
-            int playerBalance = PlayerManager.Instance.GetPlayerBalance();
-            displayedItems = displayedItems.Where(item => item.price * Globals.MarketBuyPriceModifier <= playerBalance).ToList();
-            pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
-        }
+        List<ItemData> displayedItems = GetDisplayedItems();
+        _totalPages = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
+        _currentPage = _totalPages == 0 ? 0 : Mathf.Clamp(page, 0, _totalPages - 1);
+        page = _currentPage;
 
         foreach (Transform child in currentCatalogGrid)
         {
@@ -230,28 +230,27 @@ public class MarketManager : MonoBehaviour
             _marketplaceItems[displayedItems[i]] = marketplaceItem;
         }
 
-        currentPageText.text = ((pageCount > 0) ? page+1 : page).ToString();
-        maxPageText.text = pageCount.ToString();
+        pageIndicatorText.text = $"Page {_currentPage + 1} of {Mathf.Max(_totalPages, 1)}";
     }
 
     public void NextPage()
     {
-        int itemsCount = _isBuyingTabActive ? _allItems.Count : _inventoryItems.Count;
-        int pageCount = Mathf.CeilToInt((float)itemsCount / ItemsPerPage);
+        int itemsCount = GetDisplayedItems().Count;
+        _totalPages = Mathf.CeilToInt((float)itemsCount / ItemsPerPage);
 
-        if (currentPage < pageCount - 1)
+        if (_currentPage < _totalPages - 1)
         {
-            currentPage++;
-            DisplayPage(currentPage);
+            _currentPage++;
+            DisplayPage(_currentPage);
         }
     }
 
     public void PreviousPage()
     {
-        if (currentPage > 0)
+        if (_currentPage > 0)
         {
-            currentPage--;
-            DisplayPage(currentPage);
+            _currentPage--;
+            DisplayPage(_currentPage);
         }
     }
 
@@ -259,8 +258,8 @@ public class MarketManager : MonoBehaviour
     {
         if (string.IsNullOrWhiteSpace(searchInput.text))
         {
-            LoadAllGameItems();
-            LoadInventoryItems();
+            _currentPage = 0;
+            DisplayPage(_currentPage);
         }
     }
 
@@ -268,174 +267,62 @@ public class MarketManager : MonoBehaviour
     {
         if (string.IsNullOrWhiteSpace(priceInput.text))
         {
-            LoadAllGameItems();
-            LoadInventoryItems();
+            _currentPage = 0;
+            DisplayPage(_currentPage);
         }
     }
 
     public void SortItems()
     {
-        if (_isBuyingTabActive)
+        if (sortDropdown.options[sortDropdown.value].text == "Random")
         {
-            _allItems = new List<ItemData>(_allItems);
-            string sortCriteria = sortDropdown.options[sortDropdown.value].text;
-            bool ascending = toggleSortingOrder.isOn;
+            Globals.RandomizeItemSortOrder();
+        }
 
-            _allItems = SortAllItemsByCriteria(sortCriteria, ascending);
-        }
-        else
-        {
-            _inventoryItems = new List<ItemData>(_inventoryItems);
-            string sortCriteria = sortDropdown.options[sortDropdown.value].text;
-            bool ascending = toggleSortingOrder.isOn;
-            
-            _inventoryItems = SortInventoryItemsByCriteria(sortCriteria, ascending);
-        }
+        _currentPage = 0;
         UpdateCurrentTab();
     }
+
     public void SearchItems()
     {
-        string query = searchInput.text.ToLower();
-
-        if (string.IsNullOrWhiteSpace(query))
-        {
-            if (_isBuyingTabActive)
-            {
-                LoadAllGameItems();
-                SortItems();
-            }
-            else
-            {
-                LoadAllGameItems();
-                SortItems();
-            }
-        }
-        else
-        {
-            if (_isBuyingTabActive)
-            {
-                _allItems = _allItems.Where(item =>
-                    item.name.ToLower().Contains(query) ||
-                    item.id.ToString().Contains(query)).ToList();
-            }
-            else
-            {
-                _inventoryItems = _inventoryItems.Where(item =>
-                    item.name.ToLower().Contains(query) ||
-                    item.id.ToString().Contains(query)).ToList();
-            }
-        }
+        _currentPage = 0;
         UpdateCurrentTab();
     }
 
     public void SearchPrices()
     {
-        string query = priceInput.text;
-        if (string.IsNullOrWhiteSpace(query))
-        {
-            if (_isBuyingTabActive)
-            {
-                LoadAllGameItems();
-                SortItems();
-            }
-            else
-            {
-                LoadInventoryItems();
-                SortItems();
-            }
-        }
-
-        if (Globals.TryParseEuroInput(query, out int itemPriceQuery))
-        {
-            if (_isBuyingTabActive)
-            {
-                _allItems = _allItems.Where(item => item.price * Globals.MarketBuyPriceModifier <= itemPriceQuery).ToList();
-            }
-            else
-            {
-                _inventoryItems = _inventoryItems.Where(item => item.price <= itemPriceQuery).ToList();
-            }
-        }
+        _currentPage = 0;
         UpdateCurrentTab();
     }
 
-    private List<ItemData> SortAllItemsByCriteria(string criteria, bool ascending)
+    private List<ItemData> GetDisplayedItems()
     {
-        return criteria switch
+        IEnumerable<ItemData> items = _isBuyingTabActive ? _allItems : _inventoryItems;
+        string searchQuery = searchInput.text.Trim();
+        if (!string.IsNullOrEmpty(searchQuery))
         {
-            "Type" => ascending
-                ? _allItems.OrderBy(i => i.type).ToList()
-                : _allItems.OrderByDescending(i => i.type).ToList(),
-            "Rarity" => ascending
-                ? _allItems
-                    .OrderBy(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MaxValue)
-                    .ToList()
-                : _allItems
-                    .OrderByDescending(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MinValue)
-                    .ToList(),
-            "Gun" => ascending
-                ? _allItems.OrderBy(i => i.gun).ToList()
-                : _allItems.OrderByDescending(i => i.gun).ToList(),
-            "Condition" => ascending
-                ? _allItems
-                    .OrderBy(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MaxValue)
-                    .ToList()
-                : _allItems
-                    .OrderByDescending(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MinValue)
-                    .ToList(),
-            "Price" => ascending
-                ? _allItems.OrderBy(i => i.price).ToList()
-                : _allItems.OrderByDescending(i => i.price).ToList(),
-            "Random" => ShuffleItems(_allItems),
-            _ => _allItems
-        };
-    }
-    
-    private List<ItemData> SortInventoryItemsByCriteria(string criteria, bool ascending)
-    {
-        return criteria switch
+            searchQuery = searchQuery.ToLowerInvariant();
+            items = items.Where(item =>
+                item.name.ToLowerInvariant().Contains(searchQuery) ||
+                (item.id != null && item.id.ToLowerInvariant().Contains(searchQuery)));
+        }
+
+        if (Globals.TryParseEuroInput(priceInput.text, out int priceLimit))
         {
-            "Type" => ascending
-                ? _inventoryItems.OrderBy(i => i.type).ToList()
-                : _inventoryItems.OrderByDescending(i => i.type).ToList(),
-            "Rarity" => ascending
-                ? _inventoryItems
-                    .OrderBy(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MaxValue)
-                    .ToList()
-                : _inventoryItems
-                    .OrderByDescending(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MinValue)
-                    .ToList(),
-            "Gun" => ascending
-                ? _inventoryItems.OrderBy(i => i.gun).ToList()
-                : _inventoryItems.OrderByDescending(i => i.gun).ToList(),
-            "Condition" => ascending
-                ? _inventoryItems
-                    .OrderBy(i => ConditionData.Order.ContainsKey(i.condition) ? ConditionData.Order[i.condition] : int.MaxValue)
-                    .ToList()
-                : _inventoryItems
-                    .OrderByDescending(i => ConditionData.Order.ContainsKey(i.condition) ? ConditionData.Order[i.condition] : int.MinValue)
-                    .ToList(),
-            "Price" => ascending
-                ? _inventoryItems.OrderBy(i => i.price).ToList()
-                : _inventoryItems.OrderByDescending(i => i.price).ToList(),
-            "Random" => ShuffleItems(_inventoryItems),
-            _ => _inventoryItems
-        };
+            items = _isBuyingTabActive
+                ? items.Where(item => item.price * Globals.MarketBuyPriceModifier <= priceLimit)
+                : items.Where(item => item.price <= priceLimit);
+        }
+
+        if (_isBuyingTabActive && filterByBalanceToggle.isOn)
+        {
+            int playerBalance = PlayerManager.Instance.GetPlayerBalance();
+            items = items.Where(item => item.price * Globals.MarketBuyPriceModifier <= playerBalance);
+        }
+
+        string criteria = sortDropdown.options[sortDropdown.value].text;
+        return Globals.SortItems(items, criteria, toggleSortingOrder.isOn);
     }
-
-    private List<ItemData> ShuffleItems(List<ItemData> itemList)
-{
-    List<ItemData> shuffled = new(itemList);
-
-    for (int i = shuffled.Count - 1; i > 0; i--)
-    {
-        int j = UnityEngine.Random.Range(0, i + 1);
-
-        (shuffled[i], shuffled[j]) = (shuffled[j], shuffled[i]);
-    }
-
-    return shuffled;
-}
 
     public void BuyItem(ItemData item)
     {
@@ -461,6 +348,7 @@ public class MarketManager : MonoBehaviour
             AdjustItemPrice(item, 1);
 
             _lastInteractionTime = Time.time;
+            UpdateCurrentTab();
         }
         else
         {
@@ -503,7 +391,6 @@ public class MarketManager : MonoBehaviour
         if (InventoryManager.Instance.HasItem(item))
         {
             InventoryManager.Instance.RemoveItemFromInventory(item);
-            _inventoryItems.Remove(item);
             PlayerManager.Instance.AddMoney(sellingPrice);
 
             LogUtil.Economy.LogEuro(
@@ -513,11 +400,10 @@ public class MarketManager : MonoBehaviour
                 $"{item.gun} | {item.name} {(item.isStatTrak ? "(Stattrak | ": "(")}{item.condition})"
             );
 
-            Destroy(itemPrefab);
-            int pageCount = Mathf.CeilToInt((float)_inventoryItems.Count / ItemsPerPage);
-            currentPage = Mathf.Min(currentPage, Mathf.Max(0, pageCount - 1));
-            DisplayPage(currentPage);
             AdjustItemPrice(item, -1);
+            LoadInventoryItems();
+            Destroy(itemPrefab);
+            DisplayPage(_currentPage);
 
             _lastInteractionTime = Time.time;
         }

@@ -17,8 +17,10 @@ public class CaseBattleManager : MonoBehaviour
     public List<GameObject> botSlots = new();
     public TextMeshProUGUI playerTotalValueText;
     public TextMeshProUGUI botTotalValueText;
-    public TextMeshProUGUI playerWinsText;
-    public TextMeshProUGUI botWinsText;
+    public Image playerWinsImage;
+    public Image playerTiedImage;
+    public Image botWinsImage;
+    public Image botTiedImage;
     public Button startBattleButton;
     public GameObject caseButtonPrefab;
     public Transform caseSelectorPanel;
@@ -54,6 +56,14 @@ public class CaseBattleManager : MonoBehaviour
 
     void Start()
     {
+        if (uiManager == null) uiManager = FindAnyObjectByType<UIManager>();
+
+        playerWinsImage.gameObject.SetActive(false);
+        playerTiedImage.gameObject.SetActive(false);
+        botWinsImage.gameObject.SetActive(false);
+        botTiedImage.gameObject.SetActive(false);
+
+        normalCasesButton.interactable = false;
         startBattleButton.interactable = false;
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>("CaseAssets"));
         DisplayCaseSelector(_availableCases);
@@ -81,12 +91,16 @@ public class CaseBattleManager : MonoBehaviour
     public void ChangeToNormalCase()
     {
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CaseAssets"));
+        normalCasesButton.interactable = false;
+        customCasesButton.interactable = true;
         DisplayCaseSelector(_availableCases);
     }
 
     public void ChangeToCustomCase()
     {
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CustomCaseAssets"));
+        normalCasesButton.interactable = true;
+        customCasesButton.interactable = false;
         DisplayCaseSelector(_availableCases);
     }
 
@@ -102,6 +116,8 @@ public class CaseBattleManager : MonoBehaviour
 
         if (_selectedCaseData) startBattleButton.interactable = true;
         else startBattleButton.interactable = false;
+        customCasesButton.interactable = false;
+        normalCasesButton.interactable = false;
 
         if (GetCasePrice(_selectedCaseData) <= PlayerManager.Instance.GetPlayerBalance()) startBattleButton.interactable = true;
         else startBattleButton.interactable = false;
@@ -152,6 +168,22 @@ public class CaseBattleManager : MonoBehaviour
         _isSelectorOpen = !_isSelectorOpen;
         caseSelectorPanel.gameObject.SetActive(_isSelectorOpen);
         closeSelectorPanelButton.gameObject.SetActive(_isSelectorOpen);
+
+        if (_isSelectorOpen)
+        {
+            selectCaseButton.GetComponentInChildren<TextMeshProUGUI>().text = "Close";
+            normalCasesButton.interactable = false;
+            customCasesButton.interactable = true;
+        }
+        else
+        {
+            if (_selectedCaseData != null)
+            {
+                selectCaseButton.GetComponentInChildren<TextMeshProUGUI>().text = "Select Case";
+                normalCasesButton.interactable = false;
+                customCasesButton.interactable = false;
+            }
+        }
 
         if (_isFirstSelection && !_isSelectorOpen)
         {
@@ -213,13 +245,13 @@ public class CaseBattleManager : MonoBehaviour
         playerTotalValueText.text = "Total Value: 0€";
         botTotalValueText.text = "Total Value: 0€";
         
-        playerWinsText.text = null;
-        botWinsText.text = null;
+        playerWinsImage.gameObject.SetActive(false);
+        playerTiedImage.gameObject.SetActive(false);
+        botWinsImage.gameObject.SetActive(false);
+        botTiedImage.gameObject.SetActive(false);
         startBattleButton.interactable = false;
         selectCaseButton.interactable = false;
         closeSelectorPanelButton.interactable = false;
-        normalCasesButton.interactable = false;
-        customCasesButton.interactable = false;
         gameModeDropdown.interactable = false;
         uiManager.LockUI();
 
@@ -318,10 +350,18 @@ public class CaseBattleManager : MonoBehaviour
             GameObject playerResultItem = Instantiate(resultPrefab, playerResultArea);
             Image playerUncovered =  playerResultItem.transform.Find("UncoveredImage")?.GetComponent<Image>();
             playerUncovered.enabled = true;
+            Image playerItemImage = playerResultItem.transform.Find("ItemImage").GetComponent<Image>();
+            playerItemImage.enabled = false;
+            Image playerRarityImage = playerResultItem.transform.Find("RarityImage").GetComponent<Image>();
+            playerRarityImage.enabled = false;
 
             GameObject botResultItem = Instantiate(resultPrefab, botResultArea);
             Image botUncovered =  botResultItem.transform.Find("UncoveredImage")?.GetComponent<Image>();
             botUncovered.enabled = true;
+            Image botItemImage = botResultItem.transform.Find("ItemImage").GetComponent<Image>();
+            botItemImage.enabled = false;
+            Image botRarityImage = botResultItem.transform.Find("RarityImage").GetComponent<Image>();
+            botRarityImage.enabled = false;
         }
     }
     
@@ -351,8 +391,10 @@ public class CaseBattleManager : MonoBehaviour
         TextMeshProUGUI priceText = resultItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
         uncoveredImage.enabled = false;
+        itemImage.enabled = true;
+        rarityImage.enabled = true;
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.imageName}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}_BOTTOM");
         gunText.text = itemData.gun;
         nameText.text = itemData.name;
         priceText.text = $"{Globals.FormatCurrencyStr(itemData.price, Globals.EURO_DECIMAL)}€";
@@ -362,32 +404,31 @@ public class CaseBattleManager : MonoBehaviour
     {
         Image itemImage = reelItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
+        Image statTrakImage = reelItem.transform.Find("StatTrakImage").GetComponent<Image>();
         TextMeshProUGUI conditionText = reelItem.transform.Find("ConditionText").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI statTrakText = reelItem.transform.Find("StatTrakText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = reelItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
         
         if (conditionText != null)
         {
-            conditionText.text = itemData.condition;
+            conditionText.text = ConditionData.ShortName.TryGetValue(itemData.condition, out string shortName) ? shortName : itemData.condition;
         }
 
-        if (statTrakText != null)
+        if (statTrakImage != null)
         {
             if (itemData.isStatTrak)
             {
-                statTrakText.gameObject.SetActive(true);
-                statTrakText.text = Globals.StatTrakUIText;
+                statTrakImage.gameObject.SetActive(true);
             }
-        }
-        else
-        {
-            statTrakText.gameObject.SetActive(false);
+            else
+            {
+                statTrakImage.gameObject.SetActive(false);
+            }
         }
 
         priceText.text = $"{Globals.FormatCurrencyStr(itemData.price, Globals.EURO_DECIMAL)}€";
 
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{itemData.imageName}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{itemData.rarity}_BOTTOM_SLIM");
     }
     
     private void DetermineWinner()
@@ -395,44 +436,46 @@ public class CaseBattleManager : MonoBehaviour
         int casePrice = GetCasePrice(_selectedCaseData);
         if (gameModeDropdown.options[gameModeDropdown.value].text == "Higher Wins")
         {
-            string result = _playerTotalValue > _botTotalValue ? "Player Wins!" : "Bot Wins!"; 
-            TextMeshProUGUI winningText = _playerTotalValue > _botTotalValue ? playerWinsText : botWinsText;
-            winningText.text = result;
             if (_playerTotalValue > _botTotalValue)
             {
+                playerWinsImage.gameObject.SetActive(true);
                 int _totalGameValue = _playerTotalValue + _botTotalValue;
                 PlayerManager.Instance.AddMoney(_totalGameValue);
             }
             else if (_playerTotalValue == _botTotalValue)
             {
-                playerWinsText.text = "Tie!";
-                botWinsText.text = "Tie!";
+                playerTiedImage.gameObject.SetActive(true);
+                botTiedImage.gameObject.SetActive(true);
                 PlayerManager.Instance.AddMoney(casePrice);
+            }
+            else
+            {
+                botWinsImage.gameObject.SetActive(true);
             }
         }
         else if (gameModeDropdown.options[gameModeDropdown.value].text == "Lower Wins")
         {
-            string result = _playerTotalValue < _botTotalValue ? "Player Wins!" : "Bot Wins!";
-            TextMeshProUGUI winningText = _playerTotalValue < _botTotalValue ? playerWinsText : botWinsText;
-            winningText.text = result;
             if (_playerTotalValue < _botTotalValue)
             {
+                playerWinsImage.gameObject.SetActive(true);
                 int _totalGameValue = _playerTotalValue + _botTotalValue;
                 PlayerManager.Instance.AddMoney(_totalGameValue);
             }
             else if (_playerTotalValue == _botTotalValue)
             {
-                playerWinsText.text = "Tie!";
-                botWinsText.text = "Tie!";
+                playerTiedImage.gameObject.SetActive(true);
+                botTiedImage.gameObject.SetActive(true);
                 PlayerManager.Instance.AddMoney(casePrice);
+            }
+            else
+            {
+                botWinsImage.gameObject.SetActive(true);
             }
         }
     
         startBattleButton.interactable = true;
         selectCaseButton.interactable = true;
         closeSelectorPanelButton.interactable = true;
-        normalCasesButton.interactable = true;
-        customCasesButton.interactable = true;
         gameModeDropdown.interactable = true;
         uiManager.UnlockUI();
     }

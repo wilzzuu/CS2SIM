@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d207c757bc4e5fb526f33274686aa5, type: 3}
+  m_Name: Midnight Amethyst
+  m_EditorClassIdentifier: 
+  id: midnight-amethyst
+  displayName: Midnight Amethyst
+  description: A deep purple palette inspired by the game theme guide.
+  background: {r: 0.062745, g: 0.05098, b: 0.094118, a: 1}
+  surface: {r: 0.098039, g: 0.082353, b: 0.145098, a: 1}
+  secondarySurface: {r: 0.133333, g: 0.109804, b: 0.188235, a: 1}
+  elevatedSurface: {r: 0.172549, g: 0.141176, b: 0.25098, a: 1}
+  navigationSurface: {r: 0.133333, g: 0.109804, b: 0.188235, a: 1}
+  buttonSurface: {r: 0.188235, g: 0.141176, b: 0.290196, a: 1}
+  border: {r: 0.231373, g: 0.192157, b: 0.313725, a: 1}
+  primaryText: {r: 0.956863, g: 0.941176, b: 0.980392, a: 1}
+  secondaryText: {r: 0.72549, g: 0.690196, b: 0.788235, a: 1}
+  mutedText: {r: 0.521569, g: 0.482353, b: 0.588235, a: 1}
+  accent: {r: 0.654902, g: 0.545098, b: 0.980392, a: 1}
+  accentHover: {r: 0.733333, g: 0.65098, b: 1, a: 1}
+  accentPressed: {r: 0.537255, g: 0.411765, b: 0.835294, a: 1}
+  accentSubtle: {r: 0.188235, g: 0.141176, b: 0.290196, a: 1}
+  success: {r: 0.333333, g: 0.788235, b: 0.603922, a: 1}
+  warning: {r: 0.917647, g: 0.72549, b: 0.419608, a: 1}
+  danger: {r: 0.909804, g: 0.47451, b: 0.568627, a: 1}
+  information: {r: 0.47451, g: 0.662745, b: 0.909804, a: 1}

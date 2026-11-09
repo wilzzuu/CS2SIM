@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using System.Globalization;
 
@@ -14,6 +16,9 @@ public class Globals
     public const float MarketPriceMinFluctuation = 0.5f;
     public const float MarketPriceMaxFluctuation = 2f;
     public const string StatTrakUIText = "StatTrak™";
+    public const string StatTrakUITextShort = "ST™";
+
+    private static readonly Dictionary<ItemData, float> RandomSortKeys = new();
 
     public static Color GetHexColor(string hexColor)
     {
@@ -81,6 +86,48 @@ public class Globals
 
         units = 0;
         return false;
+    }
+
+    public static List<ItemData> SortItems(IEnumerable<ItemData> items, string criteria, bool ascending)
+    {
+        List<ItemData> source = items.ToList();
+
+        return criteria switch
+        {
+            "Type" => ascending
+                ? source.OrderBy(item => item.type).ToList()
+                : source.OrderByDescending(item => item.type).ToList(),
+            "Rarity" => ascending
+                ? source.OrderBy(item => RarityData.Order.TryGetValue(item.rarity, out int order) ? order : int.MaxValue).ToList()
+                : source.OrderByDescending(item => RarityData.Order.TryGetValue(item.rarity, out int order) ? order : int.MinValue).ToList(),
+            "Gun" => ascending
+                ? source.OrderBy(item => item.gun).ToList()
+                : source.OrderByDescending(item => item.gun).ToList(),
+            "Condition" => ascending
+                ? source.OrderBy(item => ConditionData.Order.TryGetValue(item.condition, out int order) ? order : int.MaxValue).ToList()
+                : source.OrderByDescending(item => ConditionData.Order.TryGetValue(item.condition, out int order) ? order : int.MinValue).ToList(),
+            "Price" => ascending
+                ? source.OrderBy(item => item.price).ToList()
+                : source.OrderByDescending(item => item.price).ToList(),
+            "Random" => source.OrderBy(GetRandomSortKey).ToList(),
+            _ => source
+        };
+    }
+
+    public static void RandomizeItemSortOrder()
+    {
+        RandomSortKeys.Clear();
+    }
+
+    private static float GetRandomSortKey(ItemData item)
+    {
+        if (!RandomSortKeys.TryGetValue(item, out float key))
+        {
+            key = UnityEngine.Random.value;
+            RandomSortKeys.Add(item, key);
+        }
+
+        return key;
     }
 
     // Converts float ratios/computations back into fixed-point currency amounts.

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: 13d207c757bc4e5fb526f33274686aa5, type: 3}
+  m_Name: Porcelain
+  m_EditorClassIdentifier: 
+  id: porcelain
+  displayName: Porcelain
+  description: A light, airy interface palette with soft neutral surfaces and confident violet accents.
+  background: {r: 0.949020, g: 0.952941, b: 0.968627, a: 1}
+  surface: {r: 1.000000, g: 1.000000, b: 1.000000, a: 1}
+  secondarySurface: {r: 0.909804, g: 0.917647, b: 0.945098, a: 1}
+  elevatedSurface: {r: 1.000000, g: 1.000000, b: 1.000000, a: 1}
+  navigationSurface: {r: 0.909804, g: 0.917647, b: 0.945098, a: 1}
+  buttonSurface: {r: 0.890196, g: 0.866667, b: 0.972549, a: 1}
+  border: {r: 0.835294, g: 0.850980, b: 0.894118, a: 1}
+  primaryText: {r: 0.125490, g: 0.125490, b: 0.200000, a: 1}
+  secondaryText: {r: 0.333333, g: 0.337255, b: 0.419608, a: 1}
+  mutedText: {r: 0.466667, g: 0.474510, b: 0.552941, a: 1}
+  accent: {r: 0.439216, g: 0.333333, b: 0.784314, a: 1}
+  accentHover: {r: 0.501961, g: 0.411765, b: 0.831373, a: 1}
+  accentPressed: {r: 0.349020, g: 0.250980, b: 0.666667, a: 1}
+  accentSubtle: {r: 0.917647, g: 0.898039, b: 0.972549, a: 1}
+  success: {r: 0.137255, g: 0.525490, b: 0.360784, a: 1}
+  warning: {r: 0.650980, g: 0.419608, b: 0.086275, a: 1}
+  danger: {r: 0.768627, g: 0.270588, b: 0.356863, a: 1}
+  information: {r: 0.215686, g: 0.435294, b: 0.729412, a: 1}

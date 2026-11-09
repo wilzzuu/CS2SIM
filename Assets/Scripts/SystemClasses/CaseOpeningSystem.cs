@@ -27,6 +27,7 @@ public class CaseOpening : MonoBehaviour
 
     public GameObject caseButtonPrefab;
     public Transform caseSelectorPanel;
+    public Transform caseSelectorPanelContent;
     public GameObject currentCase;
     public Button normalCasesButton;
     public Button customCasesButton;
@@ -44,11 +45,15 @@ public class CaseOpening : MonoBehaviour
 
     void Start()
     {   
+        if (uiManager == null) uiManager = FindAnyObjectByType<UIManager>();
+
         openCaseButton.interactable = false;
         currentCase.gameObject.SetActive(false);
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>("CaseAssets"));
         DisplayCaseSelector(_availableCases);
         
+        selectCaseButton.GetComponentInChildren<TextMeshProUGUI>().text = "Close";
+        selectCaseButton.interactable = false;
         selectCaseButton.onClick.AddListener(ToggleCaseSelector);
         normalCasesButton.onClick.AddListener(ChangeToNormalCase);
         customCasesButton.onClick.AddListener(ChangeToCustomCase);
@@ -62,12 +67,16 @@ public class CaseOpening : MonoBehaviour
     public void ChangeToNormalCase()
     {
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CaseAssets"));
+        normalCasesButton.interactable = false;
+        customCasesButton.interactable = true;
         DisplayCaseSelector(_availableCases);
     }
 
     public void ChangeToCustomCase()
     {
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CustomCaseAssets"));
+        normalCasesButton.interactable = true;
+        customCasesButton.interactable = false;
         DisplayCaseSelector(_availableCases);
     }
     
@@ -82,8 +91,19 @@ public class CaseOpening : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private void SelectCase(CaseData chosenCase)
     {
-        _selectedCaseData = chosenCase;
+        if (chosenCase == null)
+        {
+            Debug.LogError("Chosen case is null. Cannot select case.");
+            return;
+        }
 
+        selectCaseButton.GetComponentInChildren<TextMeshProUGUI>().text = "Select Case";
+        selectCaseButton.interactable = true;
+        customCasesButton.interactable = false;
+        normalCasesButton.interactable = false;
+
+        _selectedCaseData = chosenCase;
+        
         currentCase.gameObject.SetActive(true);
         Image caseImage = currentCase.transform.Find("CaseImage").GetComponent<Image>();
         TextMeshProUGUI nameText = currentCase.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
@@ -95,10 +115,7 @@ public class CaseOpening : MonoBehaviour
 
         GroupItemsByRarity();
 
-        if (_selectedCaseData) openCaseButton.interactable = true;
-        else openCaseButton.interactable = false;
-
-        if (_selectedCaseData.price + keyPrice <= PlayerManager.Instance.GetPlayerBalance()) openCaseButton.interactable = true;
+        if (_selectedCaseData && _selectedCaseData.price + keyPrice <= PlayerManager.Instance.GetPlayerBalance()) openCaseButton.interactable = true;
         else openCaseButton.interactable = false;
         
         DisplayCaseItems(_selectedCaseData);
@@ -127,6 +144,16 @@ public class CaseOpening : MonoBehaviour
     public void OpenCase()
     {
         if (_isScrolling) return;
+
+        if (uiManager == null)
+        {
+            uiManager = FindAnyObjectByType<UIManager>();
+            if (uiManager == null)
+            {
+                Debug.LogError("UIManager could not be found. Cannot open case.");
+                return;
+            }
+        }
 
         if (PlayerManager.Instance == null)
         {
@@ -172,9 +199,9 @@ public class CaseOpening : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     public ItemData GetRandomItemByPercentage()
     {
-        if (_selectedCaseData.items == null || _selectedCaseData.items.Count == 0)
+        if (_selectedCaseData == null)
         {
-            Debug.LogError("No items in the selected case. Ensure the selected case has items.");
+            Debug.LogError("No case selected. Please select a case first.");
             return null;
         }
         
@@ -356,30 +383,34 @@ public class CaseOpening : MonoBehaviour
     {
         Image itemImage = reelItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = reelItem.transform.Find("RarityImage").GetComponent<Image>();
+        Image statTrakImage = reelItem.transform.Find("StatTrakImage").GetComponent<Image>();
+        TextMeshProUGUI gunText = reelItem.transform.Find("GunText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI nameText = reelItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI conditionText = reelItem.transform.Find("ConditionText").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI statTrakText = reelItem.transform.Find("StatTrakText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = reelItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
         string imagePath = $"ItemImages/{itemData.imageName}";
-        string rarityPath = "RarityImages/" + itemData.rarity;
+        string rarityPath = "RarityImages/" + itemData.rarity + "_BOTTOM_SLIM";
+
+        gunText.text = $"{itemData.gun}";
+        nameText.text = $"{itemData.name}";
         priceText.text = $"{Globals.FormatCurrencyStr(itemData.price, Globals.EURO_DECIMAL)}€";
         
         if (conditionText != null)
         {
-            conditionText.text = itemData.condition;
+            conditionText.text = ConditionData.ShortName.TryGetValue(itemData.condition, out string shortName) ? shortName : itemData.condition;
         }
 
-        if (statTrakText != null)
+        if (statTrakImage != null)
         {
             if (itemData.isStatTrak)
             {
-                statTrakText.gameObject.SetActive(true);
-                statTrakText.text = Globals.StatTrakUIText;
+                statTrakImage.gameObject.SetActive(true);
             }
         }
         else
         {
-            statTrakText.gameObject.SetActive(false);
+            statTrakImage.gameObject.SetActive(false);
         }
 
         itemImage.sprite = Resources.Load<Sprite>(imagePath);
@@ -442,7 +473,7 @@ public class CaseOpening : MonoBehaviour
                 TextMeshProUGUI priceText = item.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
                 itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{bestConditionItem.imageName}");
-                rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{bestConditionItem.rarity}");
+                rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{bestConditionItem.rarity}_CASE_ITEM");
                 gunText.text = bestConditionItem.gun;
                 nameText.text = bestConditionItem.name;
                 priceText.text = $"{Globals.FormatCurrencyStr(minPrice, Globals.EURO_DECIMAL)} - {Globals.FormatCurrencyStr(maxPrice, Globals.EURO_DECIMAL)}€";
@@ -465,7 +496,7 @@ public class CaseOpening : MonoBehaviour
             TextMeshProUGUI priceText = specialItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
             itemImage.sprite = Resources.Load<Sprite>($"ItemImages/special_item");
-            rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/SPECIAL");
+            rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/SPECIAL_CASE_ITEM");
             nameText.text = "Special Item";
             priceText.text = $"{Globals.FormatCurrencyStr(minSpecialPrice, Globals.EURO_DECIMAL)}€ - {Globals.FormatCurrencyStr(maxSpecialPrice, Globals.EURO_DECIMAL)}€";
         }
@@ -475,8 +506,24 @@ public class CaseOpening : MonoBehaviour
     {
         _isSelectorOpen = !_isSelectorOpen;
         caseSelectorPanel.gameObject.SetActive(_isSelectorOpen);
-        openCaseButton.interactable = !_isSelectorOpen;
-        currentCase.gameObject.SetActive(!_isSelectorOpen);
+        openCaseButton.interactable = !_isSelectorOpen && _selectedCaseData != null && _selectedCaseData.price + keyPrice <= PlayerManager.Instance.GetPlayerBalance();
+        currentCase.gameObject.SetActive(!_isSelectorOpen && _selectedCaseData != null);
+
+        if (_isSelectorOpen)
+        {
+            selectCaseButton.GetComponentInChildren<TextMeshProUGUI>().text = "Close";
+            normalCasesButton.interactable = true;
+            customCasesButton.interactable = true;
+        }
+        else
+        {
+            if (_selectedCaseData != null)
+            {
+                selectCaseButton.GetComponentInChildren<TextMeshProUGUI>().text = "Select Case";
+                normalCasesButton.interactable = false;
+                customCasesButton.interactable = false;
+            }
+        }
 
         if (_isFirstSelection && !_isSelectorOpen)
         {
@@ -487,7 +534,7 @@ public class CaseOpening : MonoBehaviour
 
     public void DisplayCaseSelector(List<CaseData> availableCases)
     {
-        foreach (Transform child in caseSelectorPanel)
+        foreach (Transform child in caseSelectorPanelContent)
         {
             Destroy(child.gameObject);
         }
@@ -496,7 +543,7 @@ public class CaseOpening : MonoBehaviour
 
         foreach (var caseData in orderedAvailableCases)
         {
-            GameObject caseButton = Instantiate(caseButtonPrefab, caseSelectorPanel);
+            GameObject caseButton = Instantiate(caseButtonPrefab, caseSelectorPanelContent);
             Image caseImage = caseButton.transform.Find("CaseImage").GetComponent<Image>();
             TextMeshProUGUI nameText = caseButton.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = caseButton.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();

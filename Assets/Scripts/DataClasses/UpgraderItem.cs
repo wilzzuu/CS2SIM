@@ -6,8 +6,11 @@ public class UpgraderItem : MonoBehaviour
 {
     public Image itemImage;
     public Image rarityImage;
+    public Image statTrakImage;
+    public TextMeshProUGUI gunText;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI priceText;
+    public TextMeshProUGUI conditionText;
     public Button chooseButton;
 
     private ItemData _itemData;
@@ -17,9 +20,21 @@ public class UpgraderItem : MonoBehaviour
         _itemData = item;
         
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{_itemData.imageName}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{_itemData.rarity}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{_itemData.rarity}_ROULETTE_SLIM");
+        
+        if (_itemData.isStatTrak)
+        {
+            statTrakImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            statTrakImage.gameObject.SetActive(false);
+        }
+        
+        gunText.text = _itemData.gun;
         nameText.text = _itemData.name;
         priceText.text = $"{Globals.FormatCurrencyStr(_itemData.price, Globals.EURO_DECIMAL)}€";
+        conditionText.text = _itemData.condition;
 
         if (isInventoryItem)
         {

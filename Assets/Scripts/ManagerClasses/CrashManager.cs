@@ -27,6 +27,8 @@ public class CrashManager : MonoBehaviour
 
     void Start()
     {
+        if (uiManager == null) uiManager = FindAnyObjectByType<UIManager>();
+
         UpdateUI();
         cashOutButton.onClick.AddListener(CashOut);
         startGameButton.onClick.AddListener(StartCrashGame);

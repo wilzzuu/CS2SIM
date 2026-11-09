@@ -63,6 +63,8 @@ public class Console : MonoBehaviour
     string stackTrace,
     LogType type)
     {
+        if (ConsoleOutput.Instance == null) return;
+
         switch (type)
         {
             case LogType.Warning:

@@ -11,14 +11,12 @@ public class UpgraderManager : MonoBehaviour
     public Transform inventoryCatalogGrid;
     public Transform upgradeCatalogGrid;
     public GameObject upgraderItemPrefab;
-    public GameObject selectedUpgraderItemPrefab;
     public TMP_InputField searchInput;
     public Button searchBtn;
     public TMP_InputField priceInput;
     public Button searchPriceBtn;
     public TMP_Dropdown sortDropdown;
     public Toggle ascendingToggle;
-    public TextMeshProUGUI inventoryValueText;
     public Button inventoryTabButton;
     public Button upgradeTabButton;
     public GameObject inventoryScrollView;
@@ -36,9 +34,9 @@ public class UpgraderManager : MonoBehaviour
     public GameObject selectItemText2;
     public Button upgradeButton;
     
-    public TextMeshProUGUI currentPageText;
-    public TextMeshProUGUI maxPageText;
-    private int currentPage;
+    public TextMeshProUGUI pageIndicatorText;
+    private int _currentPage;
+    private int _totalPages;
     const int ItemsPerPage = 24;
 
     private List<ItemData> _allItems = new List<ItemData>();
@@ -71,7 +69,8 @@ public class UpgraderManager : MonoBehaviour
             float multiplier = _multipliers[i];
             multiplierButtons[i].onClick.AddListener(() => SelectRandomUpgradeItem(multiplier));
         }
-
+        _totalPages = Mathf.CeilToInt((float)GetDisplayedItems().Count / ItemsPerPage);
+        
         inventoryTabButton.onClick.AddListener(ShowInventoryTab);
         upgradeTabButton.onClick.AddListener(ShowUpgradeTab);
 
@@ -92,60 +91,22 @@ public class UpgraderManager : MonoBehaviour
             button.interactable = enable;
         }
     }
-    
-    void RefreshInventoryValue()
-    {
-        int inventoryValue = InventoryManager.Instance.CalculateInventoryValue();
-        inventoryValueText.text = $"Inventory Value:        {Globals.FormatCurrencyStr(inventoryValue, Globals.EURO_DECIMAL)}€";
-    }
 
     private void UpdateCurrentTab()
     {
-        DisplayPage(currentPage);
-    }
-
-    void DisplayItems()
-    {
-        Transform currentCatalogGrid = _isInventoryTabActive ? inventoryCatalogGrid : upgradeCatalogGrid;
-        List<ItemData> displayedItems = _isInventoryTabActive ? _inventoryItems : _allItems;
-
-        if (currentCatalogGrid == null) return;
-        
-        if (!_isInventoryTabActive && _selectedInventoryItem != null)
-        {
-            displayedItems = _allItems.FindAll(upgradeItem => upgradeItem.price > _selectedInventoryItem.price);
-        }
-
-        foreach (Transform child in currentCatalogGrid)
-        {
-            if (child != null)
-            {
-                Destroy(child.gameObject);
-            }
-        }
-
-        for (int i = 0; i < displayedItems.Count; i++)
-        {
-            GameObject itemObj = Instantiate(upgraderItemPrefab, currentCatalogGrid);
-            UpgraderItem upgraderItem = itemObj.GetComponent<UpgraderItem>();
-            upgraderItem.Setup(displayedItems[i], _isInventoryTabActive);
-        }
+        DisplayPage(_currentPage);
     }
 
     void DisplayPage(int page)
     {
         Transform currentCatalogGrid = _isInventoryTabActive ? inventoryCatalogGrid : upgradeCatalogGrid;
-        List<ItemData> displayedItems = _isInventoryTabActive ? _inventoryItems : _allItems;
-
-        int pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
-
         if (currentCatalogGrid == null) return;
 
-        if (!_isInventoryTabActive && _selectedInventoryItem != null)
-        {
-            displayedItems = _allItems.FindAll(upgradeItem => upgradeItem.price > _selectedInventoryItem.price);
-            pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
-        }
+        List<ItemData> displayedItems = GetDisplayedItems();
+        int pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
+        _currentPage = pageCount == 0 ? 0 : Mathf.Clamp(page, 0, pageCount - 1);
+        page = _currentPage;
+        pageIndicatorText.text = $"Page {_currentPage + 1} of {_totalPages}";
 
         foreach (Transform child in currentCatalogGrid)
         {
@@ -164,28 +125,27 @@ public class UpgraderManager : MonoBehaviour
             UpgraderItem upgraderItem = itemObj.GetComponent<UpgraderItem>();
             upgraderItem.Setup(displayedItems[i], _isInventoryTabActive);
         }
-        currentPageText.text = ((pageCount > 0) ? page+1 : page).ToString();
-        maxPageText.text = pageCount.ToString();
+        pageIndicatorText.text = ((pageCount > 0) ? _currentPage+1 : _currentPage).ToString();
     }
 
     public void NextPage()
     {
-        int itemsCount = _isInventoryTabActive ? _inventoryItems.Count : _allItems.Count;
+        int itemsCount = GetDisplayedItems().Count;
         int pageCount = Mathf.CeilToInt((float)itemsCount / ItemsPerPage);
 
-        if (currentPage < pageCount - 1)
+        if (_currentPage < pageCount - 1)
         {
-            currentPage++;
-            DisplayPage(currentPage);
+            _currentPage++;
+            DisplayPage(_currentPage);
         }
     }
 
     public void PreviousPage()
     {
-        if (currentPage > 0)
+        if (_currentPage > 0)
         {
-            currentPage--;
-            DisplayPage(currentPage);
+            _currentPage--;
+            DisplayPage(_currentPage);
         }
     }
     
@@ -193,8 +153,8 @@ public class UpgraderManager : MonoBehaviour
     {
         if (string.IsNullOrWhiteSpace(searchInput.text))
         {
-            LoadAllGameItems();
-            LoadInventoryItems();
+            _currentPage = 0;
+            DisplayPage(_currentPage);
         }
     }
 
@@ -202,9 +162,35 @@ public class UpgraderManager : MonoBehaviour
     {
         if (string.IsNullOrWhiteSpace(priceInput.text))
         {
-            LoadAllGameItems();
-            LoadInventoryItems();
+            _currentPage = 0;
+            DisplayPage(_currentPage);
         }
+    }
+
+    private List<ItemData> GetDisplayedItems()
+    {
+        IEnumerable<ItemData> items = _isInventoryTabActive ? _inventoryItems : _allItems;
+        string searchQuery = searchInput.text.Trim();
+        if (!string.IsNullOrEmpty(searchQuery))
+        {
+            searchQuery = searchQuery.ToLowerInvariant();
+            items = items.Where(item =>
+                item.name.ToLowerInvariant().Contains(searchQuery) ||
+                (item.id != null && item.id.ToLowerInvariant().Contains(searchQuery)));
+        }
+
+        if (Globals.TryParseEuroInput(priceInput.text, out int priceLimit))
+        {
+            items = items.Where(item => item.price <= priceLimit);
+        }
+
+        if (!_isInventoryTabActive && _selectedInventoryItem != null)
+        {
+            items = items.Where(item => item.price > _selectedInventoryItem.price);
+        }
+
+        string criteria = sortDropdown.options[sortDropdown.value].text;
+        return Globals.SortItems(items, criteria, ascendingToggle.isOn);
     }
 
     void LoadAllGameItems()
@@ -222,9 +208,8 @@ public class UpgraderManager : MonoBehaviour
         _isInventoryTabActive = true;
         inventoryScrollView.SetActive(true);
         upgradeItemsScrollView.SetActive(false);
-        RefreshInventoryValue();
-        currentPage = 0;
-        DisplayPage(currentPage);
+        _currentPage = 0;
+        DisplayPage(_currentPage);
     }
 
     public void ShowUpgradeTab()
@@ -232,9 +217,8 @@ public class UpgraderManager : MonoBehaviour
         _isInventoryTabActive = false;
         inventoryScrollView.SetActive(false);
         upgradeItemsScrollView.SetActive(true);
-        RefreshInventoryValue();
-        currentPage = 0;
-        DisplayPage(currentPage);
+        _currentPage = 0;
+        DisplayPage(_currentPage);
     }
 
     public void SelectInventoryItem(ItemData item)
@@ -254,7 +238,7 @@ public class UpgraderManager : MonoBehaviour
             DestroyImmediate(child.gameObject);
         }
 
-        _selectedInventoryItemObj = Instantiate(selectedUpgraderItemPrefab, selectedInventoryItemContainer);
+        _selectedInventoryItemObj = Instantiate(upgraderItemPrefab, selectedInventoryItemContainer);
 
         isSuccessText.text = "";
         PopulateItemPrefab(_selectedInventoryItemObj, item);
@@ -271,7 +255,7 @@ public class UpgraderManager : MonoBehaviour
             DestroyImmediate(child.gameObject);
         }
 
-        _selectedUpgradeItemObj = Instantiate(selectedUpgraderItemPrefab, selectedUpgradeItemContainer);
+        _selectedUpgradeItemObj = Instantiate(upgraderItemPrefab, selectedUpgradeItemContainer);
 
         isSuccessText.text = "";
         PopulateItemPrefab(_selectedUpgradeItemObj, item);
@@ -305,13 +289,28 @@ public class UpgraderManager : MonoBehaviour
     {
         Image itemImage = itemObj.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = itemObj.transform.Find("RarityImage").GetComponent<Image>();
+        Image statTrakImage = itemObj.transform.Find("StatTrakImage").GetComponent<Image>();
+        TextMeshProUGUI gunText = itemObj.transform.Find("GunText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI nameText = itemObj.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = itemObj.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI conditionText = itemObj.transform.Find("ConditionText").GetComponent<TextMeshProUGUI>();
 
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.imageName}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}_ROULETTE_SLIM");
+        
+        if (item.isStatTrak)
+        {
+            statTrakImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            statTrakImage.gameObject.SetActive(false);
+        }
+        
+        gunText.text = item.gun;
         nameText.text = item.name;
         priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}";
+        conditionText.text = item.condition;
     }
 
     void UpdateUpgradeProbability()
@@ -370,148 +369,24 @@ public class UpgraderManager : MonoBehaviour
 
     public void SortItems()
     {
-        if (_isInventoryTabActive)
+        if (sortDropdown.options[sortDropdown.value].text == "Random")
         {
-            _inventoryItems = new List<ItemData>(_inventoryItems);
-            string sortCriteria = sortDropdown.options[sortDropdown.value].text;
-            bool ascending = ascendingToggle.isOn;
-            _inventoryItems = SortInventoryItemsByCriteria(sortCriteria, ascending);
+            Globals.RandomizeItemSortOrder();
         }
-        else
-        {
-            _allItems = new List<ItemData>(_allItems);
-            string sortCriteria = sortDropdown.options[sortDropdown.value].text;
-            bool ascending = ascendingToggle.isOn;
-            _allItems = SortAllItemsByCriteria(sortCriteria, ascending);
-        }
+
+        _currentPage = 0;
         UpdateCurrentTab();
     }
+
     public void SearchItems()
     {
-        string query = searchInput.text.ToLower();
-
-        if (string.IsNullOrWhiteSpace(query))
-        {
-            if (!_isInventoryTabActive)
-            {
-                LoadAllGameItems();
-                SortItems();
-            }
-            else
-            {
-                LoadAllGameItems();
-                SortItems();
-            }
-        }
-        else
-        {
-            if (!_isInventoryTabActive)
-            {
-                _allItems = _allItems.Where(item =>
-                    item.name.ToLower().Contains(query) ||
-                    item.id.ToString().Contains(query)).ToList();
-            }
-            else
-            {
-                _inventoryItems = _inventoryItems.Where(item =>
-                    item.name.ToLower().Contains(query) ||
-                    item.id.ToString().Contains(query)).ToList();
-            }
-        }
-
+        _currentPage = 0;
         UpdateCurrentTab();
     }
     
     public void SearchPrices()
     {
-        string query = priceInput.text;
-        if (string.IsNullOrWhiteSpace(query))
-        {
-            if (!_isInventoryTabActive)
-            {
-                LoadAllGameItems();
-                SortItems();
-            }
-            else
-            {
-                LoadInventoryItems();
-                SortItems();
-            }
-        }
-
-        if (Globals.TryParseEuroInput(query, out int itemPriceQuery))
-        {
-            if (!_isInventoryTabActive)
-            {
-                _allItems = _allItems.Where(item => item.price <= itemPriceQuery).ToList();
-            }
-            else
-            {
-                _inventoryItems = _inventoryItems.Where(item => item.price <= itemPriceQuery).ToList();
-            }
-        }
+        _currentPage = 0;
         UpdateCurrentTab();
-    }
-
-    private List<ItemData> SortAllItemsByCriteria(string criteria, bool ascending)
-    {
-        return criteria switch
-        {
-            "Type" => ascending
-                ? _allItems.OrderBy(i => i.type).ToList()
-                : _allItems.OrderByDescending(i => i.type).ToList(),
-            "Rarity" => ascending
-                ? _allItems
-                    .OrderBy(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MaxValue)
-                    .ToList()
-                : _allItems
-                    .OrderByDescending(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MinValue)
-                    .ToList(),
-            "Gun" => ascending
-                ? _allItems.OrderBy(i => i.gun).ToList()
-                : _allItems.OrderByDescending(i => i.gun).ToList(),
-            "Condition" => ascending
-                ? _allItems
-                    .OrderBy(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MaxValue)
-                    .ToList()
-                : _allItems
-                    .OrderByDescending(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MinValue)
-                    .ToList(),
-            "Price" => ascending
-                ? _allItems.OrderBy(i => i.price).ToList()
-                : _allItems.OrderByDescending(i => i.price).ToList(),
-            _ => _allItems
-        };
-    }
-    
-    private List<ItemData> SortInventoryItemsByCriteria(string criteria, bool ascending)
-    {
-        return criteria switch
-        {
-            "Type" => ascending
-                ? _inventoryItems.OrderBy(i => i.type).ToList()
-                : _inventoryItems.OrderByDescending(i => i.type).ToList(),
-            "Rarity" => ascending
-                ? _inventoryItems
-                    .OrderBy(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MaxValue)
-                    .ToList()
-                : _inventoryItems
-                    .OrderByDescending(i => RarityData.Order.ContainsKey(i.rarity) ? RarityData.Order[i.rarity] : int.MinValue)
-                    .ToList(),
-            "Gun" => ascending
-                ? _inventoryItems.OrderBy(i => i.gun).ToList()
-                : _inventoryItems.OrderByDescending(i => i.gun).ToList(),
-            "Condition" => ascending
-                ? _inventoryItems
-                    .OrderBy(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MaxValue)
-                    .ToList()
-                : _inventoryItems
-                    .OrderByDescending(i => ConditionData.Order.ContainsKey(i.condition) ? RarityData.Order[i.condition] : int.MinValue)
-                    .ToList(),
-            "Price" => ascending
-                ? _inventoryItems.OrderBy(i => i.price).ToList()
-                : _inventoryItems.OrderByDescending(i => i.price).ToList(),
-            _ => _inventoryItems
-        };
     }
 }

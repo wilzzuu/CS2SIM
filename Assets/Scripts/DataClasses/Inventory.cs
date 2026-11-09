@@ -7,9 +7,10 @@ public class InventoryScreen : MonoBehaviour
 {
     public GameObject inventorySlotPrefab;
     public Transform inventoryGrid;
-    public Text totalValueText;
-    public int itemsPerPage = 72;
+    public TextMeshProUGUI pageIndicatorText;
+    public int itemsPerPage = 40;
     private int _currentPage;
+    private int _totalPages;
 
     private List<ItemData> _items = new List<ItemData>();
 
@@ -27,8 +28,8 @@ public class InventoryScreen : MonoBehaviour
             return;
         }
 
+        _totalPages = Mathf.CeilToInt((float)_items.Count / itemsPerPage);
         DisplayCurrentPage();
-        DisplayTotalValue();
     }
 
     void DisplayCurrentPage()
@@ -37,6 +38,8 @@ public class InventoryScreen : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+
+        pageIndicatorText.text = $"Page {_currentPage + 1} of {_totalPages}";
 
         int itemIndexOffset = _currentPage * itemsPerPage;
         int endIndex = Mathf.Min(itemIndexOffset + itemsPerPage, _items.Count);
@@ -55,8 +58,8 @@ public class InventoryScreen : MonoBehaviour
 
             Image itemImage = slot.transform.Find("ItemImage")?.GetComponent<Image>();
             Image rarityImage = slot.transform.Find("RarityImage")?.GetComponent<Image>();
+            Image statTrakImage = slot.transform.Find("StatTrakImage")?.GetComponent<Image>();
             TextMeshProUGUI conditionText = slot.transform.Find("ConditionText")?.GetComponent<TextMeshProUGUI>();
-            TextMeshProUGUI statTrakText = slot.transform.Find("StatTrakText")?.GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI gunText = slot.transform.Find("GunText")?.GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI nameText = slot.transform.Find("NameText")?.GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = slot.transform.Find("PriceText")?.GetComponent<TextMeshProUGUI>();
@@ -77,7 +80,7 @@ public class InventoryScreen : MonoBehaviour
 
             if (rarityImage != null)
             {
-                string rarityPath = "RarityImages/" + item.rarity;
+                string rarityPath = "RarityImages/" + item.rarity + "_BOTTOM";
                 Sprite raritySprite = Resources.Load<Sprite>(rarityPath);
                 if (raritySprite != null)
                 {
@@ -93,16 +96,16 @@ public class InventoryScreen : MonoBehaviour
             {
                 conditionText.text = item.condition;
             }
-            if (statTrakText != null)
+            
+            if (statTrakImage != null)
             {
                 if (item.isStatTrak)
                 {
-                    statTrakText.gameObject.SetActive(true);
-                    statTrakText.text = Globals.StatTrakUIText;
+                    statTrakImage.gameObject.SetActive(true);
                 }
                 else
                 {
-                    statTrakText.gameObject.SetActive(false);
+                    statTrakImage.gameObject.SetActive(false);
                 }
             }
 
@@ -127,16 +130,6 @@ public class InventoryScreen : MonoBehaviour
         {
             _currentPage--;
             DisplayCurrentPage();
-        }
-    }
-
-    public void DisplayTotalValue()
-    {
-        int totalValue = InventoryManager.Instance.CalculateInventoryValue();
-
-        if (totalValueText != null)
-        {
-            totalValueText.text = $"Total Value: {Globals.FormatCurrencyStr(totalValue, Globals.EURO_DECIMAL)}";
         }
     }
 }

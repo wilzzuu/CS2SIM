@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class CryptoManager : MonoBehaviour
 {
-    public Button showExchangeTab;
-    public Button showMiningTab;
-    public Button showBtcTab;
-    public Button showEthTab;
+    public Button showExchangeTabButton;
+    public Button showMiningTabButton;
+    public Button showBtcTabButton;
+    public Button showEthTabButton;
     public GameObject exchangeTabObject;
     public GameObject miningTabObject;
     private bool _isExchangeTab = true;
@@ -35,6 +35,7 @@ public class CryptoManager : MonoBehaviour
         CryptoSystem.Instance.OnBtcPriceChanged += UpdateBitcoinPriceDisplay;
         CryptoSystem.Instance.OnEthPriceChanged += UpdateEthereumPriceDisplay;
         CryptoSystem.Instance.OnCurrentMarketEventChanged += UpdateMarketEventDisplay;
+        showBtcTabButton.interactable = false;
         ShowExchangeTab();
     }
 
@@ -314,6 +315,8 @@ public class CryptoManager : MonoBehaviour
         _isExchangeTab = true;
         exchangeTabObject.SetActive(true);
         miningTabObject.SetActive(false);
+        showExchangeTabButton.interactable = false;
+        showMiningTabButton.interactable = true;
         UpdateExchangeUI();
     }
 
@@ -322,12 +325,16 @@ public class CryptoManager : MonoBehaviour
         _isExchangeTab = false;
         exchangeTabObject.SetActive(false);
         miningTabObject.SetActive(true);
+        showExchangeTabButton.interactable = true;
+        showMiningTabButton.interactable = false;
         UpdateMiningUI();
     }
 
     public void ShowBtcTab()
     {
         _isBtcTab = true;
+        showBtcTabButton.interactable = false;
+        showEthTabButton.interactable = true;
         if (_isExchangeTab)
         {
             UpdateExchangeUI();
@@ -341,6 +348,8 @@ public class CryptoManager : MonoBehaviour
     public void ShowEthTab()
     {
         _isBtcTab = false;
+        showBtcTabButton.interactable = true;
+        showEthTabButton.interactable = false;
         if (_isExchangeTab)
         {
             UpdateExchangeUI();

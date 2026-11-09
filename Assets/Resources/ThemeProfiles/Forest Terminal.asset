@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d207c757bc4e5fb526f33274686aa5, type: 3}
+  m_Name: Forest Terminal
+  m_EditorClassIdentifier: 
+  id: forest-terminal
+  displayName: Forest Terminal
+  description: A calm evergreen palette with a vivid mint accent.
+  background: {r: 0.035294, g: 0.070588, b: 0.058824, a: 1}
+  surface: {r: 0.062745, g: 0.117647, b: 0.094118, a: 1}
+  secondarySurface: {r: 0.094118, g: 0.164706, b: 0.12549, a: 1}
+  elevatedSurface: {r: 0.117647, g: 0.192157, b: 0.14902, a: 1}
+  navigationSurface: {r: 0.094118, g: 0.164706, b: 0.12549, a: 1}
+  buttonSurface: {r: 0.117647, g: 0.192157, b: 0.14902, a: 1}
+  border: {r: 0.176471, g: 0.282353, b: 0.211765, a: 1}
+  primaryText: {r: 0.929412, g: 0.976471, b: 0.945098, a: 1}
+  secondaryText: {r: 0.67451, g: 0.784314, b: 0.713725, a: 1}
+  mutedText: {r: 0.447059, g: 0.572549, b: 0.482353, a: 1}
+  accent: {r: 0.4, g: 0.85098, b: 0.635294, a: 1}
+  accentHover: {r: 0.541176, g: 0.929412, b: 0.737255, a: 1}
+  accentPressed: {r: 0.258824, g: 0.678431, b: 0.47451, a: 1}
+  accentSubtle: {r: 0.098039, g: 0.25098, b: 0.168627, a: 1}
+  success: {r: 0.333333, g: 0.788235, b: 0.603922, a: 1}
+  warning: {r: 0.917647, g: 0.72549, b: 0.419608, a: 1}
+  danger: {r: 0.909804, g: 0.47451, b: 0.568627, a: 1}
+  information: {r: 0.47451, g: 0.662745, b: 0.909804, a: 1}

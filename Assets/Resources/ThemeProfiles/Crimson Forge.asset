@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: 13d207c757bc4e5fb526f33274686aa5, type: 3}
+  m_Name: Crimson Forge
+  m_EditorClassIdentifier: 
+  id: crimson-forge
+  displayName: Crimson Forge
+  description: A dark charcoal palette with restrained crimson and rose accents.
+  background: {r: 0.086275, g: 0.050980, b: 0.070588, a: 1}
+  surface: {r: 0.129412, g: 0.074510, b: 0.105882, a: 1}
+  secondarySurface: {r: 0.176471, g: 0.101961, b: 0.145098, a: 1}
+  elevatedSurface: {r: 0.227451, g: 0.133333, b: 0.188235, a: 1}
+  navigationSurface: {r: 0.176471, g: 0.101961, b: 0.145098, a: 1}
+  buttonSurface: {r: 0.282353, g: 0.137255, b: 0.192157, a: 1}
+  border: {r: 0.337255, g: 0.188235, b: 0.247059, a: 1}
+  primaryText: {r: 0.972549, g: 0.941176, b: 0.949020, a: 1}
+  secondaryText: {r: 0.803922, g: 0.721569, b: 0.752941, a: 1}
+  mutedText: {r: 0.572549, g: 0.482353, b: 0.517647, a: 1}
+  accent: {r: 0.898039, g: 0.419608, b: 0.525490, a: 1}
+  accentHover: {r: 0.945098, g: 0.517647, b: 0.607843, a: 1}
+  accentPressed: {r: 0.776471, g: 0.309804, b: 0.419608, a: 1}
+  accentSubtle: {r: 0.282353, g: 0.137255, b: 0.192157, a: 1}
+  success: {r: 0.333333, g: 0.788235, b: 0.603922, a: 1}
+  warning: {r: 0.917647, g: 0.725490, b: 0.419608, a: 1}
+  danger: {r: 0.941176, g: 0.470588, b: 0.470588, a: 1}
+  information: {r: 0.513725, g: 0.682353, b: 0.909804, a: 1}

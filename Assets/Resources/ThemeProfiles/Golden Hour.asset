@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: 13d207c757bc4e5fb526f33274686aa5, type: 3}
+  m_Name: Golden Hour
+  m_EditorClassIdentifier: 
+  id: golden-hour
+  displayName: Golden Hour
+  description: A warm, dark palette built around amber, brass and soft golden highlights.
+  background: {r: 0.090196, g: 0.070588, b: 0.043137, a: 1}
+  surface: {r: 0.129412, g: 0.101961, b: 0.062745, a: 1}
+  secondarySurface: {r: 0.176471, g: 0.141176, b: 0.086275, a: 1}
+  elevatedSurface: {r: 0.227451, g: 0.176471, b: 0.105882, a: 1}
+  navigationSurface: {r: 0.176471, g: 0.141176, b: 0.086275, a: 1}
+  buttonSurface: {r: 0.286275, g: 0.215686, b: 0.113725, a: 1}
+  border: {r: 0.349020, g: 0.270588, b: 0.164706, a: 1}
+  primaryText: {r: 0.972549, g: 0.952941, b: 0.913725, a: 1}
+  secondaryText: {r: 0.811765, g: 0.764706, b: 0.666667, a: 1}
+  mutedText: {r: 0.580392, g: 0.525490, b: 0.427451, a: 1}
+  accent: {r: 0.905882, g: 0.713725, b: 0.360784, a: 1}
+  accentHover: {r: 0.952941, g: 0.796078, b: 0.486275, a: 1}
+  accentPressed: {r: 0.756863, g: 0.545098, b: 0.211765, a: 1}
+  accentSubtle: {r: 0.286275, g: 0.215686, b: 0.113725, a: 1}
+  success: {r: 0.470588, g: 0.745098, b: 0.568627, a: 1}
+  warning: {r: 0.941176, g: 0.764706, b: 0.431373, a: 1}
+  danger: {r: 0.909804, g: 0.474510, b: 0.474510, a: 1}
+  information: {r: 0.513725, g: 0.686275, b: 0.796078, a: 1}

@@ -81,3 +81,8 @@ Assets/Resources/PerformanceTestRunSettings.json.meta
 Assets/Resources/PerformanceTestRunSettings.json
 Assets/_Recovery/
 *.meta
+# Keep stable Unity GUIDs for the theme profiles and their scripts.
+!Assets/Scripts/Themes.meta
+!Assets/Scripts/Themes/*.meta
+!Assets/Resources/ThemeProfiles.meta
+!Assets/Resources/ThemeProfiles/*.meta

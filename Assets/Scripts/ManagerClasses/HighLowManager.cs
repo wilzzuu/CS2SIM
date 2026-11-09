@@ -30,6 +30,8 @@ public class HighLowManager : MonoBehaviour
 
     void Start()
     {
+        if (uIManager == null) uIManager = FindAnyObjectByType<UIManager>();
+
         guessHighButton.onClick.AddListener(GuessHigh);
         guessLowButton.onClick.AddListener(GuessLow);
         nextItemButton.onClick.AddListener(NextItem);
@@ -64,15 +66,17 @@ public class HighLowManager : MonoBehaviour
         GameObject nextItem = Instantiate(highLowItemPrefab, nextItemContainer);
         Image itemImage = nextItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = nextItem.transform.Find("RarityImage").GetComponent<Image>();
+        TextMeshProUGUI ItemImageCoverText = nextItem.transform.Find("ItemImageCoverText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI gunText = nextItem.transform.Find("GunText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI nameText = nextItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = nextItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
         
         itemImage.gameObject.SetActive(false);
         rarityImage.sprite = Resources.Load<Sprite>($"HiddenItemL");
-        gunText.text = "????????";
-        nameText.text = "??????";
-        priceText.text = "?€";
+        ItemImageCoverText.text = "?";
+        gunText.text = "";
+        nameText.text = "";
+        priceText.text = "";
     }
 
     private void PopulateNextRevealedItem(ItemData item)
@@ -86,13 +90,15 @@ public class HighLowManager : MonoBehaviour
         Image itemImage = revealItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = revealItem.transform.Find("RarityImage").GetComponent<Image>();
         TextMeshProUGUI gunText = revealItem.transform.Find("GunText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI ItemImageCoverText = revealItem.transform.Find("ItemImageCoverText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI nameText = revealItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = revealItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
         
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.imageName}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}_BOTTOM_SLIM");
         gunText.text = item.gun;
         nameText.text = item.name;
+        ItemImageCoverText.text = "";
         priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}€";
     }
 
@@ -106,14 +112,16 @@ public class HighLowManager : MonoBehaviour
         GameObject prevItem = Instantiate(highLowItemPrefab, previousItemContainer);
         Image itemImage = prevItem.transform.Find("ItemImage").GetComponent<Image>();
         Image rarityImage = prevItem.transform.Find("RarityImage").GetComponent<Image>();
+        TextMeshProUGUI ItemImageCoverText = prevItem.transform.Find("ItemImageCoverText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI gunText = prevItem.transform.Find("GunText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI nameText = prevItem.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI priceText = prevItem.transform.Find("PriceText").GetComponent<TextMeshProUGUI>();
 
         itemImage.sprite = Resources.Load<Sprite>($"ItemImages/{item.imageName}");
-        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
+        rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}_BOTTOM_SLIM");
         gunText.text = item.gun;
         nameText.text = item.name;
+        ItemImageCoverText.text = "";
         priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}€";
     }
     
