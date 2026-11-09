@@ -37,6 +37,7 @@ public class UpgraderManager : MonoBehaviour
     public TextMeshProUGUI pageIndicatorText;
     private int _currentPage;
     private int _totalPages;
+    private int _totalInventoryPages;
     const int ItemsPerPage = 24;
 
     private List<ItemData> _allItems = new List<ItemData>();
@@ -58,6 +59,9 @@ public class UpgraderManager : MonoBehaviour
     {
         LoadAllGameItems();
         LoadInventoryItems();
+        
+        _totalPages = Mathf.CeilToInt((float)_allItems.Count / ItemsPerPage);
+        _totalInventoryPages = Mathf.CeilToInt((float)_inventoryItems.Count / ItemsPerPage);
 
         upgradeTabButton.interactable = false;
         ShowInventoryTab();
@@ -69,7 +73,6 @@ public class UpgraderManager : MonoBehaviour
             float multiplier = _multipliers[i];
             multiplierButtons[i].onClick.AddListener(() => SelectRandomUpgradeItem(multiplier));
         }
-        _totalPages = Mathf.CeilToInt((float)GetDisplayedItems().Count / ItemsPerPage);
         
         inventoryTabButton.onClick.AddListener(ShowInventoryTab);
         upgradeTabButton.onClick.AddListener(ShowUpgradeTab);
@@ -94,19 +97,17 @@ public class UpgraderManager : MonoBehaviour
 
     private void UpdateCurrentTab()
     {
-        DisplayPage(_currentPage);
+        DisplayPage();
     }
 
-    void DisplayPage(int page)
+    void DisplayPage()
     {
         Transform currentCatalogGrid = _isInventoryTabActive ? inventoryCatalogGrid : upgradeCatalogGrid;
         if (currentCatalogGrid == null) return;
 
         List<ItemData> displayedItems = GetDisplayedItems();
-        int pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
-        _currentPage = pageCount == 0 ? 0 : Mathf.Clamp(page, 0, pageCount - 1);
-        page = _currentPage;
-        pageIndicatorText.text = $"Page {_currentPage + 1} of {_totalPages}";
+        int pageCount = _isInventoryTabActive ? _totalInventoryPages : _totalPages;
+        pageIndicatorText.text = $"Page {_currentPage + 1} of {(pageCount == 0 ? 1 : pageCount)}";
 
         foreach (Transform child in currentCatalogGrid)
         {
@@ -116,7 +117,7 @@ public class UpgraderManager : MonoBehaviour
             }
         }
 
-        int startIndex = page * ItemsPerPage;
+        int startIndex = _currentPage * ItemsPerPage;
         int endIndex = Mathf.Min(startIndex + ItemsPerPage, displayedItems.Count);
 
         for (int i = startIndex; i < endIndex; i++)
@@ -125,7 +126,6 @@ public class UpgraderManager : MonoBehaviour
             UpgraderItem upgraderItem = itemObj.GetComponent<UpgraderItem>();
             upgraderItem.Setup(displayedItems[i], _isInventoryTabActive);
         }
-        pageIndicatorText.text = ((pageCount > 0) ? _currentPage+1 : _currentPage).ToString();
     }
 
     public void NextPage()
@@ -136,7 +136,7 @@ public class UpgraderManager : MonoBehaviour
         if (_currentPage < pageCount - 1)
         {
             _currentPage++;
-            DisplayPage(_currentPage);
+            DisplayPage();
         }
     }
 
@@ -145,7 +145,7 @@ public class UpgraderManager : MonoBehaviour
         if (_currentPage > 0)
         {
             _currentPage--;
-            DisplayPage(_currentPage);
+            DisplayPage();
         }
     }
     
@@ -154,7 +154,7 @@ public class UpgraderManager : MonoBehaviour
         if (string.IsNullOrWhiteSpace(searchInput.text))
         {
             _currentPage = 0;
-            DisplayPage(_currentPage);
+            DisplayPage();
         }
     }
 
@@ -163,7 +163,7 @@ public class UpgraderManager : MonoBehaviour
         if (string.IsNullOrWhiteSpace(priceInput.text))
         {
             _currentPage = 0;
-            DisplayPage(_currentPage);
+            DisplayPage();
         }
     }
 
@@ -209,7 +209,7 @@ public class UpgraderManager : MonoBehaviour
         inventoryScrollView.SetActive(true);
         upgradeItemsScrollView.SetActive(false);
         _currentPage = 0;
-        DisplayPage(_currentPage);
+        DisplayPage();
     }
 
     public void ShowUpgradeTab()
@@ -218,7 +218,7 @@ public class UpgraderManager : MonoBehaviour
         inventoryScrollView.SetActive(false);
         upgradeItemsScrollView.SetActive(true);
         _currentPage = 0;
-        DisplayPage(_currentPage);
+        DisplayPage();
     }
 
     public void SelectInventoryItem(ItemData item)

@@ -39,7 +39,8 @@ public class InventoryScreen : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        pageIndicatorText.text = $"Page {_currentPage + 1} of {_totalPages}";
+        int pageCount = Mathf.CeilToInt((float)_items.Count / itemsPerPage);
+        pageIndicatorText.text = $"Page {_currentPage + 1} of {(pageCount == 0 ? 1 : _totalPages)}";
 
         int itemIndexOffset = _currentPage * itemsPerPage;
         int endIndex = Mathf.Min(itemIndexOffset + itemsPerPage, _items.Count);

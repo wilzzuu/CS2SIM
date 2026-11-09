@@ -165,7 +165,7 @@ public class RouletteManager : MonoBehaviour
             itemObj.GetComponent<RouletteInventoryItem>().Setup(_playerItems[i], _selectedPlayerItemIndices.Contains(i), i);
         }
 
-        pageIndicatorText.text = $"Page {_currentPage + 1} of {_totalPages}";
+        pageIndicatorText.text = $"Page {_currentPage + 1} of {(pageCount == 0 ? 1 : _totalPages)}";
     }
 
     public void NextPage()
