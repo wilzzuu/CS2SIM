@@ -5270,7 +5270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d378892d0be74809a9bb40c30c9f2b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeElement
-  role: 6
+  role: 17
 --- !u!1 &5309606229182145789
 GameObject:
   m_ObjectHideFlags: 0
@@ -6332,7 +6332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d378892d0be74809a9bb40c30c9f2b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeElement
-  role: 6
+  role: 15
 --- !u!1 &6228142039131274281
 GameObject:
   m_ObjectHideFlags: 0
