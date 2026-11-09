@@ -47,6 +47,7 @@ public class CaseOpening : MonoBehaviour
     {   
         if (uiManager == null) uiManager = FindAnyObjectByType<UIManager>();
 
+        normalCasesButton.interactable = false;
         openCaseButton.interactable = false;
         currentCase.gameObject.SetActive(false);
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>("CaseAssets"));
