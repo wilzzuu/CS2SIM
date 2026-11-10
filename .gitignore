@@ -87,3 +87,13 @@ Assets/_Recovery/
 !Assets/Scripts/Themes/*.meta
 !Assets/Resources/ThemeProfiles.meta
 !Assets/Resources/ThemeProfiles/*.meta
+# Keep stable Unity GUIDs for the trade-up and auto-open prefab dependencies.
+!Assets/Prefabs/AutoCaseOpenerPanel.prefab.meta
+!Assets/Prefabs/TradeUpPanel.prefab.meta
+!Assets/Prefabs/SelectedUpgraderItemPrefab.prefab.meta
+!Assets/Scripts/SystemClasses/AutoCaseOpener.cs.meta
+!Assets/Scripts/SystemClasses/CaseOpeningSystem.cs.meta
+!Assets/Scripts/ManagerClasses/TradeUpManager.cs.meta
+!Assets/Scripts/DataClasses/TradeUpItem.cs.meta
+!Assets/TextMesh Pro/Resources/Fonts & Materials/Inter-VariableFont_opsz,wght SDF.asset.meta
+!Assets/TextMesh Pro/Resources/Fonts & Materials/UbuntuSans SDF.asset.meta
