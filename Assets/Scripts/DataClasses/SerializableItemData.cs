@@ -7,6 +7,9 @@ public class SerializableItemData
     public int basePrice;
     public int price;
     public string condition;
+    public int pattern;
+    public float wearFloat;
+    public bool hasRandomizedAttributes;
     public bool isStatTrak;
     public string type;
     public string rarity;
@@ -22,6 +25,9 @@ public class SerializableItemData
         basePrice = item.basePrice;
         price = item.price;
         condition = item.condition;
+        pattern = item.pattern;
+        wearFloat = item.wearFloat;
+        hasRandomizedAttributes = item.hasRandomizedAttributes;
         isStatTrak = item.isStatTrak;
         type = item.type;
         rarity = item.rarity;

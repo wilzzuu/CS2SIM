@@ -12,6 +12,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
     private List<ItemData> _inventoryItems = new List<ItemData>();
+    private bool _needsSaveAfterAttributeMigration;
 
     private string SaveFilePath
     {
@@ -38,6 +39,10 @@ public class InventoryManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             
             _inventoryItems = LoadInventory();
+            if (_needsSaveAfterAttributeMigration)
+            {
+                SaveInventory();
+            }
         }
         else
         {
@@ -54,7 +59,7 @@ public class InventoryManager : MonoBehaviour
             ItemData itemAsset = Resources.Load<ItemData>(itemPath);
             if (itemAsset != null)
             {
-                ItemData item = CreateInventoryCopy(itemAsset);
+                ItemData item = CreateInventoryCopy(itemAsset, sItem);
                 item.isLocked = sItem.isLocked;
                 items.Add(item);
             }
@@ -62,7 +67,7 @@ public class InventoryManager : MonoBehaviour
         return items;
     }
 
-    private ItemData CreateInventoryCopy(ItemData source)
+    private ItemData CreateInventoryCopy(ItemData source, SerializableItemData savedData = null)
     {
         int price = source.price;
         int demandScore = source.demandScore;
@@ -74,6 +79,22 @@ public class InventoryManager : MonoBehaviour
         copy.demandScore = demandScore;
         copy.lastActivityTime = lastActivityTime;
         copy.isLocked = isLocked;
+
+        if (savedData != null && savedData.hasRandomizedAttributes)
+        {
+            copy.pattern = savedData.pattern;
+            copy.wearFloat = savedData.wearFloat;
+            copy.condition = savedData.condition;
+            copy.hasRandomizedAttributes = true;
+            copy.price = savedData.price;
+            copy.demandScore = savedData.demandScore;
+        }
+        else if (!copy.hasRandomizedAttributes)
+        {
+            copy.RandomizePatternAndFloat();
+            copy.price = Mathf.RoundToInt(price * copy.PriceMultiplier);
+        }
+
         return copy;
     }
 
@@ -109,6 +130,12 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItemToInventory(ItemData item)
     {
+        if (item == null)
+        {
+            Debug.LogError("Cannot add a null item to the inventory.", this);
+            return;
+        }
+
         _inventoryItems.Add(CreateInventoryCopy(item));
         SaveInventory();
         OnInventoryValueChanged?.Invoke();
@@ -201,6 +228,15 @@ public class InventoryManager : MonoBehaviour
             string jsonData = DataEncryptionUtility.Decrypt(encryptedData);
 
             InventoryData data = JsonUtility.FromJson<InventoryData>(jsonData);
+            foreach (SerializableItemData item in data.items)
+            {
+                if (!item.hasRandomizedAttributes)
+                {
+                    _needsSaveAfterAttributeMigration = true;
+                    break;
+                }
+            }
+
             return ConvertSerializableItemsToItemData(data.items);
         }
 

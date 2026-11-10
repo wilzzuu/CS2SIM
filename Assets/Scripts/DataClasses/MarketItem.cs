@@ -60,8 +60,8 @@ public class MarketplaceItem : MonoBehaviour
             : $"{Globals.FormatCurrencyStr(_itemData.price, Globals.EURO_DECIMAL)}€";
         
         int priceVariation = isBuying
-            ? buyPrice - _itemData.basePrice
-            : _itemData.price - _itemData.basePrice;
+            ? buyPrice - _itemData.ModifiedBasePrice
+            : _itemData.price - _itemData.ModifiedBasePrice;
         priceVariationText.text = priceVariation > 0
             ? $"+{Globals.FormatCurrencyStr(priceVariation, Globals.EURO_DECIMAL)}€"
             : $"{Globals.FormatCurrencyStr(priceVariation, Globals.EURO_DECIMAL)}€";

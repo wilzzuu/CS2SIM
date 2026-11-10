@@ -61,6 +61,8 @@ public class InventoryScreen : MonoBehaviour
             Image rarityImage = slot.transform.Find("RarityImage")?.GetComponent<Image>();
             Image statTrakImage = slot.transform.Find("StatTrakImage")?.GetComponent<Image>();
             TextMeshProUGUI conditionText = slot.transform.Find("ConditionText")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI floatText = slot.transform.Find("FloatText")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI patternText = slot.transform.Find("PatternText")?.GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI gunText = slot.transform.Find("GunText")?.GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI nameText = slot.transform.Find("NameText")?.GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI priceText = slot.transform.Find("PriceText")?.GetComponent<TextMeshProUGUI>();
@@ -97,6 +99,16 @@ public class InventoryScreen : MonoBehaviour
             {
                 conditionText.text = item.condition;
             }
+
+            if (floatText != null)
+            {
+                floatText.text = $"{item.wearFloat}";
+            }
+
+            if (patternText != null)
+            {
+                patternText.text = $"{item.pattern}";
+            }
             
             if (statTrakImage != null)
             {
@@ -109,7 +121,7 @@ public class InventoryScreen : MonoBehaviour
                     statTrakImage.gameObject.SetActive(false);
                 }
             }
-
+            
             gunText.text = item.gun;
             nameText.text = item.name;
             priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}€";

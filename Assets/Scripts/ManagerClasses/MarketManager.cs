@@ -427,10 +427,11 @@ public class MarketManager : MonoBehaviour
     private void AdjustItemPrice(ItemData item, int change)
     {
         item.demandScore += change;
+        int modifiedBasePrice = item.ModifiedBasePrice;
         item.price = Mathf.Clamp(
-            Globals.MoneyUtil.RoundEuro(item.basePrice * (1 + item.demandScore * FluctuationIntensity)),
-            Globals.MoneyUtil.RoundEuro(item.basePrice * 0.75f),
-            Globals.MoneyUtil.RoundEuro(item.basePrice * 1.5f));
+            Globals.MoneyUtil.RoundEuro(modifiedBasePrice * (1 + item.demandScore * FluctuationIntensity)),
+            Globals.MoneyUtil.RoundEuro(modifiedBasePrice * 0.75f),
+            Globals.MoneyUtil.RoundEuro(modifiedBasePrice * 1.5f));
     }
 
     private IEnumerator MarketFluctuationCoroutine()
@@ -445,8 +446,9 @@ public class MarketManager : MonoBehaviour
             {
                 float randomFluctuation = UnityEngine.Random.Range(-FluctuationIntensity, FluctuationIntensity);
                 int newPrice = Globals.MoneyUtil.RoundEuro(item.price * (1 + randomFluctuation));
+                int modifiedBasePrice = item.ModifiedBasePrice;
 
-                item.price = Mathf.Clamp(newPrice, Globals.MoneyUtil.RoundEuro(item.basePrice * 0.5f), Globals.MoneyUtil.RoundEuro(item.basePrice * 2f));
+                item.price = Mathf.Clamp(newPrice, Globals.MoneyUtil.RoundEuro(modifiedBasePrice * 0.5f), Globals.MoneyUtil.RoundEuro(modifiedBasePrice * 2f));
             }
             UpdateCurrentTab();
         }
@@ -462,12 +464,13 @@ public class MarketManager : MonoBehaviour
 
         float randomFluctuation = UnityEngine.Random.Range(-FluctuationIntensity, FluctuationIntensity);
         int newPrice = Globals.MoneyUtil.RoundEuro(item.price * (1 + randomFluctuation));
+        int modifiedBasePrice = item.ModifiedBasePrice;
 
-        item.price = Mathf.Clamp(newPrice, Globals.MoneyUtil.RoundEuro(item.basePrice * 0.5f), Globals.MoneyUtil.RoundEuro(item.basePrice * 2f));
+        item.price = Mathf.Clamp(newPrice, Globals.MoneyUtil.RoundEuro(modifiedBasePrice * 0.5f), Globals.MoneyUtil.RoundEuro(modifiedBasePrice * 2f));
 
         if (item.price < 1)
         {
-            item.price = item.basePrice;
+            item.price = modifiedBasePrice;
         }
     }
 
@@ -484,10 +487,11 @@ public class MarketManager : MonoBehaviour
                     
                     if (item.demandScore < 0) item.demandScore = 0;
 
+                    int modifiedBasePrice = item.ModifiedBasePrice;
                     item.price = Mathf.Clamp(
-                        Globals.MoneyUtil.RoundEuro(item.basePrice * (1 + item.demandScore * FluctuationIntensity)),
-                        Globals.MoneyUtil.RoundEuro(item.basePrice * 0.75f),
-                        Globals.MoneyUtil.RoundEuro(item.basePrice * 1.5f));
+                        Globals.MoneyUtil.RoundEuro(modifiedBasePrice * (1 + item.demandScore * FluctuationIntensity)),
+                        Globals.MoneyUtil.RoundEuro(modifiedBasePrice * 0.75f),
+                        Globals.MoneyUtil.RoundEuro(modifiedBasePrice * 1.5f));
 
                     pricesChanged = true;
                 }
