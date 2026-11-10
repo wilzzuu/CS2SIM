@@ -44,11 +44,28 @@ public class ItemData : ScriptableObject
         get
         {
             if (!hasRandomizedAttributes) return 1f;
-            if (wearFloat < FactoryNewMaxFloat) return 1.5f;
-            if (wearFloat < MinimalWearMaxFloat) return 1.2f;
-            if (wearFloat < FieldTestedMaxFloat) return 1f;
-            if (wearFloat < WellWornMaxFloat) return 0.85f;
-            return 0.7f;
+            if (!TryGetWearFloatRange(condition, out float minimumFloat, out float maximumFloat)) return 1f;
+
+            // -1 at the best float of the condition, 0 at the midpoint, +1 at the worst.
+            float midpoint = (minimumFloat + maximumFloat) * 0.5f;
+            float halfRange = (maximumFloat - minimumFloat) * 0.5f;
+            float offset = Mathf.Clamp((wearFloat - midpoint) / halfRange, -1f, 1f);
+
+            return 1f - offset * GetWearPriceSpread(condition);
+        }
+    }
+
+    // Maximum price deviation (+/-) at the edges of a condition's float range.
+    private static float GetWearPriceSpread(string itemCondition)
+    {
+        switch (itemCondition)
+        {
+            case "Factory New": return 0.20f;
+            case "Minimal Wear": return 0.14f;
+            case "Field-Tested": return 0.8f;
+            case "Well-Worn": return 0.04f;
+            case "Battle-Scarred": return 0.02f;
+            default: return 0f;
         }
     }
 
