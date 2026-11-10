@@ -62,9 +62,12 @@ public class Globals
         return currencyStrFormatted;
     }
 
-    // Parses a user-entered decimal Euro string (e.g. "10.50") into whole cents.
+    // Parses a user-entered decimal Euro string (e.g. "10.50" or "10,50") into whole cents.
     public static bool TryParseEuroInput(string text, out int cents)
     {
+        // Replace comma with period to handle both decimal separators
+        text = text.Replace(",", ".");
+
         if (decimal.TryParse(text, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal value))
         {
             cents = (int)Math.Round(value * EURO_SCALE, MidpointRounding.AwayFromZero);
@@ -75,9 +78,12 @@ public class Globals
         return false;
     }
 
-    // Parses a user-entered decimal Crypto string (e.g. "0.00045678") into whole satoshi-like units.
+    // Parses a user-entered decimal Crypto string (e.g. "0.00045678" or "0,00045678") into whole satoshi-like units.
     public static bool TryParseCryptoInput(string text, out long units)
     {
+        // Replace comma with period to handle both decimal separators
+        text = text.Replace(",", ".");
+
         if (decimal.TryParse(text, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal value))
         {
             units = (long)Math.Round(value * CRYPTO_SCALE, MidpointRounding.AwayFromZero);
@@ -86,6 +92,11 @@ public class Globals
 
         units = 0;
         return false;
+    }
+
+    public static int GetMarketBuyPrice(ItemData item)
+    {
+        return MoneyUtil.RoundEuro(item.price * MarketBuyPriceModifier);
     }
 
     public static List<ItemData> SortItems(IEnumerable<ItemData> items, string criteria, bool ascending)
