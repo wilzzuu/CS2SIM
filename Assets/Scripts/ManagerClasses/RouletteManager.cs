@@ -281,7 +281,7 @@ public class RouletteManager : MonoBehaviour
 
         foreach (Transform child in reelContainer)
         {
-            Destroy(child.gameObject);
+            DestroyImmediate(child.gameObject);
         }
 
         reelContainer.localPosition = _initialReelPosition;
@@ -597,7 +597,7 @@ public class RouletteManager : MonoBehaviour
             // Clear previous game's visual elements
             foreach (Transform child in reelContainer)
             {
-                Destroy(child.gameObject);
+                DestroyImmediate(child.gameObject);
             }
             
             // Reset reel position
