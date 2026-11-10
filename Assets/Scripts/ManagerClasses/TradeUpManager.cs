@@ -27,7 +27,7 @@ public class TradeUpManager : MonoBehaviour
     public TextMeshProUGUI pageIndicatorText;
 
     private const int RequiredItems = 10;
-    private const int ItemsPerPage = 24;
+    private const int ItemsPerPage = 12;
 
     private readonly List<ItemData> _selectedItems = new List<ItemData>();
     private string _selectedRarity;
@@ -65,7 +65,11 @@ public class TradeUpManager : MonoBehaviour
 
         if (_selectedItems.Count > 0)
         {
-            if (item.rarity != _selectedRarity || item.isStatTrak != _selectedStatTrak) return false;
+            if (item.rarity != _selectedRarity || item.isStatTrak != _selectedStatTrak)
+            {
+                SetStatus("All selected items must have matching rarity and StatTrak status.");
+                return false;
+            }
         }
         else
         {
@@ -133,7 +137,7 @@ public class TradeUpManager : MonoBehaviour
         }
 
         InventoryManager.Instance.RemoveItemsFromInventory(_selectedItems);
-        InventoryManager.Instance.AddItemToInventory(result);
+        result = InventoryManager.Instance.AddItemToInventory(result);
         if (CollectionManager.Instance != null) CollectionManager.Instance.AddItemToCollection(result);
 
         _selectedItems.Clear();
@@ -235,7 +239,7 @@ public class TradeUpManager : MonoBehaviour
         {
             resultInfoText.text = _selectedItems.Count == 0
                 ? "-"
-                : $"{(_selectedStatTrak ? Globals.StatTrakUIText + " " : "")}{GetResultRarity()} • {GetAverageCondition()}";
+                : $"{(_selectedStatTrak ? Globals.StatTrakUIText + "\n" : "")}{GetResultRarity()}\n{GetAverageCondition()}";
         }
     }
 

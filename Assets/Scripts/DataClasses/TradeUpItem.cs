@@ -12,6 +12,8 @@ public class TradeUpItem : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI priceText;
     public TextMeshProUGUI conditionText;
+    public TextMeshProUGUI floatText;
+    public TextMeshProUGUI patternText;
     public Button clickButton;
 
     public ItemData Item { get; private set; }
@@ -25,9 +27,16 @@ public class TradeUpItem : MonoBehaviour
         if (rarityImage != null) rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}_ROULETTE_SLIM");
         if (statTrakImage != null) statTrakImage.gameObject.SetActive(item.isStatTrak);
         if (gunText != null) gunText.text = item.gun;
-        if (nameText != null) nameText.text = item.name;
+        if (nameText != null)
+        {
+            string itemDetails = item.condition;
+            if (item.isStatTrak) itemDetails += " / StatTrak";
+            nameText.text = $"{item.name}\n{itemDetails}";
+        }
         if (priceText != null) priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}€";
         if (conditionText != null) conditionText.text = item.condition;
+        if (floatText != null) floatText.text = $"{item.wearFloat}";
+        if (patternText != null) patternText.text = $"{item.pattern}";
 
         if (clickButton != null)
         {
