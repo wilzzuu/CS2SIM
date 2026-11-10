@@ -80,6 +80,11 @@ public class InventoryManager : MonoBehaviour
         copy.lastActivityTime = lastActivityTime;
         copy.isLocked = isLocked;
 
+        if (savedData != null && !string.IsNullOrEmpty(savedData.condition))
+        {
+            copy.condition = savedData.condition;
+        }
+
         if (savedData != null && savedData.hasRandomizedAttributes)
         {
             copy.pattern = savedData.pattern;

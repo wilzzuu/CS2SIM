@@ -62,18 +62,48 @@ public class ItemData : ScriptableObject
     public void RandomizePatternAndFloat()
     {
         pattern = Random.Range(MinimumPattern, MaximumPattern + 1);
-        wearFloat = Random.value;
-        condition = GetConditionForFloat(wearFloat);
+        if (!TryGetWearFloatRange(condition, out float minimumFloat, out float maximumFloat))
+        {
+            Debug.LogError($"Cannot assign a wear float for unknown item condition '{condition}'.", this);
+            wearFloat = Random.Range(0f, 1f);
+        }
+        else
+        {
+            wearFloat = Random.Range(minimumFloat, maximumFloat - 0.000001f);
+        }
+
         hasRandomizedAttributes = true;
     }
 
-    public static string GetConditionForFloat(float value)
+    private static bool TryGetWearFloatRange(string itemCondition, out float minimumFloat, out float maximumFloat)
     {
-        if (value < FactoryNewMaxFloat) return "Factory New";
-        if (value < MinimalWearMaxFloat) return "Minimal Wear";
-        if (value < FieldTestedMaxFloat) return "Field-Tested";
-        if (value < WellWornMaxFloat) return "Well-Worn";
-        return "Battle-Scarred";
+        switch (itemCondition)
+        {
+            case "Factory New":
+                minimumFloat = 0f;
+                maximumFloat = FactoryNewMaxFloat;
+                return true;
+            case "Minimal Wear":
+                minimumFloat = FactoryNewMaxFloat;
+                maximumFloat = MinimalWearMaxFloat;
+                return true;
+            case "Field-Tested":
+                minimumFloat = MinimalWearMaxFloat;
+                maximumFloat = FieldTestedMaxFloat;
+                return true;
+            case "Well-Worn":
+                minimumFloat = FieldTestedMaxFloat;
+                maximumFloat = WellWornMaxFloat;
+                return true;
+            case "Battle-Scarred":
+                minimumFloat = WellWornMaxFloat;
+                maximumFloat = 1f;
+                return true;
+            default:
+                minimumFloat = 0f;
+                maximumFloat = 1f;
+                return false;
+        }
     }
 
     private void OnEnable()
