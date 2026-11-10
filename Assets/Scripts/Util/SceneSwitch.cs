@@ -38,5 +38,6 @@ public enum SceneNameList
     GameSelector,
     Market,
     Collection,
-    Inventory
+    Inventory,
+    TradeUp
 }
