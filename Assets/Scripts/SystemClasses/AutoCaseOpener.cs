@@ -13,6 +13,7 @@ public class AutoCaseOpener : MonoBehaviour
     public float delayBetweenOpens = 0.15f;
 
     private bool _isAutoOpening;
+    private bool _isAutoOpenCoroutineRunning;
     private bool _unlimited;
     private int _selectedOpenCount = 5;
 
@@ -90,6 +91,8 @@ public class AutoCaseOpener : MonoBehaviour
             return;
         }
 
+        if (_isAutoOpenCoroutineRunning) return;
+
         if (caseOpeningSystem == null)
         {
             Debug.LogError("CaseOpening system is not assigned. Auto-opening cannot start.", this);
@@ -117,14 +120,15 @@ public class AutoCaseOpener : MonoBehaviour
     public void StopAutoOpening()
     {
         _isAutoOpening = false;
-        SetControlsInteractable(true);
-        SetAutoOpenButtonLabel("Auto Open");
+        SetControlsInteractable(false);
         Debug.Log("Auto-open stopped after the current case.");
     }
 
     private IEnumerator AutoOpenCoroutine()
     {
         _isAutoOpening = true;
+        _isAutoOpenCoroutineRunning = true;
+        caseOpeningSystem.SetAutoOpening(true);
         SetControlsInteractable(false);
         SetAutoOpenButtonLabel("Stop");
 
@@ -147,7 +151,7 @@ public class AutoCaseOpener : MonoBehaviour
                 break;
             }
 
-            if (!caseOpeningSystem.TryOpenCase())
+            if (!caseOpeningSystem.TryOpenCaseForAutoOpen())
             {
                 Debug.Log(openedCount == 0
                     ? "Unable to open a case. Check your selected case and balance."
@@ -157,7 +161,7 @@ public class AutoCaseOpener : MonoBehaviour
             }
 
             openedCount++;
-            while (_isAutoOpening && caseOpeningSystem.IsScrolling)
+            while (caseOpeningSystem.IsScrolling)
             {
                 yield return null;
             }
@@ -170,6 +174,8 @@ public class AutoCaseOpener : MonoBehaviour
 
         bool stoppedByUser = !_isAutoOpening;
         _isAutoOpening = false;
+        _isAutoOpenCoroutineRunning = false;
+        caseOpeningSystem.SetAutoOpening(false);
         SetControlsInteractable(true);
         SetAutoOpenButtonLabel("Auto Open");
         if (openedCount > 0 && !stoppedByUser && !stoppedForInsufficientFunds)
@@ -199,14 +205,15 @@ public class AutoCaseOpener : MonoBehaviour
         if (unlimitedButton != null) unlimitedButton.interactable = settingsInteractable;
         if (autoOpenButton != null)
         {
-            autoOpenButton.interactable = _isAutoOpening
-                || (caseOpeningSystem != null && caseOpeningSystem.HasSelectedCase);
+            autoOpenButton.interactable = _isAutoOpening || (!_isAutoOpenCoroutineRunning
+                && caseOpeningSystem != null && caseOpeningSystem.HasSelectedCase);
         }
     }
 
     private bool AreSettingsLocked()
     {
-        return _isAutoOpening || (caseOpeningSystem != null && caseOpeningSystem.IsScrolling);
+        return _isAutoOpenCoroutineRunning
+            || (caseOpeningSystem != null && caseOpeningSystem.IsScrolling);
     }
 
     private void SetAutoOpenButtonLabel(string label)

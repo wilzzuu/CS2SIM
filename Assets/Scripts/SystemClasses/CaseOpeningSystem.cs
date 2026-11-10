@@ -36,6 +36,7 @@ public class CaseOpening : MonoBehaviour
 
     private bool _isSelectorOpen;
     private bool _isFirstSelection = true;
+    private bool _isAutoOpening;
     private List<CaseData> _availableCases;
     private CaseData _selectedCaseData;
 
@@ -48,6 +49,40 @@ public class CaseOpening : MonoBehaviour
     public bool CanOpenCase => _selectedCaseData != null
         && PlayerManager.Instance != null
         && PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price + keyPrice;
+
+    public void SetAutoOpening(bool isAutoOpening)
+    {
+        _isAutoOpening = isAutoOpening;
+
+        if (_isAutoOpening && _isSelectorOpen)
+        {
+            _isSelectorOpen = false;
+            caseSelectorPanel.gameObject.SetActive(false);
+            currentCase.gameObject.SetActive(_selectedCaseData != null);
+        }
+
+        if (openCaseButton != null)
+        {
+            openCaseButton.interactable = !_isAutoOpening && !_isScrolling
+                && !_isSelectorOpen && CanOpenCase;
+        }
+
+        if (selectCaseButton != null)
+        {
+            selectCaseButton.interactable = !_isAutoOpening && !_isScrolling
+                && !_isFirstSelection;
+        }
+
+        if (normalCasesButton != null) normalCasesButton.interactable = !_isAutoOpening && !_isScrolling && _isSelectorOpen;
+        if (customCasesButton != null) customCasesButton.interactable = !_isAutoOpening && !_isScrolling && _isSelectorOpen;
+        if (caseSelectorPanelContent != null)
+        {
+            foreach (Button button in caseSelectorPanelContent.GetComponentsInChildren<Button>(true))
+            {
+                button.interactable = !_isAutoOpening && !_isScrolling;
+            }
+        }
+    }
 
     void Start()
     {   
@@ -73,6 +108,7 @@ public class CaseOpening : MonoBehaviour
     
     public void ChangeToNormalCase()
     {
+        if (_isAutoOpening || _isScrolling) return;
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CaseAssets"));
         normalCasesButton.interactable = false;
         customCasesButton.interactable = true;
@@ -81,6 +117,7 @@ public class CaseOpening : MonoBehaviour
 
     public void ChangeToCustomCase()
     {
+        if (_isAutoOpening || _isScrolling) return;
         _availableCases = new List<CaseData>(Resources.LoadAll<CaseData>($"CustomCaseAssets"));
         normalCasesButton.interactable = true;
         customCasesButton.interactable = false;
@@ -98,6 +135,7 @@ public class CaseOpening : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private void SelectCase(CaseData chosenCase)
     {
+        if (_isAutoOpening || _isScrolling) return;
         if (chosenCase == null)
         {
             Debug.LogError("Chosen case is null. Cannot select case.");
@@ -150,11 +188,22 @@ public class CaseOpening : MonoBehaviour
 
     public void OpenCase()
     {
-        TryOpenCase();
+        if (!_isAutoOpening) TryOpenCase();
     }
 
     public bool TryOpenCase()
     {
+        return TryOpenCaseInternal(false);
+    }
+
+    public bool TryOpenCaseForAutoOpen()
+    {
+        return TryOpenCaseInternal(true);
+    }
+
+    private bool TryOpenCaseInternal(bool isAutoOpen)
+    {
+        if (_isAutoOpening && !isAutoOpen) return false;
         if (_isScrolling) return false;
 
         if (uiManager == null)
@@ -376,18 +425,21 @@ public class CaseOpening : MonoBehaviour
     {
         InventoryManager.Instance.AddItemToInventory(openedItem);
         CollectionManager.Instance.AddItemToCollection(openedItem);
+        _isScrolling = false;
         if (PlayerManager.Instance.GetPlayerBalance() < _selectedCaseData.price + keyPrice)
         {
-            DisplayCaseSelector(_availableCases);
-            ToggleCaseSelector();
+            if (!_isAutoOpening)
+            {
+                DisplayCaseSelector(_availableCases);
+                ToggleCaseSelector();
+            }
             openCaseButton.interactable = false;
         }
         else
         {
-            openCaseButton.interactable = true;
+            openCaseButton.interactable = !_isAutoOpening;
         }
-        _isScrolling = false;
-        selectCaseButton.interactable = true;
+        selectCaseButton.interactable = !_isAutoOpening;
         uiManager.UnlockUI();
     }
 
@@ -516,6 +568,7 @@ public class CaseOpening : MonoBehaviour
 
     public void ToggleCaseSelector()
     {
+        if (_isAutoOpening || _isScrolling) return;
         _isSelectorOpen = !_isSelectorOpen;
         caseSelectorPanel.gameObject.SetActive(_isSelectorOpen);
         openCaseButton.interactable = !_isSelectorOpen && _selectedCaseData != null && _selectedCaseData.price + keyPrice <= PlayerManager.Instance.GetPlayerBalance();
