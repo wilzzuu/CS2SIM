@@ -43,6 +43,11 @@ public class CaseOpening : MonoBehaviour
 
     private Dictionary<string, List<ItemData>> _rarityGroups;
 
+    public bool IsScrolling => _isScrolling;
+    public bool CanOpenCase => _selectedCaseData != null
+        && PlayerManager.Instance != null
+        && PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price + keyPrice;
+
     void Start()
     {   
         if (uiManager == null) uiManager = FindAnyObjectByType<UIManager>();
@@ -144,7 +149,12 @@ public class CaseOpening : MonoBehaviour
 
     public void OpenCase()
     {
-        if (_isScrolling) return;
+        TryOpenCase();
+    }
+
+    public bool TryOpenCase()
+    {
+        if (_isScrolling) return false;
 
         if (uiManager == null)
         {
@@ -152,20 +162,20 @@ public class CaseOpening : MonoBehaviour
             if (uiManager == null)
             {
                 Debug.LogError("UIManager could not be found. Cannot open case.");
-                return;
+                return false;
             }
         }
 
         if (PlayerManager.Instance == null)
         {
             Debug.LogError("PlayerManager is null");
-            return;
+            return false;
         }
 
         if (_selectedCaseData == null)
         {
             Debug.LogError("No case selected. Please select a case first.");
-            return;
+            return false;
         }
 
         int openingPrice = _selectedCaseData.price + keyPrice;
@@ -190,10 +200,12 @@ public class CaseOpening : MonoBehaviour
 
             ItemData openedItem = GetRandomItemByPercentage();
             StartCoroutine(AnimateScrollingReel(openedItem));
+            return true;
         }
         else
         {
             Debug.LogError("Not enough money to open this case.");
+            return false;
         }
     }
 
