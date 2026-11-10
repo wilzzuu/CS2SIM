@@ -281,7 +281,7 @@ public class RouletteManager : MonoBehaviour
 
         foreach (Transform child in reelContainer)
         {
-            DestroyImmediate(child.gameObject);
+            Destroy(child.gameObject);
         }
 
         reelContainer.localPosition = _initialReelPosition;
@@ -575,20 +575,40 @@ public class RouletteManager : MonoBehaviour
         _totalPlayerValue = 0;
         _reelItems.Clear();
 
-        // Auto-select the last played items
-        for (int i = 0; i < _playerItems.Count; i++)
+        // Inventory items are copies, so match by ID and consume one inventory copy per played item.
+        List<ItemData> remainingItemsToSelect = new List<ItemData>(lastPlayedItems);
+
+        for (int i = 0; i < _playerItems.Count && _selectedPlayerItemIndices.Count < 12; i++)
         {
-            foreach (var lastPlayedItem in lastPlayedItems)
+            ItemData inventoryItem = _playerItems[i];
+            if (inventoryItem == null)
             {
-                if (ReferenceEquals(_playerItems[i], lastPlayedItem) && 
-                    !_selectedPlayerItemIndices.Contains(i) &&
-                    _selectedPlayerItemIndices.Count < 12)
-                {
-                    _selectedPlayerItemIndices.Add(i);
-                    _totalPlayerValue += _playerItems[i].price;
-                    break;
-                }
+                continue;
             }
+
+            int matchingItemIndex = remainingItemsToSelect.FindIndex(lastPlayedItem =>
+                lastPlayedItem != null &&
+                (ReferenceEquals(inventoryItem, lastPlayedItem) ||
+                 (!string.IsNullOrEmpty(inventoryItem.id) && inventoryItem.id == lastPlayedItem.id)));
+            if (matchingItemIndex < 0)
+            {
+                continue;
+            }
+
+            _selectedPlayerItemIndices.Add(i);
+            _totalPlayerValue += inventoryItem.price;
+            remainingItemsToSelect.RemoveAt(matchingItemIndex);
+        }
+
+        if (remainingItemsToSelect.Count > 0)
+        {
+            Debug.LogWarning("Could not restore all items from the previous roulette round.");
+            _selectedPlayerItemIndices.Clear();
+            _totalPlayerValue = 0;
+            startGameButton.interactable = false;
+            replayButton.interactable = false;
+            backButton.interactable = true;
+            return;
         }
 
         // If we successfully selected items, prepare game but let player click Start Game
@@ -597,7 +617,7 @@ public class RouletteManager : MonoBehaviour
             // Clear previous game's visual elements
             foreach (Transform child in reelContainer)
             {
-                DestroyImmediate(child.gameObject);
+                Destroy(child.gameObject);
             }
             
             // Reset reel position
