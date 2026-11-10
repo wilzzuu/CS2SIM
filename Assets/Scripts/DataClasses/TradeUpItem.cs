@@ -27,12 +27,7 @@ public class TradeUpItem : MonoBehaviour
         if (rarityImage != null) rarityImage.sprite = Resources.Load<Sprite>($"RarityImages/{item.rarity}_ROULETTE_SLIM");
         if (statTrakImage != null) statTrakImage.gameObject.SetActive(item.isStatTrak);
         if (gunText != null) gunText.text = item.gun;
-        if (nameText != null)
-        {
-            string itemDetails = item.condition;
-            if (item.isStatTrak) itemDetails += " / StatTrak";
-            nameText.text = $"{item.name}\n{itemDetails}";
-        }
+        if (nameText != null) nameText.text = $"{item.name}";
         if (priceText != null) priceText.text = $"{Globals.FormatCurrencyStr(item.price, Globals.EURO_DECIMAL)}€";
         if (conditionText != null) conditionText.text = item.condition;
         if (floatText != null) floatText.text = $"{item.wearFloat}";
