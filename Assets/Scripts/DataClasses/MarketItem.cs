@@ -17,8 +17,6 @@ public class MarketplaceItem : MonoBehaviour
 
     private ItemData _itemData;
 
-    private const float BuyMarkup = 1.025f;
-
     public void Setup(ItemData item, bool isBuying)
     {
         _itemData = item;
@@ -37,20 +35,7 @@ public class MarketplaceItem : MonoBehaviour
 
         gunText.text = _itemData.gun;
         nameText.text = _itemData.name;
-        int buyPrice = Globals.MoneyUtil.RoundEuro(_itemData.price * BuyMarkup);
-        priceText.text = isBuying
-            ? $"{Globals.FormatCurrencyStr(buyPrice, Globals.EURO_DECIMAL)}€"
-            : $"{Globals.FormatCurrencyStr(_itemData.price, Globals.EURO_DECIMAL)}€";
-        
-        int priceVariation = isBuying
-            ? buyPrice - _itemData.basePrice
-            : _itemData.price - _itemData.basePrice;
-        priceVariationText.text = priceVariation > 0
-            ? $"+{Globals.FormatCurrencyStr(priceVariation, Globals.EURO_DECIMAL)}€"
-            : $"{Globals.FormatCurrencyStr(priceVariation, Globals.EURO_DECIMAL)}€";
-        priceVariationText.color = priceVariation > 0
-            ? new Color32(215, 49, 49, 255)
-            : new Color32(104, 215, 49, 255);
+        UpdatePrice(isBuying);
 
         buyButton.gameObject.SetActive(isBuying);
         sellButton.gameObject.SetActive(!isBuying);
@@ -69,8 +54,7 @@ public class MarketplaceItem : MonoBehaviour
     
     public void UpdatePrice(bool isBuying)
     {
-        InventoryManager.Instance.CalculateInventoryValue();
-        int buyPrice = Globals.MoneyUtil.RoundEuro(_itemData.price * BuyMarkup);
+        int buyPrice = Globals.GetMarketBuyPrice(_itemData);
         priceText.text = isBuying
             ? $"{Globals.FormatCurrencyStr(buyPrice, Globals.EURO_DECIMAL)}€"
             : $"{Globals.FormatCurrencyStr(_itemData.price, Globals.EURO_DECIMAL)}€";

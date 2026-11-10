@@ -32,7 +32,6 @@ public class MarketManager : MonoBehaviour
 
     private List<ItemData> _allItems = new List<ItemData>();
     private List<ItemData> _inventoryItems = new List<ItemData>();
-    private readonly Dictionary<ItemData, MarketplaceItem> _marketplaceItems = new Dictionary<ItemData, MarketplaceItem>();
 
     private int _currentPage;
     private int _totalPages;
@@ -66,6 +65,9 @@ public class MarketManager : MonoBehaviour
         LoadAllGameItems();
         LoadInventoryItems();
 
+        LoadLastUpdateTimestamp();
+        ApplyRealTimeFluctuations();
+
         ShowSellTab();
 
         showBuyTabButton.onClick.AddListener(ShowBuyTab);
@@ -87,10 +89,20 @@ public class MarketManager : MonoBehaviour
 
         PlayerManager.Instance.OnBalanceChanged += RefreshBalanceFilter;
 
-        LoadLastUpdateTimestamp();
-        ApplyRealTimeFluctuations();
         StartCoroutine(MarketFluctuationCoroutine());
         StartCoroutine(DemandScoreDecayCoroutine());
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            if (PlayerManager.Instance != null)
+            {
+                PlayerManager.Instance.OnBalanceChanged -= RefreshBalanceFilter;
+            }
+            Instance = null;
+        }
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -227,7 +239,6 @@ public class MarketManager : MonoBehaviour
             GameObject itemObj = Instantiate(marketplaceItemPrefab, currentCatalogGrid);
             MarketplaceItem marketplaceItem = itemObj.GetComponent<MarketplaceItem>();
             marketplaceItem.Setup(displayedItems[i], _isBuyingTabActive);
-            _marketplaceItems[displayedItems[i]] = marketplaceItem;
         }
 
         pageIndicatorText.text = $"Page {_currentPage + 1} of {Mathf.Max(_totalPages, 1)}";
@@ -310,14 +321,14 @@ public class MarketManager : MonoBehaviour
         if (Globals.TryParseEuroInput(priceInput.text, out int priceLimit))
         {
             items = _isBuyingTabActive
-                ? items.Where(item => item.price * Globals.MarketBuyPriceModifier <= priceLimit)
+                ? items.Where(item => Globals.GetMarketBuyPrice(item) <= priceLimit)
                 : items.Where(item => item.price <= priceLimit);
         }
 
         if (_isBuyingTabActive && filterByBalanceToggle.isOn)
         {
             int playerBalance = PlayerManager.Instance.GetPlayerBalance();
-            items = items.Where(item => item.price * Globals.MarketBuyPriceModifier <= playerBalance);
+            items = items.Where(item => Globals.GetMarketBuyPrice(item) <= playerBalance);
         }
 
         string criteria = sortDropdown.options[sortDropdown.value].text;
@@ -332,7 +343,7 @@ public class MarketManager : MonoBehaviour
             return;
         }
 
-        int purchasePrice = Globals.MoneyUtil.RoundEuro(item.price * Globals.MarketBuyPriceModifier);
+        int purchasePrice = Globals.GetMarketBuyPrice(item);
         if (PlayerManager.Instance.GetPlayerBalance() >= purchasePrice)
         {
             PlayerManager.Instance.DeductMoney(purchasePrice);
@@ -420,10 +431,6 @@ public class MarketManager : MonoBehaviour
             Globals.MoneyUtil.RoundEuro(item.basePrice * (1 + item.demandScore * FluctuationIntensity)),
             Globals.MoneyUtil.RoundEuro(item.basePrice * 0.75f),
             Globals.MoneyUtil.RoundEuro(item.basePrice * 1.5f));
-        if (_marketplaceItems.TryGetValue(item, out MarketplaceItem marketplaceItem))
-        {
-            marketplaceItem.UpdatePrice(_isBuyingTabActive);
-        }
     }
 
     private IEnumerator MarketFluctuationCoroutine()
@@ -468,6 +475,7 @@ public class MarketManager : MonoBehaviour
     {
         while (true)
         {
+            bool pricesChanged = false;
             foreach (var item in _allItems)
             {
                 if (Time.time - item.lastActivityTime >= ItemData.DemandDecayInterval && item.demandScore != 0)
@@ -481,11 +489,12 @@ public class MarketManager : MonoBehaviour
                         Globals.MoneyUtil.RoundEuro(item.basePrice * 0.75f),
                         Globals.MoneyUtil.RoundEuro(item.basePrice * 1.5f));
 
-                    if (_marketplaceItems.TryGetValue(item, out MarketplaceItem marketplaceItem))
-                    {
-                        marketplaceItem.UpdatePrice(_isBuyingTabActive);
-                    }
+                    pricesChanged = true;
                 }
+            }
+            if (pricesChanged)
+            {
+                UpdateCurrentTab();
             }
             
             yield return new WaitForSeconds(ItemData.DemandDecayInterval);
