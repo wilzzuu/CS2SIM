@@ -41,7 +41,7 @@ public class MarketManager : MonoBehaviour
 
     private bool _isBuyingTabActive;
 
-    private const float FluctuationIntensity = 0.1f;
+    private const float FluctuationIntensity = 0.025f;
     private const int ItemsToFluctuate = 20;
     private const float MarketEventInterval = 120f;
     private DateTime _lastUpdateTimestamp;
