@@ -46,6 +46,9 @@ public class RouletteManager : MonoBehaviour
     private float _winChance;
     public UIManager uiManager;
 
+    private List<ItemData> _lastRoundPlayedItems = new List<ItemData>();
+    private List<ItemData> _lastRoundWonItems = new List<ItemData>();
+
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -70,7 +73,7 @@ public class RouletteManager : MonoBehaviour
 
         confirmSelectionButton.onClick.AddListener(ConfirmSelection);
         startGameButton.onClick.AddListener(StartGame);
-        replayButton.onClick.AddListener(RestartGame);
+        replayButton.onClick.AddListener(AutoRematch);
         backButton.onClick.AddListener(BackToSelection);
 
         _gridLayout = reelContainer.GetComponent<GridLayoutGroup>();
@@ -255,8 +258,12 @@ public class RouletteManager : MonoBehaviour
         UpdateUI();
         pageControls.SetActive(false);
         itemSelectorView.SetActive(false);
-        replayButton.interactable = false;
         gameView.SetActive(true);
+        
+        // Set button states for game ready
+        startGameButton.interactable = true;
+        replayButton.interactable = false;
+        backButton.interactable = true;
     }
 
     private void SetInitialReelPosition()
@@ -281,7 +288,12 @@ public class RouletteManager : MonoBehaviour
         RouletteItem winningItem = GetRandomReelItem();
         _winningItemIndex = Random.Range(_reelItems.Count / 2, _reelItems.Count - 4);
         _reelItems[_winningItemIndex] = winningItem;
-        SettleOutcome(winningItem);
+        
+        // Disable buttons while game is running
+        startGameButton.interactable = false;
+        replayButton.interactable = false;
+        backButton.interactable = false;
+        
         StartCoroutine(AnimateScrollingReel(winningItem));
     }
 
@@ -333,6 +345,10 @@ public class RouletteManager : MonoBehaviour
         }
 
         reelContainer.localPosition = new Vector3(targetPosition, reelContainer.localPosition.y, 0);
+        
+        // Settle outcome only after animation completes
+        SettleOutcome(winningItem);
+        
         outcomeText.text = winningItem.OwnerIsPlayer ? "You won!" : "You lost!";
         _isScrolling = false;
         uiManager.UnlockUI();
@@ -343,6 +359,15 @@ public class RouletteManager : MonoBehaviour
 
     private void SettleOutcome(RouletteItem winningItem)
     {
+        // Record played items
+        _lastRoundPlayedItems.Clear();
+        foreach (int inventoryIndex in _selectedPlayerItemIndices)
+        {
+            _lastRoundPlayedItems.Add(_playerItems[inventoryIndex]);
+        }
+
+        _lastRoundWonItems.Clear();
+
         if (winningItem.OwnerIsPlayer)
         {
             HashSet<ItemData> uniqueBotItemsToAdd = new HashSet<ItemData>();
@@ -352,6 +377,7 @@ public class RouletteManager : MonoBehaviour
                 if (!item.OwnerIsPlayer)
                 {
                     uniqueBotItemsToAdd.Add(item.Item);
+                    _lastRoundWonItems.Add(item.Item);
                 }
             }
 
@@ -368,6 +394,9 @@ public class RouletteManager : MonoBehaviour
                 InventoryManager.Instance.RemoveItemFromInventory(_playerItems[inventoryIndex]);
             }
         }
+
+        // Record the round outcome for purchase system
+        this.RecordRoundOutcome(_lastRoundPlayedItems, _lastRoundWonItems);
     }
 
     private void SetUpReelItem(GameObject reelItem, ItemData itemData, bool isPlayerOwned)
@@ -502,10 +531,191 @@ public class RouletteManager : MonoBehaviour
         PopulateInventoryCatalog(0);
         selectedPlayerItemsTotalValue.text = "Total Value: 0€";
         gameView.SetActive(false);
+        
+        // Clear purchase history when restarting
+        this.ClearPurchaseHistory();
+    }
+
+    /// <summary>
+    /// Automated rematch function that handles the replay workflow:
+    /// 1. Auto-purchases lost items from previous round
+    /// 2. Auto-selects the purchased items into the roulette game
+    /// 3. Returns to game view ready for player to click Start Game
+    /// </summary>
+    public void AutoRematch()
+    {
+        // Check if we have items from the last round to replay
+        List<ItemData> lastPlayedItems = this.GetLastPlayedItems();
+        if (lastPlayedItems == null || lastPlayedItems.Count == 0)
+        {
+            Debug.LogWarning("No items from previous round to replay.");
+            return;
+        }
+
+        // Check if player lost the last game (if they won, they don't need to repurchase)
+        List<ItemData> winningItems = this.GetLastWonItems();
+        bool playerLostLastGame = (winningItems == null || winningItems.Count == 0);
+
+        if (playerLostLastGame)
+        {
+            // Auto-purchase the items that were lost
+            if (!this.TryPurchaseItemsForReplay(lastPlayedItems))
+            {
+                Debug.LogWarning("Failed to auto-purchase items for rematch. Insufficient balance.");
+                return;
+            }
+        }
+
+        // Reload inventory after purchase
+        LoadInventoryItems();
+
+        // Reset game state
+        _isScrolling = false;
+        _selectedPlayerItemIndices.Clear();
+        _totalPlayerValue = 0;
+        _reelItems.Clear();
+
+        // Auto-select the last played items
+        for (int i = 0; i < _playerItems.Count; i++)
+        {
+            foreach (var lastPlayedItem in lastPlayedItems)
+            {
+                if (ReferenceEquals(_playerItems[i], lastPlayedItem) && 
+                    !_selectedPlayerItemIndices.Contains(i) &&
+                    _selectedPlayerItemIndices.Count < 12)
+                {
+                    _selectedPlayerItemIndices.Add(i);
+                    _totalPlayerValue += _playerItems[i].price;
+                    break;
+                }
+            }
+        }
+
+        // If we successfully selected items, prepare game but let player click Start Game
+        if (_selectedPlayerItemIndices.Count > 0)
+        {
+            // Clear previous game's visual elements
+            foreach (Transform child in reelContainer)
+            {
+                Destroy(child.gameObject);
+            }
+            
+            // Reset reel position
+            reelContainer.localPosition = _initialReelPosition;
+            
+            // Generate new bot items and populate reel
+            GenerateBotsAndPopulateReel();
+            SetInitialReelPosition();
+            UpdateUI();
+            
+            // Clear outcome text from previous game
+            outcomeText.text = "";
+            
+            // Update the UI display
+            UpdateSelectedItemsGrid();
+            selectedPlayerItemsTotalValue.text = $"Total Value: {Globals.FormatCurrencyStr(_totalPlayerValue, Globals.EURO_DECIMAL)}€";
+            
+            // Update UI visibility
+            pageControls.SetActive(false);
+            itemSelectorView.SetActive(false);
+            gameView.SetActive(true);
+            
+            // Set button states for replay preparation
+            startGameButton.interactable = true;
+            replayButton.interactable = false;
+            backButton.interactable = true;
+        }
     }
 
     void BackToSelection()
     {
         RestartGame();
+    }
+
+    /// <summary>
+    /// Purchases a specific item won from the last roulette round.
+    /// Requires sufficient player balance.
+    /// </summary>
+    public bool PurchaseWonItem(ItemData item)
+    {
+        if (item == null)
+        {
+            Debug.LogWarning("Cannot purchase a null item.");
+            return false;
+        }
+
+        if (!_lastRoundWonItems.Contains(item))
+        {
+            Debug.LogWarning("Item was not won in the last round and cannot be purchased.");
+            return false;
+        }
+
+        return this.TryPurchaseItemForReplay(item);
+    }
+
+    /// <summary>
+    /// Purchases multiple items won from the last roulette round.
+    /// All items must be affordable or the purchase is cancelled.
+    /// </summary>
+    public bool PurchaseWonItems(List<ItemData> items)
+    {
+        if (items == null || items.Count == 0)
+        {
+            Debug.LogWarning("Cannot purchase an empty item list.");
+            return false;
+        }
+
+        foreach (var item in items)
+        {
+            if (!_lastRoundWonItems.Contains(item))
+            {
+                Debug.LogWarning($"Item '{item.name}' was not won in the last round.");
+                return false;
+            }
+        }
+
+        return this.TryPurchaseItemsForReplay(items);
+    }
+
+    /// <summary>
+    /// Gets the purchase manager for the last round's won items.
+    /// Use this to manage batch purchases programmatically.
+    /// </summary>
+    public RoulettePurchaseManager GetPurchaseManager()
+    {
+        return this.GetPurchaseManager();
+    }
+
+
+    /// <summary>
+    /// Gets all items the player used in the last roulette round.
+    /// </summary>
+    public List<ItemData> GetLastPlayedItems()
+    {
+        return new List<ItemData>(_lastRoundPlayedItems);
+    }
+
+    /// <summary>
+    /// Gets all items the player won in the last roulette round.
+    /// </summary>
+    public List<ItemData> GetLastWonItems()
+    {
+        return new List<ItemData>(_lastRoundWonItems);
+    }
+
+    /// <summary>
+    /// Checks if the player can afford to purchase a specific item.
+    /// </summary>
+    public bool CanAffordItem(ItemData item)
+    {
+        return this.CanAffordItem(item);
+    }
+
+    /// <summary>
+    /// Gets the total cost to purchase a list of items.
+    /// </summary>
+    public int GetPurchaseCost(List<ItemData> items)
+    {
+        return this.GetPurchaseCost(items);
     }
 }
