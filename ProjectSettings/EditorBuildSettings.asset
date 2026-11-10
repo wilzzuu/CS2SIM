@@ -77,5 +77,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SlotMachine.unity
     guid: 9596f896ac478f34cb54ba2ce14914c3
+  - enabled: 1
+    path: Assets/Scenes/TradeUp.unity
+    guid: 73844c2b756ab7548b8cb9a84b256b69
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
