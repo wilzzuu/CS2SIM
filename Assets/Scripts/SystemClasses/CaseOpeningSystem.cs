@@ -44,6 +44,7 @@ public class CaseOpening : MonoBehaviour
     private Dictionary<string, List<ItemData>> _rarityGroups;
 
     public bool IsScrolling => _isScrolling;
+    public bool HasSelectedCase => _selectedCaseData != null;
     public bool CanOpenCase => _selectedCaseData != null
         && PlayerManager.Instance != null
         && PlayerManager.Instance.GetPlayerBalance() >= _selectedCaseData.price + keyPrice;

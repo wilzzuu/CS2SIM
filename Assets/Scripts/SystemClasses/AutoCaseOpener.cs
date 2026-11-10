@@ -18,6 +18,11 @@ public class AutoCaseOpener : MonoBehaviour
 
     private static readonly int[] BatchSizes = { 5, 10, 25, 50, 100 };
 
+    private void Update()
+    {
+        SetControlsInteractable(!_isAutoOpening);
+    }
+
     private void Start()
     {
         if (caseOpeningSystem == null)
@@ -53,11 +58,12 @@ public class AutoCaseOpener : MonoBehaviour
         }
 
         UpdateSelectionStatus();
+        SetControlsInteractable(true);
     }
 
     public void SelectBatchSize(int count)
     {
-        if (_isAutoOpening) return;
+        if (AreSettingsLocked()) return;
         if (count != 5 && count != 10 && count != 25 && count != 50 && count != 100)
         {
             Debug.LogError($"Unsupported auto-open batch size: {count}.", this);
@@ -71,7 +77,7 @@ public class AutoCaseOpener : MonoBehaviour
 
     public void SelectUnlimited()
     {
-        if (_isAutoOpening) return;
+        if (AreSettingsLocked()) return;
         _unlimited = true;
         UpdateSelectionStatus();
     }
@@ -181,16 +187,26 @@ public class AutoCaseOpener : MonoBehaviour
 
     private void SetControlsInteractable(bool interactable)
     {
+        bool settingsInteractable = interactable && !AreSettingsLocked();
         if (batchSizeButtons != null)
         {
             foreach (Button button in batchSizeButtons)
             {
-                if (button != null) button.interactable = interactable;
+                if (button != null) button.interactable = settingsInteractable;
             }
         }
 
-        if (unlimitedButton != null) unlimitedButton.interactable = interactable;
-        if (autoOpenButton != null) autoOpenButton.interactable = true;
+        if (unlimitedButton != null) unlimitedButton.interactable = settingsInteractable;
+        if (autoOpenButton != null)
+        {
+            autoOpenButton.interactable = _isAutoOpening
+                || (caseOpeningSystem != null && caseOpeningSystem.HasSelectedCase);
+        }
+    }
+
+    private bool AreSettingsLocked()
+    {
+        return _isAutoOpening || (caseOpeningSystem != null && caseOpeningSystem.IsScrolling);
     }
 
     private void SetAutoOpenButtonLabel(string label)
