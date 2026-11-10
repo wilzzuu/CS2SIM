@@ -375,8 +375,6 @@ public class CaseOpening : MonoBehaviour
         }
         _isScrolling = false;
         selectCaseButton.interactable = true;
-        normalCasesButton.interactable = true;
-        customCasesButton.interactable = true;
         uiManager.UnlockUI();
     }
 
