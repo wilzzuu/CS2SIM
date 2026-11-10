@@ -1,16 +1,38 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TradeUpManager : MonoBehaviour
 {
     public static TradeUpManager Instance { get; private set; }
 
-    private const int REQUIRED_ITEMS = 10;
+    [Header("Prefab & Containers")]
+    public GameObject tradeUpItemPrefab;
+    public Transform inventoryGrid;
+    public Transform selectedItemsGrid;
+    public Transform resultContainer;
 
-    private List<ItemData> _selectedItems = new List<ItemData>();
+    [Header("Controls")]
+    public Button tradeUpButton;
+    public Button clearButton;
+    public Button previousPageButton;
+    public Button nextPageButton;
+
+    [Header("Texts")]
+    public TextMeshProUGUI selectedCountText;
+    public TextMeshProUGUI resultInfoText;
+    public TextMeshProUGUI statusText;
+    public TextMeshProUGUI pageIndicatorText;
+
+    private const int RequiredItems = 10;
+    private const int ItemsPerPage = 24;
+
+    private readonly List<ItemData> _selectedItems = new List<ItemData>();
     private string _selectedRarity;
     private bool _selectedStatTrak;
+    private int _currentPage;
 
     public delegate void SelectionChangedHandler();
     public event SelectionChangedHandler OnSelectionChanged;
@@ -20,41 +42,30 @@ public class TradeUpManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
-    /// <summary>
-    /// Adds an item to the trade-up selection.
-    /// Returns false if the item cannot be added (e.g., different rarity or StatTrak status).
-    /// </summary>
+    void Start()
+    {
+        if (tradeUpButton != null) tradeUpButton.onClick.AddListener(() => ExecuteTradeUp());
+        if (clearButton != null) clearButton.onClick.AddListener(ClearSelection);
+        if (previousPageButton != null) previousPageButton.onClick.AddListener(PreviousPage);
+        if (nextPageButton != null) nextPageButton.onClick.AddListener(NextPage);
+
+        RefreshUI();
+    }
+
     public bool AddItemToSelection(ItemData item)
     {
-        if (item == null)
-        {
-            Debug.LogError("TradeUpManager: Cannot add null item to selection.");
-            return false;
-        }
+        if (item == null || item.isLocked) return false;
+        if (_selectedItems.Contains(item)) return false;
+        if (_selectedItems.Count >= RequiredItems) return false;
+        if (GetNextRarity(item.rarity) == null) return false;
 
         if (_selectedItems.Count > 0)
         {
-            if (item.rarity != _selectedRarity)
-            {
-                Debug.LogWarning($"TradeUpManager: Item rarity '{item.rarity}' does not match selection rarity '{_selectedRarity}'.");
-                return false;
-            }
-
-            if (item.isStatTrak != _selectedStatTrak)
-            {
-                Debug.LogWarning($"TradeUpManager: Item StatTrak status does not match selection.");
-                return false;
-            }
+            if (item.rarity != _selectedRarity || item.isStatTrak != _selectedStatTrak) return false;
         }
         else
         {
@@ -62,206 +73,210 @@ public class TradeUpManager : MonoBehaviour
             _selectedStatTrak = item.isStatTrak;
         }
 
-        if (_selectedItems.Count >= REQUIRED_ITEMS)
-        {
-            Debug.LogWarning($"TradeUpManager: Selection is already at maximum capacity ({REQUIRED_ITEMS} items).");
-            return false;
-        }
-
         _selectedItems.Add(item);
-        OnSelectionChanged?.Invoke();
+        SelectionChanged();
         return true;
     }
 
-    /// <summary>
-    /// Removes an item from the trade-up selection.
-    /// </summary>
     public bool RemoveItemFromSelection(ItemData item)
     {
-        if (_selectedItems.Remove(item))
-        {
-            if (_selectedItems.Count == 0)
-            {
-                _selectedRarity = null;
-            }
-            OnSelectionChanged?.Invoke();
-            return true;
-        }
+        if (!_selectedItems.Remove(item)) return false;
 
-        return false;
+        if (_selectedItems.Count == 0) _selectedRarity = null;
+        SelectionChanged();
+        return true;
     }
 
-    /// <summary>
-    /// Clears all selected items.
-    /// </summary>
     public void ClearSelection()
     {
         _selectedItems.Clear();
         _selectedRarity = null;
-        OnSelectionChanged?.Invoke();
+        SelectionChanged();
     }
 
-    /// <summary>
-    /// Gets the current number of selected items.
-    /// </summary>
-    public int GetSelectedItemCount()
-    {
-        return _selectedItems.Count;
-    }
+    public List<ItemData> GetSelectedItems() => new List<ItemData>(_selectedItems);
 
-    /// <summary>
-    /// Gets all currently selected items.
-    /// </summary>
-    public List<ItemData> GetSelectedItems()
-    {
-        return new List<ItemData>(_selectedItems);
-    }
+    public bool IsSelectionValid() => _selectedItems.Count == RequiredItems;
 
-    /// <summary>
-    /// Checks if a selection is valid and ready for trade-up.
-    /// </summary>
-    public bool IsSelectionValid()
-    {
-        return _selectedItems.Count == REQUIRED_ITEMS;
-    }
+    public string GetResultRarity() => _selectedRarity == null ? null : GetNextRarity(_selectedRarity);
 
-    /// <summary>
-    /// Executes the trade-up with currently selected items.
-    /// Returns the result item on success, null on failure.
-    /// </summary>
+    public string GetAverageCondition() => _selectedItems.Count == 0 ? null : CalculateResultCondition(_selectedItems);
+
+    // Consumes the 10 selected items, grants the traded item and returns it (null on failure).
     public ItemData ExecuteTradeUp()
     {
         if (!IsSelectionValid())
         {
-            Debug.LogError($"TradeUpManager: Cannot execute trade-up. Expected {REQUIRED_ITEMS} items, got {_selectedItems.Count}.");
+            SetStatus($"Select {RequiredItems} items.");
+            return null;
+        }
+
+        if (_selectedItems.Any(i => i.isLocked || !InventoryManager.Instance.HasItem(i)))
+        {
+            SetStatus("Some selected items are no longer available.");
+            ClearSelection();
             return null;
         }
 
         string nextRarity = GetNextRarity(_selectedRarity);
         if (nextRarity == null)
         {
-            Debug.LogError($"TradeUpManager: No higher rarity exists for '{_selectedRarity}'.");
+            SetStatus("No higher rarity available.");
             return null;
         }
 
-        string resultCondition = CalculateResultCondition(_selectedItems);
-
-        ItemData resultItem = SelectRandomItemOfRarity(nextRarity, resultCondition);
-
-        if (resultItem != null)
+        ItemData result = SelectRandomItem(nextRarity, CalculateResultCondition(_selectedItems), _selectedStatTrak);
+        if (result == null)
         {
-            resultItem.isStatTrak = _selectedStatTrak;
-            OnTradeUpComplete?.Invoke(resultItem);
-            ClearSelection();
-        }
-        else
-        {
-            Debug.LogWarning($"TradeUpManager: Could not find any item with rarity '{nextRarity}' and condition '{resultCondition}'.");
-        }
-
-        return resultItem;
-    }
-
-    /// <summary>
-    /// Gets the next rarity in the progression order.
-    /// </summary>
-    private string GetNextRarity(string currentRarity)
-    {
-        if (!RarityData.Order.TryGetValue(currentRarity, out int currentOrder))
-        {
+            SetStatus("No matching item found for this trade up.");
             return null;
         }
 
-        int nextOrder = currentOrder + 1;
-        var nextRarityEntry = RarityData.Order.FirstOrDefault(x => x.Value == nextOrder);
+        InventoryManager.Instance.RemoveItemsFromInventory(_selectedItems);
+        InventoryManager.Instance.AddItemToInventory(result);
+        if (CollectionManager.Instance != null) CollectionManager.Instance.AddItemToCollection(result);
 
-        return nextRarityEntry.Key != null ? nextRarityEntry.Key : null;
+        _selectedItems.Clear();
+        _selectedRarity = null;
+        _currentPage = 0;
+
+        SelectionChanged(false);
+        ShowResult(result);
+        SetStatus("Trade Up successful!");
+        OnTradeUpComplete?.Invoke(result);
+        return result;
     }
 
-    /// <summary>
-    /// Calculates the result condition based on the average condition of selected items.
-    /// </summary>
-    private string CalculateResultCondition(List<ItemData> items)
+    private void SelectionChanged(bool clearResult = true)
     {
-        if (items.Count == 0)
-        {
-            return ConditionData.Name[ConditionData.Condition.FieldTested];
-        }
-
-        float averageConditionOrder = 0f;
-        foreach (ItemData item in items)
-        {
-            if (ConditionData.Order.TryGetValue(item.condition, out int conditionOrder))
-            {
-                averageConditionOrder += conditionOrder;
-            }
-        }
-
-        averageConditionOrder /= items.Count;
-
-        int resultConditionOrder = Mathf.RoundToInt(averageConditionOrder);
-        resultConditionOrder = Mathf.Clamp(resultConditionOrder, 1, 5);
-
-        var resultConditionEntry = ConditionData.Order.FirstOrDefault(x => x.Value == resultConditionOrder);
-        return resultConditionEntry.Key ?? ConditionData.Name[ConditionData.Condition.FieldTested];
+        if (clearResult) ClearContainer(resultContainer);
+        RefreshUI();
+        OnSelectionChanged?.Invoke();
     }
 
-    /// <summary>
-    /// Selects a random item of the specified rarity and condition from the game's item pool.
-    /// </summary>
-    private ItemData SelectRandomItemOfRarity(string rarity, string condition)
+    private static string GetNextRarity(string rarity)
     {
-        ItemData[] allItems = Resources.LoadAll<ItemData>("ItemAssets");
+        if (rarity == null || !RarityData.Order.TryGetValue(rarity, out int order)) return null;
 
-        List<ItemData> matchingItems = allItems
-            .Where(item => item.rarity == rarity && item.condition == condition)
+        foreach (var pair in RarityData.Order)
+        {
+            if (pair.Value == order + 1) return pair.Key;
+        }
+        return null;
+    }
+
+    private static string CalculateResultCondition(List<ItemData> items)
+    {
+        float average = (float)items.Average(i => ConditionData.Order.TryGetValue(i.condition, out int o) ? o : 3);
+        int rounded = Mathf.Clamp(Mathf.FloorToInt(average + 0.5f), 1, ConditionData.Order.Count);
+        return ConditionData.Order.First(p => p.Value == rounded).Key;
+    }
+
+    private static int ConditionDistance(ItemData item, int target)
+    {
+        return Mathf.Abs((ConditionData.Order.TryGetValue(item.condition, out int o) ? o : 0) - target);
+    }
+
+    private static ItemData SelectRandomItem(string rarity, string condition, bool statTrak)
+    {
+        List<ItemData> pool = Resources.LoadAll<ItemData>("ItemAssets")
+            .Where(i => i.rarity == rarity && i.isStatTrak == statTrak)
             .ToList();
+        if (pool.Count == 0) return null;
 
-        if (matchingItems.Count == 0)
-        {
-            return null;
-        }
-
-        ItemData selectedItem = matchingItems[Random.Range(0, matchingItems.Count)];
-        
-        ItemData resultCopy = ScriptableObject.CreateInstance<ItemData>();
-        resultCopy.id = selectedItem.id;
-        resultCopy.gun = selectedItem.gun;
-        resultCopy.name = selectedItem.name;
-        resultCopy.basePrice = selectedItem.basePrice;
-        resultCopy.price = selectedItem.price;
-        resultCopy.condition = selectedItem.condition;
-        resultCopy.type = selectedItem.type;
-        resultCopy.rarity = selectedItem.rarity;
-        resultCopy.weight = selectedItem.weight;
-        resultCopy.demandScore = 0;
-        resultCopy.imageName = selectedItem.imageName;
-        resultCopy.isLocked = false;
-
-        return resultCopy;
+        // Some items don't exist in every condition; fall back to the closest available one.
+        int target = ConditionData.Order[condition];
+        int best = pool.Min(i => ConditionDistance(i, target));
+        List<ItemData> candidates = pool.Where(i => ConditionDistance(i, target) == best).ToList();
+        return candidates[Random.Range(0, candidates.Count)];
     }
 
-    /// <summary>
-    /// Gets the next rarity that would result from the current selection.
-    /// </summary>
-    public string GetResultRarity()
+    private List<ItemData> GetAvailableInventoryItems()
     {
-        if (_selectedRarity == null)
+        IEnumerable<ItemData> items = InventoryManager.Instance.GetUnlockedItems()
+            .Where(i => !_selectedItems.Contains(i) && GetNextRarity(i.rarity) != null);
+
+        if (_selectedItems.Count > 0)
         {
-            return null;
+            items = items.Where(i => i.rarity == _selectedRarity && i.isStatTrak == _selectedStatTrak);
         }
-        return GetNextRarity(_selectedRarity);
+
+        return Globals.SortItems(items, "Rarity", true);
     }
 
-    /// <summary>
-    /// Gets the average condition of selected items.
-    /// </summary>
-    public string GetAverageCondition()
+    private void RefreshUI()
     {
-        if (_selectedItems.Count == 0)
+        if (InventoryManager.Instance == null) return;
+
+        List<ItemData> available = GetAvailableInventoryItems();
+        int totalPages = Mathf.Max(1, Mathf.CeilToInt((float)available.Count / ItemsPerPage));
+        _currentPage = Mathf.Clamp(_currentPage, 0, totalPages - 1);
+
+        ClearContainer(inventoryGrid);
+        foreach (ItemData item in available.Skip(_currentPage * ItemsPerPage).Take(ItemsPerPage))
         {
-            return null;
+            SpawnItem(inventoryGrid, item, i => AddItemToSelection(i));
         }
-        return CalculateResultCondition(_selectedItems);
+
+        ClearContainer(selectedItemsGrid);
+        foreach (ItemData item in _selectedItems)
+        {
+            SpawnItem(selectedItemsGrid, item, i => RemoveItemFromSelection(i));
+        }
+
+        if (pageIndicatorText != null) pageIndicatorText.text = $"Page {_currentPage + 1} of {totalPages}";
+        if (previousPageButton != null) previousPageButton.interactable = _currentPage > 0;
+        if (nextPageButton != null) nextPageButton.interactable = _currentPage < totalPages - 1;
+        if (selectedCountText != null) selectedCountText.text = $"{_selectedItems.Count}/{RequiredItems}";
+        if (tradeUpButton != null) tradeUpButton.interactable = IsSelectionValid();
+        if (clearButton != null) clearButton.interactable = _selectedItems.Count > 0;
+
+        if (resultInfoText != null)
+        {
+            resultInfoText.text = _selectedItems.Count == 0
+                ? "-"
+                : $"{(_selectedStatTrak ? Globals.StatTrakUIText + " " : "")}{GetResultRarity()} • {GetAverageCondition()}";
+        }
+    }
+
+    private void ShowResult(ItemData item)
+    {
+        ClearContainer(resultContainer);
+        SpawnItem(resultContainer, item, null);
+    }
+
+    private void SpawnItem(Transform parent, ItemData item, System.Action<ItemData> onClick)
+    {
+        if (parent == null || tradeUpItemPrefab == null) return;
+
+        GameObject obj = Instantiate(tradeUpItemPrefab, parent);
+        obj.GetComponent<TradeUpItem>().Setup(item, onClick);
+    }
+
+    private static void ClearContainer(Transform container)
+    {
+        if (container == null) return;
+
+        foreach (Transform child in container)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    private void SetStatus(string message)
+    {
+        if (statusText != null) statusText.text = message;
+    }
+
+    public void NextPage()
+    {
+        _currentPage++;
+        RefreshUI();
+    }
+
+    public void PreviousPage()
+    {
+        _currentPage--;
+        RefreshUI();
     }
 }
