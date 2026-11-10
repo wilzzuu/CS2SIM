@@ -11,8 +11,8 @@ public class Globals
     public const int CRYPTO_DECIMAL = 8;
     public const int EURO_SCALE = 100;
     public const long CRYPTO_SCALE = 100000000L;
-    public const float MarketBuyPriceModifier = 1.15f;
-    public const float MarketSellPriceModifier = 0.85f;
+    public const float MarketBuyPriceModifier = 1.015f;
+    public const float MarketSellPriceModifier = 0.985f;
     public const float MarketPriceMinFluctuation = 0.5f;
     public const float MarketPriceMaxFluctuation = 2f;
     public const string StatTrakUIText = "StatTrak™";
