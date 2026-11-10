@@ -133,17 +133,19 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItemToInventory(ItemData item)
+    public ItemData AddItemToInventory(ItemData item)
     {
         if (item == null)
         {
             Debug.LogError("Cannot add a null item to the inventory.", this);
-            return;
+            return null;
         }
 
-        _inventoryItems.Add(CreateInventoryCopy(item));
+        ItemData inventoryItem = CreateInventoryCopy(item);
+        _inventoryItems.Add(inventoryItem);
         SaveInventory();
         OnInventoryValueChanged?.Invoke();
+        return inventoryItem;
     }
 
     public bool SetItemLocked(ItemData item, bool isLocked)
