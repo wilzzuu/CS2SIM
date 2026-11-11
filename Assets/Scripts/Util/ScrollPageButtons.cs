@@ -12,6 +12,8 @@ public class ScrollPageButtons : MonoBehaviour
 
     void Update()
     {
+        if (ItemFilterPopup.IsOpenInScene(gameObject.scene) || Mouse.current == null) return;
+
         float scroll = Mouse.current.scroll.ReadValue().y;
 
         if (Mathf.Abs(scroll) < 0.1f) return;

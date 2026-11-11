@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
@@ -6,7 +7,7 @@ using System.Linq;
 using TMPro;
 using Random = UnityEngine.Random;
 
-public class RouletteManager : MonoBehaviour
+public class RouletteManager : MonoBehaviour, IItemFilterScreen
 {
     public static RouletteManager Instance { get; private set; }
     public GameObject rouletteItemPrefab;
@@ -19,15 +20,19 @@ public class RouletteManager : MonoBehaviour
     public Button startGameButton, confirmSelectionButton, replayButton, backButton;
     public TMP_Dropdown sortDropdown;
     public Toggle ascendingToggle;
+    public TMP_InputField searchInput;
+    public Button searchBtn;
+    public TMP_InputField priceInput;
+    public Button searchPriceBtn;
 
     public TextMeshProUGUI pageIndicatorText;
     private int _currentPage;
-    private int _totalPages;
 
     const int ItemsPerPage = 28;
 
     private List<ItemData> _allItems = new List<ItemData>();
     private List<ItemData> _playerItems = new List<ItemData>();
+    private readonly ItemFilter _filter = new ItemFilter();
     private readonly List<int> _selectedPlayerItemIndices = new List<int>();
     private readonly List<RouletteItem> _reelItems = new List<RouletteItem>();
 
@@ -64,11 +69,27 @@ public class RouletteManager : MonoBehaviour
 
         if (sortDropdown != null)
         {
-            sortDropdown.onValueChanged.AddListener(delegate { SortItems(); });
+            sortDropdown.onValueChanged.AddListener(OnSortChanged);
         }
         if (ascendingToggle != null)
         {
-            ascendingToggle.onValueChanged.AddListener(delegate { SortItems(); });
+            ascendingToggle.onValueChanged.AddListener(OnAscendingChanged);
+        }
+        if (searchBtn != null)
+        {
+            searchBtn.onClick.AddListener(SearchItems);
+        }
+        if (searchInput != null)
+        {
+            searchInput.onValueChanged.AddListener(OnSearchInputChanged);
+        }
+        if (searchPriceBtn != null)
+        {
+            searchPriceBtn.onClick.AddListener(SearchPrices);
+        }
+        if (priceInput != null)
+        {
+            priceInput.onValueChanged.AddListener(OnPriceInputChanged);
         }
 
         confirmSelectionButton.onClick.AddListener(ConfirmSelection);
@@ -84,8 +105,40 @@ public class RouletteManager : MonoBehaviour
         gameView.SetActive(false);
 
         _currentPage = 0;
-        _totalPages = Mathf.CeilToInt((float)_playerItems.Count / ItemsPerPage);
         PopulateInventoryCatalog(_currentPage);
+    }
+
+    void OnDestroy()
+    {
+        if (searchBtn != null)
+        {
+            searchBtn.onClick.RemoveListener(SearchItems);
+        }
+        if (searchInput != null)
+        {
+            searchInput.onValueChanged.RemoveListener(OnSearchInputChanged);
+        }
+        if (searchPriceBtn != null)
+        {
+            searchPriceBtn.onClick.RemoveListener(SearchPrices);
+        }
+        if (priceInput != null)
+        {
+            priceInput.onValueChanged.RemoveListener(OnPriceInputChanged);
+        }
+        if (sortDropdown != null)
+        {
+            sortDropdown.onValueChanged.RemoveListener(OnSortChanged);
+        }
+        if (ascendingToggle != null)
+        {
+            ascendingToggle.onValueChanged.RemoveListener(OnAscendingChanged);
+        }
+
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 
     void LoadAllGameItems()
@@ -148,7 +201,9 @@ public class RouletteManager : MonoBehaviour
 
     private void PopulateInventoryCatalog(int page)
     {
-        int pageCount = Mathf.CeilToInt((float)_playerItems.Count / ItemsPerPage);
+        List<int> visibleIndices = GetVisiblePlayerItemIndices();
+        int pageCount = Mathf.CeilToInt((float)visibleIndices.Count / ItemsPerPage);
+        _currentPage = pageCount == 0 ? 0 : Mathf.Clamp(page, 0, pageCount - 1);
 
         if (inventoryCatalogGrid == null) return;
         
@@ -160,20 +215,112 @@ public class RouletteManager : MonoBehaviour
             }
         }
 
-        int startIndex = page * ItemsPerPage;
-        int endIndex = Mathf.Min(startIndex + ItemsPerPage, _playerItems.Count);
+        int startIndex = _currentPage * ItemsPerPage;
+        int endIndex = Mathf.Min(startIndex + ItemsPerPage, visibleIndices.Count);
         for (int i = startIndex; i < endIndex; i++)
         {
+            int inventoryIndex = visibleIndices[i];
             GameObject itemObj = Instantiate(inventoryItemPrefab, inventoryCatalogGrid);
-            itemObj.GetComponent<RouletteInventoryItem>().Setup(_playerItems[i], _selectedPlayerItemIndices.Contains(i), i);
+            itemObj.GetComponent<RouletteInventoryItem>().Setup(_playerItems[inventoryIndex], _selectedPlayerItemIndices.Contains(inventoryIndex), inventoryIndex);
         }
 
-        pageIndicatorText.text = $"Page {_currentPage + 1} of {(pageCount == 0 ? 1 : _totalPages)}";
+        pageIndicatorText.text = $"Page {_currentPage + 1} of {(pageCount == 0 ? 1 : pageCount)}";
+    }
+
+    private List<int> GetVisiblePlayerItemIndices()
+    {
+        string searchQuery = searchInput == null ? string.Empty : searchInput.text.Trim();
+        int priceLimit = 0;
+        bool hasPriceLimit = priceInput != null &&
+            Globals.TryParseEuroInput(priceInput.text, out priceLimit);
+
+        return Enumerable.Range(0, _playerItems.Count)
+            .Where(index =>
+            {
+                ItemData item = _playerItems[index];
+                if (!_filter.Matches(item))
+                {
+                    return false;
+                }
+
+                if (!string.IsNullOrEmpty(searchQuery) &&
+                    (item.name == null || item.name.IndexOf(searchQuery, StringComparison.OrdinalIgnoreCase) < 0) &&
+                    (item.id == null || item.id.IndexOf(searchQuery, StringComparison.OrdinalIgnoreCase) < 0))
+                {
+                    return false;
+                }
+
+                return !hasPriceLimit || item.price <= priceLimit;
+            })
+            .ToList();
+    }
+
+    public void SearchItems()
+    {
+        RefreshSearch();
+    }
+
+    public void SearchPrices()
+    {
+        RefreshSearch();
+    }
+
+    public void ClearSearch()
+    {
+        if (searchInput == null || string.IsNullOrWhiteSpace(searchInput.text))
+        {
+            RefreshSearch();
+        }
+    }
+
+    public void ClearPriceSearch()
+    {
+        if (priceInput == null || string.IsNullOrWhiteSpace(priceInput.text))
+        {
+            RefreshSearch();
+        }
+    }
+
+    private void OnSearchInputChanged(string _)
+    {
+        ClearSearch();
+    }
+
+    private void OnPriceInputChanged(string _)
+    {
+        ClearPriceSearch();
+    }
+
+    private void RefreshSearch()
+    {
+        _currentPage = 0;
+        PopulateInventoryCatalog(_currentPage);
+    }
+
+    private void OnAscendingChanged(bool _)
+    {
+        SortItems();
+    }
+
+    private void OnSortChanged(int _)
+    {
+        SortItems();
+    }
+
+    public void OpenFilters()
+    {
+        ItemFilterPopup.Open(inventoryCatalogGrid, _filter, _allItems.Concat(_playerItems), RefreshFilters);
+    }
+
+    private void RefreshFilters()
+    {
+        _currentPage = 0;
+        PopulateInventoryCatalog(_currentPage);
     }
 
     public void NextPage()
     {
-        int itemsCount = _playerItems.Count;
+        int itemsCount = GetVisiblePlayerItemIndices().Count;
         int pageCount = Mathf.CeilToInt((float)itemsCount / ItemsPerPage);
 
         if (_currentPage < pageCount - 1)

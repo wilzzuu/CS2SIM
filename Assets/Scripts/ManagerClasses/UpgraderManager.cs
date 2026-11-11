@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UpgraderManager : MonoBehaviour
+public class UpgraderManager : MonoBehaviour, IItemFilterScreen
 {
     public static UpgraderManager Instance { get; private set; }
     
@@ -36,12 +36,11 @@ public class UpgraderManager : MonoBehaviour
     
     public TextMeshProUGUI pageIndicatorText;
     private int _currentPage;
-    private int _totalPages;
-    private int _totalInventoryPages;
     const int ItemsPerPage = 24;
 
     private List<ItemData> _allItems = new List<ItemData>();
     private List<ItemData> _inventoryItems = new List<ItemData>();
+    private readonly ItemFilter _filter = new ItemFilter();
     private bool _isInventoryTabActive = true;
     private ItemData _selectedInventoryItem;
     private ItemData _selectedUpgradeItem;
@@ -60,9 +59,6 @@ public class UpgraderManager : MonoBehaviour
         LoadAllGameItems();
         LoadInventoryItems();
         
-        _totalPages = Mathf.CeilToInt((float)_allItems.Count / ItemsPerPage);
-        _totalInventoryPages = Mathf.CeilToInt((float)_inventoryItems.Count / ItemsPerPage);
-
         upgradeTabButton.interactable = false;
         ShowInventoryTab();
 
@@ -106,7 +102,8 @@ public class UpgraderManager : MonoBehaviour
         if (currentCatalogGrid == null) return;
 
         List<ItemData> displayedItems = GetDisplayedItems();
-        int pageCount = _isInventoryTabActive ? _totalInventoryPages : _totalPages;
+        int pageCount = Mathf.CeilToInt((float)displayedItems.Count / ItemsPerPage);
+        _currentPage = pageCount == 0 ? 0 : Mathf.Clamp(_currentPage, 0, pageCount - 1);
         pageIndicatorText.text = $"Page {_currentPage + 1} of {(pageCount == 0 ? 1 : pageCount)}";
 
         foreach (Transform child in currentCatalogGrid)
@@ -170,6 +167,7 @@ public class UpgraderManager : MonoBehaviour
     private List<ItemData> GetDisplayedItems()
     {
         IEnumerable<ItemData> items = _isInventoryTabActive ? _inventoryItems : _allItems;
+        items = _filter.Apply(items);
         string searchQuery = searchInput.text.Trim();
         if (!string.IsNullOrEmpty(searchQuery))
         {
@@ -374,6 +372,17 @@ public class UpgraderManager : MonoBehaviour
             Globals.RandomizeItemSortOrder();
         }
 
+        _currentPage = 0;
+        UpdateCurrentTab();
+    }
+
+    public void OpenFilters()
+    {
+        ItemFilterPopup.Open(inventoryCatalogGrid, _filter, _allItems.Concat(_inventoryItems), RefreshFilters);
+    }
+
+    private void RefreshFilters()
+    {
         _currentPage = 0;
         UpdateCurrentTab();
     }

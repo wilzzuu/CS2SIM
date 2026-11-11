@@ -7,7 +7,7 @@ using System.Collections;
 using System;
 using System.Globalization;
 
-public class MarketManager : MonoBehaviour
+public class MarketManager : MonoBehaviour, IItemFilterScreen
 {
     public static MarketManager Instance { get; private set; }
     public Transform buyCatalogContent;
@@ -32,6 +32,7 @@ public class MarketManager : MonoBehaviour
 
     private List<ItemData> _allItems = new List<ItemData>();
     private List<ItemData> _inventoryItems = new List<ItemData>();
+    private readonly ItemFilter _filter = new ItemFilter();
 
     private int _currentPage;
     private int _totalPages;
@@ -294,6 +295,17 @@ public class MarketManager : MonoBehaviour
         UpdateCurrentTab();
     }
 
+    public void OpenFilters()
+    {
+        ItemFilterPopup.Open(buyCatalogContent, _filter, _allItems.Concat(_inventoryItems), RefreshFilters);
+    }
+
+    private void RefreshFilters()
+    {
+        _currentPage = 0;
+        UpdateCurrentTab();
+    }
+
     public void SearchItems()
     {
         _currentPage = 0;
@@ -309,6 +321,7 @@ public class MarketManager : MonoBehaviour
     private List<ItemData> GetDisplayedItems()
     {
         IEnumerable<ItemData> items = _isBuyingTabActive ? _allItems : _inventoryItems;
+        items = _filter.Apply(items);
         string searchQuery = searchInput.text.Trim();
         if (!string.IsNullOrEmpty(searchQuery))
         {
