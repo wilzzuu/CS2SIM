@@ -91,9 +91,15 @@ Assets/_Recovery/
 !Assets/Prefabs/AutoCaseOpenerPanel.prefab.meta
 !Assets/Prefabs/TradeUpPanel.prefab.meta
 !Assets/Prefabs/SelectedUpgraderItemPrefab.prefab.meta
+!Assets/Prefabs/FilterPanel.prefab.meta
 !Assets/Scripts/SystemClasses/AutoCaseOpener.cs.meta
 !Assets/Scripts/SystemClasses/CaseOpeningSystem.cs.meta
 !Assets/Scripts/ManagerClasses/TradeUpManager.cs.meta
 !Assets/Scripts/DataClasses/TradeUpItem.cs.meta
+!Assets/Scripts/DataClasses/ItemFilterPopup.cs.meta
+!Assets/Scripts/DataClasses/ItemFilterButton.cs.meta
+!Assets/Scripts/DataClasses/Inventory.cs.meta
+!Assets/Resources/ItemFilterPopup.prefab.meta
+!Assets/Resources/Images/Icons/funnel.png.meta
 !Assets/TextMesh Pro/Resources/Fonts & Materials/Inter-VariableFont_opsz,wght SDF.asset.meta
 !Assets/TextMesh Pro/Resources/Fonts & Materials/UbuntuSans SDF.asset.meta
