@@ -7,6 +7,8 @@ public class MarketplaceItem : MonoBehaviour
     public Image itemImage;
     public Image rarityImage;
     public TextMeshProUGUI conditionText;
+    public TextMeshProUGUI floatText;
+    public TextMeshProUGUI patternText;
     public Image statTrakImage;
     public TextMeshProUGUI gunText;
     public TextMeshProUGUI nameText;
@@ -35,6 +37,10 @@ public class MarketplaceItem : MonoBehaviour
 
         gunText.text = _itemData.gun;
         nameText.text = _itemData.name;
+        floatText.gameObject.SetActive(!isBuying);
+        patternText.gameObject.SetActive(!isBuying);
+        floatText.text = $"{_itemData.wearFloat}";
+        patternText.text = $"{_itemData.pattern}";
         UpdatePrice(isBuying);
 
         buyButton.gameObject.SetActive(isBuying);
