@@ -65,6 +65,7 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
 {
     public static CollectionManager Instance { get; private set; }
     private static CollectionStore _store;
+    private static ItemData[] _itemCatalog;
 
     public GameObject collectionItemPrefab;
     public Transform collectionGrid;
@@ -81,8 +82,6 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
     private readonly ItemFilter _filter = new ItemFilter();
     private List<ItemData> _allItems = new List<ItemData>();
     private List<ItemData> _visibleItems = new List<ItemData>();
-    private Dictionary<string, Sprite> _itemSpriteCache = new Dictionary<string, Sprite>();
-    private Dictionary<string, Sprite> _raritySpriteCache = new Dictionary<string, Sprite>();
     private int _currentPage;
     private bool _initialized;
 
@@ -107,6 +106,7 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
     private static void ResetStaticState()
     {
         _store = null;
+        _itemCatalog = null;
         Instance = null;
     }
 
@@ -126,9 +126,9 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
         if (collectionGrid == null) return;
         CollectionItem itemTemplate = collectionItemPrefab == null ? null : collectionItemPrefab.GetComponent<CollectionItem>();
         if (itemTemplate == null || itemTemplate.itemImage == null || itemTemplate.rarityImage == null ||
-            itemTemplate.itemNameText == null || itemTemplate.grayscaleMaterial == null)
+            itemTemplate.gunText == null || itemTemplate.nameText == null || itemTemplate.conditionText == null || itemTemplate.statTrakText == null || itemTemplate.grayscaleMaterial == null)
         {
-            Debug.LogError("Collection requires a CollectionItem prefab with image, rarity, name and grayscale material references.", this);
+            Debug.LogError("Collection requires a CollectionItem prefab with image, rarity, gun, name, condition, statTrak text and grayscale material references.", this);
             return;
         }
         if (itemsPerPage < 1)
@@ -137,16 +137,9 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
             return;
         }
 
-        _allItems = Resources.LoadAll<ItemData>("ItemAssets").Where(item => item != null).ToList();
-        
-        foreach (var item in _allItems)
-        {
-            if (!_itemSpriteCache.ContainsKey(item.imageName))
-                _itemSpriteCache[item.imageName] = Resources.Load<Sprite>($"ItemImages/{item.imageName}");
-            if (!_raritySpriteCache.ContainsKey(item.rarity))
-                _raritySpriteCache[item.rarity] = Resources.Load<Sprite>($"RarityImages/{item.rarity}");
-        }
-        
+        if (_itemCatalog == null)
+            _itemCatalog = Resources.LoadAll<ItemData>("ItemAssets").Where(item => item != null).ToArray();
+        _allItems = _itemCatalog.ToList();
         if (sortDropdown != null) sortDropdown.onValueChanged.AddListener(OnSortChanged);
         if (ascendingToggle != null) ascendingToggle.onValueChanged.AddListener(OnSortOrderChanged);
         if (searchInput != null) searchInput.onValueChanged.AddListener(OnSearchChanged);
@@ -245,6 +238,7 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
     {
         foreach (Transform child in collectionGrid)
         {
+            child.gameObject.SetActive(false);
             Destroy(child.gameObject);
         }
 
@@ -259,10 +253,8 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
         for (int i = start; i < end; i++)
         {
             ItemData item = _visibleItems[i];
-            Sprite itemSprite = _itemSpriteCache.TryGetValue(item.imageName, out var sprite) ? sprite : null;
-            Sprite raritySprite = _raritySpriteCache.TryGetValue(item.rarity, out var rSprite) ? rSprite : null;
             Instantiate(collectionItemPrefab, collectionGrid).GetComponent<CollectionItem>()
-                .Setup(item, IsCollected(item.id), itemSprite, raritySprite);
+                .Setup(item, IsCollected(item.id), Resources.Load<Sprite>($"ItemImages/{item.imageName}"), Resources.Load<Sprite>($"RarityImages/{item.rarity}_COLLECTION"));
         }
     }
 

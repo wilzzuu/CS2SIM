@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class CollectionItem : MonoBehaviour
 {
+    private static readonly Dictionary<string, Sprite> SpriteCache = new Dictionary<string, Sprite>();
+
     public Image itemImage;
     public Image rarityImage;
-    public TextMeshProUGUI itemNameText;
     public TextMeshProUGUI gunText;
+    public TextMeshProUGUI nameText;
     public TextMeshProUGUI conditionText;
-    public Image statTrakIndicator;
+    public TextMeshProUGUI statTrakText;
 
     public Material grayscaleMaterial;
     private Material _originalItemMaterial;
@@ -26,10 +29,10 @@ public class CollectionItem : MonoBehaviour
     {
         itemImage.sprite = itemSprite;
         rarityImage.sprite = raritySprite;
-        itemNameText.text = item.name;
+        nameText.text = item.name;
         if (gunText != null) gunText.text = item.gun;
         if (conditionText != null) conditionText.text = item.condition;
-        if (statTrakIndicator != null) statTrakIndicator.gameObject.SetActive(item.isStatTrak);
+        if (statTrakText != null) statTrakText.gameObject.SetActive(item.isStatTrak);
 
         if (!_initialized)
         {
@@ -37,10 +40,10 @@ public class CollectionItem : MonoBehaviour
             _originalRarityMaterial = rarityImage.material;
             _originalItemColor = itemImage.color;
             _originalRarityColor = rarityImage.color;
-            _originalNameColor = itemNameText.color;
+            _originalNameColor = nameText.color;
             if (gunText != null) _originalGunColor = gunText.color;
             if (conditionText != null) _originalConditionColor = conditionText.color;
-            if (statTrakIndicator != null) _originalStatTrakColor = statTrakIndicator.color;
+            if (statTrakText != null) _originalStatTrakColor = statTrakText.color;
             _initialized = true;
         }
 
@@ -48,9 +51,19 @@ public class CollectionItem : MonoBehaviour
         rarityImage.material = !isCollected && grayscaleMaterial != null ? grayscaleMaterial : _originalRarityMaterial;
         itemImage.color = isCollected ? _originalItemColor : Color.gray;
         rarityImage.color = isCollected ? _originalRarityColor : Color.gray;
-        itemNameText.color = isCollected ? _originalNameColor : Color.gray;
+        nameText.color = isCollected ? _originalNameColor : Color.gray;
         if (gunText != null) gunText.color = isCollected ? _originalGunColor : Color.gray;
         if (conditionText != null) conditionText.color = isCollected ? _originalConditionColor : Color.gray;
-        if (statTrakIndicator != null) statTrakIndicator.color = isCollected ? _originalStatTrakColor : Color.gray;
+        if (statTrakText != null) statTrakText.color = isCollected ? _originalStatTrakColor : Color.gray;
+    }
+
+    private static Sprite LoadSprite(string path)
+    {
+        if (!SpriteCache.TryGetValue(path, out Sprite sprite))
+        {
+            sprite = Resources.Load<Sprite>(path);
+            SpriteCache.Add(path, sprite);
+        }
+        return sprite;
     }
 }

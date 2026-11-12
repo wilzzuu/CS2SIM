@@ -82,7 +82,6 @@ public class RoulettePurchaseSystem : MonoBehaviour
 
         PlayerManager.Instance.DeductMoney(itemPrice);
         InventoryManager.Instance.AddItemToInventory(item);
-        CollectionManager.Instance.AddItemToCollection(item);
 
         LogUtil.Economy.LogEuro(
             "ROULETTE_PURCHASE",
@@ -129,7 +128,6 @@ public class RoulettePurchaseSystem : MonoBehaviour
         foreach (var item in items)
         {
             InventoryManager.Instance.AddItemToInventory(item);
-            CollectionManager.Instance.AddItemToCollection(item);
         }
 
         LogUtil.Economy.LogEuro(
