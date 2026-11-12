@@ -581,7 +581,7 @@ public class CryptoSystem : MonoBehaviour
 
         OnBtcPriceChanged?.Invoke();
 
-        currentMarketEvent = $"{eventName} (BTC {multiplier * 100f - 100f:+0;-0}%)";
+        currentMarketEvent = $"{eventName} ({multiplier * 100f - 100f:+0;-0}%)";
 
         LogUtil.Event.Log(
             eventName,
@@ -607,7 +607,7 @@ public class CryptoSystem : MonoBehaviour
 
         OnEthPriceChanged?.Invoke();
 
-        currentMarketEvent = $"{eventName} (ETH {multiplier * 100f - 100f:+0;-0}%)";
+        currentMarketEvent = $"{eventName} ({multiplier * 100f - 100f:+0;-0}%)";
 
         LogUtil.Event.Log(
             eventName,
