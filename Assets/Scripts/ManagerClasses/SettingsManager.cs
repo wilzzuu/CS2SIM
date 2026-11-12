@@ -5,6 +5,7 @@ public class SettingsManager : MonoBehaviour
 {
     public SceneSwitch sceneSwitch;
     public Transform themeSelectorPanel;
+    public GameObject resetPromptPanel;
     
 
     public void SelectTheme(string themeId)
@@ -16,6 +17,11 @@ public class SettingsManager : MonoBehaviour
         }
 
         ThemeManager.Instance.SelectTheme(themeId);
+    }
+
+    public void SettingsToggleResetPrompt()
+    {
+        resetPromptPanel.SetActive(!resetPromptPanel.activeSelf);
     }
 
     public void SettingsResetProgress()
