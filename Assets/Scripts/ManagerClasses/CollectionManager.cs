@@ -252,7 +252,7 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
         {
             float collectedCount = _visibleItems.Count(item => IsCollected(item.id));
             float totalCount = _visibleItems.Count;
-            collectionPercentageText.text = $"{collectedCount}/{totalCount} ({(totalCount > 0 ? (collectedCount / totalCount * 100f) : 0f):F1}%)";
+            collectionPercentageText.text = $"{collectedCount}/{totalCount}  ({(totalCount > 0 ? (collectedCount / totalCount * 100f) : 0f):F2}%)";
         }
 
         int start = _currentPage * itemsPerPage;
