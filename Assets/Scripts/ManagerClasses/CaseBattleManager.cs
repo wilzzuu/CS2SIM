@@ -308,8 +308,32 @@ public class CaseBattleManager : MonoBehaviour
             int playerOpenedItemIndex = Random.Range(24, numberOfReelItems - 4);
             int botOpenedItemIndex = Random.Range(24, numberOfReelItems - 4);
 
-            ItemData playerSelectedItem = GetRandomItemByChance();
-            ItemData botSelectedItem = GetRandomItemByChance();
+            ItemData playerSelectedItem;
+            ItemData botSelectedItem;
+            if (Globals.AlwaysWin)
+            {
+                List<ItemData> availableItems = _selectedCaseData.items
+                    .Where(item => item != null)
+                    .OrderBy(item => item.price)
+                    .ToList();
+                bool higherWins = gameModeDropdown.options[gameModeDropdown.value].text == "Higher Wins";
+
+                if (availableItems.Count > 1)
+                {
+                    playerSelectedItem = higherWins ? availableItems[availableItems.Count - 1] : availableItems[0];
+                    botSelectedItem = higherWins ? availableItems[0] : availableItems[availableItems.Count - 1];
+                }
+                else
+                {
+                    playerSelectedItem = GetRandomItemByChance();
+                    botSelectedItem = GetRandomItemByChance();
+                }
+            }
+            else
+            {
+                playerSelectedItem = GetRandomItemByChance();
+                botSelectedItem = GetRandomItemByChance();
+            }
 
             SetInitialReelPosition(playerReelParent);
             SetInitialReelPosition(botReelParent);

@@ -73,9 +73,9 @@ public class CoinFlipManager : MonoBehaviour
 
         PlayerManager.Instance.DeductMoney(bet);
 
-        CoinFace outcome = (Random.value < 0.5f)
-            ? CoinFace.Heads
-            : CoinFace.Tails;
+        CoinFace outcome = Globals.AlwaysWin
+            ? _selectedFace
+            : (Random.value < 0.5f ? CoinFace.Heads : CoinFace.Tails);
 
         playButton.interactable = false;
         ShowResult(outcome, bet);

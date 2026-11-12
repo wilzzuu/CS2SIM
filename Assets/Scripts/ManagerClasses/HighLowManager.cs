@@ -190,6 +190,8 @@ public class HighLowManager : MonoBehaviour
 
     private void GuessHigh()
     {
+        if (Globals.AlwaysWin) _currentItem = GetWinningItem(true);
+
         guessHighButton.interactable = false;
         guessLowButton.interactable = false;
         nextItemButton.interactable = true;
@@ -217,6 +219,8 @@ public class HighLowManager : MonoBehaviour
 
     private void GuessLow()
     {
+        if (Globals.AlwaysWin) _currentItem = GetWinningItem(false);
+
         guessHighButton.interactable = false;
         guessLowButton.interactable = false;
         nextItemButton.interactable = true;
@@ -255,6 +259,18 @@ public class HighLowManager : MonoBehaviour
         uIManager.UnlockUI();
         _previousItem = null;
         _currentItem = null;
+    }
+
+    private ItemData GetWinningItem(bool guessHigh)
+    {
+        List<ItemData> winningItems = _allItems
+            .Where(item => guessHigh
+                ? item.price > _previousItem.price
+                : item.price < _previousItem.price)
+            .ToList();
+
+        if (winningItems.Count == 0) return _previousItem;
+        return winningItems[Random.Range(0, winningItems.Count)];
     }
     
     private void CashOut()

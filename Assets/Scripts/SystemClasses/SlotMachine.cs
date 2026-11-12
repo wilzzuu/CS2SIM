@@ -53,7 +53,7 @@ public class SlotMachine : MonoBehaviour
         float roll = Random.value;
 
         // WIN
-        if (roll < winChance)
+        if (Globals.AlwaysWin || roll < winChance)
         {
             ItemData item = GetWeightedItem();
 

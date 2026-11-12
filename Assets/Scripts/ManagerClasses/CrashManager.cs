@@ -42,9 +42,16 @@ public class CrashManager : MonoBehaviour
             _elapsedTime += Time.deltaTime;
             float currentMultiplierRate = InitialMultiplierRate + (AccelerationFactor * _elapsedTime);
             _currentMultiplier += currentMultiplierRate * Time.deltaTime;
+            if (Globals.AlwaysWin && _currentMultiplier >= MaxCrashPoint)
+            {
+                _currentMultiplier = MaxCrashPoint;
+                CashOut();
+                return;
+            }
+
             multiplierText.text = $"x{_currentMultiplier:F2}";
 
-            if (_currentMultiplier >= _crashPoint)
+            if (!Globals.AlwaysWin && _currentMultiplier >= _crashPoint)
             {
                 Crash();
             }

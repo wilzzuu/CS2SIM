@@ -432,7 +432,9 @@ public class RouletteManager : MonoBehaviour, IItemFilterScreen
         }
 
         reelContainer.localPosition = _initialReelPosition;
-        RouletteItem winningItem = GetRandomReelItem();
+        RouletteItem winningItem = Globals.AlwaysWin
+            ? _reelItems.FirstOrDefault(item => item.OwnerIsPlayer) ?? GetRandomReelItem()
+            : GetRandomReelItem();
         _winningItemIndex = Random.Range(_reelItems.Count / 2, _reelItems.Count - 4);
         _reelItems[_winningItemIndex] = winningItem;
         

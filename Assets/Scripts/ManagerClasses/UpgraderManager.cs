@@ -339,7 +339,7 @@ public class UpgraderManager : MonoBehaviour, IItemFilterScreen
         if (_selectedInventoryItem == _selectedUpgradeItem) return;
 
         float chance = Random.value;
-        if (chance <= _successProbability)
+        if (Globals.AlwaysWin || chance <= _successProbability)
         {
             InventoryManager.Instance.AddItemToInventory(_selectedUpgradeItem);
             CollectionManager.RecordItem(_selectedUpgradeItem);
