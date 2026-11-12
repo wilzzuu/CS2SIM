@@ -237,6 +237,11 @@ public class RouletteManager : MonoBehaviour, IItemFilterScreen
         return Enumerable.Range(0, _playerItems.Count)
             .Where(index =>
             {
+                if (_selectedPlayerItemIndices.Contains(index))
+                {
+                    return false;
+                }
+
                 ItemData item = _playerItems[index];
                 if (!_filter.Matches(item))
                 {
@@ -365,6 +370,7 @@ public class RouletteManager : MonoBehaviour, IItemFilterScreen
         selectedPlayerItemsTotalValue.text = $"Total Value: {Globals.FormatCurrencyStr(_totalPlayerValue, Globals.EURO_DECIMAL)}€";
 
         UpdateSelectedItemsGrid();
+        PopulateInventoryCatalog(_currentPage);
     }
 
     public void RemoveItemFromSelection(int inventoryIndex)
@@ -376,6 +382,7 @@ public class RouletteManager : MonoBehaviour, IItemFilterScreen
         }
 
         UpdateSelectedItemsGrid();
+        PopulateInventoryCatalog(_currentPage);
     }
 
     private void UpdateSelectedItemsGrid()
