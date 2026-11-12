@@ -93,6 +93,8 @@ Assets/_Recovery/
 !Assets/Prefabs/SelectedUpgraderItemPrefab.prefab.meta
 !Assets/Prefabs/FilterPanel.prefab.meta
 !Assets/Scripts/SystemClasses/AutoCaseOpener.cs.meta
+# Keep the Coin Flip manager GUID serialized in the scene.
+!Assets/Scripts/ManagerClasses/CoinFlipManager.cs.meta
 !Assets/Scripts/SystemClasses/CaseOpeningSystem.cs.meta
 !Assets/Scripts/ManagerClasses/TradeUpManager.cs.meta
 !Assets/Scripts/DataClasses/TradeUpItem.cs.meta
