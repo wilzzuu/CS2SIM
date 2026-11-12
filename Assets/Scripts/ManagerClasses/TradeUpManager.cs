@@ -16,6 +16,7 @@ public class TradeUpManager : MonoBehaviour, IItemFilterScreen
 
     [Header("Controls")]
     public Button tradeUpButton;
+    public Button rebuyButton;
     public Button clearButton;
     public Button previousPageButton;
     public Button nextPageButton;
@@ -36,6 +37,7 @@ public class TradeUpManager : MonoBehaviour, IItemFilterScreen
     private const int ItemsPerPage = 12;
 
     private readonly List<ItemData> _selectedItems = new List<ItemData>();
+    private readonly List<ItemData> _lastTradeUpItems = new List<ItemData>();
     private readonly ItemFilter _filter = new ItemFilter();
     private string _selectedRarity;
     private bool _selectedStatTrak;
@@ -56,6 +58,7 @@ public class TradeUpManager : MonoBehaviour, IItemFilterScreen
     void Start()
     {
         if (tradeUpButton != null) tradeUpButton.onClick.AddListener(() => ExecuteTradeUp());
+        if (rebuyButton != null) rebuyButton.onClick.AddListener(RebuyLastTradeUp);
         if (clearButton != null) clearButton.onClick.AddListener(ClearSelection);
         if (previousPageButton != null) previousPageButton.onClick.AddListener(PreviousPage);
         if (nextPageButton != null) nextPageButton.onClick.AddListener(NextPage);
@@ -66,11 +69,21 @@ public class TradeUpManager : MonoBehaviour, IItemFilterScreen
         if (sortDropdown != null) sortDropdown.onValueChanged.AddListener(OnSortChanged);
         if (ascendingToggle != null) ascendingToggle.onValueChanged.AddListener(OnSortOrderChanged);
 
+        if (PlayerManager.Instance != null)
+        {
+            PlayerManager.Instance.OnBalanceChanged += RefreshRebuyButton;
+        }
+
         RefreshUI();
     }
 
     private void OnDestroy()
     {
+        if (rebuyButton != null) rebuyButton.onClick.RemoveListener(RebuyLastTradeUp);
+        if (PlayerManager.Instance != null)
+        {
+            PlayerManager.Instance.OnBalanceChanged -= RefreshRebuyButton;
+        }
         if (searchBtn != null) searchBtn.onClick.RemoveListener(SearchItems);
         if (searchInput != null) searchInput.onValueChanged.RemoveListener(OnSearchInputChanged);
         if (searchPriceBtn != null) searchPriceBtn.onClick.RemoveListener(SearchPrices);
@@ -159,6 +172,8 @@ public class TradeUpManager : MonoBehaviour, IItemFilterScreen
             return null;
         }
 
+        _lastTradeUpItems.Clear();
+        _lastTradeUpItems.AddRange(_selectedItems);
         InventoryManager.Instance.RemoveItemsFromInventory(_selectedItems);
         result = InventoryManager.Instance.AddItemToInventory(result);
         CollectionManager.RecordItem(result);
@@ -172,6 +187,92 @@ public class TradeUpManager : MonoBehaviour, IItemFilterScreen
         SetStatus("Trade Up successful!");
         OnTradeUpComplete?.Invoke(result);
         return result;
+    }
+
+    public void RebuyLastTradeUp()
+    {
+        if (_lastTradeUpItems.Count != RequiredItems)
+        {
+            SetStatus("Complete a trade up before rebuying its items.");
+            return;
+        }
+
+        if (PlayerManager.Instance == null || InventoryManager.Instance == null)
+        {
+            Debug.LogError("Cannot rebuy trade up items: player or inventory manager is not set.", this);
+            return;
+        }
+
+        if (!TryGetRebuyCost(out int totalCost))
+        {
+            SetStatus("Previous trade-up items are no longer available.");
+            return;
+        }
+
+        if (PlayerManager.Instance.GetPlayerBalance() < totalCost)
+        {
+            SetStatus($"Not enough balance to rebuy these items. Cost: {Globals.FormatCurrencyStr(totalCost, Globals.EURO_DECIMAL)}€");
+            return;
+        }
+
+        PlayerManager.Instance.DeductMoney(totalCost);
+
+        List<ItemData> reboughtItems = new List<ItemData>(_lastTradeUpItems.Count);
+        foreach (ItemData item in _lastTradeUpItems)
+        {
+            reboughtItems.Add(InventoryManager.Instance.AddItemToInventory(item));
+        }
+
+        _selectedItems.Clear();
+        _selectedItems.AddRange(reboughtItems);
+        _selectedRarity = _selectedItems[0].rarity;
+        _selectedStatTrak = _selectedItems[0].isStatTrak;
+        _currentPage = 0;
+
+        LogUtil.Economy.LogEuro(
+            "TRADE_UP_REBUY",
+            -totalCost,
+            PlayerManager.Instance.GetPlayerBalance(),
+            $"{RequiredItems} items"
+        );
+
+        SelectionChanged();
+        SetStatus("Previous trade-up items rebought!");
+    }
+
+    private bool TryGetRebuyCost(out int totalCost)
+    {
+        totalCost = 0;
+        if (_lastTradeUpItems.Count != RequiredItems) return false;
+
+        long cost = 0;
+
+        foreach (ItemData item in _lastTradeUpItems)
+        {
+            if (item == null || string.IsNullOrEmpty(item.id)) return false;
+
+            ItemData marketItem = Resources.Load<ItemData>($"ItemAssets/{item.id}");
+            if (marketItem == null) return false;
+
+            int itemCost = Globals.GetMarketBuyPrice(marketItem);
+            if (itemCost < 0) return false;
+
+            cost += itemCost;
+            if (cost > int.MaxValue) return false;
+        }
+
+        totalCost = (int)cost;
+        return true;
+    }
+
+    private void RefreshRebuyButton()
+    {
+        if (rebuyButton == null) return;
+
+        rebuyButton.interactable =
+            PlayerManager.Instance != null &&
+            TryGetRebuyCost(out int totalCost) &&
+            PlayerManager.Instance.GetPlayerBalance() >= totalCost;
     }
 
     private void SelectionChanged(bool clearResult = true)
@@ -277,6 +378,7 @@ public class TradeUpManager : MonoBehaviour, IItemFilterScreen
         if (nextPageButton != null) nextPageButton.interactable = _currentPage < totalPages - 1;
         if (selectedCountText != null) selectedCountText.text = $"{_selectedItems.Count}/{RequiredItems}";
         if (tradeUpButton != null) tradeUpButton.interactable = IsSelectionValid();
+        RefreshRebuyButton();
         if (clearButton != null) clearButton.interactable = _selectedItems.Count > 0;
 
         if (resultInfoText != null)
