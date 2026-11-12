@@ -581,7 +581,7 @@ public class CryptoSystem : MonoBehaviour
 
         OnBtcPriceChanged?.Invoke();
 
-        currentMarketEvent = eventName;
+        currentMarketEvent = $"{eventName} (BTC {multiplier * 100f - 100f:+0;-0}%)";
 
         LogUtil.Event.Log(
             eventName,
@@ -607,7 +607,7 @@ public class CryptoSystem : MonoBehaviour
 
         OnEthPriceChanged?.Invoke();
 
-        currentMarketEvent = eventName;
+        currentMarketEvent = $"{eventName} (ETH {multiplier * 100f - 100f:+0;-0}%)";
 
         LogUtil.Event.Log(
             eventName,
@@ -632,7 +632,7 @@ public class CryptoSystem : MonoBehaviour
         OnBtcPriceChanged?.Invoke();
         OnEthPriceChanged?.Invoke();
 
-        currentMarketEvent = "Market Optimism [+5%]";
+        currentMarketEvent = "Market Optimism (BTC & ETH +5%)";
 
         LogUtil.Event.Log(
             "Market Optimism",
