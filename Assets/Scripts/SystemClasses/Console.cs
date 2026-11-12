@@ -23,6 +23,7 @@ public class Console : MonoBehaviour
 
     private Action<bool> _pendingConfirmation;
     private string _pendingPrompt;
+    private bool _developerCommandsUnlocked;
 
     private int _historyIndex = -1;
     
@@ -88,8 +89,8 @@ public class Console : MonoBehaviour
     {
         // Console
         Register("help", "Display help information", "help", 0, Help, requiresUnlock: false);
-        Register("unlock", "Unlock a developer command using the access code", "unlock <command> <code>", 2, UnlockCommand, requiresUnlock: false);
-        Register("lock", "Lock a developer command", "lock <command>", 1, LockCommand, requiresUnlock: false);
+        Register("unlock", "Unlock all developer commands using the access code", "unlock <code>", 1, UnlockCommand, requiresUnlock: false);
+        Register("lock", "Lock all developer commands", "lock", 0, LockCommand, requiresUnlock: false);
         Register("alwayswin", "Toggle Always Win for wagered games", "alwayswin <on/off>", 1, SetAlwaysWin, new[] { "on", "off" });
 
         // PlayerManager
@@ -136,6 +137,10 @@ public class Console : MonoBehaviour
         Register("giverandomitem", "Give a random item", "giverandomitem", 0, GiveRandomItem);
         Register("playroulette", "Give 12 random items from roulette", "playroulette", 0, GiveRouletteItems);
 
+        // CollectionManager
+        Register("collect", "Add an item to the collection by ID", "collect <item_id>", 1, CollectItem);
+        Register("collectall", "Add all items to the collection", "collectall", 0, CollectAllItems);
+
         // SettingsManager
         Register("resetprogress", "Reset player progress", "resetprogress", 0, ResetProgress);
 
@@ -158,7 +163,6 @@ public class Console : MonoBehaviour
         public Action<string[]> Action;
         public string[] ValidArgs;
         public bool RequiresUnlock;
-        public bool IsUnlocked;
     }
 
     public List<string> GetAutocomplete(string input)
@@ -286,9 +290,9 @@ public class Console : MonoBehaviour
         {
             try
             {
-                if (consoleCommand.RequiresUnlock && !consoleCommand.IsUnlocked)
+                if (consoleCommand.RequiresUnlock && !_developerCommandsUnlocked)
                 {
-                    string message = $"Command '{command}' is locked. Use 'unlock {command} <code>' to enable it.";
+                    string message = "Developer commands are locked. Use 'unlock <code>' to enable them.";
                     Debug.Log(message);
                     LogUtil.Console.Log(command, message);
                     return;
@@ -361,8 +365,7 @@ public class Console : MonoBehaviour
             RequiredArgs = requiredArgs,
             Action = action,
             ValidArgs = ValidArgs,
-            RequiresUnlock = requiresUnlock,
-            IsUnlocked = !requiresUnlock
+            RequiresUnlock = requiresUnlock
         };
     }
     
@@ -562,7 +565,7 @@ public class Console : MonoBehaviour
                 Debug.Log($"Description: {cmd.Description}");
                 if (cmd.RequiresUnlock)
                 {
-                    Debug.Log($"Access: {(cmd.IsUnlocked ? "Unlocked" : "Locked")}");
+                    Debug.Log($"Access: {(_developerCommandsUnlocked ? "Unlocked" : "Locked")}");
                 }
                 if (cmd.ValidArgs != null)
                 {
@@ -580,7 +583,7 @@ public class Console : MonoBehaviour
         foreach (var cmd in _commands.Values)
         {
             string access = cmd.RequiresUnlock
-                ? (cmd.IsUnlocked ? " [UNLOCKED]" : " [LOCKED]")
+                ? (_developerCommandsUnlocked ? " [UNLOCKED]" : " [LOCKED]")
                 : "";
             Debug.Log($"{cmd.Name}{access} - {cmd.Description}");
         }
@@ -588,43 +591,30 @@ public class Console : MonoBehaviour
 
     private void UnlockCommand(string[] args)
     {
-        if (args.Length != 2)
+        if (args.Length != 1)
         {
-            Debug.Log("Usage: unlock <command> <code>");
+            Debug.Log("Usage: unlock <code>");
             return;
         }
 
-        if (!string.Equals(args[1], DeveloperAccessCode, StringComparison.Ordinal))
+        if (!string.Equals(args[0], DeveloperAccessCode, StringComparison.Ordinal))
         {
             Debug.Log("Invalid developer access code.");
             return;
         }
 
-        SetCommandLock(args[0], false);
+        SetDeveloperCommandsLock(false);
     }
 
     private void LockCommand(string[] args)
     {
-        SetCommandLock(args[0], true);
+        SetDeveloperCommandsLock(true);
     }
 
-    private void SetCommandLock(string commandName, bool locked)
+    private void SetDeveloperCommandsLock(bool locked)
     {
-        commandName = commandName.ToLower();
-        if (!_commands.TryGetValue(commandName, out ConsoleCommand command))
-        {
-            Debug.Log(locked ? $"Unknown command: {commandName}" : "Unknown developer command.");
-            return;
-        }
-
-        if (!command.RequiresUnlock)
-        {
-            Debug.Log($"Command '{commandName}' is always available.");
-            return;
-        }
-
-        command.IsUnlocked = !locked;
-        Debug.Log($"Command '{commandName}' {(locked ? "locked" : "unlocked")}.");
+        _developerCommandsUnlocked = !locked;
+        Debug.Log(locked ? "All developer commands locked." : "All developer commands unlocked.");
     }
 
     private void SetAlwaysWin(string[] args)
@@ -1053,6 +1043,55 @@ public class Console : MonoBehaviour
             InventoryManager.Instance.AddRandomItemToInventory();
         }
         Debug.Log("Added 12 random items to inventory.");
+    }
+
+    private void CollectItem(string[] args)
+    {
+        string itemId = args[0];
+        ItemData item = Resources.Load<ItemData>($"ItemAssets/{itemId}");
+        if (item == null)
+        {
+            Debug.Log($"Item with ID '{itemId}' not found.");
+            return;
+        }
+        if (string.IsNullOrWhiteSpace(item.id))
+        {
+            Debug.LogError($"Item with ID '{itemId}' has no collection ID.");
+            return;
+        }
+
+        if (CollectionManager.IsCollected(item.id))
+        {
+            Debug.Log($"Item '{itemId}' is already in the collection.");
+            return;
+        }
+
+        CollectionManager.RecordItem(item);
+        Debug.Log($"Added item '{itemId}' to the collection.");
+    }
+
+    private void CollectAllItems(string[] args)
+    {
+        ItemData[] items = Resources.LoadAll<ItemData>("ItemAssets");
+        if (items.Length == 0)
+        {
+            Debug.LogWarning("No collection items were found.");
+            return;
+        }
+
+        List<ItemData> validItems = new List<ItemData>();
+        foreach (ItemData item in items)
+        {
+            if (item == null || string.IsNullOrWhiteSpace(item.id))
+            {
+                Debug.LogWarning("Skipping a collection item with a missing asset or ID.");
+                continue;
+            }
+            validItems.Add(item);
+        }
+
+        int addedCount = CollectionManager.RecordItems(validItems);
+        Debug.Log($"Added {addedCount} item(s) to the collection.");
     }
 
     private void ResetProgress(string[] args)

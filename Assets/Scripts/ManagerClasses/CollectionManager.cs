@@ -47,6 +47,27 @@ public sealed class CollectionStore
         return true;
     }
 
+    public int AddRange(IEnumerable<string> ids)
+    {
+        if (ids == null)
+            throw new ArgumentNullException(nameof(ids));
+
+        HashSet<string> updated = new HashSet<string>(_ids);
+        foreach (string id in ids)
+        {
+            if (string.IsNullOrWhiteSpace(id))
+                throw new ArgumentException("Collection item IDs must not be empty.", nameof(ids));
+            updated.Add(id);
+        }
+
+        int addedCount = updated.Count - _ids.Count;
+        if (addedCount == 0) return 0;
+
+        Save(updated);
+        _ids.UnionWith(updated);
+        return addedCount;
+    }
+
     public void Clear()
     {
         Save(new HashSet<string>());
@@ -174,6 +195,28 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
             Instance.RefreshItems();
     }
 
+    public static int RecordItems(IEnumerable<ItemData> items)
+    {
+        if (items == null)
+            throw new ArgumentNullException(nameof(items));
+
+        List<string> itemIDs = new List<string>();
+        foreach (ItemData item in items)
+        {
+            if (item == null || string.IsNullOrWhiteSpace(item.id))
+            {
+                Debug.LogError("Cannot add a collection item with a missing asset or ID.");
+                continue;
+            }
+            itemIDs.Add(item.id);
+        }
+
+        int addedCount = Store.AddRange(itemIDs);
+        if (addedCount > 0 && Instance != null && Instance._initialized)
+            Instance.RefreshItems();
+        return addedCount;
+    }
+
     public static bool IsCollected(string id) => Store.Contains(id);
 
     public static void ResetCollection()
@@ -250,8 +293,8 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
         if (nextPageButton != null) nextPageButton.interactable = _currentPage < pageCount - 1;
         if (collectionPercentageText != null)
         {
-            float collectedCount = _visibleItems.Count(item => IsCollected(item.id));
-            float totalCount = _visibleItems.Count;
+            float collectedCount = _allItems.Count(item => IsCollected(item.id));
+            float totalCount = _allItems.Count;
             collectionPercentageText.text = $"{collectedCount}/{totalCount}  ({(totalCount > 0 ? (collectedCount / totalCount * 100f) : 0f):F2}%)";
         }
 
