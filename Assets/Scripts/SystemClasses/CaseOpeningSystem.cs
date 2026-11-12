@@ -424,7 +424,7 @@ public class CaseOpening : MonoBehaviour
     private void StopReel(ItemData openedItem)
     {
         InventoryManager.Instance.AddItemToInventory(openedItem);
-        CollectionManager.Instance.AddItemToCollection(openedItem);
+        CollectionManager.RecordItem(openedItem);
         _isScrolling = false;
         if (PlayerManager.Instance.GetPlayerBalance() < _selectedCaseData.price + keyPrice)
         {

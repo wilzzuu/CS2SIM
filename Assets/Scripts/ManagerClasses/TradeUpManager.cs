@@ -138,7 +138,7 @@ public class TradeUpManager : MonoBehaviour
 
         InventoryManager.Instance.RemoveItemsFromInventory(_selectedItems);
         result = InventoryManager.Instance.AddItemToInventory(result);
-        if (CollectionManager.Instance != null) CollectionManager.Instance.AddItemToCollection(result);
+        CollectionManager.RecordItem(result);
 
         _selectedItems.Clear();
         _selectedRarity = null;
