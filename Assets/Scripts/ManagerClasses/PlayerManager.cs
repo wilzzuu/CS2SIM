@@ -315,7 +315,7 @@ public class PlayerManager : MonoBehaviour
         player = new Player(200 * Globals.EURO_SCALE, 0L, 0L);
         SavePlayerData();
         InventoryManager.Instance.ClearInventory(true);
-        CollectionManager.Instance.ClearCollection();
+        CollectionManager.ResetCollection();
         CryptoSystem.Instance.ClearData(true);
         DailyRewardSystem.Instance.ClearData(true);
         GiftManager.Instance.ClearData(true);
