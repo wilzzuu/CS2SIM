@@ -103,3 +103,10 @@ Assets/_Recovery/
 !Assets/Resources/Images/Icons/funnel.png.meta
 !Assets/TextMesh Pro/Resources/Fonts & Materials/Inter-VariableFont_opsz,wght SDF.asset.meta
 !Assets/TextMesh Pro/Resources/Fonts & Materials/UbuntuSans SDF.asset.meta
+# Keep the collection scene, scripts, prefab, and grayscale material references stable.
+!Assets/Scenes/Collection.unity.meta
+!Assets/Scripts/ManagerClasses/CollectionManager.cs.meta
+!Assets/Scripts/DataClasses/CollectionItem.cs.meta
+!Assets/Prefabs/CollectionImagePrefab.prefab.meta
+!Assets/Shaders/GrayscaleMaterial.mat.meta
+!Assets/Shaders/GrayscaleShader.shader.meta
