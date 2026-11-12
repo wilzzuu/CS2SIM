@@ -161,9 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1410521156356517606}
   - component: {fileID: 977221893159240464}
-  - component: {fileID: 7676453282526991551}
   - component: {fileID: 5497214796017252449}
-  - component: {fileID: 6868634869113919996}
   - component: {fileID: 6322800600366768795}
   m_Layer: 0
   m_Name: TradeUpPanel
@@ -202,36 +200,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2275809133253310228}
   m_CullTransparentMesh: 1
---- !u!114 &7676453282526991551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2275809133253310228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.98}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &5497214796017252449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,23 +220,16 @@ MonoBehaviour:
   clearButton: {fileID: 5436961990655785878}
   previousPageButton: {fileID: 6899521821937094258}
   nextPageButton: {fileID: 6554704597629291348}
+  searchInput: {fileID: 0}
+  searchBtn: {fileID: 0}
+  priceInput: {fileID: 0}
+  searchPriceBtn: {fileID: 0}
+  sortDropdown: {fileID: 0}
+  ascendingToggle: {fileID: 0}
   selectedCountText: {fileID: 5399555621416766931}
   resultInfoText: {fileID: 5430823507404294617}
   statusText: {fileID: 3165490159814666608}
   pageIndicatorText: {fileID: 3364101016927980452}
---- !u!114 &6868634869113919996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2275809133253310228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d378892d0be74809a9bb40c30c9f2b26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ThemeElement
-  role: 2
 --- !u!114 &6322800600366768795
 MonoBehaviour:
   m_ObjectHideFlags: 0

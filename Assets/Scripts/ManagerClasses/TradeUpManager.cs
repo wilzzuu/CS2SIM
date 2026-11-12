@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TradeUpManager : MonoBehaviour
+public class TradeUpManager : MonoBehaviour, IItemFilterScreen
 {
     public static TradeUpManager Instance { get; private set; }
 
@@ -19,6 +19,12 @@ public class TradeUpManager : MonoBehaviour
     public Button clearButton;
     public Button previousPageButton;
     public Button nextPageButton;
+    public TMP_InputField searchInput;
+    public Button searchBtn;
+    public TMP_InputField priceInput;
+    public Button searchPriceBtn;
+    public TMP_Dropdown sortDropdown;
+    public Toggle ascendingToggle;
 
     [Header("Texts")]
     public TextMeshProUGUI selectedCountText;
@@ -30,6 +36,7 @@ public class TradeUpManager : MonoBehaviour
     private const int ItemsPerPage = 12;
 
     private readonly List<ItemData> _selectedItems = new List<ItemData>();
+    private readonly ItemFilter _filter = new ItemFilter();
     private string _selectedRarity;
     private bool _selectedStatTrak;
     private int _currentPage;
@@ -52,8 +59,24 @@ public class TradeUpManager : MonoBehaviour
         if (clearButton != null) clearButton.onClick.AddListener(ClearSelection);
         if (previousPageButton != null) previousPageButton.onClick.AddListener(PreviousPage);
         if (nextPageButton != null) nextPageButton.onClick.AddListener(NextPage);
+        if (searchBtn != null) searchBtn.onClick.AddListener(SearchItems);
+        if (searchInput != null) searchInput.onValueChanged.AddListener(OnSearchInputChanged);
+        if (searchPriceBtn != null) searchPriceBtn.onClick.AddListener(SearchPrices);
+        if (priceInput != null) priceInput.onValueChanged.AddListener(OnPriceInputChanged);
+        if (sortDropdown != null) sortDropdown.onValueChanged.AddListener(OnSortChanged);
+        if (ascendingToggle != null) ascendingToggle.onValueChanged.AddListener(OnSortOrderChanged);
 
         RefreshUI();
+    }
+
+    private void OnDestroy()
+    {
+        if (searchBtn != null) searchBtn.onClick.RemoveListener(SearchItems);
+        if (searchInput != null) searchInput.onValueChanged.RemoveListener(OnSearchInputChanged);
+        if (searchPriceBtn != null) searchPriceBtn.onClick.RemoveListener(SearchPrices);
+        if (priceInput != null) priceInput.onValueChanged.RemoveListener(OnPriceInputChanged);
+        if (sortDropdown != null) sortDropdown.onValueChanged.RemoveListener(OnSortChanged);
+        if (ascendingToggle != null) ascendingToggle.onValueChanged.RemoveListener(OnSortOrderChanged);
     }
 
     public bool AddItemToSelection(ItemData item)
@@ -200,9 +223,30 @@ public class TradeUpManager : MonoBehaviour
         IEnumerable<ItemData> items = InventoryManager.Instance.GetUnlockedItems()
             .Where(i => !_selectedItems.Contains(i) && GetNextRarity(i.rarity) != null);
 
+        items = _filter.Apply(items);
+
         if (_selectedItems.Count > 0)
         {
             items = items.Where(i => i.rarity == _selectedRarity && i.isStatTrak == _selectedStatTrak);
+        }
+
+        string query = searchInput == null ? string.Empty : searchInput.text.Trim();
+        if (!string.IsNullOrEmpty(query))
+        {
+            items = items.Where(item =>
+                (item.name != null && item.name.IndexOf(query, System.StringComparison.OrdinalIgnoreCase) >= 0) ||
+                (item.id != null && item.id.IndexOf(query, System.StringComparison.OrdinalIgnoreCase) >= 0));
+        }
+
+        if (priceInput != null && Globals.TryParseEuroInput(priceInput.text, out int priceLimit))
+        {
+            items = items.Where(item => item.price <= priceLimit);
+        }
+
+        if (sortDropdown != null && sortDropdown.value >= 0 && sortDropdown.value < sortDropdown.options.Count)
+        {
+            bool ascending = ascendingToggle == null || ascendingToggle.isOn;
+            return Globals.SortItems(items, sortDropdown.options[sortDropdown.value].text, ascending);
         }
 
         return Globals.SortItems(items, "Rarity", true);
@@ -271,6 +315,63 @@ public class TradeUpManager : MonoBehaviour
     {
         if (statusText != null) statusText.text = message;
     }
+
+    public void OpenFilters()
+    {
+        if (InventoryManager.Instance == null)
+        {
+            Debug.LogError("Cannot open trade up filters: InventoryManager instance is not set.", this);
+            return;
+        }
+
+        IEnumerable<ItemData> filterItems = InventoryManager.Instance.GetUnlockedItems()
+            .Where(item => GetNextRarity(item.rarity) != null);
+        ItemFilterPopup.Open(inventoryGrid, _filter, filterItems, RefreshFilteredItems);
+    }
+
+    public void SortItems()
+    {
+        if (sortDropdown != null && sortDropdown.value >= 0 && sortDropdown.value < sortDropdown.options.Count &&
+            sortDropdown.options[sortDropdown.value].text == "Random")
+        {
+            Globals.RandomizeItemSortOrder();
+        }
+
+        _currentPage = 0;
+        RefreshUI();
+    }
+
+    public void SearchItems()
+    {
+        _currentPage = 0;
+        RefreshUI();
+    }
+
+    public void SearchPrices()
+    {
+        _currentPage = 0;
+        RefreshUI();
+    }
+
+    private void OnSearchInputChanged(string _)
+    {
+        if (searchInput == null || string.IsNullOrWhiteSpace(searchInput.text))
+        {
+            SearchItems();
+        }
+    }
+
+    private void OnPriceInputChanged(string _)
+    {
+        if (priceInput == null || string.IsNullOrWhiteSpace(priceInput.text))
+        {
+            SearchPrices();
+        }
+    }
+
+    private void OnSortChanged(int _) => SortItems();
+    private void OnSortOrderChanged(bool _) => SortItems();
+    private void RefreshFilteredItems() => SearchItems();
 
     public void NextPage()
     {
