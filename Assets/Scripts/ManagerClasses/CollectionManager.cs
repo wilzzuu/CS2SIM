@@ -69,6 +69,7 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
 
     public GameObject collectionItemPrefab;
     public Transform collectionGrid;
+    public TMP_Text collectionPercentageText;
     public TMP_Text pageIndicatorText;
     public TMP_Dropdown sortDropdown;
     public Toggle ascendingToggle;
@@ -247,6 +248,12 @@ public class CollectionManager : MonoBehaviour, IItemFilterScreen
         if (pageIndicatorText != null) pageIndicatorText.text = $"Page {_currentPage + 1} of {pageCount}";
         if (previousPageButton != null) previousPageButton.interactable = _currentPage > 0;
         if (nextPageButton != null) nextPageButton.interactable = _currentPage < pageCount - 1;
+        if (collectionPercentageText != null)
+        {
+            float collectedCount = _visibleItems.Count(item => IsCollected(item.id));
+            float totalCount = _visibleItems.Count;
+            collectionPercentageText.text = $"{collectedCount}/{totalCount} ({(totalCount > 0 ? (collectedCount / totalCount * 100f) : 0f):F1}%)";
+        }
 
         int start = _currentPage * itemsPerPage;
         int end = Mathf.Min(start + itemsPerPage, _visibleItems.Count);
