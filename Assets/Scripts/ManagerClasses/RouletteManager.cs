@@ -531,7 +531,7 @@ public class RouletteManager : MonoBehaviour, IItemFilterScreen
             foreach (var uniqueBotItem in uniqueBotItemsToAdd)
             {
                 InventoryManager.Instance.AddItemToInventory(uniqueBotItem);
-                CollectionManager.Instance.AddItemToCollection(uniqueBotItem);
+                CollectionManager.RecordItem(uniqueBotItem);
             }
         }
         else

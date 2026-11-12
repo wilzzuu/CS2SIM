@@ -342,7 +342,7 @@ public class UpgraderManager : MonoBehaviour, IItemFilterScreen
         if (chance <= _successProbability)
         {
             InventoryManager.Instance.AddItemToInventory(_selectedUpgradeItem);
-            CollectionManager.Instance.AddItemToCollection(_selectedUpgradeItem);
+            CollectionManager.RecordItem(_selectedUpgradeItem);
             InventoryManager.Instance.RemoveItemFromInventory(_selectedInventoryItem);
             isSuccessText.text = "Upgrade Successful!";
         }

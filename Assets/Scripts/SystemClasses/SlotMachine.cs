@@ -40,6 +40,7 @@ public class SlotMachine : MonoBehaviour
         {
             InventoryManager.Instance.AddItemToInventory(
                 LastResult.winningItem);
+            CollectionManager.RecordItem(LastResult.winningItem);
         }
 
         return true;

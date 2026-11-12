@@ -27,6 +27,7 @@ public class Console : MonoBehaviour
     private int _historyIndex = -1;
     
     private const string HistoryKey = "ConsoleHistory";
+    private const string DeveloperAccessCode = "anti";
 
     void Start()
     {
@@ -86,7 +87,10 @@ public class Console : MonoBehaviour
     private void RegisterCommands()
     {
         // Console
-        Register("help", "Display help information", "help", 0, Help);
+        Register("help", "Display help information", "help", 0, Help, requiresUnlock: false);
+        Register("unlock", "Unlock a developer command using the access code", "unlock <command> <code>", 2, UnlockCommand, requiresUnlock: false);
+        Register("lock", "Lock a developer command", "lock <command>", 1, LockCommand, requiresUnlock: false);
+        Register("alwayswin", "Toggle Always Win for wagered games", "alwayswin <on/off>", 1, SetAlwaysWin, new[] { "on", "off" });
 
         // PlayerManager
         Register("addmoney", "Add money", "addmoney <amount>", 1, AddMoney);
@@ -153,6 +157,8 @@ public class Console : MonoBehaviour
         public int RequiredArgs;
         public Action<string[]> Action;
         public string[] ValidArgs;
+        public bool RequiresUnlock;
+        public bool IsUnlocked;
     }
 
     public List<string> GetAutocomplete(string input)
@@ -251,7 +257,7 @@ public class Console : MonoBehaviour
             string message = "Invalid response. Please enter 'confirm' or 'cancel'.";
             Debug.Log(message);
             LogUtil.Console.Log(
-                response,
+                IsUnlockCommand(response) ? "unlock [redacted]" : response,
                 message,
                 "Invalid response to confirmation prompt."
             );
@@ -280,6 +286,14 @@ public class Console : MonoBehaviour
         {
             try
             {
+                if (consoleCommand.RequiresUnlock && !consoleCommand.IsUnlocked)
+                {
+                    string message = $"Command '{command}' is locked. Use 'unlock {command} <code>' to enable it.";
+                    Debug.Log(message);
+                    LogUtil.Console.Log(command, message);
+                    return;
+                }
+
                 if (args.Length < consoleCommand.RequiredArgs)
                 {
                     string message =
@@ -336,7 +350,8 @@ public class Console : MonoBehaviour
         string usage,
         int requiredArgs,
         Action<string[]> action,
-        string[] ValidArgs = null)
+        string[] ValidArgs = null,
+        bool requiresUnlock = true)
     {
         _commands[command.ToLower()] = new ConsoleCommand
         {
@@ -345,7 +360,9 @@ public class Console : MonoBehaviour
             Usage = usage,
             RequiredArgs = requiredArgs,
             Action = action,
-            ValidArgs = ValidArgs
+            ValidArgs = ValidArgs,
+            RequiresUnlock = requiresUnlock,
+            IsUnlocked = !requiresUnlock
         };
     }
     
@@ -377,19 +394,29 @@ public class Console : MonoBehaviour
         if (string.IsNullOrEmpty(command))
             return;
 
-        Debug.Log($"\n[{Globals.GetFormattedDateTime(DateTime.UtcNow)}] :: {command}");
+        bool isUnlock = IsUnlockCommand(command);
+        string loggedCommand = isUnlock ? "unlock [redacted]" : command;
+        Debug.Log($"\n[{Globals.GetFormattedDateTime(DateTime.UtcNow)}] :: {loggedCommand}");
         LogUtil.Console.Log(
-            command,
+            loggedCommand,
             null,
             "User submitted command"
         );
 
         Execute(command);
 
-        AddToHistory(command);
+        if (!isUnlock)
+            AddToHistory(command);
 
         inputField.text = "";
         inputField.ActivateInputField();
+    }
+
+    private static bool IsUnlockCommand(string commandLine)
+    {
+        string trimmed = commandLine.TrimStart();
+        return trimmed.Equals("unlock", StringComparison.OrdinalIgnoreCase) ||
+            trimmed.StartsWith("unlock ", StringComparison.OrdinalIgnoreCase);
     }
 
     private void AddToHistory(string command)
@@ -533,6 +560,10 @@ public class Console : MonoBehaviour
                 Debug.Log($"Command: {cmd.Name}");
                 Debug.Log($"Usage: {cmd.Usage}");
                 Debug.Log($"Description: {cmd.Description}");
+                if (cmd.RequiresUnlock)
+                {
+                    Debug.Log($"Access: {(cmd.IsUnlocked ? "Unlocked" : "Locked")}");
+                }
                 if (cmd.ValidArgs != null)
                 {
                     Debug.Log($"Valid Arguments: {string.Join(", ", cmd.ValidArgs)}");
@@ -548,8 +579,65 @@ public class Console : MonoBehaviour
 
         foreach (var cmd in _commands.Values)
         {
-            Debug.Log($"{cmd.Name} - {cmd.Description}");
+            string access = cmd.RequiresUnlock
+                ? (cmd.IsUnlocked ? " [UNLOCKED]" : " [LOCKED]")
+                : "";
+            Debug.Log($"{cmd.Name}{access} - {cmd.Description}");
         }
+    }
+
+    private void UnlockCommand(string[] args)
+    {
+        if (args.Length != 2)
+        {
+            Debug.Log("Usage: unlock <command> <code>");
+            return;
+        }
+
+        if (!string.Equals(args[1], DeveloperAccessCode, StringComparison.Ordinal))
+        {
+            Debug.Log("Invalid developer access code.");
+            return;
+        }
+
+        SetCommandLock(args[0], false);
+    }
+
+    private void LockCommand(string[] args)
+    {
+        SetCommandLock(args[0], true);
+    }
+
+    private void SetCommandLock(string commandName, bool locked)
+    {
+        commandName = commandName.ToLower();
+        if (!_commands.TryGetValue(commandName, out ConsoleCommand command))
+        {
+            Debug.Log(locked ? $"Unknown command: {commandName}" : "Unknown developer command.");
+            return;
+        }
+
+        if (!command.RequiresUnlock)
+        {
+            Debug.Log($"Command '{commandName}' is always available.");
+            return;
+        }
+
+        command.IsUnlocked = !locked;
+        Debug.Log($"Command '{commandName}' {(locked ? "locked" : "unlocked")}.");
+    }
+
+    private void SetAlwaysWin(string[] args)
+    {
+        string value = args[0].ToLower();
+        if (value != "on" && value != "off")
+        {
+            Debug.Log("Usage: alwayswin <on/off>");
+            return;
+        }
+
+        Globals.AlwaysWin = value == "on";
+        Debug.Log($"Always Win {(Globals.AlwaysWin ? "enabled" : "disabled")}.");
     }
 
     private void AddMoney(string[] args)

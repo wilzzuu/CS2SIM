@@ -6,6 +6,8 @@ using System.Globalization;
 
 public class Globals
 {
+    public static bool AlwaysWin { get; set; }
+
     public const float EPSILON = 0.0001f;
     public const int EURO_DECIMAL = 2;
     public const int CRYPTO_DECIMAL = 8;
