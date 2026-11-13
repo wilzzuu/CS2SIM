@@ -7,6 +7,8 @@ using System.Linq;
 
 public class CaseBattleManager : MonoBehaviour
 {
+    private const int WinnerRewardMultiplier = 2;
+
     public Transform playerReelParent;
     public Transform botReelParent;
     public GameObject reelItemPrefab;
@@ -463,8 +465,8 @@ public class CaseBattleManager : MonoBehaviour
             if (_playerTotalValue > _botTotalValue)
             {
                 playerWinsImage.gameObject.SetActive(true);
-                int _totalGameValue = _playerTotalValue + _botTotalValue;
-                PlayerManager.Instance.AddMoney(_totalGameValue);
+                int totalGameValue = _playerTotalValue + _botTotalValue;
+                PlayerManager.Instance.AddMoney(totalGameValue * WinnerRewardMultiplier);
             }
             else if (_playerTotalValue == _botTotalValue)
             {
@@ -482,8 +484,8 @@ public class CaseBattleManager : MonoBehaviour
             if (_playerTotalValue < _botTotalValue)
             {
                 playerWinsImage.gameObject.SetActive(true);
-                int _totalGameValue = _playerTotalValue + _botTotalValue;
-                PlayerManager.Instance.AddMoney(_totalGameValue);
+                int totalGameValue = _playerTotalValue + _botTotalValue;
+                PlayerManager.Instance.AddMoney(totalGameValue * WinnerRewardMultiplier);
             }
             else if (_playerTotalValue == _botTotalValue)
             {
