@@ -52,6 +52,7 @@ public class CaseOpening : MonoBehaviour
 
     public void SetAutoOpening(bool isAutoOpening)
     {
+        bool wasAutoOpening = _isAutoOpening;
         _isAutoOpening = isAutoOpening;
 
         if (_isAutoOpening && _isSelectorOpen)
@@ -81,6 +82,11 @@ public class CaseOpening : MonoBehaviour
             {
                 button.interactable = !_isAutoOpening && !_isScrolling;
             }
+        }
+
+        if (wasAutoOpening && !_isAutoOpening && !_isScrolling && uiManager != null)
+        {
+            uiManager.UnlockUI();
         }
     }
 
@@ -440,7 +446,10 @@ public class CaseOpening : MonoBehaviour
             openCaseButton.interactable = !_isAutoOpening;
         }
         selectCaseButton.interactable = !_isAutoOpening;
-        uiManager.UnlockUI();
+        if (!_isAutoOpening)
+        {
+            uiManager.UnlockUI();
+        }
     }
 
     private void SetUpReelItem(GameObject reelItem, ItemData itemData)
