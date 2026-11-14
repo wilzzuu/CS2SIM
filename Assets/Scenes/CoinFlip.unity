@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d378892d0be74809a9bb40c30c9f2b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeElement
-  role: 4
+  role: 2
 --- !u!114 &301006866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d378892d0be74809a9bb40c30c9f2b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeElement
-  role: 4
+  role: 2
 --- !u!114 &682298584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinFlipManager
   reelContainer: {fileID: 301006864}
-  reelItemPrefab: {fileID: 6657621359993815576, guid: 5385098aac518a24baf4ce5a1aba2fd9, type: 3}
+  reelItemPrefab: {fileID: 184704656566878561, guid: 5385098aac518a24baf4ce5a1aba2fd9, type: 3}
   headsSprite: {fileID: 21300000, guid: 58055f39e7d3c5c419f9292a6a779845, type: 3}
   tailsSprite: {fileID: 21300000, guid: 323635227bb9f7a40bb1b564833079cc, type: 3}
   spinDuration: 7

@@ -9,7 +9,7 @@ public class CoinFlipManager : MonoBehaviour
 {
     [Header("Reel")]
     [SerializeField] private RectTransform reelContainer;
-    [SerializeField] private Image reelItemPrefab;
+    [SerializeField] private GameObject reelItemPrefab;
     [SerializeField] private Sprite headsSprite;
     [SerializeField] private Sprite tailsSprite;
     [SerializeField] private float spinDuration = 7f;
@@ -34,7 +34,7 @@ public class CoinFlipManager : MonoBehaviour
     }
 
     private readonly List<CoinFace> _faces = new List<CoinFace>(ReelLength);
-    private readonly List<Image> _reelItems = new List<Image>(ReelLength * ReelCycles);
+    private readonly List<GameObject> _reelItems = new List<GameObject>(ReelLength * ReelCycles);
     private readonly List<RectTransform> _reelItemRects = new List<RectTransform>(ReelLength * ReelCycles);
     private GridLayoutGroup _reelLayout;
     private RectTransform _reelViewport;
@@ -160,12 +160,13 @@ public class CoinFlipManager : MonoBehaviour
 
         for (int i = 0; i < ReelLength * ReelCycles; i++)
         {
-            Image reelItem = Instantiate(reelItemPrefab, reelContainer, false);
+            GameObject reelItemGO = Instantiate(reelItemPrefab, reelContainer, false);
+            Image reelItem = reelItemGO.transform.Find("FaceImage").GetComponent<Image>();
             reelItem.raycastTarget = false;
             reelItem.type = Image.Type.Simple;
             reelItem.preserveAspect = true;
 
-            _reelItems.Add(reelItem);
+            _reelItems.Add(reelItemGO);
             _reelItemRects.Add(reelItem.rectTransform);
             SetReelItemFace(i, _faces[i % ReelLength]);
         }
@@ -198,7 +199,7 @@ public class CoinFlipManager : MonoBehaviour
 
     private void SetReelItemFace(int reelIndex, CoinFace face)
     {
-        _reelItems[reelIndex].sprite = face == CoinFace.Heads ? headsSprite : tailsSprite;
+        _reelItems[reelIndex].transform.Find("FaceImage").GetComponent<Image>().sprite = face == CoinFace.Heads ? headsSprite : tailsSprite;
     }
 
     private IEnumerator SpinReel(int bet)
